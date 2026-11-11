@@ -59,6 +59,7 @@ import {
 import {
   collectPlatformTemplates,
   configurePlatform,
+  getConfiguredPlatforms,
   resolveCliFlag,
   PLATFORM_IDS,
 } from "../src/configurators/index.js";
@@ -11813,6 +11814,123 @@ describe("regression: .trellis/scripts stays byte-identical to templates/trellis
           `packages/cli/src/templates/trellis/scripts/${relativePath}. ` +
           `Edit both copies, never one.`,
       ).toBe(true);
+    });
+  }
+});
+
+describe("regression: dogfood platform files match what ships to users", () => {
+  // The Python parity test above only covers `.trellis/scripts/`. Every other
+  // shipped artifact — hooks, platform-map docs, the Pi extension — has a
+  // second physical copy committed at the repo root so this repository can run
+  // Trellis on itself. Nothing compared those copies to the templates, so the
+  // template-side fix landed and the dogfood copy silently kept the old code:
+  // #544/#581/#608 all shipped while `.claude/hooks/inject-subagent-context.py`
+  // still called `get_current_task()` without `allow_single_session_fallback`,
+  // and four `platform-map.md` copies never learned the `--dsh` row.
+  //
+  // Scope is "platforms this repo actually dogfoods" — `getConfiguredPlatforms`
+  // derives that from `.trellis/.template-hashes.json`, the same signal
+  // `trellis update` uses. `.omp/` was committed for years without a single
+  // manifest entry, so it drifted 22 files behind the templates (worst:
+  // `trellis-brainstorm/SKILL.md` 549 lines vs the 201-line template, plus a
+  // `trellis-spec-bootstarp/` misspelling) and nothing noticed. Registering it
+  // in the manifest is what brings it under this test *and* under
+  // `trellis update`; a config directory that exists but is absent from the
+  // manifest is invisible to both.
+  const __dirnameDogfood = path.dirname(fileURLToPath(import.meta.url));
+  const dogfoodRepoRoot = path.resolve(__dirnameDogfood, "../../..");
+
+  // `init`/`update` rewrite `python3` to the host's Python command at write
+  // time, so a checkout made on Windows legitimately holds `python` where the
+  // template says `python3`. Normalize that single difference away; everything
+  // else must match byte for byte.
+  function normalizePythonCommand(content: string): string {
+    return content.replace(/\bpython3\b/g, "python");
+  }
+
+  const configuredPlatforms = [
+    ...getConfiguredPlatforms(dogfoodRepoRoot),
+  ].sort();
+
+  it("detects at least one dogfooded platform", () => {
+    // If platform detection regressed to "none", every assertion below would
+    // vacuously pass.
+    expect(configuredPlatforms.length).toBeGreaterThan(0);
+  });
+
+  it("every platform tree present on disk is tracked in the manifest", () => {
+    // The parity loop below only sees platforms the manifest knows about, so a
+    // committed-but-unregistered tree escapes it — exactly how `.omp/` stayed
+    // 22 files stale. Detect ownership from what is on disk instead: if a
+    // platform's own config directory has committed template files, that
+    // platform is dogfooded and its receipt must say so.
+    //
+    // Keyed on the platform's own `configDir`, not "any template path". Every
+    // agent-skills platform also ships `.agents/skills/...`, so the looser test
+    // reported gemini/dsh/kimi as dogfooded off a shared directory alone.
+    const untracked: string[] = [];
+    for (const platformId of PLATFORM_IDS) {
+      if (configuredPlatforms.includes(platformId)) continue;
+      const templates = collectPlatformTemplates(platformId);
+      if (!templates) continue;
+      const configDir = AI_TOOLS[platformId].configDir;
+      const present = [...templates.keys()].some(
+        (relativePath) =>
+          (relativePath === configDir ||
+            relativePath.startsWith(`${configDir}/`)) &&
+          fs.existsSync(path.join(dogfoodRepoRoot, ...relativePath.split("/"))),
+      );
+      if (present) untracked.push(platformId);
+    }
+    expect(
+      untracked,
+      `${untracked.join(", ")} ship files that are committed in this repo, ` +
+        `but .trellis/.template-hashes.json has no entry for them. Run ` +
+        `\`trellis init\`/\`trellis update\` (or register the platform) so the ` +
+        `parity test above and \`trellis update\` both see this tree.`,
+    ).toEqual([]);
+  });
+
+  for (const platformId of configuredPlatforms) {
+    it(`${platformId}: committed files are byte-identical to the templates`, () => {
+      const templates = collectPlatformTemplates(platformId);
+      expect(templates).toBeInstanceOf(Map);
+      if (!templates) return;
+
+      const drifted: string[] = [];
+      let compared = 0;
+
+      for (const [relativePath, expectedContent] of templates) {
+        const absolutePath = path.join(
+          dogfoodRepoRoot,
+          ...relativePath.split("/"),
+        );
+        // A template this repo never installed has no committed copy to
+        // compare — `.opencode/package.json` is generated per machine because
+        // it declares the host's `@opencode-ai/plugin` dependency.
+        if (!fs.existsSync(absolutePath)) continue;
+
+        compared++;
+        const committedContent = fs.readFileSync(absolutePath, "utf-8");
+        if (
+          normalizePythonCommand(committedContent) !==
+          normalizePythonCommand(expectedContent)
+        ) {
+          drifted.push(relativePath);
+        }
+      }
+
+      expect(
+        compared,
+        `no ${platformId} files found to compare`,
+      ).toBeGreaterThan(0);
+      expect(
+        drifted,
+        `${platformId} dogfood copies have drifted from the shipped templates: ` +
+          `${drifted.join(", ")}. These files exist twice — ` +
+          `packages/cli/src/templates/... is what users get, the repo-root ` +
+          `copy is what this repository runs on. Edit both, never one.`,
+      ).toEqual([]);
     });
   }
 });

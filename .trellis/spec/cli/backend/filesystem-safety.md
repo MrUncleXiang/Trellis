@@ -134,6 +134,7 @@ without the guard**:
 - Path traversal: `create '../../victim' --force` / `rm '../../victim'` throw and the external dir survives — reproduce in a sandbox (`test/channel/name-safety`, `test/commands/channel-name-safety`).
 - Ownership/backup gates: unowned source skipped (`update-internals` rename-dir gate), `archive src` refused with `src/` intact (`task-archive` integration), overwrite-fails-preserves-spec (`template-fetcher-overwrite`), uninstall refuses dirty `--yes` (`uninstall-dirty-guard`, real git).
 - Dogfood twin sync: identical `.py` path sets in both trees, plus one byte-compare case per file (`regression.test.ts` → "regression: .trellis/scripts stays byte-identical to templates/trellis/scripts"). The file list is derived from the filesystem, so a new script is covered the moment it is added.
+- Platform dogfood parity: every non-Python artifact committed at the repo root (hooks, `platform-map.md`, the Pi extension, OMP commands/skills) is byte-compared against `collectPlatformTemplates(id)` for each platform `.trellis/.template-hashes.json` says this repo has installed, with `python3`↔`python` normalized away (`regression.test.ts` → "regression: dogfood platform files match what ships to users"). A second case fails when a platform's own `configDir` holds committed template files but has no manifest entry — that is how `.omp/` drifted 22 files stale for months while both `trellis update` and the parity test ignored it. Registering a platform in the manifest is what makes it visible to either.
 
 ---
 
