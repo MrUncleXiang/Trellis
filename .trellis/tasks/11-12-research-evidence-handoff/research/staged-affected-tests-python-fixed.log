@@ -1,0 +1,1469 @@
+
+ RUN  v4.0.18 C:/Users/PXWD/AppData/Local/Temp/trellis-b-staged-m9ZtUD/packages/cli
+
+========================================
+ADD SESSION
+========================================
+
+Session: 1
+Title: CLI branch wins
+Commit: -
+
+Current journal file: journal-1.md
+Current lines: 3
+New content lines: 20
+Total after append: 23
+
+[OK] Appended session to journal-1.md
+
+
+========================================
+[OK] Session 1 added successfully!
+========================================
+
+Files updated:
+  - journal-1.md
+  - index.md
+========================================
+ADD SESSION
+========================================
+
+Session: 1
+Title: Task branch wins
+Commit: -
+
+Current journal file: journal-1.md
+Current lines: 3
+New content lines: 20
+Total after append: 23
+
+[OK] Appended session to journal-1.md
+
+
+========================================
+[OK] Session 1 added successfully!
+========================================
+
+Files updated:
+  - journal-1.md
+  - index.md
+========================================
+ADD SESSION
+========================================
+
+Session: 1
+Title: Git branch fallback
+Commit: -
+
+Current journal file: journal-1.md
+Current lines: 3
+New content lines: 20
+Total after append: 23
+
+[OK] Appended session to journal-1.md
+
+
+========================================
+[OK] Session 1 added successfully!
+========================================
+
+Files updated:
+  - journal-1.md
+  - index.md
+========================================
+ADD SESSION
+========================================
+
+Session: 1
+Title: Legacy 4-column migration
+Commit: -
+
+Current journal file: journal-1.md
+Current lines: 3
+New content lines: 19
+Total after append: 22
+
+[OK] Appended session to journal-1.md
+
+
+========================================
+[OK] Session 1 added successfully!
+========================================
+
+Files updated:
+  - journal-1.md
+  - index.md
+========================================
+ADD SESSION
+========================================
+
+Session: 1
+Title: No branch available
+Commit: -
+
+Current journal file: journal-1.md
+Current lines: 3
+New content lines: 19
+Total after append: 22
+
+[OK] Appended session to journal-1.md
+
+
+========================================
+[OK] Session 1 added successfully!
+========================================
+
+Files updated:
+  - journal-1.md
+  - index.md
+ ✓ test/configurators/platforms.test.ts (57 tests) 18570ms
+     ✓ detects every platform from the files Trellis tracked for it  4543ms
+     ✓ configurePlatform writes collected templates byte-for-byte for every platform  3806ms
+     ✓ configurePlatform writes no file collectTemplates does not describe, for every platform  2920ms
+     ✓ configurePlatform and collectTemplates agree under Windows python rendering  1738ms
+     ✓ configurePlatform('snow') writes class-1 inject hooks, skills, commands, and agents  624ms
+     ✓ withStatusline option leaves all other platforms unaffected  980ms
+     ✓ does not throw for any platform  1137ms
+warning: in the working copy of 'README.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'README.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'README.md', LF will be replaced by CRLF the next time Git touches it
+ ✓ test/templates/research-evidence-contract.test.ts (11 tests) 852ms
+warning: in the working copy of 'README.md', LF will be replaced by CRLF the next time Git touches it
+ ✓ test/templates/trellis.test.ts (26 tests) 156ms
+warning: found more than 8 child Git repositories; skipping automatic Git status collection. Configure explicit packages entries with path and git: true in .trellis/config.yaml.
+warning: in the working copy of 'README.md', LF will be replaced by CRLF the next time Git touches it
+Note: no checked-out branch (detached HEAD, or not a git repository); task branch not recorded.
+Note: no checked-out branch (detached HEAD, or not a git repository); task branch not recorded.
+Note: no checked-out branch (detached HEAD, or not a git repository); task branch not recorded.
+Note: no checked-out branch (detached HEAD, or not a git repository); task branch not recorded.
+Created tasks directory: C:\Users\PXWD\AppData\Local\Temp\trellis-current-task-149a1E\.trellis\tasks
+warning: could not resolve the repository's default branch (no remote configured, offline, etc.); stamping base_branch as the checked-out branch 'main'. Pass --base-branch to override.
+Activated task for this session: .trellis/tasks/11-12-r7-auto
+Source: session:r7-session
+Created task: 11-12-r7-auto
+
+Next steps:
+  - Fill prd.md with requirements and acceptance criteria
+  - Lightweight task: PRD-only is valid
+  - Complex task: add design.md and implement.md before task.py start
+  - Use /trellis:continue or phase context to decide the next step
+
+Created tasks directory: C:\Users\PXWD\AppData\Local\Temp\trellis-current-task-NDwXTb\.trellis\tasks
+warning: could not resolve the repository's default branch (no remote configured, offline, etc.); stamping base_branch as the checked-out branch 'main'. Pass --base-branch to override.
+Created task: 11-12-r7-cli
+
+Next steps:
+  - Fill prd.md with requirements and acceptance criteria
+  - Lightweight task: PRD-only is valid
+  - Complex task: add design.md and implement.md before task.py start
+  - Use /trellis:continue or phase context to decide the next step
+
+Created tasks directory: C:\Users\PXWD\AppData\Local\Temp\trellis-current-task-aYi6bw\.trellis\tasks
+warning: could not resolve the repository's default branch (no remote configured, offline, etc.); stamping base_branch as the checked-out branch 'main'. Pass --base-branch to override.
+Activated task for this session: .trellis/tasks/11-12-r7-idem
+Source: session:r7-idem-session
+Created task: 11-12-r7-idem
+
+Next steps:
+  - Fill prd.md with requirements and acceptance criteria
+  - Lightweight task: PRD-only is valid
+  - Complex task: add design.md and implement.md before task.py start
+  - Use /trellis:continue or phase context to decide the next step
+
+Note: no checked-out branch (detached HEAD, or not a git repository); task branch not recorded.
+Archived: issue-106 -> archive/2026-11/
+Created tasks directory: C:\Users\PXWD\AppData\Local\Temp\trellis-current-task-o9aFDO\.trellis\tasks
+warning: could not resolve the repository's default branch (no remote configured, offline, etc.); stamping base_branch as the checked-out branch 'main'. Pass --base-branch to override.
+Activated task for this session: .trellis/tasks/11-12-web-auth-retry
+Source: session:archive-collision
+Created task: 11-12-web-auth-retry
+
+Next steps:
+  - Fill prd.md with requirements and acceptance criteria
+  - Lightweight task: PRD-only is valid
+  - Complex task: add design.md and implement.md before task.py start
+  - Curate implement.jsonl / check.jsonl (created empty) as spec/research manifests before task.py start when sub-agents need context:
+      one JSON object per line — {"file": "<path>", "reason": "<why>"}; spec/research docs only, no code paths
+      list available specs: python3 .trellis/scripts/get_context.py --mode packages
+  - Use /trellis:continue or phase context to decide the next step
+
+Archived: 11-12-web-auth-retry -> archive/2026-11/
+Archived: issue-201 -> archive/2026-11/
+Archived: issue-202 -> archive/2026-11/
+Archived: issue-203 -> archive/2026-11/
+Note: no checked-out branch (detached HEAD, or not a git repository); task branch not recorded.
+Note: no checked-out branch (detached HEAD, or not a git repository); task branch not recorded.
+Note: no checked-out branch (detached HEAD, or not a git repository); task branch not recorded.
+Note: no checked-out branch (detached HEAD, or not a git repository); task branch not recorded.
+Note: no checked-out branch (detached HEAD, or not a git repository); task branch not recorded.
+Note: no checked-out branch (detached HEAD, or not a git repository); task branch not recorded.
+Note: no checked-out branch (detached HEAD, or not a git repository); task branch not recorded.
+Note: no checked-out branch (detached HEAD, or not a git repository); task branch not recorded.
+Note: no checked-out branch (detached HEAD, or not a git repository); task branch not recorded.
+Note: no checked-out branch (detached HEAD, or not a git repository); task branch not recorded.
+Note: no checked-out branch (detached HEAD, or not a git repository); task branch not recorded.
+Note: no checked-out branch (detached HEAD, or not a git repository); task branch not recorded.
+Note: no checked-out branch (detached HEAD, or not a git repository); task branch not recorded.
+Note: no checked-out branch (detached HEAD, or not a git repository); task branch not recorded.
+Note: no checked-out branch (detached HEAD, or not a git repository); task branch not recorded.
+warning: could not resolve the repository's default branch (no remote configured, offline, etc.); stamping base_branch as the checked-out branch 'main'. Pass --base-branch to override.
+Activated task for this session: .trellis/tasks/11-12-dummy-task
+Source: session:codex_01a1cd6b-ed0a-7691-b14c-31ffbf1c67e3
+Created task: 11-12-dummy-task
+
+Next steps:
+  - Fill prd.md with requirements and acceptance criteria
+  - Lightweight task: PRD-only is valid
+  - Complex task: add design.md and implement.md before task.py start
+  - Use /trellis:continue or phase context to decide the next step
+
+warning: could not resolve the repository's default branch (no remote configured, offline, etc.); stamping base_branch as the checked-out branch 'main'. Pass --base-branch to override.
+Activated task for this session: .trellis/tasks/11-12-plain-task
+Source: session:codex_01a1cd6b-ed0a-7691-b14c-31ffbf1c67e3
+Created task: 11-12-plain-task
+
+Next steps:
+  - Fill prd.md with requirements and acceptance criteria
+  - Lightweight task: PRD-only is valid
+  - Complex task: add design.md and implement.md before task.py start
+  - Use /trellis:continue or phase context to decide the next step
+
+warning: could not resolve the repository's default branch (no remote configured, offline, etc.); stamping base_branch as the checked-out branch 'main'. Pass --base-branch to override.
+Created task: 11-12-grok-task
+
+Next steps:
+  - Fill prd.md with requirements and acceptance criteria
+  - Lightweight task: PRD-only is valid
+  - Complex task: add design.md and implement.md before task.py start
+  - Curate implement.jsonl / check.jsonl (created empty) as spec/research manifests before task.py start when sub-agents need context:
+      one JSON object per line — {"file": "<path>", "reason": "<why>"}; spec/research docs only, no code paths
+      list available specs: python3 .trellis/scripts/get_context.py --mode packages
+  - Use /trellis:continue or phase context to decide the next step
+
+warning: could not resolve the repository's default branch (no remote configured, offline, etc.); stamping base_branch as the checked-out branch 'main'. Pass --base-branch to override.
+Created task: 11-12-kimi-task
+
+Next steps:
+  - Fill prd.md with requirements and acceptance criteria
+  - Lightweight task: PRD-only is valid
+  - Complex task: add design.md and implement.md before task.py start
+  - Curate implement.jsonl / check.jsonl (created empty) as spec/research manifests before task.py start when sub-agents need context:
+      one JSON object per line — {"file": "<path>", "reason": "<why>"}; spec/research docs only, no code paths
+      list available specs: python3 .trellis/scripts/get_context.py --mode packages
+  - Use /trellis:continue or phase context to decide the next step
+
+warning: could not resolve the repository's default branch (no remote configured, offline, etc.); stamping base_branch as the checked-out branch 'main'. Pass --base-branch to override.
+Activated task for this session: .trellis/tasks/11-12-codex-inline-task
+Source: session:codex_01a1cd6b-ed0a-7691-b14c-31ffbf1c67e3
+Created task: 11-12-codex-inline-task
+
+Next steps:
+  - Fill prd.md with requirements and acceptance criteria
+  - Lightweight task: PRD-only is valid
+  - Complex task: add design.md and implement.md before task.py start
+  - Use /trellis:continue or phase context to decide the next step
+
+warning: could not resolve the repository's default branch (no remote configured, offline, etc.); stamping base_branch as the checked-out branch 'main'. Pass --base-branch to override.
+Activated task for this session: .trellis/tasks/11-12-codex-subagent-task
+Source: session:codex_01a1cd6b-ed0a-7691-b14c-31ffbf1c67e3
+Created task: 11-12-codex-subagent-task
+
+Next steps:
+  - Fill prd.md with requirements and acceptance criteria
+  - Lightweight task: PRD-only is valid
+  - Complex task: add design.md and implement.md before task.py start
+  - Curate implement.jsonl / check.jsonl (created empty) as spec/research manifests before task.py start when sub-agents need context:
+      one JSON object per line — {"file": "<path>", "reason": "<why>"}; spec/research docs only, no code paths
+      list available specs: python3 .trellis/scripts/get_context.py --mode packages
+  - Use /trellis:continue or phase context to decide the next step
+
+Error: `task.py init-context` was removed in v0.5.0-beta.12.
+implement.jsonl / check.jsonl are now seeded on `task.py create` for
+sub-agent-capable platforms and curated by the AI during planning when needed.
+See .trellis/workflow.md planning artifact guidance or run:
+  python3 ./.trellis/scripts/get_context.py --mode phase --step 1
+Use `task.py add-context <dir> implement|check <path> <reason>` to append entries.
+warning: could not resolve the repository's default branch (no remote configured, offline, etc.); stamping base_branch as the checked-out branch 'main'. Pass --base-branch to override.
+Activated task for this session: .trellis/tasks/11-12-seed-only-task
+Source: session:codex_01a1cd6b-ed0a-7691-b14c-31ffbf1c67e3
+Created task: 11-12-seed-only-task
+
+Next steps:
+  - Fill prd.md with requirements and acceptance criteria
+  - Lightweight task: PRD-only is valid
+  - Complex task: add design.md and implement.md before task.py start
+  - Curate implement.jsonl / check.jsonl (created empty) as spec/research manifests before task.py start when sub-agents need context:
+      one JSON object per line — {"file": "<path>", "reason": "<why>"}; spec/research docs only, no code paths
+      list available specs: python3 .trellis/scripts/get_context.py --mode packages
+  - Use /trellis:continue or phase context to decide the next step
+
+warning: could not resolve the repository's default branch (no remote configured, offline, etc.); stamping base_branch as the checked-out branch 'main'. Pass --base-branch to override.
+Activated task for this session: .trellis/tasks/11-12-seed-list-task
+Source: session:codex_01a1cd6b-ed0a-7691-b14c-31ffbf1c67e3
+Created task: 11-12-seed-list-task
+
+Next steps:
+  - Fill prd.md with requirements and acceptance criteria
+  - Lightweight task: PRD-only is valid
+  - Complex task: add design.md and implement.md before task.py start
+  - Curate implement.jsonl / check.jsonl (created empty) as spec/research manifests before task.py start when sub-agents need context:
+      one JSON object per line — {"file": "<path>", "reason": "<why>"}; spec/research docs only, no code paths
+      list available specs: python3 .trellis/scripts/get_context.py --mode packages
+  - Use /trellis:continue or phase context to decide the next step
+
+Note: no checked-out branch (detached HEAD, or not a git repository); task branch not recorded.
+warning: in the working copy of '.trellis/.developer', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/__init__.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/add_session.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/__init__.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/active_task.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/cli_adapter.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/config.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/developer.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/git.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/git_context.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/io.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/log.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/packages_context.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/paths.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/safe_commit.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/session_context.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/task_context.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/task_queue.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/task_store.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/task_utils.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/tasks.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/trellis_config.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/types.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/workflow_phase.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/get_context.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/get_developer.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/init_developer.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/task.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/spec/guides/index.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/tasks/issue-106/implement.jsonl', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/tasks/issue-106/prd.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/tasks/issue-106/task.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/workflow.md', LF will be replaced by CRLF the next time Git touches it
+Skipped session activation (--no-start); run task.py start when ready.
+Created task: 11-12-base-branch-test
+
+Next steps:
+  - Fill prd.md with requirements and acceptance criteria
+  - Lightweight task: PRD-only is valid
+  - Complex task: add design.md and implement.md before task.py start
+  - Use /trellis:continue or phase context to decide the next step
+
+warning: in the working copy of '.trellis/.developer', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/__init__.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/add_session.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/__init__.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/active_task.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/cli_adapter.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/config.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/developer.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/git.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/git_context.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/io.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/log.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/packages_context.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/paths.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/safe_commit.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/session_context.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/task_context.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/task_queue.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/task_store.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/task_utils.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/tasks.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/trellis_config.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/types.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/workflow_phase.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/get_context.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/get_developer.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/init_developer.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/task.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/spec/guides/index.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/tasks/issue-106/implement.jsonl', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/tasks/issue-106/prd.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/tasks/issue-106/task.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/workflow.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/.developer', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/__init__.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/add_session.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/__init__.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/active_task.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/cli_adapter.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/config.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/developer.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/git.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/git_context.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/io.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/log.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/packages_context.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/paths.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/safe_commit.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/session_context.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/task_context.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/task_queue.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/task_store.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/task_utils.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/tasks.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/trellis_config.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/types.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/workflow_phase.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/get_context.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/get_developer.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/init_developer.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/task.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/spec/guides/index.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/tasks/issue-106/implement.jsonl', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/tasks/issue-106/prd.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/tasks/issue-106/task.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/workflow.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/.developer', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/__init__.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/add_session.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/__init__.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/active_task.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/cli_adapter.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/config.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/developer.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/git.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/git_context.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/io.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/log.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/packages_context.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/paths.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/safe_commit.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/session_context.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/task_context.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/task_queue.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/task_store.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/task_utils.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/tasks.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/trellis_config.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/types.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/workflow_phase.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/get_context.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/get_developer.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/init_developer.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/task.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/spec/guides/index.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/tasks/issue-106/implement.jsonl', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/tasks/issue-106/prd.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/tasks/issue-106/task.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/workflow.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/.developer', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/__init__.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/add_session.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/__init__.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/active_task.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/cli_adapter.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/config.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/developer.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/git.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/git_context.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/io.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/log.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/packages_context.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/paths.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/safe_commit.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/session_context.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/task_context.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/task_queue.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/task_store.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/task_utils.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/tasks.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/trellis_config.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/types.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/workflow_phase.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/get_context.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/get_developer.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/init_developer.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/task.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/spec/guides/index.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/tasks/issue-106/implement.jsonl', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/tasks/issue-106/prd.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/tasks/issue-106/task.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/workflow.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/.developer', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/__init__.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/add_session.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/__init__.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/active_task.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/cli_adapter.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/config.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/developer.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/git.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/git_context.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/io.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/log.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/packages_context.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/paths.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/safe_commit.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/session_context.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/task_context.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/task_queue.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/task_store.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/task_utils.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/tasks.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/trellis_config.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/types.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/workflow_phase.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/get_context.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/get_developer.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/init_developer.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/task.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/spec/guides/index.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/tasks/issue-106/implement.jsonl', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/tasks/issue-106/prd.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/tasks/issue-106/task.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/workflow.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/.developer', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/__init__.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/add_session.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/__init__.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/active_task.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/cli_adapter.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/config.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/developer.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/git.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/git_context.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/io.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/log.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/packages_context.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/paths.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/safe_commit.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/session_context.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/task_context.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/task_queue.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/task_store.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/task_utils.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/tasks.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/trellis_config.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/types.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/workflow_phase.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/get_context.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/get_developer.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/init_developer.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/task.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/spec/guides/index.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/tasks/issue-106/implement.jsonl', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/tasks/issue-106/prd.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/tasks/issue-106/task.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/workflow.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/.developer', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/__init__.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/add_session.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/__init__.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/active_task.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/cli_adapter.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/config.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/developer.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/git.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/git_context.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/io.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/log.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/packages_context.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/paths.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/safe_commit.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/session_context.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/task_context.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/task_queue.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/task_store.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/task_utils.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/tasks.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/trellis_config.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/types.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/workflow_phase.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/get_context.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/get_developer.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/init_developer.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/task.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/spec/guides/index.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/tasks/issue-106/implement.jsonl', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/tasks/issue-106/prd.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/tasks/issue-106/task.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/workflow.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/.developer', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/__init__.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/add_session.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/__init__.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/active_task.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/cli_adapter.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/config.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/developer.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/git.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/git_context.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/io.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/log.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/packages_context.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/paths.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/safe_commit.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/session_context.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/task_context.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/task_queue.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/task_store.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/task_utils.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/tasks.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/trellis_config.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/types.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/workflow_phase.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/get_context.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/get_developer.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/init_developer.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/task.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/spec/guides/index.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/tasks/issue-106/implement.jsonl', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/tasks/issue-106/prd.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/tasks/issue-106/task.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/workflow.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/.developer', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/__init__.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/add_session.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/__init__.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/active_task.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/cli_adapter.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/config.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/developer.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/git.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/git_context.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/io.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/log.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/packages_context.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/paths.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/safe_commit.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/session_context.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/task_context.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/task_queue.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/task_store.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/task_utils.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/tasks.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/trellis_config.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/types.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/workflow_phase.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/get_context.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/get_developer.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/init_developer.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/task.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/spec/guides/index.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/tasks/issue-106/implement.jsonl', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/tasks/issue-106/prd.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/tasks/issue-106/task.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/workflow.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/.developer', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/__init__.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/add_session.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/__init__.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/active_task.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/cli_adapter.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/config.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/developer.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/git.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/git_context.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/io.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/log.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/packages_context.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/paths.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/safe_commit.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/session_context.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/task_context.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/task_queue.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/task_store.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/task_utils.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/tasks.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/trellis_config.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/types.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/workflow_phase.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/get_context.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/get_developer.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/init_developer.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/task.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/spec/guides/index.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/tasks/issue-106/implement.jsonl', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/tasks/issue-106/prd.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/tasks/issue-106/task.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/workflow.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/.developer', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/__init__.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/add_session.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/__init__.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/active_task.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/cli_adapter.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/config.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/developer.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/git.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/git_context.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/io.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/log.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/packages_context.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/paths.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/safe_commit.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/session_context.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/task_context.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/task_queue.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/task_store.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/task_utils.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/tasks.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/trellis_config.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/types.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/workflow_phase.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/get_context.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/get_developer.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/init_developer.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/task.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/spec/guides/index.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/tasks/issue-106/implement.jsonl', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/tasks/issue-106/prd.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/tasks/issue-106/task.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/workflow.md', LF will be replaced by CRLF the next time Git touches it
+stdout | test/regression.test.ts > regression: configSectionsAdded (issue-codex-dispatch-mode) > [config-sections] applyConfigSectionsAdded appends section when sentinel missing, idempotent on rerun
+  + Added config section "Codex (sub-agent dispatch behavior)" to .trellis/config.yaml
+
+warning: in the working copy of 'README.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.gitignore', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'README.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'README.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.gitignore', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'README.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'README.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'README.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'README.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'README.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'README.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'README.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'README.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/.developer', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/__init__.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/add_session.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/__init__.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/active_task.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/cli_adapter.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/config.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/developer.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/git.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/git_context.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/io.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/log.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/packages_context.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/paths.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/safe_commit.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/session_context.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/task_context.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/task_queue.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/task_store.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/task_utils.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/tasks.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/trellis_config.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/types.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/workflow_phase.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/get_context.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/get_developer.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/init_developer.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/task.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/tasks/issue-lock/prd.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/tasks/issue-lock/task.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'README.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/.developer', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/__init__.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/add_session.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/__init__.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/active_task.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/cli_adapter.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/config.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/developer.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/git.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/git_context.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/io.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/log.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/packages_context.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/paths.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/safe_commit.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/session_context.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/task_context.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/task_queue.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/task_store.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/task_utils.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/tasks.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/trellis_config.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/types.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/workflow_phase.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/get_context.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/get_developer.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/init_developer.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/task.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/tasks/issue-lock/prd.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/tasks/issue-lock/task.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'README.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/.developer', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/__init__.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/add_session.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/__init__.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/active_task.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/cli_adapter.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/config.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/developer.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/git.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/git_context.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/io.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/log.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/packages_context.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/paths.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/safe_commit.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/session_context.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/task_context.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/task_queue.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/task_store.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/task_utils.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/tasks.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/trellis_config.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/types.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/common/workflow_phase.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/get_context.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/get_developer.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/init_developer.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/scripts/task.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/tasks/issue-lock/prd.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.trellis/tasks/issue-lock/task.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'README.md', LF will be replaced by CRLF the next time Git touches it
+ ❯ test/regression.test.ts (513 tests | 5 failed | 13 skipped) 105282ms
+     ✓ [beta.10] common/__init__.py has _configure_stream function 1ms
+     ✓ [beta.10] common/__init__.py has reconfigure(encoding="utf-8") pattern 0ms
+     ✓ [beta.10] common/__init__.py has TextIOWrapper fallback 0ms
+     ✓ [issue #190] Codex and Copilot session-start hooks force UTF-8 stdout on Windows 2ms
+     ✓ [beta.10] common/__init__.py has sys.platform == "win32" guard 0ms
+     ✓ [beta.10] common/__init__.py configures both stdout AND stderr 0ms
+     ✓ [beta.16] _configure_stream handles stream with reconfigure method 0ms
+     ✓ [beta.16] _configure_stream is idempotent (won't crash on double call) 0ms
+     ✓ [beta.10] common/__init__.py has centralized encoding fix 0ms
+     ✓ [beta.10] task.py imports from common (gets encoding fix via __init__.py) 0ms
+     ✓ [rc.2] add_session.py table separator detection uses regex (not startswith) 0ms
+     ✓ [issue-106] add_session.py accepts --branch CLI arg 0ms
+     ✓ [issue-106] add_session.py auto-detects branch via git branch --show-current 0ms
+     ✓ [issue-106] add_session.py reads branch from task.json when available 0ms
+     ✓ [issue-106] add_session.py session content includes **Branch** field only 0ms
+     ✓ [issue-106] add_session.py index table header has 5 columns including Branch 0ms
+     ✓ [issue-106] add_session.py migrates old 4/6-column headers to 5-column 0ms
+     ✓ [issue-106] developer.py init template has 5-column session history table 0ms
+     ✓ [issue-106] workspace-index.md template documents Branch field only for session records 0ms
+     ✓ [issue-106] prefers explicit CLI branch over task.json and git  999ms
+     ✓ [issue-106] prefers task.json branch over current git branch and ignores task base_branch  976ms
+     ✓ [issue-106] falls back to git branch and migrates old 6-column session history  666ms
+     ✓ [issue-106] migrates old 4-column session history directly to 5 columns  546ms
+     ✓ [issue-106] records a session even when no branch information is available  552ms
+     ✓ [beta.12] isManagedPath handles Windows backslash paths 0ms
+     ✓ [beta.12] isManagedPath handles mixed separators 0ms
+     ✓ [0.2.15] PATHS.TASKS is .trellis/tasks (not .trellis/workspace/*/tasks) 0ms
+     ✓ [0.2.14] Claude agent templates do not contain hardcoded .trellis/workspace/*/tasks/ paths 2ms
+     ✓ [beta.13] cli_adapter.py does not contain hardcoded developer paths 0ms
+     ✓ [0.2.15] no script templates contain hardcoded 'taosu' in path patterns 1ms
+     ✓ [beta.12] resolve_task_dir handles .trellis prefix 0ms
+     ✓ [current-task] resolve_task_dir normalizes backslash separators before path classification 0ms
+     ✓ [audit] set-meta on a traversal path fails and leaves the outside task.json untouched 238ms
+     ✓ [audit] start reports a refused path once, on stderr only  379ms
+     ✓ [audit] set-meta through a symlinked task dir fails and leaves the link target untouched 253ms
+     ✓ [audit] create --slug with traversal fails and writes nothing outside the tasks dir 243ms
+     ✓ [audit] add-context rejects a traversal JSONL filename 251ms
+     ✓ [audit] add-context on '..' fails instead of writing into .trellis/ 234ms
+     ✓ [audit] an ambiguous suffix name fails and lists every match  394ms
+     ✓ [audit] legitimate task paths still resolve: name, repo-relative path, and archived task  439ms
+     ✓ [audit] same-day slug reuse fails and preserves the existing task.json  594ms
+     ✓ [audit] create --force overwrites an existing task.json  928ms
+     ✓ [audit] archive into an existing destination fails, leaving both directories intact  492ms
+     ✓ [audit] archive still succeeds when the destination is free  590ms
+     ✓ [audit] create --parent on a missing task fails and creates nothing 282ms
+     ✓ [audit] create --parent pointing at a dir without task.json fails and creates nothing 267ms
+     ✓ [audit] create --parent still links a valid parent on both sides  569ms
+     ↓ [audit] add-subtask reports which side was written when the second write fails
+     ↓ [audit] remove-subtask reports which side was written when the second write fails
+     ✓ [audit] set-meta on a corrupt task.json names the file and the failure class  456ms
+     ✓ [audit] set-meta on a non-UTF-8 task.json names the encoding, not a parse error  436ms
+     ✓ [audit] validate reports a non-string `file` instead of crashing on it  472ms
+     ↓ [audit] set-meta on an unreadable task.json reports permissions, not a parse error
+     ✓ [audit] set-scope on a task dir without task.json reports the missing file 252ms
+     ↓ [audit] set-branch reports a failed write instead of printing success
+     ↓ [audit] create reports a failed task.json write instead of 'Created task'
+     ↓ [audit] archive stops before moving when a child cannot be unlinked
+     ↓ [audit] archive restores the children it already unlinked when a later one fails
+     ↓ [audit] archive restore survives a duplicated child entry
+     ✓ [audit] list warns about a skipped task instead of silently dropping it  706ms
+     ✓ [audit] start still activates a task with a corrupt task.json but says why status and branch stayed  449ms
+     ✓ [audit] current --json carries a read-failure signal and stays silent when healthy  732ms
+     ↓ [audit] a session pointer that cannot be written atomically is left intact
+     ✓ [issue-428] rejects the archive root, an archived child, the tasks root, and an external path; accepts a direct child 139ms
+     ✓ [issue-429] closes the raw fd itself when fdopen fails, and leaves no temp file 238ms
+     ✓ [issue-429] cleans up the temp file when os.replace fails, without masking the write as a success 234ms
+     ✓ [issue-429] a cleanup failure after a write failure does not raise — still reports False 232ms
+     ✓ [issue-429] a successful write is atomic and leaves no leftover temp file 229ms
+     ✓ [issue-430] no session identity stays silent (normal degraded mode, not a failure)  348ms
+     ✓ [issue-430] a real session identity activates normally with no warning  360ms
+     ✓ [issue-430] a pointer-persistence failure is now diagnosable instead of silently swallowed  354ms
+     ✓ [beta.5] prerelease version sorts before release version 62ms
+     ✓ [beta.5] prerelease numeric parts compare numerically (beta.2 < beta.10) 61ms
+     ✓ [beta.5] getMigrationsForVersion returns empty for equal versions 61ms
+     ✓ [beta.5] getMigrationsForVersion correctly handles beta range 59ms
+     ✓ [beta.14] all migrations have non-undefined 'from' field 88ms
+     ✓ [beta.14] all migrations have valid type field 60ms
+     ✓ [beta.1-040] safe-file-delete migrations have allowed_hashes 73ms
+     ✓ [beta.15] Claude Code statusline is not safe-deleted on update 57ms
+     ✓ [statusline-opt-in] statusline.py is not in claude's collected templates (update must not force-install it) 6ms
+     ✓ [beta.14] rename/rename-dir migrations have 'to' field 62ms
+     ✓ [beta.14] all manifest versions are valid semver-like strings 55ms
+     ✓ [beta.8] collectPlatformTemplates returns Map for opencode (plugins + agents + lib + package.json + commands + skills) 8ms
+     ✓ [beta.16] collectPlatformTemplates returns Map for platforms with tracking 100ms
+     ✓ [beta.0] no .sh scripts remain in trellis templates 0ms
+     ✓ [beta.0] all script keys end with .py 0ms
+     ✓ [beta.3] getAllScripts covers every .py file in templates/trellis/scripts/ 1ms
+     ✓ [beta.7] Claude settings.json is valid JSON 1ms
+     ✓ [beta.7] Claude settings.json has correct hook structure 1ms
+     ✓ [beta.7] hook commands use {{PYTHON_CMD}} placeholder (not hardcoded python3) 0ms
+     ✓ [MIN-231] Claude SessionStart hooks cover startup, clear, and compact 0ms
+     ✓ [MIN-231] all SessionStart matchers invoke session-start.py 0ms
+     ✓ shows a concise update hint when trellis --version reports a newer version 248ms
+     ✓ does not show a hint when installed version is equal or newer  381ms
+     ✓ silently skips the hint when trellis --version fails or version parsing fails  362ms
+     ✓ does not burn the once-per-session marker when version lookup fails  363ms
+     ✓ uses the final trellis --version token when no update line is present 238ms
+     ✓ only attempts the default text update hint once per session  354ms
+     ✓ keeps the update hint out of JSON, record, packages, and phase paths 18ms
+     ✓ does not render root as unknown/clean when configured package repos exist  615ms
+     ✓ uses the same non-Git root rendering in record mode  603ms
+     ✓ discovers unconfigured child Git repos when root is not a Git repo  1041ms
+     ✓ skips automatic Git status when too many child repos are discovered  346ms
+     ✓ passes probe timeouts through the shared Git runner 195ms
+     ✓ marks JSON root Git state as non-repo instead of clean  608ms
+     ✓ [session-current-task] task.py start without context key enters degraded mode (returns 0, no pointer)  318ms
+     ✓ [session-current-task] task.py start in degraded mode flips planning → in_progress  308ms
+     ✓ [session-current-task] task.py start writes session runtime state when TRELLIS_CONTEXT_ID is set 285ms
+     ✓ [session-current-task] task.py finish deletes the session runtime context  412ms
+     ✓ [workflow-state-r7] task.py create auto-sets session pointer when TRELLIS_CONTEXT_ID is set (planning breadcrumb reachable)  385ms
+     ✓ [issue-397] task.py create stores the trimmed description and reports session activation  365ms
+     ✓ [issue-397] task.py create --no-start does not move the session pointer  362ms
+     ✓ [workflow-state-r7] task.py create degrades silently without session identity (no .runtime side effect)  363ms
+     ✓ [workflow-state-r7] task.py create then task.py start is idempotent (pointer + status flip)  511ms
+     ✓ [session-current-task] task.py archive deletes runtime sessions pointing at the archived task 278ms
+     ✓ [task-lifecycle] task.py create refuses an archived task dir-name collision  608ms
+     ✓ [issue-377] task.py create normalizes a --slug carrying today's date prefix  340ms
+     ✓ [issue-377] task.py create rejects a --slug carrying a different date prefix 232ms
+     ✓ [issue-377] task.py create leaves non-date numeric slug prefixes untouched  333ms
+     ✓ [task-input-contract] task.py archive accepts task name, relative path, and absolute path  541ms
+     ✓ [session-current-task] task.py start also uses platform-native session env when available 294ms
+     ✓ [zcode-session-key] hook input and shell env resolve the same runtime key 144ms
+     ✓ [grok] Python CLIAdapter executes Grok paths, commands, and detection 133ms
+     ✓ [kimi] Python CLIAdapter executes Kimi paths, commands, and detection 134ms
+     ✓ [grok] task.py start ignores GROK_SESSION_ID and enters degraded mode 280ms
+     ✓ [session-current-task] task.py start uses Codex Desktop CODEX_THREAD_ID 282ms
+     ✓ [session-current-task] task.py start ignores OPENCODE_RUN_ID and enters degraded mode 282ms
+     ✓ [session-current-task] the OpenCode plugin's TRELLIS_CONTEXT_ID prefix still activates the task  300ms
+     ✓ [env-name-purge] a purged env var name resolves no context key for its platform 137ms
+     ✓ [env-name-purge] a platform absent from an env table yields no keys and does not raise 136ms
+     ✓ [env-name-purge] every surviving env var name still resolves for its platform 140ms
+     ✓ [session-current-task] task.py finish ignores legacy .current-task when no session task is set 257ms
+     ✓ [session-current-task] task.py current ignores legacy .current-task without context key 245ms
+     ✓ [session-current-task] stale session task does not fall back to legacy .current-task 260ms
+     ✓ [session-current-task] Claude statusline uses session-scoped task when session_id is present 175ms
+     ✓ [session-current-task] Claude statusline ignores legacy .current-task without session context 197ms
+     ✓ [statusline-opt-in] Claude statusline tolerates ISO-8601 resets_at and missing seven_day (no crash) 205ms
+     ✓ [statusline-opt-in] Claude statusline moves rate limits to their own line when COLUMNS is narrow 180ms
+     ✓ [statusline-opt-in] Claude statusline stays single-line when COLUMNS is wide or unset  306ms
+     ✓ [session-current-task] Python session-start hooks resolve session backslash refs without stale pointer  457ms
+     ✓ [session-current-task] Claude SessionStart persists TRELLIS_CONTEXT_ID for Bash commands 273ms
+     × [env-file-dedup] repeated SessionStarts with the same key append exactly once 598ms
+     × [env-file-dedup] a changed key appends again 774ms
+     × [env-file-dedup] switching back to an earlier key re-appends (last line wins, not 'appears anywhere') 624ms
+     ✓ [env-file-dedup] an unwritable or unreadable CLAUDE_ENV_FILE is a silent no-op  436ms
+     × [env-file-dedup] a non-UTF-8 user env file does not break SessionStart 267ms
+     ↓ [session-update-hint] a stale .trellis/.version reaches the user through the first-reply notice
+     ↓ [session-update-hint] an up-to-date project emits a byte-identical payload
+     ↓ [session-update-hint] the once-per-session marker suppresses the second version probe
+     ↓ [session-update-hint] a failing or hanging trellis CLI stays silent and leaves the check for the next session
+     ✓ [session-update-hint] an unreadable .trellis/.version leaves SessionStart working and silent 268ms
+     ✓ [session-current-task] Cursor beforeShellExecution bridges conversation_id into task.py shell commands  509ms
+       ✓ at least one platform declares the shell-session hook 1ms
+       ✓ cursor: hook writes a ticket, task.py start consumes it, the platform's own hook reads the same key  606ms
+       ✓ gemini: hook writes a ticket, task.py start consumes it, the platform's own hook reads the same key  520ms
+       ✓ qoder: hook writes a ticket, task.py start consumes it, the platform's own hook reads the same key  540ms
+       ✓ codebuddy: hook writes a ticket, task.py start consumes it, the platform's own hook reads the same key  553ms
+       ✓ droid: hook writes a ticket, task.py start consumes it, the platform's own hook reads the same key  560ms
+       ✓ trae: hook writes a ticket, task.py start consumes it, the platform's own hook reads the same key  535ms
+       ✓ zcode: hook writes a ticket, task.py start consumes it, the platform's own hook reads the same key  552ms
+       ✓ a ticket from another session never resolves for this one  529ms
+       ✓ a payload carrying neither command shape is a silent no-op, not an exception  386ms
+       ✓ tickets left in the pre-0.6.13 cursor-shell directory are still honored  318ms
+     ✓ [session-current-task] Cursor preToolUse injects context for custom Task subagents 172ms
+     ✓ [session-current-task] CodeBuddy preToolUse injects context for subagent_name Task subagents 184ms
+     ✓ [session-current-task] Cursor generic subagents do not receive Trellis jsonl injection 100ms
+     ✓ [codex-native-subagents] SubagentStart injects a marker and the valid parent task 202ms
+     ✓ [codex-native-subagents] implement and check preserve curated context before task artifacts  311ms
+     ✓ [codex-native-subagents] research gets its task path without implement or check manifests 174ms
+     ✓ [codex-native-subagents] unknown or malformed parents never borrow a sole session task 285ms
+     ✓ [codex-native-subagents] parent session isolates concurrent tasks and ignores inherited context  409ms
+     ✓ [codex-native-subagents] non-Trellis SubagentStart agents stay silent 108ms
+     ✓ [session-current-task] Cursor hook uses conversation_id when transcript_path is null 259ms
+     ✓ [session-current-task] OpenCode resolver ignores legacy .current-task and uses plugin sessionID 23ms
+     ✓ [session-current-task] OpenCode resolver ignores OPENCODE_RUN_ID and uses the plugin sessionID 21ms
+     ✓ [#412] shared and Codex contexts include an adaptive one-shot notice without changing payload shape  469ms
+     ✓ [#240] Codex SessionStart output uses compact context without generic sub-agent notice 235ms
+     ✓ [#248] Copilot template does not assert Copilot ignores SessionStart hook output 1ms
+     ✓ [#248] Copilot SessionStart payload omits systemMessage and emits spec-compliant additionalContext 230ms
+     ✓ [workflow-v2] shared session-start summarizes in-progress context without auto-dispatch approval 272ms
+     ✓ [trellis-hooks-env] runtime: shared hooks emit no additionalContext when TRELLIS_HOOKS=0  476ms
+     ✓ [session-current-task] OpenCode context layer normalizes backslash refs for downstream plugins 22ms
+     ✓ [session-fallback] main CLI does not borrow a sole unrelated session 255ms
+     ✓ [session-fallback] zero session files — no fallback, returns none 247ms
+     ✓ [session-fallback] multiple session files — refuses to guess, returns none 247ms
+     ✓ [session-fallback] explicit context-key match takes precedence over fallback 266ms
+     ✓ [issue #469] finish removes only the exact matched session file 252ms
+     ✓ [issue #469] finish preserves a sole unmatched session file  350ms
+     ✓ [issue #469] finish deletes nothing when fallback resolution is ambiguous 251ms
+     ✓ [issue #469] finish preserves a malformed exact session when another session exists 248ms
+     ✓ [audit] a non-UTF-8 session file degrades to no active task 246ms
+     ✓ [workflow-state] missing/empty workflow.md degrades to generic line (post-R5: no fallback dict) 169ms
+     ✓ [workflow-state] in_progress tag in workflow.md mentions Phase 3.4 commit (R1 invariant) 178ms
+     ✓ [workflow-state] workflow.md tag overrides hardcoded fallback 174ms
+     ✓ [workflow-state-r5] inject-workflow-state.py contains no _FALLBACK_BREADCRUMBS dict (post-rc.0 collapse) 1ms
+     ✓ [workflow-state-dispatch-mode-dedup] _codex_mode_banner and resolve_breadcrumb_key share one normalization helper 0ms
+     ✓ [workflow-state-r5] opencode inject-workflow-state.js contains no FALLBACK_BREADCRUMBS dict 1ms
+     ✓ [workflow-state] custom status with hyphen matches via regex 189ms
+     ✓ [workflow-state] unknown status with no tag emits generic fallback, not silent 174ms
+     ✓ [workflow-state] CWD drift: hook finds .trellis/ when invoked from subdirectory 176ms
+     ✓ [workflow-state] no_task breadcrumb emitted when no session active task exists 173ms
+     ✓ reports task_error when task.json is malformed 200ms
+     ✓ reports task_error when task.json has no usable status 182ms
+     ✓ reports task_error when task.json is not an object 175ms
+     ✓ [#240] Codex workflow-state output starts with codex mode, not generic sub-agent notice 168ms
+     ✓ [workflow-state] silent exit 0 when not a Trellis project (no .trellis/ dir) 82ms
+     ✓ [#356] inject-workflow-state.py exits when host leaves stdin open with no payload  363ms
+     ✓ [workflow-v2] task.py create does NOT write legacy current_phase / next_action fields  357ms
+     ✓ [init-context-removal] task.py create does NOT seed jsonl when no sub-agent platform configured  349ms
+     ✓ [validation-preflight] task.py create writes EMPTY jsonl when a sub-agent platform dir exists  350ms
+     ✓ [validation-preflight] task.py create prints jsonl curation instructions instead of writing them into the files  337ms
+     ✓ [grok] task.py create creates empty jsonl when Grok is the only sub-agent platform  352ms
+     ✓ [kimi] task.py create creates empty jsonl when Kimi is the only sub-agent platform  351ms
+     ✓ [issue-373] task.py create does NOT seed jsonl for Codex inline mode  372ms
+     ✓ [issue-373] task.py create creates empty jsonl when Codex explicitly uses sub-agent dispatch  368ms
+     ✓ [init-context-removal] task.py init-context is deprecated with clear pointer to planning artifacts 249ms
+     ✓ [init-context-removal] inject-subagent-context.py skips seed rows (no `file` field) 96ms
+     ✓ [#573] task.py validate fails for a freshly created task until manifests are curated  465ms
+       ✓ rejects a placeholder-only implement.jsonl with file, line, and remediation 252ms
+       ✓ rejects a placeholder row in check.jsonl too 235ms
+       ✓ rejects a placeholder row that sits alongside curated entries 238ms
+       ✓ [#573] fails for empty manifests instead of passing them silently 229ms
+       ✓ passes for curated entries pointing at real files 235ms
+       ✓ still rejects malformed JSON lines 238ms
+       ✓ reports a non-object row instead of crashing on it 261ms
+       ✓ list-context skips non-object rows instead of crashing on them 249ms
+       ✓ rejects a placeholder row inside an archived task 245ms
+       ✓ blocks start when seeded manifests have zero curated entries 242ms
+       ✓ names only the manifest that is actually empty  357ms
+       ✓ --allow-empty-context bypasses the gate 296ms
+       ✓ does not gate when manifests are absent (agent-less platform) 282ms
+       ✓ starts normally once both manifests are curated 271ms
+     ✓ [init-context-removal] task.py list-context prints 'no curated entries yet' for uncurated jsonl  483ms
+     ✓ [workflow-state-r1] template workflow.md [workflow-state:in_progress] mentions commit (Phase 3.4) 2ms
+     ✓ [issue-237] all implement/check agent templates contain recursion guards 11ms
+     ✓ [issue-241-followup] Codex role profiles keep recursion guards without disabling native subagents 2ms
+     ✓ [workflow-state-r2] template workflow.md [workflow-state:planning] mentions artifact gates + required jsonl curation 1ms
+     ✓ [#292] workflow and brainstorm templates treat seed-only jsonl as not planning-ready 3ms
+     ✓ [#320] brainstorm templates require lossless PRD convergence before start 2ms
+     ✓ [workflow-state-r3-no_task] template workflow.md [workflow-state:no_task] block is present and well-formed 1ms
+     ✓ [workflow-state-r3-completed] template workflow.md [workflow-state:completed] block is present and well-formed 1ms
+     × [strip-breadcrumb] _strip_breadcrumb_tag_blocks only strips matched STATUS pairs (backreference parity with parser) 94ms
+     ✓ [workflow-v2] get_context.py --mode phase returns compact Phase Index only 246ms
+     ✓ [workflow-v2] --mode phase --platform codex (sub-agent mode) filters out generic before-dev routing 235ms
+     ✓ [pi] --mode phase --platform pi uses sub-agent routing 229ms
+     ✓ [workflow-v2] step 2.1 for Codex describes native hook injection with child-side fallback 229ms
+     ✓ [pi] step 2.1 describes extension-backed sub-agent context path 233ms
+     ✓ [workflow-v2] --mode phase --platform kilo keeps trellis-before-dev routing (agent-less path) 240ms
+     ✓ [workflow-v2] session-start.py <trellis-workflow> block contains compact Phase Index  332ms
+     ✓ [workflow-v2] session-start.py <guidelines> block lists context order and spec paths  319ms
+     ✓ [workflow-v2] inject-subagent-context.py does NOT write current_phase when implement spawns 102ms
+     ✓ [workflow-v2] inject-subagent-context.py source does NOT contain update_current_phase function 3ms
+     ✓ [issue-codex-dispatch-mode] codex breadcrumb defaults to native auto dispatch when config absent 188ms
+     ✓ [issue-codex-dispatch-mode] codex breadcrumb routes to plain status when codex.dispatch_mode=sub-agent 197ms
+     ✓ [issue-codex-dispatch-mode] codex breadcrumb routes to inline tag when codex.dispatch_mode=inline 186ms
+     ✓ [issue-codex-dispatch-mode] non-codex platform ignores codex.dispatch_mode=inline 202ms
+     ✓ [issue-codex-dispatch-mode] get_context.py --platform codex swaps to inline block content 230ms
+     ✓ [issue-codex-dispatch-mode] resolve_breadcrumb_key picks status-inline only for codex+inline 102ms
+     ✓ [issue-codex-dispatch-mode] inline `#` comment after value is stripped (config.yaml uncomment leaves trailing hint) 106ms
+     ✓ [issue-codex-dispatch-mode] resolve_effective_platform namespaces codex into codex-sub-agent / codex-inline 156ms
+     ✓ [issue-codex-dispatch-mode] codex hook injects <codex-mode> banner reflecting dispatch_mode 268ms
+     ✓ [issue-codex-dispatch-mode] non-codex hook does NOT inject <codex-mode> banner 176ms
+     ✓ [issue-395] task.py list --json emits a stable machine-readable schema 275ms
+     ✓ [issue-395] task.py current --json reports null when no task is active 233ms
+     ✓ [issue-395] task.py current --json reports the active task object  390ms
+     ✓ [issue-399.1] task.py create stamps base_branch from origin/HEAD, not the checked-out branch  1407ms
+     ✓ [issue-399.1] task.py create falls back to the checked-out branch when no default branch resolves  743ms
+     ✓ [issue-399.1] task.py create --base-branch overrides both origin/HEAD detection and the fallback  603ms
+     ✓ [issue-399.2] task.py validate warns when the recorded branch no longer exists locally  635ms
+     ✓ [issue-399.2] task.py archive warns when the recorded branch no longer exists locally  612ms
+     ✓ [issue-399.3] task.py start records the checked-out branch when none is set  683ms
+     ✓ [issue-399.3] task.py start does not clobber an explicitly set branch  656ms
+     ✓ [issue-399.3] task.py start on a detached HEAD notes the skip and still starts  684ms
+     ✓ [issue-399.3] task.py archive refuses a PR-backed task with no recorded branch  664ms
+     ✓ [issue-399.3] task.py archive refuses a task whose branch equals its base_branch  649ms
+     ✓ [issue-399.3] task.py archive --skip-branch-validation archives despite missing branch metadata  638ms
+     ✓ [issue-399.3] task.py archive still only warns when a PR-backed branch was merged and deleted  686ms
+     ✓ [beta.12] Common command/skill templates do not contain problematic backslash sequences 0ms
+     ✓ [beta.12] Claude agent templates do not contain problematic backslash sequences 2ms
+     ✓ [beta.12] Shared hook templates do not contain problematic backslash sequences 5ms
+     ✓ [beta.9] OpenCode platform is registered 0ms
+     ✓ [beta.13] Cursor platform is registered 0ms
+     ✓ [codex] Codex platform is registered 0ms
+     ✓ [kiro] Kiro platform is registered 0ms
+     ✓ [gemini] Gemini CLI platform is registered 0ms
+     ✓ [antigravity] Antigravity platform is registered 0ms
+     ✓ [devin] Devin platform is registered (formerly Windsurf) 0ms
+     ✓ [qoder] Qoder platform is registered 0ms
+     ✓ [codebuddy] CodeBuddy platform is registered 0ms
+     ✓ [copilot] Copilot platform is registered 0ms
+     ✓ [droid] Factory Droid platform is registered 0ms
+     ✓ [pi] Pi Agent platform is registered 0ms
+     ✓ [zcode] ZCode platform is registered with hook support 0ms
+     ✓ [omp] Oh My Pi platform is registered 0ms
+     ✓ [grok] Grok Build platform is registered as pull-based class-2 0ms
+     ✓ [kimi] Kimi Code platform is registered as pull-based class-2 0ms
+     ✓ [beta.9] all platforms have consistent required fields 2ms
+     ✓ [beta.9] cli_adapter.py supports opencode platform 0ms
+     ✓ [beta.13] cli_adapter.py supports cursor platform 0ms
+     ✓ [codex] cli_adapter.py supports codex platform 0ms
+     ✓ [kiro] cli_adapter.py supports kiro platform 0ms
+     ✓ [gemini] cli_adapter.py supports gemini platform 0ms
+     ✓ [antigravity] cli_adapter.py supports antigravity platform 0ms
+     ✓ [devin] cli_adapter.py supports devin platform (formerly windsurf) 0ms
+     ✓ [qoder] cli_adapter.py supports qoder platform 0ms
+     ✓ [codebuddy] cli_adapter.py supports codebuddy platform 0ms
+     ✓ [copilot] cli_adapter.py supports copilot platform 0ms
+     ✓ [droid] cli_adapter.py supports droid platform 0ms
+     ✓ [pi] cli_adapter.py supports pi platform 0ms
+     ✓ [omp] cli_adapter.py supports omp platform 0ms
+     ✓ [grok] cli_adapter.py supports grok platform 0ms
+     ✓ [kimi] cli_adapter.py supports kimi platform 0ms
+     ✓ [droid] cli_adapter.py treats droid as commands-only (no CLI run/resume yet) 0ms
+     ✓ [droid] cli_adapter.py has explicit droid branches in all key methods 0ms
+     ✓ [droid] cli_adapter.py detect_platform handles .factory directory 0ms
+     ✓ [beta.9] cli_adapter.py has detect_platform function 0ms
+     ✓ [migrate-flow-bugs] get_trellis_command_path codex branch uses trellis- prefix 0ms
+     ✓ [migrate-flow-bugs] get_trellis_command_path kiro branch uses trellis- prefix 0ms
+     ✓ [migrate-flow-bugs] _ALL_PLATFORM_CONFIG_DIRS excludes .agents (shared layer, not platform-specific) 0ms
+     ✓ [migrate-flow-bugs] detect_platform has codex shared-skills fallback guarded by no-other-platform-dir check 0ms
+     ✓ [init-context-removal] task.py no longer registers init-context subparser 0ms
+     ✓ [init-context-removal] task.py emits deprecation message on init-context invocation 0ms
+     ✓ [init-context-removal] common/task_context.py removes cmd_init_context + get_check_context helpers 0ms
+     ✓ [init-context-removal] task_store.cmd_create creates jsonl for sub-agent platforms 0ms
+     ✓ [migrate-flow-bugs] 0.5.0-beta.0 manifest has migrationGuide + aiInstructions (back-filled) 1ms
+     ✓ [migrate-flow-bugs] all breaking+recommendMigrate manifests include migrationGuide 56ms
+     ✓ [init-context-removal] platform-specific start templates no longer reference init-context 1ms
+     ✓ [beta.9] cli_adapter.py has get_cli_adapter function with validation 0ms
+     ✓ [beta.12] cli_adapter.py has config_dir_name property for each platform 0ms
+     ✓ [copilot] cli_adapter.py treats copilot as IDE-only (no CLI run/resume) 0ms
+     ✓ [copilot] cli_adapter.py has explicit copilot branches in all key methods 0ms
+     ✓ [0.3.0] rc→stable upgrade returns no migrations (all already applied) 54ms
+     ✓ [0.3.0] 0.3.0 manifest exists and is well-formed 42ms
+     ✓ [0.3.0] prerelease sorts before stable in version ordering 47ms
+     ✓ all manifest JSON files are loaded 51ms
+     ✓ version ordering is strictly ascending 54ms
+     ✓ [beta.0] shell-to-python migration uses only renames (no deletes) 51ms
+     ✓ [#57] shell archive migrations use rename type with correct from/to paths 44ms
+     ✓ [#57] shell archive covers all three subdirectories 49ms
+     ✓ [0.2.14] command namespace migration renames exist 40ms
+       ✓ has at least 65 rename entries for command→skill (13 platforms × 5 commands) 44ms
+       ✓ every platform × command pair has a matching rename entry 49ms
+       ✓ breaking + recommendMigrate flags are both set (drives gate) 1ms
+     ✓ [0.3.1] all platforms with commands use consistent trellis/ subdirectory 11ms
+     ✓ [0.3.4] kilo uses workflows/ for commands and skills/ for skills 3ms
+     ✓ [devin] devin uses workflows/ instead of commands/trellis/ 3ms
+     ✓ [codex] collectTemplates tracks both .agents skills and .codex assets 7ms
+     ✓ [copilot] collectTemplates tracks hooks and VS Code discovery config 8ms
+     ✓ [zcode] collectTemplates tracks hooks + config.json and filters start command 6ms
+     ✓ trellis_config.py defines _unquote helper 0ms
+     ✓ trellis_config.py uses _unquote for list items, not .strip('"') 0ms
+     ✓ trellis_config.py uses _unquote for key-value, not .strip('"') 0ms
+     ✓ config.py imports the parser instead of redefining it 0ms
+     ✓ nested single quotes inside double quotes are preserved 75ms
+     ✓ nested double quotes inside single quotes are preserved 66ms
+     ✓ list items with nested quotes are preserved 64ms
+     ✓ simple quoted values work 63ms
+     ✓ unquoted values are unchanged 78ms
+     ✓ mismatched quotes are left as-is 67ms
+     ✓ a mapping inside a list is not hoisted into the parent dict 76ms
+     ✓ block scalars are reported and their body is not leaked 66ms
+     ✓ anchors, aliases, merge keys and flow collections are reported 70ms
+     ✓ quoted values that look like YAML constructs stay untouched 65ms
+     ✓ a well-formed config parses with no warnings 69ms
+     ✓ [0.3.1] guidesCrossPlatformThinkingGuideContent is not exported from markdown/index 0ms
+     ✓ [0.3.1] guides index.md does not reference cross-platform-thinking-guide 0ms
+       ✓ does NOT install inject-subagent-context.py 50ms
+       ✓ implement/check definitions contain pull-based prelude 55ms
+       ✓ [beta.21] prelude is injected exactly once, not duplicated 53ms
+       ✓ [issue-225] prelude tells sub-agent to look for `Active task:` line in dispatch prompt first 55ms
+       ✓ research definition does NOT contain pull-based prelude 50ms
+       ✓ hook config does not reference inject-subagent-context.py 51ms
+       ✓ does NOT install inject-subagent-context.py 48ms
+       ✓ implement/check definitions contain pull-based prelude 49ms
+       ✓ [beta.21] prelude is injected exactly once, not duplicated 48ms
+       ✓ [issue-225] prelude tells sub-agent to look for `Active task:` line in dispatch prompt first 50ms
+       ✓ research definition does NOT contain pull-based prelude 53ms
+       ✓ hook config does not reference inject-subagent-context.py 50ms
+       ✓ does NOT install inject-subagent-context.py 53ms
+       ✓ implement/check definitions contain pull-based prelude 57ms
+       ✓ [beta.21] prelude is injected exactly once, not duplicated 56ms
+       ✓ [issue-225] prelude tells sub-agent to look for `Active task:` line in dispatch prompt first 54ms
+       ✓ research definition does NOT contain pull-based prelude 198ms
+       ✓ hook config does not reference inject-subagent-context.py 56ms
+     ✓ installs the native context hook and preserves the main-session workflow hook 59ms
+     ✓ uses marker-gated role profiles rather than the old unconditional pull prelude 128ms
+     ✓ writes Copilot agent tools as YAML lists 52ms
+     ✓ maps research agent MCP tools to Copilot tool names 53ms
+     ✓ collectPlatformTemplates matches written Copilot agent output 63ms
+     ✓ installs no Python hook files under .pi 56ms
+     ✓ installs a subagent-capable extension and pull-based agent context 116ms
+     ✓ [packages/cli/src/templates/claude/agents/trellis-research.md] has Write tool and persist instruction 1ms
+     ✓ [packages/cli/src/templates/cursor/agents/trellis-research.md] has Write tool and persist instruction 1ms
+     ✓ [packages/cli/src/templates/qoder/agents/trellis-research.md] has Write tool and persist instruction 1ms
+     ✓ [packages/cli/src/templates/codebuddy/agents/trellis-research.md] has Write tool and persist instruction 1ms
+     ✓ [packages/cli/src/templates/droid/droids/trellis-research.md] has Write tool and persist instruction 1ms
+     ✓ [packages/cli/src/templates/gemini/agents/trellis-research.md] omits tools line + has persist instruction 1ms
+     ✓ codex research.toml uses workspace-write sandbox and persist instruction 1ms
+     ✓ kiro research.json includes write tool and persist instruction 1ms
+     ✓ opencode research.md grants write/edit permission and has persist instruction 1ms
+     ✓ every file under templates/markdown/spec ends in .md.txt 1ms
+     ✓ inject-subagent-context.js has exactly one export, and it is 'export default' 1ms
+     ✓ inject-workflow-state.js has exactly one export, and it is 'export default' 1ms
+     ✓ session-start.js has exactly one export, and it is 'export default' 1ms
+     ✓ [#224] gemini agent .md files do NOT carry a comma-separated tools line 1ms
+     ✓ [#224] gemini settings.json uses BeforeAgent (not UserPromptSubmit) 0ms
+     ✓ [#224] inject-workflow-state.py emits BeforeAgent for gemini, UserPromptSubmit otherwise 1ms
+     ✓ [#224] configurePlatform('gemini') writes shared skills to .agents/skills, NOT .gemini/skills 49ms
+     ✓ [#224] codex + gemini render byte-identical content for shared `.agents/skills/` files 12ms
+     ✓ [trellis-hooks-env] all hook templates honor TRELLIS_HOOKS=0 / TRELLIS_DISABLE_HOOKS=1 8ms
+     ✓ [#224] needsCodexUpgrade looks for command-as-skill markers, not bare `.agents/skills/` prefix 1ms
+     ✓ packages/cli/src/templates/codex/hooks/session-start.py has no backslash inside any f-string expression part 1ms
+     ✓ packages/cli/src/templates/codex/hooks/session-start.py parses cleanly with python3 -m py_compile 55ms
+     ✓ packages/cli/src/templates/copilot/hooks/session-start.py has no backslash inside any f-string expression part 1ms
+     ✓ packages/cli/src/templates/copilot/hooks/session-start.py parses cleanly with python3 -m py_compile 52ms
+     ✓ packages/cli/src/templates/shared-hooks/session-start.py has no backslash inside any f-string expression part 1ms
+     ✓ packages/cli/src/templates/shared-hooks/session-start.py parses cleanly with python3 -m py_compile 65ms
+     ✓ inject-subagent-context.py emits the marker for implement / check / finish 2ms
+     ✓ claude/implement markdown agent file carries marker + fallback protocol 1ms
+     ✓ claude/check markdown agent file carries marker + fallback protocol 1ms
+     ✓ cursor/implement markdown agent file carries marker + fallback protocol 1ms
+     ✓ cursor/check markdown agent file carries marker + fallback protocol 1ms
+     ✓ codebuddy/implement markdown agent file carries marker + fallback protocol 0ms
+     ✓ codebuddy/check markdown agent file carries marker + fallback protocol 0ms
+     ✓ opencode/implement markdown agent file carries marker + fallback protocol 0ms
+     ✓ opencode/check markdown agent file carries marker + fallback protocol 0ms
+     ✓ droid/implement markdown agent file carries marker + fallback protocol 0ms
+     ✓ droid/check markdown agent file carries marker + fallback protocol 0ms
+     ✓ zcode/implement markdown agent file carries marker + fallback protocol 0ms
+     ✓ zcode/check markdown agent file carries marker + fallback protocol 1ms
+     ✓ kiro/implement JSON agent carries marker + fallback protocol in prompt 1ms
+     ✓ kiro/check JSON agent carries marker + fallback protocol in prompt 0ms
+     ✓ packages/cli/src/templates/gemini/agents/trellis-implement.md references task artifacts 1ms
+     ✓ packages/cli/src/templates/gemini/agents/trellis-check.md references task artifacts 0ms
+     ✓ packages/cli/src/templates/qoder/agents/trellis-implement.md references task artifacts 1ms
+     ✓ packages/cli/src/templates/qoder/agents/trellis-check.md references task artifacts 1ms
+     ✓ pi/implement agent references task artifacts 1ms
+     ✓ pi/check agent references task artifacts 0ms
+     ✓ [issue-247] kiro agent JSON files use Kiro CLI's current schema (prompt / hooks-object) 1ms
+     ✓ workflow.md dispatch protocol covers all platforms (not class-2 only) 1ms
+     ✓ [config-sections] extractConfigSection returns content between matching separator and next separator 297ms
+     ✓ [config-sections] applyConfigSectionsAdded appends section when sentinel missing, idempotent on rerun 4ms
+     ✓ [config-sections] applyConfigSectionsAdded skips when target file does not exist 1ms
+     ✓ [config-sections] manifest 0.5.7 declares the codex dispatch_mode section 1ms
+     ✓ [config-sections] bundled config.yaml template contains the new Codex section 1ms
+     ✓ [gitignore-trellis] add_session warns and skips when .trellis/ is ignored (default mode)  1427ms
+     ✓ [gitignore-trellis] add_session works normally when .trellis/ is NOT ignored  992ms
+     ✓ [gitignore-trellis] safe_commit module ships and contains the negative warning + new config hint 129ms
+     ✓ [gitignore-trellis] task.py archive warns and skips when .trellis/ is ignored (default mode)  697ms
+     ✓ [session_auto_commit=false] add_session skips git entirely (no add, no commit)  814ms
+     ✓ [session_auto_commit=false] task.py archive skips git entirely  598ms
+     ✓ [session_auto_commit] inline comment is stripped before parsing  833ms
+     ✓ [session_auto_commit] string variants resolve to false  3024ms
+     ✓ [session_auto_commit] invalid value falls back to true with stderr warn  1024ms
+     ✓ [index-lock] retries only index.lock failures, bounded by the attempt count  478ms
+     ✓ [index-lock] archive survives a lock that is released mid-retry  2463ms
+     ✓ [index-lock] a lock that never clears aborts with a diagnostic naming it  2354ms
+     ✓ both trees hold the same set of .py files 0ms
+     ✓ __init__.py is byte-identical in both trees 1ms
+     ✓ add_session.py is byte-identical in both trees 1ms
+     ✓ common/__init__.py is byte-identical in both trees 1ms
+     ✓ common/active_task.py is byte-identical in both trees 1ms
+     ✓ common/cli_adapter.py is byte-identical in both trees 1ms
+     ✓ common/config.py is byte-identical in both trees 1ms
+     ✓ common/developer.py is byte-identical in both trees 1ms
+     ✓ common/git.py is byte-identical in both trees 1ms
+     ✓ common/git_context.py is byte-identical in both trees 1ms
+     ✓ common/io.py is byte-identical in both trees 1ms
+     ✓ common/log.py is byte-identical in both trees 1ms
+     ✓ common/packages_context.py is byte-identical in both trees 1ms
+     ✓ common/paths.py is byte-identical in both trees 1ms
+     ✓ common/safe_commit.py is byte-identical in both trees 1ms
+     ✓ common/session_context.py is byte-identical in both trees 1ms
+     ✓ common/task_context.py is byte-identical in both trees 1ms
+     ✓ common/task_queue.py is byte-identical in both trees 1ms
+     ✓ common/task_store.py is byte-identical in both trees 1ms
+     ✓ common/task_utils.py is byte-identical in both trees 1ms
+     ✓ common/tasks.py is byte-identical in both trees 1ms
+     ✓ common/trellis_config.py is byte-identical in both trees 1ms
+     ✓ common/types.py is byte-identical in both trees 1ms
+     ✓ common/workflow_phase.py is byte-identical in both trees 1ms
+     ✓ get_context.py is byte-identical in both trees 1ms
+     ✓ get_developer.py is byte-identical in both trees 1ms
+     ✓ hooks/linear_sync.py is byte-identical in both trees 1ms
+     ✓ init_developer.py is byte-identical in both trees 1ms
+     ✓ task.py is byte-identical in both trees 1ms
+     ✓ detects at least one dogfooded platform 0ms
+     ✓ every platform tree present on disk is tracked in the manifest 89ms
+     ✓ claude-code: committed files are byte-identical to the templates 27ms
+     ✓ codex: committed files are byte-identical to the templates 28ms
+     ✓ cursor: committed files are byte-identical to the templates 25ms
+     ✓ omp: committed files are byte-identical to the templates 24ms
+     ✓ opencode: committed files are byte-identical to the templates 38ms
+     ✓ pi: committed files are byte-identical to the templates 19ms
+     ✓ inject-workflow-state.py checks CLAUDE_PROJECT_DIR after every vendor key 1ms
+     ✓ session-start.py checks CLAUDE_PROJECT_DIR after every vendor key 0ms
+     ✓ [task-rename] a task with a parent and two children leaves no dangling reference  1172ms
+     ✓ [task-rename] legacy subtasks back-references are rewritten too  693ms
+     ✓ [task-rename] --dry-run prints the change set it would apply, and writes nothing  1019ms
+     ✓ [task-rename] jsonl paths under the task dir move, a sibling's do not  750ms
+     ✓ [task-rename] refuses an existing destination, an archived name, a bad slug and an unknown task  900ms
+     ✓ [task-rename] refuses a slug carrying a date prefix, normalizing only its own  566ms
+     ✓ [task-rename] moves an active-task session pointer to the new name  709ms
+     ✓ [task-rename] refuses to rename an archived task  582ms
+     ✓ [worktree-identity] create/list/start work in a fresh worktree with no manual setup  1156ms
+     ✓ [worktree-identity] a later main-checkout change is picked up, because nothing was copied  1167ms
+     ✓ [worktree-identity] precedence: --assignee > TRELLIS_DEVELOPER > local file > main checkout  1542ms
+     ✓ [worktree-identity] the env var alone is enough in the main checkout too  817ms
+     ✓ [worktree-identity] a whitespace-only env var does not count as an identity  911ms
+     ✓ [worktree-identity] with no identity anywhere, the error names all three sources  1276ms
+     ✓ [worktree-identity] a linked worktree of a bare repo inherits nothing  939ms
+     ✓ [worktree-identity] a bare repo nested inside an unrelated checkout does not leak that checkout's identity  1220ms
+     ✓ [worktree-identity] a directory that is not a git repo fails normally, never crashes  323ms
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 5 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  test/regression.test.ts > regression: current-task path normalization > [env-file-dedup] repeated SessionStarts with the same key append exactly once
+AssertionError: expected [ Array(1) ] to deeply equal [ Array(1) ]
+
+- Expected
++ Received
+
+  [
+-   "export TRELLIS_CONTEXT_ID=claude_dedup-a",
++   "export TRELLIS_CONTEXT_ID=claude_dedup-a
+",
+  ]
+
+ ❯ test/regression.test.ts:4604:39
+    4602|     runSessionStart("dedup-a", envFile);
+    4603| 
+    4604|     expect(contextIdExports(envFile)).toEqual([
+       |                                       ^
+    4605|       "export TRELLIS_CONTEXT_ID=claude_dedup-a",
+    4606|     ]);
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/5]⎯
+
+ FAIL  test/regression.test.ts > regression: current-task path normalization > [env-file-dedup] a changed key appends again
+AssertionError: expected [ …(2) ] to deeply equal [ …(2) ]
+
+- Expected
++ Received
+
+  [
+-   "export TRELLIS_CONTEXT_ID=claude_dedup-a",
+-   "export TRELLIS_CONTEXT_ID=claude_dedup-b",
++   "export TRELLIS_CONTEXT_ID=claude_dedup-a
+",
++   "export TRELLIS_CONTEXT_ID=claude_dedup-b
+",
+  ]
+
+ ❯ test/regression.test.ts:4622:39
+    4620|     runSessionStart("dedup-b", envFile);
+    4621| 
+    4622|     expect(contextIdExports(envFile)).toEqual([
+       |                                       ^
+    4623|       "export TRELLIS_CONTEXT_ID=claude_dedup-a",
+    4624|       "export TRELLIS_CONTEXT_ID=claude_dedup-b",
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[2/5]⎯
+
+ FAIL  test/regression.test.ts > regression: current-task path normalization > [env-file-dedup] switching back to an earlier key re-appends (last line wins, not 'appears anywhere')
+AssertionError: expected [ …(3) ] to deeply equal [ …(3) ]
+
+- Expected
++ Received
+
+  [
+-   "export TRELLIS_CONTEXT_ID=claude_dedup-a",
+-   "export TRELLIS_CONTEXT_ID=claude_dedup-b",
+-   "export TRELLIS_CONTEXT_ID=claude_dedup-a",
++   "export TRELLIS_CONTEXT_ID=claude_dedup-a
+",
++   "export TRELLIS_CONTEXT_ID=claude_dedup-b
+",
++   "export TRELLIS_CONTEXT_ID=claude_dedup-a
+",
+  ]
+
+ ❯ test/regression.test.ts:4641:39
+    4639|     runSessionStart("dedup-a", envFile);
+    4640| 
+    4641|     expect(contextIdExports(envFile)).toEqual([
+       |                                       ^
+    4642|       "export TRELLIS_CONTEXT_ID=claude_dedup-a",
+    4643|       "export TRELLIS_CONTEXT_ID=claude_dedup-b",
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[3/5]⎯
+
+ FAIL  test/regression.test.ts > regression: current-task path normalization > [env-file-dedup] a non-UTF-8 user env file does not break SessionStart
+AssertionError: expected [ Array(1) ] to deeply equal [ Array(1) ]
+
+- Expected
++ Received
+
+  [
+-   "export TRELLIS_CONTEXT_ID=claude_dedup-latin",
++   "export TRELLIS_CONTEXT_ID=claude_dedup-latin
+",
+  ]
+
+ ❯ test/regression.test.ts:4675:39
+    4673| 
+    4674|     expect(() => runSessionStart("dedup-latin", envFile)).not.toThrow(…
+    4675|     expect(contextIdExports(envFile)).toEqual([
+       |                                       ^
+    4676|       "export TRELLIS_CONTEXT_ID=claude_dedup-latin",
+    4677|     ]);
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[4/5]⎯
+
+ FAIL  test/regression.test.ts > regression: current-task path normalization > [strip-breadcrumb] _strip_breadcrumb_tag_blocks only strips matched STATUS pairs (backreference parity with parser)
+AssertionError: expected '[workflow-state:planning]\nbody\n[/wo…' to be '' // Object.is equality
+
+- Expected
++ Received
+
++ [workflow-state:planning]\nbody\n[/workflow-state:planning]
+
+ ❯ test/regression.test.ts:7644:22
+    7642| 
+    7643|     // Matched pair: stripped (empty string).
+    7644|     expect(result.M).toBe("");
+       |                      ^
+    7645|     // Mismatched pair: NOT stripped — full input preserved.
+    7646|     expect(result.X).toContain("[workflow-state:planning]");
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[5/5]⎯
+
+
+ Test Files  1 failed | 3 passed (4)
+      Tests  5 failed | 589 passed | 13 skipped (607)
+   Start at  13:50:53
+   Duration  106.60s (transform 957ms, setup 52ms, import 2.86s, tests 124.86s, environment 0ms)
+
+undefined
+C:\Users\PXWD\AppData\Local\Temp\trellis-b-staged-m9ZtUD\packages\cli:
+ ERR_PNPM_RECURSIVE_EXEC_FIRST_FAIL  Command "vitest" not found

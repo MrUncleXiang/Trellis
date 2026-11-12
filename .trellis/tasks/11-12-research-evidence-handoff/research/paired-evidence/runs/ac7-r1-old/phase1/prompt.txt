@@ -1,0 +1,3 @@
+Active task: .trellis/tasks/fixture
+使用 .agents/skills/trellis-continue/SKILL.md 接手本任务，按 Trellis 正常流程处理下列业务目标。资料均为虚构受控样例，仅使用项目内材料，不联网、不写业务实现、不启动实施。请给出本轮可审阅的结论。
+判断能否承诺导入器2.0支持JPEG。用户资料在 fixtures/user.md，现成实验脚本是 fixtures/probe.mjs，可以运行并核对它究竟验证了什么。

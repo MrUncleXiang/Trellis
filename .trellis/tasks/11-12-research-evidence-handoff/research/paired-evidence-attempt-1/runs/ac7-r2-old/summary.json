@@ -1,0 +1,15 @@
+{
+  "id": "ac7-r2-old",
+  "case": "ac7",
+  "repeat": 2,
+  "version": "old",
+  "root": "C:\\Users\\PXWD\\AppData\\Local\\Temp\\trellis-b-paired-L12pRQ\\runs\\ac7-r2-old",
+  "results": [
+    {
+      "exitCode": 1,
+      "timedOut": false,
+      "completed": false,
+      "elapsedMs": 529
+    }
+  ]
+}

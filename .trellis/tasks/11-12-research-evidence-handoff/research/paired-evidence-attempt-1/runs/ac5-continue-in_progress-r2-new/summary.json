@@ -1,0 +1,15 @@
+{
+  "id": "ac5-continue-in_progress-r2-new",
+  "case": "ac5-continue-in_progress",
+  "repeat": 2,
+  "version": "new",
+  "root": "C:\\Users\\PXWD\\AppData\\Local\\Temp\\trellis-b-paired-L12pRQ\\runs\\ac5-continue-in_progress-r2-new",
+  "results": [
+    {
+      "exitCode": 1,
+      "timedOut": false,
+      "completed": false,
+      "elapsedMs": 320
+    }
+  ]
+}

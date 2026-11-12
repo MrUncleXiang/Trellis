@@ -1,0 +1,172 @@
+{
+  "pairs": [
+    {
+      "case": "ac1",
+      "repeat": 1,
+      "initialInputsEqual": true,
+      "promptEqual": true
+    },
+    {
+      "case": "ac1",
+      "repeat": 2,
+      "initialInputsEqual": true,
+      "promptEqual": true
+    },
+    {
+      "case": "ac2",
+      "repeat": 1,
+      "initialInputsEqual": true,
+      "promptEqual": true
+    },
+    {
+      "case": "ac2",
+      "repeat": 2,
+      "initialInputsEqual": true,
+      "promptEqual": true
+    },
+    {
+      "case": "ac3",
+      "repeat": 1,
+      "initialInputsEqual": true,
+      "promptEqual": true
+    },
+    {
+      "case": "ac3",
+      "repeat": 2,
+      "initialInputsEqual": true,
+      "promptEqual": true
+    },
+    {
+      "case": "ac4",
+      "repeat": 1,
+      "initialInputsEqual": true,
+      "promptEqual": true
+    },
+    {
+      "case": "ac4",
+      "repeat": 2,
+      "initialInputsEqual": true,
+      "promptEqual": true
+    },
+    {
+      "case": "ac5-start-planning",
+      "repeat": 1,
+      "initialInputsEqual": true,
+      "promptEqual": true
+    },
+    {
+      "case": "ac5-start-planning",
+      "repeat": 2,
+      "initialInputsEqual": true,
+      "promptEqual": true
+    },
+    {
+      "case": "ac5-start-in_progress",
+      "repeat": 1,
+      "initialInputsEqual": true,
+      "promptEqual": true
+    },
+    {
+      "case": "ac5-start-in_progress",
+      "repeat": 2,
+      "initialInputsEqual": true,
+      "promptEqual": true
+    },
+    {
+      "case": "ac5-continue-planning",
+      "repeat": 1,
+      "initialInputsEqual": true,
+      "promptEqual": true
+    },
+    {
+      "case": "ac5-continue-planning",
+      "repeat": 2,
+      "initialInputsEqual": true,
+      "promptEqual": true
+    },
+    {
+      "case": "ac5-continue-in_progress",
+      "repeat": 1,
+      "initialInputsEqual": true,
+      "promptEqual": true
+    },
+    {
+      "case": "ac5-continue-in_progress",
+      "repeat": 2,
+      "initialInputsEqual": true,
+      "promptEqual": true
+    },
+    {
+      "case": "ac6",
+      "repeat": 1,
+      "initialInputsEqual": true,
+      "promptEqual": true
+    },
+    {
+      "case": "ac6",
+      "repeat": 2,
+      "initialInputsEqual": true,
+      "promptEqual": true
+    },
+    {
+      "case": "ac7",
+      "repeat": 1,
+      "initialInputsEqual": true,
+      "promptEqual": true
+    },
+    {
+      "case": "ac7",
+      "repeat": 2,
+      "initialInputsEqual": true,
+      "promptEqual": true
+    },
+    {
+      "case": "ac8",
+      "repeat": 1,
+      "initialInputsEqual": true,
+      "promptEqual": true
+    },
+    {
+      "case": "ac8",
+      "repeat": 2,
+      "initialInputsEqual": true,
+      "promptEqual": true
+    },
+    {
+      "case": "ac9",
+      "repeat": 1,
+      "initialInputsEqual": true,
+      "promptEqual": true
+    },
+    {
+      "case": "ac9",
+      "repeat": 2,
+      "initialInputsEqual": true,
+      "promptEqual": true
+    },
+    {
+      "case": "ac10",
+      "repeat": 1,
+      "initialInputsEqual": true,
+      "promptEqual": true
+    },
+    {
+      "case": "ac10",
+      "repeat": 2,
+      "initialInputsEqual": true,
+      "promptEqual": true
+    }
+  ],
+  "sessions": 60,
+  "allCompleted": true,
+  "globalConfig": {
+    "rawUnchanged": false,
+    "appendedTrustBlocks": 52,
+    "allTrustOnly": true,
+    "originalBytesAfterRemovingExperimentTrust": true,
+    "guidanceUnchanged": true,
+    "beforeSha256": "9b072b7574c442a79bf72529a60217e53828193f2d52486140e7624a93fddd93",
+    "afterSha256": "0e0cb450b48d12f3c52dc3381507afde0d1bcbc1a0e20d296d0803024c6eddb4",
+    "afterRemovingTrustSha256": "9b072b7574c442a79bf72529a60217e53828193f2d52486140e7624a93fddd93"
+  }
+}

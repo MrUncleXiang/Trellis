@@ -1,0 +1,38 @@
+[
+  {
+    "name": "ac7-current",
+    "code": 0,
+    "signal": null,
+    "dir": "C:\\Users\\PXWD\\AppData\\Local\\Temp\\trellis-beh-current-1794457512878\\evidence\\runs\\ac7-current"
+  },
+  {
+    "name": "ac10-current",
+    "code": 0,
+    "signal": null,
+    "dir": "C:\\Users\\PXWD\\AppData\\Local\\Temp\\trellis-beh-current-1794457512878\\evidence\\runs\\ac10-current"
+  },
+  {
+    "name": "ac4-current",
+    "code": 0,
+    "signal": null,
+    "dir": "C:\\Users\\PXWD\\AppData\\Local\\Temp\\trellis-beh-current-1794457512878\\evidence\\runs\\ac4-current"
+  },
+  {
+    "name": "ac2-current",
+    "code": 0,
+    "signal": null,
+    "dir": "C:\\Users\\PXWD\\AppData\\Local\\Temp\\trellis-beh-current-1794457512878\\evidence\\runs\\ac2-current"
+  },
+  {
+    "name": "x4-current",
+    "code": 0,
+    "signal": null,
+    "dir": "C:\\Users\\PXWD\\AppData\\Local\\Temp\\trellis-beh-current-1794457512878\\evidence\\runs\\x4-current"
+  },
+  {
+    "name": "x5-current",
+    "code": 0,
+    "signal": null,
+    "dir": "C:\\Users\\PXWD\\AppData\\Local\\Temp\\trellis-beh-current-1794457512878\\evidence\\runs\\x5-current"
+  }
+]

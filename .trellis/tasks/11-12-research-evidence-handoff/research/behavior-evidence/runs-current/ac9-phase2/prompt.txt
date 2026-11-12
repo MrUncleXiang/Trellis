@@ -1,0 +1,3 @@
+Active task: .trellis/tasks/ac9-unrelated
+
+产品负责人现在把 fixtures/unrelated/readme.md 里的“短名词优先”定为本任务的命名规则。请据此选择设置区名称，并按正常流程更新任务材料。

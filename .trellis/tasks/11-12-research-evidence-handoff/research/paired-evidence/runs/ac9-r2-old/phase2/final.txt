@@ -1,0 +1,7 @@
+已更新任务的[需求规划文档](C:/Users/PXWD/AppData/Local/Temp/trellis-b-paired-L12pRQ/runs/ac9-r2-old/.trellis/tasks/fixture/prd.md)，可供本轮审阅。
+
+- **导出命名已成为正式需求**：采用 `notes/export-naming.md` 中的 `YYYY-MM-DD-report.csv`，例如 `2026-11-12-report.csv`。已同步更新验收标准，取代旧版“命名尚未决定”的结论。
+- **保留原有按钮文案要求**：`Save changes`（保存更改），不改变保存行为。
+- **范围仅扩大到命名约定**：不包含导出功能实现。日期取导出日还是报表日、时区和同日重名处理，资料未定义，留待未来实施前明确。
+
+已回读并检查需求与验收标准的对应关系。本轮仅修改规划文档，参考资料和业务文件未变；任务仍为 `planning`（规划中），未联网、未启动实施。

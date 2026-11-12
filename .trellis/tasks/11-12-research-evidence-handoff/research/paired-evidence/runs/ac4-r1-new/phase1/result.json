@@ -1,0 +1,14 @@
+{
+  "exitCode": 0,
+  "timedOut": false,
+  "completed": true,
+  "elapsedMs": 78017,
+  "threadId": "01a1ce47-c0d1-78b2-a5f9-c545434b879e",
+  "usage": {
+    "input_tokens": 233807,
+    "cached_input_tokens": 194105,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 2427,
+    "reasoning_output_tokens": 39
+  }
+}

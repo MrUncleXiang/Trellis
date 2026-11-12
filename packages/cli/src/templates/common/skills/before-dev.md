@@ -3,7 +3,8 @@ Read the relevant development guidelines before starting your task.
 Execute these steps:
 
 1. **Read current task artifacts**:
-   - `prd.md` for requirements and acceptance criteria
+   - `prd.md` for requirements, acceptance criteria, and its `## Research` handoff index
+   - the research records referenced there that affect implementation
    - `design.md` if present for technical design
    - `implement.md` if present for execution order and validation plan
 
@@ -15,7 +16,7 @@ Execute these steps:
 3. **Identify which specs apply** to your task based on:
    - Which package you're modifying (e.g., `cli/`, `docs-site/`)
    - What type of work (backend, frontend, unit-test, docs, etc.)
-   - Any spec/research paths referenced by the task artifacts
+   - Any spec/research paths referenced by the task artifacts, including research that constrains implementation or acceptance
 
 4. **Read the spec index** for each relevant module:
    ```bash
@@ -23,7 +24,7 @@ Execute these steps:
    ```
    Follow the **"Pre-Development Checklist"** section in the index.
 
-5. **Read the specific guideline files** listed in the Pre-Development Checklist that are relevant to your task. The index is NOT the goal — it points you to the actual guideline files (e.g., `error-handling.md`, `conventions.md`, `mock-strategies.md`). Read those files to understand the coding standards and patterns.
+5. **Read the specific guideline files** listed in the Pre-Development Checklist that are relevant to your task. The index is NOT the goal — it points you to the actual guideline files (e.g., `error-handling.md`, `conventions.md`, `mock-strategies.md`). Read those files to understand the coding standards and patterns. Also read the relevant research records and confirm that their versions and key premises still apply. If a required record is missing, unreadable, or a key unknown or outdated premise affects implementation, return to planning instead of guessing.
 
 6. **Always read shared guides**:
    ```bash
@@ -34,6 +35,7 @@ Execute these steps:
    - the smallest behavior gap between what happens now and what should happen
    - where that behavior actually lives (not where it is easiest to intercept)
    - which files you expect to change, and why each one is necessary
+   - the relevant research evidence and limits that constrain the change
    - what you are explicitly not doing in this task
    - if a local refactor is needed, how you will show it did not change behavior
 

@@ -1,0 +1,3 @@
+Active task: .trellis/tasks/fixture
+使用 .agents/skills/trellis-continue/SKILL.md 接手本任务，按 Trellis 正常流程处理下列业务目标。资料均为虚构受控样例，仅使用项目内材料，不联网、不写业务实现、不启动实施。请给出本轮可审阅的结论。
+判断 vendor/prompt-kit 这个固定本地第三方副本能否原生批量渲染，并给出返回逐项结果的方案；需要时可运行本地实验。

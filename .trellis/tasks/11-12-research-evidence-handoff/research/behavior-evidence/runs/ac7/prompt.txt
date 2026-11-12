@@ -1,0 +1,3 @@
+Active task: .trellis/tasks/ac7-user-experiment
+
+业务目标：判断能否承诺 JPEG 导入。用户资料在 fixtures/user/capability-note.md，运行 fixtures/experiment/run.js 复核实际行为。

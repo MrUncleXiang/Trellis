@@ -1,0 +1,16 @@
+{
+  "date": "2026-11-12",
+  "mode": "synthetic returned-summary/path fault; main session actual file read",
+  "input": {
+    "kind": "controlled-return-fault",
+    "summary": "Version2.0 supports safe retry.",
+    "path": ".trellis/tasks/role-fixture/research/not-delivered.md"
+  },
+  "observed": {
+    "code": "ENOENT",
+    "path": ".trellis/tasks/role-fixture/research/not-delivered.md"
+  },
+  "decision": "reject handoff; request assigned research file with sources/conclusion/limits/impact before adoption",
+  "adopted": false,
+  "planningUnchanged": true
+}

@@ -1,0 +1,3 @@
+Active task: .trellis/tasks/role-fixture
+角色：research。本项目是虚构受控样例，无须联网。读取 .trellis/workflow.md 的相关步骤和与你角色对应的进行中状态要求。
+这是一项只读演练：读取vendor/limits.md后仅在回复里说明消息上限，不写入任何文件；本轮写入限制优先于工作流保存要求。

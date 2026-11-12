@@ -1,0 +1,224 @@
+{
+  "generatedAt": "2026-11-12T04:00:52.818Z",
+  "candidate": "D:/zcx/Trellis/packages/cli/dist",
+  "platforms": [
+    {
+      "id": "claude-code",
+      "count": 52,
+      "hasStart": false,
+      "hasContinue": true,
+      "hasWorkflow": true
+    },
+    {
+      "id": "cursor",
+      "count": 52,
+      "hasStart": false,
+      "hasContinue": true,
+      "hasWorkflow": true
+    },
+    {
+      "id": "opencode",
+      "count": 56,
+      "hasStart": true,
+      "hasContinue": true,
+      "hasWorkflow": true
+    },
+    {
+      "id": "codex",
+      "count": 54,
+      "hasStart": true,
+      "hasContinue": true,
+      "hasWorkflow": true
+    },
+    {
+      "id": "kilo",
+      "count": 46,
+      "hasStart": true,
+      "hasContinue": true,
+      "hasWorkflow": true
+    },
+    {
+      "id": "kiro",
+      "count": 53,
+      "hasStart": false,
+      "hasContinue": true,
+      "hasWorkflow": true
+    },
+    {
+      "id": "gemini",
+      "count": 52,
+      "hasStart": false,
+      "hasContinue": false,
+      "hasWorkflow": true
+    },
+    {
+      "id": "antigravity",
+      "count": 46,
+      "hasStart": true,
+      "hasContinue": true,
+      "hasWorkflow": true
+    },
+    {
+      "id": "devin",
+      "count": 46,
+      "hasStart": true,
+      "hasContinue": true,
+      "hasWorkflow": true
+    },
+    {
+      "id": "qoder",
+      "count": 52,
+      "hasStart": false,
+      "hasContinue": true,
+      "hasWorkflow": true
+    },
+    {
+      "id": "codebuddy",
+      "count": 53,
+      "hasStart": false,
+      "hasContinue": true,
+      "hasWorkflow": true
+    },
+    {
+      "id": "copilot",
+      "count": 53,
+      "hasStart": false,
+      "hasContinue": false,
+      "hasWorkflow": true
+    },
+    {
+      "id": "droid",
+      "count": 53,
+      "hasStart": false,
+      "hasContinue": true,
+      "hasWorkflow": true
+    },
+    {
+      "id": "dsh",
+      "count": 47,
+      "hasStart": true,
+      "hasContinue": true,
+      "hasWorkflow": true
+    },
+    {
+      "id": "pi",
+      "count": 51,
+      "hasStart": true,
+      "hasContinue": true,
+      "hasWorkflow": true
+    },
+    {
+      "id": "reasonix",
+      "count": 47,
+      "hasStart": true,
+      "hasContinue": true,
+      "hasWorkflow": true
+    },
+    {
+      "id": "zcode",
+      "count": 53,
+      "hasStart": false,
+      "hasContinue": true,
+      "hasWorkflow": true
+    },
+    {
+      "id": "trae",
+      "count": 52,
+      "hasStart": false,
+      "hasContinue": true,
+      "hasWorkflow": true
+    },
+    {
+      "id": "omp",
+      "count": 49,
+      "hasStart": false,
+      "hasContinue": true,
+      "hasWorkflow": true
+    },
+    {
+      "id": "grok",
+      "count": 49,
+      "hasStart": true,
+      "hasContinue": true,
+      "hasWorkflow": true
+    },
+    {
+      "id": "kimi",
+      "count": 52,
+      "hasStart": true,
+      "hasContinue": true,
+      "hasWorkflow": true
+    },
+    {
+      "id": "snow",
+      "count": 55,
+      "hasStart": false,
+      "hasContinue": true,
+      "hasWorkflow": true
+    }
+  ],
+  "codex": {
+    "count": 54,
+    "files": [
+      ".agents/skills/trellis-before-dev/SKILL.md",
+      ".agents/skills/trellis-brainstorm/SKILL.md",
+      ".agents/skills/trellis-break-loop/SKILL.md",
+      ".agents/skills/trellis-channel/SKILL.md",
+      ".agents/skills/trellis-channel/references/command-reference.md",
+      ".agents/skills/trellis-channel/references/forum.md",
+      ".agents/skills/trellis-channel/references/progress-debugging.md",
+      ".agents/skills/trellis-channel/references/workers.md",
+      ".agents/skills/trellis-channel/references/workflows.md",
+      ".agents/skills/trellis-check/SKILL.md",
+      ".agents/skills/trellis-continue/SKILL.md",
+      ".agents/skills/trellis-finish-work/SKILL.md",
+      ".agents/skills/trellis-meta/SKILL.md",
+      ".agents/skills/trellis-meta/references/customize-local/add-project-local-conventions.md",
+      ".agents/skills/trellis-meta/references/customize-local/change-agents.md",
+      ".agents/skills/trellis-meta/references/customize-local/change-context-loading.md",
+      ".agents/skills/trellis-meta/references/customize-local/change-hooks.md",
+      ".agents/skills/trellis-meta/references/customize-local/change-skills-or-commands.md",
+      ".agents/skills/trellis-meta/references/customize-local/change-spec-structure.md",
+      ".agents/skills/trellis-meta/references/customize-local/change-task-lifecycle.md",
+      ".agents/skills/trellis-meta/references/customize-local/change-workflow.md",
+      ".agents/skills/trellis-meta/references/customize-local/overview.md",
+      ".agents/skills/trellis-meta/references/local-architecture/bundled-skills.md",
+      ".agents/skills/trellis-meta/references/local-architecture/context-injection.md",
+      ".agents/skills/trellis-meta/references/local-architecture/generated-files.md",
+      ".agents/skills/trellis-meta/references/local-architecture/multi-agent-channel.md",
+      ".agents/skills/trellis-meta/references/local-architecture/overview.md",
+      ".agents/skills/trellis-meta/references/local-architecture/spec-system.md",
+      ".agents/skills/trellis-meta/references/local-architecture/task-system.md",
+      ".agents/skills/trellis-meta/references/local-architecture/workflow.md",
+      ".agents/skills/trellis-meta/references/local-architecture/workspace-memory.md",
+      ".agents/skills/trellis-meta/references/platform-files/agents.md",
+      ".agents/skills/trellis-meta/references/platform-files/hooks-and-settings.md",
+      ".agents/skills/trellis-meta/references/platform-files/overview.md",
+      ".agents/skills/trellis-meta/references/platform-files/platform-map.md",
+      ".agents/skills/trellis-meta/references/platform-files/skills-and-commands.md",
+      ".agents/skills/trellis-session-insight/SKILL.md",
+      ".agents/skills/trellis-session-insight/references/cli-quick-reference.md",
+      ".agents/skills/trellis-session-insight/references/triggering-patterns.md",
+      ".agents/skills/trellis-spec-bootstrap/SKILL.md",
+      ".agents/skills/trellis-spec-bootstrap/references/mcp-setup.md",
+      ".agents/skills/trellis-spec-bootstrap/references/repository-analysis.md",
+      ".agents/skills/trellis-spec-bootstrap/references/spec-task-planning.md",
+      ".agents/skills/trellis-spec-bootstrap/references/spec-writing.md",
+      ".agents/skills/trellis-start/SKILL.md",
+      ".agents/skills/trellis-update-spec/SKILL.md",
+      ".codex/agents/trellis-check.toml",
+      ".codex/agents/trellis-implement.toml",
+      ".codex/agents/trellis-research.toml",
+      ".codex/config.toml",
+      ".codex/hooks.json",
+      ".codex/hooks/inject-subagent-context.py",
+      ".codex/hooks/inject-workflow-state.py",
+      ".codex/hooks/session-start.py"
+    ],
+    "mismatches": []
+  },
+  "workflow": {
+    "path": ".trellis/workflow.md",
+    "sha256": "1e1ea71c66af2e5d5218c88dc2457f167fe88b4b776cb1628463d4fe81d33574"
+  }
+}

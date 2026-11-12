@@ -1,0 +1,156 @@
+
+⚠️  Trellis update available: 0.6.14 → 0.6.17
+   Run: trellis update
+
+
+Trellis Update
+══════════════
+
+Project version: 0.6.14
+CLI version:     0.6.17
+Latest on npm:   0.6.17
+
+
+Scanning for changes...
+
+  Template updated (will auto-update):
+    ↑ .trellis/workflow.md
+    ↑ .claude/agents/trellis-research.md
+    ↑ .claude/settings.json
+    ↑ .claude/skills/trellis-before-dev/SKILL.md
+    ↑ .claude/skills/trellis-check/SKILL.md
+    ↑ .claude/skills/trellis-channel/references/progress-debugging.md
+    ↑ .claude/skills/trellis-meta/references/customize-local/add-project-local-conventions.md
+    ↑ .claude/skills/trellis-meta/references/customize-local/change-hooks.md
+    ↑ .claude/skills/trellis-meta/references/customize-local/change-task-lifecycle.md
+    ↑ .claude/skills/trellis-meta/references/customize-local/overview.md
+    ↑ .claude/skills/trellis-meta/references/local-architecture/workspace-memory.md
+    ↑ .cursor/skills/trellis-before-dev/SKILL.md
+    ↑ .cursor/skills/trellis-check/SKILL.md
+    ↑ .cursor/skills/trellis-channel/references/progress-debugging.md
+    ↑ .cursor/skills/trellis-meta/references/customize-local/add-project-local-conventions.md
+    ↑ .cursor/skills/trellis-meta/references/customize-local/change-hooks.md
+    ↑ .cursor/skills/trellis-meta/references/customize-local/change-task-lifecycle.md
+    ↑ .cursor/skills/trellis-meta/references/customize-local/overview.md
+    ↑ .cursor/skills/trellis-meta/references/local-architecture/workspace-memory.md
+    ↑ .cursor/agents/trellis-research.md
+    ↑ .cursor/hooks.json
+    ↑ .opencode/agents/trellis-check.md
+    ↑ .opencode/agents/trellis-research.md
+    ↑ .opencode/lib/session-utils.js
+    ↑ .opencode/commands/trellis/start.md
+    ↑ .opencode/skills/trellis-before-dev/SKILL.md
+    ↑ .opencode/skills/trellis-check/SKILL.md
+    ↑ .opencode/skills/trellis-channel/references/progress-debugging.md
+    ↑ .opencode/skills/trellis-meta/references/customize-local/add-project-local-conventions.md
+    ↑ .opencode/skills/trellis-meta/references/customize-local/change-hooks.md
+    ↑ .opencode/skills/trellis-meta/references/customize-local/change-task-lifecycle.md
+    ↑ .opencode/skills/trellis-meta/references/customize-local/overview.md
+    ↑ .opencode/skills/trellis-meta/references/local-architecture/workspace-memory.md
+    ↑ .agents/skills/trellis-finish-work/SKILL.md
+    ↑ .agents/skills/trellis-start/SKILL.md
+    ↑ .agents/skills/trellis-before-dev/SKILL.md
+    ↑ .agents/skills/trellis-check/SKILL.md
+    ↑ .agents/skills/trellis-channel/references/progress-debugging.md
+    ↑ .agents/skills/trellis-meta/references/customize-local/add-project-local-conventions.md
+    ↑ .agents/skills/trellis-meta/references/customize-local/change-hooks.md
+    ↑ .agents/skills/trellis-meta/references/customize-local/change-task-lifecycle.md
+    ↑ .agents/skills/trellis-meta/references/customize-local/overview.md
+    ↑ .agents/skills/trellis-meta/references/local-architecture/workspace-memory.md
+    ↑ .codex/hooks.json
+    ↑ .pi/prompts/trellis-start.md
+    ↑ .pi/extensions/trellis/index.ts
+    ↑ .omp/commands/trellis-continue.md
+    ↑ .omp/commands/trellis-finish-work.md
+    ↑ .omp/skills/trellis-before-dev/SKILL.md
+    ↑ .omp/skills/trellis-brainstorm/SKILL.md
+    ↑ .omp/skills/trellis-check/SKILL.md
+    ↑ .omp/skills/trellis-channel/references/progress-debugging.md
+    ↑ .omp/skills/trellis-meta/references/customize-local/add-project-local-conventions.md
+    ↑ .omp/skills/trellis-meta/references/customize-local/change-context-loading.md
+    ↑ .omp/skills/trellis-meta/references/customize-local/change-hooks.md
+    ↑ .omp/skills/trellis-meta/references/customize-local/change-spec-structure.md
+    ↑ .omp/skills/trellis-meta/references/customize-local/change-task-lifecycle.md
+    ↑ .omp/skills/trellis-meta/references/customize-local/overview.md
+    ↑ .omp/skills/trellis-meta/references/local-architecture/spec-system.md
+    ↑ .omp/skills/trellis-meta/references/local-architecture/task-system.md
+    ↑ .omp/skills/trellis-meta/references/local-architecture/workspace-memory.md
+    ↑ .omp/skills/trellis-meta/references/platform-files/agents.md
+    ↑ .omp/agents/trellis-research.md
+    ↑ .omp/extensions/trellis/index.ts
+
+  Unchanged files (will skip):
+    ○ .trellis/scripts/__init__.py
+    ○ .trellis/scripts/common/__init__.py
+    ○ .trellis/scripts/common/paths.py
+    ○ .trellis/scripts/common/git_context.py
+    ○ .trellis/scripts/common/task_queue.py
+    ... and 180 more
+
+  Modified by you (need your decision):
+    ? .trellis/scripts/common/developer.py
+    ? .trellis/scripts/common/io.py
+    ? .trellis/scripts/common/task_context.py
+    ? .trellis/scripts/common/task_store.py
+    ? .trellis/scripts/common/session_context.py
+    ? .trellis/scripts/init_developer.py
+    ? .trellis/scripts/task.py
+    ? .trellis/scripts/get_context.py
+    ? .trellis/scripts/add_session.py
+    ? .trellis/config.yaml
+    ? .claude/commands/trellis/continue.md
+    ? .claude/commands/trellis/finish-work.md
+    ? .claude/skills/trellis-brainstorm/SKILL.md
+    ? .claude/skills/trellis-meta/references/customize-local/change-context-loading.md
+    ? .claude/skills/trellis-meta/references/customize-local/change-spec-structure.md
+    ? .claude/skills/trellis-meta/references/local-architecture/spec-system.md
+    ? .claude/skills/trellis-meta/references/local-architecture/task-system.md
+    ? .claude/skills/trellis-meta/references/platform-files/agents.md
+    ? .claude/hooks/inject-subagent-context.py
+    ? .claude/hooks/session-start.py
+    ? .cursor/commands/trellis-continue.md
+    ? .cursor/commands/trellis-finish-work.md
+    ? .cursor/skills/trellis-brainstorm/SKILL.md
+    ? .cursor/skills/trellis-meta/references/customize-local/change-context-loading.md
+    ? .cursor/skills/trellis-meta/references/customize-local/change-spec-structure.md
+    ? .cursor/skills/trellis-meta/references/local-architecture/spec-system.md
+    ? .cursor/skills/trellis-meta/references/local-architecture/task-system.md
+    ? .cursor/skills/trellis-meta/references/platform-files/agents.md
+    ? .cursor/hooks/inject-subagent-context.py
+    ? .cursor/hooks/session-start.py
+    ? .opencode/agents/trellis-implement.md
+    ? .opencode/lib/trellis-context.js
+    ? .opencode/commands/trellis/continue.md
+    ? .opencode/commands/trellis/finish-work.md
+    ? .opencode/skills/trellis-brainstorm/SKILL.md
+    ? .opencode/skills/trellis-meta/references/customize-local/change-context-loading.md
+    ? .opencode/skills/trellis-meta/references/customize-local/change-spec-structure.md
+    ? .opencode/skills/trellis-meta/references/local-architecture/spec-system.md
+    ? .opencode/skills/trellis-meta/references/local-architecture/task-system.md
+    ? .opencode/skills/trellis-meta/references/platform-files/agents.md
+    ? .agents/skills/trellis-continue/SKILL.md
+    ? .agents/skills/trellis-brainstorm/SKILL.md
+    ? .agents/skills/trellis-meta/references/customize-local/change-context-loading.md
+    ? .agents/skills/trellis-meta/references/customize-local/change-spec-structure.md
+    ? .agents/skills/trellis-meta/references/local-architecture/spec-system.md
+    ? .agents/skills/trellis-meta/references/local-architecture/task-system.md
+    ? .agents/skills/trellis-meta/references/platform-files/agents.md
+    ? .codex/hooks/session-start.py
+    ? .codex/hooks/inject-subagent-context.py
+    ? .pi/prompts/trellis-continue.md
+    ? .pi/prompts/trellis-finish-work.md
+    ? .pi/agents/trellis-check.md
+    ? .pi/agents/trellis-implement.md
+    ? .pi/agents/trellis-research.md
+
+  Deleted by you (preserved):
+    ✕ .opencode/package.json
+
+  User data (preserved):
+    ○ .trellis/workspace/
+    ○ .trellis/tasks/
+    ○ .trellis/spec/
+
+This will UPGRADE: 0.6.14 → 0.6.17
+
+[Dry run] No changes made.

@@ -1,0 +1,4 @@
+Use the trellis-start skill.
+Active task: .trellis/tasks/ac5-impl-start
+
+业务目标：从当前任务状态继续实施前准备。

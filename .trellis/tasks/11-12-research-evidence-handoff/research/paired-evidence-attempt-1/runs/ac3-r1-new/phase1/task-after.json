@@ -1,0 +1,6 @@
+{
+  "check.jsonl": "{\"file\":\".trellis/tasks/fixture/prd.md\",\"reason\":\"Task scope\"}\n",
+  "implement.jsonl": "{\"file\":\".trellis/tasks/fixture/prd.md\",\"reason\":\"Task scope\"}\n",
+  "prd.md": "# Batch render\nGoal: return one result for each string input using the fixed local dependency.\n## Research\nNot investigated yet.\n",
+  "task.json": "{\"id\":\"fixture\",\"name\":\"fixture\",\"title\":\"ac3\",\"status\":\"planning\"}"
+}

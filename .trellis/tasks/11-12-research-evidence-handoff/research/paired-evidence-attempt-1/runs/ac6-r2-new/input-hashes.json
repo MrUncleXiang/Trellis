@@ -1,0 +1,14 @@
+{
+  ".trellis/.developer": "d212c916894e579060f9903fa140d8669d368f7bafaac7a18e183e7635886163",
+  ".trellis/.runtime/sessions/paired-session.json": "e55f273523a0ac8bfd693f5bb88b6fbd4a014056bc01db2e71f81051ab97fa9e",
+  ".trellis/config.yaml": "d6c451e5937777cf31951aaf146f53894666a07c1a49ad4925d4c3bdcf7e501a",
+  ".trellis/spec/guides/index.md": "3133fa4bfc02f627bd9867cdfdf6cc148fa6db93caa945e519b8f0bda078e719",
+  ".trellis/tasks/fixture/check.jsonl": "13c7848439a439be631b09e06e0a9ee72463d4a7be46b59a53d38ca1027c74c3",
+  ".trellis/tasks/fixture/implement.jsonl": "13c7848439a439be631b09e06e0a9ee72463d4a7be46b59a53d38ca1027c74c3",
+  ".trellis/tasks/fixture/prd.md": "4fe145ea21fd61a59d0c4ef9494da2be82657f94596baccb74f1cf4361481f52",
+  ".trellis/tasks/fixture/task.json": "773d42afe9fadfb5d742af386d3b30b3528d48ef22a36afc0fe01af69e414f30",
+  ".trellis/tasks/history/research/compatibility.md": "dd0976a6dc82655693f677e9156b1280baa6b75bfaefdb23fa77470515f01d21",
+  "AGENTS.md": "0c2a713ef8d4768854084dbf2ee9e162f41aeb83642f7defea3ccc9b765e105a",
+  "vendor/messenger.md": "9708d76ed570150daa8d71085f0dd7be33ae67db73a232cde88b10dfb482140b",
+  "vendor/package.json": "9cdbe2ea2a10c8c2cd93c566c7b565af49f5d303a510137c26b98efbccbc6499"
+}

@@ -1,0 +1,10 @@
+已创建 `src/batch.js`：新增 `renderBatch(items)`，逐项调用 `prompt-kit` 的 `renderOne`，返回按输入顺序排列的结果。
+
+读取文件：
+- `.trellis/tasks/x3-context/implement.jsonl`
+- `.trellis/tasks/x3-context/research/compatibility.md`
+
+新增文件：
+- `src/batch.js`
+
+已回读确认文件内容。未读取 `check.jsonl` 或其他研究文件，未运行测试。

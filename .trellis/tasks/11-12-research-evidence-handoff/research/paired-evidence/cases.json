@@ -1,0 +1,150 @@
+[
+  {
+    "id": "ac1",
+    "status": "planning",
+    "prd": "# Queue choice\nGoal: select one of two queues to keep acknowledged pending tasks across process restart.\n## Research\nNot investigated yet.\n",
+    "files": {
+      "fixtures/queue.md": "# Queue comparison, revision2026-11-12 (fictional)\nMemoryQueue loses pending items on process restart. FileQueue appends each item to a disk file before acknowledgement. FileQueue adds disk IO and cleanup cost. No benchmark or crash-recovery test is supplied.\n"
+    },
+    "prompt": "为服务选择重启后保留已确认待办任务的队列。只依据 fixtures/queue.md 比较两个候选，并给出推荐、代价及当前能承诺的范围。"
+  },
+  {
+    "id": "ac2",
+    "status": "planning",
+    "prd": "# Button wording\nGoal: change Save to Save changes using current local UI and copy guidance; no behavior change.\n## Research\nNot investigated yet.\n",
+    "files": {
+      "ui/copy.md": "# Existing project UI\nButton label: Save. Desired label from product owner: Save changes.\n",
+      "guidance/copy.md": "# Existing project copy convention\nDescribe the action and object; keep the existing layout and behavior.\n"
+    },
+    "prompt": "把保存按钮提示语从 Save 改成 Save changes；现有 ui/copy.md 和 guidance/copy.md 足够判断，只完成这项轻量规划。"
+  },
+  {
+    "id": "ac3",
+    "status": "planning",
+    "prd": "# Batch render\nGoal: return one result for each string input using the fixed local dependency.\n## Research\nNot investigated yet.\n",
+    "files": {
+      "vendor/prompt-kit/package.json": "{\"name\":\"@fixture/prompt-kit\",\"version\":\"2.0.0\",\"type\":\"module\"}",
+      "vendor/prompt-kit/README.md": "# @fixture/prompt-kit2.0.0 (fictional)\nrenderOne takes one value; no native batch API.\n",
+      "vendor/prompt-kit/index.mjs": "export function renderOne(input) { return String(input); }\n"
+    },
+    "prompt": "判断 vendor/prompt-kit 这个固定本地第三方副本能否原生批量渲染，并给出返回逐项结果的方案；需要时可运行本地实验。"
+  },
+  {
+    "id": "ac4",
+    "status": "planning",
+    "prd": "# Chart integration\nGoal: confirm SSR and known request limit for local-chart1.2 before choosing it.\n## Research\nNot investigated yet.\n",
+    "files": {
+      "fixtures/a.md": "# local-chart1.2 snapshot2026-10-20 (fictional)\nSource includes server-entry.js and an SSR documentation section.\n",
+      "fixtures/b.md": "# local-chart1.2 release note2026-11-05 (fictional)\nSSR was removed from1.2 and moved to1.3. This conflicts with the other snapshot; no release package provided.\n",
+      "fixtures/rate.md": "# Marketing note (fictional)\nUnlimited requests. No version, benchmark, limit configuration or test conditions are supplied.\n"
+    },
+    "prompt": "确认 local-chart1.2 是否支持服务端渲染，判断每秒请求上限是否已知。依据 fixtures/a.md、b.md、rate.md，仅核对这些固定材料。"
+  },
+  {
+    "id": "ac5-start-planning",
+    "status": "planning",
+    "entry": "start",
+    "prd": "# Send53 messages\nGoal: send53 items and match results to original messages. No retry in this release.\n## Research\nReused evidence for version1.4: max32 per call, out-of-order results associated by ID. See [dependency](research/compatibility.md). Dedup unknown does not change the no-retry scope.\n",
+    "files": {
+      ".trellis/tasks/fixture/research/compatibility.md": "# Dependency investigation\nQuestion: can messenger1.4 send53 at once and preserve ordering?\nSource: vendor/messenger.md, Limits/Results. Fact: at most32 per call, response includes IDs and may be reordered. Inference: split53 into32+21 and match by ID. Decision: retain failures, no retry. Unknown: idempotency/dedup. Limit: documentation review only; retry would require new evidence.\n",
+      "vendor/messenger.md": "# @fixture/messenger1.4 (fictional)\nLimits: at most32 per call. Results: IDs present; order is not guaranteed. No idempotency guarantee documented.\n",
+      ".trellis/tasks/fixture/design.md": "# Design\nUse32+21 chunks, map by ID, retain failures and do not retry. See [evidence](research/compatibility.md).\n",
+      ".trellis/tasks/fixture/implement.md": "# Plan\nRead current evidence; implement after approval; verify chunking and reordered results.\n"
+    },
+    "prompt": "业务目标是完成53条消息发送。本轮仅阅读接手，说明当前方案、来源、约束、尚不确定的事和下一步；不重复调查已有答案，不改任务文件。"
+  },
+  {
+    "id": "ac5-start-in_progress",
+    "status": "in_progress",
+    "entry": "start",
+    "prd": "# Send53 messages\nGoal: send53 items and match results to original messages. No retry in this release.\n## Research\nReused evidence for version1.4: max32 per call, out-of-order results associated by ID. See [dependency](research/compatibility.md). Dedup unknown does not change the no-retry scope.\n",
+    "files": {
+      ".trellis/tasks/fixture/research/compatibility.md": "# Dependency investigation\nQuestion: can messenger1.4 send53 at once and preserve ordering?\nSource: vendor/messenger.md, Limits/Results. Fact: at most32 per call, response includes IDs and may be reordered. Inference: split53 into32+21 and match by ID. Decision: retain failures, no retry. Unknown: idempotency/dedup. Limit: documentation review only; retry would require new evidence.\n",
+      "vendor/messenger.md": "# @fixture/messenger1.4 (fictional)\nLimits: at most32 per call. Results: IDs present; order is not guaranteed. No idempotency guarantee documented.\n",
+      ".trellis/tasks/fixture/design.md": "# Design\nUse32+21 chunks, map by ID, retain failures and do not retry. See [evidence](research/compatibility.md).\n",
+      ".trellis/tasks/fixture/implement.md": "# Plan\nRead current evidence; implement after approval; verify chunking and reordered results.\n"
+    },
+    "prompt": "业务目标是完成53条消息发送。本轮仅阅读接手，说明当前方案、来源、约束、尚不确定的事和下一步；不重复调查已有答案，不改任务文件。"
+  },
+  {
+    "id": "ac5-continue-planning",
+    "status": "planning",
+    "entry": "continue",
+    "prd": "# Send53 messages\nGoal: send53 items and match results to original messages. No retry in this release.\n## Research\nReused evidence for version1.4: max32 per call, out-of-order results associated by ID. See [dependency](research/compatibility.md). Dedup unknown does not change the no-retry scope.\n",
+    "files": {
+      ".trellis/tasks/fixture/research/compatibility.md": "# Dependency investigation\nQuestion: can messenger1.4 send53 at once and preserve ordering?\nSource: vendor/messenger.md, Limits/Results. Fact: at most32 per call, response includes IDs and may be reordered. Inference: split53 into32+21 and match by ID. Decision: retain failures, no retry. Unknown: idempotency/dedup. Limit: documentation review only; retry would require new evidence.\n",
+      "vendor/messenger.md": "# @fixture/messenger1.4 (fictional)\nLimits: at most32 per call. Results: IDs present; order is not guaranteed. No idempotency guarantee documented.\n",
+      ".trellis/tasks/fixture/design.md": "# Design\nUse32+21 chunks, map by ID, retain failures and do not retry. See [evidence](research/compatibility.md).\n",
+      ".trellis/tasks/fixture/implement.md": "# Plan\nRead current evidence; implement after approval; verify chunking and reordered results.\n"
+    },
+    "prompt": "业务目标是完成53条消息发送。本轮仅阅读接手，说明当前方案、来源、约束、尚不确定的事和下一步；不重复调查已有答案，不改任务文件。"
+  },
+  {
+    "id": "ac5-continue-in_progress",
+    "status": "in_progress",
+    "entry": "continue",
+    "prd": "# Send53 messages\nGoal: send53 items and match results to original messages. No retry in this release.\n## Research\nReused evidence for version1.4: max32 per call, out-of-order results associated by ID. See [dependency](research/compatibility.md). Dedup unknown does not change the no-retry scope.\n",
+    "files": {
+      ".trellis/tasks/fixture/research/compatibility.md": "# Dependency investigation\nQuestion: can messenger1.4 send53 at once and preserve ordering?\nSource: vendor/messenger.md, Limits/Results. Fact: at most32 per call, response includes IDs and may be reordered. Inference: split53 into32+21 and match by ID. Decision: retain failures, no retry. Unknown: idempotency/dedup. Limit: documentation review only; retry would require new evidence.\n",
+      "vendor/messenger.md": "# @fixture/messenger1.4 (fictional)\nLimits: at most32 per call. Results: IDs present; order is not guaranteed. No idempotency guarantee documented.\n",
+      ".trellis/tasks/fixture/design.md": "# Design\nUse32+21 chunks, map by ID, retain failures and do not retry. See [evidence](research/compatibility.md).\n",
+      ".trellis/tasks/fixture/implement.md": "# Plan\nRead current evidence; implement after approval; verify chunking and reordered results.\n"
+    },
+    "prompt": "业务目标是完成53条消息发送。本轮仅阅读接手，说明当前方案、来源、约束、尚不确定的事和下一步；不重复调查已有答案，不改任务文件。"
+  },
+  {
+    "id": "ac6",
+    "status": "planning",
+    "prd": "# Export compatibility\nGoal: choose an export integration for installed1.4.\n## Research\nExisting historical investigation may apply; check ../history/research/compatibility.md.\n",
+    "files": {
+      ".trellis/tasks/history/research/compatibility.md": "# Version1.4 investigation\nQuestion: can messenger1.4 send53? Source: vendor/messenger.md. Fact: max32 and reordered results with IDs. Decision:32+21, match by ID, no retry. Unknown: idempotency. Only documentation reviewed. Applicable only to1.4.\n",
+      "vendor/package.json": "{\"name\":\"@fixture/messenger\",\"version\":\"1.4\"}",
+      "vendor/messenger.md": "# @fixture/messenger1.4 (fictional)\nAt most32 items per call. Results may reorder and carry IDs.\n"
+    },
+    "prompt": "为53条消息选择分批方案。已有历史调查见 .trellis/tasks/history/research/compatibility.md，当前版本在 vendor/package.json，资料在 vendor/messenger.md。按实际适用情况处理。",
+    "second": "依赖现已升级2.0，vendor/package.json 与 vendor/messenger.md 已更新。重新核对之前方案能否继续使用；本轮仍只规划。"
+  },
+  {
+    "id": "ac7",
+    "status": "planning",
+    "prd": "# Image import claim\nGoal: decide whether to promise JPEG import based on supplied evidence.\n## Research\nNot investigated yet.\n",
+    "files": {
+      "fixtures/user.md": "# User-provided capability note, not independently verified\nImporter2.0 claims JPEG support up to10MB.\n",
+      "fixtures/probe.mjs": "// Demonstration output only: does not invoke an importer.\nconsole.log(\"JPEG_OK\");\n"
+    },
+    "prompt": "判断能否承诺导入器2.0支持JPEG。用户资料在 fixtures/user.md，现成实验脚本是 fixtures/probe.mjs，可以运行并核对它究竟验证了什么。"
+  },
+  {
+    "id": "ac8",
+    "status": "in_progress",
+    "prd": "# Queue restart guarantee\nCurrent approved choice: MemoryQueue, believed persistent across restart; implement adapter next.\n## Research\nSee [old](research/old.md).\n",
+    "files": {
+      ".trellis/tasks/fixture/research/old.md": "# Prior decision\nWe inferred MemoryQueue survives restart from its name. This was not tested.\n",
+      ".trellis/tasks/fixture/design.md": "# Design\nImplement MemoryQueue adapter; assume persistence.\n",
+      ".trellis/tasks/fixture/implement.md": "# Plan\nImplement adapter using MemoryQueue.\n",
+      "fixtures/new.md": "# New source2026-11-12 (fictional)\nMemoryQueue stores only in process memory and loses pending tasks on restart. FileQueue writes to disk; recovery not independently verified.\n"
+    },
+    "prompt": "业务目标仍是重启不丢已确认待办。用户补充 fixtures/new.md，请处理它对当前已批准方案和下一步的影响；本轮不实现业务代码。"
+  },
+  {
+    "id": "ac9",
+    "status": "planning",
+    "prd": "# Button wording\nGoal: change Save to Save changes, no file-export feature in this stage.\n## Research\nNot investigated yet.\n",
+    "files": {
+      "ui/copy.md": "# Local UI\nRequested wording is Save changes.\n",
+      "notes/export-naming.md": "# Supplied team reference\nSuggested export file name: YYYY-MM-DD-report.csv. This is a naming preference, no runtime claim.\n"
+    },
+    "prompt": "先阅读 notes/export-naming.md 了解提供的资料，但本阶段只规划 ui/copy.md 的保存按钮文案，导出命名不在当前决定范围。",
+    "second": "现在把导出文件命名纳入需求，并采用 notes/export-naming.md 中的团队规则。请更新本任务的规划结论，不实现业务代码。"
+  },
+  {
+    "id": "ac10",
+    "status": "planning",
+    "prd": "# Compatibility acceptance\nGoal: promise plugin2.0 compatibility with engine5.\nClaim: compatibility confirmed, based solely on research/compatibility.md.\n## Research\nSee [record](research/compatibility.md).\n",
+    "files": {
+      ".trellis/tasks/fixture/research/compatibility.md": "# Compatibility\nSee fixtures/docs.md\n",
+      "fixtures/docs.md": "# Unscoped description (fictional)\nFast and convenient plugin. No version matrix or compatibility test is provided.\n"
+    },
+    "prompt": "审阅当前规划是否可以宣布就绪并进入后续实施审阅。范围是插件2.0与引擎5兼容，当前唯一依据见任务材料；不能联网或补造缺失实验。"
+  }
+]

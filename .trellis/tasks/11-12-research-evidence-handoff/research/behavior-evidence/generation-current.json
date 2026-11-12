@@ -1,0 +1,137 @@
+{
+  "platforms": [
+    {
+      "id": "claude-code",
+      "count": 52,
+      "hasStart": false,
+      "hasContinue": true
+    },
+    {
+      "id": "cursor",
+      "count": 52,
+      "hasStart": false,
+      "hasContinue": true
+    },
+    {
+      "id": "opencode",
+      "count": 56,
+      "hasStart": true,
+      "hasContinue": true
+    },
+    {
+      "id": "codex",
+      "count": 54,
+      "hasStart": true,
+      "hasContinue": true
+    },
+    {
+      "id": "kilo",
+      "count": 46,
+      "hasStart": true,
+      "hasContinue": true
+    },
+    {
+      "id": "kiro",
+      "count": 53,
+      "hasStart": false,
+      "hasContinue": true
+    },
+    {
+      "id": "gemini",
+      "count": 52,
+      "hasStart": false,
+      "hasContinue": false
+    },
+    {
+      "id": "antigravity",
+      "count": 46,
+      "hasStart": true,
+      "hasContinue": true
+    },
+    {
+      "id": "devin",
+      "count": 46,
+      "hasStart": true,
+      "hasContinue": true
+    },
+    {
+      "id": "qoder",
+      "count": 52,
+      "hasStart": false,
+      "hasContinue": true
+    },
+    {
+      "id": "codebuddy",
+      "count": 53,
+      "hasStart": false,
+      "hasContinue": true
+    },
+    {
+      "id": "copilot",
+      "count": 53,
+      "hasStart": false,
+      "hasContinue": false
+    },
+    {
+      "id": "droid",
+      "count": 53,
+      "hasStart": false,
+      "hasContinue": true
+    },
+    {
+      "id": "dsh",
+      "count": 47,
+      "hasStart": true,
+      "hasContinue": true
+    },
+    {
+      "id": "pi",
+      "count": 51,
+      "hasStart": true,
+      "hasContinue": true
+    },
+    {
+      "id": "reasonix",
+      "count": 47,
+      "hasStart": true,
+      "hasContinue": true
+    },
+    {
+      "id": "zcode",
+      "count": 53,
+      "hasStart": false,
+      "hasContinue": true
+    },
+    {
+      "id": "trae",
+      "count": 52,
+      "hasStart": false,
+      "hasContinue": true
+    },
+    {
+      "id": "omp",
+      "count": 49,
+      "hasStart": false,
+      "hasContinue": true
+    },
+    {
+      "id": "grok",
+      "count": 49,
+      "hasStart": true,
+      "hasContinue": true
+    },
+    {
+      "id": "kimi",
+      "count": 52,
+      "hasStart": true,
+      "hasContinue": true
+    },
+    {
+      "id": "snow",
+      "count": 55,
+      "hasStart": false,
+      "hasContinue": true
+    }
+  ],
+  "total": 22
+}

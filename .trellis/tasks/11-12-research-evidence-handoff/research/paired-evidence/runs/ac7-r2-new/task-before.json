@@ -1,0 +1,6 @@
+{
+  "check.jsonl": "{\"file\":\".trellis/tasks/fixture/prd.md\",\"reason\":\"Task scope\"}\n",
+  "implement.jsonl": "{\"file\":\".trellis/tasks/fixture/prd.md\",\"reason\":\"Task scope\"}\n",
+  "prd.md": "# Image import claim\nGoal: decide whether to promise JPEG import based on supplied evidence.\n## Research\nNot investigated yet.\n",
+  "task.json": "{\"id\":\"fixture\",\"name\":\"fixture\",\"title\":\"ac7\",\"status\":\"planning\"}"
+}

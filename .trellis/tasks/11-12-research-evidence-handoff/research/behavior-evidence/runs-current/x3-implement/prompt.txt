@@ -1,0 +1,1 @@
+You are the trellis-implement subagent. Active task: .trellis/tasks/x3-context. Read only implement.jsonl and the research file it lists. Do not read implement.jsonl? no. Read implement.jsonl and the listed research. Implement the caller-side batch helper in a new file src/batch.js. Do not read check.jsonl or unrelated research. Return the files you read and changed.

@@ -1,0 +1,12 @@
+
+> @ lint C:\Users\PXWD\AppData\Local\Temp\trellis-b-staged-m9ZtUD
+> pnpm --filter @mindfoldhq/trellis-core lint && pnpm --filter @mindfoldhq/trellis lint
+
+
+> @mindfoldhq/trellis-core@0.6.17 lint C:\Users\PXWD\AppData\Local\Temp\trellis-b-staged-m9ZtUD\packages\core
+> eslint src/ test/
+
+
+> @mindfoldhq/trellis@0.6.17 lint C:\Users\PXWD\AppData\Local\Temp\trellis-b-staged-m9ZtUD\packages\cli
+> eslint src/ test/
+

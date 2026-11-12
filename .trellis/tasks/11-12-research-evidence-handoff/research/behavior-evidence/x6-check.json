@@ -1,0 +1,134 @@
+[
+  {
+    "id": "claude-code",
+    "hasBrainstormSkill": true,
+    "hasHandoffSentence": true,
+    "hasWorkflowStateHook": true
+  },
+  {
+    "id": "cursor",
+    "hasBrainstormSkill": true,
+    "hasHandoffSentence": true,
+    "hasWorkflowStateHook": false
+  },
+  {
+    "id": "opencode",
+    "hasBrainstormSkill": true,
+    "hasHandoffSentence": true,
+    "hasWorkflowStateHook": true
+  },
+  {
+    "id": "codex",
+    "hasBrainstormSkill": true,
+    "hasHandoffSentence": true,
+    "hasWorkflowStateHook": true
+  },
+  {
+    "id": "kilo",
+    "hasBrainstormSkill": true,
+    "hasHandoffSentence": true,
+    "hasWorkflowStateHook": false
+  },
+  {
+    "id": "kiro",
+    "hasBrainstormSkill": true,
+    "hasHandoffSentence": true,
+    "hasWorkflowStateHook": true
+  },
+  {
+    "id": "gemini",
+    "hasBrainstormSkill": true,
+    "hasHandoffSentence": true,
+    "hasWorkflowStateHook": true
+  },
+  {
+    "id": "antigravity",
+    "hasBrainstormSkill": true,
+    "hasHandoffSentence": true,
+    "hasWorkflowStateHook": false
+  },
+  {
+    "id": "devin",
+    "hasBrainstormSkill": true,
+    "hasHandoffSentence": true,
+    "hasWorkflowStateHook": false
+  },
+  {
+    "id": "qoder",
+    "hasBrainstormSkill": true,
+    "hasHandoffSentence": true,
+    "hasWorkflowStateHook": true
+  },
+  {
+    "id": "codebuddy",
+    "hasBrainstormSkill": true,
+    "hasHandoffSentence": true,
+    "hasWorkflowStateHook": true
+  },
+  {
+    "id": "copilot",
+    "hasBrainstormSkill": true,
+    "hasHandoffSentence": true,
+    "hasWorkflowStateHook": true
+  },
+  {
+    "id": "droid",
+    "hasBrainstormSkill": true,
+    "hasHandoffSentence": true,
+    "hasWorkflowStateHook": true
+  },
+  {
+    "id": "dsh",
+    "hasBrainstormSkill": true,
+    "hasHandoffSentence": true,
+    "hasWorkflowStateHook": false
+  },
+  {
+    "id": "pi",
+    "hasBrainstormSkill": true,
+    "hasHandoffSentence": true,
+    "hasWorkflowStateHook": false
+  },
+  {
+    "id": "reasonix",
+    "hasBrainstormSkill": true,
+    "hasHandoffSentence": true,
+    "hasWorkflowStateHook": false
+  },
+  {
+    "id": "zcode",
+    "hasBrainstormSkill": true,
+    "hasHandoffSentence": true,
+    "hasWorkflowStateHook": true
+  },
+  {
+    "id": "trae",
+    "hasBrainstormSkill": true,
+    "hasHandoffSentence": true,
+    "hasWorkflowStateHook": true
+  },
+  {
+    "id": "omp",
+    "hasBrainstormSkill": true,
+    "hasHandoffSentence": true,
+    "hasWorkflowStateHook": false
+  },
+  {
+    "id": "grok",
+    "hasBrainstormSkill": true,
+    "hasHandoffSentence": true,
+    "hasWorkflowStateHook": false
+  },
+  {
+    "id": "kimi",
+    "hasBrainstormSkill": true,
+    "hasHandoffSentence": true,
+    "hasWorkflowStateHook": false
+  },
+  {
+    "id": "snow",
+    "hasBrainstormSkill": true,
+    "hasHandoffSentence": true,
+    "hasWorkflowStateHook": false
+  }
+]

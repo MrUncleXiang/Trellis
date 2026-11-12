@@ -1,0 +1,14 @@
+{
+  ".trellis/.developer": "d212c916894e579060f9903fa140d8669d368f7bafaac7a18e183e7635886163",
+  ".trellis/.runtime/sessions/paired-session.json": "e55f273523a0ac8bfd693f5bb88b6fbd4a014056bc01db2e71f81051ab97fa9e",
+  ".trellis/config.yaml": "d6c451e5937777cf31951aaf146f53894666a07c1a49ad4925d4c3bdcf7e501a",
+  ".trellis/spec/guides/index.md": "3133fa4bfc02f627bd9867cdfdf6cc148fa6db93caa945e519b8f0bda078e719",
+  ".trellis/tasks/fixture/check.jsonl": "13c7848439a439be631b09e06e0a9ee72463d4a7be46b59a53d38ca1027c74c3",
+  ".trellis/tasks/fixture/implement.jsonl": "13c7848439a439be631b09e06e0a9ee72463d4a7be46b59a53d38ca1027c74c3",
+  ".trellis/tasks/fixture/prd.md": "2a8cab97ec3faa4a120b3ceeac8afaa1ecc826ee8cb3a8e5c5ec667a2e2fa270",
+  ".trellis/tasks/fixture/task.json": "01d9a6373a151f1be6290cf3f906dbe58e63a31a3512df5c0b141552118d6283",
+  "AGENTS.md": "0c2a713ef8d4768854084dbf2ee9e162f41aeb83642f7defea3ccc9b765e105a",
+  "fixtures/a.md": "c4aa79b537c73eefc6a56897063638fb06990ec5fcf1a3bae9cd9038424342dc",
+  "fixtures/b.md": "9e223edcd5b6ce1bdbde0dc99569ed62d2508f47fc07e0725a379554f7b4c36e",
+  "fixtures/rate.md": "02fa4a4b37e2b752f789b23144901f51f0cd7719d22c6ccf9f4a021e52936473"
+}

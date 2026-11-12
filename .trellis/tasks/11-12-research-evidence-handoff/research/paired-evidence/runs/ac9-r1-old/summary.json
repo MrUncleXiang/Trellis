@@ -1,0 +1,37 @@
+{
+  "id": "ac9-r1-old",
+  "case": "ac9",
+  "repeat": 1,
+  "version": "old",
+  "root": "C:\\Users\\PXWD\\AppData\\Local\\Temp\\trellis-b-paired-L12pRQ\\runs\\ac9-r1-old",
+  "results": [
+    {
+      "exitCode": 0,
+      "timedOut": false,
+      "completed": true,
+      "elapsedMs": 91832,
+      "threadId": "01a1ce4c-3653-72a0-881c-9feb0be257e5",
+      "usage": {
+        "input_tokens": 268899,
+        "cached_input_tokens": 230409,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1718,
+        "reasoning_output_tokens": 24
+      }
+    },
+    {
+      "exitCode": 0,
+      "timedOut": false,
+      "completed": true,
+      "elapsedMs": 77585,
+      "threadId": "01a1ce4d-9cf1-7ad1-b6dd-a917b1458c86",
+      "usage": {
+        "input_tokens": 233019,
+        "cached_input_tokens": 220737,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 2114,
+        "reasoning_output_tokens": 37
+      }
+    }
+  ]
+}

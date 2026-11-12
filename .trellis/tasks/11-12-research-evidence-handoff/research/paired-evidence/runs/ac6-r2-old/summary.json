@@ -1,0 +1,37 @@
+{
+  "id": "ac6-r2-old",
+  "case": "ac6",
+  "repeat": 2,
+  "version": "old",
+  "root": "C:\\Users\\PXWD\\AppData\\Local\\Temp\\trellis-b-paired-L12pRQ\\runs\\ac6-r2-old",
+  "results": [
+    {
+      "exitCode": 0,
+      "timedOut": false,
+      "completed": true,
+      "elapsedMs": 101485,
+      "threadId": "01a1ce53-704a-7002-86fe-194e6332bb08",
+      "usage": {
+        "input_tokens": 196155,
+        "cached_input_tokens": 157356,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 2347,
+        "reasoning_output_tokens": 25
+      }
+    },
+    {
+      "exitCode": 0,
+      "timedOut": false,
+      "completed": true,
+      "elapsedMs": 254587,
+      "threadId": "01a1ce54-fc9c-7990-8890-4437771ed9ed",
+      "usage": {
+        "input_tokens": 275971,
+        "cached_input_tokens": 262398,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 3108,
+        "reasoning_output_tokens": 14
+      }
+    }
+  ]
+}

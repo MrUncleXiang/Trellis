@@ -1,0 +1,450 @@
+{
+  "observedDate": "2026-11-12",
+  "observation": "Existing built collectors; no product files written. Source registry inspected separately; runtime coverage is not host execution coverage.",
+  "sourceBrainstormMatchesBuilt": true,
+  "platformCount": 22,
+  "platforms": [
+    {
+      "id": "claude-code",
+      "entries": [
+        {
+          "path": ".claude/agents/trellis-research.md",
+          "sha256": "10aecdd3d0777746a516e23cd2a55c9e9c8a015dc98c63ffbac36be21b7a7bb0"
+        },
+        {
+          "path": ".claude/skills/trellis-before-dev/SKILL.md",
+          "sha256": "02a88bae9ee5c8d56e1cf278699dd713b6b081dd9fe919f66a9ada6040eb99e0"
+        },
+        {
+          "path": ".claude/skills/trellis-brainstorm/SKILL.md",
+          "sha256": "dfed2c1038dcf0720657c444b3ff8f3c8a6e4253d2c39a5166a8adcf55535e20"
+        },
+        {
+          "path": ".claude/skills/trellis-check/SKILL.md",
+          "sha256": "8971b14e130988197c788d5acff26830e099acaabdec5edea32083237a9714a8"
+        }
+      ]
+    },
+    {
+      "id": "cursor",
+      "entries": [
+        {
+          "path": ".cursor/skills/trellis-before-dev/SKILL.md",
+          "sha256": "02a88bae9ee5c8d56e1cf278699dd713b6b081dd9fe919f66a9ada6040eb99e0"
+        },
+        {
+          "path": ".cursor/skills/trellis-brainstorm/SKILL.md",
+          "sha256": "dfed2c1038dcf0720657c444b3ff8f3c8a6e4253d2c39a5166a8adcf55535e20"
+        },
+        {
+          "path": ".cursor/skills/trellis-check/SKILL.md",
+          "sha256": "8971b14e130988197c788d5acff26830e099acaabdec5edea32083237a9714a8"
+        },
+        {
+          "path": ".cursor/agents/trellis-research.md",
+          "sha256": "e39b18734b4947ada2d1d6b2432f82daf58d16b6d98aa5b8b78e4a5364559617"
+        }
+      ]
+    },
+    {
+      "id": "opencode",
+      "entries": [
+        {
+          "path": ".opencode/agents/trellis-research.md",
+          "sha256": "6315e859f3a336708defcc7d82a3d549df2f9ea74e887c1c30f6a60d8d60f98b"
+        },
+        {
+          "path": ".opencode/skills/trellis-before-dev/SKILL.md",
+          "sha256": "02a88bae9ee5c8d56e1cf278699dd713b6b081dd9fe919f66a9ada6040eb99e0"
+        },
+        {
+          "path": ".opencode/skills/trellis-brainstorm/SKILL.md",
+          "sha256": "dfed2c1038dcf0720657c444b3ff8f3c8a6e4253d2c39a5166a8adcf55535e20"
+        },
+        {
+          "path": ".opencode/skills/trellis-check/SKILL.md",
+          "sha256": "8971b14e130988197c788d5acff26830e099acaabdec5edea32083237a9714a8"
+        }
+      ]
+    },
+    {
+      "id": "codex",
+      "entries": [
+        {
+          "path": ".agents/skills/trellis-before-dev/SKILL.md",
+          "sha256": "02a88bae9ee5c8d56e1cf278699dd713b6b081dd9fe919f66a9ada6040eb99e0"
+        },
+        {
+          "path": ".agents/skills/trellis-brainstorm/SKILL.md",
+          "sha256": "dfed2c1038dcf0720657c444b3ff8f3c8a6e4253d2c39a5166a8adcf55535e20"
+        },
+        {
+          "path": ".agents/skills/trellis-check/SKILL.md",
+          "sha256": "8971b14e130988197c788d5acff26830e099acaabdec5edea32083237a9714a8"
+        },
+        {
+          "path": ".codex/agents/trellis-research.toml",
+          "sha256": "4435ce73197ba1d29d40359a3279b6423f7e4f559a449f934c016808090066c4"
+        }
+      ]
+    },
+    {
+      "id": "kilo",
+      "entries": [
+        {
+          "path": ".kilocode/skills/trellis-before-dev/SKILL.md",
+          "sha256": "02a88bae9ee5c8d56e1cf278699dd713b6b081dd9fe919f66a9ada6040eb99e0"
+        },
+        {
+          "path": ".kilocode/skills/trellis-brainstorm/SKILL.md",
+          "sha256": "dfed2c1038dcf0720657c444b3ff8f3c8a6e4253d2c39a5166a8adcf55535e20"
+        },
+        {
+          "path": ".kilocode/skills/trellis-check/SKILL.md",
+          "sha256": "8971b14e130988197c788d5acff26830e099acaabdec5edea32083237a9714a8"
+        }
+      ]
+    },
+    {
+      "id": "kiro",
+      "entries": [
+        {
+          "path": ".kiro/skills/trellis-before-dev/SKILL.md",
+          "sha256": "02a88bae9ee5c8d56e1cf278699dd713b6b081dd9fe919f66a9ada6040eb99e0"
+        },
+        {
+          "path": ".kiro/skills/trellis-brainstorm/SKILL.md",
+          "sha256": "dfed2c1038dcf0720657c444b3ff8f3c8a6e4253d2c39a5166a8adcf55535e20"
+        },
+        {
+          "path": ".kiro/skills/trellis-check/SKILL.md",
+          "sha256": "8971b14e130988197c788d5acff26830e099acaabdec5edea32083237a9714a8"
+        }
+      ]
+    },
+    {
+      "id": "gemini",
+      "entries": [
+        {
+          "path": ".agents/skills/trellis-before-dev/SKILL.md",
+          "sha256": "02a88bae9ee5c8d56e1cf278699dd713b6b081dd9fe919f66a9ada6040eb99e0"
+        },
+        {
+          "path": ".agents/skills/trellis-brainstorm/SKILL.md",
+          "sha256": "dfed2c1038dcf0720657c444b3ff8f3c8a6e4253d2c39a5166a8adcf55535e20"
+        },
+        {
+          "path": ".agents/skills/trellis-check/SKILL.md",
+          "sha256": "8971b14e130988197c788d5acff26830e099acaabdec5edea32083237a9714a8"
+        },
+        {
+          "path": ".gemini/agents/trellis-research.md",
+          "sha256": "d68bdb3e755fe0ba4a1b25492082e1cac1289edb49a5002c97a2a1385ba3121d"
+        }
+      ]
+    },
+    {
+      "id": "antigravity",
+      "entries": [
+        {
+          "path": ".agent/skills/trellis-before-dev/SKILL.md",
+          "sha256": "02a88bae9ee5c8d56e1cf278699dd713b6b081dd9fe919f66a9ada6040eb99e0"
+        },
+        {
+          "path": ".agent/skills/trellis-brainstorm/SKILL.md",
+          "sha256": "dfed2c1038dcf0720657c444b3ff8f3c8a6e4253d2c39a5166a8adcf55535e20"
+        },
+        {
+          "path": ".agent/skills/trellis-check/SKILL.md",
+          "sha256": "8971b14e130988197c788d5acff26830e099acaabdec5edea32083237a9714a8"
+        }
+      ]
+    },
+    {
+      "id": "devin",
+      "entries": [
+        {
+          "path": ".devin/skills/trellis-before-dev/SKILL.md",
+          "sha256": "02a88bae9ee5c8d56e1cf278699dd713b6b081dd9fe919f66a9ada6040eb99e0"
+        },
+        {
+          "path": ".devin/skills/trellis-brainstorm/SKILL.md",
+          "sha256": "dfed2c1038dcf0720657c444b3ff8f3c8a6e4253d2c39a5166a8adcf55535e20"
+        },
+        {
+          "path": ".devin/skills/trellis-check/SKILL.md",
+          "sha256": "8971b14e130988197c788d5acff26830e099acaabdec5edea32083237a9714a8"
+        }
+      ]
+    },
+    {
+      "id": "qoder",
+      "entries": [
+        {
+          "path": ".qoder/skills/trellis-before-dev/SKILL.md",
+          "sha256": "02a88bae9ee5c8d56e1cf278699dd713b6b081dd9fe919f66a9ada6040eb99e0"
+        },
+        {
+          "path": ".qoder/skills/trellis-brainstorm/SKILL.md",
+          "sha256": "dfed2c1038dcf0720657c444b3ff8f3c8a6e4253d2c39a5166a8adcf55535e20"
+        },
+        {
+          "path": ".qoder/skills/trellis-check/SKILL.md",
+          "sha256": "8971b14e130988197c788d5acff26830e099acaabdec5edea32083237a9714a8"
+        },
+        {
+          "path": ".qoder/agents/trellis-research.md",
+          "sha256": "10aecdd3d0777746a516e23cd2a55c9e9c8a015dc98c63ffbac36be21b7a7bb0"
+        }
+      ]
+    },
+    {
+      "id": "codebuddy",
+      "entries": [
+        {
+          "path": ".codebuddy/skills/trellis-before-dev/SKILL.md",
+          "sha256": "02a88bae9ee5c8d56e1cf278699dd713b6b081dd9fe919f66a9ada6040eb99e0"
+        },
+        {
+          "path": ".codebuddy/skills/trellis-brainstorm/SKILL.md",
+          "sha256": "dfed2c1038dcf0720657c444b3ff8f3c8a6e4253d2c39a5166a8adcf55535e20"
+        },
+        {
+          "path": ".codebuddy/skills/trellis-check/SKILL.md",
+          "sha256": "8971b14e130988197c788d5acff26830e099acaabdec5edea32083237a9714a8"
+        },
+        {
+          "path": ".codebuddy/agents/trellis-research.md",
+          "sha256": "10aecdd3d0777746a516e23cd2a55c9e9c8a015dc98c63ffbac36be21b7a7bb0"
+        }
+      ]
+    },
+    {
+      "id": "copilot",
+      "entries": [
+        {
+          "path": ".github/skills/trellis-before-dev/SKILL.md",
+          "sha256": "02a88bae9ee5c8d56e1cf278699dd713b6b081dd9fe919f66a9ada6040eb99e0"
+        },
+        {
+          "path": ".github/skills/trellis-brainstorm/SKILL.md",
+          "sha256": "dfed2c1038dcf0720657c444b3ff8f3c8a6e4253d2c39a5166a8adcf55535e20"
+        },
+        {
+          "path": ".github/skills/trellis-check/SKILL.md",
+          "sha256": "8971b14e130988197c788d5acff26830e099acaabdec5edea32083237a9714a8"
+        }
+      ]
+    },
+    {
+      "id": "droid",
+      "entries": [
+        {
+          "path": ".factory/skills/trellis-before-dev/SKILL.md",
+          "sha256": "02a88bae9ee5c8d56e1cf278699dd713b6b081dd9fe919f66a9ada6040eb99e0"
+        },
+        {
+          "path": ".factory/skills/trellis-brainstorm/SKILL.md",
+          "sha256": "dfed2c1038dcf0720657c444b3ff8f3c8a6e4253d2c39a5166a8adcf55535e20"
+        },
+        {
+          "path": ".factory/skills/trellis-check/SKILL.md",
+          "sha256": "8971b14e130988197c788d5acff26830e099acaabdec5edea32083237a9714a8"
+        },
+        {
+          "path": ".factory/droids/trellis-research.md",
+          "sha256": "10aecdd3d0777746a516e23cd2a55c9e9c8a015dc98c63ffbac36be21b7a7bb0"
+        }
+      ]
+    },
+    {
+      "id": "dsh",
+      "entries": [
+        {
+          "path": ".agents/skills/trellis-before-dev/SKILL.md",
+          "sha256": "02a88bae9ee5c8d56e1cf278699dd713b6b081dd9fe919f66a9ada6040eb99e0"
+        },
+        {
+          "path": ".agents/skills/trellis-brainstorm/SKILL.md",
+          "sha256": "dfed2c1038dcf0720657c444b3ff8f3c8a6e4253d2c39a5166a8adcf55535e20"
+        },
+        {
+          "path": ".agents/skills/trellis-check/SKILL.md",
+          "sha256": "8971b14e130988197c788d5acff26830e099acaabdec5edea32083237a9714a8"
+        }
+      ]
+    },
+    {
+      "id": "pi",
+      "entries": [
+        {
+          "path": ".agents/skills/trellis-before-dev/SKILL.md",
+          "sha256": "02a88bae9ee5c8d56e1cf278699dd713b6b081dd9fe919f66a9ada6040eb99e0"
+        },
+        {
+          "path": ".agents/skills/trellis-brainstorm/SKILL.md",
+          "sha256": "dfed2c1038dcf0720657c444b3ff8f3c8a6e4253d2c39a5166a8adcf55535e20"
+        },
+        {
+          "path": ".agents/skills/trellis-check/SKILL.md",
+          "sha256": "8971b14e130988197c788d5acff26830e099acaabdec5edea32083237a9714a8"
+        },
+        {
+          "path": ".pi/agents/trellis-research.md",
+          "sha256": "887648b24bc0befdb4fb157a58571d6a548336b869279945047d9f81e743751c"
+        }
+      ]
+    },
+    {
+      "id": "reasonix",
+      "entries": [
+        {
+          "path": ".reasonix/skills/trellis-before-dev/SKILL.md",
+          "sha256": "02a88bae9ee5c8d56e1cf278699dd713b6b081dd9fe919f66a9ada6040eb99e0"
+        },
+        {
+          "path": ".reasonix/skills/trellis-brainstorm/SKILL.md",
+          "sha256": "dfed2c1038dcf0720657c444b3ff8f3c8a6e4253d2c39a5166a8adcf55535e20"
+        },
+        {
+          "path": ".reasonix/skills/trellis-check/SKILL.md",
+          "sha256": "8db22352a4e9984f95743281105989274b45d115a1df2542981b4205bdfe5abc"
+        }
+      ]
+    },
+    {
+      "id": "zcode",
+      "entries": [
+        {
+          "path": ".zcode/skills/trellis-before-dev/SKILL.md",
+          "sha256": "02a88bae9ee5c8d56e1cf278699dd713b6b081dd9fe919f66a9ada6040eb99e0"
+        },
+        {
+          "path": ".zcode/skills/trellis-brainstorm/SKILL.md",
+          "sha256": "dfed2c1038dcf0720657c444b3ff8f3c8a6e4253d2c39a5166a8adcf55535e20"
+        },
+        {
+          "path": ".zcode/skills/trellis-check/SKILL.md",
+          "sha256": "8971b14e130988197c788d5acff26830e099acaabdec5edea32083237a9714a8"
+        },
+        {
+          "path": ".zcode/agents/trellis-research.md",
+          "sha256": "ef7fcddb131536eb5d9606c8ef3f789b2edeb2b3b68ae13c237faa4917cfc751"
+        }
+      ]
+    },
+    {
+      "id": "trae",
+      "entries": [
+        {
+          "path": ".trae/skills/trellis-before-dev/SKILL.md",
+          "sha256": "02a88bae9ee5c8d56e1cf278699dd713b6b081dd9fe919f66a9ada6040eb99e0"
+        },
+        {
+          "path": ".trae/skills/trellis-brainstorm/SKILL.md",
+          "sha256": "dfed2c1038dcf0720657c444b3ff8f3c8a6e4253d2c39a5166a8adcf55535e20"
+        },
+        {
+          "path": ".trae/skills/trellis-check/SKILL.md",
+          "sha256": "8971b14e130988197c788d5acff26830e099acaabdec5edea32083237a9714a8"
+        },
+        {
+          "path": ".trae/agents/trellis-research.md",
+          "sha256": "82cd2988c9bb6102eac97f89dfcb1215688b98b49d18973d0e95fbcdee4d3618"
+        }
+      ]
+    },
+    {
+      "id": "omp",
+      "entries": [
+        {
+          "path": ".omp/skills/trellis-before-dev/SKILL.md",
+          "sha256": "02a88bae9ee5c8d56e1cf278699dd713b6b081dd9fe919f66a9ada6040eb99e0"
+        },
+        {
+          "path": ".omp/skills/trellis-brainstorm/SKILL.md",
+          "sha256": "dfed2c1038dcf0720657c444b3ff8f3c8a6e4253d2c39a5166a8adcf55535e20"
+        },
+        {
+          "path": ".omp/skills/trellis-check/SKILL.md",
+          "sha256": "8971b14e130988197c788d5acff26830e099acaabdec5edea32083237a9714a8"
+        },
+        {
+          "path": ".omp/agents/trellis-research.md",
+          "sha256": "f0e084fa6575e8c1656a0d1b3ab2e623f0843b225c738aa1ace11a1bde57e868"
+        }
+      ]
+    },
+    {
+      "id": "grok",
+      "entries": [
+        {
+          "path": ".grok/skills/trellis-before-dev/SKILL.md",
+          "sha256": "02a88bae9ee5c8d56e1cf278699dd713b6b081dd9fe919f66a9ada6040eb99e0"
+        },
+        {
+          "path": ".grok/skills/trellis-brainstorm/SKILL.md",
+          "sha256": "dfed2c1038dcf0720657c444b3ff8f3c8a6e4253d2c39a5166a8adcf55535e20"
+        },
+        {
+          "path": ".grok/skills/trellis-check/SKILL.md",
+          "sha256": "8971b14e130988197c788d5acff26830e099acaabdec5edea32083237a9714a8"
+        },
+        {
+          "path": ".grok/agents/trellis-research.md",
+          "sha256": "27fa52acdd54f3cce59a5c6fdbc5415d6678a17e79e978cb39634125d289b9dd"
+        }
+      ]
+    },
+    {
+      "id": "kimi",
+      "entries": [
+        {
+          "path": ".agents/skills/trellis-before-dev/SKILL.md",
+          "sha256": "02a88bae9ee5c8d56e1cf278699dd713b6b081dd9fe919f66a9ada6040eb99e0"
+        },
+        {
+          "path": ".agents/skills/trellis-brainstorm/SKILL.md",
+          "sha256": "dfed2c1038dcf0720657c444b3ff8f3c8a6e4253d2c39a5166a8adcf55535e20"
+        },
+        {
+          "path": ".agents/skills/trellis-check/SKILL.md",
+          "sha256": "8971b14e130988197c788d5acff26830e099acaabdec5edea32083237a9714a8"
+        },
+        {
+          "path": ".kimi-code/skills/trellis-check/SKILL.md",
+          "sha256": "16098ecfbdf1b24ea3c1fa9022fb8d467517d7f4ed130a653a05b3ab97a62f90"
+        },
+        {
+          "path": ".kimi-code/skills/trellis-research/SKILL.md",
+          "sha256": "99df90ac3b21358c48fa7177b2be7ec96a1d0c5e4d2869536dda30e17820f338"
+        },
+        {
+          "path": ".kimi-code/agents/trellis-research.md",
+          "sha256": "99df90ac3b21358c48fa7177b2be7ec96a1d0c5e4d2869536dda30e17820f338"
+        }
+      ]
+    },
+    {
+      "id": "snow",
+      "entries": [
+        {
+          "path": ".snow/skills/trellis-before-dev/SKILL.md",
+          "sha256": "02a88bae9ee5c8d56e1cf278699dd713b6b081dd9fe919f66a9ada6040eb99e0"
+        },
+        {
+          "path": ".snow/skills/trellis-brainstorm/SKILL.md",
+          "sha256": "dfed2c1038dcf0720657c444b3ff8f3c8a6e4253d2c39a5166a8adcf55535e20"
+        },
+        {
+          "path": ".snow/skills/trellis-check/SKILL.md",
+          "sha256": "8971b14e130988197c788d5acff26830e099acaabdec5edea32083237a9714a8"
+        },
+        {
+          "path": ".snow/agents/trellis-research.md",
+          "sha256": "c43b234acdc7aa3f4b6db4f7045798143ff00462a7424cac389c6e57aaccde09"
+        }
+      ]
+    }
+  ]
+}

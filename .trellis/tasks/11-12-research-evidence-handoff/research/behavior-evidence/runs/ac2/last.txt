@@ -1,0 +1,10 @@
+已完成轻量规划，并写入 [需求文档](.trellis/tasks/ac2-ui-copy/prd.md)。
+
+- **目标与范围**：仅将保存按钮提示语由 `Save`（保存）改为 `Save changes`（保存更改），让操作含义更清楚。
+- **验收**：提示语准确，保存功能、按钮状态、布局及其他文案保持原样。
+- **规划材料**：只需需求文档，无需外部调研或额外设计文件。
+- **当前限制**：此目录未提供实际界面代码，因此尚未修改或验证按钮。
+
+是否批准按此规划进入实施？
+
+此次确认来自 [规划技能](.agents/skills/trellis-brainstorm/SKILL.md) 的明确要求：“Only a subsequent user message that explicitly approves the latest planning summary authorizes `task.py start` and implementation.”（只有后续明确批准最新规划摘要，才能启动任务并实施。）因此任务仍保持规划中。

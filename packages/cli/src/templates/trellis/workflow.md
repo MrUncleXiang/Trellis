@@ -205,6 +205,7 @@ Load `trellis-brainstorm`; stay in planning.
 Lightweight: `prd.md` can be enough. Complex: finish `prd.md`, `design.md`, and `implement.md`; ask for review before `task.py start`.
 Multi-deliverable scope: consider a parent task plus independently verifiable child tasks; dependencies must be written in child artifacts, not implied by tree position.
 Sub-agent mode: curate `implement.jsonl` and `check.jsonl` as spec/research manifests before start.
+Main session: save decision-relevant external evidence promptly and link it in `prd.md` / `## Research`; explain no research or applicable reuse. Research workers stay in their assigned research scope.
 [/workflow-state:planning]
 
 <!-- Per-turn breadcrumb: shown throughout Phase 1 when codex.dispatch_mode=inline.
@@ -218,6 +219,7 @@ Load `trellis-brainstorm`; stay in planning.
 Lightweight: `prd.md` can be enough. Complex: finish `prd.md`, `design.md`, and `implement.md`; ask for review before `task.py start`.
 Multi-deliverable scope: consider a parent task plus independently verifiable child tasks; dependencies must be written in child artifacts, not implied by tree position.
 Inline mode: skip jsonl curation; Phase 2 reads artifacts/specs via `trellis-before-dev`.
+Main session: save decision-relevant external evidence promptly and link it in `prd.md` / `## Research`; explain no research or applicable reuse. Research workers stay in their assigned research scope.
 [/workflow-state:planning-inline]
 
 ### Phase 2: Execute
@@ -238,6 +240,7 @@ Tools: `trellis-implement` / `trellis-research` are sub-agent types only (Task/A
 Flow: `trellis-implement` -> `trellis-check` -> `trellis-update-spec` -> commit (Phase 3.4) -> `/trellis:finish-work`.
 Main-session default: dispatch implement/check sub-agents. Sub-agent self-exemption: if already running as `trellis-implement`, do NOT spawn another `trellis-implement` or `trellis-check`; if already running as `trellis-check`, do NOT spawn another `trellis-check` or `trellis-implement`. Dispatch is main session only.
 Dispatch prompt starts with `Active task: <task path from task.py current>`. Read context: jsonl entries -> `prd.md` -> `design.md if present` -> `implement.md if present`.
+Main session: save and integrate decision-changing research before adopting it; return to planning for changed agreed results. Implement/check workers report source, finding and impact; this reminder does not authorize rewriting task planning. Research workers save only assigned research and return its path.
 [/workflow-state:in_progress]
 
 <!-- Per-turn breadcrumb: shown while status='in_progress' when
@@ -249,6 +252,7 @@ Dispatch prompt starts with `Active task: <task path from task.py current>`. Rea
 Flow: `trellis-before-dev` -> edit -> `trellis-check` -> validation -> `trellis-update-spec` -> commit (Phase 3.4) -> `/trellis:finish-work`.
 Do not dispatch implement/check sub-agents in inline mode.
 Read context: `prd.md` -> `design.md if present` -> `implement.md if present`, plus relevant spec/research loaded by skills.
+Main session: save and integrate decision-changing research before adopting it; return to planning for changed agreed results. Implement/check workers report source, finding and impact; this reminder does not authorize rewriting task planning. Research workers save only assigned research and return its path.
 [/workflow-state:in_progress-inline]
 
 ### Phase 3: Finish
@@ -371,6 +375,8 @@ Spawn the research sub-agent:
 - **Agent type**: `trellis-research`
 - **Task description**: Research <specific question>
 - **Key requirement**: Research output MUST be persisted to `{TASK_DIR}/research/`
+- **Dispatch prompt guard**: Start with `Active task: <task path>`; provide the specific question, assigned `research/<topic>.md` path, and minimum content: locatable sources, conclusion/limits, decision impact, and facts/inferences/unknowns. If task identity is missing or ambiguous, return to the main session rather than guess.
+- **Return and integration**: Research workers write only within their assigned research scope and return a path plus summary. The main session must actually read the file, check the question, sources, conclusion and limits, decision impact, and distinction between facts, inferences and unknowns; request missing content before integrating the conclusion into `prd.md` / `design.md`.
 
 [/Claude Code, Cursor, OpenCode, codex-sub-agent, Kiro, Gemini, Qoder, CodeBuddy, Copilot, Droid, Pi, Oh My Pi, ZCode, Snow, Reasonix, Trae, Grok, Kimi Code]
 
@@ -380,10 +386,15 @@ Do the research in the main session directly and write findings into `{TASK_DIR}
 
 [/codex-inline, Kilo, Antigravity, Devin, DeepSeek Harness]
 
-**Research artifact conventions**:
-- One file per research topic (e.g. `research/auth-library-comparison.md`)
-- Record third-party library usage examples, API references, version constraints in files
-- Note relevant spec file paths you discovered for later reference
+**Decision evidence and handoff**:
+- Save only necessary facts and accessible source identifiers. Remove credentials and unrelated personal data, respect project access boundaries, and do not persist unrelated raw request/response payloads.
+- Record external evidence when it supports, rejects, or changes a task decision, whether from web sources, local third-party dependencies, user-provided material, or experiments. Routine project-code reading and unrelated browsing do not require a research log.
+- Save useful findings before presenting or acting on the conclusion, not just at session end. Reuse a topic file under `research/`; no fixed filename, headings, length, or operation count is required.
+- Include the question, locatable sources, conclusion and limits, decision impact, and unresolved issues. Distinguish observed facts, inference, and unknowns; record alternatives and rejection reasons only when actually compared. For version-sensitive claims, identify the relevant version/commit or access date. Local dependencies need identity/version and file/symbol locations; user material must be attributed, and experiments need reproducible conditions, steps, and observations.
+- Keep key conclusions and links in `prd.md` under `## Research`; cite the same record beside affected design decisions. State why no external research is needed, or why existing research remains applicable, rather than creating empty files. Not yet researched, no reliable answer found, and no research needed are different states.
+- Record source conflicts and unknowns with their effect and next action; not finding an answer does not prove a capability absent. If an unknown changes scope, behavior, compatibility, risk, or acceptance, return to planning rather than claim readiness. When new evidence replaces a conclusion, update the record, decisions, and references so the current conclusion is clear.
+- Task-document links resolve relative to their document; manifest `file` paths resolve from the repository root. Select research for each role, not every report for every worker. Missing or stale critical evidence must be surfaced, not silently skipped.
+- These are model instructions and review requirements, not automatic capture, semantic scoring, or new `task.py start` refusal conditions. A file or link alone does not establish evidence quality.
 
 Brainstorm and research can interleave freely — pause to research a technical question, then return to talk with the user.
 
@@ -410,6 +421,8 @@ Curate `implement.jsonl` and `check.jsonl` so the Phase 2 sub-agents get the rig
 **Split between the two files**:
 - `implement.jsonl` → specs + research the implement sub-agent needs to write code correctly
 - `check.jsonl` → specs for the check sub-agent (quality guidelines, check conventions, same research if needed)
+
+Select only the decision-relevant records each role must read; verify their paths and applicability. A file under `research/` alone does not prove it reached a worker.
 
 These manifests do not replace `implement.md`. `implement.md` is the human-readable execution plan for a complex task; jsonl files only list context files to inject or load.
 
@@ -446,6 +459,8 @@ Skip this step. Context is loaded directly by the `trellis-before-dev` skill in 
 
 #### 1.4 Activate task `[required · once]`
 
+Before the existing start review, check `prd.md` / `## Research`: required evidence is saved or reusable, citations are locatable, facts/inferences/unknowns are distinguishable, and result-affecting unknowns have been handled. Explain why research is unnecessary when applicable. This is a review requirement, not an additional script gate.
+
 After artifact review, flip the task status to `in_progress`:
 
 ```bash
@@ -465,7 +480,7 @@ If `task.py start` errors with a session-identity message (no context key from h
 | `prd.md` exists | ✅ |
 | User confirms task should enter implementation | ✅ |
 | `task.py start` has been run (status = in_progress) | ✅ |
-| `research/` has artifacts (complex tasks) | recommended |
+| Decision-relevant evidence is saved and linked, or no research / reuse is explained; critical unknowns are handled | ✅ |
 | `design.md` exists (complex tasks) | ✅ |
 | `implement.md` exists (complex tasks) | ✅ |
 
@@ -482,6 +497,8 @@ If `task.py start` errors with a session-identity message (no context key from h
 Goal: turn reviewed planning artifacts into code that passes quality checks.
 
 #### 2.1 Implement `[required · repeatable]`
+
+Before implementation, actually read the decision-relevant research and its limits, through the role manifest or task links; merely finding a path is not enough. Before checking, compare key decisions and acceptance claims with their cited evidence and unresolved issues. Implementation/check workers report new decision-changing evidence (source, finding, impact) to the main session; a general reminder does not authorize rewriting task planning. The main session saves and integrates it, or assigns follow-up research, before adopting it. Preserve each worker's explicitly assigned code/test write scope.
 
 [Claude Code, Cursor, OpenCode, codex-sub-agent, CodeBuddy, Droid, Pi, ZCode, Snow, Oh My Pi]
 
@@ -538,6 +555,8 @@ The platform prelude auto-handles the context load requirement:
 
 #### 2.2 Quality check `[required · repeatable]`
 
+Actually read the check-role research; review key decisions against locatable sources, versions/limits and unresolved issues. Missing or stale evidence that can change the agreed result returns to planning; do not pass merely because a file exists.
+
 [Claude Code, Cursor, OpenCode, codex-sub-agent, Kiro, Gemini, Qoder, CodeBuddy, Copilot, Droid, Pi, Oh My Pi, ZCode, Snow, Reasonix, Trae, Grok, Kimi Code]
 
 Spawn the check sub-agent:
@@ -568,6 +587,8 @@ If issues are found → fix → re-check, until green.
 **Final pass (before Phase 3.4 commit)**: the last 2.2 of a task must run full-scope, not just on the latest implement chunk. List all affected packages with `python3 ./.trellis/scripts/get_context.py --mode packages`, then load each package's spec index Quality Check section. This catches cross-layer / multi-package issues a mid-iteration local 2.2 cannot.
 
 #### 2.3 Rollback `[on demand]`
+
+When follow-up research changes a decision, save the findings and update the research entry, affected decisions, citations and role manifests. Mark replaced conclusions; changes to agreed scope, behavior, compatibility, risk or acceptance return to planning and review.
 
 - `check` reveals a prd defect → return to Phase 1, fix `prd.md`, then redo 2.1
 - Implementation went wrong → revert code, redo 2.1

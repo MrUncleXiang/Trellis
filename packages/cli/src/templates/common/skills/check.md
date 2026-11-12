@@ -15,7 +15,8 @@ git status
 
 Read the current task artifacts in order:
 
-- `prd.md`
+- `prd.md`, including its `## Research` handoff index
+- the research records referenced there that affect implementation or acceptance
 - `design.md` if present
 - `implement.md` if present
 
@@ -56,6 +57,13 @@ Run the project's lint, type-check, and test commands. Fix any failures before p
 - [ ] Does `.trellis/spec/` need updates? (new patterns, conventions, lessons learned)
 
 > "If I fixed a bug or discovered something non-obvious, should I document it so future me won't hit the same issue?" → If YES, update the relevant spec doc.
+
+### Decision Evidence
+
+- [ ] For each key decision, compared the implementation or result with the cited evidence and its applicable limits?
+- [ ] Checked relevant source locations, versions, or premises where evidence is uncertain, stale, or decisive?
+- [ ] Unknowns that affect agreed behavior have a handling decision, and unresolved ones are not reported as passed?
+- [ ] Findings identify the source or record and distinguish facts, inferences, and unknowns?
 
 ### Scope Discipline
 

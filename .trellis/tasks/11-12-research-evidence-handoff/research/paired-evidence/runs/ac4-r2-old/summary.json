@@ -1,0 +1,23 @@
+{
+  "id": "ac4-r2-old",
+  "case": "ac4",
+  "repeat": 2,
+  "version": "old",
+  "root": "C:\\Users\\PXWD\\AppData\\Local\\Temp\\trellis-b-paired-L12pRQ\\runs\\ac4-r2-old",
+  "results": [
+    {
+      "exitCode": 0,
+      "timedOut": false,
+      "completed": true,
+      "elapsedMs": 59666,
+      "threadId": "01a1ce50-bdcb-7f80-b3c0-ff7685e74177",
+      "usage": {
+        "input_tokens": 153278,
+        "cached_input_tokens": 119759,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1556,
+        "reasoning_output_tokens": 40
+      }
+    }
+  ]
+}

@@ -18,6 +18,16 @@ Do not ask the user to confirm facts that the repository can answer. Ask only fo
 
 Repository evidence establishes current behavior and technical constraints. The user's intended behavior, feature scope boundaries, and UX preferences are never answerable by repository evidence alone, even when an existing pattern exists; existing patterns are options and recommendation evidence, not decisions.
 
+## Research Evidence Handoff
+
+When external evidence is used to support, reject, or change a requirement, design, compatibility, risk, or acceptance decision, save it before presenting that conclusion or changing the plan. External evidence includes online material, local third-party source or documentation, user-provided references, and experiments about external behavior. Project code and existing spec inspection follow the evidence rule above and do not need a separate report. Reuse sufficient existing evidence instead of searching again; do not log unrelated browsing. A research agent must save its result in the assigned task research file before returning; the main agent must read and validate it before using it as evidence. If saving fails, report the failure rather than claiming handoff. Save only necessary facts and accessible source identifiers. Remove credentials and unrelated personal data, respect project access boundaries, and do not persist unrelated raw request/response payloads.
+
+Each adopted finding must make the question, locatable source, conclusion and limits, and decision impact recoverable. Add version, commit, or access date when it affects applicability. Web sources need a link and relevant section or entry; local third-party material needs a stable package or path identifier, version, and location; user material needs a name or identifier and relevant location, must be identified as user-provided, and must not be presented as independently verified; if it exists only in the session, save the necessary excerpt or summary; experiments need enough environment, steps, and observations to repeat them. Keep facts, inferences, and unknowns distinguishable. If no reliable answer is found or sources conflict, save what was checked, what remains unresolved, the current choice and reason, the impact, and the next step; do not treat "not found" as proof of absence. Record alternatives only when they were actually compared.
+
+Keep or add a `## Research` section in `prd.md` as the handoff index. State whether research is unnecessary (with a task-specific reason), reused (with why it applies and relevant version or premise checks), or performed (with key conclusions and record links), and note unresolved questions and their impact. Cite the same record near affected decisions in `design.md`; do not copy the full research. Use task-relative paths for task records and repository-root paths in `implement.jsonl` or `check.jsonl` when relevant. Update the record and affected decisions when evidence changes, and mark superseded conclusions. No fixed format, file count, or length is required; do not create empty research artifacts.
+
+Before declaring planning ready, recheck that the status is explicit, decision-relevant evidence is saved or validly reused, references resolve, facts, inferences, and unknowns are distinguishable, and unknowns that affect the agreed result have a handling decision. File existence or a link alone is not enough.
+
 ---
 
 Use this skill during Phase 1 planning to turn the user's request into clear requirements and planning artifacts.
@@ -43,15 +53,17 @@ Use a concise title from the user's request. Both the title and `--description` 
    - code, tests, fixtures, and configs
    - README files, docs, existing specs, and domain notes
    - related Trellis tasks, research files, and session history when present
+   - when external evidence is needed, save decision-relevant findings under `research/` as described above
 3. Separate what you found into:
    - confirmed facts
+   - inferences and unknowns
    - product intent still needed from the user
    - scope or risk decisions still needed from the user
    - likely out-of-scope items
 4. If a user-owned decision remains, ask the single highest-value question, include your recommendation and trade-off, then stop. Do not perform implementation work in the same turn.
 5. After each user answer, update `prd.md`, recompute the decision inventory, and repeat from step 2.
-6. When no user-owned decision remains, create or update `design.md` and `implement.md` for complex tasks.
-7. Run the requirement convergence gate, then the PRD convergence pass.
+6. When no user-owned decision remains, create or update `design.md` and `implement.md` for complex tasks, citing relevant research records near affected decisions.
+7. Run the requirement convergence gate, then the PRD convergence pass. Recheck the research handoff before declaring planning ready.
 8. Present the final planning summary and stop. Do not run `task.py start` or edit product code in the same turn.
 9. Only a subsequent user message that explicitly approves the latest planning summary authorizes `task.py start` and implementation. If the artifacts change materially after approval, repeat the final review.
 
@@ -144,6 +156,7 @@ The final planning summary must show Goal, In Scope, Out of Scope, Acceptance Cr
 - acceptance criteria
 - out of scope
 - open questions that still block planning
+- a `## Research` handoff index with status, key conclusions and record links, and unresolved questions and impact
 
 `design.md` records technical design for complex tasks:
 
@@ -174,7 +187,7 @@ The pass must be lossless:
 - Fold temporary brainstorm sections such as `What I already know`, `Assumptions`, and resolved `Open Questions` into Goal, Background, Requirements, Technical Notes, or Acceptance Criteria.
 - Remove resolved open questions instead of leaving empty or already-answered sections.
 - Merge parallel bug and requirement lists when they describe the same work; keep each defect's severity, evidence, and file:line anchors on the owning requirement.
-- Preserve every file:line anchor, decision, constraint, requirement ID, and acceptance-criteria mapping.
+- Preserve every file:line anchor, decision, constraint, requirement ID, and acceptance-criteria mapping. Also preserve research links and unresolved impacts.
 - Do not proceed to final review while any blocking open question remains.
 
 After the pass, read `prd.md` top to bottom and verify that no fact is repeated across sections unless the repetition adds new information.

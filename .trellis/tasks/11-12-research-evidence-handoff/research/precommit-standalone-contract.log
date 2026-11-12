@@ -1,0 +1,11 @@
+
+ RUN  v4.0.18 D:/zcx/Trellis/packages/cli
+
+ ✓ test/templates/research-evidence-contract.test.ts (11 tests) 821ms
+     ✓ emits real planning and in_progress blocks from the Python hook  323ms
+
+ Test Files  1 passed (1)
+      Tests  11 passed (11)
+   Start at  13:31:52
+   Duration  1.67s (transform 296ms, setup 41ms, import 655ms, tests 821ms, environment 0ms)
+

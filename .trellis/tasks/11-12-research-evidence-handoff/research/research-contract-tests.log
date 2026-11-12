@@ -1,0 +1,10 @@
+
+ RUN  v4.0.18 D:/zcx/Trellis/packages/cli
+
+ ✓ test/templates/research-evidence-contract.test.ts (10 tests) 748ms
+
+ Test Files  1 passed (1)
+      Tests  10 passed (10)
+   Start at  12:17:01
+   Duration  1.60s (transform 264ms, setup 22ms, import 667ms, tests 748ms, environment 0ms)
+

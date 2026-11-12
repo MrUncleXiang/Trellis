@@ -1,0 +1,16 @@
+
+  GitNexus Analyzer (1.6.12)
+
+  GitNexus Analyzer (1.6.12)
+{"level":40,"time":1794461704816,"name":"gitnexus","msg":"GitNexus: FTS extension unavailable; continuing without FTS features. extension install for fts timed out after 15000ms; LOAD fts had failed: Binder exception: Extension: fts is an official extension and has not been installed. You can install it by: install fts."}
+[2K
+FTS extension unavailable; skipping search-index creation. Full-text/BM25 search will be disabled until the LadybugDB FTS extension is installed once with network access (GITNEXUS_LBUG_EXTENSION_INSTALL=auto) or pre-installed for offline use. Run `gitnexus doctor` for details.
+  Repository indexed successfully (17.8s)
+
+  3,625 nodes | 3,856 edges | 0 clusters | 0 flows
+  D:\zcx\Trellis\marketplace
+
+  Warning: full-text/BM25 search is disabled — the LadybugDB FTS extension was unavailable.
+  Install it once with network access (GITNEXUS_LBUG_EXTENSION_INSTALL=auto), then run
+  `gitnexus analyze --repair-fts` to build the search indexes. Run `gitnexus doctor` for details.
+

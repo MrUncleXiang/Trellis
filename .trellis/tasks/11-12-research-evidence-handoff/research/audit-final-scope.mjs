@@ -1,0 +1,22 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import {createHash} from 'node:crypto';
+import {fileURLToPath} from 'node:url';
+import {execFileSync} from 'node:child_process';
+import {collectPlatformTemplates,getConfiguredPlatforms} from '../../../../packages/cli/dist/configurators/index.js';
+import {replacePythonCommandLiterals} from '../../../../packages/cli/dist/configurators/shared.js';
+const dir=path.dirname(fileURLToPath(import.meta.url));
+const project=path.resolve(dir,'../../../..');
+const hash=b=>createHash('sha256').update(b).digest('hex');
+const baseline=JSON.parse(fs.readFileSync(path.join(dir,'implementation-scope.json'),'utf8'));
+const protectedDrift=baseline.protectedFiles.filter(p=>hash(fs.readFileSync(path.join(project,p.path)))!==p.sha256).map(p=>p.path);
+const generator=JSON.parse(fs.readFileSync(path.join(dir,'platform-entry-candidate.json'),'utf8'));
+const targets=new Set(generator.targets);const generated=[];const templateHashes=JSON.parse(fs.readFileSync(path.join(project,'.trellis/.template-hashes.json'),'utf8')).hashes;
+for(const platform of getConfiguredPlatforms(project)){for(const [p,t] of collectPlatformTemplates(platform)){if(!targets.has(p))continue;const actual=fs.readFileSync(path.join(project,p),'utf8');const expected=replacePythonCommandLiterals(t);generated.push({platform,path:p,matches:actual===expected,hashMatches:templateHashes[p]===hash(expected.replace(/\r\n/g,'\n'))});}}
+const source=fs.readFileSync(path.join(project,'packages/cli/src/templates/trellis/workflow.md'));const native=fs.readFileSync(path.join(project,'marketplace/workflows/native/workflow.md'));const localWorkflow=fs.readFileSync(path.join(project,'.trellis/workflow.md'),'utf8');
+const snapshots=hash(fs.readFileSync(path.join(dir,'requirements-before-design-2026-11-12.md')))==='78cf2bf64743f0d0ad98aecf03ca3841a8bbddd0a51d0f83d4bbfb2b5d56696a';
+const head=execFileSync('git',['rev-parse','HEAD'],{cwd:project,encoding:'utf8'}).trim();
+const marketHead=execFileSync('git',['rev-parse','HEAD'],{cwd:path.join(project,'marketplace'),encoding:'utf8'}).trim();
+const result={date:'2026-11-12',protectedCount:baseline.protectedFiles.length,protectedDrift,configured:[...getConfiguredPlatforms(project)],uniqueGeneratedTargets:targets.size,generatedChecks:generated.length,generatedMismatches:generated.filter(x=>!x.matches||!x.hashMatches),nativeMirrorByteIdentical:source.equals(native),localWorkflowMatches:localWorkflow===replacePythonCommandLiterals(source.toString('utf8')),localWorkflowHashMatches:templateHashes['.trellis/workflow.md']===hash(localWorkflow.replace(/\r\n/g,'\n')),requirementsSnapshotUnchanged:snapshots,head,headUnchanged:head===baseline.commit.trim(),marketplaceHead:marketHead,marketplaceHeadUnchanged:marketHead===baseline.marketplaceCommit.trim(),scope:'B source guidance, generated entries, tests, one native checkout attribute and existing workflow maintenance spec; no commit/publish',generated};
+result.passed=protectedDrift.length===0&&result.generatedMismatches.length===0&&result.nativeMirrorByteIdentical&&result.localWorkflowMatches&&result.localWorkflowHashMatches&&snapshots&&result.headUnchanged&&result.marketplaceHeadUnchanged;
+fs.writeFileSync(path.join(dir,'final-scope-audit.json'),JSON.stringify(result,null,2)+'\n');console.log(JSON.stringify({...result,generated:undefined},null,2));if(!result.passed)process.exitCode=1;

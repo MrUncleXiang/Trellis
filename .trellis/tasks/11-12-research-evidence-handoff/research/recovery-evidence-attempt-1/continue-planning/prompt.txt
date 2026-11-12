@@ -1,0 +1,2 @@
+Active task: .trellis/tasks/recovery-fixture
+使用 .agents/skills/trellis-continue/SKILL.md 接手当前项目。业务目标是完成53条消息发送。请先说明当前方案、必须遵守的约束、尚不确定的事情和下一步。本轮仅阅读了解，不写代码，不重复调查已有答案。

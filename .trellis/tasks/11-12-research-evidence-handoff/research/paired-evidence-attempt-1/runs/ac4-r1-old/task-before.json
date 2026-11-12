@@ -1,0 +1,6 @@
+{
+  "check.jsonl": "{\"file\":\".trellis/tasks/fixture/prd.md\",\"reason\":\"Task scope\"}\n",
+  "implement.jsonl": "{\"file\":\".trellis/tasks/fixture/prd.md\",\"reason\":\"Task scope\"}\n",
+  "prd.md": "# Chart integration\nGoal: confirm SSR and known request limit for local-chart1.2 before choosing it.\n## Research\nNot investigated yet.\n",
+  "task.json": "{\"id\":\"fixture\",\"name\":\"fixture\",\"title\":\"ac4\",\"status\":\"planning\"}"
+}

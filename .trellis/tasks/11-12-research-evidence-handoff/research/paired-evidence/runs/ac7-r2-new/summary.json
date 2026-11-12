@@ -1,0 +1,23 @@
+{
+  "id": "ac7-r2-new",
+  "case": "ac7",
+  "repeat": 2,
+  "version": "new",
+  "root": "C:\\Users\\PXWD\\AppData\\Local\\Temp\\trellis-b-paired-L12pRQ\\runs\\ac7-r2-new",
+  "results": [
+    {
+      "exitCode": 0,
+      "timedOut": false,
+      "completed": true,
+      "elapsedMs": 83676,
+      "threadId": "01a1ce53-e84c-7562-8099-e8144a76dd6a",
+      "usage": {
+        "input_tokens": 234126,
+        "cached_input_tokens": 194293,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 2443,
+        "reasoning_output_tokens": 21
+      }
+    }
+  ]
+}

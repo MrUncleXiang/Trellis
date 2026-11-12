@@ -1,0 +1,767 @@
+{
+  "date": "2026-11-12",
+  "configured": [
+    "claude-code",
+    "cursor",
+    "opencode",
+    "codex",
+    "pi",
+    "omp"
+  ],
+  "platforms": [
+    {
+      "platform": "claude-code",
+      "entries": [
+        {
+          "role": "continue",
+          "path": ".claude/commands/trellis/continue.md",
+          "characters": 3158,
+          "sha256": "d43e4d89449cd469ddd99b97f3cd4a036e1fdd5c64a9a5fa960646e837a03cd8"
+        },
+        {
+          "role": "before-dev",
+          "path": ".claude/skills/trellis-before-dev/SKILL.md",
+          "characters": 3127,
+          "sha256": "659ce92a770444fcbe3efa35971b399a613a9d7703c6ff80fc910058897af820"
+        },
+        {
+          "role": "brainstorm",
+          "path": ".claude/skills/trellis-brainstorm/SKILL.md",
+          "characters": 14034,
+          "sha256": "56d555e68649f2f1e13fc6a1e220dd9b56a1c60ee4b4edbfade598d011b4795b"
+        },
+        {
+          "role": "check",
+          "path": ".claude/skills/trellis-check/SKILL.md",
+          "characters": 4320,
+          "sha256": "4b640aeab267c28505fae8810b9b35b055120e3f25ca1fab33404a54ee4a7537"
+        }
+      ]
+    },
+    {
+      "platform": "cursor",
+      "entries": [
+        {
+          "role": "continue",
+          "path": ".cursor/commands/trellis-continue.md",
+          "characters": 3158,
+          "sha256": "2a524961bfd1734c714798d470bc5661f6178172220f07ca3ecbfed0ddc10bb6"
+        },
+        {
+          "role": "before-dev",
+          "path": ".cursor/skills/trellis-before-dev/SKILL.md",
+          "characters": 3127,
+          "sha256": "659ce92a770444fcbe3efa35971b399a613a9d7703c6ff80fc910058897af820"
+        },
+        {
+          "role": "brainstorm",
+          "path": ".cursor/skills/trellis-brainstorm/SKILL.md",
+          "characters": 14034,
+          "sha256": "56d555e68649f2f1e13fc6a1e220dd9b56a1c60ee4b4edbfade598d011b4795b"
+        },
+        {
+          "role": "check",
+          "path": ".cursor/skills/trellis-check/SKILL.md",
+          "characters": 4320,
+          "sha256": "4b640aeab267c28505fae8810b9b35b055120e3f25ca1fab33404a54ee4a7537"
+        }
+      ]
+    },
+    {
+      "platform": "opencode",
+      "entries": [
+        {
+          "role": "continue",
+          "path": ".opencode/commands/trellis/continue.md",
+          "characters": 3160,
+          "sha256": "728a842ae0052d1314a3de82039549728ca5d587a96f1c21929da2b7f307cfb6"
+        },
+        {
+          "role": "start",
+          "path": ".opencode/commands/trellis/start.md",
+          "characters": 3235,
+          "sha256": "17fa35f4b56a47d213ebfb297c84401ccc40f70e7d06687c3e9e43775b7bb555"
+        },
+        {
+          "role": "before-dev",
+          "path": ".opencode/skills/trellis-before-dev/SKILL.md",
+          "characters": 3127,
+          "sha256": "659ce92a770444fcbe3efa35971b399a613a9d7703c6ff80fc910058897af820"
+        },
+        {
+          "role": "brainstorm",
+          "path": ".opencode/skills/trellis-brainstorm/SKILL.md",
+          "characters": 14034,
+          "sha256": "56d555e68649f2f1e13fc6a1e220dd9b56a1c60ee4b4edbfade598d011b4795b"
+        },
+        {
+          "role": "check",
+          "path": ".opencode/skills/trellis-check/SKILL.md",
+          "characters": 4320,
+          "sha256": "4b640aeab267c28505fae8810b9b35b055120e3f25ca1fab33404a54ee4a7537"
+        }
+      ]
+    },
+    {
+      "platform": "codex",
+      "entries": [
+        {
+          "role": "continue",
+          "path": ".agents/skills/trellis-continue/SKILL.md",
+          "characters": 3461,
+          "sha256": "c2b81c6aed26f6d1fcd1d7204cdcfd34af02e9011570c26f3573d91691ccf00e"
+        },
+        {
+          "role": "start",
+          "path": ".agents/skills/trellis-start/SKILL.md",
+          "characters": 3623,
+          "sha256": "8ab6b05ee2baea284682e9b3ea58f2810f30f77895ce3f64bb53d72ad0e49c3f"
+        },
+        {
+          "role": "before-dev",
+          "path": ".agents/skills/trellis-before-dev/SKILL.md",
+          "characters": 3127,
+          "sha256": "659ce92a770444fcbe3efa35971b399a613a9d7703c6ff80fc910058897af820"
+        },
+        {
+          "role": "brainstorm",
+          "path": ".agents/skills/trellis-brainstorm/SKILL.md",
+          "characters": 14034,
+          "sha256": "56d555e68649f2f1e13fc6a1e220dd9b56a1c60ee4b4edbfade598d011b4795b"
+        },
+        {
+          "role": "check",
+          "path": ".agents/skills/trellis-check/SKILL.md",
+          "characters": 4320,
+          "sha256": "4b640aeab267c28505fae8810b9b35b055120e3f25ca1fab33404a54ee4a7537"
+        }
+      ]
+    },
+    {
+      "platform": "kilo",
+      "entries": [
+        {
+          "role": "continue",
+          "path": ".kilocode/workflows/continue.md",
+          "characters": 3156,
+          "sha256": "5891afb98b4dfa0a49f6a5d4b7b34e850c9e19e7f61340ba3b7075896ab8bb7c"
+        },
+        {
+          "role": "start",
+          "path": ".kilocode/workflows/start.md",
+          "characters": 3231,
+          "sha256": "2bf821e73d49da92e443ec1dc82d62bf283109f8e458daf23bd1f0f753550a8f"
+        },
+        {
+          "role": "before-dev",
+          "path": ".kilocode/skills/trellis-before-dev/SKILL.md",
+          "characters": 3127,
+          "sha256": "659ce92a770444fcbe3efa35971b399a613a9d7703c6ff80fc910058897af820"
+        },
+        {
+          "role": "brainstorm",
+          "path": ".kilocode/skills/trellis-brainstorm/SKILL.md",
+          "characters": 14034,
+          "sha256": "56d555e68649f2f1e13fc6a1e220dd9b56a1c60ee4b4edbfade598d011b4795b"
+        },
+        {
+          "role": "check",
+          "path": ".kilocode/skills/trellis-check/SKILL.md",
+          "characters": 4320,
+          "sha256": "4b640aeab267c28505fae8810b9b35b055120e3f25ca1fab33404a54ee4a7537"
+        }
+      ]
+    },
+    {
+      "platform": "kiro",
+      "entries": [
+        {
+          "role": "continue",
+          "path": ".kiro/skills/trellis-continue/SKILL.md",
+          "characters": 3460,
+          "sha256": "59f5f0586371b8029ab348dc10a1912245549397a892a48977206d87501af76d"
+        },
+        {
+          "role": "before-dev",
+          "path": ".kiro/skills/trellis-before-dev/SKILL.md",
+          "characters": 3127,
+          "sha256": "659ce92a770444fcbe3efa35971b399a613a9d7703c6ff80fc910058897af820"
+        },
+        {
+          "role": "brainstorm",
+          "path": ".kiro/skills/trellis-brainstorm/SKILL.md",
+          "characters": 14034,
+          "sha256": "56d555e68649f2f1e13fc6a1e220dd9b56a1c60ee4b4edbfade598d011b4795b"
+        },
+        {
+          "role": "check",
+          "path": ".kiro/skills/trellis-check/SKILL.md",
+          "characters": 4320,
+          "sha256": "4b640aeab267c28505fae8810b9b35b055120e3f25ca1fab33404a54ee4a7537"
+        }
+      ]
+    },
+    {
+      "platform": "gemini",
+      "entries": [
+        {
+          "role": "continue",
+          "path": ".gemini/commands/trellis/continue.toml",
+          "characters": 3211,
+          "sha256": "561c3f47b6ce0a818a01e2ba2c37bb42f029fdee7cbec22d38ccb18dbdc5bd53"
+        },
+        {
+          "role": "before-dev",
+          "path": ".agents/skills/trellis-before-dev/SKILL.md",
+          "characters": 3127,
+          "sha256": "659ce92a770444fcbe3efa35971b399a613a9d7703c6ff80fc910058897af820"
+        },
+        {
+          "role": "brainstorm",
+          "path": ".agents/skills/trellis-brainstorm/SKILL.md",
+          "characters": 14034,
+          "sha256": "56d555e68649f2f1e13fc6a1e220dd9b56a1c60ee4b4edbfade598d011b4795b"
+        },
+        {
+          "role": "check",
+          "path": ".agents/skills/trellis-check/SKILL.md",
+          "characters": 4320,
+          "sha256": "4b640aeab267c28505fae8810b9b35b055120e3f25ca1fab33404a54ee4a7537"
+        }
+      ]
+    },
+    {
+      "platform": "antigravity",
+      "entries": [
+        {
+          "role": "continue",
+          "path": ".agent/workflows/continue.md",
+          "characters": 3163,
+          "sha256": "c3888dac2f168f71383c100fa4c22de6af1ff4bd9311b4737cf278e81f18e523"
+        },
+        {
+          "role": "start",
+          "path": ".agent/workflows/start.md",
+          "characters": 3238,
+          "sha256": "379a2f37e40e7d83ce4c4d1da229777be1b758c1c02d0ea8664a1356955c464a"
+        },
+        {
+          "role": "before-dev",
+          "path": ".agent/skills/trellis-before-dev/SKILL.md",
+          "characters": 3127,
+          "sha256": "659ce92a770444fcbe3efa35971b399a613a9d7703c6ff80fc910058897af820"
+        },
+        {
+          "role": "brainstorm",
+          "path": ".agent/skills/trellis-brainstorm/SKILL.md",
+          "characters": 14034,
+          "sha256": "56d555e68649f2f1e13fc6a1e220dd9b56a1c60ee4b4edbfade598d011b4795b"
+        },
+        {
+          "role": "check",
+          "path": ".agent/skills/trellis-check/SKILL.md",
+          "characters": 4320,
+          "sha256": "4b640aeab267c28505fae8810b9b35b055120e3f25ca1fab33404a54ee4a7537"
+        }
+      ]
+    },
+    {
+      "platform": "devin",
+      "entries": [
+        {
+          "role": "continue",
+          "path": ".devin/workflows/trellis-continue.md",
+          "characters": 3157,
+          "sha256": "4331a46e732a1756cd759abab6b313c9b92f213ff7c25d30e0e2873f961f3340"
+        },
+        {
+          "role": "start",
+          "path": ".devin/workflows/trellis-start.md",
+          "characters": 3232,
+          "sha256": "d52f024bb0591be1d535b76a23342a7bbf09bea0d573e6fbbc42f1126bbb7be6"
+        },
+        {
+          "role": "before-dev",
+          "path": ".devin/skills/trellis-before-dev/SKILL.md",
+          "characters": 3127,
+          "sha256": "659ce92a770444fcbe3efa35971b399a613a9d7703c6ff80fc910058897af820"
+        },
+        {
+          "role": "brainstorm",
+          "path": ".devin/skills/trellis-brainstorm/SKILL.md",
+          "characters": 14034,
+          "sha256": "56d555e68649f2f1e13fc6a1e220dd9b56a1c60ee4b4edbfade598d011b4795b"
+        },
+        {
+          "role": "check",
+          "path": ".devin/skills/trellis-check/SKILL.md",
+          "characters": 4320,
+          "sha256": "4b640aeab267c28505fae8810b9b35b055120e3f25ca1fab33404a54ee4a7537"
+        }
+      ]
+    },
+    {
+      "platform": "qoder",
+      "entries": [
+        {
+          "role": "continue",
+          "path": ".qoder/commands/trellis-continue.md",
+          "characters": 3258,
+          "sha256": "a8767b896ecf996267bf904fb1b8ff0d3b27bb0217fd1ce0c48eb76843bff423"
+        },
+        {
+          "role": "before-dev",
+          "path": ".qoder/skills/trellis-before-dev/SKILL.md",
+          "characters": 3127,
+          "sha256": "659ce92a770444fcbe3efa35971b399a613a9d7703c6ff80fc910058897af820"
+        },
+        {
+          "role": "brainstorm",
+          "path": ".qoder/skills/trellis-brainstorm/SKILL.md",
+          "characters": 14034,
+          "sha256": "56d555e68649f2f1e13fc6a1e220dd9b56a1c60ee4b4edbfade598d011b4795b"
+        },
+        {
+          "role": "check",
+          "path": ".qoder/skills/trellis-check/SKILL.md",
+          "characters": 4320,
+          "sha256": "4b640aeab267c28505fae8810b9b35b055120e3f25ca1fab33404a54ee4a7537"
+        }
+      ]
+    },
+    {
+      "platform": "codebuddy",
+      "entries": [
+        {
+          "role": "continue",
+          "path": ".codebuddy/commands/trellis/continue.md",
+          "characters": 3161,
+          "sha256": "cf1dfe8309a063ba6ed9429ebe3d6e6b605e6db7ad279cbe1f2ae968822883ef"
+        },
+        {
+          "role": "before-dev",
+          "path": ".codebuddy/skills/trellis-before-dev/SKILL.md",
+          "characters": 3127,
+          "sha256": "659ce92a770444fcbe3efa35971b399a613a9d7703c6ff80fc910058897af820"
+        },
+        {
+          "role": "brainstorm",
+          "path": ".codebuddy/skills/trellis-brainstorm/SKILL.md",
+          "characters": 14034,
+          "sha256": "56d555e68649f2f1e13fc6a1e220dd9b56a1c60ee4b4edbfade598d011b4795b"
+        },
+        {
+          "role": "check",
+          "path": ".codebuddy/skills/trellis-check/SKILL.md",
+          "characters": 4320,
+          "sha256": "4b640aeab267c28505fae8810b9b35b055120e3f25ca1fab33404a54ee4a7537"
+        }
+      ]
+    },
+    {
+      "platform": "copilot",
+      "entries": [
+        {
+          "role": "continue",
+          "path": ".github/prompts/continue.prompt.md",
+          "characters": 3159,
+          "sha256": "2dd300777a9328e56a075a65bfd377cd9910706e2ca54eef3df90369bbd78946"
+        },
+        {
+          "role": "before-dev",
+          "path": ".github/skills/trellis-before-dev/SKILL.md",
+          "characters": 3127,
+          "sha256": "659ce92a770444fcbe3efa35971b399a613a9d7703c6ff80fc910058897af820"
+        },
+        {
+          "role": "brainstorm",
+          "path": ".github/skills/trellis-brainstorm/SKILL.md",
+          "characters": 14034,
+          "sha256": "56d555e68649f2f1e13fc6a1e220dd9b56a1c60ee4b4edbfade598d011b4795b"
+        },
+        {
+          "role": "check",
+          "path": ".github/skills/trellis-check/SKILL.md",
+          "characters": 4320,
+          "sha256": "4b640aeab267c28505fae8810b9b35b055120e3f25ca1fab33404a54ee4a7537"
+        }
+      ]
+    },
+    {
+      "platform": "droid",
+      "entries": [
+        {
+          "role": "continue",
+          "path": ".factory/commands/trellis/continue.md",
+          "characters": 3157,
+          "sha256": "cc039ac1b9461f1a908937369e3c517e626aac2067a21e5a9cce207c97ef652a"
+        },
+        {
+          "role": "before-dev",
+          "path": ".factory/skills/trellis-before-dev/SKILL.md",
+          "characters": 3127,
+          "sha256": "659ce92a770444fcbe3efa35971b399a613a9d7703c6ff80fc910058897af820"
+        },
+        {
+          "role": "brainstorm",
+          "path": ".factory/skills/trellis-brainstorm/SKILL.md",
+          "characters": 14034,
+          "sha256": "56d555e68649f2f1e13fc6a1e220dd9b56a1c60ee4b4edbfade598d011b4795b"
+        },
+        {
+          "role": "check",
+          "path": ".factory/skills/trellis-check/SKILL.md",
+          "characters": 4320,
+          "sha256": "4b640aeab267c28505fae8810b9b35b055120e3f25ca1fab33404a54ee4a7537"
+        },
+        {
+          "role": "check",
+          "path": ".factory/droids/trellis-check.md",
+          "characters": 3030,
+          "sha256": "fc0d204db20baabbc31c689ebc40269bc513ea14ade30342cfd5c2d7b6706830"
+        }
+      ]
+    },
+    {
+      "platform": "dsh",
+      "entries": [
+        {
+          "role": "before-dev",
+          "path": ".agents/skills/trellis-before-dev/SKILL.md",
+          "characters": 3127,
+          "sha256": "659ce92a770444fcbe3efa35971b399a613a9d7703c6ff80fc910058897af820"
+        },
+        {
+          "role": "brainstorm",
+          "path": ".agents/skills/trellis-brainstorm/SKILL.md",
+          "characters": 14034,
+          "sha256": "56d555e68649f2f1e13fc6a1e220dd9b56a1c60ee4b4edbfade598d011b4795b"
+        },
+        {
+          "role": "check",
+          "path": ".agents/skills/trellis-check/SKILL.md",
+          "characters": 4320,
+          "sha256": "4b640aeab267c28505fae8810b9b35b055120e3f25ca1fab33404a54ee4a7537"
+        },
+        {
+          "role": "continue",
+          "path": ".dsh/skills/trellis-continue/SKILL.md",
+          "characters": 3459,
+          "sha256": "8f08d9bd4f6874176787633d3e24e2658fedaf04b8194f36258c132423d13265"
+        },
+        {
+          "role": "start",
+          "path": ".dsh/skills/trellis-start/SKILL.md",
+          "characters": 3621,
+          "sha256": "0f26ce9a4e3fff4125709ec536c2e7a23e742a1a0bde2aa0d672a7ace494884b"
+        }
+      ]
+    },
+    {
+      "platform": "pi",
+      "entries": [
+        {
+          "role": "start",
+          "path": ".pi/prompts/trellis-start.md",
+          "characters": 3229,
+          "sha256": "831fdbdddf7179d482cf4f40862f9d8e179aa192f87389f34c259d830882530e"
+        },
+        {
+          "role": "continue",
+          "path": ".pi/prompts/trellis-continue.md",
+          "characters": 3154,
+          "sha256": "0ce57d6cf6b9f07fb982807671c21487d5e8cbb7c6e3d5f13afc4f3fda701baa"
+        },
+        {
+          "role": "before-dev",
+          "path": ".agents/skills/trellis-before-dev/SKILL.md",
+          "characters": 3127,
+          "sha256": "659ce92a770444fcbe3efa35971b399a613a9d7703c6ff80fc910058897af820"
+        },
+        {
+          "role": "brainstorm",
+          "path": ".agents/skills/trellis-brainstorm/SKILL.md",
+          "characters": 14034,
+          "sha256": "56d555e68649f2f1e13fc6a1e220dd9b56a1c60ee4b4edbfade598d011b4795b"
+        },
+        {
+          "role": "check",
+          "path": ".agents/skills/trellis-check/SKILL.md",
+          "characters": 4320,
+          "sha256": "4b640aeab267c28505fae8810b9b35b055120e3f25ca1fab33404a54ee4a7537"
+        }
+      ]
+    },
+    {
+      "platform": "reasonix",
+      "entries": [
+        {
+          "role": "continue",
+          "path": ".reasonix/skills/trellis-continue/SKILL.md",
+          "characters": 3464,
+          "sha256": "551d3a625208a2d23d669666688f4b78c77c25e13f5d6e2d24a3acc853c0fc0c"
+        },
+        {
+          "role": "start",
+          "path": ".reasonix/skills/trellis-start/SKILL.md",
+          "characters": 3626,
+          "sha256": "5345cb05ab2d6d92b66497c1b86c6adc80b7e44d9e7967c17f38af055ca8f57c"
+        },
+        {
+          "role": "before-dev",
+          "path": ".reasonix/skills/trellis-before-dev/SKILL.md",
+          "characters": 3127,
+          "sha256": "659ce92a770444fcbe3efa35971b399a613a9d7703c6ff80fc910058897af820"
+        },
+        {
+          "role": "brainstorm",
+          "path": ".reasonix/skills/trellis-brainstorm/SKILL.md",
+          "characters": 14034,
+          "sha256": "56d555e68649f2f1e13fc6a1e220dd9b56a1c60ee4b4edbfade598d011b4795b"
+        },
+        {
+          "role": "check",
+          "path": ".reasonix/skills/trellis-check/SKILL.md",
+          "characters": 1616,
+          "sha256": "8db22352a4e9984f95743281105989274b45d115a1df2542981b4205bdfe5abc"
+        }
+      ]
+    },
+    {
+      "platform": "zcode",
+      "entries": [
+        {
+          "role": "before-dev",
+          "path": ".zcode/skills/trellis-before-dev/SKILL.md",
+          "characters": 3127,
+          "sha256": "659ce92a770444fcbe3efa35971b399a613a9d7703c6ff80fc910058897af820"
+        },
+        {
+          "role": "brainstorm",
+          "path": ".zcode/skills/trellis-brainstorm/SKILL.md",
+          "characters": 14034,
+          "sha256": "56d555e68649f2f1e13fc6a1e220dd9b56a1c60ee4b4edbfade598d011b4795b"
+        },
+        {
+          "role": "check",
+          "path": ".zcode/skills/trellis-check/SKILL.md",
+          "characters": 4320,
+          "sha256": "4b640aeab267c28505fae8810b9b35b055120e3f25ca1fab33404a54ee4a7537"
+        },
+        {
+          "role": "continue",
+          "path": ".zcode/commands/trellis/continue.md",
+          "characters": 3157,
+          "sha256": "4a916a6f1728105de3ba5e0088bf738eff559b12efb6cfc30292ac7f37eeaf80"
+        }
+      ]
+    },
+    {
+      "platform": "trae",
+      "entries": [
+        {
+          "role": "continue",
+          "path": ".trae/commands/trellis-continue.md",
+          "characters": 3257,
+          "sha256": "4eebbf4cfe374dc2b1a1cf802664d1539a2e46da181856a491ee6fc9e76e569b"
+        },
+        {
+          "role": "before-dev",
+          "path": ".trae/skills/trellis-before-dev/SKILL.md",
+          "characters": 3127,
+          "sha256": "659ce92a770444fcbe3efa35971b399a613a9d7703c6ff80fc910058897af820"
+        },
+        {
+          "role": "brainstorm",
+          "path": ".trae/skills/trellis-brainstorm/SKILL.md",
+          "characters": 14034,
+          "sha256": "56d555e68649f2f1e13fc6a1e220dd9b56a1c60ee4b4edbfade598d011b4795b"
+        },
+        {
+          "role": "check",
+          "path": ".trae/skills/trellis-check/SKILL.md",
+          "characters": 4320,
+          "sha256": "4b640aeab267c28505fae8810b9b35b055120e3f25ca1fab33404a54ee4a7537"
+        }
+      ]
+    },
+    {
+      "platform": "omp",
+      "entries": [
+        {
+          "role": "continue",
+          "path": ".omp/commands/trellis-continue.md",
+          "characters": 3208,
+          "sha256": "eb4b18d61a768474d4a1ca3768d01d498a9ddaeee0c2bb0aefc8963bdbeef4d1"
+        },
+        {
+          "role": "before-dev",
+          "path": ".omp/skills/trellis-before-dev/SKILL.md",
+          "characters": 3127,
+          "sha256": "659ce92a770444fcbe3efa35971b399a613a9d7703c6ff80fc910058897af820"
+        },
+        {
+          "role": "brainstorm",
+          "path": ".omp/skills/trellis-brainstorm/SKILL.md",
+          "characters": 14034,
+          "sha256": "56d555e68649f2f1e13fc6a1e220dd9b56a1c60ee4b4edbfade598d011b4795b"
+        },
+        {
+          "role": "check",
+          "path": ".omp/skills/trellis-check/SKILL.md",
+          "characters": 4320,
+          "sha256": "4b640aeab267c28505fae8810b9b35b055120e3f25ca1fab33404a54ee4a7537"
+        }
+      ]
+    },
+    {
+      "platform": "grok",
+      "entries": [
+        {
+          "role": "before-dev",
+          "path": ".grok/skills/trellis-before-dev/SKILL.md",
+          "characters": 3127,
+          "sha256": "659ce92a770444fcbe3efa35971b399a613a9d7703c6ff80fc910058897af820"
+        },
+        {
+          "role": "brainstorm",
+          "path": ".grok/skills/trellis-brainstorm/SKILL.md",
+          "characters": 14034,
+          "sha256": "56d555e68649f2f1e13fc6a1e220dd9b56a1c60ee4b4edbfade598d011b4795b"
+        },
+        {
+          "role": "check",
+          "path": ".grok/skills/trellis-check/SKILL.md",
+          "characters": 4320,
+          "sha256": "4b640aeab267c28505fae8810b9b35b055120e3f25ca1fab33404a54ee4a7537"
+        },
+        {
+          "role": "continue",
+          "path": ".grok/commands/trellis-continue.md",
+          "characters": 3156,
+          "sha256": "27053d53612ff37749f2f722fb580e7656529630dc73d794362e166b54ed2833"
+        },
+        {
+          "role": "start",
+          "path": ".grok/commands/trellis-start.md",
+          "characters": 3231,
+          "sha256": "ac28ed6cafc41a9b556859d037974c43500755e4d45f95a0de550ef34cbc309e"
+        }
+      ]
+    },
+    {
+      "platform": "kimi",
+      "entries": [
+        {
+          "role": "before-dev",
+          "path": ".agents/skills/trellis-before-dev/SKILL.md",
+          "characters": 3127,
+          "sha256": "659ce92a770444fcbe3efa35971b399a613a9d7703c6ff80fc910058897af820"
+        },
+        {
+          "role": "brainstorm",
+          "path": ".agents/skills/trellis-brainstorm/SKILL.md",
+          "characters": 14034,
+          "sha256": "56d555e68649f2f1e13fc6a1e220dd9b56a1c60ee4b4edbfade598d011b4795b"
+        },
+        {
+          "role": "check",
+          "path": ".agents/skills/trellis-check/SKILL.md",
+          "characters": 4320,
+          "sha256": "4b640aeab267c28505fae8810b9b35b055120e3f25ca1fab33404a54ee4a7537"
+        },
+        {
+          "role": "continue",
+          "path": ".kimi-code/skills/trellis-continue/SKILL.md",
+          "characters": 3460,
+          "sha256": "49871f1741cd73cc4b0d5bcae8e58b1457e73366824c3b0472148c6cc83bbe60"
+        },
+        {
+          "role": "start",
+          "path": ".kimi-code/skills/trellis-start/SKILL.md",
+          "characters": 3622,
+          "sha256": "e7866d389bf48cded97440c70601f969f8c3ed51b0cf105f7ff5e2cfa482cdad"
+        },
+        {
+          "role": "check",
+          "path": ".kimi-code/skills/trellis-check/SKILL.md",
+          "characters": 4697,
+          "sha256": "16098ecfbdf1b24ea3c1fa9022fb8d467517d7f4ed130a653a05b3ab97a62f90"
+        }
+      ]
+    },
+    {
+      "platform": "snow",
+      "entries": [
+        {
+          "role": "continue",
+          "path": ".snow/skills/trellis-continue/SKILL.md",
+          "characters": 3460,
+          "sha256": "273fc8c8cc9cb9f0c244e1454606f7dd8a5a3bb94f4323ec611cdcb37aa5d898"
+        },
+        {
+          "role": "before-dev",
+          "path": ".snow/skills/trellis-before-dev/SKILL.md",
+          "characters": 3127,
+          "sha256": "659ce92a770444fcbe3efa35971b399a613a9d7703c6ff80fc910058897af820"
+        },
+        {
+          "role": "brainstorm",
+          "path": ".snow/skills/trellis-brainstorm/SKILL.md",
+          "characters": 14034,
+          "sha256": "56d555e68649f2f1e13fc6a1e220dd9b56a1c60ee4b4edbfade598d011b4795b"
+        },
+        {
+          "role": "check",
+          "path": ".snow/skills/trellis-check/SKILL.md",
+          "characters": 4320,
+          "sha256": "4b640aeab267c28505fae8810b9b35b055120e3f25ca1fab33404a54ee4a7537"
+        },
+        {
+          "role": "continue",
+          "path": ".snow/commands/trellis-continue.json",
+          "characters": 3360,
+          "sha256": "9c789244a43b3ebba04b5ede8e9944863cc1104b4661ec3bf64a92ab05900a07"
+        }
+      ]
+    }
+  ],
+  "targets": [
+    ".claude/commands/trellis/continue.md",
+    ".claude/skills/trellis-before-dev/SKILL.md",
+    ".claude/skills/trellis-brainstorm/SKILL.md",
+    ".claude/skills/trellis-check/SKILL.md",
+    ".cursor/commands/trellis-continue.md",
+    ".cursor/skills/trellis-before-dev/SKILL.md",
+    ".cursor/skills/trellis-brainstorm/SKILL.md",
+    ".cursor/skills/trellis-check/SKILL.md",
+    ".opencode/commands/trellis/continue.md",
+    ".opencode/commands/trellis/start.md",
+    ".opencode/skills/trellis-before-dev/SKILL.md",
+    ".opencode/skills/trellis-brainstorm/SKILL.md",
+    ".opencode/skills/trellis-check/SKILL.md",
+    ".agents/skills/trellis-continue/SKILL.md",
+    ".agents/skills/trellis-start/SKILL.md",
+    ".agents/skills/trellis-before-dev/SKILL.md",
+    ".agents/skills/trellis-brainstorm/SKILL.md",
+    ".agents/skills/trellis-check/SKILL.md",
+    ".pi/prompts/trellis-start.md",
+    ".pi/prompts/trellis-continue.md",
+    ".omp/commands/trellis-continue.md",
+    ".omp/skills/trellis-before-dev/SKILL.md",
+    ".omp/skills/trellis-brainstorm/SKILL.md",
+    ".omp/skills/trellis-check/SKILL.md"
+  ],
+  "changed": [
+    ".claude/commands/trellis/continue.md",
+    ".cursor/commands/trellis-continue.md",
+    ".opencode/commands/trellis/continue.md",
+    ".opencode/commands/trellis/start.md",
+    ".agents/skills/trellis-continue/SKILL.md",
+    ".agents/skills/trellis-start/SKILL.md",
+    ".pi/prompts/trellis-start.md",
+    ".pi/prompts/trellis-continue.md",
+    ".omp/commands/trellis-continue.md"
+  ],
+  "applied": true
+}

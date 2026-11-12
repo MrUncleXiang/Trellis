@@ -1,0 +1,22 @@
+{
+  "date": "2026-11-12",
+  "mode": "isolated built CLI functions; local deterministic marketplace responses",
+  "temporaryProject": "C:\\Users\\PXWD\\AppData\\Local\\Temp\\trellis-b-integration-10YWh3",
+  "checks": [
+    {
+      "name": "init produces new workflow and recovery entries",
+      "result": "passed"
+    },
+    {
+      "name": "update replaces tracked pristine old-entry fixture and preserves custom/user files",
+      "result": "passed",
+      "oldEntryFixture": "candidate minus recovery paragraph; synthetic previous template"
+    },
+    {
+      "name": "workflow switch tdd preserves content and ownership",
+      "result": "passed"
+    }
+  ],
+  "passed": false,
+  "error": "WorkflowCommandError: .trellis/workflow.md has local edits. Re-run with --force to overwrite or --create-new to write .trellis/workflow.md.new.\n    at writeWorkflow (file:///D:/zcx/Trellis/packages/cli/dist/commands/workflow.js:142:19)\n    at runWorkflowCommand (file:///D:/zcx/Trellis/packages/cli/dist/commands/workflow.js:218:11)\n    at async file:///D:/zcx/Trellis/.trellis/tasks/11-12-research-evidence-handoff/research/isolated-integration.mjs:7:70"
+}

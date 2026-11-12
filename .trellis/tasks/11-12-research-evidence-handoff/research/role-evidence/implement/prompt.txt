@@ -1,0 +1,3 @@
+Active task: .trellis/tasks/role-fixture
+角色：trellis-implement。本项目是虚构受控样例，无须联网。读取 .trellis/workflow.md 的相关步骤和与你角色对应的进行中状态要求。
+你的分配范围仅为查看实现前提并报告阻碍，不修改任务规划。业务目标：按当前需求实现消息发送。新依赖在vendor/limits.md与vendor/results.md，先核对是否仍能遵循原方案；发现问题给主代理报告。

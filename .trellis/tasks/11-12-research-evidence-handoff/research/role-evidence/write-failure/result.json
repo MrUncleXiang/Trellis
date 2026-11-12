@@ -1,0 +1,11 @@
+{
+  "id": "write-failure",
+  "root": "C:\\Users\\PXWD\\AppData\\Local\\Temp\\trellis-b-role-write-failure-j6hmWl",
+  "exitCode": 0,
+  "timedOut": false,
+  "planningUnchanged": true,
+  "researchFiles": [
+    "blocked.md",
+    "prior.md"
+  ]
+}

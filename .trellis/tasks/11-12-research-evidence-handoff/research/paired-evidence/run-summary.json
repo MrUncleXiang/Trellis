@@ -1,0 +1,1340 @@
+{
+  "protocol": {
+    "date": "2026-11-12",
+    "baseline": "cadd557cf05435d17ad821f6dcbfe0c1a35c750e",
+    "model": "gpt-6.1-sol",
+    "provider": "custom",
+    "reasoning": "low",
+    "repeats": 2,
+    "scenarioVariants": 13,
+    "expectedSessions": 60,
+    "concurrency": 4,
+    "timeoutMs": 360000,
+    "randomization": "repeat1 odd old-new, even new-old; repeat2 reversed; each paired inputs byte equal",
+    "config": [
+      "model_reasoning_effort=\"low\"",
+      "features.hooks=false",
+      "features.multi_agent=false",
+      "mcp_servers.playwright.enabled=false",
+      "mcp_servers.node_repl.enabled=false",
+      "mcp_servers.unityMCP.enabled=false"
+    ],
+    "globalHashes": {
+      "C:/Users/PXWD/.codex/config.toml": "9b072b7574c442a79bf72529a60217e53828193f2d52486140e7624a93fddd93",
+      "C:/Users/PXWD/.codex/AGENTS.md": "df77b59b57a08c6d0216259c02671a1ffe689e17f4e0c62cc15d52a22bfd1112"
+    },
+    "cliVersion": "codex-cli 0.154.0",
+    "notice": "Only six B generated rule files differ; baseline runtime for both. Hooks disabled in both: pull-entry behavior, not event or cross-host test. Natural language behavior is not deterministic; semantic human review required."
+  },
+  "results": [
+    {
+      "id": "ac2-r1-old",
+      "case": "ac2",
+      "repeat": 1,
+      "version": "old",
+      "root": "C:\\Users\\PXWD\\AppData\\Local\\Temp\\trellis-b-paired-L12pRQ\\runs\\ac2-r1-old",
+      "results": [
+        {
+          "exitCode": 0,
+          "timedOut": false,
+          "completed": true,
+          "elapsedMs": 56204,
+          "threadId": "01a1ce46-4d74-7f60-85f7-0893581a11e7",
+          "usage": {
+            "input_tokens": 222878,
+            "cached_input_tokens": 187496,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 1184,
+            "reasoning_output_tokens": 23
+          }
+        }
+      ]
+    },
+    {
+      "id": "ac1-r1-old",
+      "case": "ac1",
+      "repeat": 1,
+      "version": "old",
+      "root": "C:\\Users\\PXWD\\AppData\\Local\\Temp\\trellis-b-paired-L12pRQ\\runs\\ac1-r1-old",
+      "results": [
+        {
+          "exitCode": 0,
+          "timedOut": false,
+          "completed": true,
+          "elapsedMs": 65866,
+          "threadId": "01a1ce46-4d0f-7293-b5bd-80fa9da08a48",
+          "usage": {
+            "input_tokens": 223374,
+            "cached_input_tokens": 186208,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 1526,
+            "reasoning_output_tokens": 15
+          }
+        }
+      ]
+    },
+    {
+      "id": "ac2-r1-new",
+      "case": "ac2",
+      "repeat": 1,
+      "version": "new",
+      "root": "C:\\Users\\PXWD\\AppData\\Local\\Temp\\trellis-b-paired-L12pRQ\\runs\\ac2-r1-new",
+      "results": [
+        {
+          "exitCode": 0,
+          "timedOut": false,
+          "completed": true,
+          "elapsedMs": 71764,
+          "threadId": "01a1ce46-4db3-7c61-8c17-3c824419e70a",
+          "usage": {
+            "input_tokens": 266349,
+            "cached_input_tokens": 227562,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 1602,
+            "reasoning_output_tokens": 13
+          }
+        }
+      ]
+    },
+    {
+      "id": "ac1-r1-new",
+      "case": "ac1",
+      "repeat": 1,
+      "version": "new",
+      "root": "C:\\Users\\PXWD\\AppData\\Local\\Temp\\trellis-b-paired-L12pRQ\\runs\\ac1-r1-new",
+      "results": [
+        {
+          "exitCode": 0,
+          "timedOut": false,
+          "completed": true,
+          "elapsedMs": 95270,
+          "threadId": "01a1ce46-4d35-7580-8fae-d5b588940368",
+          "usage": {
+            "input_tokens": 274466,
+            "cached_input_tokens": 234530,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 2421,
+            "reasoning_output_tokens": 68
+          }
+        }
+      ]
+    },
+    {
+      "id": "ac4-r1-old",
+      "case": "ac4",
+      "repeat": 1,
+      "version": "old",
+      "root": "C:\\Users\\PXWD\\AppData\\Local\\Temp\\trellis-b-paired-L12pRQ\\runs\\ac4-r1-old",
+      "results": [
+        {
+          "exitCode": 0,
+          "timedOut": false,
+          "completed": true,
+          "elapsedMs": 67422,
+          "threadId": "01a1ce47-661e-7cd2-b193-9a41492ac3e4",
+          "usage": {
+            "input_tokens": 224072,
+            "cached_input_tokens": 186377,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 1830,
+            "reasoning_output_tokens": 42
+          }
+        }
+      ]
+    },
+    {
+      "id": "ac4-r1-new",
+      "case": "ac4",
+      "repeat": 1,
+      "version": "new",
+      "root": "C:\\Users\\PXWD\\AppData\\Local\\Temp\\trellis-b-paired-L12pRQ\\runs\\ac4-r1-new",
+      "results": [
+        {
+          "exitCode": 0,
+          "timedOut": false,
+          "completed": true,
+          "elapsedMs": 78017,
+          "threadId": "01a1ce47-c0d1-78b2-a5f9-c545434b879e",
+          "usage": {
+            "input_tokens": 233807,
+            "cached_input_tokens": 194105,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 2427,
+            "reasoning_output_tokens": 39
+          }
+        }
+      ]
+    },
+    {
+      "id": "ac3-r1-old",
+      "case": "ac3",
+      "repeat": 1,
+      "version": "old",
+      "root": "C:\\Users\\PXWD\\AppData\\Local\\Temp\\trellis-b-paired-L12pRQ\\runs\\ac3-r1-old",
+      "results": [
+        {
+          "exitCode": 0,
+          "timedOut": false,
+          "completed": true,
+          "elapsedMs": 117103,
+          "threadId": "01a1ce47-4e36-7e63-982d-f2af13c8b97e",
+          "usage": {
+            "input_tokens": 313483,
+            "cached_input_tokens": 270630,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 4094,
+            "reasoning_output_tokens": 90
+          }
+        }
+      ]
+    },
+    {
+      "id": "ac5-start-planning-r1-new",
+      "case": "ac5-start-planning",
+      "repeat": 1,
+      "version": "new",
+      "root": "C:\\Users\\PXWD\\AppData\\Local\\Temp\\trellis-b-paired-L12pRQ\\runs\\ac5-start-planning-r1-new",
+      "results": [
+        {
+          "exitCode": 0,
+          "timedOut": false,
+          "completed": true,
+          "elapsedMs": 49334,
+          "threadId": "01a1ce48-6dc1-72a1-8eee-d6165ba7f7e9",
+          "usage": {
+            "input_tokens": 184143,
+            "cached_input_tokens": 152031,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 923,
+            "reasoning_output_tokens": 29
+          }
+        }
+      ]
+    },
+    {
+      "id": "ac3-r1-new",
+      "case": "ac3",
+      "repeat": 1,
+      "version": "new",
+      "root": "C:\\Users\\PXWD\\AppData\\Local\\Temp\\trellis-b-paired-L12pRQ\\runs\\ac3-r1-new",
+      "results": [
+        {
+          "exitCode": 0,
+          "timedOut": false,
+          "completed": true,
+          "elapsedMs": 135093,
+          "threadId": "01a1ce47-28c6-7b80-a5f7-254042456358",
+          "usage": {
+            "input_tokens": 349234,
+            "cached_input_tokens": 305058,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 4433,
+            "reasoning_output_tokens": 72
+          }
+        }
+      ]
+    },
+    {
+      "id": "ac5-start-planning-r1-old",
+      "case": "ac5-start-planning",
+      "repeat": 1,
+      "version": "old",
+      "root": "C:\\Users\\PXWD\\AppData\\Local\\Temp\\trellis-b-paired-L12pRQ\\runs\\ac5-start-planning-r1-old",
+      "results": [
+        {
+          "exitCode": 0,
+          "timedOut": false,
+          "completed": true,
+          "elapsedMs": 48293,
+          "threadId": "01a1ce48-f1e5-7b52-a508-39683dbbbf1a",
+          "usage": {
+            "input_tokens": 181619,
+            "cached_input_tokens": 149545,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 974,
+            "reasoning_output_tokens": 46
+          }
+        }
+      ]
+    },
+    {
+      "id": "ac5-start-in_progress-r1-new",
+      "case": "ac5-start-in_progress",
+      "repeat": 1,
+      "version": "new",
+      "root": "C:\\Users\\PXWD\\AppData\\Local\\Temp\\trellis-b-paired-L12pRQ\\runs\\ac5-start-in_progress-r1-new",
+      "results": [
+        {
+          "exitCode": 0,
+          "timedOut": false,
+          "completed": true,
+          "elapsedMs": 48477,
+          "threadId": "01a1ce49-3544-7213-8804-7ea0bf69ce64",
+          "usage": {
+            "input_tokens": 185540,
+            "cached_input_tokens": 152920,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 903,
+            "reasoning_output_tokens": 0
+          }
+        }
+      ]
+    },
+    {
+      "id": "ac5-start-in_progress-r1-old",
+      "case": "ac5-start-in_progress",
+      "repeat": 1,
+      "version": "old",
+      "root": "C:\\Users\\PXWD\\AppData\\Local\\Temp\\trellis-b-paired-L12pRQ\\runs\\ac5-start-in_progress-r1-old",
+      "results": [
+        {
+          "exitCode": 0,
+          "timedOut": false,
+          "completed": true,
+          "elapsedMs": 56758,
+          "threadId": "01a1ce49-1826-7e11-a137-9222c6dd07c7",
+          "usage": {
+            "input_tokens": 184598,
+            "cached_input_tokens": 152204,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 967,
+            "reasoning_output_tokens": 0
+          }
+        }
+      ]
+    },
+    {
+      "id": "ac5-continue-planning-r1-new",
+      "case": "ac5-continue-planning",
+      "repeat": 1,
+      "version": "new",
+      "root": "C:\\Users\\PXWD\\AppData\\Local\\Temp\\trellis-b-paired-L12pRQ\\runs\\ac5-continue-planning-r1-new",
+      "results": [
+        {
+          "exitCode": 0,
+          "timedOut": false,
+          "completed": true,
+          "elapsedMs": 50339,
+          "threadId": "01a1ce49-3901-76c3-aeb3-9a68c35ee8a7",
+          "usage": {
+            "input_tokens": 185054,
+            "cached_input_tokens": 152384,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 879,
+            "reasoning_output_tokens": 0
+          }
+        }
+      ]
+    },
+    {
+      "id": "ac5-continue-planning-r1-old",
+      "case": "ac5-continue-planning",
+      "repeat": 1,
+      "version": "old",
+      "root": "C:\\Users\\PXWD\\AppData\\Local\\Temp\\trellis-b-paired-L12pRQ\\runs\\ac5-continue-planning-r1-old",
+      "results": [
+        {
+          "exitCode": 0,
+          "timedOut": false,
+          "completed": true,
+          "elapsedMs": 52042,
+          "threadId": "01a1ce49-af27-7671-9dd2-a635e0acf492",
+          "usage": {
+            "input_tokens": 183491,
+            "cached_input_tokens": 151300,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 839,
+            "reasoning_output_tokens": 0
+          }
+        }
+      ]
+    },
+    {
+      "id": "ac5-continue-in_progress-r1-old",
+      "case": "ac5-continue-in_progress",
+      "repeat": 1,
+      "version": "old",
+      "root": "C:\\Users\\PXWD\\AppData\\Local\\Temp\\trellis-b-paired-L12pRQ\\runs\\ac5-continue-in_progress-r1-old",
+      "results": [
+        {
+          "exitCode": 0,
+          "timedOut": false,
+          "completed": true,
+          "elapsedMs": 52609,
+          "threadId": "01a1ce49-ed2e-7230-86d1-555634c7d8e8",
+          "usage": {
+            "input_tokens": 184138,
+            "cached_input_tokens": 83976,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 853,
+            "reasoning_output_tokens": 0
+          }
+        }
+      ]
+    },
+    {
+      "id": "ac5-continue-in_progress-r1-new",
+      "case": "ac5-continue-in_progress",
+      "repeat": 1,
+      "version": "new",
+      "root": "C:\\Users\\PXWD\\AppData\\Local\\Temp\\trellis-b-paired-L12pRQ\\runs\\ac5-continue-in_progress-r1-new",
+      "results": [
+        {
+          "exitCode": 0,
+          "timedOut": false,
+          "completed": true,
+          "elapsedMs": 54746,
+          "threadId": "01a1ce49-f67b-70e2-a928-4532d3813460",
+          "usage": {
+            "input_tokens": 184353,
+            "cached_input_tokens": 152098,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 852,
+            "reasoning_output_tokens": 0
+          }
+        }
+      ]
+    },
+    {
+      "id": "ac7-r1-new",
+      "case": "ac7",
+      "repeat": 1,
+      "version": "new",
+      "root": "C:\\Users\\PXWD\\AppData\\Local\\Temp\\trellis-b-paired-L12pRQ\\runs\\ac7-r1-new",
+      "results": [
+        {
+          "exitCode": 0,
+          "timedOut": false,
+          "completed": true,
+          "elapsedMs": 78108,
+          "threadId": "01a1ce4a-ccde-79a1-9375-9e6061bddfa6",
+          "usage": {
+            "input_tokens": 234298,
+            "cached_input_tokens": 194335,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 2343,
+            "reasoning_output_tokens": 17
+          }
+        }
+      ]
+    },
+    {
+      "id": "ac7-r1-old",
+      "case": "ac7",
+      "repeat": 1,
+      "version": "old",
+      "root": "C:\\Users\\PXWD\\AppData\\Local\\Temp\\trellis-b-paired-L12pRQ\\runs\\ac7-r1-old",
+      "results": [
+        {
+          "exitCode": 0,
+          "timedOut": false,
+          "completed": true,
+          "elapsedMs": 85529,
+          "threadId": "01a1ce4a-bb1b-7541-b9a7-50fcc7b3b1e9",
+          "usage": {
+            "input_tokens": 270042,
+            "cached_input_tokens": 230287,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 2470,
+            "reasoning_output_tokens": 37
+          }
+        }
+      ]
+    },
+    {
+      "id": "ac6-r1-new",
+      "case": "ac6",
+      "repeat": 1,
+      "version": "new",
+      "root": "C:\\Users\\PXWD\\AppData\\Local\\Temp\\trellis-b-paired-L12pRQ\\runs\\ac6-r1-new",
+      "results": [
+        {
+          "exitCode": 0,
+          "timedOut": false,
+          "completed": true,
+          "elapsedMs": 70023,
+          "threadId": "01a1ce49-fe03-7183-b678-f50a2c2caa6a",
+          "usage": {
+            "input_tokens": 195251,
+            "cached_input_tokens": 157552,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 1766,
+            "reasoning_output_tokens": 74
+          }
+        },
+        {
+          "exitCode": 0,
+          "timedOut": false,
+          "completed": true,
+          "elapsedMs": 75398,
+          "threadId": "01a1ce4b-0f72-75b1-b41d-154204bede25",
+          "usage": {
+            "input_tokens": 273220,
+            "cached_input_tokens": 259801,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 2663,
+            "reasoning_output_tokens": 14
+          }
+        }
+      ]
+    },
+    {
+      "id": "ac6-r1-old",
+      "case": "ac6",
+      "repeat": 1,
+      "version": "old",
+      "root": "C:\\Users\\PXWD\\AppData\\Local\\Temp\\trellis-b-paired-L12pRQ\\runs\\ac6-r1-old",
+      "results": [
+        {
+          "exitCode": 0,
+          "timedOut": false,
+          "completed": true,
+          "elapsedMs": 68452,
+          "threadId": "01a1ce4a-7abb-7012-8d06-59171e6da580",
+          "usage": {
+            "input_tokens": 195213,
+            "cached_input_tokens": 157109,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 2079,
+            "reasoning_output_tokens": 28
+          }
+        },
+        {
+          "exitCode": 0,
+          "timedOut": false,
+          "completed": true,
+          "elapsedMs": 86925,
+          "threadId": "01a1ce4b-85f9-7f72-8ee0-9a83e341bbf7",
+          "usage": {
+            "input_tokens": 279788,
+            "cached_input_tokens": 263487,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 3027,
+            "reasoning_output_tokens": 35
+          }
+        }
+      ]
+    },
+    {
+      "id": "ac8-r1-old",
+      "case": "ac8",
+      "repeat": 1,
+      "version": "old",
+      "root": "C:\\Users\\PXWD\\AppData\\Local\\Temp\\trellis-b-paired-L12pRQ\\runs\\ac8-r1-old",
+      "results": [
+        {
+          "exitCode": 0,
+          "timedOut": false,
+          "completed": true,
+          "elapsedMs": 116038,
+          "threadId": "01a1ce4c-0a4e-77a3-8ee7-52bebcd03f30",
+          "usage": {
+            "input_tokens": 314664,
+            "cached_input_tokens": 273020,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 3524,
+            "reasoning_output_tokens": 92
+          }
+        }
+      ]
+    },
+    {
+      "id": "ac8-r1-new",
+      "case": "ac8",
+      "repeat": 1,
+      "version": "new",
+      "root": "C:\\Users\\PXWD\\AppData\\Local\\Temp\\trellis-b-paired-L12pRQ\\runs\\ac8-r1-new",
+      "results": [
+        {
+          "exitCode": 0,
+          "timedOut": false,
+          "completed": true,
+          "elapsedMs": 127896,
+          "threadId": "01a1ce4b-fe0d-71d1-a476-b5541c459a07",
+          "usage": {
+            "input_tokens": 277834,
+            "cached_input_tokens": 235375,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 3523,
+            "reasoning_output_tokens": 90
+          }
+        }
+      ]
+    },
+    {
+      "id": "ac9-r1-old",
+      "case": "ac9",
+      "repeat": 1,
+      "version": "old",
+      "root": "C:\\Users\\PXWD\\AppData\\Local\\Temp\\trellis-b-paired-L12pRQ\\runs\\ac9-r1-old",
+      "results": [
+        {
+          "exitCode": 0,
+          "timedOut": false,
+          "completed": true,
+          "elapsedMs": 91832,
+          "threadId": "01a1ce4c-3653-72a0-881c-9feb0be257e5",
+          "usage": {
+            "input_tokens": 268899,
+            "cached_input_tokens": 230409,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 1718,
+            "reasoning_output_tokens": 24
+          }
+        },
+        {
+          "exitCode": 0,
+          "timedOut": false,
+          "completed": true,
+          "elapsedMs": 77585,
+          "threadId": "01a1ce4d-9cf1-7ad1-b6dd-a917b1458c86",
+          "usage": {
+            "input_tokens": 233019,
+            "cached_input_tokens": 220737,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 2114,
+            "reasoning_output_tokens": 37
+          }
+        }
+      ]
+    },
+    {
+      "id": "ac10-r1-old",
+      "case": "ac10",
+      "repeat": 1,
+      "version": "old",
+      "root": "C:\\Users\\PXWD\\AppData\\Local\\Temp\\trellis-b-paired-L12pRQ\\runs\\ac10-r1-old",
+      "results": [
+        {
+          "exitCode": 0,
+          "timedOut": false,
+          "completed": true,
+          "elapsedMs": 72075,
+          "threadId": "01a1ce4d-f1da-76b1-ba1e-33726a5a4c32",
+          "usage": {
+            "input_tokens": 227512,
+            "cached_input_tokens": 189366,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 2109,
+            "reasoning_output_tokens": 34
+          }
+        }
+      ]
+    },
+    {
+      "id": "ac10-r1-new",
+      "case": "ac10",
+      "repeat": 1,
+      "version": "new",
+      "root": "C:\\Users\\PXWD\\AppData\\Local\\Temp\\trellis-b-paired-L12pRQ\\runs\\ac10-r1-new",
+      "results": [
+        {
+          "exitCode": 0,
+          "timedOut": false,
+          "completed": true,
+          "elapsedMs": 87465,
+          "threadId": "01a1ce4d-cf77-79a0-be0d-94ec00329d91",
+          "usage": {
+            "input_tokens": 229138,
+            "cached_input_tokens": 190435,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 2236,
+            "reasoning_output_tokens": 73
+          }
+        }
+      ]
+    },
+    {
+      "id": "ac9-r1-new",
+      "case": "ac9",
+      "repeat": 1,
+      "version": "new",
+      "root": "C:\\Users\\PXWD\\AppData\\Local\\Temp\\trellis-b-paired-L12pRQ\\runs\\ac9-r1-new",
+      "results": [
+        {
+          "exitCode": 0,
+          "timedOut": false,
+          "completed": true,
+          "elapsedMs": 66435,
+          "threadId": "01a1ce4c-da03-7982-9444-099ce38eba10",
+          "usage": {
+            "input_tokens": 234462,
+            "cached_input_tokens": 195117,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 1742,
+            "reasoning_output_tokens": 33
+          }
+        },
+        {
+          "exitCode": 0,
+          "timedOut": false,
+          "completed": true,
+          "elapsedMs": 92024,
+          "threadId": "01a1ce4d-dd56-7b30-8849-d541e6f408ec",
+          "usage": {
+            "input_tokens": 356845,
+            "cached_input_tokens": 342106,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 2848,
+            "reasoning_output_tokens": 92
+          }
+        }
+      ]
+    },
+    {
+      "id": "ac1-r2-old",
+      "case": "ac1",
+      "repeat": 2,
+      "version": "old",
+      "root": "C:\\Users\\PXWD\\AppData\\Local\\Temp\\trellis-b-paired-L12pRQ\\runs\\ac1-r2-old",
+      "results": [
+        {
+          "exitCode": 0,
+          "timedOut": false,
+          "completed": true,
+          "elapsedMs": 77570,
+          "threadId": "01a1ce4e-cd1f-72d0-a879-af0fa0c0b69c",
+          "usage": {
+            "input_tokens": 230904,
+            "cached_input_tokens": 193036,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 1930,
+            "reasoning_output_tokens": 44
+          }
+        }
+      ]
+    },
+    {
+      "id": "ac2-r2-new",
+      "case": "ac2",
+      "repeat": 2,
+      "version": "new",
+      "root": "C:\\Users\\PXWD\\AppData\\Local\\Temp\\trellis-b-paired-L12pRQ\\runs\\ac2-r2-new",
+      "results": [
+        {
+          "exitCode": 0,
+          "timedOut": false,
+          "completed": true,
+          "elapsedMs": 71221,
+          "threadId": "01a1ce4f-25ba-7713-8440-634533168533",
+          "usage": {
+            "input_tokens": 226050,
+            "cached_input_tokens": 189173,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 1502,
+            "reasoning_output_tokens": 22
+          }
+        }
+      ]
+    },
+    {
+      "id": "ac2-r2-old",
+      "case": "ac2",
+      "repeat": 2,
+      "version": "old",
+      "root": "C:\\Users\\PXWD\\AppData\\Local\\Temp\\trellis-b-paired-L12pRQ\\runs\\ac2-r2-old",
+      "results": [
+        {
+          "exitCode": 0,
+          "timedOut": false,
+          "completed": true,
+          "elapsedMs": 66857,
+          "threadId": "01a1ce4f-45d8-75a2-b743-fb154ab86a55",
+          "usage": {
+            "input_tokens": 222949,
+            "cached_input_tokens": 187551,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 1184,
+            "reasoning_output_tokens": 31
+          }
+        }
+      ]
+    },
+    {
+      "id": "ac1-r2-new",
+      "case": "ac1",
+      "repeat": 2,
+      "version": "new",
+      "root": "C:\\Users\\PXWD\\AppData\\Local\\Temp\\trellis-b-paired-L12pRQ\\runs\\ac1-r2-new",
+      "results": [
+        {
+          "exitCode": 0,
+          "timedOut": false,
+          "completed": true,
+          "elapsedMs": 110807,
+          "threadId": "01a1ce4f-1373-73f2-8082-94e6bb41021b",
+          "usage": {
+            "input_tokens": 239612,
+            "cached_input_tokens": 199332,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 2366,
+            "reasoning_output_tokens": 39
+          }
+        }
+      ]
+    },
+    {
+      "id": "ac4-r2-old",
+      "case": "ac4",
+      "repeat": 2,
+      "version": "old",
+      "root": "C:\\Users\\PXWD\\AppData\\Local\\Temp\\trellis-b-paired-L12pRQ\\runs\\ac4-r2-old",
+      "results": [
+        {
+          "exitCode": 0,
+          "timedOut": false,
+          "completed": true,
+          "elapsedMs": 59666,
+          "threadId": "01a1ce50-bdcb-7f80-b3c0-ff7685e74177",
+          "usage": {
+            "input_tokens": 153278,
+            "cached_input_tokens": 119759,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 1556,
+            "reasoning_output_tokens": 40
+          }
+        }
+      ]
+    },
+    {
+      "id": "ac4-r2-new",
+      "case": "ac4",
+      "repeat": 2,
+      "version": "new",
+      "root": "C:\\Users\\PXWD\\AppData\\Local\\Temp\\trellis-b-paired-L12pRQ\\runs\\ac4-r2-new",
+      "results": [
+        {
+          "exitCode": 0,
+          "timedOut": false,
+          "completed": true,
+          "elapsedMs": 95752,
+          "threadId": "01a1ce50-4b60-77d1-8d17-3881c3c01302",
+          "usage": {
+            "input_tokens": 194907,
+            "cached_input_tokens": 157019,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 2115,
+            "reasoning_output_tokens": 24
+          }
+        }
+      ]
+    },
+    {
+      "id": "ac3-r2-old",
+      "case": "ac3",
+      "repeat": 2,
+      "version": "old",
+      "root": "C:\\Users\\PXWD\\AppData\\Local\\Temp\\trellis-b-paired-L12pRQ\\runs\\ac3-r2-old",
+      "results": [
+        {
+          "exitCode": 0,
+          "timedOut": false,
+          "completed": true,
+          "elapsedMs": 140561,
+          "threadId": "01a1ce4f-fc6e-7881-985b-4361faa06935",
+          "usage": {
+            "input_tokens": 383012,
+            "cached_input_tokens": 317779,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 4165,
+            "reasoning_output_tokens": 100
+          }
+        }
+      ]
+    },
+    {
+      "id": "ac3-r2-new",
+      "case": "ac3",
+      "repeat": 2,
+      "version": "new",
+      "root": "C:\\Users\\PXWD\\AppData\\Local\\Temp\\trellis-b-paired-L12pRQ\\runs\\ac3-r2-new",
+      "results": [
+        {
+          "exitCode": 0,
+          "timedOut": false,
+          "completed": true,
+          "elapsedMs": 133166,
+          "threadId": "01a1ce50-3bed-72f2-94c1-920826ff91b8",
+          "usage": {
+            "input_tokens": 360121,
+            "cached_input_tokens": 315560,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 4466,
+            "reasoning_output_tokens": 52
+          }
+        }
+      ]
+    },
+    {
+      "id": "ac5-start-planning-r2-new",
+      "case": "ac5-start-planning",
+      "repeat": 2,
+      "version": "new",
+      "root": "C:\\Users\\PXWD\\AppData\\Local\\Temp\\trellis-b-paired-L12pRQ\\runs\\ac5-start-planning-r2-new",
+      "results": [
+        {
+          "exitCode": 0,
+          "timedOut": false,
+          "completed": true,
+          "elapsedMs": 53810,
+          "threadId": "01a1ce51-c471-7750-acdf-7accfd29a692",
+          "usage": {
+            "input_tokens": 194777,
+            "cached_input_tokens": 158508,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 1088,
+            "reasoning_output_tokens": 0
+          }
+        }
+      ]
+    },
+    {
+      "id": "ac5-start-planning-r2-old",
+      "case": "ac5-start-planning",
+      "repeat": 2,
+      "version": "old",
+      "root": "C:\\Users\\PXWD\\AppData\\Local\\Temp\\trellis-b-paired-L12pRQ\\runs\\ac5-start-planning-r2-old",
+      "results": [
+        {
+          "exitCode": 0,
+          "timedOut": false,
+          "completed": true,
+          "elapsedMs": 61899,
+          "threadId": "01a1ce51-a6f8-71b1-bd27-d158bb925f73",
+          "usage": {
+            "input_tokens": 190213,
+            "cached_input_tokens": 154815,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 1207,
+            "reasoning_output_tokens": 12
+          }
+        }
+      ]
+    },
+    {
+      "id": "ac5-start-in_progress-r2-new",
+      "case": "ac5-start-in_progress",
+      "repeat": 2,
+      "version": "new",
+      "root": "C:\\Users\\PXWD\\AppData\\Local\\Temp\\trellis-b-paired-L12pRQ\\runs\\ac5-start-in_progress-r2-new",
+      "results": [
+        {
+          "exitCode": 0,
+          "timedOut": false,
+          "completed": true,
+          "elapsedMs": 62447,
+          "threadId": "01a1ce52-2128-7131-a985-fdf1275ed210",
+          "usage": {
+            "input_tokens": 185508,
+            "cached_input_tokens": 152890,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 932,
+            "reasoning_output_tokens": 0
+          }
+        }
+      ]
+    },
+    {
+      "id": "ac5-start-in_progress-r2-old",
+      "case": "ac5-start-in_progress",
+      "repeat": 2,
+      "version": "old",
+      "root": "C:\\Users\\PXWD\\AppData\\Local\\Temp\\trellis-b-paired-L12pRQ\\runs\\ac5-start-in_progress-r2-old",
+      "results": [
+        {
+          "exitCode": 0,
+          "timedOut": false,
+          "completed": true,
+          "elapsedMs": 59789,
+          "threadId": "01a1ce52-4462-7792-a27c-12fb59b80e01",
+          "usage": {
+            "input_tokens": 214715,
+            "cached_input_tokens": 182214,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 1067,
+            "reasoning_output_tokens": 39
+          }
+        }
+      ]
+    },
+    {
+      "id": "ac5-continue-planning-r2-new",
+      "case": "ac5-continue-planning",
+      "repeat": 2,
+      "version": "new",
+      "root": "C:\\Users\\PXWD\\AppData\\Local\\Temp\\trellis-b-paired-L12pRQ\\runs\\ac5-continue-planning-r2-new",
+      "results": [
+        {
+          "exitCode": 0,
+          "timedOut": false,
+          "completed": true,
+          "elapsedMs": 54865,
+          "threadId": "01a1ce52-9939-7121-8bb4-382b066c085c",
+          "usage": {
+            "input_tokens": 184274,
+            "cached_input_tokens": 151874,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 963,
+            "reasoning_output_tokens": 0
+          }
+        }
+      ]
+    },
+    {
+      "id": "ac5-continue-planning-r2-old",
+      "case": "ac5-continue-planning",
+      "repeat": 2,
+      "version": "old",
+      "root": "C:\\Users\\PXWD\\AppData\\Local\\Temp\\trellis-b-paired-L12pRQ\\runs\\ac5-continue-planning-r2-old",
+      "results": [
+        {
+          "exitCode": 0,
+          "timedOut": false,
+          "completed": true,
+          "elapsedMs": 62820,
+          "threadId": "01a1ce52-943a-7b80-8616-3cd3de2fa395",
+          "usage": {
+            "input_tokens": 213780,
+            "cached_input_tokens": 181245,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 913,
+            "reasoning_output_tokens": 0
+          }
+        }
+      ]
+    },
+    {
+      "id": "ac5-continue-in_progress-r2-new",
+      "case": "ac5-continue-in_progress",
+      "repeat": 2,
+      "version": "new",
+      "root": "C:\\Users\\PXWD\\AppData\\Local\\Temp\\trellis-b-paired-L12pRQ\\runs\\ac5-continue-in_progress-r2-new",
+      "results": [
+        {
+          "exitCode": 0,
+          "timedOut": false,
+          "completed": true,
+          "elapsedMs": 53836,
+          "threadId": "01a1ce53-1583-74a3-9d98-cf662b7691aa",
+          "usage": {
+            "input_tokens": 184421,
+            "cached_input_tokens": 152149,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 800,
+            "reasoning_output_tokens": 0
+          }
+        }
+      ]
+    },
+    {
+      "id": "ac5-continue-in_progress-r2-old",
+      "case": "ac5-continue-in_progress",
+      "repeat": 2,
+      "version": "old",
+      "root": "C:\\Users\\PXWD\\AppData\\Local\\Temp\\trellis-b-paired-L12pRQ\\runs\\ac5-continue-in_progress-r2-old",
+      "results": [
+        {
+          "exitCode": 0,
+          "timedOut": false,
+          "completed": true,
+          "elapsedMs": 62212,
+          "threadId": "01a1ce53-2e64-7141-938b-0c3fd0479552",
+          "usage": {
+            "input_tokens": 213016,
+            "cached_input_tokens": 180874,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 910,
+            "reasoning_output_tokens": 0
+          }
+        }
+      ]
+    },
+    {
+      "id": "ac7-r2-new",
+      "case": "ac7",
+      "repeat": 2,
+      "version": "new",
+      "root": "C:\\Users\\PXWD\\AppData\\Local\\Temp\\trellis-b-paired-L12pRQ\\runs\\ac7-r2-new",
+      "results": [
+        {
+          "exitCode": 0,
+          "timedOut": false,
+          "completed": true,
+          "elapsedMs": 83676,
+          "threadId": "01a1ce53-e84c-7562-8099-e8144a76dd6a",
+          "usage": {
+            "input_tokens": 234126,
+            "cached_input_tokens": 194293,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 2443,
+            "reasoning_output_tokens": 21
+          }
+        }
+      ]
+    },
+    {
+      "id": "ac7-r2-old",
+      "case": "ac7",
+      "repeat": 2,
+      "version": "old",
+      "root": "C:\\Users\\PXWD\\AppData\\Local\\Temp\\trellis-b-paired-L12pRQ\\runs\\ac7-r2-old",
+      "results": [
+        {
+          "exitCode": 0,
+          "timedOut": false,
+          "completed": true,
+          "elapsedMs": 78535,
+          "threadId": "01a1ce54-219c-75f1-88b8-07dcc02ac51a",
+          "usage": {
+            "input_tokens": 231800,
+            "cached_input_tokens": 193339,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 1890,
+            "reasoning_output_tokens": 8
+          }
+        }
+      ]
+    },
+    {
+      "id": "ac6-r2-new",
+      "case": "ac6",
+      "repeat": 2,
+      "version": "new",
+      "root": "C:\\Users\\PXWD\\AppData\\Local\\Temp\\trellis-b-paired-L12pRQ\\runs\\ac6-r2-new",
+      "results": [
+        {
+          "exitCode": 0,
+          "timedOut": false,
+          "completed": true,
+          "elapsedMs": 90978,
+          "threadId": "01a1ce53-8a0e-7bf2-9ed8-fcfeab57d35f",
+          "usage": {
+            "input_tokens": 257886,
+            "cached_input_tokens": 219263,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 2173,
+            "reasoning_output_tokens": 53
+          }
+        },
+        {
+          "exitCode": 0,
+          "timedOut": false,
+          "completed": true,
+          "elapsedMs": 119170,
+          "threadId": "01a1ce54-ed67-73c1-a53d-7581e67ef4dd",
+          "usage": {
+            "input_tokens": 354582,
+            "cached_input_tokens": 339237,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 3505,
+            "reasoning_output_tokens": 70
+          }
+        }
+      ]
+    },
+    {
+      "id": "ac8-r2-old",
+      "case": "ac8",
+      "repeat": 2,
+      "version": "old",
+      "root": "C:\\Users\\PXWD\\AppData\\Local\\Temp\\trellis-b-paired-L12pRQ\\runs\\ac8-r2-old",
+      "results": [
+        {
+          "exitCode": 0,
+          "timedOut": false,
+          "completed": true,
+          "elapsedMs": 122138,
+          "threadId": "01a1ce55-2f60-7711-a253-4f4944f0034f",
+          "usage": {
+            "input_tokens": 319221,
+            "cached_input_tokens": 276181,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 3795,
+            "reasoning_output_tokens": 92
+          }
+        }
+      ]
+    },
+    {
+      "id": "ac8-r2-new",
+      "case": "ac8",
+      "repeat": 2,
+      "version": "new",
+      "root": "C:\\Users\\PXWD\\AppData\\Local\\Temp\\trellis-b-paired-L12pRQ\\runs\\ac8-r2-new",
+      "results": [
+        {
+          "exitCode": 0,
+          "timedOut": false,
+          "completed": true,
+          "elapsedMs": 138776,
+          "threadId": "01a1ce55-54ba-7130-bb7f-cfa2edcc8f84",
+          "usage": {
+            "input_tokens": 315506,
+            "cached_input_tokens": 272941,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 3766,
+            "reasoning_output_tokens": 69
+          }
+        }
+      ]
+    },
+    {
+      "id": "ac10-r2-old",
+      "case": "ac10",
+      "repeat": 2,
+      "version": "old",
+      "root": "C:\\Users\\PXWD\\AppData\\Local\\Temp\\trellis-b-paired-L12pRQ\\runs\\ac10-r2-old",
+      "results": [
+        {
+          "exitCode": 0,
+          "timedOut": false,
+          "completed": true,
+          "elapsedMs": 92712,
+          "threadId": "01a1ce57-730d-7b10-9104-c68e96ad0187",
+          "usage": {
+            "input_tokens": 228251,
+            "cached_input_tokens": 190153,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 1739,
+            "reasoning_output_tokens": 61
+          }
+        }
+      ]
+    },
+    {
+      "id": "ac6-r2-old",
+      "case": "ac6",
+      "repeat": 2,
+      "version": "old",
+      "root": "C:\\Users\\PXWD\\AppData\\Local\\Temp\\trellis-b-paired-L12pRQ\\runs\\ac6-r2-old",
+      "results": [
+        {
+          "exitCode": 0,
+          "timedOut": false,
+          "completed": true,
+          "elapsedMs": 101485,
+          "threadId": "01a1ce53-704a-7002-86fe-194e6332bb08",
+          "usage": {
+            "input_tokens": 196155,
+            "cached_input_tokens": 157356,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 2347,
+            "reasoning_output_tokens": 25
+          }
+        },
+        {
+          "exitCode": 0,
+          "timedOut": false,
+          "completed": true,
+          "elapsedMs": 254587,
+          "threadId": "01a1ce54-fc9c-7990-8890-4437771ed9ed",
+          "usage": {
+            "input_tokens": 275971,
+            "cached_input_tokens": 262398,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 3108,
+            "reasoning_output_tokens": 14
+          }
+        }
+      ]
+    },
+    {
+      "id": "ac9-r2-new",
+      "case": "ac9",
+      "repeat": 2,
+      "version": "new",
+      "root": "C:\\Users\\PXWD\\AppData\\Local\\Temp\\trellis-b-paired-L12pRQ\\runs\\ac9-r2-new",
+      "results": [
+        {
+          "exitCode": 0,
+          "timedOut": false,
+          "completed": true,
+          "elapsedMs": 66605,
+          "threadId": "01a1ce56-bf6c-79f2-92ec-8ecd4ea377ca",
+          "usage": {
+            "input_tokens": 194099,
+            "cached_input_tokens": 157257,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 1370,
+            "reasoning_output_tokens": 32
+          }
+        },
+        {
+          "exitCode": 0,
+          "timedOut": false,
+          "completed": true,
+          "elapsedMs": 92928,
+          "threadId": "01a1ce57-c363-7be1-aaad-27ff3e10d162",
+          "usage": {
+            "input_tokens": 275764,
+            "cached_input_tokens": 261538,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 2795,
+            "reasoning_output_tokens": 71
+          }
+        }
+      ]
+    },
+    {
+      "id": "ac9-r2-old",
+      "case": "ac9",
+      "repeat": 2,
+      "version": "old",
+      "root": "C:\\Users\\PXWD\\AppData\\Local\\Temp\\trellis-b-paired-L12pRQ\\runs\\ac9-r2-old",
+      "results": [
+        {
+          "exitCode": 0,
+          "timedOut": false,
+          "completed": true,
+          "elapsedMs": 74051,
+          "threadId": "01a1ce57-0cd0-7ff3-a9c7-047f4fd8ce23",
+          "usage": {
+            "input_tokens": 231407,
+            "cached_input_tokens": 193397,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 1556,
+            "reasoning_output_tokens": 27
+          }
+        },
+        {
+          "exitCode": 0,
+          "timedOut": false,
+          "completed": true,
+          "elapsedMs": 87258,
+          "threadId": "01a1ce58-2e29-7011-b8cf-07c06ca1a109",
+          "usage": {
+            "input_tokens": 233136,
+            "cached_input_tokens": 220874,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 2147,
+            "reasoning_output_tokens": 50
+          }
+        }
+      ]
+    },
+    {
+      "id": "ac10-r2-new",
+      "case": "ac10",
+      "repeat": 2,
+      "version": "new",
+      "root": "C:\\Users\\PXWD\\AppData\\Local\\Temp\\trellis-b-paired-L12pRQ\\runs\\ac10-r2-new",
+      "results": [
+        {
+          "exitCode": 0,
+          "timedOut": false,
+          "completed": true,
+          "elapsedMs": 97169,
+          "threadId": "01a1ce58-ddcf-75f2-86ef-f6f64f9a4c73",
+          "usage": {
+            "input_tokens": 257977,
+            "cached_input_tokens": 207379,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 2436,
+            "reasoning_output_tokens": 83
+          }
+        }
+      ]
+    }
+  ],
+  "globalsUnchanged": false
+}

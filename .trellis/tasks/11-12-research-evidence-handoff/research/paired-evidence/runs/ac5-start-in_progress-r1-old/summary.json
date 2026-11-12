@@ -1,0 +1,23 @@
+{
+  "id": "ac5-start-in_progress-r1-old",
+  "case": "ac5-start-in_progress",
+  "repeat": 1,
+  "version": "old",
+  "root": "C:\\Users\\PXWD\\AppData\\Local\\Temp\\trellis-b-paired-L12pRQ\\runs\\ac5-start-in_progress-r1-old",
+  "results": [
+    {
+      "exitCode": 0,
+      "timedOut": false,
+      "completed": true,
+      "elapsedMs": 56758,
+      "threadId": "01a1ce49-1826-7e11-a137-9222c6dd07c7",
+      "usage": {
+        "input_tokens": 184598,
+        "cached_input_tokens": 152204,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 967,
+        "reasoning_output_tokens": 0
+      }
+    }
+  ]
+}

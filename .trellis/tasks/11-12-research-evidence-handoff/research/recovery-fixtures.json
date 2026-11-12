@@ -1,0 +1,30 @@
+[
+  {
+    "entry": "start",
+    "status": "planning",
+    "root": "C:\\Users\\PXWD\\AppData\\Local\\Temp\\trellis-b-recovery-start-planning-503hhz",
+    "task": ".trellis/tasks/recovery-fixture",
+    "skill": "C:\\Users\\PXWD\\AppData\\Local\\Temp\\trellis-b-recovery-start-planning-503hhz\\.agents\\skills\\trellis-start\\SKILL.md"
+  },
+  {
+    "entry": "start",
+    "status": "in_progress",
+    "root": "C:\\Users\\PXWD\\AppData\\Local\\Temp\\trellis-b-recovery-start-in_progress-1IFtkl",
+    "task": ".trellis/tasks/recovery-fixture",
+    "skill": "C:\\Users\\PXWD\\AppData\\Local\\Temp\\trellis-b-recovery-start-in_progress-1IFtkl\\.agents\\skills\\trellis-start\\SKILL.md"
+  },
+  {
+    "entry": "continue",
+    "status": "planning",
+    "root": "C:\\Users\\PXWD\\AppData\\Local\\Temp\\trellis-b-recovery-continue-planning-mOmyBx",
+    "task": ".trellis/tasks/recovery-fixture",
+    "skill": "C:\\Users\\PXWD\\AppData\\Local\\Temp\\trellis-b-recovery-continue-planning-mOmyBx\\.agents\\skills\\trellis-continue\\SKILL.md"
+  },
+  {
+    "entry": "continue",
+    "status": "in_progress",
+    "root": "C:\\Users\\PXWD\\AppData\\Local\\Temp\\trellis-b-recovery-continue-in_progress-ZPIrfu",
+    "task": ".trellis/tasks/recovery-fixture",
+    "skill": "C:\\Users\\PXWD\\AppData\\Local\\Temp\\trellis-b-recovery-continue-in_progress-ZPIrfu\\.agents\\skills\\trellis-continue\\SKILL.md"
+  }
+]

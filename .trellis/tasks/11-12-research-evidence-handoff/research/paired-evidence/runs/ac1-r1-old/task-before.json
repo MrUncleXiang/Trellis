@@ -1,0 +1,6 @@
+{
+  "check.jsonl": "{\"file\":\".trellis/tasks/fixture/prd.md\",\"reason\":\"Task scope\"}\n",
+  "implement.jsonl": "{\"file\":\".trellis/tasks/fixture/prd.md\",\"reason\":\"Task scope\"}\n",
+  "prd.md": "# Queue choice\nGoal: select one of two queues to keep acknowledged pending tasks across process restart.\n## Research\nNot investigated yet.\n",
+  "task.json": "{\"id\":\"fixture\",\"name\":\"fixture\",\"title\":\"ac1\",\"status\":\"planning\"}"
+}

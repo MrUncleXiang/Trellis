@@ -1,0 +1,28 @@
+{
+  "date": "2026-11-12",
+  "baseline": "cadd557cf05435d17ad821f6dcbfe0c1a35c750e",
+  "model": "gpt-6.1-sol",
+  "provider": "custom",
+  "reasoning": "low",
+  "repeats": 2,
+  "scenarioVariants": 13,
+  "expectedSessions": 60,
+  "concurrency": 4,
+  "timeoutMs": 360000,
+  "randomization": "repeat1 odd old-new, even new-old; repeat2 reversed; each paired inputs byte equal",
+  "config": [
+    "model_reasoning_effort=\"low\"",
+    "features.hooks=false",
+    "features.multi_agent=false",
+    "mcp_servers.playwright.enabled=false",
+    "mcp_servers.node_repl.enabled=false",
+    "mcp_servers.node_repl.env.enabled=false",
+    "mcp_servers.unityMCP.enabled=false"
+  ],
+  "globalHashes": {
+    "C:/Users/PXWD/.codex/config.toml": "9b072b7574c442a79bf72529a60217e53828193f2d52486140e7624a93fddd93",
+    "C:/Users/PXWD/.codex/AGENTS.md": "df77b59b57a08c6d0216259c02671a1ffe689e17f4e0c62cc15d52a22bfd1112"
+  },
+  "cliVersion": "codex-cli 0.154.0",
+  "notice": "Only six B generated rule files differ; baseline runtime for both. Hooks disabled in both: pull-entry behavior, not event or cross-host test. Natural language behavior is not deterministic; semantic human review required."
+}

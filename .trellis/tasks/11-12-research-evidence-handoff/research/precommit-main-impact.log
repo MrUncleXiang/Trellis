@@ -1,0 +1,24 @@
+
+  GitNexus Detect Changes (1.6.12)
+{"level":40,"time":1794464827843,"name":"gitnexus","msg":"GitNexus: FTS extension unavailable; continuing without FTS features. load-only policy (no install attempted); LOAD fts failed: Binder exception: Extension: fts is an official extension and has not been installed. You can install it by: install fts."}
+Changes: 1398 files, 50 symbols
+Affected processes: 0
+Risk level: low
+
+Changed symbols:
+  Section Continue Current Task → packages/cli/src/templates/common/commands/continue.md
+  Section Step 3: Decide Where You Are → packages/cli/src/templates/common/commands/continue.md
+  Section Start Session → packages/cli/src/templates/common/commands/start.md
+  Section Step 4: Decide next action → packages/cli/src/templates/common/commands/start.md
+  Section Trellis Brainstorm → packages/cli/src/templates/common/skills/brainstorm.md
+  Section Research Evidence Handoff → packages/cli/src/templates/common/skills/brainstorm.md
+  Section Planning Flow → packages/cli/src/templates/common/skills/brainstorm.md
+  Section Artifact Rules → packages/cli/src/templates/common/skills/brainstorm.md
+  Section PRD Convergence Pass → packages/cli/src/templates/common/skills/brainstorm.md
+  Section Code Quality Check → packages/cli/src/templates/common/skills/check.md
+  Section Step 2: Read Task Artifacts and Applicable Specs → packages/cli/src/templates/common/skills/check.md
+  Section Step 4: Review Against Checklist → packages/cli/src/templates/common/skills/check.md
+  Section Decision Evidence → packages/cli/src/templates/common/skills/check.md
+  Section PR creation → packages/cli/src/templates/trellis/workflow.md
+  Section Phase Index → packages/cli/src/templates/trellis/workflow.md
+... and 35 more

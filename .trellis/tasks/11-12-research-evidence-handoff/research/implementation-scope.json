@@ -1,0 +1,195 @@
+{
+  "date": "2026-11-12",
+  "branch": "codex/research-evidence-handoff\n",
+  "commit": "cadd557cf05435d17ad821f6dcbfe0c1a35c750e\n",
+  "marketplaceCommit": "7d5298d16e07c328c09493eed1f0652571744b17\n",
+  "protectedFiles": [
+    {
+      "path": ".claude/hooks/inject-subagent-context.py",
+      "sha256": "f2612ea13cde09ed535f94a6d00aaa7479e56e4ba30bf86530466aa11d4f908c"
+    },
+    {
+      "path": ".claude/hooks/session-start.py",
+      "sha256": "902977933d477de955f27b299467ae6735632f4143266047184261070af36fcb"
+    },
+    {
+      "path": ".codex/hooks/inject-subagent-context.py",
+      "sha256": "f2612ea13cde09ed535f94a6d00aaa7479e56e4ba30bf86530466aa11d4f908c"
+    },
+    {
+      "path": ".cursor/hooks/inject-subagent-context.py",
+      "sha256": "f2612ea13cde09ed535f94a6d00aaa7479e56e4ba30bf86530466aa11d4f908c"
+    },
+    {
+      "path": ".cursor/hooks/session-start.py",
+      "sha256": "902977933d477de955f27b299467ae6735632f4143266047184261070af36fcb"
+    },
+    {
+      "path": ".github/workflows/ci.yml",
+      "sha256": "e911ac8f3b698335c97383596e7e92eb48c2d8afbb69024bb48b1bc9cc111895"
+    },
+    {
+      "path": ".opencode/lib/trellis-context.js",
+      "sha256": "98efbb119e43b9a02bdf39d8f036bee3a7f2b57cb328a4e2d4cbf88dab804431"
+    },
+    {
+      "path": ".trellis/scripts/common/__init__.py",
+      "sha256": "4ca1f9af395cc00485c5d718a6b53b2b26c7a0a33fb910b238a9b97abcd8c86f"
+    },
+    {
+      "path": ".trellis/scripts/common/developer.py",
+      "sha256": "47a1abc3b77397408fc5e0bb97946bb5d6d714d346cb31d52f29343ec8c95d9f"
+    },
+    {
+      "path": ".trellis/scripts/common/io.py",
+      "sha256": "ad902fc051ba53c9995651bcebc063114a05a7924f9912fbd3ddea4d387e83f4"
+    },
+    {
+      "path": ".trellis/scripts/common/task_context.py",
+      "sha256": "56f42ce4e15c66912666d07b68a910c6adc14fdd905b4b0cf5bb557286c427ab"
+    },
+    {
+      "path": ".trellis/scripts/common/task_store.py",
+      "sha256": "ed2bca71a661b21eed0399beceae66333d957f62ca0fbf60bb80b2e9065b1368"
+    },
+    {
+      "path": ".trellis/scripts/hooks/linear_sync.py",
+      "sha256": "be930157750e44e18b36348736fecd86ea5c4b67a2476a68b896f6d9f3a8536b"
+    },
+    {
+      "path": "package.json",
+      "sha256": "d0210db3663f2cfa2c00e604f079c68ce217f5f16d5d9edbcf1d7800933beafc"
+    },
+    {
+      "path": "packages/cli/src/templates/opencode/lib/trellis-context.js",
+      "sha256": "98efbb119e43b9a02bdf39d8f036bee3a7f2b57cb328a4e2d4cbf88dab804431"
+    },
+    {
+      "path": "packages/cli/src/templates/shared-hooks/inject-subagent-context.py",
+      "sha256": "f2612ea13cde09ed535f94a6d00aaa7479e56e4ba30bf86530466aa11d4f908c"
+    },
+    {
+      "path": "packages/cli/src/templates/shared-hooks/session-start.py",
+      "sha256": "902977933d477de955f27b299467ae6735632f4143266047184261070af36fcb"
+    },
+    {
+      "path": "packages/cli/src/templates/trellis/scripts/common/__init__.py",
+      "sha256": "4ca1f9af395cc00485c5d718a6b53b2b26c7a0a33fb910b238a9b97abcd8c86f"
+    },
+    {
+      "path": "packages/cli/src/templates/trellis/scripts/common/developer.py",
+      "sha256": "47a1abc3b77397408fc5e0bb97946bb5d6d714d346cb31d52f29343ec8c95d9f"
+    },
+    {
+      "path": "packages/cli/src/templates/trellis/scripts/common/io.py",
+      "sha256": "ad902fc051ba53c9995651bcebc063114a05a7924f9912fbd3ddea4d387e83f4"
+    },
+    {
+      "path": "packages/cli/src/templates/trellis/scripts/common/task_context.py",
+      "sha256": "56f42ce4e15c66912666d07b68a910c6adc14fdd905b4b0cf5bb557286c427ab"
+    },
+    {
+      "path": "packages/cli/src/templates/trellis/scripts/common/task_store.py",
+      "sha256": "ed2bca71a661b21eed0399beceae66333d957f62ca0fbf60bb80b2e9065b1368"
+    },
+    {
+      "path": "packages/cli/src/templates/trellis/scripts/hooks/linear_sync.py",
+      "sha256": "be930157750e44e18b36348736fecd86ea5c4b67a2476a68b896f6d9f3a8536b"
+    },
+    {
+      "path": "packages/cli/test/commands/ablate.integration.test.ts",
+      "sha256": "265355008f5d6457319a2cef32f82a935547159a3dd416c2c90dc52253e53b21"
+    },
+    {
+      "path": "packages/cli/test/commands/platforms.integration.test.ts",
+      "sha256": "5f7ef5716986680defddf82adf3708c4bc91a16924fdff13511dbf3760acc798"
+    },
+    {
+      "path": "packages/cli/test/commands/upgrade.test.ts",
+      "sha256": "611331a8097d005953773b60ba7360a12598ef2797c9e9f9500d2a83d5aab515"
+    },
+    {
+      "path": "packages/cli/test/configurators/python-rewrite-parity.test.ts",
+      "sha256": "d7fc82b65e1f4f9a0d3239b7bf2312edceb00b7dad8afcf8bdab3f642a281524"
+    },
+    {
+      "path": "packages/cli/test/registry-invariants.test.ts",
+      "sha256": "b93f3ae5c886403c72c352d1845b93adc41c34402c25f1a9152f2256a65daa59"
+    },
+    {
+      "path": "packages/cli/test/regression.test.ts",
+      "sha256": "a344f574afbfb8b3f29afef7db8fb279920312a678274074e2d2883da39bbba4"
+    },
+    {
+      "path": "packages/cli/test/scripts/add-session-worktree-warning.integration.test.ts",
+      "sha256": "fdb6307837719db2c43d5c95f4a1a6d06e64d77c1fb8191bb4ff9ceb43d5b21d"
+    },
+    {
+      "path": "packages/cli/test/scripts/add-session.integration.test.ts",
+      "sha256": "97ea89a80497b0c8436e962248bdc5a28161447e0c883845cf6d35c21c06bb0c"
+    },
+    {
+      "path": "packages/cli/test/scripts/context-injection-limits.integration.test.ts",
+      "sha256": "ef1c406ac67c4c83f056cb1fdc2f98b262c9e486329841478d2327cac963f781"
+    },
+    {
+      "path": "packages/cli/test/scripts/inject-workflow-state-kiro.integration.test.ts",
+      "sha256": "ae7f31b24dc180cbaca43b448fb49d0eb20f329154dd95b5ffb8212c4befdc26"
+    },
+    {
+      "path": "packages/cli/test/scripts/prompt-injection-skip-keyword.integration.test.ts",
+      "sha256": "27855712779801075c88c5f72f83ad9d56fd93f3b217d4668acfed6c3a7704f3"
+    },
+    {
+      "path": "packages/cli/test/scripts/symlinked-workflow-dir.integration.test.ts",
+      "sha256": "74d9a4e05661535ade909d8ff6450639a107edde5d248953f1f45ad81a6d9d79"
+    },
+    {
+      "path": "packages/cli/test/scripts/task-archive.integration.test.ts",
+      "sha256": "fe5e75bfd95aab880603c6d4c8d66b75fc2289484adadb8cdcf89de20901830f"
+    },
+    {
+      "path": "packages/cli/test/scripts/task-children-normalization.integration.test.ts",
+      "sha256": "1febc2688d60bfb132a18cc7ad5e2c4299bb6ca00bff48bae9f2f65f9c9a38f5"
+    },
+    {
+      "path": "packages/cli/test/scripts/task-list-tree.integration.test.ts",
+      "sha256": "1e2245c51a8ca2a569ce2ae0bdc445953ecf6dfd3e221c507bae41f894712121"
+    },
+    {
+      "path": "packages/cli/test/scripts/task-meta.integration.test.ts",
+      "sha256": "20e526b3b1f9d1a8f4d3d2632019013b51b182058d78fc579d2217f0036e1c5f"
+    },
+    {
+      "path": "packages/cli/test/setup.ts",
+      "sha256": "5f8ef4141796706fd490902c209f3be4ddb8dee0093d17f882c64d7d56141187"
+    },
+    {
+      "path": "packages/cli/test/templates/trellis.test.ts",
+      "sha256": "edab5fec8753cc6668eff16826ba41f331d4d03e623ce2b05355d5ad43682a49"
+    },
+    {
+      "path": "packages/cli/test/utils/atomic-write.test.ts",
+      "sha256": "89b6a941385be29a0cb6aa959a9504b31afca6881557ab588b6e2050667a58c0"
+    }
+  ],
+  "workflows": [
+    {
+      "path": "packages/cli/src/templates/trellis/workflow.md",
+      "sha256": "bcdabacdb94a820cd967d7a19db7b89437144e21af6727e8a82a21896669698d"
+    },
+    {
+      "path": "marketplace/workflows/native/workflow.md",
+      "sha256": "bcdabacdb94a820cd967d7a19db7b89437144e21af6727e8a82a21896669698d"
+    },
+    {
+      "path": "marketplace/workflows/tdd/workflow.md",
+      "sha256": "d3c86eac2fe05464d99559ed3d9292d2deb128c2967d711cc858142057b83a71"
+    },
+    {
+      "path": "marketplace/workflows/channel-driven-subagent-dispatch/workflow.md",
+      "sha256": "da83175802b0b15b1624d0ff10e3cc750ff5a414ba11602dba5a4b1633a788af"
+    }
+  ],
+  "note": "42 pre-existing tracked modifications protected by exact content fingerprints; scripts here are task-local replay tools, not shipped runtime changes."
+}

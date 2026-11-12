@@ -1,0 +1,11 @@
+{
+  "id": "start-planning",
+  "entry": "start",
+  "status": "planning",
+  "root": "C:\\Users\\PXWD\\AppData\\Local\\Temp\\trellis-b-recovery-start-planning-503hhz",
+  "started": "2026-11-12T04:19:57.995Z",
+  "finished": "2026-11-12T04:21:21.530Z",
+  "exitCode": 0,
+  "timedOut": false,
+  "mode": "fresh Codex CLI process; read-only; no original conversation; no model override"
+}

@@ -1,0 +1,46 @@
+[
+  {
+    "id": "start-planning",
+    "entry": "start",
+    "status": "planning",
+    "root": "C:\\Users\\PXWD\\AppData\\Local\\Temp\\trellis-b-recovery-start-planning-URQguo",
+    "started": "2026-11-12T04:15:42.907Z",
+    "finished": "2026-11-12T04:18:15.155Z",
+    "exitCode": 4294967295,
+    "timedOut": false,
+    "mode": "fresh Codex CLI process; read-only; no original conversation; no model override"
+  },
+  {
+    "id": "start-in_progress",
+    "entry": "start",
+    "status": "in_progress",
+    "root": "C:\\Users\\PXWD\\AppData\\Local\\Temp\\trellis-b-recovery-start-in_progress-sLxeZY",
+    "started": "2026-11-12T04:15:42.917Z",
+    "finished": "2026-11-12T04:18:15.175Z",
+    "exitCode": 4294967295,
+    "timedOut": false,
+    "mode": "fresh Codex CLI process; read-only; no original conversation; no model override"
+  },
+  {
+    "id": "continue-planning",
+    "entry": "continue",
+    "status": "planning",
+    "root": "C:\\Users\\PXWD\\AppData\\Local\\Temp\\trellis-b-recovery-continue-planning-hdDhM4",
+    "started": "2026-11-12T04:15:42.924Z",
+    "finished": "2026-11-12T04:18:15.155Z",
+    "exitCode": 4294967295,
+    "timedOut": false,
+    "mode": "fresh Codex CLI process; read-only; no original conversation; no model override"
+  },
+  {
+    "id": "continue-in_progress",
+    "entry": "continue",
+    "status": "in_progress",
+    "root": "C:\\Users\\PXWD\\AppData\\Local\\Temp\\trellis-b-recovery-continue-in_progress-tnBErJ",
+    "started": "2026-11-12T04:15:42.941Z",
+    "finished": "2026-11-12T04:18:15.176Z",
+    "exitCode": 4294967295,
+    "timedOut": false,
+    "mode": "fresh Codex CLI process; read-only; no original conversation; no model override"
+  }
+]

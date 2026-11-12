@@ -1,0 +1,20 @@
+
+  GitNexus Analyzer (1.6.12)
+
+  GitNexus Analyzer (1.6.12)
+{"level":40,"time":1794461668805,"name":"gitnexus","file":"packages/core/src/mem/dialogue.ts","nullByteCount":1,"msg":"replaced embedded NUL bytes before tree-sitter parsing"}
+{"level":40,"time":1794461678675,"name":"gitnexus","msg":"[scope-resolution] 191 property read/write site(s) name a field that IS defined in this workspace, but only in another language, so per-language inference declined to link them. Queries for these fields return an empty result that does NOT mean \"unused\" — it means the definition anchor is in a different language. Affected: max_total_bytes (javascript/typescript), stderr (typescript), stdin (typescript), stdout (typescript), context_key (python), directory (python), hint (javascript), hits (python), jsonl (python), nested (python), …"}
+{"level":40,"time":1794461678903,"name":"gitnexus","truncation":{"truncated":true,"entryPointCandidatesDropped":785,"entryPointsUnexplored":0,"walksCutByBudget":69,"tracesDepthCapped":0,"calleesDropped":1042,"processesDropped":0},"msg":"[processes] 721 flows reported, but whole flows are MISSING: 785 of 985 candidate entry point(s) never ranked in, 0 ranked entry point(s) never traced, 0 deduplicated flow(s) dropped at maxProcesses, 0 trace(s) cut at maxTraceDepth, 1042 callee(s) skipped at maxBranching, 69 walk(s) cut by the per-entry trace budget. An absent flow does NOT mean the code path does not exist."}
+{"level":40,"time":1794461698711,"name":"gitnexus","msg":"GitNexus: FTS extension unavailable; continuing without FTS features. extension install for fts timed out after 15000ms; LOAD fts had failed: Binder exception: Extension: fts is an official extension and has not been installed. You can install it by: install fts."}
+[2K
+FTS extension unavailable; skipping search-index creation. Full-text/BM25 search will be disabled until the LadybugDB FTS extension is installed once with network access (GITNEXUS_LBUG_EXTENSION_INSTALL=auto) or pre-installed for offline use. Run `gitnexus doctor` for details.
+
+  Repository indexed successfully (42.2s)
+
+  19,906 nodes | 34,269 edges | 445 clusters | 721 flows
+  D:\zcx\Trellis
+
+  Warning: full-text/BM25 search is disabled — the LadybugDB FTS extension was unavailable.
+  Install it once with network access (GITNEXUS_LBUG_EXTENSION_INSTALL=auto), then run
+  `gitnexus analyze --repair-fts` to build the search indexes. Run `gitnexus doctor` for details.
+

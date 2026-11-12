@@ -1,0 +1,11 @@
+{
+  "id": "start-in_progress",
+  "entry": "start",
+  "status": "in_progress",
+  "root": "C:\\Users\\PXWD\\AppData\\Local\\Temp\\trellis-b-recovery-start-in_progress-1IFtkl",
+  "started": "2026-11-12T04:19:58.007Z",
+  "finished": "2026-11-12T04:21:02.573Z",
+  "exitCode": 0,
+  "timedOut": false,
+  "mode": "fresh Codex CLI process; read-only; no original conversation; no model override"
+}

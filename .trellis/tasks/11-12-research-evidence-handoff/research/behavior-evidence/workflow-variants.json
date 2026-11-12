@@ -1,0 +1,32 @@
+[
+  {
+    "wf": "native",
+    "initStatus": 0,
+    "workflowExists": true,
+    "researchSemantics": true,
+    "stateBlocks": 30,
+    "phaseStatus": 0,
+    "phaseHead": "## Phase Index\n\n```\nPhase 1: Plan    → classify, get task-creation consent, then write planning artifacts\nPhase 2: Execute → implement only after task status is in_progress\nPhase 3: Finish  → verify, ",
+    "err": "⚠️  Codex hooks require `features.hooks = true` in your ~/.codex/config.toml (Codex 0.129+; older versions: `codex_hooks = true`). On Codex 0.129+ also run `/hooks` once to approve the Trellis hooks. "
+  },
+  {
+    "wf": "tdd",
+    "initStatus": 0,
+    "workflowExists": true,
+    "researchSemantics": true,
+    "stateBlocks": 27,
+    "phaseStatus": 0,
+    "phaseHead": "## Phase Index\n\n```\nPhase 1: Plan    → classify, get task-creation consent, then write planning artifacts\nPhase 2: Execute → implement only after task status is in_progress; use one red test → green i",
+    "err": "⚠️  Codex hooks require `features.hooks = true` in your ~/.codex/config.toml (Codex 0.129+; older versions: `codex_hooks = true`). On Codex 0.129+ also run `/hooks` once to approve the Trellis hooks. "
+  },
+  {
+    "wf": "channel-driven-subagent-dispatch",
+    "initStatus": 0,
+    "workflowExists": true,
+    "researchSemantics": true,
+    "stateBlocks": 9,
+    "phaseStatus": 0,
+    "phaseHead": "## Phase Index\n\n```\nPhase 1: Plan    -> classify, get task-creation consent, then write planning artifacts\nPhase 2: Execute -> implement/check through trellis channel workers\nPhase 3: Finish  -> verif",
+    "err": "⚠️  Codex hooks require `features.hooks = true` in your ~/.codex/config.toml (Codex 0.129+; older versions: `codex_hooks = true`). On Codex 0.129+ also run `/hooks` once to approve the Trellis hooks. "
+  }
+]

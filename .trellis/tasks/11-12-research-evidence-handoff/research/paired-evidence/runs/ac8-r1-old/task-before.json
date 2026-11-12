@@ -1,0 +1,9 @@
+{
+  "check.jsonl": "{\"file\":\".trellis/tasks/fixture/prd.md\",\"reason\":\"Task scope\"}\n",
+  "design.md": "# Design\nImplement MemoryQueue adapter; assume persistence.\n",
+  "implement.jsonl": "{\"file\":\".trellis/tasks/fixture/prd.md\",\"reason\":\"Task scope\"}\n",
+  "implement.md": "# Plan\nImplement adapter using MemoryQueue.\n",
+  "prd.md": "# Queue restart guarantee\nCurrent approved choice: MemoryQueue, believed persistent across restart; implement adapter next.\n## Research\nSee [old](research/old.md).\n",
+  "research/old.md": "# Prior decision\nWe inferred MemoryQueue survives restart from its name. This was not tested.\n",
+  "task.json": "{\"id\":\"fixture\",\"name\":\"fixture\",\"title\":\"ac8\",\"status\":\"in_progress\"}"
+}

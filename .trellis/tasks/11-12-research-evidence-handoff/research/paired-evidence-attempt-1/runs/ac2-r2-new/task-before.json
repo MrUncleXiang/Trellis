@@ -1,0 +1,6 @@
+{
+  "check.jsonl": "{\"file\":\".trellis/tasks/fixture/prd.md\",\"reason\":\"Task scope\"}\n",
+  "implement.jsonl": "{\"file\":\".trellis/tasks/fixture/prd.md\",\"reason\":\"Task scope\"}\n",
+  "prd.md": "# Button wording\nGoal: change Save to Save changes using current local UI and copy guidance; no behavior change.\n## Research\nNot investigated yet.\n",
+  "task.json": "{\"id\":\"fixture\",\"name\":\"fixture\",\"title\":\"ac2\",\"status\":\"planning\"}"
+}

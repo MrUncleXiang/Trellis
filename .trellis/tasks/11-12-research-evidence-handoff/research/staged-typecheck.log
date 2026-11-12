@@ -1,0 +1,16 @@
+
+> @ typecheck C:\Users\PXWD\AppData\Local\Temp\trellis-b-staged-m9ZtUD
+> pnpm --filter @mindfoldhq/trellis-core build && pnpm --filter @mindfoldhq/trellis typecheck
+
+
+> @mindfoldhq/trellis-core@0.6.17 build C:\Users\PXWD\AppData\Local\Temp\trellis-b-staged-m9ZtUD\packages\core
+> pnpm run clean && tsc
+
+
+> @mindfoldhq/trellis-core@0.6.17 clean C:\Users\PXWD\AppData\Local\Temp\trellis-b-staged-m9ZtUD\packages\core
+> node -e "require('node:fs').rmSync('dist', { recursive: true, force: true })"
+
+
+> @mindfoldhq/trellis@0.6.17 typecheck C:\Users\PXWD\AppData\Local\Temp\trellis-b-staged-m9ZtUD\packages\cli
+> tsc --noEmit
+

@@ -1,0 +1,3 @@
+Active task: .trellis/tasks/role-fixture
+角色：research。本项目是虚构受控样例，无须联网。读取 .trellis/workflow.md 的相关步骤和与你角色对应的进行中状态要求。
+研究问题：新依赖的消息上限，问题来源在vendor/limits.md及vendor/user-note.md。分配的唯一目标文件是任务research/blocked.md；不允许更换写入位置。按工作流研究交接规则完成并返回结果。

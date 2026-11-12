@@ -1,0 +1,3 @@
+Active task: .trellis/tasks/ac1-selection
+
+业务目标：为服务选择重启后不丢已确认任务的队列方案。固定本地资料在 fixtures/docs/persistence-option-a.md 与 fixtures/docs/persistence-option-b.md，请按 Trellis 正常规划入口推进，形成可审阅的规划结论。

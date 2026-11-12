@@ -1,0 +1,26 @@
+
+ RUN  v4.0.18 D:/zcx/Trellis/packages/cli
+
+ ✓ test/utils/workflow-resolver.test.ts (8 tests) 34ms
+ ✓ test/configurators/shared.test.ts (54 tests) 19ms
+ ✓ test/templates/shared-hooks.test.ts (14 tests) 122ms
+ ✓ test/scripts/inject-workflow-state-kiro.integration.test.ts (4 tests) 1041ms
+     ✓ session-start.py emits plain-text overview for Kiro  345ms
+     ✓ session-start.py keeps JSON envelope for non-Kiro (isolation)  323ms
+ ✓ test/commands/workflow.integration.test.ts (10 tests) 2905ms
+     ✓ init --workflow native keeps workflow.md hash-tracked  301ms
+     ✓ trellis update after switching to tdd does not silently restore native workflow  887ms
+ ✓ test/configurators/platforms.test.ts (57 tests) 15437ms
+     ✓ detects every platform from the files Trellis tracked for it  3765ms
+     ✓ configurePlatform writes collected templates byte-for-byte for every platform  1970ms
+     ✓ configurePlatform writes no file collectTemplates does not describe, for every platform  3032ms
+     ✓ configurePlatform and collectTemplates agree under Windows python rendering  1635ms
+     ✓ configurePlatform('snow') writes class-1 inject hooks, skills, commands, and agents  411ms
+     ✓ withStatusline option leaves all other platforms unaffected  999ms
+     ✓ does not throw for any platform  1047ms
+
+ Test Files  6 passed (6)
+      Tests  147 passed (147)
+   Start at  11:59:03
+   Duration  16.41s (transform 1.35s, setup 127ms, import 3.25s, tests 19.56s, environment 1ms)
+

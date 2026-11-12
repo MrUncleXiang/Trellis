@@ -1,0 +1,6 @@
+{
+  "prd.md": "# Message dispatch\nCurrent agreed behavior: batch size64, array order matches request order, automatic retry enabled.\n## Research\nPrior version1.0 assumption; pending review of new supplied version2.0.\n",
+  "design.md": "# Design\nUse64 per batch, index matching, and retry.\n",
+  "implement.md": "# Implement\nWait for evidence review before adapting.\n",
+  "task.json": "{\"name\":\"role-fixture\",\"status\":\"in_progress\"}"
+}

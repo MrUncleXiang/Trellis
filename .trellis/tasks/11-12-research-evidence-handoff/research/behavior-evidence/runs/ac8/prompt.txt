@@ -1,0 +1,3 @@
+Active task: .trellis/tasks/ac8-new-evidence
+
+业务目标：规划原本选择方案 A，现在收到新证据 fixtures/new-evidence.md。请按现有流程处理这次变化，保持任务材料为当前结论。

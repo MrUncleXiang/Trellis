@@ -1,0 +1,24 @@
+
+  GitNexus Detect Changes (1.6.12)
+{"level":40,"time":1794462124483,"name":"gitnexus","msg":"GitNexus: FTS extension unavailable; continuing without FTS features. load-only policy (no install attempted); LOAD fts failed: Binder exception: Extension: fts is an official extension and has not been installed. You can install it by: install fts."}
+Changes: 4 files, 41 symbols
+Affected processes: 0
+Risk level: low
+
+Changed symbols:
+  Section Channel-Driven Sub-Agent Dispatch Workflow → workflows/channel-driven-subagent-dispatch/workflow.md
+  Section Phase Index → workflows/channel-driven-subagent-dispatch/workflow.md
+  Section Phase 1: Plan → workflows/channel-driven-subagent-dispatch/workflow.md
+  Section Phase 2: Execute → workflows/channel-driven-subagent-dispatch/workflow.md
+  Section Phase 1: Plan → workflows/channel-driven-subagent-dispatch/workflow.md
+  Section 1.2 Research `[optional · repeatable]` → workflows/channel-driven-subagent-dispatch/workflow.md
+  Section 1.3 Configure context `[required · once]` → workflows/channel-driven-subagent-dispatch/workflow.md
+  Section 1.4 Activate task `[required · once]` → workflows/channel-driven-subagent-dispatch/workflow.md
+  Section 1.5 Completion criteria → workflows/channel-driven-subagent-dispatch/workflow.md
+  Section Phase 2: Execute → workflows/channel-driven-subagent-dispatch/workflow.md
+  Section 2.1 Implement `[required · repeatable]` → workflows/channel-driven-subagent-dispatch/workflow.md
+  Section 2.2 Quality check `[required · repeatable]` → workflows/channel-driven-subagent-dispatch/workflow.md
+  Section 2.3 Rollback `[on demand]` → workflows/channel-driven-subagent-dispatch/workflow.md
+  Section PR creation → workflows/native/workflow.md
+  Section Phase Index → workflows/native/workflow.md
+... and 26 more

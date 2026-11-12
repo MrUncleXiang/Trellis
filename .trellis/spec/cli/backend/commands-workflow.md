@@ -130,6 +130,11 @@ Native source-of-truth contract:
   native workflow.
 - If `marketplace/workflows/native/workflow.md` exists, tests must enforce byte
   identity with the bundled native template.
+- When changing that mirror or its checkout policy, keep the submodule-local
+  `marketplace/.gitattributes` rule `/workflows/native/workflow.md text eol=lf`.
+  Parent-repository attributes do not govern a submodule checkout. Verify the
+  native byte-identity test on Windows as well; normalizing only the assertion
+  would hide a broken exact-mirror contract.
 
 ### 4. Validation & Error Matrix
 

@@ -1,0 +1,7 @@
+{
+  "check.jsonl": "{\"file\":\".trellis/tasks/fixture/prd.md\",\"reason\":\"Task scope\"}\n",
+  "implement.jsonl": "{\"file\":\".trellis/tasks/fixture/prd.md\",\"reason\":\"Task scope\"}\n",
+  "prd.md": "# Compatibility acceptance\nGoal: promise plugin2.0 compatibility with engine5.\nClaim: compatibility confirmed, based solely on research/compatibility.md.\n## Research\nSee [record](research/compatibility.md).\n",
+  "research/compatibility.md": "# Compatibility\nSee fixtures/docs.md\n",
+  "task.json": "{\"id\":\"fixture\",\"name\":\"fixture\",\"title\":\"ac10\",\"status\":\"planning\"}"
+}

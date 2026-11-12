@@ -1,0 +1,23 @@
+{
+  "id": "ac3-r1-new",
+  "case": "ac3",
+  "repeat": 1,
+  "version": "new",
+  "root": "C:\\Users\\PXWD\\AppData\\Local\\Temp\\trellis-b-paired-L12pRQ\\runs\\ac3-r1-new",
+  "results": [
+    {
+      "exitCode": 0,
+      "timedOut": false,
+      "completed": true,
+      "elapsedMs": 135093,
+      "threadId": "01a1ce47-28c6-7b80-a5f7-254042456358",
+      "usage": {
+        "input_tokens": 349234,
+        "cached_input_tokens": 305058,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 4433,
+        "reasoning_output_tokens": 72
+      }
+    }
+  ]
+}

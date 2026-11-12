@@ -44,6 +44,8 @@ From Step 1 you know the current task and status. Check the task directory:
   ```
 - **No active task** → classify first. For simple conversation / small task, ask only whether this turn should create a Trellis task. For complex work, ask whether you may create a Trellis task and enter planning. If the user says no, skip Trellis for this session.
 
+For an existing task with `prd.md`, before entering planning review or continuing implementation, read its `## Research` section when present and the records needed for the next decision. Recheck key premises and versions, and whether unresolved unknowns affect the agreed result. If a key premise no longer applies, a required version is unverified, or an unresolved unknown affects the agreed result, return to the relevant planning step; a file or link alone is not sufficient. If `prd.md` is absent, keep the original route and do not require nonexistent research. If this turn discovers external evidence used for a task decision, follow the `trellis-brainstorm` research handoff rules and save it before presenting the conclusion, including when findings conflict or no reliable answer is found.
+
 ---
 
 ## Skill routing (quick reference)

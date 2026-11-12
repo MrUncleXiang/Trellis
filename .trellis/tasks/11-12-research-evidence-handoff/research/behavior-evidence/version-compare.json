@@ -1,0 +1,80 @@
+{
+  "head": "cadd557cf05435d17ad821f6dcbfe0c1a35c750e",
+  "distMtime": "2026-11-12T04:19:55.511Z",
+  "gitStatusLines": 83,
+  "usedRunVersion": "pre-final-dist (before Pascal 3 template fixes)",
+  "currentDistCodexFiles": 54,
+  "diffs": [
+    {
+      "file": ".agents/skills/trellis-continue/SKILL.md",
+      "change": "content",
+      "used": "b17787737c312a0eb7e4df99685ff149ad8a8d09452efa6d8a0780399144ad95",
+      "current": "acd32581db6ca0226296c2e2cb022d30d836f9aea30d22e9cb4e154f9f1ed4f0"
+    },
+    {
+      "file": ".agents/skills/trellis-start/SKILL.md",
+      "change": "content",
+      "used": "e819e7f114a7c0ae69d91b1129849dd884ec15cfd520b709894c4077077bc640",
+      "current": "bb4947841645a8f0dde9fe5f163b04789be9fb633baee0d4fa630bca9cb8a206"
+    },
+    {
+      "file": ".agents/skills/trellis-brainstorm/SKILL.md",
+      "change": "content",
+      "used": "d13bd47c96c35e52f9568ed2516b4662b3e5032cd30e9873674b0543555ae8cd",
+      "current": "56d555e68649f2f1e13fc6a1e220dd9b56a1c60ee4b4edbfade598d011b4795b"
+    }
+  ],
+  "mtimes": {
+    "ac1-selection": {
+      "prd.md": "2026-11-12T04:07:22.988Z",
+      "task.json": "2026-11-12T03:59:23.324Z",
+      "research": "2026-11-12T04:05:26.378Z"
+    },
+    "ac2-ui-copy": {
+      "prd.md": "2026-11-12T04:11:16.638Z",
+      "task.json": "2026-11-12T03:59:23.325Z"
+    },
+    "ac3-vendor-batch": {
+      "prd.md": "2026-11-12T04:12:18.339Z",
+      "design.md": "2026-11-12T04:12:18.341Z",
+      "task.json": "2026-11-12T03:59:23.325Z",
+      "research": "2026-11-12T04:12:18.337Z"
+    },
+    "ac6-reuse": {
+      "prd.md": "2026-11-12T04:15:32.520Z",
+      "task.json": "2026-11-12T03:59:23.351Z"
+    },
+    "ac7-user-experiment": {
+      "prd.md": "2026-11-12T04:11:55.519Z",
+      "task.json": "2026-11-12T03:59:23.327Z",
+      "research": "2026-11-12T04:11:55.517Z"
+    },
+    "ac8-new-evidence": {
+      "prd.md": "2026-11-12T04:15:49.668Z",
+      "design.md": "2026-11-12T04:15:49.668Z",
+      "implement.md": "2026-11-12T04:15:49.668Z",
+      "task.json": "2026-11-12T04:15:49.669Z",
+      "research": "2026-11-12T04:15:23.538Z"
+    },
+    "ac9-unrelated": {
+      "prd.md": "2026-11-12T04:15:00.132Z",
+      "task.json": "2026-11-12T03:59:23.329Z"
+    },
+    "ac10-pseudo": {
+      "prd.md": "2026-11-12T04:15:19.679Z",
+      "task.json": "2026-11-12T03:59:23.352Z",
+      "research": "2026-11-12T04:00:52.182Z"
+    },
+    "x4-broken-ref": {
+      "prd.md": "2026-11-12T04:15:27.605Z",
+      "implement.md": "2026-11-12T03:59:23.356Z",
+      "task.json": "2026-11-12T03:59:23.355Z",
+      "research": "2026-11-12T04:15:27.603Z"
+    },
+    "x5-logs": {
+      "prd.md": "2026-11-12T04:15:22.141Z",
+      "task.json": "2026-11-12T03:59:23.356Z",
+      "research": "2026-11-12T04:15:22.138Z"
+    }
+  }
+}

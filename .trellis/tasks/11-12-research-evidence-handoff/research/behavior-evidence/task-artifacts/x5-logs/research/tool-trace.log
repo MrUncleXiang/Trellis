@@ -1,0 +1,3 @@
+[tool] read fixtures/docs/persistence-option-a.md
+[tool] read fixtures/docs/persistence-option-b.md
+[result] commands completed

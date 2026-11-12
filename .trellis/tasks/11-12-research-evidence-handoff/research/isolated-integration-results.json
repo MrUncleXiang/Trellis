@@ -1,0 +1,39 @@
+{
+  "date": "2026-11-12",
+  "mode": "isolated built CLI functions; local deterministic marketplace responses",
+  "temporaryProject": "C:\\Users\\PXWD\\AppData\\Local\\Temp\\trellis-b-integration-Os8ika",
+  "checks": [
+    {
+      "name": "init produces new workflow and recovery entries",
+      "result": "passed"
+    },
+    {
+      "name": "update replaces tracked pristine old-entry fixture and preserves custom/user files",
+      "result": "passed",
+      "oldEntryFixture": "candidate minus recovery paragraph; synthetic previous template"
+    },
+    {
+      "name": "workflow switch tdd preserves content and ownership",
+      "result": "passed"
+    },
+    {
+      "name": "non-native workflow overwrite protection before channel-driven-subagent-dispatch",
+      "result": "passed",
+      "observed": ".trellis/workflow.md has local edits. Re-run with --force to overwrite or --create-new to write .trellis/workflow.md.new."
+    },
+    {
+      "name": "workflow switch channel-driven-subagent-dispatch preserves content and ownership",
+      "result": "passed"
+    },
+    {
+      "name": "non-native workflow overwrite protection before native",
+      "result": "passed",
+      "observed": ".trellis/workflow.md has local edits. Re-run with --force to overwrite or --create-new to write .trellis/workflow.md.new."
+    },
+    {
+      "name": "workflow switch native preserves content and ownership",
+      "result": "passed"
+    }
+  ],
+  "passed": true
+}

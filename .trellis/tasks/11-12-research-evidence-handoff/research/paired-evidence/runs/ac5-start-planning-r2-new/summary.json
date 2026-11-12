@@ -1,0 +1,23 @@
+{
+  "id": "ac5-start-planning-r2-new",
+  "case": "ac5-start-planning",
+  "repeat": 2,
+  "version": "new",
+  "root": "C:\\Users\\PXWD\\AppData\\Local\\Temp\\trellis-b-paired-L12pRQ\\runs\\ac5-start-planning-r2-new",
+  "results": [
+    {
+      "exitCode": 0,
+      "timedOut": false,
+      "completed": true,
+      "elapsedMs": 53810,
+      "threadId": "01a1ce51-c471-7750-acdf-7accfd29a692",
+      "usage": {
+        "input_tokens": 194777,
+        "cached_input_tokens": 158508,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1088,
+        "reasoning_output_tokens": 0
+      }
+    }
+  ]
+}

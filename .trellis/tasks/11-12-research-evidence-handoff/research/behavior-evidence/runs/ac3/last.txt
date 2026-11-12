@@ -1,0 +1,17 @@
+结论：**固定本地副本 `prompt-kit-2.0.0` 不原生支持批量渲染，但可以在业务侧逐条调用，实现批量处理。**
+
+依据一致：
+
+- `README.md:3` 明确声明只接受单项，不支持批量输入。
+- `src/index.js:1` 只有 `renderOne(input)`，实际执行 `String(input)`。
+- 离线实验：直接传入 `["alpha","beta"]`，得到 `"alpha,beta"`；逐项调用才得到 `["alpha","beta"]`。就像把两张单据拼成一张纸，并不等于分别处理了两张单据。
+
+建议新增业务侧 `renderBatch(inputs)`：校验输入是数组，逐项调用 `renderOne`，按原顺序返回结果数组，空数组返回空数组。无需修改第三方副本，也没有依据引入并发或宣称性能加速。正式接入前，需要确认单项失败时的处理方式，并验证实际工程能否正确加载该依赖。
+
+已保存并回读核对：
+
+- [研究证据与复现命令](C:/Users/PXWD/AppData/Local/Temp/trellis-beh-final-1794456051007/.trellis/tasks/ac3-vendor-batch/research/vendor-batch.md)
+- [实现建议与验证步骤](C:/Users/PXWD/AppData/Local/Temp/trellis-beh-final-1794456051007/.trellis/tasks/ac3-vendor-batch/design.md)
+- [更新后的任务需求](C:/Users/PXWD/AppData/Local/Temp/trellis-beh-final-1794456051007/.trellis/tasks/ac3-vendor-batch/prd.md)
+
+全程未联网。本轮完成能力判断与方案交付，未修改业务代码或第三方副本，任务仍处于规划状态。

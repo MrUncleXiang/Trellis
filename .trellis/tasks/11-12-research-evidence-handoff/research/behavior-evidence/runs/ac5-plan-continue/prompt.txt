@@ -1,0 +1,4 @@
+Use the trellis-continue skill.
+Active task: .trellis/tasks/ac5-plan-continue
+
+业务目标：继续当前规划审阅，判断能否进入实施。

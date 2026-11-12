@@ -1,0 +1,84 @@
+
+ ███████████                    ████  ████   ███         
+▒█▒▒▒███▒▒▒█                   ▒▒███ ▒▒███  ▒▒▒          
+▒   ▒███  ▒  ████████   ██████  ▒███  ▒███  ████   █████ 
+    ▒███    ▒▒███▒▒███ ███▒▒███ ▒███  ▒███ ▒▒███  ███▒▒  
+    ▒███     ▒███ ▒▒▒ ▒███████  ▒███  ▒███  ▒███ ▒▒█████ 
+    ▒███     ▒███     ▒███▒▒▒   ▒███  ▒███  ▒███  ▒▒▒▒███
+    █████    █████    ▒▒██████  █████ █████ █████ ██████ 
+   ▒▒▒▒▒    ▒▒▒▒▒      ▒▒▒▒▒▒  ▒▒▒▒▒ ▒▒▒▒▒ ▒▒▒▒▒ ▒▒▒▒▒▒
+
+   All-in-one AI framework & toolkit for Claude Code & Cursor
+
+Mode: Non-interactive (skip existing files)
+
+👤 Developer: UncleXiang98
+📁 Creating workflow structure...
+📝 Configuring Codex (also writes .agents/skills/ — read by Cursor, Gemini CLI, GitHub Copilot, Amp, Kimi Code)...
+📌 Windows detected: Trellis rendered Python commands as "python" in generated hooks, settings, and help text
+📄 Created AGENTS.md
+📋 Tracking 87 template files for updates
+
+Trellis Update
+══════════════
+
+Project version: 0.6.16
+CLI version:     0.6.17
+Latest on npm:   (unable to fetch)
+
+
+Scanning for changes...
+
+  Template updated (will auto-update):
+    ↑ .agents/skills/trellis-continue/SKILL.md
+
+  Unchanged files (will skip):
+    ○ .trellis/scripts/__init__.py
+    ○ .trellis/scripts/common/__init__.py
+    ○ .trellis/scripts/common/paths.py
+    ○ .trellis/scripts/common/developer.py
+    ○ .trellis/scripts/common/git_context.py
+    ... and 80 more
+
+  Modified by you (need your decision):
+    ? .agents/skills/trellis-brainstorm/SKILL.md
+
+  User data (preserved):
+    ○ .trellis/workspace/
+    ○ .trellis/tasks/
+    ○ .trellis/spec/
+    ○ .trellis/.developer/
+
+This will UPGRADE: 0.6.16 → 0.6.17
+
+
+Backup created: .trellis\.backup-2026-11-12T03-58-14/
+
+Auto-updating template files...
+  ↑ .agents/skills/trellis-continue/SKILL.md
+
+--- Resolving conflicts ---
+
+  ○ Skipped: .agents/skills/trellis-brainstorm/SKILL.md
+
+--- Summary ---
+
+  Auto-updated: 1 file(s)
+  Skipped: 1 file(s)
+  Backup: .trellis\.backup-2026-11-12T03-58-14/
+
+✅ Update complete! (0.6.16 → 0.6.17)
+
+════════════════════════════════════════════════════════════
+📋 What's Changed:
+   v0.6.17: **Enhancements:**
+- `trellis mem` can read Cognition Devin CLI sessions from `~/.local/share/devin/cli/sessions.db` (`--platform devin`). This is not Desktop/Cascade `trellis init --devin`. Live CREATE TABLE comments are stripped; Devin forests do not fall back to max(node_id). (#614)
+
+**Bug Fixes:**
+- SQLite mem readers load main-file pages on demand instead of the whole database. (#596)
+- Pi headless subagents forward ask-policy prompts to the parent session. (#611)
+- Active-task lookup no longer binds another session's task when the current session id is missing. (#608)
+- `task.py archive` restores child `parent` links if it stops after unlinking some children. (#613)
+
+════════════════════════════════════════════════════════════
+  ✓ Replaced .trellis/workflow.md with "tdd"

@@ -1,0 +1,29 @@
+[
+  {
+    "workflow": "native",
+    "initExit": 0,
+    "exists": true,
+    "hasResearch": true,
+    "stateBlocks": 30,
+    "phaseExit": 0,
+    "phaseHead": "## Phase Index\n\n```\nPhase 1: Plan    → classify, get task-creation consent, then write planning artifacts\nPhase 2: Execu"
+  },
+  {
+    "workflow": "tdd",
+    "initExit": 1,
+    "exists": false,
+    "hasResearch": false,
+    "stateBlocks": 0,
+    "phaseExit": 2,
+    "phaseHead": ""
+  },
+  {
+    "workflow": "channel-driven-subagent-dispatch",
+    "initExit": 1,
+    "exists": false,
+    "hasResearch": false,
+    "stateBlocks": 0,
+    "phaseExit": 2,
+    "phaseHead": ""
+  }
+]

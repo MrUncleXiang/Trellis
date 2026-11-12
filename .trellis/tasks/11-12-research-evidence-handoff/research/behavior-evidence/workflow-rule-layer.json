@@ -1,0 +1,32 @@
+[
+  {
+    "workflow": "native",
+    "initExit": 0,
+    "exists": true,
+    "hasResearch": true,
+    "stateBlocks": 30,
+    "phaseExit": 0,
+    "phaseHead": "## Phase Index\n\n```\nPhase 1: Plan    → classify, get task-creation consent, then write planning artifacts\nPhase 2: Execu",
+    "method": "CLI init --workflow native (bundled, offline)"
+  },
+  {
+    "workflow": "tdd",
+    "method": "direct source copy (CLI marketplace fetch unavailable offline)",
+    "initExit": "n/a",
+    "exists": true,
+    "hasResearch": true,
+    "stateBlocks": 27,
+    "phaseExit": 0,
+    "phaseHead": "## Phase Index\n\n```\nPhase 1: Plan    → classify, get task-creation consent, then write planning artifacts\nPhase 2: Execu"
+  },
+  {
+    "workflow": "channel-driven-subagent-dispatch",
+    "method": "direct source copy (CLI marketplace fetch unavailable offline)",
+    "initExit": "n/a",
+    "exists": true,
+    "hasResearch": true,
+    "stateBlocks": 9,
+    "phaseExit": 0,
+    "phaseHead": "## Phase Index\n\n```\nPhase 1: Plan    -> classify, get task-creation consent, then write planning artifacts\nPhase 2: Exec"
+  }
+]

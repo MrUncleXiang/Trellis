@@ -1,0 +1,709 @@
+{
+  "date": "2026-11-12",
+  "configured": [
+    "claude-code",
+    "cursor",
+    "opencode",
+    "codex",
+    "pi",
+    "omp"
+  ],
+  "platforms": [
+    {
+      "platform": "claude-code",
+      "entries": [
+        {
+          "role": "check",
+          "path": ".claude/agents/trellis-check.md",
+          "characters": 3609
+        },
+        {
+          "role": "continue",
+          "path": ".claude/commands/trellis/continue.md",
+          "characters": 2815
+        },
+        {
+          "role": "before-dev",
+          "path": ".claude/skills/trellis-before-dev/SKILL.md",
+          "characters": 3127
+        },
+        {
+          "role": "brainstorm",
+          "path": ".claude/skills/trellis-brainstorm/SKILL.md",
+          "characters": 13778
+        },
+        {
+          "role": "check",
+          "path": ".claude/skills/trellis-check/SKILL.md",
+          "characters": 4320
+        }
+      ]
+    },
+    {
+      "platform": "cursor",
+      "entries": [
+        {
+          "role": "continue",
+          "path": ".cursor/commands/trellis-continue.md",
+          "characters": 2815
+        },
+        {
+          "role": "before-dev",
+          "path": ".cursor/skills/trellis-before-dev/SKILL.md",
+          "characters": 3127
+        },
+        {
+          "role": "brainstorm",
+          "path": ".cursor/skills/trellis-brainstorm/SKILL.md",
+          "characters": 13778
+        },
+        {
+          "role": "check",
+          "path": ".cursor/skills/trellis-check/SKILL.md",
+          "characters": 4320
+        },
+        {
+          "role": "check",
+          "path": ".cursor/agents/trellis-check.md",
+          "characters": 3730
+        }
+      ]
+    },
+    {
+      "platform": "opencode",
+      "entries": [
+        {
+          "role": "check",
+          "path": ".opencode/agents/trellis-check.md",
+          "characters": 3755
+        },
+        {
+          "role": "continue",
+          "path": ".opencode/commands/trellis/continue.md",
+          "characters": 2817
+        },
+        {
+          "role": "start",
+          "path": ".opencode/commands/trellis/start.md",
+          "characters": 2892
+        },
+        {
+          "role": "before-dev",
+          "path": ".opencode/skills/trellis-before-dev/SKILL.md",
+          "characters": 3127
+        },
+        {
+          "role": "brainstorm",
+          "path": ".opencode/skills/trellis-brainstorm/SKILL.md",
+          "characters": 13778
+        },
+        {
+          "role": "check",
+          "path": ".opencode/skills/trellis-check/SKILL.md",
+          "characters": 4320
+        }
+      ]
+    },
+    {
+      "platform": "codex",
+      "entries": [
+        {
+          "role": "continue",
+          "path": ".agents/skills/trellis-continue/SKILL.md",
+          "characters": 3118
+        },
+        {
+          "role": "start",
+          "path": ".agents/skills/trellis-start/SKILL.md",
+          "characters": 3280
+        },
+        {
+          "role": "before-dev",
+          "path": ".agents/skills/trellis-before-dev/SKILL.md",
+          "characters": 3127
+        },
+        {
+          "role": "brainstorm",
+          "path": ".agents/skills/trellis-brainstorm/SKILL.md",
+          "characters": 13778
+        },
+        {
+          "role": "check",
+          "path": ".agents/skills/trellis-check/SKILL.md",
+          "characters": 4320
+        }
+      ]
+    },
+    {
+      "platform": "kilo",
+      "entries": [
+        {
+          "role": "continue",
+          "path": ".kilocode/workflows/continue.md",
+          "characters": 2813
+        },
+        {
+          "role": "start",
+          "path": ".kilocode/workflows/start.md",
+          "characters": 2888
+        },
+        {
+          "role": "before-dev",
+          "path": ".kilocode/skills/trellis-before-dev/SKILL.md",
+          "characters": 3127
+        },
+        {
+          "role": "brainstorm",
+          "path": ".kilocode/skills/trellis-brainstorm/SKILL.md",
+          "characters": 13778
+        },
+        {
+          "role": "check",
+          "path": ".kilocode/skills/trellis-check/SKILL.md",
+          "characters": 4320
+        }
+      ]
+    },
+    {
+      "platform": "kiro",
+      "entries": [
+        {
+          "role": "continue",
+          "path": ".kiro/skills/trellis-continue/SKILL.md",
+          "characters": 3117
+        },
+        {
+          "role": "before-dev",
+          "path": ".kiro/skills/trellis-before-dev/SKILL.md",
+          "characters": 3127
+        },
+        {
+          "role": "brainstorm",
+          "path": ".kiro/skills/trellis-brainstorm/SKILL.md",
+          "characters": 13778
+        },
+        {
+          "role": "check",
+          "path": ".kiro/skills/trellis-check/SKILL.md",
+          "characters": 4320
+        }
+      ]
+    },
+    {
+      "platform": "gemini",
+      "entries": [
+        {
+          "role": "before-dev",
+          "path": ".agents/skills/trellis-before-dev/SKILL.md",
+          "characters": 3127
+        },
+        {
+          "role": "brainstorm",
+          "path": ".agents/skills/trellis-brainstorm/SKILL.md",
+          "characters": 13778
+        },
+        {
+          "role": "check",
+          "path": ".agents/skills/trellis-check/SKILL.md",
+          "characters": 4320
+        },
+        {
+          "role": "check",
+          "path": ".gemini/agents/trellis-check.md",
+          "characters": 4703
+        }
+      ]
+    },
+    {
+      "platform": "antigravity",
+      "entries": [
+        {
+          "role": "continue",
+          "path": ".agent/workflows/continue.md",
+          "characters": 2820
+        },
+        {
+          "role": "start",
+          "path": ".agent/workflows/start.md",
+          "characters": 2895
+        },
+        {
+          "role": "before-dev",
+          "path": ".agent/skills/trellis-before-dev/SKILL.md",
+          "characters": 3127
+        },
+        {
+          "role": "brainstorm",
+          "path": ".agent/skills/trellis-brainstorm/SKILL.md",
+          "characters": 13778
+        },
+        {
+          "role": "check",
+          "path": ".agent/skills/trellis-check/SKILL.md",
+          "characters": 4320
+        }
+      ]
+    },
+    {
+      "platform": "devin",
+      "entries": [
+        {
+          "role": "continue",
+          "path": ".devin/workflows/trellis-continue.md",
+          "characters": 2814
+        },
+        {
+          "role": "start",
+          "path": ".devin/workflows/trellis-start.md",
+          "characters": 2889
+        },
+        {
+          "role": "before-dev",
+          "path": ".devin/skills/trellis-before-dev/SKILL.md",
+          "characters": 3127
+        },
+        {
+          "role": "brainstorm",
+          "path": ".devin/skills/trellis-brainstorm/SKILL.md",
+          "characters": 13778
+        },
+        {
+          "role": "check",
+          "path": ".devin/skills/trellis-check/SKILL.md",
+          "characters": 4320
+        }
+      ]
+    },
+    {
+      "platform": "qoder",
+      "entries": [
+        {
+          "role": "continue",
+          "path": ".qoder/commands/trellis-continue.md",
+          "characters": 2915
+        },
+        {
+          "role": "before-dev",
+          "path": ".qoder/skills/trellis-before-dev/SKILL.md",
+          "characters": 3127
+        },
+        {
+          "role": "brainstorm",
+          "path": ".qoder/skills/trellis-brainstorm/SKILL.md",
+          "characters": 13778
+        },
+        {
+          "role": "check",
+          "path": ".qoder/skills/trellis-check/SKILL.md",
+          "characters": 4320
+        },
+        {
+          "role": "check",
+          "path": ".qoder/agents/trellis-check.md",
+          "characters": 4746
+        }
+      ]
+    },
+    {
+      "platform": "codebuddy",
+      "entries": [
+        {
+          "role": "continue",
+          "path": ".codebuddy/commands/trellis/continue.md",
+          "characters": 2818
+        },
+        {
+          "role": "before-dev",
+          "path": ".codebuddy/skills/trellis-before-dev/SKILL.md",
+          "characters": 3127
+        },
+        {
+          "role": "brainstorm",
+          "path": ".codebuddy/skills/trellis-brainstorm/SKILL.md",
+          "characters": 13778
+        },
+        {
+          "role": "check",
+          "path": ".codebuddy/skills/trellis-check/SKILL.md",
+          "characters": 4320
+        },
+        {
+          "role": "check",
+          "path": ".codebuddy/agents/trellis-check.md",
+          "characters": 3609
+        }
+      ]
+    },
+    {
+      "platform": "copilot",
+      "entries": [
+        {
+          "role": "before-dev",
+          "path": ".github/skills/trellis-before-dev/SKILL.md",
+          "characters": 3127
+        },
+        {
+          "role": "brainstorm",
+          "path": ".github/skills/trellis-brainstorm/SKILL.md",
+          "characters": 13778
+        },
+        {
+          "role": "check",
+          "path": ".github/skills/trellis-check/SKILL.md",
+          "characters": 4320
+        }
+      ]
+    },
+    {
+      "platform": "droid",
+      "entries": [
+        {
+          "role": "continue",
+          "path": ".factory/commands/trellis/continue.md",
+          "characters": 2814
+        },
+        {
+          "role": "before-dev",
+          "path": ".factory/skills/trellis-before-dev/SKILL.md",
+          "characters": 3127
+        },
+        {
+          "role": "brainstorm",
+          "path": ".factory/skills/trellis-brainstorm/SKILL.md",
+          "characters": 13778
+        },
+        {
+          "role": "check",
+          "path": ".factory/skills/trellis-check/SKILL.md",
+          "characters": 4320
+        },
+        {
+          "role": "check",
+          "path": ".factory/droids/trellis-check.md",
+          "characters": 3030
+        }
+      ]
+    },
+    {
+      "platform": "dsh",
+      "entries": [
+        {
+          "role": "before-dev",
+          "path": ".agents/skills/trellis-before-dev/SKILL.md",
+          "characters": 3127
+        },
+        {
+          "role": "brainstorm",
+          "path": ".agents/skills/trellis-brainstorm/SKILL.md",
+          "characters": 13778
+        },
+        {
+          "role": "check",
+          "path": ".agents/skills/trellis-check/SKILL.md",
+          "characters": 4320
+        },
+        {
+          "role": "continue",
+          "path": ".dsh/skills/trellis-continue/SKILL.md",
+          "characters": 3116
+        },
+        {
+          "role": "start",
+          "path": ".dsh/skills/trellis-start/SKILL.md",
+          "characters": 3278
+        }
+      ]
+    },
+    {
+      "platform": "pi",
+      "entries": [
+        {
+          "role": "start",
+          "path": ".pi/prompts/trellis-start.md",
+          "characters": 2886
+        },
+        {
+          "role": "continue",
+          "path": ".pi/prompts/trellis-continue.md",
+          "characters": 2811
+        },
+        {
+          "role": "before-dev",
+          "path": ".agents/skills/trellis-before-dev/SKILL.md",
+          "characters": 3127
+        },
+        {
+          "role": "brainstorm",
+          "path": ".agents/skills/trellis-brainstorm/SKILL.md",
+          "characters": 13778
+        },
+        {
+          "role": "check",
+          "path": ".agents/skills/trellis-check/SKILL.md",
+          "characters": 4320
+        },
+        {
+          "role": "check",
+          "path": ".pi/agents/trellis-check.md",
+          "characters": 3422
+        }
+      ]
+    },
+    {
+      "platform": "reasonix",
+      "entries": [
+        {
+          "role": "continue",
+          "path": ".reasonix/skills/trellis-continue/SKILL.md",
+          "characters": 3121
+        },
+        {
+          "role": "start",
+          "path": ".reasonix/skills/trellis-start/SKILL.md",
+          "characters": 3283
+        },
+        {
+          "role": "before-dev",
+          "path": ".reasonix/skills/trellis-before-dev/SKILL.md",
+          "characters": 3127
+        },
+        {
+          "role": "brainstorm",
+          "path": ".reasonix/skills/trellis-brainstorm/SKILL.md",
+          "characters": 13778
+        },
+        {
+          "role": "check",
+          "path": ".reasonix/skills/trellis-check/SKILL.md",
+          "characters": 1616
+        }
+      ]
+    },
+    {
+      "platform": "zcode",
+      "entries": [
+        {
+          "role": "before-dev",
+          "path": ".zcode/skills/trellis-before-dev/SKILL.md",
+          "characters": 3127
+        },
+        {
+          "role": "brainstorm",
+          "path": ".zcode/skills/trellis-brainstorm/SKILL.md",
+          "characters": 13778
+        },
+        {
+          "role": "check",
+          "path": ".zcode/skills/trellis-check/SKILL.md",
+          "characters": 4320
+        },
+        {
+          "role": "continue",
+          "path": ".zcode/commands/trellis/continue.md",
+          "characters": 2814
+        },
+        {
+          "role": "check",
+          "path": ".zcode/agents/trellis-check.md",
+          "characters": 3021
+        }
+      ]
+    },
+    {
+      "platform": "trae",
+      "entries": [
+        {
+          "role": "continue",
+          "path": ".trae/commands/trellis-continue.md",
+          "characters": 2914
+        },
+        {
+          "role": "before-dev",
+          "path": ".trae/skills/trellis-before-dev/SKILL.md",
+          "characters": 3127
+        },
+        {
+          "role": "brainstorm",
+          "path": ".trae/skills/trellis-brainstorm/SKILL.md",
+          "characters": 13778
+        },
+        {
+          "role": "check",
+          "path": ".trae/skills/trellis-check/SKILL.md",
+          "characters": 4320
+        },
+        {
+          "role": "check",
+          "path": ".trae/agents/trellis-check.md",
+          "characters": 4746
+        }
+      ]
+    },
+    {
+      "platform": "omp",
+      "entries": [
+        {
+          "role": "continue",
+          "path": ".omp/commands/trellis-continue.md",
+          "characters": 2865
+        },
+        {
+          "role": "before-dev",
+          "path": ".omp/skills/trellis-before-dev/SKILL.md",
+          "characters": 3127
+        },
+        {
+          "role": "brainstorm",
+          "path": ".omp/skills/trellis-brainstorm/SKILL.md",
+          "characters": 13778
+        },
+        {
+          "role": "check",
+          "path": ".omp/skills/trellis-check/SKILL.md",
+          "characters": 4320
+        },
+        {
+          "role": "check",
+          "path": ".omp/agents/trellis-check.md",
+          "characters": 1529
+        }
+      ]
+    },
+    {
+      "platform": "grok",
+      "entries": [
+        {
+          "role": "before-dev",
+          "path": ".grok/skills/trellis-before-dev/SKILL.md",
+          "characters": 3127
+        },
+        {
+          "role": "brainstorm",
+          "path": ".grok/skills/trellis-brainstorm/SKILL.md",
+          "characters": 13778
+        },
+        {
+          "role": "check",
+          "path": ".grok/skills/trellis-check/SKILL.md",
+          "characters": 4320
+        },
+        {
+          "role": "continue",
+          "path": ".grok/commands/trellis-continue.md",
+          "characters": 2813
+        },
+        {
+          "role": "start",
+          "path": ".grok/commands/trellis-start.md",
+          "characters": 2888
+        },
+        {
+          "role": "check",
+          "path": ".grok/agents/trellis-check.md",
+          "characters": 4380
+        }
+      ]
+    },
+    {
+      "platform": "kimi",
+      "entries": [
+        {
+          "role": "before-dev",
+          "path": ".agents/skills/trellis-before-dev/SKILL.md",
+          "characters": 3127
+        },
+        {
+          "role": "brainstorm",
+          "path": ".agents/skills/trellis-brainstorm/SKILL.md",
+          "characters": 13778
+        },
+        {
+          "role": "check",
+          "path": ".agents/skills/trellis-check/SKILL.md",
+          "characters": 4320
+        },
+        {
+          "role": "continue",
+          "path": ".kimi-code/skills/trellis-continue/SKILL.md",
+          "characters": 3117
+        },
+        {
+          "role": "start",
+          "path": ".kimi-code/skills/trellis-start/SKILL.md",
+          "characters": 3279
+        },
+        {
+          "role": "check",
+          "path": ".kimi-code/skills/trellis-check/SKILL.md",
+          "characters": 4697
+        },
+        {
+          "role": "check",
+          "path": ".kimi-code/agents/trellis-check.md",
+          "characters": 4697
+        }
+      ]
+    },
+    {
+      "platform": "snow",
+      "entries": [
+        {
+          "role": "continue",
+          "path": ".snow/skills/trellis-continue/SKILL.md",
+          "characters": 3117
+        },
+        {
+          "role": "before-dev",
+          "path": ".snow/skills/trellis-before-dev/SKILL.md",
+          "characters": 3127
+        },
+        {
+          "role": "brainstorm",
+          "path": ".snow/skills/trellis-brainstorm/SKILL.md",
+          "characters": 13778
+        },
+        {
+          "role": "check",
+          "path": ".snow/skills/trellis-check/SKILL.md",
+          "characters": 4320
+        },
+        {
+          "role": "check",
+          "path": ".snow/agents/trellis-check.md",
+          "characters": 3897
+        }
+      ]
+    }
+  ],
+  "targets": [
+    ".claude/agents/trellis-check.md",
+    ".claude/commands/trellis/continue.md",
+    ".claude/skills/trellis-before-dev/SKILL.md",
+    ".claude/skills/trellis-brainstorm/SKILL.md",
+    ".claude/skills/trellis-check/SKILL.md",
+    ".cursor/commands/trellis-continue.md",
+    ".cursor/skills/trellis-before-dev/SKILL.md",
+    ".cursor/skills/trellis-brainstorm/SKILL.md",
+    ".cursor/skills/trellis-check/SKILL.md",
+    ".cursor/agents/trellis-check.md",
+    ".opencode/agents/trellis-check.md",
+    ".opencode/commands/trellis/continue.md",
+    ".opencode/commands/trellis/start.md",
+    ".opencode/skills/trellis-before-dev/SKILL.md",
+    ".opencode/skills/trellis-brainstorm/SKILL.md",
+    ".opencode/skills/trellis-check/SKILL.md",
+    ".agents/skills/trellis-continue/SKILL.md",
+    ".agents/skills/trellis-start/SKILL.md",
+    ".agents/skills/trellis-before-dev/SKILL.md",
+    ".agents/skills/trellis-brainstorm/SKILL.md",
+    ".agents/skills/trellis-check/SKILL.md",
+    ".pi/prompts/trellis-start.md",
+    ".pi/prompts/trellis-continue.md",
+    ".pi/agents/trellis-check.md",
+    ".omp/commands/trellis-continue.md",
+    ".omp/skills/trellis-before-dev/SKILL.md",
+    ".omp/skills/trellis-brainstorm/SKILL.md",
+    ".omp/skills/trellis-check/SKILL.md",
+    ".omp/agents/trellis-check.md"
+  ]
+}

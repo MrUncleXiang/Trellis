@@ -1,0 +1,9 @@
+{
+  "check.jsonl": "{\"file\":\".trellis/tasks/fixture/prd.md\",\"reason\":\"Task scope\"}\n",
+  "design.md": "# Design\nUse32+21 chunks, map by ID, retain failures and do not retry. See [evidence](research/compatibility.md).\n",
+  "implement.jsonl": "{\"file\":\".trellis/tasks/fixture/prd.md\",\"reason\":\"Task scope\"}\n",
+  "implement.md": "# Plan\nRead current evidence; implement after approval; verify chunking and reordered results.\n",
+  "prd.md": "# Send53 messages\nGoal: send53 items and match results to original messages. No retry in this release.\n## Research\nReused evidence for version1.4: max32 per call, out-of-order results associated by ID. See [dependency](research/compatibility.md). Dedup unknown does not change the no-retry scope.\n",
+  "research/compatibility.md": "# Dependency investigation\nQuestion: can messenger1.4 send53 at once and preserve ordering?\nSource: vendor/messenger.md, Limits/Results. Fact: at most32 per call, response includes IDs and may be reordered. Inference: split53 into32+21 and match by ID. Decision: retain failures, no retry. Unknown: idempotency/dedup. Limit: documentation review only; retry would require new evidence.\n",
+  "task.json": "{\"id\":\"fixture\",\"name\":\"fixture\",\"title\":\"ac5-continue-in_progress\",\"status\":\"in_progress\"}"
+}

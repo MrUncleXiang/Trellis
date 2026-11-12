@@ -1,0 +1,15 @@
+{
+  "id": "ac4-r2-new",
+  "case": "ac4",
+  "repeat": 2,
+  "version": "new",
+  "root": "C:\\Users\\PXWD\\AppData\\Local\\Temp\\trellis-b-paired-L12pRQ\\runs\\ac4-r2-new",
+  "results": [
+    {
+      "exitCode": 1,
+      "timedOut": false,
+      "completed": false,
+      "elapsedMs": 111
+    }
+  ]
+}

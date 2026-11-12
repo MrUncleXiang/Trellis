@@ -7,7 +7,7 @@ Resume work on the current task — pick up at the right phase/step in `.trellis
 ## Step 1: Load Current Context
 
 ```bash
-python3 ./.trellis/scripts/get_context.py
+python ./.trellis/scripts/get_context.py
 ```
 
 Confirms: current task, git state, recent commits.
@@ -15,7 +15,7 @@ Confirms: current task, git state, recent commits.
 ## Step 2: Load the Phase Index
 
 ```bash
-python3 ./.trellis/scripts/get_context.py --mode phase
+python ./.trellis/scripts/get_context.py --mode phase
 ```
 
 Shows the Phase Index (Plan / Execute / Finish) with routing + skill mapping.
@@ -33,6 +33,8 @@ Shows the Phase Index (Plan / Execute / Finish) with routing + skill mapping.
 - `status=in_progress` + check passed → **3.3** (spec update) → **3.4** (commit)
 - `status=completed` (rare; usually archived immediately) → archive flow
 
+For an existing task with `prd.md`, before entering planning review or continuing implementation, read its `## Research` section when present and the records needed for the next decision. Recheck key premises and versions, and whether unresolved unknowns affect the agreed result. If a key premise no longer applies, a required version is unverified, or an unresolved unknown affects the agreed result, return to the relevant planning step; a file or link alone is not sufficient. If `prd.md` is absent, keep the original route and do not require nonexistent research. If this turn discovers external evidence used for a task decision, follow the `trellis-brainstorm` research handoff rules and save it before presenting the conclusion, including when findings conflict or no reliable answer is found.
+
 Phase rules (full detail in `.trellis/workflow.md`):
 
 1. Run steps **in order** within a phase — `[required]` steps must not be skipped
@@ -44,7 +46,7 @@ Phase rules (full detail in `.trellis/workflow.md`):
 Once you know which step to resume at:
 
 ```bash
-python3 ./.trellis/scripts/get_context.py --mode phase --step <X.X> --platform pi
+python ./.trellis/scripts/get_context.py --mode phase --step <X.X> --platform pi
 ```
 
 Follow the loaded instructions. After each `[required]` step completes, move to the next.
