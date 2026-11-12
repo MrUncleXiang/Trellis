@@ -1,0 +1,30 @@
+{
+  "id": "task-artifact-reliability",
+  "name": "task-artifact-reliability",
+  "title": "完善任务材料的可靠性与可追溯性",
+  "description": "统筹开工前材料检查、调研依据保存与交接、归档提交追溯三个独立子任务及跨任务验收。",
+  "status": "planning",
+  "dev_type": null,
+  "scope": null,
+  "package": "cli",
+  "priority": "P1",
+  "creator": "UncleXiang98",
+  "assignee": "UncleXiang98",
+  "createdAt": "2026-11-12",
+  "completedAt": null,
+  "branch": null,
+  "base_branch": "main",
+  "worktree_path": null,
+  "commit": null,
+  "pr_url": null,
+  "subtasks": [],
+  "children": [
+    "11-11-planning-artifact-gate",
+    "11-12-research-evidence-handoff",
+    "11-12-archive-commit-provenance"
+  ],
+  "parent": null,
+  "relatedFiles": [],
+  "notes": "2026-11-12 用户批准建立父任务及 A/B/C 子任务，负责映射与整合验收；各子任务实施仍需独立审阅。 2026-11-12 B已按用户同意的有限验收归档；保存时序缺口保留，父任务继续规划并负责最终整合。下一步讨论A，其后C；A/C未授权实施。",
+  "meta": {}
+}

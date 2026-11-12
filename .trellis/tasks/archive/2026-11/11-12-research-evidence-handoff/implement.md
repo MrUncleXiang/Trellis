@@ -1,6 +1,6 @@
 # B：实施与验证计划
 
-日期：2026-11-12。**实施与本轮验证已完成，待用户审阅交付。** 当前 `status=in_progress`（未提交、未归档，按现有流程保留）；用户已回复“接受轻量方案”，B-D1 已解决。规划方案与材料一致性已完成独立审查和修订复查；用户随后明确要求“实施计划。”，已运行 `task.py start`，按此计划实施。
+日期：2026-11-12。**规则与验证证据已提交、推送；用户同意有限验收归档，接受并保留已知限制。** 见[验收决定](research/acceptance-2026-11-12.md)；用户已回复“接受轻量方案”，B-D1 已解决。规划方案与材料一致性已完成独立审查和修订复查；用户随后明确要求“实施计划。”，已运行 `task.py start`，按此计划实施。
 
 需求见 [prd.md](prd.md)，技术方案见 [design.md](design.md)，场景细则见 [验证计划](research/scenario-validation-plan.md)。本文按已选轻量路线编排；如果未来改为要求自动捕获，需要先更新需求、设计、验收和范围，再重新审阅，不能直接接着做自动捕获。
 
@@ -146,4 +146,4 @@ node packages/cli/bin/trellis.js update --dry-run
 
 ## 7. 实施交付状态
 
-本轮已实现已批准轻量规则范围；新增同条件对照发现“首次提出结论前保存”仍未稳定满足，当前不能认定全部行为验收通过。[同条件报告](research/paired-comparison-results.md)保留52组判定及60次原始会话。既有完成证据见[实施验证总表](research/implementation-validation-2026-11-12.md)、[场景结果](research/scenario-validation-results.md)、[最终范围核验](research/final-scope-audit.md)。保持任务进行中便于后续审阅与提交，不能把此状态解释为已归档。没有自动捕获或跨模型必遵守保证；未覆盖能力与历史失败详见报告。
+本轮已实现已批准轻量规则范围；新增同条件对照发现“首次提出结论前保存”仍未稳定满足，当前不能认定全部行为验收通过。[同条件报告](research/paired-comparison-results.md)保留52组判定及60次原始会话。既有完成证据见[实施验证总表](research/implementation-validation-2026-11-12.md)、[场景结果](research/scenario-validation-results.md)、[最终范围核验](research/final-scope-audit.md)。2026-11-12 用户接受该限制并同意本轮有限验收归档，不再保持进行中；原评分和原始证据不变。没有自动捕获或跨模型必遵守保证；未覆盖能力与历史失败详见报告。

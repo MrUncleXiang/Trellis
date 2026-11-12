@@ -1,0 +1,8 @@
+{"file":".trellis/spec/cli/backend/workflow-state-contract.md","reason":"复核状态提示仍可解析并保留原步骤，不能把提醒等同自动保存。"}
+{"file":".trellis/spec/cli/backend/commands-update.md","reason":"检查实际生成副本、更新冲突保护及原更新行为。"}
+{"file":".trellis/spec/cli/backend/commands-workflow.md","reason":"复核默认与独立子模块变体语义、选择和哈希兼容。"}
+{"file":".trellis/spec/cli/unit-test/conventions.md","reason":"验证新检查不以实现细节或关键词替代行为验收。"}
+{"file":".trellis/tasks/archive/2026-11/11-12-research-evidence-handoff/research/scenario-validation-plan.md","reason":"逐项 B-AC1—B-AC10 与异常/交接场景的可观察通过和失败条件。"}
+{"file":".trellis/tasks/archive/2026-11/11-12-research-evidence-handoff/research/current-workflow-analysis.md","reason":"对照已知缺口与未覆盖能力，限制实际报告范围。"}
+{"file":".trellis/tasks/archive/2026-11/11-12-research-evidence-handoff/research/implementation-validation-2026-11-12.md","reason":"实际自动检查、修复、生成生效与范围边界，区别最后受影响复验和此前完整测试。"}
+{"file":".trellis/tasks/archive/2026-11/11-12-research-evidence-handoff/research/scenario-validation-results.md","reason":"真实会话行为、首次失败和复验；检查不把部分覆盖说成全宿主保证。"}

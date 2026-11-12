@@ -1,0 +1,112 @@
+{
+  "date": "2026-11-12",
+  "archive": ".trellis/tasks/archive/2026-11/11-12-research-evidence-handoff",
+  "acceptance": "User agreed to close lightweight delivery with known limitations; no blanket behavior pass",
+  "originalTrackedFiles": 1365,
+  "changedFiles": [
+    "check.jsonl",
+    "design.md",
+    "implement.jsonl",
+    "implement.md",
+    "prd.md",
+    "task.json"
+  ],
+  "missingFiles": [],
+  "protectedDrift": [],
+  "activeStates": [
+    {
+      "task": "11-12-task-artifact-reliability",
+      "status": "planning"
+    },
+    {
+      "task": "11-11-planning-artifact-gate",
+      "status": "planning"
+    },
+    {
+      "task": "11-12-archive-commit-provenance",
+      "status": "planning"
+    }
+  ],
+  "missingLinks": [],
+  "contextRefs": [
+    {
+      "file": ".trellis/spec/cli/backend/workflow-state-contract.md",
+      "exists": true
+    },
+    {
+      "file": ".trellis/spec/cli/backend/commands-update.md",
+      "exists": true
+    },
+    {
+      "file": ".trellis/spec/cli/backend/commands-workflow.md",
+      "exists": true
+    },
+    {
+      "file": ".trellis/spec/cli/unit-test/conventions.md",
+      "exists": true
+    },
+    {
+      "file": ".trellis/tasks/archive/2026-11/11-12-research-evidence-handoff/research/current-workflow-analysis.md",
+      "exists": true
+    },
+    {
+      "file": ".trellis/tasks/archive/2026-11/11-12-research-evidence-handoff/research/github-research-persistence.md",
+      "exists": true
+    },
+    {
+      "file": ".trellis/spec/cli/backend/workflow-state-contract.md",
+      "exists": true
+    },
+    {
+      "file": ".trellis/spec/cli/backend/commands-update.md",
+      "exists": true
+    },
+    {
+      "file": ".trellis/spec/cli/backend/commands-workflow.md",
+      "exists": true
+    },
+    {
+      "file": ".trellis/spec/cli/unit-test/conventions.md",
+      "exists": true
+    },
+    {
+      "file": ".trellis/tasks/archive/2026-11/11-12-research-evidence-handoff/research/scenario-validation-plan.md",
+      "exists": true
+    },
+    {
+      "file": ".trellis/tasks/archive/2026-11/11-12-research-evidence-handoff/research/current-workflow-analysis.md",
+      "exists": true
+    },
+    {
+      "file": ".trellis/tasks/archive/2026-11/11-12-research-evidence-handoff/research/implementation-validation-2026-11-12.md",
+      "exists": true
+    },
+    {
+      "file": ".trellis/tasks/archive/2026-11/11-12-research-evidence-handoff/research/scenario-validation-results.md",
+      "exists": true
+    }
+  ],
+  "planningHandoff": {
+    "reason": "Parent/A/C planning records existed locally and were untracked. Include only their 12 task artifacts so archived parent and sibling links remain available after clone; no implementation authorization or product edits.",
+    "paths": [
+      ".trellis/tasks/11-12-task-artifact-reliability/check.jsonl",
+      ".trellis/tasks/11-12-task-artifact-reliability/implement.jsonl",
+      ".trellis/tasks/11-12-task-artifact-reliability/prd.md",
+      ".trellis/tasks/11-12-task-artifact-reliability/task.json",
+      ".trellis/tasks/11-11-planning-artifact-gate/check.jsonl",
+      ".trellis/tasks/11-11-planning-artifact-gate/implement.jsonl",
+      ".trellis/tasks/11-11-planning-artifact-gate/prd.md",
+      ".trellis/tasks/11-11-planning-artifact-gate/task.json",
+      ".trellis/tasks/11-12-archive-commit-provenance/check.jsonl",
+      ".trellis/tasks/11-12-archive-commit-provenance/implement.jsonl",
+      ".trellis/tasks/11-12-archive-commit-provenance/prd.md",
+      ".trellis/tasks/11-12-archive-commit-provenance/task.json"
+    ],
+    "changedExistingPlanningFiles": [
+      ".trellis/tasks/11-12-task-artifact-reliability/prd.md",
+      ".trellis/tasks/11-12-task-artifact-reliability/task.json",
+      ".trellis/tasks/11-11-planning-artifact-gate/prd.md"
+    ],
+    "inheritedWhitespaceWarning": "A/prd.md has a pre-existing final blank line; retained as existing planning content."
+  }
+}
