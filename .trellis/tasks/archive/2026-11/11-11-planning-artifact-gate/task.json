@@ -1,0 +1,31 @@
+{
+  "id": "planning-artifact-gate",
+  "name": "planning-artifact-gate",
+  "title": "开工前规划材料检查",
+  "description": "仅管理 A：统一三份简明规划材料，用户确认对应版本；开工前或实施中发生实质变化，暂停受影响工作并更新材料、重新获准。",
+  "status": "completed",
+  "dev_type": null,
+  "scope": null,
+  "package": "cli",
+  "priority": "P1",
+  "creator": "UncleXiang98",
+  "assignee": "UncleXiang98",
+  "createdAt": "2026-11-11",
+  "completedAt": "2026-11-13",
+  "branch": "codex/planning-artifact-gate",
+  "base_branch": "main",
+  "worktree_path": null,
+  "commit": "1b801471966e8fb898d0c33e1b025aad2a86f5db,97be05216991c880e51f3eb3198e92f845de16e9,967cb1cf053ab27043f2db344510eb36aafce06b",
+  "pr_url": null,
+  "subtasks": [],
+  "children": [],
+  "parent": "11-12-task-artifact-reliability",
+  "relatedFiles": [
+    ".trellis/tasks/archive/2026-11/11-11-planning-artifact-gate/prd.md",
+    ".trellis/tasks/archive/2026-11/11-11-planning-artifact-gate/design.md",
+    ".trellis/tasks/archive/2026-11/11-11-planning-artifact-gate/implement.md",
+    ".trellis/tasks/archive/2026-11/11-11-planning-artifact-gate/research/test-plan-2026-11-12.md"
+  ],
+  "notes": "2026-11-12 保留原任务身份并归入父任务；B/C 已无损迁出。任务仍在规划，未授权实施。 2026-11-12 用户同意：开工确认后材料有实质变化，须重新展示变化并再次获准才能开工；重算指纹不替代确认。非任何字节变化，未扩展到实施中门禁；三文件及R5边界继续讨论，未授权实施。 2026-11-12 用户回复“可以”，确认统一三份规划材料、内容可短但各有用途；不因任务简单而省略，不设字数阈值。原R5实施中变更边界继续讨论，未授权实施。 2026-11-12 用户同意实施中实质变化暂停受影响工作、更新规划并重新确认；正常编码和按原要求修错可继续。此决定替代原R5的相关不覆盖范围。三项产品原则已确认，待整理设计与实施/测试计划，未授权实施。 2026-11-12 按用户最新“可以”整理三份现行规划、37组自动测试与6个人工演练计划和16场景旧新对照口径；整合前需求逐字保存在research/prd-history-before-consolidation-2026-11-12.md。此前“未扩展到实施中”仅是当时讨论过程，已被后续实施中再确认决定替代。命令和字段是待审技术设计；未运行start、未实施、未获最终开工许可。 2026-11-12 按“你推进”完成两路独立规划审查并修正：记录/文件分层校验、显式start判定、自举批次0、稳定步骤编号与独立进度、故障注入证据、3.9真实运行要求及单任务串行边界；测试矩阵更新为38组含并发边界观察、6演练/16对照，未执行产品测试。最终修正版仍须展示并取得对应开工答复，状态保持planning。 2026-11-13 当前结论：A实现及约定验收已完成，真实批准及最终验收见research/final-acceptance-result.md；实现1b801471、固定版本对照97be0521、最终验收967cb1cf均已推送并包含在个人长期分支codex/personal。早期未实施/待批准文字为历史，不代表当前状态。用户在本会话明确要求完成“收干净”，授权归档A并记录会话；B维持有限验收，C暂缓，不宣称完整测试通过。归档后的现行入口为README.md，冻结五份材料原文不改。",
+  "meta": {}
+}
