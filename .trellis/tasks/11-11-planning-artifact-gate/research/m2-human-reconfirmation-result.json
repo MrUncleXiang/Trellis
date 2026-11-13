@@ -1,0 +1,848 @@
+{
+  "scope": "仅隔离样例的版本绑定开工、读回批准/状态/指针/钩子后停止；无上传、不改变 A 产品范围",
+  "implementation": "1b801471966e8fb898d0c33e1b025aad2a86f5db",
+  "reviewId": "c4eb6574fa664ef3a770c94db22aa5cd",
+  "approval": {
+    "receivedAndRecordedAt": "2026-11-13T02:55:48.917942+00:00",
+    "reviewId": "c4eb6574fa664ef3a770c94db22aa5cd",
+    "note": "同意。",
+    "source": "本会话：用户在上一条展示完整版本 c4eb6574fa664ef3a770c94db22aa5cd、明确仅登记隔离样例开工与核验的确认问题后，回复“同意。”；无可用消息编号，不编造。展示内容另存于 m2-human-review-summary.md。",
+    "scope": "仅隔离样例的版本绑定开工、读回批准/状态/指针/钩子后停止；无上传、不改变 A 产品范围",
+    "oldApprovalSynthetic": true,
+    "twoRealApprovalRoundsClaimed": false
+  },
+  "scriptChecks": [
+    {
+      "file": "__init__.py",
+      "matchesImplementation": true
+    },
+    {
+      "file": "add_session.py",
+      "matchesImplementation": true
+    },
+    {
+      "file": "common/__init__.py",
+      "matchesImplementation": true
+    },
+    {
+      "file": "common/active_task.py",
+      "matchesImplementation": true
+    },
+    {
+      "file": "common/cli_adapter.py",
+      "matchesImplementation": true
+    },
+    {
+      "file": "common/config.py",
+      "matchesImplementation": true
+    },
+    {
+      "file": "common/developer.py",
+      "matchesImplementation": true
+    },
+    {
+      "file": "common/git.py",
+      "matchesImplementation": true
+    },
+    {
+      "file": "common/git_context.py",
+      "matchesImplementation": true
+    },
+    {
+      "file": "common/io.py",
+      "matchesImplementation": true
+    },
+    {
+      "file": "common/log.py",
+      "matchesImplementation": true
+    },
+    {
+      "file": "common/packages_context.py",
+      "matchesImplementation": true
+    },
+    {
+      "file": "common/paths.py",
+      "matchesImplementation": true
+    },
+    {
+      "file": "common/planning.py",
+      "matchesImplementation": true
+    },
+    {
+      "file": "common/safe_commit.py",
+      "matchesImplementation": true
+    },
+    {
+      "file": "common/session_context.py",
+      "matchesImplementation": true
+    },
+    {
+      "file": "common/task_context.py",
+      "matchesImplementation": true
+    },
+    {
+      "file": "common/task_queue.py",
+      "matchesImplementation": true
+    },
+    {
+      "file": "common/task_store.py",
+      "matchesImplementation": true
+    },
+    {
+      "file": "common/task_utils.py",
+      "matchesImplementation": true
+    },
+    {
+      "file": "common/tasks.py",
+      "matchesImplementation": true
+    },
+    {
+      "file": "common/trellis_config.py",
+      "matchesImplementation": true
+    },
+    {
+      "file": "common/types.py",
+      "matchesImplementation": true
+    },
+    {
+      "file": "common/workflow_phase.py",
+      "matchesImplementation": true
+    },
+    {
+      "file": "get_context.py",
+      "matchesImplementation": true
+    },
+    {
+      "file": "get_developer.py",
+      "matchesImplementation": true
+    },
+    {
+      "file": "hooks/linear_sync.py",
+      "matchesImplementation": true
+    },
+    {
+      "file": "init_developer.py",
+      "matchesImplementation": true
+    },
+    {
+      "file": "task.py",
+      "matchesImplementation": true
+    }
+  ],
+  "oldApprovalSynthetic": true,
+  "oldVersionRefusalSource": "m2-human-review-pending.json: steps[label=old-id-cannot-approve-b], exit=1",
+  "initial": {
+    "record": {
+      "id": "review-case",
+      "name": "review-case",
+      "title": "Fixture",
+      "description": "Review only",
+      "status": "planning",
+      "branch": "compare-feature",
+      "base_branch": null,
+      "unknownTop": "preserve",
+      "meta": {
+        "other": {
+          "keep": true
+        },
+        "planningReplan": {
+          "requestedAt": "2026-11-13T02:38:46.319420+00:00",
+          "reason": "Exercise changes storage from local-only to remote upload",
+          "affectedWork": "storage implementation, privacy/network acceptance and dependent tests",
+          "independentWork": "none"
+        },
+        "planningAttest": {
+          "schemaVersion": 1,
+          "reviewId": "c4eb6574fa664ef3a770c94db22aa5cd",
+          "attestedAt": "2026-11-13T02:38:46.893110+00:00",
+          "note": "M2 version B: local-only to remote-upload design; review required; isolated metadata exercise, no network operation",
+          "reviewFiles": {
+            "prd.md": "02fbae7c957cc80a1b28e95a46a7775f2cc819d5e828ad324a88e5fb64a9e7b9",
+            "design.md": "8e3a7d2b65c9597fe3be1d27c835b88f122eec923115edf750c010f776e8db07",
+            "implement.md": "bb87e18da5c8ff4b442c012c1ddce3483719cdb4ff4dda6d5f5ce80a5028d43e"
+          },
+          "files": {
+            "prd.md": "02fbae7c957cc80a1b28e95a46a7775f2cc819d5e828ad324a88e5fb64a9e7b9",
+            "design.md": "8e3a7d2b65c9597fe3be1d27c835b88f122eec923115edf750c010f776e8db07",
+            "implement.md": "bb87e18da5c8ff4b442c012c1ddce3483719cdb4ff4dda6d5f5ce80a5028d43e"
+          },
+          "editorialChanges": []
+        }
+      }
+    },
+    "taskBytesSha256": "85670ababc46cf7fbe7b2183e83ee5d0d12b611802963984f5959c71db348a57",
+    "artifactHashes": {
+      "prd.md": "02fbae7c957cc80a1b28e95a46a7775f2cc819d5e828ad324a88e5fb64a9e7b9",
+      "design.md": "8e3a7d2b65c9597fe3be1d27c835b88f122eec923115edf750c010f776e8db07",
+      "implement.md": "bb87e18da5c8ff4b442c012c1ddce3483719cdb4ff4dda6d5f5ce80a5028d43e"
+    },
+    "sessionPointers": {
+      ".trellis/.runtime/sessions/review-M2-real-reconfirmation.json": {
+        "current_task": ".trellis/tasks/review-case",
+        "platform": "codex"
+      }
+    },
+    "branch": "compare-feature",
+    "gitHead": "a6f03d8cad8923977a35b22082e771d0586e7dd0",
+    "hookText": "",
+    "afterStartHooks": 0,
+    "afterArchiveHooks": 0
+  },
+  "steps": [
+    {
+      "label": "validate-after-real-reply",
+      "argv": [
+        "C:\\Python313\\python.exe",
+        ".trellis/scripts/task.py",
+        "validate",
+        ".trellis/tasks/review-case"
+      ],
+      "exit": 0,
+      "stdout": "\u001b[0;34m=== Validating Context Files ===\u001b[0m\nTarget dir: C:\\Users\\PXWD\\AppData\\Local\\Temp\\trellis-a-m2-live-review-18ub0npf\\fixtures\\M2-real-reconfirmation\\.trellis\\tasks\\review-case\n\nPlanning: waiting_confirmation; review: c4eb6574fa664ef3a770c94db22aa5cd\nPlanning is not approved: awaiting user confirmation before start.\n  \u001b[0;32mimplement.jsonl: ✓ (1 entries)\u001b[0m\n  \u001b[0;32mcheck.jsonl: ✓ (1 entries)\u001b[0m\n\n\u001b[0;32m✓ All validations passed\u001b[0m\n",
+      "stderr": "",
+      "seconds": 0.24304320000010193,
+      "before": {
+        "record": {
+          "id": "review-case",
+          "name": "review-case",
+          "title": "Fixture",
+          "description": "Review only",
+          "status": "planning",
+          "branch": "compare-feature",
+          "base_branch": null,
+          "unknownTop": "preserve",
+          "meta": {
+            "other": {
+              "keep": true
+            },
+            "planningReplan": {
+              "requestedAt": "2026-11-13T02:38:46.319420+00:00",
+              "reason": "Exercise changes storage from local-only to remote upload",
+              "affectedWork": "storage implementation, privacy/network acceptance and dependent tests",
+              "independentWork": "none"
+            },
+            "planningAttest": {
+              "schemaVersion": 1,
+              "reviewId": "c4eb6574fa664ef3a770c94db22aa5cd",
+              "attestedAt": "2026-11-13T02:38:46.893110+00:00",
+              "note": "M2 version B: local-only to remote-upload design; review required; isolated metadata exercise, no network operation",
+              "reviewFiles": {
+                "prd.md": "02fbae7c957cc80a1b28e95a46a7775f2cc819d5e828ad324a88e5fb64a9e7b9",
+                "design.md": "8e3a7d2b65c9597fe3be1d27c835b88f122eec923115edf750c010f776e8db07",
+                "implement.md": "bb87e18da5c8ff4b442c012c1ddce3483719cdb4ff4dda6d5f5ce80a5028d43e"
+              },
+              "files": {
+                "prd.md": "02fbae7c957cc80a1b28e95a46a7775f2cc819d5e828ad324a88e5fb64a9e7b9",
+                "design.md": "8e3a7d2b65c9597fe3be1d27c835b88f122eec923115edf750c010f776e8db07",
+                "implement.md": "bb87e18da5c8ff4b442c012c1ddce3483719cdb4ff4dda6d5f5ce80a5028d43e"
+              },
+              "editorialChanges": []
+            }
+          }
+        },
+        "taskBytesSha256": "85670ababc46cf7fbe7b2183e83ee5d0d12b611802963984f5959c71db348a57",
+        "artifactHashes": {
+          "prd.md": "02fbae7c957cc80a1b28e95a46a7775f2cc819d5e828ad324a88e5fb64a9e7b9",
+          "design.md": "8e3a7d2b65c9597fe3be1d27c835b88f122eec923115edf750c010f776e8db07",
+          "implement.md": "bb87e18da5c8ff4b442c012c1ddce3483719cdb4ff4dda6d5f5ce80a5028d43e"
+        },
+        "sessionPointers": {
+          ".trellis/.runtime/sessions/review-M2-real-reconfirmation.json": {
+            "current_task": ".trellis/tasks/review-case",
+            "platform": "codex"
+          }
+        },
+        "branch": "compare-feature",
+        "gitHead": "a6f03d8cad8923977a35b22082e771d0586e7dd0",
+        "hookText": "",
+        "afterStartHooks": 0,
+        "afterArchiveHooks": 0
+      },
+      "after": {
+        "record": {
+          "id": "review-case",
+          "name": "review-case",
+          "title": "Fixture",
+          "description": "Review only",
+          "status": "planning",
+          "branch": "compare-feature",
+          "base_branch": null,
+          "unknownTop": "preserve",
+          "meta": {
+            "other": {
+              "keep": true
+            },
+            "planningReplan": {
+              "requestedAt": "2026-11-13T02:38:46.319420+00:00",
+              "reason": "Exercise changes storage from local-only to remote upload",
+              "affectedWork": "storage implementation, privacy/network acceptance and dependent tests",
+              "independentWork": "none"
+            },
+            "planningAttest": {
+              "schemaVersion": 1,
+              "reviewId": "c4eb6574fa664ef3a770c94db22aa5cd",
+              "attestedAt": "2026-11-13T02:38:46.893110+00:00",
+              "note": "M2 version B: local-only to remote-upload design; review required; isolated metadata exercise, no network operation",
+              "reviewFiles": {
+                "prd.md": "02fbae7c957cc80a1b28e95a46a7775f2cc819d5e828ad324a88e5fb64a9e7b9",
+                "design.md": "8e3a7d2b65c9597fe3be1d27c835b88f122eec923115edf750c010f776e8db07",
+                "implement.md": "bb87e18da5c8ff4b442c012c1ddce3483719cdb4ff4dda6d5f5ce80a5028d43e"
+              },
+              "files": {
+                "prd.md": "02fbae7c957cc80a1b28e95a46a7775f2cc819d5e828ad324a88e5fb64a9e7b9",
+                "design.md": "8e3a7d2b65c9597fe3be1d27c835b88f122eec923115edf750c010f776e8db07",
+                "implement.md": "bb87e18da5c8ff4b442c012c1ddce3483719cdb4ff4dda6d5f5ce80a5028d43e"
+              },
+              "editorialChanges": []
+            }
+          }
+        },
+        "taskBytesSha256": "85670ababc46cf7fbe7b2183e83ee5d0d12b611802963984f5959c71db348a57",
+        "artifactHashes": {
+          "prd.md": "02fbae7c957cc80a1b28e95a46a7775f2cc819d5e828ad324a88e5fb64a9e7b9",
+          "design.md": "8e3a7d2b65c9597fe3be1d27c835b88f122eec923115edf750c010f776e8db07",
+          "implement.md": "bb87e18da5c8ff4b442c012c1ddce3483719cdb4ff4dda6d5f5ce80a5028d43e"
+        },
+        "sessionPointers": {
+          ".trellis/.runtime/sessions/review-M2-real-reconfirmation.json": {
+            "current_task": ".trellis/tasks/review-case",
+            "platform": "codex"
+          }
+        },
+        "branch": "compare-feature",
+        "gitHead": "a6f03d8cad8923977a35b22082e771d0586e7dd0",
+        "hookText": "",
+        "afterStartHooks": 0,
+        "afterArchiveHooks": 0
+      }
+    },
+    {
+      "label": "start-reviewed-version",
+      "argv": [
+        "C:\\Python313\\python.exe",
+        ".trellis/scripts/task.py",
+        "start",
+        ".trellis/tasks/review-case",
+        "--review",
+        "c4eb6574fa664ef3a770c94db22aa5cd",
+        "--approval-note",
+        "同意。",
+        "--approval-source",
+        "本会话：用户在上一条展示完整版本 c4eb6574fa664ef3a770c94db22aa5cd、明确仅登记隔离样例开工与核验的确认问题后，回复“同意。”；无可用消息编号，不编造。展示内容另存于 m2-human-review-summary.md。"
+      ],
+      "exit": 0,
+      "stdout": "\u001b[0;32m✓ Current task set to: .trellis/tasks/review-case\u001b[0m\nSource: session:review-M2-real-reconfirmation\n",
+      "stderr": "",
+      "seconds": 0.33750170000030266,
+      "before": {
+        "record": {
+          "id": "review-case",
+          "name": "review-case",
+          "title": "Fixture",
+          "description": "Review only",
+          "status": "planning",
+          "branch": "compare-feature",
+          "base_branch": null,
+          "unknownTop": "preserve",
+          "meta": {
+            "other": {
+              "keep": true
+            },
+            "planningReplan": {
+              "requestedAt": "2026-11-13T02:38:46.319420+00:00",
+              "reason": "Exercise changes storage from local-only to remote upload",
+              "affectedWork": "storage implementation, privacy/network acceptance and dependent tests",
+              "independentWork": "none"
+            },
+            "planningAttest": {
+              "schemaVersion": 1,
+              "reviewId": "c4eb6574fa664ef3a770c94db22aa5cd",
+              "attestedAt": "2026-11-13T02:38:46.893110+00:00",
+              "note": "M2 version B: local-only to remote-upload design; review required; isolated metadata exercise, no network operation",
+              "reviewFiles": {
+                "prd.md": "02fbae7c957cc80a1b28e95a46a7775f2cc819d5e828ad324a88e5fb64a9e7b9",
+                "design.md": "8e3a7d2b65c9597fe3be1d27c835b88f122eec923115edf750c010f776e8db07",
+                "implement.md": "bb87e18da5c8ff4b442c012c1ddce3483719cdb4ff4dda6d5f5ce80a5028d43e"
+              },
+              "files": {
+                "prd.md": "02fbae7c957cc80a1b28e95a46a7775f2cc819d5e828ad324a88e5fb64a9e7b9",
+                "design.md": "8e3a7d2b65c9597fe3be1d27c835b88f122eec923115edf750c010f776e8db07",
+                "implement.md": "bb87e18da5c8ff4b442c012c1ddce3483719cdb4ff4dda6d5f5ce80a5028d43e"
+              },
+              "editorialChanges": []
+            }
+          }
+        },
+        "taskBytesSha256": "85670ababc46cf7fbe7b2183e83ee5d0d12b611802963984f5959c71db348a57",
+        "artifactHashes": {
+          "prd.md": "02fbae7c957cc80a1b28e95a46a7775f2cc819d5e828ad324a88e5fb64a9e7b9",
+          "design.md": "8e3a7d2b65c9597fe3be1d27c835b88f122eec923115edf750c010f776e8db07",
+          "implement.md": "bb87e18da5c8ff4b442c012c1ddce3483719cdb4ff4dda6d5f5ce80a5028d43e"
+        },
+        "sessionPointers": {
+          ".trellis/.runtime/sessions/review-M2-real-reconfirmation.json": {
+            "current_task": ".trellis/tasks/review-case",
+            "platform": "codex"
+          }
+        },
+        "branch": "compare-feature",
+        "gitHead": "a6f03d8cad8923977a35b22082e771d0586e7dd0",
+        "hookText": "",
+        "afterStartHooks": 0,
+        "afterArchiveHooks": 0
+      },
+      "after": {
+        "record": {
+          "id": "review-case",
+          "name": "review-case",
+          "title": "Fixture",
+          "description": "Review only",
+          "status": "in_progress",
+          "branch": "compare-feature",
+          "base_branch": null,
+          "unknownTop": "preserve",
+          "meta": {
+            "other": {
+              "keep": true
+            },
+            "planningAttest": {
+              "schemaVersion": 1,
+              "reviewId": "c4eb6574fa664ef3a770c94db22aa5cd",
+              "attestedAt": "2026-11-13T02:38:46.893110+00:00",
+              "note": "M2 version B: local-only to remote-upload design; review required; isolated metadata exercise, no network operation",
+              "reviewFiles": {
+                "prd.md": "02fbae7c957cc80a1b28e95a46a7775f2cc819d5e828ad324a88e5fb64a9e7b9",
+                "design.md": "8e3a7d2b65c9597fe3be1d27c835b88f122eec923115edf750c010f776e8db07",
+                "implement.md": "bb87e18da5c8ff4b442c012c1ddce3483719cdb4ff4dda6d5f5ce80a5028d43e"
+              },
+              "files": {
+                "prd.md": "02fbae7c957cc80a1b28e95a46a7775f2cc819d5e828ad324a88e5fb64a9e7b9",
+                "design.md": "8e3a7d2b65c9597fe3be1d27c835b88f122eec923115edf750c010f776e8db07",
+                "implement.md": "bb87e18da5c8ff4b442c012c1ddce3483719cdb4ff4dda6d5f5ce80a5028d43e"
+              },
+              "editorialChanges": []
+            },
+            "planningApproval": {
+              "schemaVersion": 1,
+              "reviewId": "c4eb6574fa664ef3a770c94db22aa5cd",
+              "reviewedFiles": {
+                "prd.md": "02fbae7c957cc80a1b28e95a46a7775f2cc819d5e828ad324a88e5fb64a9e7b9",
+                "design.md": "8e3a7d2b65c9597fe3be1d27c835b88f122eec923115edf750c010f776e8db07",
+                "implement.md": "bb87e18da5c8ff4b442c012c1ddce3483719cdb4ff4dda6d5f5ce80a5028d43e"
+              },
+              "recordedAt": "2026-11-13T02:55:49.530127+00:00",
+              "note": "同意。",
+              "source": "本会话：用户在上一条展示完整版本 c4eb6574fa664ef3a770c94db22aa5cd、明确仅登记隔离样例开工与核验的确认问题后，回复“同意。”；无可用消息编号，不编造。展示内容另存于 m2-human-review-summary.md。"
+            }
+          }
+        },
+        "taskBytesSha256": "88f8129c9bddf8a4a4ccf6d319137b0911174996d447be290e27ec35468e2ecc",
+        "artifactHashes": {
+          "prd.md": "02fbae7c957cc80a1b28e95a46a7775f2cc819d5e828ad324a88e5fb64a9e7b9",
+          "design.md": "8e3a7d2b65c9597fe3be1d27c835b88f122eec923115edf750c010f776e8db07",
+          "implement.md": "bb87e18da5c8ff4b442c012c1ddce3483719cdb4ff4dda6d5f5ce80a5028d43e"
+        },
+        "sessionPointers": {
+          ".trellis/.runtime/sessions/review-M2-real-reconfirmation.json": {
+            "current_task": ".trellis/tasks/review-case",
+            "platform": "session",
+            "last_seen_at": "2026-11-13T02:55:49Z",
+            "current_run": null
+          }
+        },
+        "branch": "compare-feature",
+        "gitHead": "a6f03d8cad8923977a35b22082e771d0586e7dd0",
+        "hookText": "after_start\n",
+        "afterStartHooks": 1,
+        "afterArchiveHooks": 0
+      }
+    },
+    {
+      "label": "planning-status-readback",
+      "argv": [
+        "C:\\Python313\\python.exe",
+        ".trellis/scripts/task.py",
+        "planning-status",
+        ".trellis/tasks/review-case",
+        "--json"
+      ],
+      "exit": 0,
+      "stdout": "{\"mode\": \"ready\", \"reviewId\": \"c4eb6574fa664ef3a770c94db22aa5cd\", \"note\": \"M2 version B: local-only to remote-upload design; review required; isolated metadata exercise, no network operation\", \"approvalNote\": \"同意。\", \"approvalSource\": \"本会话：用户在上一条展示完整版本 c4eb6574fa664ef3a770c94db22aa5cd、明确仅登记隔离样例开工与核验的确认问题后，回复“同意。”；无可用消息编号，不编造。展示内容另存于 m2-human-review-summary.md。\", \"changedFiles\": [], \"errors\": [], \"replan\": null}\n",
+      "stderr": "",
+      "seconds": 0.2575667000000976,
+      "before": {
+        "record": {
+          "id": "review-case",
+          "name": "review-case",
+          "title": "Fixture",
+          "description": "Review only",
+          "status": "in_progress",
+          "branch": "compare-feature",
+          "base_branch": null,
+          "unknownTop": "preserve",
+          "meta": {
+            "other": {
+              "keep": true
+            },
+            "planningAttest": {
+              "schemaVersion": 1,
+              "reviewId": "c4eb6574fa664ef3a770c94db22aa5cd",
+              "attestedAt": "2026-11-13T02:38:46.893110+00:00",
+              "note": "M2 version B: local-only to remote-upload design; review required; isolated metadata exercise, no network operation",
+              "reviewFiles": {
+                "prd.md": "02fbae7c957cc80a1b28e95a46a7775f2cc819d5e828ad324a88e5fb64a9e7b9",
+                "design.md": "8e3a7d2b65c9597fe3be1d27c835b88f122eec923115edf750c010f776e8db07",
+                "implement.md": "bb87e18da5c8ff4b442c012c1ddce3483719cdb4ff4dda6d5f5ce80a5028d43e"
+              },
+              "files": {
+                "prd.md": "02fbae7c957cc80a1b28e95a46a7775f2cc819d5e828ad324a88e5fb64a9e7b9",
+                "design.md": "8e3a7d2b65c9597fe3be1d27c835b88f122eec923115edf750c010f776e8db07",
+                "implement.md": "bb87e18da5c8ff4b442c012c1ddce3483719cdb4ff4dda6d5f5ce80a5028d43e"
+              },
+              "editorialChanges": []
+            },
+            "planningApproval": {
+              "schemaVersion": 1,
+              "reviewId": "c4eb6574fa664ef3a770c94db22aa5cd",
+              "reviewedFiles": {
+                "prd.md": "02fbae7c957cc80a1b28e95a46a7775f2cc819d5e828ad324a88e5fb64a9e7b9",
+                "design.md": "8e3a7d2b65c9597fe3be1d27c835b88f122eec923115edf750c010f776e8db07",
+                "implement.md": "bb87e18da5c8ff4b442c012c1ddce3483719cdb4ff4dda6d5f5ce80a5028d43e"
+              },
+              "recordedAt": "2026-11-13T02:55:49.530127+00:00",
+              "note": "同意。",
+              "source": "本会话：用户在上一条展示完整版本 c4eb6574fa664ef3a770c94db22aa5cd、明确仅登记隔离样例开工与核验的确认问题后，回复“同意。”；无可用消息编号，不编造。展示内容另存于 m2-human-review-summary.md。"
+            }
+          }
+        },
+        "taskBytesSha256": "88f8129c9bddf8a4a4ccf6d319137b0911174996d447be290e27ec35468e2ecc",
+        "artifactHashes": {
+          "prd.md": "02fbae7c957cc80a1b28e95a46a7775f2cc819d5e828ad324a88e5fb64a9e7b9",
+          "design.md": "8e3a7d2b65c9597fe3be1d27c835b88f122eec923115edf750c010f776e8db07",
+          "implement.md": "bb87e18da5c8ff4b442c012c1ddce3483719cdb4ff4dda6d5f5ce80a5028d43e"
+        },
+        "sessionPointers": {
+          ".trellis/.runtime/sessions/review-M2-real-reconfirmation.json": {
+            "current_task": ".trellis/tasks/review-case",
+            "platform": "session",
+            "last_seen_at": "2026-11-13T02:55:49Z",
+            "current_run": null
+          }
+        },
+        "branch": "compare-feature",
+        "gitHead": "a6f03d8cad8923977a35b22082e771d0586e7dd0",
+        "hookText": "after_start\n",
+        "afterStartHooks": 1,
+        "afterArchiveHooks": 0
+      },
+      "after": {
+        "record": {
+          "id": "review-case",
+          "name": "review-case",
+          "title": "Fixture",
+          "description": "Review only",
+          "status": "in_progress",
+          "branch": "compare-feature",
+          "base_branch": null,
+          "unknownTop": "preserve",
+          "meta": {
+            "other": {
+              "keep": true
+            },
+            "planningAttest": {
+              "schemaVersion": 1,
+              "reviewId": "c4eb6574fa664ef3a770c94db22aa5cd",
+              "attestedAt": "2026-11-13T02:38:46.893110+00:00",
+              "note": "M2 version B: local-only to remote-upload design; review required; isolated metadata exercise, no network operation",
+              "reviewFiles": {
+                "prd.md": "02fbae7c957cc80a1b28e95a46a7775f2cc819d5e828ad324a88e5fb64a9e7b9",
+                "design.md": "8e3a7d2b65c9597fe3be1d27c835b88f122eec923115edf750c010f776e8db07",
+                "implement.md": "bb87e18da5c8ff4b442c012c1ddce3483719cdb4ff4dda6d5f5ce80a5028d43e"
+              },
+              "files": {
+                "prd.md": "02fbae7c957cc80a1b28e95a46a7775f2cc819d5e828ad324a88e5fb64a9e7b9",
+                "design.md": "8e3a7d2b65c9597fe3be1d27c835b88f122eec923115edf750c010f776e8db07",
+                "implement.md": "bb87e18da5c8ff4b442c012c1ddce3483719cdb4ff4dda6d5f5ce80a5028d43e"
+              },
+              "editorialChanges": []
+            },
+            "planningApproval": {
+              "schemaVersion": 1,
+              "reviewId": "c4eb6574fa664ef3a770c94db22aa5cd",
+              "reviewedFiles": {
+                "prd.md": "02fbae7c957cc80a1b28e95a46a7775f2cc819d5e828ad324a88e5fb64a9e7b9",
+                "design.md": "8e3a7d2b65c9597fe3be1d27c835b88f122eec923115edf750c010f776e8db07",
+                "implement.md": "bb87e18da5c8ff4b442c012c1ddce3483719cdb4ff4dda6d5f5ce80a5028d43e"
+              },
+              "recordedAt": "2026-11-13T02:55:49.530127+00:00",
+              "note": "同意。",
+              "source": "本会话：用户在上一条展示完整版本 c4eb6574fa664ef3a770c94db22aa5cd、明确仅登记隔离样例开工与核验的确认问题后，回复“同意。”；无可用消息编号，不编造。展示内容另存于 m2-human-review-summary.md。"
+            }
+          }
+        },
+        "taskBytesSha256": "88f8129c9bddf8a4a4ccf6d319137b0911174996d447be290e27ec35468e2ecc",
+        "artifactHashes": {
+          "prd.md": "02fbae7c957cc80a1b28e95a46a7775f2cc819d5e828ad324a88e5fb64a9e7b9",
+          "design.md": "8e3a7d2b65c9597fe3be1d27c835b88f122eec923115edf750c010f776e8db07",
+          "implement.md": "bb87e18da5c8ff4b442c012c1ddce3483719cdb4ff4dda6d5f5ce80a5028d43e"
+        },
+        "sessionPointers": {
+          ".trellis/.runtime/sessions/review-M2-real-reconfirmation.json": {
+            "current_task": ".trellis/tasks/review-case",
+            "platform": "session",
+            "last_seen_at": "2026-11-13T02:55:49Z",
+            "current_run": null
+          }
+        },
+        "branch": "compare-feature",
+        "gitHead": "a6f03d8cad8923977a35b22082e771d0586e7dd0",
+        "hookText": "after_start\n",
+        "afterStartHooks": 1,
+        "afterArchiveHooks": 0
+      }
+    },
+    {
+      "label": "validate-approved-version",
+      "argv": [
+        "C:\\Python313\\python.exe",
+        ".trellis/scripts/task.py",
+        "validate",
+        ".trellis/tasks/review-case"
+      ],
+      "exit": 0,
+      "stdout": "\u001b[0;34m=== Validating Context Files ===\u001b[0m\nTarget dir: C:\\Users\\PXWD\\AppData\\Local\\Temp\\trellis-a-m2-live-review-18ub0npf\\fixtures\\M2-real-reconfirmation\\.trellis\\tasks\\review-case\n\nPlanning: ready; review: c4eb6574fa664ef3a770c94db22aa5cd\n  \u001b[0;32mimplement.jsonl: ✓ (1 entries)\u001b[0m\n  \u001b[0;32mcheck.jsonl: ✓ (1 entries)\u001b[0m\n\n\u001b[0;32m✓ All validations passed\u001b[0m\n",
+      "stderr": "",
+      "seconds": 0.27554760000020906,
+      "before": {
+        "record": {
+          "id": "review-case",
+          "name": "review-case",
+          "title": "Fixture",
+          "description": "Review only",
+          "status": "in_progress",
+          "branch": "compare-feature",
+          "base_branch": null,
+          "unknownTop": "preserve",
+          "meta": {
+            "other": {
+              "keep": true
+            },
+            "planningAttest": {
+              "schemaVersion": 1,
+              "reviewId": "c4eb6574fa664ef3a770c94db22aa5cd",
+              "attestedAt": "2026-11-13T02:38:46.893110+00:00",
+              "note": "M2 version B: local-only to remote-upload design; review required; isolated metadata exercise, no network operation",
+              "reviewFiles": {
+                "prd.md": "02fbae7c957cc80a1b28e95a46a7775f2cc819d5e828ad324a88e5fb64a9e7b9",
+                "design.md": "8e3a7d2b65c9597fe3be1d27c835b88f122eec923115edf750c010f776e8db07",
+                "implement.md": "bb87e18da5c8ff4b442c012c1ddce3483719cdb4ff4dda6d5f5ce80a5028d43e"
+              },
+              "files": {
+                "prd.md": "02fbae7c957cc80a1b28e95a46a7775f2cc819d5e828ad324a88e5fb64a9e7b9",
+                "design.md": "8e3a7d2b65c9597fe3be1d27c835b88f122eec923115edf750c010f776e8db07",
+                "implement.md": "bb87e18da5c8ff4b442c012c1ddce3483719cdb4ff4dda6d5f5ce80a5028d43e"
+              },
+              "editorialChanges": []
+            },
+            "planningApproval": {
+              "schemaVersion": 1,
+              "reviewId": "c4eb6574fa664ef3a770c94db22aa5cd",
+              "reviewedFiles": {
+                "prd.md": "02fbae7c957cc80a1b28e95a46a7775f2cc819d5e828ad324a88e5fb64a9e7b9",
+                "design.md": "8e3a7d2b65c9597fe3be1d27c835b88f122eec923115edf750c010f776e8db07",
+                "implement.md": "bb87e18da5c8ff4b442c012c1ddce3483719cdb4ff4dda6d5f5ce80a5028d43e"
+              },
+              "recordedAt": "2026-11-13T02:55:49.530127+00:00",
+              "note": "同意。",
+              "source": "本会话：用户在上一条展示完整版本 c4eb6574fa664ef3a770c94db22aa5cd、明确仅登记隔离样例开工与核验的确认问题后，回复“同意。”；无可用消息编号，不编造。展示内容另存于 m2-human-review-summary.md。"
+            }
+          }
+        },
+        "taskBytesSha256": "88f8129c9bddf8a4a4ccf6d319137b0911174996d447be290e27ec35468e2ecc",
+        "artifactHashes": {
+          "prd.md": "02fbae7c957cc80a1b28e95a46a7775f2cc819d5e828ad324a88e5fb64a9e7b9",
+          "design.md": "8e3a7d2b65c9597fe3be1d27c835b88f122eec923115edf750c010f776e8db07",
+          "implement.md": "bb87e18da5c8ff4b442c012c1ddce3483719cdb4ff4dda6d5f5ce80a5028d43e"
+        },
+        "sessionPointers": {
+          ".trellis/.runtime/sessions/review-M2-real-reconfirmation.json": {
+            "current_task": ".trellis/tasks/review-case",
+            "platform": "session",
+            "last_seen_at": "2026-11-13T02:55:49Z",
+            "current_run": null
+          }
+        },
+        "branch": "compare-feature",
+        "gitHead": "a6f03d8cad8923977a35b22082e771d0586e7dd0",
+        "hookText": "after_start\n",
+        "afterStartHooks": 1,
+        "afterArchiveHooks": 0
+      },
+      "after": {
+        "record": {
+          "id": "review-case",
+          "name": "review-case",
+          "title": "Fixture",
+          "description": "Review only",
+          "status": "in_progress",
+          "branch": "compare-feature",
+          "base_branch": null,
+          "unknownTop": "preserve",
+          "meta": {
+            "other": {
+              "keep": true
+            },
+            "planningAttest": {
+              "schemaVersion": 1,
+              "reviewId": "c4eb6574fa664ef3a770c94db22aa5cd",
+              "attestedAt": "2026-11-13T02:38:46.893110+00:00",
+              "note": "M2 version B: local-only to remote-upload design; review required; isolated metadata exercise, no network operation",
+              "reviewFiles": {
+                "prd.md": "02fbae7c957cc80a1b28e95a46a7775f2cc819d5e828ad324a88e5fb64a9e7b9",
+                "design.md": "8e3a7d2b65c9597fe3be1d27c835b88f122eec923115edf750c010f776e8db07",
+                "implement.md": "bb87e18da5c8ff4b442c012c1ddce3483719cdb4ff4dda6d5f5ce80a5028d43e"
+              },
+              "files": {
+                "prd.md": "02fbae7c957cc80a1b28e95a46a7775f2cc819d5e828ad324a88e5fb64a9e7b9",
+                "design.md": "8e3a7d2b65c9597fe3be1d27c835b88f122eec923115edf750c010f776e8db07",
+                "implement.md": "bb87e18da5c8ff4b442c012c1ddce3483719cdb4ff4dda6d5f5ce80a5028d43e"
+              },
+              "editorialChanges": []
+            },
+            "planningApproval": {
+              "schemaVersion": 1,
+              "reviewId": "c4eb6574fa664ef3a770c94db22aa5cd",
+              "reviewedFiles": {
+                "prd.md": "02fbae7c957cc80a1b28e95a46a7775f2cc819d5e828ad324a88e5fb64a9e7b9",
+                "design.md": "8e3a7d2b65c9597fe3be1d27c835b88f122eec923115edf750c010f776e8db07",
+                "implement.md": "bb87e18da5c8ff4b442c012c1ddce3483719cdb4ff4dda6d5f5ce80a5028d43e"
+              },
+              "recordedAt": "2026-11-13T02:55:49.530127+00:00",
+              "note": "同意。",
+              "source": "本会话：用户在上一条展示完整版本 c4eb6574fa664ef3a770c94db22aa5cd、明确仅登记隔离样例开工与核验的确认问题后，回复“同意。”；无可用消息编号，不编造。展示内容另存于 m2-human-review-summary.md。"
+            }
+          }
+        },
+        "taskBytesSha256": "88f8129c9bddf8a4a4ccf6d319137b0911174996d447be290e27ec35468e2ecc",
+        "artifactHashes": {
+          "prd.md": "02fbae7c957cc80a1b28e95a46a7775f2cc819d5e828ad324a88e5fb64a9e7b9",
+          "design.md": "8e3a7d2b65c9597fe3be1d27c835b88f122eec923115edf750c010f776e8db07",
+          "implement.md": "bb87e18da5c8ff4b442c012c1ddce3483719cdb4ff4dda6d5f5ce80a5028d43e"
+        },
+        "sessionPointers": {
+          ".trellis/.runtime/sessions/review-M2-real-reconfirmation.json": {
+            "current_task": ".trellis/tasks/review-case",
+            "platform": "session",
+            "last_seen_at": "2026-11-13T02:55:49Z",
+            "current_run": null
+          }
+        },
+        "branch": "compare-feature",
+        "gitHead": "a6f03d8cad8923977a35b22082e771d0586e7dd0",
+        "hookText": "after_start\n",
+        "afterStartHooks": 1,
+        "afterArchiveHooks": 0
+      }
+    }
+  ],
+  "status": "failed-assertions",
+  "final": {
+    "record": {
+      "id": "review-case",
+      "name": "review-case",
+      "title": "Fixture",
+      "description": "Review only",
+      "status": "in_progress",
+      "branch": "compare-feature",
+      "base_branch": null,
+      "unknownTop": "preserve",
+      "meta": {
+        "other": {
+          "keep": true
+        },
+        "planningAttest": {
+          "schemaVersion": 1,
+          "reviewId": "c4eb6574fa664ef3a770c94db22aa5cd",
+          "attestedAt": "2026-11-13T02:38:46.893110+00:00",
+          "note": "M2 version B: local-only to remote-upload design; review required; isolated metadata exercise, no network operation",
+          "reviewFiles": {
+            "prd.md": "02fbae7c957cc80a1b28e95a46a7775f2cc819d5e828ad324a88e5fb64a9e7b9",
+            "design.md": "8e3a7d2b65c9597fe3be1d27c835b88f122eec923115edf750c010f776e8db07",
+            "implement.md": "bb87e18da5c8ff4b442c012c1ddce3483719cdb4ff4dda6d5f5ce80a5028d43e"
+          },
+          "files": {
+            "prd.md": "02fbae7c957cc80a1b28e95a46a7775f2cc819d5e828ad324a88e5fb64a9e7b9",
+            "design.md": "8e3a7d2b65c9597fe3be1d27c835b88f122eec923115edf750c010f776e8db07",
+            "implement.md": "bb87e18da5c8ff4b442c012c1ddce3483719cdb4ff4dda6d5f5ce80a5028d43e"
+          },
+          "editorialChanges": []
+        },
+        "planningApproval": {
+          "schemaVersion": 1,
+          "reviewId": "c4eb6574fa664ef3a770c94db22aa5cd",
+          "reviewedFiles": {
+            "prd.md": "02fbae7c957cc80a1b28e95a46a7775f2cc819d5e828ad324a88e5fb64a9e7b9",
+            "design.md": "8e3a7d2b65c9597fe3be1d27c835b88f122eec923115edf750c010f776e8db07",
+            "implement.md": "bb87e18da5c8ff4b442c012c1ddce3483719cdb4ff4dda6d5f5ce80a5028d43e"
+          },
+          "recordedAt": "2026-11-13T02:55:49.530127+00:00",
+          "note": "同意。",
+          "source": "本会话：用户在上一条展示完整版本 c4eb6574fa664ef3a770c94db22aa5cd、明确仅登记隔离样例开工与核验的确认问题后，回复“同意。”；无可用消息编号，不编造。展示内容另存于 m2-human-review-summary.md。"
+        }
+      }
+    },
+    "taskBytesSha256": "88f8129c9bddf8a4a4ccf6d319137b0911174996d447be290e27ec35468e2ecc",
+    "artifactHashes": {
+      "prd.md": "02fbae7c957cc80a1b28e95a46a7775f2cc819d5e828ad324a88e5fb64a9e7b9",
+      "design.md": "8e3a7d2b65c9597fe3be1d27c835b88f122eec923115edf750c010f776e8db07",
+      "implement.md": "bb87e18da5c8ff4b442c012c1ddce3483719cdb4ff4dda6d5f5ce80a5028d43e"
+    },
+    "sessionPointers": {
+      ".trellis/.runtime/sessions/review-M2-real-reconfirmation.json": {
+        "current_task": ".trellis/tasks/review-case",
+        "platform": "session",
+        "last_seen_at": "2026-11-13T02:55:49Z",
+        "current_run": null
+      }
+    },
+    "branch": "compare-feature",
+    "gitHead": "a6f03d8cad8923977a35b22082e771d0586e7dd0",
+    "hookText": "after_start\n",
+    "afterStartHooks": 1,
+    "afterArchiveHooks": 0
+  },
+  "planningStatusReadback": {
+    "mode": "ready",
+    "reviewId": "c4eb6574fa664ef3a770c94db22aa5cd",
+    "note": "M2 version B: local-only to remote-upload design; review required; isolated metadata exercise, no network operation",
+    "approvalNote": "同意。",
+    "approvalSource": "本会话：用户在上一条展示完整版本 c4eb6574fa664ef3a770c94db22aa5cd、明确仅登记隔离样例开工与核验的确认问题后，回复“同意。”；无可用消息编号，不编造。展示内容另存于 m2-human-review-summary.md。",
+    "changedFiles": [],
+    "errors": [],
+    "replan": null
+  },
+  "checks": {
+    "versionUnchanged": true,
+    "artifactHashesUnchanged": true,
+    "inProgress": true,
+    "approvalVersionMatches": true,
+    "approvalFingerprintsMatch": true,
+    "realReplyMatches": true,
+    "realSourceMatches": true,
+    "replanCleared": true,
+    "unknownKeysPreserved": true,
+    "pointerStillTargetsFixture": true,
+    "pointerCollectionUnchanged": false,
+    "branchUnchanged": true,
+    "gitHeadUnchanged": true,
+    "startHookExactlyOneAdded": true,
+    "noArchiveHook": true,
+    "validateDidNotWriteState": true
+  },
+  "stoppedAfterReadback": true,
+  "limitations": [
+    "Old approval is synthetic setup; only the new reply is real.",
+    "Local approval records do not authenticate identity.",
+    "No network client or upload is executed."
+  ]
+}

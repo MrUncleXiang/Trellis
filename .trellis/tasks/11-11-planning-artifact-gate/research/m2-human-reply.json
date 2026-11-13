@@ -1,0 +1,9 @@
+{
+  "receivedAndRecordedAt": "2026-11-13T02:55:48.917942+00:00",
+  "reviewId": "c4eb6574fa664ef3a770c94db22aa5cd",
+  "note": "同意。",
+  "source": "本会话：用户在上一条展示完整版本 c4eb6574fa664ef3a770c94db22aa5cd、明确仅登记隔离样例开工与核验的确认问题后，回复“同意。”；无可用消息编号，不编造。展示内容另存于 m2-human-review-summary.md。",
+  "scope": "仅隔离样例的版本绑定开工、读回批准/状态/指针/钩子后停止；无上传、不改变 A 产品范围",
+  "oldApprovalSynthetic": true,
+  "twoRealApprovalRoundsClaimed": false
+}

@@ -1,0 +1,122 @@
+{
+  "verifiedAt": "2026-11-13T02:57:10.865349+00:00",
+  "status": "complete",
+  "implementation": "1b801471966e8fb898d0c33e1b025aad2a86f5db",
+  "reviewId": "c4eb6574fa664ef3a770c94db22aa5cd",
+  "approval": {
+    "receivedAndRecordedAt": "2026-11-13T02:55:48.917942+00:00",
+    "reviewId": "c4eb6574fa664ef3a770c94db22aa5cd",
+    "note": "同意。",
+    "source": "本会话：用户在上一条展示完整版本 c4eb6574fa664ef3a770c94db22aa5cd、明确仅登记隔离样例开工与核验的确认问题后，回复“同意。”；无可用消息编号，不编造。展示内容另存于 m2-human-review-summary.md。",
+    "scope": "仅隔离样例的版本绑定开工、读回批准/状态/指针/钩子后停止；无上传、不改变 A 产品范围",
+    "oldApprovalSynthetic": true,
+    "twoRealApprovalRoundsClaimed": false
+  },
+  "originalExecutionRecord": "m2-human-reconfirmation-result.json",
+  "originalFailedAssertionPreserved": true,
+  "correction": {
+    "incorrectAssertion": "pointerCollectionUnchanged: successful start must keep the complete session pointer record byte-for-byte/field-for-field unchanged",
+    "contractBasis": "design.md:197 and workflow-state-contract.md:414 permit successful pointer writes after the atomic task record save; only failed preconditions require no side effects.",
+    "requiredAssertion": "same pointer files continue to select the same fixture task; normal last_seen_at/platform/current_run refresh is allowed",
+    "actualMetadataDeltas": {
+      ".trellis/.runtime/sessions/review-M2-real-reconfirmation.json": {
+        "platform": {
+          "before": "codex",
+          "after": "session"
+        },
+        "last_seen_at": {
+          "before": null,
+          "after": "2026-11-13T02:55:49Z"
+        }
+      }
+    },
+    "productChanges": false,
+    "startRetried": false
+  },
+  "oldVersionRejectedWithoutSideEffects": true,
+  "checks": {
+    "versionUnchanged": true,
+    "artifactHashesUnchanged": true,
+    "inProgress": true,
+    "approvalVersionMatches": true,
+    "approvalFingerprintsMatch": true,
+    "realReplyMatches": true,
+    "realSourceMatches": true,
+    "replanCleared": true,
+    "unknownKeysPreserved": true,
+    "pointerStillTargetsFixture": true,
+    "branchUnchanged": true,
+    "gitHeadUnchanged": true,
+    "startHookExactlyOneAdded": true,
+    "noArchiveHook": true,
+    "validateDidNotWriteState": true,
+    "pointerFilesUnchanged": true,
+    "pointerTargetsUnchanged": true,
+    "statusReady": true,
+    "statusVersionMatches": true,
+    "statusApprovalMatches": true,
+    "noDriftOrErrors": true,
+    "noWritesDuringAdditionalReadback": true,
+    "onlyOneStartCommand": true
+  },
+  "additionalReadback": {
+    "argv": [
+      "C:\\Python313\\python.exe",
+      ".trellis/scripts/task.py",
+      "planning-status",
+      ".trellis/tasks/review-case",
+      "--json"
+    ],
+    "exit": 0,
+    "stdout": "{\"mode\": \"ready\", \"reviewId\": \"c4eb6574fa664ef3a770c94db22aa5cd\", \"note\": \"M2 version B: local-only to remote-upload design; review required; isolated metadata exercise, no network operation\", \"approvalNote\": \"同意。\", \"approvalSource\": \"本会话：用户在上一条展示完整版本 c4eb6574fa664ef3a770c94db22aa5cd、明确仅登记隔离样例开工与核验的确认问题后，回复“同意。”；无可用消息编号，不编造。展示内容另存于 m2-human-review-summary.md。\", \"changedFiles\": [], \"errors\": [], \"replan\": null}\n",
+    "stderr": ""
+  },
+  "finalRecord": {
+    "id": "review-case",
+    "name": "review-case",
+    "title": "Fixture",
+    "description": "Review only",
+    "status": "in_progress",
+    "branch": "compare-feature",
+    "base_branch": null,
+    "unknownTop": "preserve",
+    "meta": {
+      "other": {
+        "keep": true
+      },
+      "planningAttest": {
+        "schemaVersion": 1,
+        "reviewId": "c4eb6574fa664ef3a770c94db22aa5cd",
+        "attestedAt": "2026-11-13T02:38:46.893110+00:00",
+        "note": "M2 version B: local-only to remote-upload design; review required; isolated metadata exercise, no network operation",
+        "reviewFiles": {
+          "prd.md": "02fbae7c957cc80a1b28e95a46a7775f2cc819d5e828ad324a88e5fb64a9e7b9",
+          "design.md": "8e3a7d2b65c9597fe3be1d27c835b88f122eec923115edf750c010f776e8db07",
+          "implement.md": "bb87e18da5c8ff4b442c012c1ddce3483719cdb4ff4dda6d5f5ce80a5028d43e"
+        },
+        "files": {
+          "prd.md": "02fbae7c957cc80a1b28e95a46a7775f2cc819d5e828ad324a88e5fb64a9e7b9",
+          "design.md": "8e3a7d2b65c9597fe3be1d27c835b88f122eec923115edf750c010f776e8db07",
+          "implement.md": "bb87e18da5c8ff4b442c012c1ddce3483719cdb4ff4dda6d5f5ce80a5028d43e"
+        },
+        "editorialChanges": []
+      },
+      "planningApproval": {
+        "schemaVersion": 1,
+        "reviewId": "c4eb6574fa664ef3a770c94db22aa5cd",
+        "reviewedFiles": {
+          "prd.md": "02fbae7c957cc80a1b28e95a46a7775f2cc819d5e828ad324a88e5fb64a9e7b9",
+          "design.md": "8e3a7d2b65c9597fe3be1d27c835b88f122eec923115edf750c010f776e8db07",
+          "implement.md": "bb87e18da5c8ff4b442c012c1ddce3483719cdb4ff4dda6d5f5ce80a5028d43e"
+        },
+        "recordedAt": "2026-11-13T02:55:49.530127+00:00",
+        "note": "同意。",
+        "source": "本会话：用户在上一条展示完整版本 c4eb6574fa664ef3a770c94db22aa5cd、明确仅登记隔离样例开工与核验的确认问题后，回复“同意。”；无可用消息编号，不编造。展示内容另存于 m2-human-review-summary.md。"
+      }
+    }
+  },
+  "finalHookText": "after_start\r\n",
+  "oldApprovalSynthetic": true,
+  "realReplyCoverage": "Only new version B has a real user reply; do not claim two rounds of real human approval",
+  "stoppedAfterReadback": true
+}

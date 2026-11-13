@@ -1,0 +1,6 @@
+{
+  "implementation": "1b801471966e8fb898d0c33e1b025aad2a86f5db",
+  "command": "pnpm --filter @mindfoldhq/trellis exec vitest run test/scripts/task-planning.integration.test.ts test/scripts/planning-status.integration.test.ts test/templates/planning-contract.test.ts --maxWorkers=2 --testTimeout=60000",
+  "exit": 0,
+  "log": "m2-closure-focused-tests.txt"
+}

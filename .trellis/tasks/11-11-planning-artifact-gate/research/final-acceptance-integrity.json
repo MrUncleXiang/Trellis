@@ -1,0 +1,692 @@
+{
+  "checkedAt": "2026-11-13T02:58:27.115695+00:00",
+  "reviewer": "Main session final acceptance, using separately scoped existing independent core/platform reviews",
+  "implementation": "1b801471966e8fb898d0c33e1b025aad2a86f5db",
+  "priorEvidenceCommit": "97be05216991c880e51f3eb3198e92f845de16e9",
+  "frozen": [
+    {
+      "file": "prd.md",
+      "workingMatch": true,
+      "implementationMatch": true
+    },
+    {
+      "file": "design.md",
+      "workingMatch": true,
+      "implementationMatch": true
+    },
+    {
+      "file": "implement.md",
+      "workingMatch": true,
+      "implementationMatch": true
+    },
+    {
+      "file": "research/test-plan-2026-11-12.md",
+      "workingMatch": true,
+      "implementationMatch": true
+    },
+    {
+      "file": "research/context-read-map-2026-11-12.md",
+      "workingMatch": true,
+      "implementationMatch": true
+    }
+  ],
+  "scriptPairs": [
+    {
+      "file": "__init__.py",
+      "same": true
+    },
+    {
+      "file": "add_session.py",
+      "same": true
+    },
+    {
+      "file": "common/__init__.py",
+      "same": true
+    },
+    {
+      "file": "common/active_task.py",
+      "same": true
+    },
+    {
+      "file": "common/cli_adapter.py",
+      "same": true
+    },
+    {
+      "file": "common/config.py",
+      "same": true
+    },
+    {
+      "file": "common/developer.py",
+      "same": true
+    },
+    {
+      "file": "common/git.py",
+      "same": true
+    },
+    {
+      "file": "common/git_context.py",
+      "same": true
+    },
+    {
+      "file": "common/io.py",
+      "same": true
+    },
+    {
+      "file": "common/log.py",
+      "same": true
+    },
+    {
+      "file": "common/packages_context.py",
+      "same": true
+    },
+    {
+      "file": "common/paths.py",
+      "same": true
+    },
+    {
+      "file": "common/planning.py",
+      "same": true
+    },
+    {
+      "file": "common/safe_commit.py",
+      "same": true
+    },
+    {
+      "file": "common/session_context.py",
+      "same": true
+    },
+    {
+      "file": "common/task_context.py",
+      "same": true
+    },
+    {
+      "file": "common/task_queue.py",
+      "same": true
+    },
+    {
+      "file": "common/task_store.py",
+      "same": true
+    },
+    {
+      "file": "common/task_utils.py",
+      "same": true
+    },
+    {
+      "file": "common/tasks.py",
+      "same": true
+    },
+    {
+      "file": "common/trellis_config.py",
+      "same": true
+    },
+    {
+      "file": "common/types.py",
+      "same": true
+    },
+    {
+      "file": "common/workflow_phase.py",
+      "same": true
+    },
+    {
+      "file": "get_context.py",
+      "same": true
+    },
+    {
+      "file": "get_developer.py",
+      "same": true
+    },
+    {
+      "file": "hooks/linear_sync.py",
+      "same": true
+    },
+    {
+      "file": "init_developer.py",
+      "same": true
+    },
+    {
+      "file": "task.py",
+      "same": true
+    }
+  ],
+  "generated": [
+    {
+      "path": ".agents/skills/trellis-before-dev/SKILL.md",
+      "sameAsPreviouslyGeneratorVerifiedImplementation": true
+    },
+    {
+      "path": ".agents/skills/trellis-brainstorm/SKILL.md",
+      "sameAsPreviouslyGeneratorVerifiedImplementation": true
+    },
+    {
+      "path": ".agents/skills/trellis-check/SKILL.md",
+      "sameAsPreviouslyGeneratorVerifiedImplementation": true
+    },
+    {
+      "path": ".agents/skills/trellis-continue/SKILL.md",
+      "sameAsPreviouslyGeneratorVerifiedImplementation": true
+    },
+    {
+      "path": ".agents/skills/trellis-meta/references/customize-local/change-context-loading.md",
+      "sameAsPreviouslyGeneratorVerifiedImplementation": true
+    },
+    {
+      "path": ".agents/skills/trellis-meta/references/customize-local/change-workflow.md",
+      "sameAsPreviouslyGeneratorVerifiedImplementation": true
+    },
+    {
+      "path": ".agents/skills/trellis-meta/references/local-architecture/context-injection.md",
+      "sameAsPreviouslyGeneratorVerifiedImplementation": true
+    },
+    {
+      "path": ".agents/skills/trellis-meta/references/local-architecture/task-system.md",
+      "sameAsPreviouslyGeneratorVerifiedImplementation": true
+    },
+    {
+      "path": ".agents/skills/trellis-meta/references/platform-files/agents.md",
+      "sameAsPreviouslyGeneratorVerifiedImplementation": true
+    },
+    {
+      "path": ".agents/skills/trellis-start/SKILL.md",
+      "sameAsPreviouslyGeneratorVerifiedImplementation": true
+    },
+    {
+      "path": ".claude/agents/trellis-check.md",
+      "sameAsPreviouslyGeneratorVerifiedImplementation": true
+    },
+    {
+      "path": ".claude/agents/trellis-implement.md",
+      "sameAsPreviouslyGeneratorVerifiedImplementation": true
+    },
+    {
+      "path": ".claude/commands/trellis/continue.md",
+      "sameAsPreviouslyGeneratorVerifiedImplementation": true
+    },
+    {
+      "path": ".claude/hooks/inject-subagent-context.py",
+      "sameAsPreviouslyGeneratorVerifiedImplementation": true
+    },
+    {
+      "path": ".claude/hooks/session-start.py",
+      "sameAsPreviouslyGeneratorVerifiedImplementation": true
+    },
+    {
+      "path": ".claude/skills/trellis-before-dev/SKILL.md",
+      "sameAsPreviouslyGeneratorVerifiedImplementation": true
+    },
+    {
+      "path": ".claude/skills/trellis-brainstorm/SKILL.md",
+      "sameAsPreviouslyGeneratorVerifiedImplementation": true
+    },
+    {
+      "path": ".claude/skills/trellis-check/SKILL.md",
+      "sameAsPreviouslyGeneratorVerifiedImplementation": true
+    },
+    {
+      "path": ".claude/skills/trellis-meta/references/customize-local/change-context-loading.md",
+      "sameAsPreviouslyGeneratorVerifiedImplementation": true
+    },
+    {
+      "path": ".claude/skills/trellis-meta/references/customize-local/change-workflow.md",
+      "sameAsPreviouslyGeneratorVerifiedImplementation": true
+    },
+    {
+      "path": ".claude/skills/trellis-meta/references/local-architecture/context-injection.md",
+      "sameAsPreviouslyGeneratorVerifiedImplementation": true
+    },
+    {
+      "path": ".claude/skills/trellis-meta/references/local-architecture/task-system.md",
+      "sameAsPreviouslyGeneratorVerifiedImplementation": true
+    },
+    {
+      "path": ".claude/skills/trellis-meta/references/platform-files/agents.md",
+      "sameAsPreviouslyGeneratorVerifiedImplementation": true
+    },
+    {
+      "path": ".codex/agents/trellis-check.toml",
+      "sameAsPreviouslyGeneratorVerifiedImplementation": true
+    },
+    {
+      "path": ".codex/agents/trellis-implement.toml",
+      "sameAsPreviouslyGeneratorVerifiedImplementation": true
+    },
+    {
+      "path": ".codex/hooks/inject-subagent-context.py",
+      "sameAsPreviouslyGeneratorVerifiedImplementation": true
+    },
+    {
+      "path": ".codex/hooks/session-start.py",
+      "sameAsPreviouslyGeneratorVerifiedImplementation": true
+    },
+    {
+      "path": ".cursor/agents/trellis-check.md",
+      "sameAsPreviouslyGeneratorVerifiedImplementation": true
+    },
+    {
+      "path": ".cursor/agents/trellis-implement.md",
+      "sameAsPreviouslyGeneratorVerifiedImplementation": true
+    },
+    {
+      "path": ".cursor/commands/trellis-continue.md",
+      "sameAsPreviouslyGeneratorVerifiedImplementation": true
+    },
+    {
+      "path": ".cursor/hooks/inject-subagent-context.py",
+      "sameAsPreviouslyGeneratorVerifiedImplementation": true
+    },
+    {
+      "path": ".cursor/hooks/session-start.py",
+      "sameAsPreviouslyGeneratorVerifiedImplementation": true
+    },
+    {
+      "path": ".cursor/skills/trellis-before-dev/SKILL.md",
+      "sameAsPreviouslyGeneratorVerifiedImplementation": true
+    },
+    {
+      "path": ".cursor/skills/trellis-brainstorm/SKILL.md",
+      "sameAsPreviouslyGeneratorVerifiedImplementation": true
+    },
+    {
+      "path": ".cursor/skills/trellis-check/SKILL.md",
+      "sameAsPreviouslyGeneratorVerifiedImplementation": true
+    },
+    {
+      "path": ".cursor/skills/trellis-meta/references/customize-local/change-context-loading.md",
+      "sameAsPreviouslyGeneratorVerifiedImplementation": true
+    },
+    {
+      "path": ".cursor/skills/trellis-meta/references/customize-local/change-workflow.md",
+      "sameAsPreviouslyGeneratorVerifiedImplementation": true
+    },
+    {
+      "path": ".cursor/skills/trellis-meta/references/local-architecture/context-injection.md",
+      "sameAsPreviouslyGeneratorVerifiedImplementation": true
+    },
+    {
+      "path": ".cursor/skills/trellis-meta/references/local-architecture/task-system.md",
+      "sameAsPreviouslyGeneratorVerifiedImplementation": true
+    },
+    {
+      "path": ".cursor/skills/trellis-meta/references/platform-files/agents.md",
+      "sameAsPreviouslyGeneratorVerifiedImplementation": true
+    },
+    {
+      "path": ".omp/agents/trellis-check.md",
+      "sameAsPreviouslyGeneratorVerifiedImplementation": true
+    },
+    {
+      "path": ".omp/agents/trellis-implement.md",
+      "sameAsPreviouslyGeneratorVerifiedImplementation": true
+    },
+    {
+      "path": ".omp/commands/trellis-continue.md",
+      "sameAsPreviouslyGeneratorVerifiedImplementation": true
+    },
+    {
+      "path": ".omp/skills/trellis-before-dev/SKILL.md",
+      "sameAsPreviouslyGeneratorVerifiedImplementation": true
+    },
+    {
+      "path": ".omp/skills/trellis-brainstorm/SKILL.md",
+      "sameAsPreviouslyGeneratorVerifiedImplementation": true
+    },
+    {
+      "path": ".omp/skills/trellis-check/SKILL.md",
+      "sameAsPreviouslyGeneratorVerifiedImplementation": true
+    },
+    {
+      "path": ".omp/skills/trellis-meta/references/customize-local/change-context-loading.md",
+      "sameAsPreviouslyGeneratorVerifiedImplementation": true
+    },
+    {
+      "path": ".omp/skills/trellis-meta/references/customize-local/change-workflow.md",
+      "sameAsPreviouslyGeneratorVerifiedImplementation": true
+    },
+    {
+      "path": ".omp/skills/trellis-meta/references/local-architecture/context-injection.md",
+      "sameAsPreviouslyGeneratorVerifiedImplementation": true
+    },
+    {
+      "path": ".omp/skills/trellis-meta/references/local-architecture/task-system.md",
+      "sameAsPreviouslyGeneratorVerifiedImplementation": true
+    },
+    {
+      "path": ".omp/skills/trellis-meta/references/platform-files/agents.md",
+      "sameAsPreviouslyGeneratorVerifiedImplementation": true
+    },
+    {
+      "path": ".opencode/agents/trellis-check.md",
+      "sameAsPreviouslyGeneratorVerifiedImplementation": true
+    },
+    {
+      "path": ".opencode/agents/trellis-implement.md",
+      "sameAsPreviouslyGeneratorVerifiedImplementation": true
+    },
+    {
+      "path": ".opencode/commands/trellis/continue.md",
+      "sameAsPreviouslyGeneratorVerifiedImplementation": true
+    },
+    {
+      "path": ".opencode/commands/trellis/start.md",
+      "sameAsPreviouslyGeneratorVerifiedImplementation": true
+    },
+    {
+      "path": ".opencode/lib/session-utils.js",
+      "sameAsPreviouslyGeneratorVerifiedImplementation": true
+    },
+    {
+      "path": ".opencode/plugins/inject-subagent-context.js",
+      "sameAsPreviouslyGeneratorVerifiedImplementation": true
+    },
+    {
+      "path": ".opencode/skills/trellis-before-dev/SKILL.md",
+      "sameAsPreviouslyGeneratorVerifiedImplementation": true
+    },
+    {
+      "path": ".opencode/skills/trellis-brainstorm/SKILL.md",
+      "sameAsPreviouslyGeneratorVerifiedImplementation": true
+    },
+    {
+      "path": ".opencode/skills/trellis-check/SKILL.md",
+      "sameAsPreviouslyGeneratorVerifiedImplementation": true
+    },
+    {
+      "path": ".opencode/skills/trellis-meta/references/customize-local/change-context-loading.md",
+      "sameAsPreviouslyGeneratorVerifiedImplementation": true
+    },
+    {
+      "path": ".opencode/skills/trellis-meta/references/customize-local/change-workflow.md",
+      "sameAsPreviouslyGeneratorVerifiedImplementation": true
+    },
+    {
+      "path": ".opencode/skills/trellis-meta/references/local-architecture/context-injection.md",
+      "sameAsPreviouslyGeneratorVerifiedImplementation": true
+    },
+    {
+      "path": ".opencode/skills/trellis-meta/references/local-architecture/task-system.md",
+      "sameAsPreviouslyGeneratorVerifiedImplementation": true
+    },
+    {
+      "path": ".opencode/skills/trellis-meta/references/platform-files/agents.md",
+      "sameAsPreviouslyGeneratorVerifiedImplementation": true
+    },
+    {
+      "path": ".pi/agents/trellis-check.md",
+      "sameAsPreviouslyGeneratorVerifiedImplementation": true
+    },
+    {
+      "path": ".pi/agents/trellis-implement.md",
+      "sameAsPreviouslyGeneratorVerifiedImplementation": true
+    },
+    {
+      "path": ".pi/prompts/trellis-continue.md",
+      "sameAsPreviouslyGeneratorVerifiedImplementation": true
+    },
+    {
+      "path": ".pi/prompts/trellis-start.md",
+      "sameAsPreviouslyGeneratorVerifiedImplementation": true
+    },
+    {
+      "path": ".pi/skills/trellis-before-dev/SKILL.md",
+      "sameAsPreviouslyGeneratorVerifiedImplementation": true
+    },
+    {
+      "path": ".pi/skills/trellis-brainstorm/SKILL.md",
+      "sameAsPreviouslyGeneratorVerifiedImplementation": true
+    },
+    {
+      "path": ".pi/skills/trellis-check/SKILL.md",
+      "sameAsPreviouslyGeneratorVerifiedImplementation": true
+    },
+    {
+      "path": ".pi/skills/trellis-meta/references/customize-local/change-context-loading.md",
+      "sameAsPreviouslyGeneratorVerifiedImplementation": true
+    },
+    {
+      "path": ".pi/skills/trellis-meta/references/customize-local/change-workflow.md",
+      "sameAsPreviouslyGeneratorVerifiedImplementation": true
+    },
+    {
+      "path": ".pi/skills/trellis-meta/references/local-architecture/context-injection.md",
+      "sameAsPreviouslyGeneratorVerifiedImplementation": true
+    },
+    {
+      "path": ".pi/skills/trellis-meta/references/local-architecture/task-system.md",
+      "sameAsPreviouslyGeneratorVerifiedImplementation": true
+    },
+    {
+      "path": ".pi/skills/trellis-meta/references/platform-files/agents.md",
+      "sameAsPreviouslyGeneratorVerifiedImplementation": true
+    },
+    {
+      "path": ".trellis/workflow.md",
+      "sameAsPreviouslyGeneratorVerifiedImplementation": true
+    }
+  ],
+  "generatedCaveat": "Previous actual generator output verification plus unchanged pinned files/inputs; not a new generator execution.",
+  "protectedOriginal": [
+    {
+      "file": ".claude/hooks/inject-subagent-context.py",
+      "same": true
+    },
+    {
+      "file": ".claude/hooks/session-start.py",
+      "same": true
+    },
+    {
+      "file": ".codex/hooks/inject-subagent-context.py",
+      "same": true
+    },
+    {
+      "file": ".cursor/hooks/inject-subagent-context.py",
+      "same": true
+    },
+    {
+      "file": ".cursor/hooks/session-start.py",
+      "same": true
+    },
+    {
+      "file": ".github/workflows/ci.yml",
+      "same": true
+    },
+    {
+      "file": ".opencode/lib/trellis-context.js",
+      "same": true
+    },
+    {
+      "file": ".trellis/scripts/common/__init__.py",
+      "same": true
+    },
+    {
+      "file": ".trellis/scripts/common/developer.py",
+      "same": true
+    },
+    {
+      "file": ".trellis/scripts/common/io.py",
+      "same": true
+    },
+    {
+      "file": ".trellis/scripts/common/task_context.py",
+      "same": true
+    },
+    {
+      "file": ".trellis/scripts/common/task_store.py",
+      "same": true
+    },
+    {
+      "file": ".trellis/scripts/hooks/linear_sync.py",
+      "same": true
+    },
+    {
+      "file": "package.json",
+      "same": true
+    },
+    {
+      "file": "packages/cli/src/templates/opencode/lib/trellis-context.js",
+      "same": true
+    },
+    {
+      "file": "packages/cli/src/templates/shared-hooks/inject-subagent-context.py",
+      "same": true
+    },
+    {
+      "file": "packages/cli/src/templates/shared-hooks/session-start.py",
+      "same": true
+    },
+    {
+      "file": "packages/cli/src/templates/trellis/scripts/common/__init__.py",
+      "same": true
+    },
+    {
+      "file": "packages/cli/src/templates/trellis/scripts/common/developer.py",
+      "same": true
+    },
+    {
+      "file": "packages/cli/src/templates/trellis/scripts/common/io.py",
+      "same": true
+    },
+    {
+      "file": "packages/cli/src/templates/trellis/scripts/common/task_context.py",
+      "same": true
+    },
+    {
+      "file": "packages/cli/src/templates/trellis/scripts/common/task_store.py",
+      "same": true
+    },
+    {
+      "file": "packages/cli/src/templates/trellis/scripts/hooks/linear_sync.py",
+      "same": true
+    },
+    {
+      "file": "packages/cli/test/commands/ablate.integration.test.ts",
+      "same": true
+    },
+    {
+      "file": "packages/cli/test/commands/platforms.integration.test.ts",
+      "same": true
+    },
+    {
+      "file": "packages/cli/test/commands/upgrade.test.ts",
+      "same": true
+    },
+    {
+      "file": "packages/cli/test/configurators/python-rewrite-parity.test.ts",
+      "same": true
+    },
+    {
+      "file": "packages/cli/test/registry-invariants.test.ts",
+      "same": true
+    },
+    {
+      "file": "packages/cli/test/regression.test.ts",
+      "same": true
+    },
+    {
+      "file": "packages/cli/test/scripts/add-session-worktree-warning.integration.test.ts",
+      "same": true
+    },
+    {
+      "file": "packages/cli/test/scripts/add-session.integration.test.ts",
+      "same": true
+    },
+    {
+      "file": "packages/cli/test/scripts/context-injection-limits.integration.test.ts",
+      "same": true
+    },
+    {
+      "file": "packages/cli/test/scripts/inject-workflow-state-kiro.integration.test.ts",
+      "same": true
+    },
+    {
+      "file": "packages/cli/test/scripts/prompt-injection-skip-keyword.integration.test.ts",
+      "same": true
+    },
+    {
+      "file": "packages/cli/test/scripts/symlinked-workflow-dir.integration.test.ts",
+      "same": true
+    },
+    {
+      "file": "packages/cli/test/scripts/task-archive.integration.test.ts",
+      "same": true
+    },
+    {
+      "file": "packages/cli/test/scripts/task-children-normalization.integration.test.ts",
+      "same": true
+    },
+    {
+      "file": "packages/cli/test/scripts/task-list-tree.integration.test.ts",
+      "same": true
+    },
+    {
+      "file": "packages/cli/test/scripts/task-meta.integration.test.ts",
+      "same": true
+    },
+    {
+      "file": "packages/cli/test/setup.ts",
+      "same": true
+    },
+    {
+      "file": "packages/cli/test/templates/trellis.test.ts",
+      "same": true
+    },
+    {
+      "file": "packages/cli/test/utils/atomic-write.test.ts",
+      "same": true
+    },
+    {
+      "file": "packages/cli/src/templates/trellis/workflow.md",
+      "same": true
+    },
+    {
+      "file": "marketplace/workflows/native/workflow.md",
+      "same": true
+    },
+    {
+      "file": "marketplace/workflows/tdd/workflow.md",
+      "same": true
+    },
+    {
+      "file": "marketplace/workflows/channel-driven-subagent-dispatch/workflow.md",
+      "same": true
+    }
+  ],
+  "submodule": {
+    "commit": "60228d8474ec836294884730579d1248a3ffb2d2",
+    "clean": true
+  },
+  "m2": {
+    "status": "complete",
+    "realReply": "同意。",
+    "reviewId": "c4eb6574fa664ef3a770c94db22aa5cd",
+    "originalHarnessFailureRetained": true,
+    "productCommandsFailed": false,
+    "startRetried": false,
+    "oldApprovalSynthetic": true
+  },
+  "focusedTests": {
+    "passed": 115,
+    "files": 3,
+    "exit": 0,
+    "log": "m2-closure-focused-tests.txt"
+  },
+  "formalComparison": {
+    "before": "9b76fe49f19de4d383dd4677fea803e2f2da7004",
+    "after": "1b801471966e8fb898d0c33e1b025aad2a86f5db",
+    "scenarioCount": 16,
+    "status": "complete"
+  },
+  "fullSuite": {
+    "corePassed": 398,
+    "coreSkipped": 2,
+    "cliPassed": 1987,
+    "cliFailed": 17,
+    "cliSkipped": 35,
+    "sameOldFailures": true,
+    "newFailures": [],
+    "fullSuiteGreen": false,
+    "rerunThisTurn": false
+  },
+  "productChangesSincePinnedImplementation": [],
+  "scope": "Implementation and verification complete locally; final evidence commit/readback remains. No push/archive/C.",
+  "taskStatusIntentionallyUnchanged": "in_progress until explicit archive; completion evidence is recorded separately",
+  "additionalIndependentReviewCompleted": false
+}

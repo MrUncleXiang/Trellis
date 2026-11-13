@@ -1,0 +1,46 @@
+{
+  "checkedAt": "2026-11-13T03:00:12.927569+00:00",
+  "commitPurpose": "Final A real-reply exercise and acceptance evidence; no product or frozen planning changes",
+  "parentEvidenceCommit": "97be05216991c880e51f3eb3198e92f845de16e9",
+  "implementation": "1b801471966e8fb898d0c33e1b025aad2a86f5db",
+  "gitnexus": {
+    "command": "npx --yes gitnexus@1.6.12 detect-changes --repo Trellis-A-implementation --scope staged",
+    "exit": 0,
+    "scannedFiles": 17,
+    "result": "No indexed symbol overlap; not proof of a clean tree or exhaustive absence of effects",
+    "scanLog": "gitnexus-final-evidence-scan.txt",
+    "addedAfterScan": [
+      "gitnexus-final-evidence-scan.txt",
+      "final-evidence-commit-audit.json"
+    ]
+  },
+  "whitespace": {
+    "exit": 0,
+    "scope": "Staged Markdown and JSON; raw text logs and binary archives preserve original bytes"
+  },
+  "filesAtScan": [
+    ".trellis/tasks/11-11-planning-artifact-gate/research/acceptance-coverage-checkpoint.md",
+    ".trellis/tasks/11-11-planning-artifact-gate/research/final-acceptance-integrity.json",
+    ".trellis/tasks/11-11-planning-artifact-gate/research/final-acceptance-result.md",
+    ".trellis/tasks/11-11-planning-artifact-gate/research/final-acceptance-review.md",
+    ".trellis/tasks/11-11-planning-artifact-gate/research/implementation-progress.md",
+    ".trellis/tasks/11-11-planning-artifact-gate/research/implementation-verification.md",
+    ".trellis/tasks/11-11-planning-artifact-gate/research/m2-closure-focused-exit.json",
+    ".trellis/tasks/11-11-planning-artifact-gate/research/m2-closure-focused-tests.txt",
+    ".trellis/tasks/11-11-planning-artifact-gate/research/m2-closure-test-log-original.zip",
+    ".trellis/tasks/11-11-planning-artifact-gate/research/m2-human-reconfirmation-fixture.zip",
+    ".trellis/tasks/11-11-planning-artifact-gate/research/m2-human-reconfirmation-report.md",
+    ".trellis/tasks/11-11-planning-artifact-gate/research/m2-human-reconfirmation-result.json",
+    ".trellis/tasks/11-11-planning-artifact-gate/research/m2-human-reconfirmation-verification.json",
+    ".trellis/tasks/11-11-planning-artifact-gate/research/m2-human-reply.json",
+    ".trellis/tasks/11-11-planning-artifact-gate/research/m2-human-review-log-after.md",
+    ".trellis/tasks/11-11-planning-artifact-gate/research/m2-human-review-summary.md",
+    ".trellis/tasks/11-11-planning-artifact-gate/research/manual-exercises-review.md"
+  ],
+  "hookException": "Existing actual user approval in commit-exception-approval.json; this one local A evidence commit only",
+  "noPermanentHookChange": true,
+  "noPushOrArchive": true,
+  "noC": true,
+  "noAmend": true,
+  "remainingAfterSuccessfulCommit": "Read back committed evidence/scope and clean working tree; notify implementation completion"
+}
