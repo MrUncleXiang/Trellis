@@ -1,0 +1,122 @@
+{
+  "date": "2026-11-12T09:59:42.804661+00:00",
+  "scope": "Planning document integrity only; no A product tests or start command executed",
+  "head": "9b76fe49f19de4d383dd4677fea803e2f2da7004",
+  "documents": [
+    {
+      "file": "prd.md",
+      "sha256": "58ebc60276ba42e71d650ee3f2319c48b45535a7b4886e7632d83246f4d6b2db",
+      "bytes": 8492
+    },
+    {
+      "file": "design.md",
+      "sha256": "1e60b73e6709e2bdf3f75934a034c7aec934996dabbbadb56760799a897d3d44",
+      "bytes": 26325
+    },
+    {
+      "file": "implement.md",
+      "sha256": "910b30b1327be1b1ec2e0bc58e5abc514617a6e3c8fea830cdb8c701d7d9a8fe",
+      "bytes": 30349
+    },
+    {
+      "file": "research/test-plan-2026-11-12.md",
+      "sha256": "8a2d9d26d007771600e9babb784e2118e1c48f81105d76909ee07ad37ac0251b",
+      "bytes": 16417
+    },
+    {
+      "file": "research/context-read-map-2026-11-12.md",
+      "sha256": "94117fd013c775f5ef55fde148fc0e11d8697d2543358126a7205dca14cfb0a7",
+      "bytes": 5854
+    }
+  ],
+  "brokenLinks": [],
+  "snippetErrors": [],
+  "unresolvedMarkers": [],
+  "protectedOriginalModifications": 42,
+  "protectedAndWorkflowDrift": [],
+  "historicalPrdExact": true,
+  "reviewInputSnapshotExact": true,
+  "manifestChecks": [
+    {
+      "file": "implement.jsonl",
+      "entries": 4,
+      "missing": []
+    },
+    {
+      "file": "check.jsonl",
+      "entries": 4,
+      "missing": []
+    }
+  ],
+  "contexts": [
+    {
+      "action": "implement",
+      "bytes": 115887,
+      "requirementsPresent": true,
+      "designPresent": true,
+      "planPresent": true,
+      "planEndPresent": true,
+      "truncated": false,
+      "budgetOmitted": false
+    },
+    {
+      "action": "check",
+      "bytes": 115887,
+      "requirementsPresent": true,
+      "designPresent": true,
+      "planPresent": true,
+      "planEndPresent": true,
+      "truncated": false,
+      "budgetOmitted": false
+    }
+  ],
+  "currentValidate": {
+    "exit": 0,
+    "stdout": "\u001b[0;34m=== Validating Context Files ===\u001b[0m\nTarget dir: D:\\zcx\\Trellis\\.trellis\\tasks\\11-11-planning-artifact-gate\n\n  \u001b[0;32mimplement.jsonl: ✓ (4 entries)\u001b[0m\n  \u001b[0;32mcheck.jsonl: ✓ (4 entries)\u001b[0m\n\n\u001b[0;32m✓ All validations passed\u001b[0m\n",
+    "stderr": "",
+    "scope": "existing context validator; not A product gate"
+  },
+  "diffCheck": {
+    "exit": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  "taskStatus": "planning",
+  "branchField": null,
+  "coverage": {
+    "requirements": [
+      "R1",
+      "R10",
+      "R11",
+      "R2",
+      "R3",
+      "R4",
+      "R5",
+      "R6",
+      "R7",
+      "R8",
+      "R9"
+    ],
+    "mappedRequirements": [
+      "R1",
+      "R10",
+      "R11",
+      "R2",
+      "R3",
+      "R4",
+      "R5",
+      "R6",
+      "R7",
+      "R8",
+      "R9"
+    ],
+    "automaticCaseGroups": 38,
+    "manualExercises": 6,
+    "comparisonStatus": "planned, not executed"
+  },
+  "implementationStarted": false,
+  "productTestsRun": false,
+  "newGateImplemented": false,
+  "stagedFiles": [],
+  "planningMechanicalChecksPassed": true
+}

@@ -1,0 +1,19 @@
+
+  GitNexus Analyzer (1.6.12)
+
+  GitNexus Analyzer (1.6.12)
+{"level":40,"time":1794504179551,"name":"gitnexus","msg":"[scope-resolution] 194 property read/write site(s) name a field that IS defined in this workspace, but only in another language, so per-language inference declined to link them. Queries for these fields return an empty result that does NOT mean \"unused\" — it means the definition anchor is in a different language. Affected: max_total_bytes (javascript/typescript), stderr (typescript), stdin (typescript), stdout (typescript), context_key (python), directory (python), hint (javascript), hits (python), jsonl (python), nested (python), …"}
+{"level":40,"time":1794504179776,"name":"gitnexus","truncation":{"truncated":true,"entryPointCandidatesDropped":800,"entryPointsUnexplored":0,"walksCutByBudget":70,"tracesDepthCapped":0,"calleesDropped":1068,"processesDropped":0},"msg":"[processes] 731 flows reported, but whole flows are MISSING: 800 of 1000 candidate entry point(s) never ranked in, 0 ranked entry point(s) never traced, 0 deduplicated flow(s) dropped at maxProcesses, 0 trace(s) cut at maxTraceDepth, 1068 callee(s) skipped at maxBranching, 70 walk(s) cut by the per-entry trace budget. An absent flow does NOT mean the code path does not exist."}
+[2K
+Rebuilt the graph and FTS while reusing cached parser output for 306 file(s) (parse cache 99+1.6.12). For same-version capture/query development changes, increment SCHEMA_BUMP in src/storage/parse-cache.ts to invalidate parser output.
+[2K
+FTS disabled for this index. To enable keyword search, run gitnexus analyze without --skip-fts and with GITNEXUS_SKIP_FTS unset.
+[2K
+Parse cache: pruned 16 stale chunk entries
+  Repository indexed successfully (19.5s)
+
+  13,330 nodes | 27,796 edges | 459 clusters | 731 flows
+  C:\Users\PXWD\.codex\worktrees\planning-artifact-gate\Trellis
+
+  FTS disabled for this index. To enable keyword search, run gitnexus analyze without --skip-fts and with GITNEXUS_SKIP_FTS unset.
+

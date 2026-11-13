@@ -1,0 +1,11 @@
+{
+  "date": "2026-11-12T09:18:11.894759+00:00",
+  "kind": "planning contract counterexample, not implementation test",
+  "finding": "Normal checklist completion changes implement.md bytes and would invalidate D1 fingerprints. This collides with routine approved execution unless progress is recorded separately or explicitly treated as a correction. Prefer separate execution progress ledger instead of changing frozen reviewed files.",
+  "before": "- [ ] Run targeted tests\n",
+  "after": "- [x] Run targeted tests\n",
+  "beforeSha256": "dc92e236eaa9a57c9c209104a86bf4e9736e99a6a8de0b4d0c3e1df735432186",
+  "afterSha256": "472567e53dc5f33444b2bdd600e8959db68f0ba55be87ccaf2d9727c0e369a6f",
+  "sameFingerprint": false,
+  "candidateFix": "Keep implement.md as reviewed instructions; record checkmarks/results in research/implementation-progress.md. Material changes still replan."
+}

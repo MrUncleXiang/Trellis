@@ -1,0 +1,207 @@
+
+ RUN  v4.0.18 C:/Users/PXWD/.codex/worktrees/planning-artifact-gate/Trellis/packages/cli
+
+··················································x·········x··
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 2 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  test/scripts/task-planning.integration.test.ts > task.py planning artifact gate T01-T28/T38 > T15 both editorial paths preserve review identity and append the chain
+AssertionError: expected 1 to be +0 // Object.is equality
+
+- Expected
++ Received
+
+- 0
++ 1
+
+ ❯ test/scripts/task-planning.integration.test.ts:494:22
+    492|     fs.appendFileSync(path.join(repo.taskDir, "prd.md"), "another typo…
+    493|     const s = runTask(repo, "start", TASK_DIR, "--review", secondId, "…
+    494|     expect(s.status).toBe(0);
+       |                      ^
+    495|     data = readTask(repo);
+    496|     expect(data.meta.planningAttest.reviewId).toBe(secondId);
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/2]⎯
+
+ FAIL  test/scripts/task-planning.integration.test.ts > task.py planning artifact gate T01-T28/T38 > T25 missing identity keeps the same gate, then saves state without a pointer
+AssertionError: expected [ [ …(2) ] ] to deeply equal []
+
+- Expected
++ Received
+
+- []
++ [
++   [
++     "codex_01a1cd6b-ed0a-7691-b14c-31ffbf1c67e3.json",
++     {
++       "data": [
++         123,
++         13,
++         10,
++         32,
++         32,
++         34,
++         112,
++         108,
++         97,
++         116,
++         102,
++         111,
++         114,
++         109,
++         34,
++         58,
++         32,
++         34,
++         99,
++         111,
++         100,
++         101,
++         120,
++         34,
++         44,
++         13,
++         10,
++         32,
++         32,
++         34,
++         108,
++         97,
++         115,
++         116,
++         95,
++         115,
++         101,
++         101,
++         110,
++         95,
++         97,
++         116,
++         34,
++         58,
++         32,
++         34,
++         50,
++         48,
++         50,
++         54,
++         45,
++         49,
++         49,
++         45,
++         49,
++         50,
++         84,
++         49,
++         50,
++         58,
++         49,
++         53,
++         58,
++         51,
++         49,
++         90,
++         34,
++         44,
++         13,
++         10,
++         32,
++         32,
++         34,
++         99,
++         117,
++         114,
++         114,
++         101,
++         110,
++         116,
++         95,
++         116,
++         97,
++         115,
++         107,
++         34,
++         58,
++         32,
++         34,
++         46,
++         116,
++         114,
++         101,
++         108,
++         108,
++         105,
++         115,
++         47,
++         116,
++         97,
++         115,
++         107,
++         115,
++         47,
++         103,
++         97,
++         116,
++         101,
++         45,
++         102,
++         105,
++         120,
++         116,
++         117,
++         114,
++         101,
++         34,
++         44,
++         13,
++         10,
++         32,
++         32,
++         34,
++         99,
++         117,
++         114,
++         114,
++         101,
++         110,
++         116,
++         95,
++         114,
++         117,
++         110,
++         34,
++         58,
++         32,
++         110,
++         117,
++         108,
++         108,
++         13,
++         10,
++         125,
++       ],
++       "type": "Buffer",
++     },
++   ],
++ ]
+
+ ❯ test/scripts/task-planning.integration.test.ts:666:37
+    664|     expect(ok.status).toBe(0);
+    665|     expect(readTask(repo).status).toBe("in_progress");
+    666|     expect(snapshot(repo).pointers).toEqual(pointersBefore);
+       |                                     ^
+    667| 
+    668|     // A failed gate in degraded mode must not write or run hooks.
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[2/2]⎯
+
+
+ Test Files  1 failed | 2 passed (3)
+      Tests  2 failed | 61 passed (63)
+   Start at  20:14:51
+   Duration  42.34s (transform 356ms, setup 33ms, import 976ms, tests 51.93s, environment 0ms)
+
+undefined
+C:\Users\PXWD\.codex\worktrees\planning-artifact-gate\Trellis\packages\cli:
+ ERR_PNPM_RECURSIVE_EXEC_FIRST_FAIL  Command "vitest" not found

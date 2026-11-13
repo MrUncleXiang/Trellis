@@ -1,0 +1,32 @@
+{
+  "case": {
+    "id": "resume-in-progress-empty-manifests",
+    "status": "in_progress",
+    "files": "prd",
+    "manifests": "empty",
+    "command": "start"
+  },
+  "command": [
+    "C:\\Python313\\python.exe",
+    ".trellis/scripts/task.py",
+    "start",
+    ".trellis/tasks/review-case"
+  ],
+  "exit": 1,
+  "statusAfter": "in_progress",
+  "activePointers": [],
+  "stdout": "\u001b[0;31mError: implement.jsonl and check.jsonl have no curated entries\u001b[0m\nSub-agents (implement/check) would run with zero spec context.\n  Curate:  python3 .trellis/scripts/task.py add-context .trellis/tasks/review-case implement <path> \"<why>\"\n  Verify:  python3 .trellis/scripts/task.py validate .trellis/tasks/review-case\n  Intentionally empty? Re-run start with --allow-empty-context\n",
+  "stderr": "",
+  "before": {
+    "check.jsonl": "",
+    "implement.jsonl": "",
+    "prd.md": "# Requirement\nChange a local prompt only.\n",
+    "task.json": "{\n  \"id\": \"review-case\",\n  \"name\": \"review-case\",\n  \"title\": \"Fixture\",\n  \"description\": \"Review only\",\n  \"status\": \"in_progress\",\n  \"branch\": null,\n  \"base_branch\": null,\n  \"meta\": {}\n}"
+  },
+  "after": {
+    "check.jsonl": "",
+    "implement.jsonl": "",
+    "prd.md": "# Requirement\nChange a local prompt only.\n",
+    "task.json": "{\n  \"id\": \"review-case\",\n  \"name\": \"review-case\",\n  \"title\": \"Fixture\",\n  \"description\": \"Review only\",\n  \"status\": \"in_progress\",\n  \"branch\": null,\n  \"base_branch\": null,\n  \"meta\": {}\n}"
+  }
+}

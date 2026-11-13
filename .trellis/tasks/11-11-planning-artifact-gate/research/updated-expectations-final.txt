@@ -1,0 +1,30 @@
+
+ RUN  v4.0.18 C:/Users/PXWD/.codex/worktrees/planning-artifact-gate/Trellis/packages/cli
+
+ ✓ test/templates/planning-contract.test.ts (15 tests) 216ms
+Created tasks directory: C:\Users\PXWD\AppData\Local\Temp\trellis-current-task-as7AVE\.trellis\tasks
+warning: could not resolve the repository's default branch (no remote configured, offline, etc.); stamping base_branch as the checked-out branch 'main'. Pass --base-branch to override.
+Activated task for this session: .trellis/tasks/11-12-r7-idem
+Source: session:r7-idem-session
+Created task: 11-12-r7-idem
+
+Next steps:
+  - Fill prd.md with requirements and acceptance criteria
+  - Every task: prepare prd.md, design.md, and implement.md before first start
+  - Keep them concise; attest, validate, then obtain confirmation for the reviewed version
+  - Use /trellis:continue or phase context to decide the next step
+
+Note: no checked-out branch (detached HEAD, or not a git repository); task branch not recorded.
+stdout | test/regression.test.ts > regression: configSectionsAdded (issue-codex-dispatch-mode) > [config-sections] applyConfigSectionsAdded appends section when sentinel missing, idempotent on rerun
+  + Added config section "Codex (sub-agent dispatch behavior)" to .trellis/config.yaml
+
+ ✓ test/regression.test.ts (514 tests | 487 skipped) 2878ms
+     ✓ [session-current-task] task.py start in degraded mode flips planning → in_progress  453ms
+     ✓ [workflow-state-r7] task.py create then task.py start is idempotent (pointer + status flip)  1069ms
+     ✓ [config-sections] applyConfigSectionsAdded appends section when sentinel missing, idempotent on rerun  1343ms
+
+ Test Files  2 passed (2)
+      Tests  42 passed | 487 skipped (529)
+   Start at  21:03:22
+   Duration  4.18s (transform 1.44s, setup 43ms, import 2.00s, tests 3.09s, environment 0ms)
+

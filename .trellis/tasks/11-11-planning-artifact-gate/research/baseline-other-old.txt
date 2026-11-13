@@ -1,0 +1,540 @@
+
+ RUN  v4.0.18 C:/Users/PXWD/AppData/Local/Temp/trellis-baseline-review/Trellis2/packages/cli
+
+ ❯ test/templates/opencode.test.ts (73 tests | 1 failed) 700ms
+     ✓ tracks processed sessions in memory for the active process 1ms
+     ✓ does not treat a different session id as already processed 0ms
+     ✓ builds compact startup context with an adaptive one-shot acknowledgment 6ms
+     ✓ injects startup context onto the latest user message without mutating stored parts 12ms
+     ✓ detects persisted Trellis context from metadata 0ms
+     ✓ ignores unrelated user messages 0ms
+     ✓ injects TRELLIS_CONTEXT_ID into Bash commands from plugin sessionID 1ms
+     ✓ uses PowerShell environment syntax on Windows 1ms
+     ✓ uses POSIX environment syntax on Windows Git Bash 1ms
+     ✓ uses POSIX environment syntax when Windows OSTYPE indicates MSYS 1ms
+     ✓ uses POSIX environment syntax when Windows MINGW_PREFIX is set 1ms
+     ✓ uses POSIX environment syntax when Windows SHELL is bash 1ms
+     ✓ uses POSIX environment syntax when OpenCode Git Bash path is configured 1ms
+     ✓ does not duplicate an explicit TRELLIS_CONTEXT_ID assignment 1ms
+     ✓ does not duplicate an explicit exported TRELLIS_CONTEXT_ID 1ms
+     ✓ does not duplicate an explicit env TRELLIS_CONTEXT_ID assignment 1ms
+     ✓ does not duplicate an explicit PowerShell TRELLIS_CONTEXT_ID assignment 1ms
+     ✓ does not treat a grep pattern as an explicit TRELLIS_CONTEXT_ID assignment 1ms
+     ✓ creates deterministic complete identities without changing ordinary parts 1ms
+     ✓ keeps both insertion orders equal to ID-sorted replay order 1ms
+     ✓ rejects unsupported kinds, missing identities, and duplicate IDs before mutation 1ms
+     ✓ fails closed on a legacy 19-character OpenCode part ID format without mutating parts 0ms
+     ✓ uses an ordinary attachment as the identity source 0ms
+     ✓ uses the minimum-ordinal ordinary part as the identity source when a message has both a text and a file part 0ms
+     ✓ isTrellisSubagent matches the three trellis sub-agent names 0ms
+     ✓ isTrellisSubagent rejects unrelated agents 0ms
+     ✓ returns the only session file when exactly one exists 7ms
+     ✓ refuses to guess when two or more session files exist 5ms
+     ✓ returns no task when zero session files exist (Python parity) 4ms
+     ✓ prefers an exact context-key match over the fallback 5ms
+     ✓ mutates implement prompt using single-session fallback when sessionID misses 12ms
+     ✓ inlines JSONL-referenced spec content into the implement prompt 11ms
+     ✓ mutates check prompt using Active task hint when runtime resolution fails 9ms
+     ✓ Active task hint takes precedence over single-session fallback 8ms
+     ✓ emits the trellis-hook-injected marker for research agent too 5ms
+     ✓ skips when no task can be resolved through any path 5ms
+     ✓ injects both plugins onto the latest user message without mutating history 157ms
+     ✓ prepends ephemeral text onto attachment-only latest user messages 97ms
+     ✓ injects without a persisted part identity 77ms
+     ✓ checks the skip keyword only in ordinary user text 5ms
+     ✓ keeps both plugins disabled by their existing environment gates 5ms
+     ✓ session-start.js early-returns when the latest user agent is a trellis sub-agent 4ms
+     ✓ session-start.js skips trellis-check and trellis-research 4ms
+     ✓ inject-workflow-state.js early-returns when the latest user agent is a trellis sub-agent 4ms
+     ✓ inject-workflow-state.js still injects breadcrumb for main-session turns 5ms
+     ✓ inject-workflow-state.js skips injection when the prompt contains the default skip keyword 5ms
+     ✓ inject-workflow-state.js does not skip on 'no-trellisfoo' (word-boundary negative) 6ms
+     ✓ inject-workflow-state.js honors a custom prompt_injection.skip_keyword 8ms
+     ✓ inject-workflow-state.js disables the escape hatch with skip_keyword: "" 6ms
+     ✓ clones only the latest user message when prepending text 0ms
+       ✓ leaves data untouched when cap is 0 (unlimited) 8ms
+       ✓ leaves data untouched when data is at or under the cap 4ms
+       ✓ truncates ASCII data exactly at the cap (1 byte over cap) 4ms
+       ✓ never splits a 2-byte UTF-8 sequence at the boundary (café) 4ms
+       ✓ never splits a 3-byte UTF-8 sequence at the boundary (euro sign) 4ms
+       ✓ returns built-in defaults when config.yaml is absent 4ms
+       ✓ returns built-in defaults when config.yaml has no context_injection section 6ms
+       ✓ applies explicit overrides for all three keys 5ms
+       ✓ 0 means unlimited and is preserved as-is (not replaced by default) 5ms
+       ✓ falls back to default for a negative value 6ms
+       ✓ falls back to default for a non-integer value 5ms
+       ✓ inlines under-cap content unchanged with no notices (golden) 11ms
+       ✓ keeps binary jsonl references as notices even when limits are unlimited 12ms
+       ✓ does not misclassify legitimate multi-byte UTF-8 content as binary 13ms
+       ✓ classifies a file as binary when binary bytes appear only at the end 11ms
+       ✓ truncates an oversized jsonl-referenced file at max_file_bytes with a notice 14ms
+       ✓ never splits a multi-byte UTF-8 sequence at the 32768-byte cut point 10ms
+       ✓ truncates an oversized artifact (prd.md) at max_artifact_bytes 10ms
+       ✓ degrades to an index line once the total budget is exhausted (3 files) 15ms
+       ✓ honors a max_file_bytes override from .trellis/config.yaml 11ms
+       ✓ max_file_bytes: 0 and max_total_bytes: 0 restore fully unlimited inlining 12ms
+       ✓ invalid config values fall back to the default cap 12ms
+       × directory entries respect the per-file cap and only inline .md files 26ms
+ ✓ test/templates/omp.test.ts (24 tests) 1375ms
+ ❯ test/configurators/python-rewrite-parity.test.ts (2 tests | 1 failed) 310ms
+     × leaves the literal alone under the default (POSIX) rendering 110ms
+     ✓ rewrites the literal under Windows rendering, matching collectTemplates 199ms
+ ❯ test/commands/upgrade.test.ts (10 tests | 2 failed) 16ms
+     ✓ defaults stable versions to latest 1ms
+     ✓ defaults beta versions to beta 0ms
+     ✓ defaults rc versions to rc 0ms
+     ✓ honors an explicit tag or version 0ms
+     ✓ rejects shell-shaped tags 1ms
+     ✓ builds POSIX npm global install command without shell 1ms
+     ✓ builds Windows command through cmd.exe 0ms
+     ✓ dry-run does not execute npm 3ms
+     × executes npm install for real upgrades 6ms
+     × fails when npm exits non-zero 2ms
+ ❯ test/utils/atomic-write.test.ts (3 tests | 1 failed) 17ms
+     ✓ writes new content 4ms
+     ✓ overwrites and leaves no temp file behind 3ms
+     × preserves the original file when the write fails 8ms
+ ❯ test/scripts/context-injection-limits.integration.test.ts (39 tests | 7 failed | 1 skipped) 15108ms
+     ✓ avoids the nested multiline f-strings rejected by Python 3.9-3.11 (#476) 2ms
+       ✓ returns built-in defaults when config.yaml has no context_injection section 203ms
+       ✓ returns built-in defaults when config.yaml is absent 178ms
+       ✓ applies explicit overrides for all three keys 183ms
+       ✓ 0 means unlimited and is preserved as-is (not replaced by default) 194ms
+       ✓ falls back to default and warns on stderr for a negative value 188ms
+       ✓ falls back to default and warns on stderr for a non-integer value 196ms
+       ✓ leaves data untouched when cap is 0 (unlimited) 136ms
+       × leaves data untouched when data is at or under the cap 108ms
+       ✓ truncates ASCII data exactly at the cap (1 byte over cap) 120ms
+       × never splits a multi-byte UTF-8 sequence at the boundary 95ms
+       ✓ never splits a 3-byte UTF-8 sequence (currency sign) at the boundary 95ms
+       × under-cap content is byte-identical to unlimited output (golden) 226ms
+       ✓ keeps binary jsonl references as notices even when limits are unlimited 258ms
+       × does not misclassify legitimate multi-byte UTF-8 content as binary 248ms
+       ✓ classifies a file as binary when binary bytes appear only at the end  802ms
+       ✓ truncates an oversized jsonl-referenced file at max_file_bytes with a notice  434ms
+       × degrades to an index line once the total budget is exhausted (3 files) 368ms
+       × max_total_bytes: 0 restores fully unlimited inlining 363ms
+       ✓ directory entries respect the per-file cap and total budget  452ms
+       ✓ artifacts (prd/design/implement.md) obey max_artifact_bytes independently of max_file_bytes  553ms
+       ✓ does not read a file outside base_path via an absolute jsonl reference 266ms
+       ✓ does not read a file outside base_path via a ../ traversal jsonl reference 253ms
+       × still reads a legitimate jsonl reference inside base_path (control) 256ms
+       ✓ puts a visible notice in the prompt when the manifest has no curated entries  300ms
+       ✓ does not add the notice when curated entries exist  458ms
+       ✓ warns (does not error) on a jsonl entry that looks like a code file  1494ms
+       ✓ does not warn about a code-looking path under .trellis/spec/, docs/, or the task's own directory  556ms
+       ✓ warns on a jsonl entry whose file size exceeds max_file_bytes  558ms
+       ✓ survives a file that disappears between is_file() and stat()  457ms
+       ✓ stays warning-free for a clean, under-cap, spec-only manifest  514ms
+       ✓ #1 resolves a ..-spelled archived task without rewriting  1397ms
+       ✓ #2 validates an archived task self-directory  471ms
+       ✓ #3 keeps an unrelated missing task reference as an error  667ms
+       ✓ #4 does not fall back to a recreated active task when the archive copy is missing  543ms
+       ✓ #5 rejects traversal in an archived self-reference without active-task fallback  577ms
+       ↓ #6 rejects a symlink that escapes the archived task
+       ✓ #7 leaves active-task and unrelated repository path validation unchanged  451ms
+       ✓ #8 falls back to repository-root resolution for a malformed archive year-month  485ms
+
+⎯⎯⎯⎯⎯⎯ Failed Tests 12 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  test/commands/upgrade.test.ts > upgrade command > executes npm install for real upgrades
+AssertionError: expected "vi.fn()" to be called with arguments: [ 'npm', …(2) ]
+
+Received: 
+
+  1st vi.fn() call:
+
+@@ -1,11 +1,12 @@
+  [
+-   "npm",
++   "cmd.exe",
+    [
+-     "install",
+-     "-g",
+-     "@mindfoldhq/trellis@latest",
++     "/d",
++     "/s",
++     "/c",
++     "npm install -g @mindfoldhq/trellis@latest",
+    ],
+    {
+      "shell": false,
+      "stdio": "inherit",
+    },
+
+
+Number of calls: 1
+
+ ❯ test/commands/upgrade.test.ts:82:20
+     80|     await upgrade({ tag: "latest" }, runner);
+     81| 
+     82|     expect(runner).toHaveBeenCalledWith(
+       |                    ^
+     83|       "npm",
+     84|       ["install", "-g", "@mindfoldhq/trellis@latest"],
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/12]⎯
+
+ FAIL  test/commands/upgrade.test.ts > upgrade command > fails when npm exits non-zero
+AssertionError: expected [Function] to throw error matching /…/trellis@latest[\s\S]*npm config get prefix[\s\S]*which trellis but got 'npm install failed with exit code 1.\…'
+
+- Expected: 
+/npm install failed with exit code 1\.[\s\S]*Troubleshooting:[\s\S]*Manual command: npm install -g @mindfoldhq\/trellis@latest[\s\S]*npm config get prefix[\s\S]*which trellis/
+
++ Received: 
+"npm install failed with exit code 1.
+Troubleshooting:
+- Manual command: npm install -g @mindfoldhq/trellis@latest
+- Check npm global prefix and PATH: npm config get prefix
+- Check which Trellis binary your shell resolves: where trellis
+- If this is a permissions error, fix your Node/npm install or npm prefix; Trellis does not run sudo.
+- If npm reports an existing binary or locked file, resolve that npm error manually; Trellis does not run --force."
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[2/12]⎯
+
+ FAIL  test/configurators/python-rewrite-parity.test.ts > python3 rewrite reaches the previously-raw write sites > leaves the literal alone under the default (POSIX) rendering
+AssertionError: snow: .snow/SNOW.md: expected '# Trellis on Snow CLI\n\nSnow is a **…' to contain 'python3 ./.trellis/scripts/task.py'
+
+- Expected
++ Received
+
+- python3 ./.trellis/scripts/task.py
++ # Trellis on Snow CLI
++
++ Snow is a **class-1** Trellis host: auto context inject + project agent discovery +
++ `beforeSubAgentStart` prompt enrichment.
++
++ | Capability                                        | Status                                                                       |
++ | ------------------------------------------------- | ---------------------------------------------------------------------------- |
++ | Skills (`.snow/skills/trellis-*/SKILL.md`)        | Works                                                                        |
++ | Prompt commands (`.snow/commands/trellis-*.json`) | Works (`/trellis-continue`, `/trellis-finish-work`, …)                       |
++ | Context hooks (`.snow/hooks/`)                    | Inject model context via stdout JSON + write `.snow/log/trellis-context.txt` |
++ | Project agents (`.snow/agents/*.md`)              | Auto-discovered by Snow (`#trellis-implement`, …)                            |
++ | `beforeSubAgentStart`                             | Injects active-task breadcrumb into sub-agent prompts                        |
++ | `trellis-start`                                   | Optional — session hooks replace the old manual ritual                       |
++
++ ## Quick start
++
++ ```bash
++ trellis init --snow -u your-name
++ snow
++ ```
++
++ In Snow:
++
++ 1. Open a session in the project root — `onSessionStart` injects Trellis context automatically.
++ 2. Dispatch implement/check/research (project agents under `.snow/agents/`). Prefer prompt first line:
++
++ ```text
++ Active task: .trellis/tasks/<id>
++ ```
++
++ 3. Optional: `/trellis-continue` / `/trellis-finish-work`, or `skill-execute` on `trellis-*` skills.
++ 4. Debug injects: set `SNOW_DEBUG_HOOKS=1` and inspect `.snow/log/hooks-inject.txt`.
++
++ ## Agents
++
++ Snow loads project agents from `.snow/agents/**/*.md` (priority over `~/.snow/sub-agents.json`).
++ Primary path: project agent discovery — no manual merge required. Do not use legacy sub-agent JSON merge files.
++
++ Context loading is class-1 hook inject (`beforeSubAgentStart` / session / user). Agents are **not** shipped with class-2 pull-based prelude text. Hooks already inject context; agents still re-read task artifacts for correctness.
++
++ ## Tool names (Snow-native)
++
++ - `filesystem-read` / `filesystem-create` / `filesystem-replaceedit` / `filesystem-edit`
++ - `terminal-execute`
++ - `ace-search` / `codebase-search`
++ - `todo-manage` / `notebook-manage`
++ - `skill-execute`
++ - `websearch-search` / `websearch-fetch` (research)
++ - `ide-get_diagnostics`
++
++ ## Hook protocol
++
++ Session / user / sub-agent hooks emit:
++
++ ```json
++ { "additionalContext": "...", "display": "..." }
++ ```
++
++ - exit 0 + JSON → inject (prepend); UI bubble keeps user original text
++ - exit 1 on `onUserMessage` → replace (not used by Trellis)
++ - non-JSON stdout → ignored
++
++ Hook modes (same script, different depth):
++
++ | Hook                  | argv mode  | Payload                                                          |
++ | --------------------- | ---------- | ---------------------------------------------------------------- |
++ | `onSessionStart`      | `session`  | full (~7.5KB): task.py, artifacts, prd summary, workflow/session |
++ | `onUserMessage`       | `user`     | compact (~2.8KB): task.py + artifact presence only               |
++ | `beforeSubAgentStart` | `subagent` | full + agent-kind tailoring (implement/check/research)           |
++
++ ## Session identity (multi-session)
++
++ Snow injects these env vars into hook commands, `terminal-execute`, bash mode, and sub-agent children:
++
++ | Variable             | Example             | Purpose                                   |
++ | -------------------- | ------------------- | ----------------------------------------- |
++ | `SNOW_SESSION_ID`    | `c2343752-...`      | Native Snow session uuid                  |
++ | `TRELLIS_CONTEXT_ID` | `snow-c2343752-...` | Preferred Trellis active-task context key |
++ | `SNOW_CWD`           | project root        | Working directory for hooks/tools         |
++ | `SNOW_PLATFORM`      | `snow`              | Platform tag                              |
++
++ Notes:
++
++ - `TRELLIS_CONTEXT_ID` wins when already set (explicit override).
++ - Otherwise Trellis resolves `SNOW_SESSION_ID` via `active_task.py` as platform `snow`.
++ - Hook stdin may also include dual keys: `sessionId` / `session_id`.
++
++
++ Run `python ./.trellis/scripts/task.py current` before starting.
++
+
+ ❯ test/configurators/python-rewrite-parity.test.ts:103:44
+    101|     for (const [id, relPath] of RAW_WRITE_SITES) {
+    102|       const written = await configureInto(id, relPath);
+    103|       expect(written, `${id}: ${relPath}`).toContain(
+       |                                            ^
+    104|         "python3 ./.trellis/scripts/task.py",
+    105|       );
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[3/12]⎯
+
+ FAIL  test/templates/opencode.test.ts > opencode context injection limits (issue #441) > inject-subagent-context plugin > directory entries respect the per-file cap and only inline .md files
+AssertionError: expected '<!-- trellis-hook-injected -->\n# Imp…' to contain '[Trellis: truncated at 10 bytes — rea…'
+
+- Expected
++ Received
+
+- [Trellis: truncated at 10 bytes — read refdir/a.md for the full content]
++ <!-- trellis-hook-injected -->
++ # Implement Agent Task
++
++ You are the Implement Agent in the Multi-Agent Pipeline.
++
++ ## Your Context
++
++ === refdir\a.md ===
++ AAAAAAAAAA
++ [Trellis: truncated at 10 bytes — read refdir\a.md for the full content]
++
++ === refdir\b.md ===
++ BBBBBBBBBB
++ [Trellis: truncated at 10 bytes — read refdir\b.md for the full content]
++
++ === .trellis/tasks/demo-task/prd.md (Requirements) ===
++ # Demo PRD
++
++ Goal: verify injection.
++
++ ---
++
++ ## Your Task
++
++ do the implementation
++
++ ---
++
++ ## Workflow
++
++ 1. **Understand specs** - All dev specs are injected above
++ 2. **Understand task artifacts** - Read requirements, technical design if present, and execution plan if present
++ 3. **Implement feature** - Follow specs and task artifacts
++ 4. **Self-check** - Ensure code quality
++
++ ## Important Constraints
++
++ - Do NOT execute git commit
++ - Follow all dev specs injected above
++ - Report list of modified/created files when done
+
+ ❯ test/templates/opencode.test.ts:1613:22
+    1611|       const prompt = await runImplementHook();
+    1612| 
+    1613|       expect(prompt).toContain(
+       |                      ^
+    1614|         "[Trellis: truncated at 10 bytes — read refdir/a.md for the fu…
+    1615|       );
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[4/12]⎯
+
+ FAIL  test/scripts/context-injection-limits.integration.test.ts > context injection limits (issue #441) > inject-subagent-context.py: truncate_utf8 > leaves data untouched when data is at or under the cap
+AssertionError: expected [ 'True\r', 'True' ] to deeply equal [ 'True', 'True' ]
+
+- Expected
++ Received
+
+  [
+-   "True",
++   "True
+",
+    "True",
+  ]
+
+ ❯ test/scripts/context-injection-limits.integration.test.ts:295:40
+    293| `,
+    294|         );
+    295|         expect(out.trim().split("\n")).toEqual(["True", "True"]);
+       |                                        ^
+    296|       });
+    297| 
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[5/12]⎯
+
+ FAIL  test/scripts/context-injection-limits.integration.test.ts > context injection limits (issue #441) > inject-subagent-context.py: truncate_utf8 > never splits a multi-byte UTF-8 sequence at the boundary
+AssertionError: expected 'all-valid\r' to be 'all-valid' // Object.is equality
+
+Expected: "all-valid"
+Received: "all-valid
+"
+
+ ❯ test/scripts/context-injection-limits.integration.test.ts:324:26
+    322|         );
+    323|         const lines = out.trim().split("\n");
+    324|         expect(lines[0]).toBe("all-valid");
+       |                          ^
+    325|         expect(lines[1]).toBe("caf");
+    326|       });
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[6/12]⎯
+
+ FAIL  test/scripts/context-injection-limits.integration.test.ts > context injection limits (issue #441) > inject-subagent-context.py: per-file and per-artifact caps > under-cap content is byte-identical to unlimited output (golden)
+AssertionError: expected '=== small.md ===\r\nsmall spec conten…' to contain '=== small.md ===\nsmall spec content'
+
+- Expected
++ Received
+
+- === small.md ===
++ === small.md ===
+- small spec content
++ small spec content
++ 
++ 
++ === .trellis/tasks/task-golden/prd.md (Requirements) ===
++ prd body
++ 
++
+
+ ❯ test/scripts/context-injection-limits.integration.test.ts:363:21
+    361|           `print(mod.get_implement_context(REPO_ROOT, ${JSON.stringify…
+    362|         );
+    363|         expect(out).toContain("=== small.md ===\nsmall spec content");
+       |                     ^
+    364|         expect(out).toContain(
+    365|           `=== ${relTask}/prd.md (Requirements) ===\nprd body`,
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[7/12]⎯
+
+ FAIL  test/scripts/context-injection-limits.integration.test.ts > context injection limits (issue #441) > inject-subagent-context.py: per-file and per-artifact caps > does not misclassify legitimate multi-byte UTF-8 content as binary
+AssertionError: expected '=== multibyte.md ===\r\nemoji: 🎉🚀 c…' to contain '=== multibyte.md ===\nemoji: 🎉🚀 cjk…'
+
+- Expected
++ Received
+
+- === multibyte.md ===
++ === multibyte.md ===
+- emoji: 🎉🚀 cjk: 中文测试 bmp: café naïve
++ emoji: 🎉🚀 cjk: 中文测试 bmp: café naïve
++ 
+
+
+ ❯ test/scripts/context-injection-limits.integration.test.ts:439:21
+    437|         );
+    438| 
+    439|         expect(out).toContain(`=== multibyte.md ===\n${multiByteConten…
+       |                     ^
+    440|         expect(out).not.toContain("[Trellis: not inlined (binary file)…
+    441|       });
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[8/12]⎯
+
+ FAIL  test/scripts/context-injection-limits.integration.test.ts > context injection limits (issue #441) > inject-subagent-context.py: per-file and per-artifact caps > degrades to an index line once the total budget is exhausted (3 files)
+AssertionError: expected '=== f1.txt ===\r\n1111111111111111111…' to contain '=== f1.txt ===\n111111111111111111111…'
+
+- Expected
++ Received
+
+- === f1.txt ===
++ === f1.txt ===
+- 11111111111111111111111111111111111111111111111111
++ 11111111111111111111111111111111111111111111111111
++ 
++ [Trellis: not inlined (total context limit reached) — f2.txt (50 bytes): second]
++ 
++ [Trellis: not inlined (total context limit reached) — f3.txt (50 bytes): third]
++
+
+ ❯ test/scripts/context-injection-limits.integration.test.ts:524:21
+    522|           `print(mod.get_implement_context(REPO_ROOT, ${JSON.stringify…
+    523|         );
+    524|         expect(out).toContain("=== f1.txt ===\n" + "1".repeat(50));
+       |                     ^
+    525|         expect(out).toContain(
+    526|           "[Trellis: not inlined (total context limit reached) — f2.tx…
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[9/12]⎯
+
+ FAIL  test/scripts/context-injection-limits.integration.test.ts > context injection limits (issue #441) > inject-subagent-context.py: per-file and per-artifact caps > max_total_bytes: 0 restores fully unlimited inlining
+AssertionError: expected '=== big.txt ===\r\nZZZZZZZZZZZZZZZZZZ…' to contain '=== big.txt ===\nZZZZZZZZZZZZZZZZZZZZ…'
+
+- Expected
++ Received
+
+- === big.txt ===
++ === big.txt ===
+- ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ
++ ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ
++
+
+ ❯ test/scripts/context-injection-limits.integration.test.ts:557:21
+    555|           `print(mod.get_implement_context(REPO_ROOT, ${JSON.stringify…
+    556|         );
+    557|         expect(out).toContain("=== big.txt ===\n" + bigContent);
+       |                     ^
+    558|         expect(out).not.toContain("[Trellis: not inlined");
+    559|       });
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[10/12]⎯
+
+ FAIL  test/scripts/context-injection-limits.integration.test.ts > context injection limits (issue #441) > inject-subagent-context.py: jsonl file reference containment (#580) > still reads a legitimate jsonl reference inside base_path (control)
+AssertionError: expected '=== inside.md ===\r\nnot secret\r\n' to contain '=== inside.md ===\nnot secret'
+
+- Expected
++ Received
+
+- === inside.md ===
++ === inside.md ===
+- not secret
++ not secret
++
+
+ ❯ test/scripts/context-injection-limits.integration.test.ts:692:21
+    690|           `print(mod.get_implement_context(REPO_ROOT, ${JSON.stringify…
+    691|         );
+    692|         expect(out).toContain("=== inside.md ===\nnot secret");
+       |                     ^
+    693|       });
+    694|     });
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[11/12]⎯
+
+ FAIL  test/utils/atomic-write.test.ts > writeFileAtomic > preserves the original file when the write fails
+AssertionError: expected [Function] to throw an error
+ ❯ test/utils/atomic-write.test.ts:43:55
+     41|     fs.chmodSync(roDir, 0o500); // read+execute only, no write
+     42|     try {
+     43|       expect(() => writeFileAtomic(target, "second")).toThrow();
+       |                                                       ^
+     44|       // Original survives; no half-written temp left in the dir.
+     45|       expect(fs.readFileSync(target, "utf-8")).toBe("first");
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[12/12]⎯
+
+
+ Test Files  5 failed | 1 passed (6)
+      Tests  12 failed | 138 passed | 1 skipped (151)
+   Start at  21:34:55
+   Duration  15.44s (transform 1.76s, setup 65ms, import 3.46s, tests 17.53s, environment 1ms)
+
+
+EXIT_CODE=1

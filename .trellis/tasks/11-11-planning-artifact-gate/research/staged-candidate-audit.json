@@ -1,0 +1,1933 @@
+{
+  "kind": "Reviewable staged candidate, not an implementation commit or formal old/new comparison",
+  "baseCommit": "9b76fe49f19de4d383dd4677fea803e2f2da7004",
+  "candidateTree": "d2c27ad0fb9cbadc703681cc3bca8a70a0c0353d",
+  "stagedBeforeAudit": 314,
+  "unrecognizedBeforeAudit": [],
+  "onlyNewStagedPath": ".trellis/tasks/11-11-planning-artifact-gate/research/gitnexus-staged-gate-outcome.txt",
+  "frozenStagedFiles": [
+    {
+      "path": ".trellis/tasks/11-11-planning-artifact-gate/prd.md",
+      "sha256": "58ebc60276ba42e71d650ee3f2319c48b45535a7b4886e7632d83246f4d6b2db",
+      "matchesFrozen": true
+    },
+    {
+      "path": ".trellis/tasks/11-11-planning-artifact-gate/design.md",
+      "sha256": "1e60b73e6709e2bdf3f75934a034c7aec934996dabbbadb56760799a897d3d44",
+      "matchesFrozen": true
+    },
+    {
+      "path": ".trellis/tasks/11-11-planning-artifact-gate/implement.md",
+      "sha256": "910b30b1327be1b1ec2e0bc58e5abc514617a6e3c8fea830cdb8c701d7d9a8fe",
+      "matchesFrozen": true
+    },
+    {
+      "path": ".trellis/tasks/11-11-planning-artifact-gate/research/test-plan-2026-11-12.md",
+      "sha256": "8a2d9d26d007771600e9babb784e2118e1c48f81105d76909ee07ad37ac0251b",
+      "matchesFrozen": true
+    },
+    {
+      "path": ".trellis/tasks/11-11-planning-artifact-gate/research/context-read-map-2026-11-12.md",
+      "sha256": "94117fd013c775f5ef55fde148fc0e11d8697d2543358126a7205dca14cfb0a7",
+      "matchesFrozen": true
+    }
+  ],
+  "protectedOriginal46PathsUnchanged": true,
+  "marketplaceIndex": "160000 60228d8474ec836294884730579d1248a3ffb2d2 0\tmarketplace",
+  "mainHookExceptionApproved": false,
+  "noCommitNoPushNoArchive": true,
+  "selectedObjects": [
+    {
+      "path": ".agents/skills/trellis-before-dev/SKILL.md",
+      "mode": "100644",
+      "object": "17e25c9d3092ebd25a93c5f99afdd5a32b71755a",
+      "stage": "0"
+    },
+    {
+      "path": ".agents/skills/trellis-brainstorm/SKILL.md",
+      "mode": "100644",
+      "object": "e190d32e87a3de10dd63980e39e8a5048aeb59e0",
+      "stage": "0"
+    },
+    {
+      "path": ".agents/skills/trellis-check/SKILL.md",
+      "mode": "100644",
+      "object": "e014f950088650e4037523552cdb1edc44b36826",
+      "stage": "0"
+    },
+    {
+      "path": ".agents/skills/trellis-continue/SKILL.md",
+      "mode": "100644",
+      "object": "d542ae3ac18b2f575095224f5067030235fda578",
+      "stage": "0"
+    },
+    {
+      "path": ".agents/skills/trellis-meta/references/customize-local/change-context-loading.md",
+      "mode": "100644",
+      "object": "62d2e3a79b21ad2e560cb9702e270cd96ef9aeba",
+      "stage": "0"
+    },
+    {
+      "path": ".agents/skills/trellis-meta/references/customize-local/change-workflow.md",
+      "mode": "100644",
+      "object": "cc245077585f61ad6adc0d13a58f72e76981e64f",
+      "stage": "0"
+    },
+    {
+      "path": ".agents/skills/trellis-meta/references/local-architecture/context-injection.md",
+      "mode": "100644",
+      "object": "0291b3721e787d173f4f27f921c1a7a63c87e92c",
+      "stage": "0"
+    },
+    {
+      "path": ".agents/skills/trellis-meta/references/local-architecture/task-system.md",
+      "mode": "100644",
+      "object": "bad4ac7d824aef798ce7ae4b380b5127f48c59e7",
+      "stage": "0"
+    },
+    {
+      "path": ".agents/skills/trellis-meta/references/platform-files/agents.md",
+      "mode": "100644",
+      "object": "b501c18396c03eb5eb90e09d261034f47e82aa55",
+      "stage": "0"
+    },
+    {
+      "path": ".agents/skills/trellis-start/SKILL.md",
+      "mode": "100644",
+      "object": "764ffd7c6c35e60dcbe02826d215714189c2f25c",
+      "stage": "0"
+    },
+    {
+      "path": ".claude/agents/trellis-check.md",
+      "mode": "100644",
+      "object": "e45fafc5bf0faf8a3a3dcf2f1f4c8bcca52f0fdb",
+      "stage": "0"
+    },
+    {
+      "path": ".claude/agents/trellis-implement.md",
+      "mode": "100644",
+      "object": "38b89c291ef246210fbbd55eefb90d4044d4b464",
+      "stage": "0"
+    },
+    {
+      "path": ".claude/commands/trellis/continue.md",
+      "mode": "100644",
+      "object": "3bb6ad0dc94c482d89802d2676a5b4ffa637347a",
+      "stage": "0"
+    },
+    {
+      "path": ".claude/hooks/inject-subagent-context.py",
+      "mode": "100755",
+      "object": "b20ae605f85e476d27b7a0ba698b22269cb3155b",
+      "stage": "0"
+    },
+    {
+      "path": ".claude/hooks/session-start.py",
+      "mode": "100755",
+      "object": "3c2e67b2028853495206040a8befb76411c519ae",
+      "stage": "0"
+    },
+    {
+      "path": ".claude/skills/trellis-before-dev/SKILL.md",
+      "mode": "100644",
+      "object": "17e25c9d3092ebd25a93c5f99afdd5a32b71755a",
+      "stage": "0"
+    },
+    {
+      "path": ".claude/skills/trellis-brainstorm/SKILL.md",
+      "mode": "100644",
+      "object": "e190d32e87a3de10dd63980e39e8a5048aeb59e0",
+      "stage": "0"
+    },
+    {
+      "path": ".claude/skills/trellis-check/SKILL.md",
+      "mode": "100644",
+      "object": "e014f950088650e4037523552cdb1edc44b36826",
+      "stage": "0"
+    },
+    {
+      "path": ".claude/skills/trellis-meta/references/customize-local/change-context-loading.md",
+      "mode": "100644",
+      "object": "62d2e3a79b21ad2e560cb9702e270cd96ef9aeba",
+      "stage": "0"
+    },
+    {
+      "path": ".claude/skills/trellis-meta/references/customize-local/change-workflow.md",
+      "mode": "100644",
+      "object": "cc245077585f61ad6adc0d13a58f72e76981e64f",
+      "stage": "0"
+    },
+    {
+      "path": ".claude/skills/trellis-meta/references/local-architecture/context-injection.md",
+      "mode": "100644",
+      "object": "0291b3721e787d173f4f27f921c1a7a63c87e92c",
+      "stage": "0"
+    },
+    {
+      "path": ".claude/skills/trellis-meta/references/local-architecture/task-system.md",
+      "mode": "100644",
+      "object": "bad4ac7d824aef798ce7ae4b380b5127f48c59e7",
+      "stage": "0"
+    },
+    {
+      "path": ".claude/skills/trellis-meta/references/platform-files/agents.md",
+      "mode": "100644",
+      "object": "b501c18396c03eb5eb90e09d261034f47e82aa55",
+      "stage": "0"
+    },
+    {
+      "path": ".codex/agents/trellis-check.toml",
+      "mode": "100644",
+      "object": "5f06c87b0f81cb7f67be39641ef64ba994b27352",
+      "stage": "0"
+    },
+    {
+      "path": ".codex/agents/trellis-implement.toml",
+      "mode": "100644",
+      "object": "be5da1ec3a5e8a0f551500f7f6f852dafa14caef",
+      "stage": "0"
+    },
+    {
+      "path": ".codex/hooks/inject-subagent-context.py",
+      "mode": "100755",
+      "object": "b20ae605f85e476d27b7a0ba698b22269cb3155b",
+      "stage": "0"
+    },
+    {
+      "path": ".codex/hooks/session-start.py",
+      "mode": "100755",
+      "object": "eb2ab8c90554619ea3953208af6f4d1a4df8b19d",
+      "stage": "0"
+    },
+    {
+      "path": ".cursor/agents/trellis-check.md",
+      "mode": "100644",
+      "object": "e5f7a904781482e62bf58435fe90df68a2d260d3",
+      "stage": "0"
+    },
+    {
+      "path": ".cursor/agents/trellis-implement.md",
+      "mode": "100644",
+      "object": "7798a558b2da47187945c5891d47355cbaf489dc",
+      "stage": "0"
+    },
+    {
+      "path": ".cursor/commands/trellis-continue.md",
+      "mode": "100644",
+      "object": "14d4555e4b6c714c516e2391fc9e270632a032e9",
+      "stage": "0"
+    },
+    {
+      "path": ".cursor/hooks/inject-subagent-context.py",
+      "mode": "100755",
+      "object": "b20ae605f85e476d27b7a0ba698b22269cb3155b",
+      "stage": "0"
+    },
+    {
+      "path": ".cursor/hooks/session-start.py",
+      "mode": "100755",
+      "object": "3c2e67b2028853495206040a8befb76411c519ae",
+      "stage": "0"
+    },
+    {
+      "path": ".cursor/skills/trellis-before-dev/SKILL.md",
+      "mode": "100644",
+      "object": "17e25c9d3092ebd25a93c5f99afdd5a32b71755a",
+      "stage": "0"
+    },
+    {
+      "path": ".cursor/skills/trellis-brainstorm/SKILL.md",
+      "mode": "100644",
+      "object": "e190d32e87a3de10dd63980e39e8a5048aeb59e0",
+      "stage": "0"
+    },
+    {
+      "path": ".cursor/skills/trellis-check/SKILL.md",
+      "mode": "100644",
+      "object": "e014f950088650e4037523552cdb1edc44b36826",
+      "stage": "0"
+    },
+    {
+      "path": ".cursor/skills/trellis-meta/references/customize-local/change-context-loading.md",
+      "mode": "100644",
+      "object": "62d2e3a79b21ad2e560cb9702e270cd96ef9aeba",
+      "stage": "0"
+    },
+    {
+      "path": ".cursor/skills/trellis-meta/references/customize-local/change-workflow.md",
+      "mode": "100644",
+      "object": "cc245077585f61ad6adc0d13a58f72e76981e64f",
+      "stage": "0"
+    },
+    {
+      "path": ".cursor/skills/trellis-meta/references/local-architecture/context-injection.md",
+      "mode": "100644",
+      "object": "0291b3721e787d173f4f27f921c1a7a63c87e92c",
+      "stage": "0"
+    },
+    {
+      "path": ".cursor/skills/trellis-meta/references/local-architecture/task-system.md",
+      "mode": "100644",
+      "object": "bad4ac7d824aef798ce7ae4b380b5127f48c59e7",
+      "stage": "0"
+    },
+    {
+      "path": ".cursor/skills/trellis-meta/references/platform-files/agents.md",
+      "mode": "100644",
+      "object": "b501c18396c03eb5eb90e09d261034f47e82aa55",
+      "stage": "0"
+    },
+    {
+      "path": ".omp/agents/trellis-check.md",
+      "mode": "100644",
+      "object": "cedebe386c8af11fcd86034bea7eff3669e5d37a",
+      "stage": "0"
+    },
+    {
+      "path": ".omp/agents/trellis-implement.md",
+      "mode": "100644",
+      "object": "c73aa0abcb1a574ba44a99b1e0b4b8020db1a839",
+      "stage": "0"
+    },
+    {
+      "path": ".omp/commands/trellis-continue.md",
+      "mode": "100644",
+      "object": "dfbc427ce70e3e5b14f573b02451e2c356316271",
+      "stage": "0"
+    },
+    {
+      "path": ".omp/skills/trellis-before-dev/SKILL.md",
+      "mode": "100644",
+      "object": "17e25c9d3092ebd25a93c5f99afdd5a32b71755a",
+      "stage": "0"
+    },
+    {
+      "path": ".omp/skills/trellis-brainstorm/SKILL.md",
+      "mode": "100644",
+      "object": "e190d32e87a3de10dd63980e39e8a5048aeb59e0",
+      "stage": "0"
+    },
+    {
+      "path": ".omp/skills/trellis-check/SKILL.md",
+      "mode": "100644",
+      "object": "e014f950088650e4037523552cdb1edc44b36826",
+      "stage": "0"
+    },
+    {
+      "path": ".omp/skills/trellis-meta/references/customize-local/change-context-loading.md",
+      "mode": "100644",
+      "object": "62d2e3a79b21ad2e560cb9702e270cd96ef9aeba",
+      "stage": "0"
+    },
+    {
+      "path": ".omp/skills/trellis-meta/references/customize-local/change-workflow.md",
+      "mode": "100644",
+      "object": "cc245077585f61ad6adc0d13a58f72e76981e64f",
+      "stage": "0"
+    },
+    {
+      "path": ".omp/skills/trellis-meta/references/local-architecture/context-injection.md",
+      "mode": "100644",
+      "object": "0291b3721e787d173f4f27f921c1a7a63c87e92c",
+      "stage": "0"
+    },
+    {
+      "path": ".omp/skills/trellis-meta/references/local-architecture/task-system.md",
+      "mode": "100644",
+      "object": "bad4ac7d824aef798ce7ae4b380b5127f48c59e7",
+      "stage": "0"
+    },
+    {
+      "path": ".omp/skills/trellis-meta/references/platform-files/agents.md",
+      "mode": "100644",
+      "object": "b501c18396c03eb5eb90e09d261034f47e82aa55",
+      "stage": "0"
+    },
+    {
+      "path": ".opencode/agents/trellis-check.md",
+      "mode": "100644",
+      "object": "9b7152b76638ec5945eae6e7e628bd91a1799b26",
+      "stage": "0"
+    },
+    {
+      "path": ".opencode/agents/trellis-implement.md",
+      "mode": "100644",
+      "object": "79418423ab790ecc0361639bf9e6caaf07d71cfb",
+      "stage": "0"
+    },
+    {
+      "path": ".opencode/commands/trellis/continue.md",
+      "mode": "100644",
+      "object": "6aec24146a7e10312ff3d4025db299bb97beb9fc",
+      "stage": "0"
+    },
+    {
+      "path": ".opencode/commands/trellis/start.md",
+      "mode": "100644",
+      "object": "4cb4057d60c5556caf54129c59d77fb7c0d4262b",
+      "stage": "0"
+    },
+    {
+      "path": ".opencode/lib/session-utils.js",
+      "mode": "100644",
+      "object": "817b7da94e7bf1169cf8f97f9ffd8a06e1617716",
+      "stage": "0"
+    },
+    {
+      "path": ".opencode/plugins/inject-subagent-context.js",
+      "mode": "100644",
+      "object": "6de68eb8b7b282bbb58b38d38b4d779b0b598dbd",
+      "stage": "0"
+    },
+    {
+      "path": ".opencode/skills/trellis-before-dev/SKILL.md",
+      "mode": "100644",
+      "object": "17e25c9d3092ebd25a93c5f99afdd5a32b71755a",
+      "stage": "0"
+    },
+    {
+      "path": ".opencode/skills/trellis-brainstorm/SKILL.md",
+      "mode": "100644",
+      "object": "e190d32e87a3de10dd63980e39e8a5048aeb59e0",
+      "stage": "0"
+    },
+    {
+      "path": ".opencode/skills/trellis-check/SKILL.md",
+      "mode": "100644",
+      "object": "e014f950088650e4037523552cdb1edc44b36826",
+      "stage": "0"
+    },
+    {
+      "path": ".opencode/skills/trellis-meta/references/customize-local/change-context-loading.md",
+      "mode": "100644",
+      "object": "62d2e3a79b21ad2e560cb9702e270cd96ef9aeba",
+      "stage": "0"
+    },
+    {
+      "path": ".opencode/skills/trellis-meta/references/customize-local/change-workflow.md",
+      "mode": "100644",
+      "object": "cc245077585f61ad6adc0d13a58f72e76981e64f",
+      "stage": "0"
+    },
+    {
+      "path": ".opencode/skills/trellis-meta/references/local-architecture/context-injection.md",
+      "mode": "100644",
+      "object": "0291b3721e787d173f4f27f921c1a7a63c87e92c",
+      "stage": "0"
+    },
+    {
+      "path": ".opencode/skills/trellis-meta/references/local-architecture/task-system.md",
+      "mode": "100644",
+      "object": "bad4ac7d824aef798ce7ae4b380b5127f48c59e7",
+      "stage": "0"
+    },
+    {
+      "path": ".opencode/skills/trellis-meta/references/platform-files/agents.md",
+      "mode": "100644",
+      "object": "b501c18396c03eb5eb90e09d261034f47e82aa55",
+      "stage": "0"
+    },
+    {
+      "path": ".pi/agents/trellis-check.md",
+      "mode": "100644",
+      "object": "a1bf3803a11a7fafe64d7a8742bde73ea5e79805",
+      "stage": "0"
+    },
+    {
+      "path": ".pi/agents/trellis-implement.md",
+      "mode": "100644",
+      "object": "04aa9fb04c92242300dea680817b98556af9205d",
+      "stage": "0"
+    },
+    {
+      "path": ".pi/prompts/trellis-continue.md",
+      "mode": "100644",
+      "object": "a3d250ed50c6278f1dfb08c6b450059909d7f618",
+      "stage": "0"
+    },
+    {
+      "path": ".pi/prompts/trellis-start.md",
+      "mode": "100644",
+      "object": "565c44b2fd1b6773a5eb6e00a52cb93ba3a53aa6",
+      "stage": "0"
+    },
+    {
+      "path": ".pi/skills/trellis-before-dev/SKILL.md",
+      "mode": "100644",
+      "object": "17e25c9d3092ebd25a93c5f99afdd5a32b71755a",
+      "stage": "0"
+    },
+    {
+      "path": ".pi/skills/trellis-brainstorm/SKILL.md",
+      "mode": "100644",
+      "object": "e190d32e87a3de10dd63980e39e8a5048aeb59e0",
+      "stage": "0"
+    },
+    {
+      "path": ".pi/skills/trellis-check/SKILL.md",
+      "mode": "100644",
+      "object": "e014f950088650e4037523552cdb1edc44b36826",
+      "stage": "0"
+    },
+    {
+      "path": ".pi/skills/trellis-meta/references/customize-local/change-context-loading.md",
+      "mode": "100644",
+      "object": "62d2e3a79b21ad2e560cb9702e270cd96ef9aeba",
+      "stage": "0"
+    },
+    {
+      "path": ".pi/skills/trellis-meta/references/customize-local/change-workflow.md",
+      "mode": "100644",
+      "object": "cc245077585f61ad6adc0d13a58f72e76981e64f",
+      "stage": "0"
+    },
+    {
+      "path": ".pi/skills/trellis-meta/references/local-architecture/context-injection.md",
+      "mode": "100644",
+      "object": "0291b3721e787d173f4f27f921c1a7a63c87e92c",
+      "stage": "0"
+    },
+    {
+      "path": ".pi/skills/trellis-meta/references/local-architecture/task-system.md",
+      "mode": "100644",
+      "object": "bad4ac7d824aef798ce7ae4b380b5127f48c59e7",
+      "stage": "0"
+    },
+    {
+      "path": ".pi/skills/trellis-meta/references/platform-files/agents.md",
+      "mode": "100644",
+      "object": "b501c18396c03eb5eb90e09d261034f47e82aa55",
+      "stage": "0"
+    },
+    {
+      "path": ".trellis/scripts/common/planning.py",
+      "mode": "100644",
+      "object": "78e9c3a27c05696e5372953e646500830927152c",
+      "stage": "0"
+    },
+    {
+      "path": ".trellis/scripts/common/task_context.py",
+      "mode": "100755",
+      "object": "7919710f16fb71c41bcf5974c9764513cf0769ee",
+      "stage": "0"
+    },
+    {
+      "path": ".trellis/scripts/common/task_store.py",
+      "mode": "100755",
+      "object": "c221dbbbf4c00edc6d1b9d647f17b4de5c86eb13",
+      "stage": "0"
+    },
+    {
+      "path": ".trellis/scripts/task.py",
+      "mode": "100755",
+      "object": "67a27dffb9ce67794b1ec41047967b5727cb4005",
+      "stage": "0"
+    },
+    {
+      "path": ".trellis/spec/cli/backend/platform-integration.md",
+      "mode": "100644",
+      "object": "18f8ec4ad478b3942cafb48447fda3a04a77fd59",
+      "stage": "0"
+    },
+    {
+      "path": ".trellis/spec/cli/backend/workflow-state-contract.md",
+      "mode": "100644",
+      "object": "88c3de2d3e50a8f86c7726d2acf6dfa26c60d04f",
+      "stage": "0"
+    },
+    {
+      "path": ".trellis/tasks/11-11-planning-artifact-gate/check.jsonl",
+      "mode": "100644",
+      "object": "e0cace4421014f3ae1843a7536f8eec903d0513d",
+      "stage": "0"
+    },
+    {
+      "path": ".trellis/tasks/11-11-planning-artifact-gate/design.md",
+      "mode": "100644",
+      "object": "d7e6cd0a275212118add0dd66de21cfc4456eda4",
+      "stage": "0"
+    },
+    {
+      "path": ".trellis/tasks/11-11-planning-artifact-gate/implement.jsonl",
+      "mode": "100644",
+      "object": "e0cace4421014f3ae1843a7536f8eec903d0513d",
+      "stage": "0"
+    },
+    {
+      "path": ".trellis/tasks/11-11-planning-artifact-gate/implement.md",
+      "mode": "100644",
+      "object": "1c3c95442a68a98321930e7248c905263000f9d2",
+      "stage": "0"
+    },
+    {
+      "path": ".trellis/tasks/11-11-planning-artifact-gate/prd.md",
+      "mode": "100644",
+      "object": "7d14b1144dfe55de143ee4cc492391f722bb8a3b",
+      "stage": "0"
+    },
+    {
+      "path": ".trellis/tasks/11-11-planning-artifact-gate/research/baseline-other-current.txt",
+      "mode": "100644",
+      "object": "0afa628c997a9fc10cd7b6f9955a9511768930f4",
+      "stage": "0"
+    },
+    {
+      "path": ".trellis/tasks/11-11-planning-artifact-gate/research/baseline-other-old.txt",
+      "mode": "100644",
+      "object": "05ded454a2470564c51790f3eb0636436e3c16d5",
+      "stage": "0"
+    },
+    {
+      "path": ".trellis/tasks/11-11-planning-artifact-gate/research/baseline-priority-current.txt",
+      "mode": "100644",
+      "object": "f80326e204ae9bf6786c5614a2f60f9d8b0246e1",
+      "stage": "0"
+    },
+    {
+      "path": ".trellis/tasks/11-11-planning-artifact-gate/research/baseline-priority-old.txt",
+      "mode": "100644",
+      "object": "fe15d245df3f5b801c9795312700d91e25f9a19d",
+      "stage": "0"
+    },
+    {
+      "path": ".trellis/tasks/11-11-planning-artifact-gate/research/baseline-regression-review.md",
+      "mode": "100644",
+      "object": "480e7dd0ed9e14ee123c774cd2e8d0cf304c0923",
+      "stage": "0"
+    },
+    {
+      "path": ".trellis/tasks/11-11-planning-artifact-gate/research/bootstrap-current-command-2026-11-12.json",
+      "mode": "100644",
+      "object": "89cd55618f3599fde12fa5825b1c8b0171952250",
+      "stage": "0"
+    },
+    {
+      "path": ".trellis/tasks/11-11-planning-artifact-gate/research/bootstrap-review-2026-11-12.md",
+      "mode": "100644",
+      "object": "e317ecc292402d6b88fe5c9bfc95ab9d8124744c",
+      "stage": "0"
+    },
+    {
+      "path": ".trellis/tasks/11-11-planning-artifact-gate/research/bootstrap-sequence-audit-final.json",
+      "mode": "100644",
+      "object": "4169600f50578a832d7be7d0e1a5e68b29967297",
+      "stage": "0"
+    },
+    {
+      "path": ".trellis/tasks/11-11-planning-artifact-gate/research/build-current.txt",
+      "mode": "100644",
+      "object": "9550788905d343bff4e571056f7a70aadbfc0f7c",
+      "stage": "0"
+    },
+    {
+      "path": ".trellis/tasks/11-11-planning-artifact-gate/research/build-final-current.txt",
+      "mode": "100644",
+      "object": "9550788905d343bff4e571056f7a70aadbfc0f7c",
+      "stage": "0"
+    },
+    {
+      "path": ".trellis/tasks/11-11-planning-artifact-gate/research/build-platform-fixes-current.txt",
+      "mode": "100644",
+      "object": "9550788905d343bff4e571056f7a70aadbfc0f7c",
+      "stage": "0"
+    },
+    {
+      "path": ".trellis/tasks/11-11-planning-artifact-gate/research/build-recovered-current.txt",
+      "mode": "100644",
+      "object": "9550788905d343bff4e571056f7a70aadbfc0f7c",
+      "stage": "0"
+    },
+    {
+      "path": ".trellis/tasks/11-11-planning-artifact-gate/research/build-recovered-final.txt",
+      "mode": "100644",
+      "object": "9550788905d343bff4e571056f7a70aadbfc0f7c",
+      "stage": "0"
+    },
+    {
+      "path": ".trellis/tasks/11-11-planning-artifact-gate/research/build-review-current.txt",
+      "mode": "100644",
+      "object": "9550788905d343bff4e571056f7a70aadbfc0f7c",
+      "stage": "0"
+    },
+    {
+      "path": ".trellis/tasks/11-11-planning-artifact-gate/research/checklist-fingerprint-counterexample-2026-11-12.json",
+      "mode": "100644",
+      "object": "72ba8e19b8c96e95d87d573b45fcab4da0135569",
+      "stage": "0"
+    },
+    {
+      "path": ".trellis/tasks/11-11-planning-artifact-gate/research/command-logs-original-bytes.json",
+      "mode": "100644",
+      "object": "c7caf7dda57d30e06a67781dbbe9b5792fca60eb",
+      "stage": "0"
+    },
+    {
+      "path": ".trellis/tasks/11-11-planning-artifact-gate/research/command-logs-original-bytes.zip",
+      "mode": "100644",
+      "object": "3e543cc7096b8db5ed4e49a2db843fe1a1bb6746",
+      "stage": "0"
+    },
+    {
+      "path": ".trellis/tasks/11-11-planning-artifact-gate/research/commit-gate-outcome.json",
+      "mode": "100644",
+      "object": "e056983884b9268efe4d83394f3150af3e334613",
+      "stage": "0"
+    },
+    {
+      "path": ".trellis/tasks/11-11-planning-artifact-gate/research/commit-gate-supplement-scope.json",
+      "mode": "100644",
+      "object": "3e98f83ca6c10ad4a3c34670f6536cf4287eb3f4",
+      "stage": "0"
+    },
+    {
+      "path": ".trellis/tasks/11-11-planning-artifact-gate/research/compare-planning-versions.py",
+      "mode": "100644",
+      "object": "48bfd4ccccf6426b80ad14387ac4209bcdfaa222",
+      "stage": "0"
+    },
+    {
+      "path": ".trellis/tasks/11-11-planning-artifact-gate/research/comparison-harness-development-after.json",
+      "mode": "100644",
+      "object": "02bf7aec9a87daa5342911552ac83c3b2e166f73",
+      "stage": "0"
+    },
+    {
+      "path": ".trellis/tasks/11-11-planning-artifact-gate/research/comparison-harness-development-before.json",
+      "mode": "100644",
+      "object": "416c429c1ff31b37f340557cd908186d3f94c76b",
+      "stage": "0"
+    },
+    {
+      "path": ".trellis/tasks/11-11-planning-artifact-gate/research/comparison-harness-development-final-after.json",
+      "mode": "100644",
+      "object": "9fb5751c261ccaebccb4ff3e712814e553d6e4eb",
+      "stage": "0"
+    },
+    {
+      "path": ".trellis/tasks/11-11-planning-artifact-gate/research/comparison-harness-development-final-before.json",
+      "mode": "100644",
+      "object": "32218e8a0e664aa4e53fa4da1b2f00842ebacba2",
+      "stage": "0"
+    },
+    {
+      "path": ".trellis/tasks/11-11-planning-artifact-gate/research/comparison-harness-development-final-run.txt",
+      "mode": "100644",
+      "object": "c3533a5466874e19bc66bb3c81ad3a13268d9a9c",
+      "stage": "0"
+    },
+    {
+      "path": ".trellis/tasks/11-11-planning-artifact-gate/research/comparison-harness-selftest-current.txt",
+      "mode": "100644",
+      "object": "95128947cf0562610bbfcdaccecaaad2f7f3da19",
+      "stage": "0"
+    },
+    {
+      "path": ".trellis/tasks/11-11-planning-artifact-gate/research/comparison-harness-selftest-fixed.txt",
+      "mode": "100644",
+      "object": "ccd36d043de99323a4dc198b26ed60c73c555538",
+      "stage": "0"
+    },
+    {
+      "path": ".trellis/tasks/11-11-planning-artifact-gate/research/comparison-harness-selftest-old-recovered.txt",
+      "mode": "100644",
+      "object": "64d6cc546d29b2c01afcf0eeada17a4edaf9c86e",
+      "stage": "0"
+    },
+    {
+      "path": ".trellis/tasks/11-11-planning-artifact-gate/research/comparison-harness-selftest-recovered.txt",
+      "mode": "100644",
+      "object": "22ef39e131af2ef7e2ee505a693149674d4e0b45",
+      "stage": "0"
+    },
+    {
+      "path": ".trellis/tasks/11-11-planning-artifact-gate/research/context-read-map-2026-11-12.md",
+      "mode": "100644",
+      "object": "2d7b3b0e0e62308cb66379a5b71176869f960a04",
+      "stage": "0"
+    },
+    {
+      "path": ".trellis/tasks/11-11-planning-artifact-gate/research/core-requirements-review.md",
+      "mode": "100644",
+      "object": "a6423f9c813eb8341f6088ab90de61f2060bc735",
+      "stage": "0"
+    },
+    {
+      "path": ".trellis/tasks/11-11-planning-artifact-gate/research/core-review-regression-green.txt",
+      "mode": "100644",
+      "object": "ffd02b8c3a077ba34b6dd7fd3a6ebcaea04b427f",
+      "stage": "0"
+    },
+    {
+      "path": ".trellis/tasks/11-11-planning-artifact-gate/research/core-review-regression-red.txt",
+      "mode": "100644",
+      "object": "8ae4975d7f1cd9b53e7b622895f2ba55cba17736",
+      "stage": "0"
+    },
+    {
+      "path": ".trellis/tasks/11-11-planning-artifact-gate/research/core-tests-final-current.txt",
+      "mode": "100644",
+      "object": "417866c9f674d6b5d16ea62a23ce1dd80a37ff4d",
+      "stage": "0"
+    },
+    {
+      "path": ".trellis/tasks/11-11-planning-artifact-gate/research/core-tests-inflight.txt",
+      "mode": "100644",
+      "object": "530e8033361dc1bab7ef85f70a3233948d17024b",
+      "stage": "0"
+    },
+    {
+      "path": ".trellis/tasks/11-11-planning-artifact-gate/research/current-behavior-evidence/corrupt-task-json.json",
+      "mode": "100644",
+      "object": "e995ab5dcaab4be7ff25cad0f66bf479ece7545d",
+      "stage": "0"
+    },
+    {
+      "path": ".trellis/tasks/11-11-planning-artifact-gate/research/current-behavior-evidence/create-targets-planning.json",
+      "mode": "100644",
+      "object": "aade2347433bfd2c2dd85ae310600d4a19ed5e28",
+      "stage": "0"
+    },
+    {
+      "path": ".trellis/tasks/11-11-planning-artifact-gate/research/current-behavior-evidence/current-mention-counts.json",
+      "mode": "100644",
+      "object": "e93cd45870a8f29eba0a926668589727fa3533cb",
+      "stage": "0"
+    },
+    {
+      "path": ".trellis/tasks/11-11-planning-artifact-gate/research/current-behavior-evidence/empty-manifests-explicit-bypass.json",
+      "mode": "100644",
+      "object": "71f02af63367970d2fb375fc98ce16a3db4e8f78",
+      "stage": "0"
+    },
+    {
+      "path": ".trellis/tasks/11-11-planning-artifact-gate/research/current-behavior-evidence/empty-manifests.json",
+      "mode": "100644",
+      "object": "b538245b0c2ea0c1908ff9a28168bd98d05ba199",
+      "stage": "0"
+    },
+    {
+      "path": ".trellis/tasks/11-11-planning-artifact-gate/research/current-behavior-evidence/fingerprint-counterexample.json",
+      "mode": "100644",
+      "object": "c2e73614e077073bb9dcb7ea5e569bef8bfe0174",
+      "stage": "0"
+    },
+    {
+      "path": ".trellis/tasks/11-11-planning-artifact-gate/research/current-behavior-evidence/missing-prd-curated.json",
+      "mode": "100644",
+      "object": "1faac5beca9f2a0f4a04ae290116aac559ef888f",
+      "stage": "0"
+    },
+    {
+      "path": ".trellis/tasks/11-11-planning-artifact-gate/research/current-behavior-evidence/no-session-identity.json",
+      "mode": "100644",
+      "object": "2f773ee3ec6f0504f8d8e7f99fc6002bdaa3f780",
+      "stage": "0"
+    },
+    {
+      "path": ".trellis/tasks/11-11-planning-artifact-gate/research/current-behavior-evidence/prd-only-no-manifests.json",
+      "mode": "100644",
+      "object": "78c8657e21965b4e4053a31b3dd38b9fb7b28ce0",
+      "stage": "0"
+    },
+    {
+      "path": ".trellis/tasks/11-11-planning-artifact-gate/research/current-behavior-evidence/resume-in-progress-empty-manifests.json",
+      "mode": "100644",
+      "object": "71b3033dab47312b7f82d27c33ced63defe181cf",
+      "stage": "0"
+    },
+    {
+      "path": ".trellis/tasks/11-11-planning-artifact-gate/research/current-behavior-evidence/summary.json",
+      "mode": "100644",
+      "object": "b024de6a6d1e89a7eba8be3ecb95788d3d44f452",
+      "stage": "0"
+    },
+    {
+      "path": ".trellis/tasks/11-11-planning-artifact-gate/research/current-behavior-evidence/task-corpus-counts.json",
+      "mode": "100644",
+      "object": "2bfa911d5bab7f1b27a9f19819e979a6c10f3e9b",
+      "stage": "0"
+    },
+    {
+      "path": ".trellis/tasks/11-11-planning-artifact-gate/research/current-behavior-evidence/three-empty-files-curated.json",
+      "mode": "100644",
+      "object": "57785eefbf818caf29ce4e87cee34446efb3dd5c",
+      "stage": "0"
+    },
+    {
+      "path": ".trellis/tasks/11-11-planning-artifact-gate/research/current-behavior-evidence/validate-no-planning-files.json",
+      "mode": "100644",
+      "object": "ca00c3b3809b749e881716852f0b15a9a99466e8",
+      "stage": "0"
+    },
+    {
+      "path": ".trellis/tasks/11-11-planning-artifact-gate/research/final-acceptance-review.md",
+      "mode": "100644",
+      "object": "486cf490082d25946861a90e4421973567629606",
+      "stage": "0"
+    },
+    {
+      "path": ".trellis/tasks/11-11-planning-artifact-gate/research/final-checks-exit-codes.json",
+      "mode": "100644",
+      "object": "6be38689774091ee3480210a242ed09b28eb97fa",
+      "stage": "0"
+    },
+    {
+      "path": ".trellis/tasks/11-11-planning-artifact-gate/research/final-planning-review/A-20261112-R2/manifest.json",
+      "mode": "100644",
+      "object": "b0da7d9fabb9400904e3bd0334f1ded1e5921ade",
+      "stage": "0"
+    },
+    {
+      "path": ".trellis/tasks/11-11-planning-artifact-gate/research/final-planning-review/A-20261112-R2/planning-files.zip",
+      "mode": "100644",
+      "object": "5e3d378dddb313e47c255c062944ee24c2776c86",
+      "stage": "0"
+    },
+    {
+      "path": ".trellis/tasks/11-11-planning-artifact-gate/research/final-planning-review/A-20261112-R2/review-summary.md",
+      "mode": "100644",
+      "object": "d25cd2a44e46a73e9f3a8c6bd96df15cf02d3edb",
+      "stage": "0"
+    },
+    {
+      "path": ".trellis/tasks/11-11-planning-artifact-gate/research/focused-final-current.txt",
+      "mode": "100644",
+      "object": "91f194445c3e3951491cbfd4224297539861c3c9",
+      "stage": "0"
+    },
+    {
+      "path": ".trellis/tasks/11-11-planning-artifact-gate/research/frozen-and-script-check-current.json",
+      "mode": "100644",
+      "object": "c7914033ff20018d46ab232a3a5f26ee3c34d677",
+      "stage": "0"
+    },
+    {
+      "path": ".trellis/tasks/11-11-planning-artifact-gate/research/full-failure-attribution-final.json",
+      "mode": "100644",
+      "object": "7c46bd6a12c8bb9066a26a9c016ca44bf3531b2f",
+      "stage": "0"
+    },
+    {
+      "path": ".trellis/tasks/11-11-planning-artifact-gate/research/full-final-current.txt",
+      "mode": "100644",
+      "object": "dd42f4d7fe6479aef54ae25e3fd41ce380c9c637",
+      "stage": "0"
+    },
+    {
+      "path": ".trellis/tasks/11-11-planning-artifact-gate/research/full-recovered-current.txt",
+      "mode": "100644",
+      "object": "3cabcf1a1af197c6a116d06c10d9ca79d61d992e",
+      "stage": "0"
+    },
+    {
+      "path": ".trellis/tasks/11-11-planning-artifact-gate/research/full-tests-current.txt",
+      "mode": "100644",
+      "object": "d55ae41b077fc0db3391d6f1ef4d465b88d07707",
+      "stage": "0"
+    },
+    {
+      "path": ".trellis/tasks/11-11-planning-artifact-gate/research/generated-a-files.json",
+      "mode": "100644",
+      "object": "d28420b2331fffa2fa93ddebcabe9e82a2645480",
+      "stage": "0"
+    },
+    {
+      "path": ".trellis/tasks/11-11-planning-artifact-gate/research/generated-difference-candidates.json",
+      "mode": "100644",
+      "object": "65a5a88c39a09dc760880f115e565b672e735a9c",
+      "stage": "0"
+    },
+    {
+      "path": ".trellis/tasks/11-11-planning-artifact-gate/research/generated-final-sync.json",
+      "mode": "100644",
+      "object": "022d1ed3f9533c992286fc16e494fcd1a280668c",
+      "stage": "0"
+    },
+    {
+      "path": ".trellis/tasks/11-11-planning-artifact-gate/research/generated-final-verification.json",
+      "mode": "100644",
+      "object": "83850cd4cededf0e0df62fe0066af3a2053871a7",
+      "stage": "0"
+    },
+    {
+      "path": ".trellis/tasks/11-11-planning-artifact-gate/research/generated-post-hook-verification.json",
+      "mode": "100644",
+      "object": "33e50fbe8082d17419258758ba7a595f342926e3",
+      "stage": "0"
+    },
+    {
+      "path": ".trellis/tasks/11-11-planning-artifact-gate/research/generated-recovered-sync.json",
+      "mode": "100644",
+      "object": "05ec1d7cfbbb6ededef92fe8a0e7c23e4a6355ca",
+      "stage": "0"
+    },
+    {
+      "path": ".trellis/tasks/11-11-planning-artifact-gate/research/generated-review-fix-sync.json",
+      "mode": "100644",
+      "object": "9b0ba891328308275e9dabbe6be3fea5e3443bf7",
+      "stage": "0"
+    },
+    {
+      "path": ".trellis/tasks/11-11-planning-artifact-gate/research/gitnexus-final-detect-changes.txt",
+      "mode": "100644",
+      "object": "08a4cdc57aa9ad259e393efa8daac8a895aeded4",
+      "stage": "0"
+    },
+    {
+      "path": ".trellis/tasks/11-11-planning-artifact-gate/research/gitnexus-final-index.txt",
+      "mode": "100644",
+      "object": "71759f4cf2be0b416daaa426a0c0b057b4203144",
+      "stage": "0"
+    },
+    {
+      "path": ".trellis/tasks/11-11-planning-artifact-gate/research/gitnexus-staged-before-commit.txt",
+      "mode": "100644",
+      "object": "1e52905cce0985b0770533c9576b108082e48096",
+      "stage": "0"
+    },
+    {
+      "path": ".trellis/tasks/11-11-planning-artifact-gate/research/gitnexus-staged-gate-outcome.txt",
+      "mode": "100644",
+      "object": "23c7caa5de043ffe6c9178a6f45c17e5a554c9da",
+      "stage": "0"
+    },
+    {
+      "path": ".trellis/tasks/11-11-planning-artifact-gate/research/impact-_default_prd_content.txt",
+      "mode": "100644",
+      "object": "6d490ba915949da24995e4ed1384e67b1aaf669d",
+      "stage": "0"
+    },
+    {
+      "path": ".trellis/tasks/11-11-planning-artifact-gate/research/impact-cmd_archive.txt",
+      "mode": "100644",
+      "object": "f7751302c93cbb727a47a852532f7d342e28feb7",
+      "stage": "0"
+    },
+    {
+      "path": ".trellis/tasks/11-11-planning-artifact-gate/research/impact-cmd_create.txt",
+      "mode": "100644",
+      "object": "a723273fbe4816a4807fa03c7c594e2c87e40e71",
+      "stage": "0"
+    },
+    {
+      "path": ".trellis/tasks/11-11-planning-artifact-gate/research/impact-getAllScripts.txt",
+      "mode": "100644",
+      "object": "2b6fd1f59c23a910c6b9f1ef9c0fa0d06fa5357d",
+      "stage": "0"
+    },
+    {
+      "path": ".trellis/tasks/11-11-planning-artifact-gate/research/implementation-commit-plan.md",
+      "mode": "100644",
+      "object": "abe1499de773201b35f557a58a9101e86e4e5a32",
+      "stage": "0"
+    },
+    {
+      "path": ".trellis/tasks/11-11-planning-artifact-gate/research/implementation-commit-scope.json",
+      "mode": "100644",
+      "object": "7bc247b8778bcfd6e99e7ddcbadb28e5b8d2899e",
+      "stage": "0"
+    },
+    {
+      "path": ".trellis/tasks/11-11-planning-artifact-gate/research/implementation-progress.md",
+      "mode": "100644",
+      "object": "1b5f2cdae9bad23489385846d02687a2d18d5b05",
+      "stage": "0"
+    },
+    {
+      "path": ".trellis/tasks/11-11-planning-artifact-gate/research/implementation-verification.md",
+      "mode": "100644",
+      "object": "2a89dfa526823e1e04339178f36aca3805e57f75",
+      "stage": "0"
+    },
+    {
+      "path": ".trellis/tasks/11-11-planning-artifact-gate/research/independent-consistency-review-2026-11-12.json",
+      "mode": "100644",
+      "object": "fbaeb0d8d95277692adb88a6a8a99b5d24e0b29f",
+      "stage": "0"
+    },
+    {
+      "path": ".trellis/tasks/11-11-planning-artifact-gate/research/independent-design-review-2026-11-12.json",
+      "mode": "100644",
+      "object": "c933d6e69a1189b8246f1cf83e11dd9ee350b22b",
+      "stage": "0"
+    },
+    {
+      "path": ".trellis/tasks/11-11-planning-artifact-gate/research/independent-review-dispositions-2026-11-12.md",
+      "mode": "100644",
+      "object": "c26715410afc68eb5a3cd36238b42c355034df7b",
+      "stage": "0"
+    },
+    {
+      "path": ".trellis/tasks/11-11-planning-artifact-gate/research/independent-review-input-2026-11-12.zip",
+      "mode": "100644",
+      "object": "61d791d4ef51d73bcf06301daff3754396064683",
+      "stage": "0"
+    },
+    {
+      "path": ".trellis/tasks/11-11-planning-artifact-gate/research/independent-review-session-2026-11-12.json",
+      "mode": "100644",
+      "object": "82a435e8bc28ec1207f254894e42b22a003f90f4",
+      "stage": "0"
+    },
+    {
+      "path": ".trellis/tasks/11-11-planning-artifact-gate/research/independent-review-target-2026-11-12.json",
+      "mode": "100644",
+      "object": "8447f9e80067d2e549175f0270d17b7618f31848",
+      "stage": "0"
+    },
+    {
+      "path": ".trellis/tasks/11-11-planning-artifact-gate/research/index-refresh.txt",
+      "mode": "100644",
+      "object": "a658de1ce0b2f0e8f9907c110457f73a12f3c68a",
+      "stage": "0"
+    },
+    {
+      "path": ".trellis/tasks/11-11-planning-artifact-gate/research/integrity-recovered-final.json",
+      "mode": "100644",
+      "object": "5caa906a2d82499ec214311bde8c9a4d63610ecf",
+      "stage": "0"
+    },
+    {
+      "path": ".trellis/tasks/11-11-planning-artifact-gate/research/lint-current.txt",
+      "mode": "100644",
+      "object": "f6c7fb286da855db33e1c9f5e3f08897fb545f53",
+      "stage": "0"
+    },
+    {
+      "path": ".trellis/tasks/11-11-planning-artifact-gate/research/lint-final-current.txt",
+      "mode": "100644",
+      "object": "f6c7fb286da855db33e1c9f5e3f08897fb545f53",
+      "stage": "0"
+    },
+    {
+      "path": ".trellis/tasks/11-11-planning-artifact-gate/research/lint-recovered-final.txt",
+      "mode": "100644",
+      "object": "f6c7fb286da855db33e1c9f5e3f08897fb545f53",
+      "stage": "0"
+    },
+    {
+      "path": ".trellis/tasks/11-11-planning-artifact-gate/research/lint-review-current.txt",
+      "mode": "100644",
+      "object": "f6c7fb286da855db33e1c9f5e3f08897fb545f53",
+      "stage": "0"
+    },
+    {
+      "path": ".trellis/tasks/11-11-planning-artifact-gate/research/local-review-findings-2026-11-12.md",
+      "mode": "100644",
+      "object": "9d0400211b9b22dba820d97d97d0244e5adcab33",
+      "stage": "0"
+    },
+    {
+      "path": ".trellis/tasks/11-11-planning-artifact-gate/research/manual-exercise-data.json",
+      "mode": "100644",
+      "object": "094b13db0feda00dc94e637b4741d70aaf3f243b",
+      "stage": "0"
+    },
+    {
+      "path": ".trellis/tasks/11-11-planning-artifact-gate/research/manual-exercises-recovered.txt",
+      "mode": "100644",
+      "object": "775781c1f3a5ed1a8c1ebff901382ef6851bda07",
+      "stage": "0"
+    },
+    {
+      "path": ".trellis/tasks/11-11-planning-artifact-gate/research/manual-exercises-review.md",
+      "mode": "100644",
+      "object": "057a0e2dda65543a1c45a475c3e777b139c9b3bb",
+      "stage": "0"
+    },
+    {
+      "path": ".trellis/tasks/11-11-planning-artifact-gate/research/manual-exercises-run.txt",
+      "mode": "100644",
+      "object": "4f4d435faa02aa54acbda8ca0a405d9d3c8ebee5",
+      "stage": "0"
+    },
+    {
+      "path": ".trellis/tasks/11-11-planning-artifact-gate/research/marketplace-detect-final.txt",
+      "mode": "100644",
+      "object": "89751505ed75356fb84368f8648c1319a9fb8b39",
+      "stage": "0"
+    },
+    {
+      "path": ".trellis/tasks/11-11-planning-artifact-gate/research/marketplace-index-final.txt",
+      "mode": "100644",
+      "object": "7a01873dfe5110209b03a517eef67dbe1dc1125c",
+      "stage": "0"
+    },
+    {
+      "path": ".trellis/tasks/11-11-planning-artifact-gate/research/normal-commit-attempt.txt",
+      "mode": "100644",
+      "object": "3d988cbb3f83ca98c211c87f5851554f22bb7621",
+      "stage": "0"
+    },
+    {
+      "path": ".trellis/tasks/11-11-planning-artifact-gate/research/omp-regression-fixed-current.txt",
+      "mode": "100644",
+      "object": "af6b74f0173c083895017e7023eb6e35ad5fa251",
+      "stage": "0"
+    },
+    {
+      "path": ".trellis/tasks/11-11-planning-artifact-gate/research/packages_cli_src_configurators_shared_ts-buildPullBasedPrelude.txt",
+      "mode": "100644",
+      "object": "045e67a486a131566d1dbe14613b8f7dc628d1a8",
+      "stage": "0"
+    },
+    {
+      "path": ".trellis/tasks/11-11-planning-artifact-gate/research/packages_cli_src_templates_codex_hooks_session_start_py-_get_task_status.txt",
+      "mode": "100644",
+      "object": "bdd520955624a195badbd815b42e6b6185fe1800",
+      "stage": "0"
+    },
+    {
+      "path": ".trellis/tasks/11-11-planning-artifact-gate/research/packages_cli_src_templates_copilot_hooks_session_start_py-_get_task_status.txt",
+      "mode": "100644",
+      "object": "c69384bddba93cf37abb67bad6029636740ca277",
+      "stage": "0"
+    },
+    {
+      "path": ".trellis/tasks/11-11-planning-artifact-gate/research/packages_cli_src_templates_opencode_lib_session_utils_js-getTaskStatus.txt",
+      "mode": "100644",
+      "object": "4d297f9fde7a21abcb4cc07bf394147a4ef74f5a",
+      "stage": "0"
+    },
+    {
+      "path": ".trellis/tasks/11-11-planning-artifact-gate/research/packages_cli_src_templates_shared_hooks_inject_subagent_context_py-build_check_prompt.txt",
+      "mode": "100644",
+      "object": "559b652ec112c1f84e846561c119ecd71e293d87",
+      "stage": "0"
+    },
+    {
+      "path": ".trellis/tasks/11-11-planning-artifact-gate/research/packages_cli_src_templates_shared_hooks_inject_subagent_context_py-build_implement_prompt.txt",
+      "mode": "100644",
+      "object": "4a1b3bcf26815a41591e370b6dd02194cfdfc674",
+      "stage": "0"
+    },
+    {
+      "path": ".trellis/tasks/11-11-planning-artifact-gate/research/packages_cli_src_templates_shared_hooks_session_start_py-_get_task_status.txt",
+      "mode": "100644",
+      "object": "0a0b93341dc1b21f06b263b076b7d8f07086684c",
+      "stage": "0"
+    },
+    {
+      "path": ".trellis/tasks/11-11-planning-artifact-gate/research/planning-integration-review-current.txt",
+      "mode": "100644",
+      "object": "666fa58da4d26b51989a02d0661097e9b9f4b4b6",
+      "stage": "0"
+    },
+    {
+      "path": ".trellis/tasks/11-11-planning-artifact-gate/research/planning-review-2026-11-12.md",
+      "mode": "100644",
+      "object": "3d9e9c004eb805b0cce4c9160b5ebaceb7fb526c",
+      "stage": "0"
+    },
+    {
+      "path": ".trellis/tasks/11-11-planning-artifact-gate/research/planning-review-log.md",
+      "mode": "100644",
+      "object": "32697ad6c0b62d09c2d5c8d28f2d7e91e7632890",
+      "stage": "0"
+    },
+    {
+      "path": ".trellis/tasks/11-11-planning-artifact-gate/research/planning-tests-current.txt",
+      "mode": "100644",
+      "object": "2a1e9748fde923474d6606142ffe67dc9d13e3e0",
+      "stage": "0"
+    },
+    {
+      "path": ".trellis/tasks/11-11-planning-artifact-gate/research/planning-validation-2026-11-12.json",
+      "mode": "100644",
+      "object": "86def4afe7d07e4d6716b2cbdf01714f4fabc54b",
+      "stage": "0"
+    },
+    {
+      "path": ".trellis/tasks/11-11-planning-artifact-gate/research/planning-validation-before-independent-review-2026-11-12.json",
+      "mode": "100644",
+      "object": "068d73f8cb4c314198090fb45a40c4e37fd9b923",
+      "stage": "0"
+    },
+    {
+      "path": ".trellis/tasks/11-11-planning-artifact-gate/research/planning-validation-during-implementation.json",
+      "mode": "100644",
+      "object": "47a6e27ac21a63e8d15739d80b251d0d4b9660ae",
+      "stage": "0"
+    },
+    {
+      "path": ".trellis/tasks/11-11-planning-artifact-gate/research/planning-write-before-2026-11-12.json",
+      "mode": "100644",
+      "object": "077aeef66d339c90e4e6fe4738dd871f1ea4410b",
+      "stage": "0"
+    },
+    {
+      "path": ".trellis/tasks/11-11-planning-artifact-gate/research/platform-review-regression-current.txt",
+      "mode": "100644",
+      "object": "2aa914fc1619ef1a690fceee501e856ebac41043",
+      "stage": "0"
+    },
+    {
+      "path": ".trellis/tasks/11-11-planning-artifact-gate/research/platform-review-regression-red.txt",
+      "mode": "100644",
+      "object": "23ac3d45907c1d3002af30672f4530a17850434e",
+      "stage": "0"
+    },
+    {
+      "path": ".trellis/tasks/11-11-planning-artifact-gate/research/platform-review-second-current.txt",
+      "mode": "100644",
+      "object": "cba33365e4bc26b4b9c127018e4bfac1e141573c",
+      "stage": "0"
+    },
+    {
+      "path": ".trellis/tasks/11-11-planning-artifact-gate/research/platform-review-second-red.txt",
+      "mode": "100644",
+      "object": "094aa17c3398e78222930bbd17f82d9cf9fc4a0c",
+      "stage": "0"
+    },
+    {
+      "path": ".trellis/tasks/11-11-planning-artifact-gate/research/platform-spec-review.md",
+      "mode": "100644",
+      "object": "55f606576e082d4285e1e3cb066fa8851a2adc97",
+      "stage": "0"
+    },
+    {
+      "path": ".trellis/tasks/11-11-planning-artifact-gate/research/pnpm-test-recovered-final.txt",
+      "mode": "100644",
+      "object": "e5be9c9421ce40069197b7d9ec6bb0ae1c160945",
+      "stage": "0"
+    },
+    {
+      "path": ".trellis/tasks/11-11-planning-artifact-gate/research/post-hook-preparation-scope-check.json",
+      "mode": "100644",
+      "object": "16d7e1e45096b4d38df546d850808fb2d9bd9780",
+      "stage": "0"
+    },
+    {
+      "path": ".trellis/tasks/11-11-planning-artifact-gate/research/prd-history-before-consolidation-2026-11-12.md",
+      "mode": "100644",
+      "object": "bd0c4db5e958e5a948f0d0e9fbe4165fd1a88ce8",
+      "stage": "0"
+    },
+    {
+      "path": ".trellis/tasks/11-11-planning-artifact-gate/research/python-types-current.txt",
+      "mode": "100644",
+      "object": "c323680cac6c8859e346070a2c7bd6948b58dfd0",
+      "stage": "0"
+    },
+    {
+      "path": ".trellis/tasks/11-11-planning-artifact-gate/research/python-types-final-current.txt",
+      "mode": "100644",
+      "object": "c323680cac6c8859e346070a2c7bd6948b58dfd0",
+      "stage": "0"
+    },
+    {
+      "path": ".trellis/tasks/11-11-planning-artifact-gate/research/python-types-recovered-final.txt",
+      "mode": "100644",
+      "object": "f2b04da450e327c5e017caab812dce9b2245fcc3",
+      "stage": "0"
+    },
+    {
+      "path": ".trellis/tasks/11-11-planning-artifact-gate/research/python39-recovered-final.txt",
+      "mode": "100644",
+      "object": "dc6bb862e3c7694105b15eaf526d403b30a05c75",
+      "stage": "0"
+    },
+    {
+      "path": ".trellis/tasks/11-11-planning-artifact-gate/research/python39-smoke-current.json",
+      "mode": "100644",
+      "object": "c4f47856eb8de5cea3d60df75ddf7e1548fb6125",
+      "stage": "0"
+    },
+    {
+      "path": ".trellis/tasks/11-11-planning-artifact-gate/research/recovered-core-and-boundary-current.txt",
+      "mode": "100644",
+      "object": "52b6d46a02d919ab7cbb84e76dce11676a2432dc",
+      "stage": "0"
+    },
+    {
+      "path": ".trellis/tasks/11-11-planning-artifact-gate/research/regression-current.txt",
+      "mode": "100644",
+      "object": "4626b3557ffa994aad25150886271f136c9e2d3b",
+      "stage": "0"
+    },
+    {
+      "path": ".trellis/tasks/11-11-planning-artifact-gate/research/regression-final-current.txt",
+      "mode": "100644",
+      "object": "061360a28ee83e0c88026b59e058bb245793e502",
+      "stage": "0"
+    },
+    {
+      "path": ".trellis/tasks/11-11-planning-artifact-gate/research/regression-functional-python.txt",
+      "mode": "100644",
+      "object": "3d787dcfad98db9ae3f57f6ac37c5a87ed6a31d2",
+      "stage": "0"
+    },
+    {
+      "path": ".trellis/tasks/11-11-planning-artifact-gate/research/regression-python-alias.txt",
+      "mode": "100644",
+      "object": "f0bdab08ec2190b0f6a4e7502d0c9503a1d5b4a2",
+      "stage": "0"
+    },
+    {
+      "path": ".trellis/tasks/11-11-planning-artifact-gate/research/regression-review-current.txt",
+      "mode": "100644",
+      "object": "4149b7ca7ad9b13959cdcdacf3db0ba8df43982b",
+      "stage": "0"
+    },
+    {
+      "path": ".trellis/tasks/11-11-planning-artifact-gate/research/reproduce-current-start.py",
+      "mode": "100644",
+      "object": "cf79c5883e8d7290889ba81d3569d9598a6107b2",
+      "stage": "0"
+    },
+    {
+      "path": ".trellis/tasks/11-11-planning-artifact-gate/research/review-validation-2026-11-12.json",
+      "mode": "100644",
+      "object": "338e1cdc91e6693b54d905b89fd7d40b51ceda66",
+      "stage": "0"
+    },
+    {
+      "path": ".trellis/tasks/11-11-planning-artifact-gate/research/run-manual-exercises.py",
+      "mode": "100644",
+      "object": "de275f5488eb70ba039c8c70ba7f674aca42d3cb",
+      "stage": "0"
+    },
+    {
+      "path": ".trellis/tasks/11-11-planning-artifact-gate/research/run-python39-smoke.py",
+      "mode": "100644",
+      "object": "06e15584703d398c62a7b512bf7881883b8aeacc",
+      "stage": "0"
+    },
+    {
+      "path": ".trellis/tasks/11-11-planning-artifact-gate/research/staged-whitespace-check.json",
+      "mode": "100644",
+      "object": "eba930ff2a541e0cd42f3ec0daa33123d52d7759",
+      "stage": "0"
+    },
+    {
+      "path": ".trellis/tasks/11-11-planning-artifact-gate/research/staged-whitespace-final.json",
+      "mode": "100644",
+      "object": "c32857d0eb9bf762a6fcd1235b6927df09b882fc",
+      "stage": "0"
+    },
+    {
+      "path": ".trellis/tasks/11-11-planning-artifact-gate/research/status-tests-current.txt",
+      "mode": "100644",
+      "object": "488469d93e914b8ff700dd2d004df6bf54d31afa",
+      "stage": "0"
+    },
+    {
+      "path": ".trellis/tasks/11-11-planning-artifact-gate/research/status-tests-red.txt",
+      "mode": "100644",
+      "object": "62d7c3a7752b8a2292718f92ef176d487a496d75",
+      "stage": "0"
+    },
+    {
+      "path": ".trellis/tasks/11-11-planning-artifact-gate/research/targeted-regression-current.txt",
+      "mode": "100644",
+      "object": "bb57b04844015e33534c149a1d1cc82f42aa8363",
+      "stage": "0"
+    },
+    {
+      "path": ".trellis/tasks/11-11-planning-artifact-gate/research/template-line-ending-correction.json",
+      "mode": "100644",
+      "object": "b502718d23a58059e4eaa1d6401d4d90fe8795af",
+      "stage": "0"
+    },
+    {
+      "path": ".trellis/tasks/11-11-planning-artifact-gate/research/template-tests-current.txt",
+      "mode": "100644",
+      "object": "27b16deb729351af448e36a59319241b2d5ff092",
+      "stage": "0"
+    },
+    {
+      "path": ".trellis/tasks/11-11-planning-artifact-gate/research/template-tests-red.txt",
+      "mode": "100644",
+      "object": "64c9089d93d1a3cd9daee3e27397576cb082de99",
+      "stage": "0"
+    },
+    {
+      "path": ".trellis/tasks/11-11-planning-artifact-gate/research/test-group-inventory-final.json",
+      "mode": "100644",
+      "object": "a3e0a6193a3edd2ac9c9e5c4d0711b153f5f1ee1",
+      "stage": "0"
+    },
+    {
+      "path": ".trellis/tasks/11-11-planning-artifact-gate/research/test-plan-2026-11-12.md",
+      "mode": "100644",
+      "object": "5e211cfd8a2d914954429cf52423db0fb7da69c5",
+      "stage": "0"
+    },
+    {
+      "path": ".trellis/tasks/11-11-planning-artifact-gate/research/typecheck-current.txt",
+      "mode": "100644",
+      "object": "35104a3bbf66d4bd41cc65e65f7784864e00da74",
+      "stage": "0"
+    },
+    {
+      "path": ".trellis/tasks/11-11-planning-artifact-gate/research/typecheck-final-current.txt",
+      "mode": "100644",
+      "object": "35104a3bbf66d4bd41cc65e65f7784864e00da74",
+      "stage": "0"
+    },
+    {
+      "path": ".trellis/tasks/11-11-planning-artifact-gate/research/typecheck-recovered-final.txt",
+      "mode": "100644",
+      "object": "35104a3bbf66d4bd41cc65e65f7784864e00da74",
+      "stage": "0"
+    },
+    {
+      "path": ".trellis/tasks/11-11-planning-artifact-gate/research/updated-expectations-current.txt",
+      "mode": "100644",
+      "object": "d7a8dab9fb067c9e0b3b777424ce076d650428aa",
+      "stage": "0"
+    },
+    {
+      "path": ".trellis/tasks/11-11-planning-artifact-gate/research/updated-expectations-final.txt",
+      "mode": "100644",
+      "object": "9ad105a8d7c26bdd0c6e21fd6177504196542441",
+      "stage": "0"
+    },
+    {
+      "path": ".trellis/tasks/11-11-planning-artifact-gate/research/verify-planning.py",
+      "mode": "100644",
+      "object": "4f7d408ca7981b36090dfe92be2b5873ebfaba09",
+      "stage": "0"
+    },
+    {
+      "path": ".trellis/tasks/11-11-planning-artifact-gate/task.json",
+      "mode": "100644",
+      "object": "4048de428add251e739ea0d7274e0c6b80dec5ca",
+      "stage": "0"
+    },
+    {
+      "path": ".trellis/workflow.md",
+      "mode": "100644",
+      "object": "a9675a16a452e269fdec483f650d5ce07e9412ff",
+      "stage": "0"
+    },
+    {
+      "path": "marketplace",
+      "mode": "160000",
+      "object": "60228d8474ec836294884730579d1248a3ffb2d2",
+      "stage": "0"
+    },
+    {
+      "path": "packages/cli/src/configurators/shared.ts",
+      "mode": "100644",
+      "object": "e1fc11c615b28a87a4774e032c66c311a7e37c9b",
+      "stage": "0"
+    },
+    {
+      "path": "packages/cli/src/templates/claude/agents/trellis-check.md",
+      "mode": "100644",
+      "object": "e45fafc5bf0faf8a3a3dcf2f1f4c8bcca52f0fdb",
+      "stage": "0"
+    },
+    {
+      "path": "packages/cli/src/templates/claude/agents/trellis-implement.md",
+      "mode": "100644",
+      "object": "38b89c291ef246210fbbd55eefb90d4044d4b464",
+      "stage": "0"
+    },
+    {
+      "path": "packages/cli/src/templates/codebuddy/agents/trellis-check.md",
+      "mode": "100644",
+      "object": "e45fafc5bf0faf8a3a3dcf2f1f4c8bcca52f0fdb",
+      "stage": "0"
+    },
+    {
+      "path": "packages/cli/src/templates/codebuddy/agents/trellis-implement.md",
+      "mode": "100644",
+      "object": "38b89c291ef246210fbbd55eefb90d4044d4b464",
+      "stage": "0"
+    },
+    {
+      "path": "packages/cli/src/templates/codex/agents/trellis-check.toml",
+      "mode": "100644",
+      "object": "5f06c87b0f81cb7f67be39641ef64ba994b27352",
+      "stage": "0"
+    },
+    {
+      "path": "packages/cli/src/templates/codex/agents/trellis-implement.toml",
+      "mode": "100644",
+      "object": "be5da1ec3a5e8a0f551500f7f6f852dafa14caef",
+      "stage": "0"
+    },
+    {
+      "path": "packages/cli/src/templates/codex/hooks/session-start.py",
+      "mode": "100644",
+      "object": "8c9d3a8403741ee261158fc1395507d437f63387",
+      "stage": "0"
+    },
+    {
+      "path": "packages/cli/src/templates/common/bundled-skills/trellis-meta/references/customize-local/change-context-loading.md",
+      "mode": "100644",
+      "object": "ac590db5d3460a2dc55af70f36e322db3c7cc79f",
+      "stage": "0"
+    },
+    {
+      "path": "packages/cli/src/templates/common/bundled-skills/trellis-meta/references/customize-local/change-workflow.md",
+      "mode": "100644",
+      "object": "45a47f274dcffb99f94eb8eaa55aa72dcbcfc5b2",
+      "stage": "0"
+    },
+    {
+      "path": "packages/cli/src/templates/common/bundled-skills/trellis-meta/references/local-architecture/context-injection.md",
+      "mode": "100644",
+      "object": "3bc6edfb02d52e3135e6a385a9c600fd4251dd19",
+      "stage": "0"
+    },
+    {
+      "path": "packages/cli/src/templates/common/bundled-skills/trellis-meta/references/local-architecture/task-system.md",
+      "mode": "100644",
+      "object": "994d95183a9f387cda485529e1e8570d49ec7726",
+      "stage": "0"
+    },
+    {
+      "path": "packages/cli/src/templates/common/bundled-skills/trellis-meta/references/platform-files/agents.md",
+      "mode": "100644",
+      "object": "33db6a4dab9bc65389f962614f8012243711459b",
+      "stage": "0"
+    },
+    {
+      "path": "packages/cli/src/templates/common/commands/continue.md",
+      "mode": "100644",
+      "object": "d1e55dfffa63002c7ed8d2133d373b5093cf871d",
+      "stage": "0"
+    },
+    {
+      "path": "packages/cli/src/templates/common/commands/start.md",
+      "mode": "100644",
+      "object": "0d5c2eb1a8d9f510eec59b29e42a511973060cdd",
+      "stage": "0"
+    },
+    {
+      "path": "packages/cli/src/templates/common/skills/before-dev.md",
+      "mode": "100644",
+      "object": "5599cd608cf2249d6375f431cfa9db01bb6333d0",
+      "stage": "0"
+    },
+    {
+      "path": "packages/cli/src/templates/common/skills/brainstorm.md",
+      "mode": "100644",
+      "object": "8edf5f0563e93615bcde33eb4f623475524d0bd8",
+      "stage": "0"
+    },
+    {
+      "path": "packages/cli/src/templates/common/skills/check.md",
+      "mode": "100644",
+      "object": "1961d3ceb856b323f4f0eb5825641b9bb644ce59",
+      "stage": "0"
+    },
+    {
+      "path": "packages/cli/src/templates/copilot/hooks/session-start.py",
+      "mode": "100644",
+      "object": "982378474890c7610822405c54d12c1af3451805",
+      "stage": "0"
+    },
+    {
+      "path": "packages/cli/src/templates/copilot/prompts/before-dev.prompt.md",
+      "mode": "100644",
+      "object": "082e676d2324351210ac5b2d2ed72d16205f913f",
+      "stage": "0"
+    },
+    {
+      "path": "packages/cli/src/templates/copilot/prompts/brainstorm.prompt.md",
+      "mode": "100644",
+      "object": "94fe836c4d9c45a98cef791076b42a1f6119e273",
+      "stage": "0"
+    },
+    {
+      "path": "packages/cli/src/templates/copilot/prompts/check.prompt.md",
+      "mode": "100644",
+      "object": "c70092af3de35689fb421450d48f10199687935f",
+      "stage": "0"
+    },
+    {
+      "path": "packages/cli/src/templates/copilot/prompts/start.prompt.md",
+      "mode": "100644",
+      "object": "26f8de6e9ebf5d03140ffc60ea1f042ccca2d146",
+      "stage": "0"
+    },
+    {
+      "path": "packages/cli/src/templates/cursor/agents/trellis-check.md",
+      "mode": "100644",
+      "object": "e5f7a904781482e62bf58435fe90df68a2d260d3",
+      "stage": "0"
+    },
+    {
+      "path": "packages/cli/src/templates/cursor/agents/trellis-implement.md",
+      "mode": "100644",
+      "object": "7798a558b2da47187945c5891d47355cbaf489dc",
+      "stage": "0"
+    },
+    {
+      "path": "packages/cli/src/templates/droid/droids/trellis-check.md",
+      "mode": "100644",
+      "object": "c3ad59f36fc2f99401f69aeb9d0a7b2bd37f2075",
+      "stage": "0"
+    },
+    {
+      "path": "packages/cli/src/templates/droid/droids/trellis-implement.md",
+      "mode": "100644",
+      "object": "3c8d208be5f9d80029ba6bf4da7757d7c016c368",
+      "stage": "0"
+    },
+    {
+      "path": "packages/cli/src/templates/gemini/agents/trellis-check.md",
+      "mode": "100644",
+      "object": "bc762db448a9d328c7ae9a8d0d1ccbed9f42ce51",
+      "stage": "0"
+    },
+    {
+      "path": "packages/cli/src/templates/gemini/agents/trellis-implement.md",
+      "mode": "100644",
+      "object": "d3207f672a6251597f2de2f51070d14334991850",
+      "stage": "0"
+    },
+    {
+      "path": "packages/cli/src/templates/grok/agents/trellis-check.md",
+      "mode": "100644",
+      "object": "4c81e5eb7cd94c027c9e9e149124b83938caea02",
+      "stage": "0"
+    },
+    {
+      "path": "packages/cli/src/templates/grok/agents/trellis-implement.md",
+      "mode": "100644",
+      "object": "b4cff7114f704b09d7179b616664fa6ad0774d6d",
+      "stage": "0"
+    },
+    {
+      "path": "packages/cli/src/templates/kimi/agents/trellis-check.md",
+      "mode": "100644",
+      "object": "5cc99c52abbcd3eb20900856e1ff5f9bd234cfca",
+      "stage": "0"
+    },
+    {
+      "path": "packages/cli/src/templates/kimi/agents/trellis-implement.md",
+      "mode": "100644",
+      "object": "87e0ae0580a9bdf820df73d305054eb374150ea3",
+      "stage": "0"
+    },
+    {
+      "path": "packages/cli/src/templates/kiro/agents/trellis-check.json",
+      "mode": "100644",
+      "object": "218019f0ce4fac5c52e74edf16f23ac45399fe74",
+      "stage": "0"
+    },
+    {
+      "path": "packages/cli/src/templates/kiro/agents/trellis-implement.json",
+      "mode": "100644",
+      "object": "6d5e60bd8b1d3dd0aa28aca7d41a919833766f8b",
+      "stage": "0"
+    },
+    {
+      "path": "packages/cli/src/templates/kiro/agents/trellis.json",
+      "mode": "100644",
+      "object": "2ed5dfc0afc0155bd4b1817a85728e683fcae392",
+      "stage": "0"
+    },
+    {
+      "path": "packages/cli/src/templates/omp/agents/trellis-check.md",
+      "mode": "100644",
+      "object": "cedebe386c8af11fcd86034bea7eff3669e5d37a",
+      "stage": "0"
+    },
+    {
+      "path": "packages/cli/src/templates/omp/agents/trellis-implement.md",
+      "mode": "100644",
+      "object": "c73aa0abcb1a574ba44a99b1e0b4b8020db1a839",
+      "stage": "0"
+    },
+    {
+      "path": "packages/cli/src/templates/opencode/agents/trellis-check.md",
+      "mode": "100644",
+      "object": "c4ceafeca95ba50c2ce3291207722a2893950d1e",
+      "stage": "0"
+    },
+    {
+      "path": "packages/cli/src/templates/opencode/agents/trellis-implement.md",
+      "mode": "100644",
+      "object": "f6461620b34f17da8aa254af3703bbc414e3f495",
+      "stage": "0"
+    },
+    {
+      "path": "packages/cli/src/templates/opencode/lib/session-utils.js",
+      "mode": "100644",
+      "object": "a5ffca805b667ca5433cd3fb1e64f5863065a15f",
+      "stage": "0"
+    },
+    {
+      "path": "packages/cli/src/templates/opencode/plugins/inject-subagent-context.js",
+      "mode": "100644",
+      "object": "6de68eb8b7b282bbb58b38d38b4d779b0b598dbd",
+      "stage": "0"
+    },
+    {
+      "path": "packages/cli/src/templates/pi/agents/trellis-check.md",
+      "mode": "100644",
+      "object": "e28e79bfbeb0602ef55641caacf02adde19a528f",
+      "stage": "0"
+    },
+    {
+      "path": "packages/cli/src/templates/pi/agents/trellis-implement.md",
+      "mode": "100644",
+      "object": "cc79c6f38d89da1c09a93b9fc3f2b983483347a9",
+      "stage": "0"
+    },
+    {
+      "path": "packages/cli/src/templates/qoder/agents/trellis-check.md",
+      "mode": "100644",
+      "object": "5e7a66b131c77aad19878d6382a5f013eddce7b1",
+      "stage": "0"
+    },
+    {
+      "path": "packages/cli/src/templates/qoder/agents/trellis-implement.md",
+      "mode": "100644",
+      "object": "bc7ef6d046fc6dfa89be20de0c525c8910a6783a",
+      "stage": "0"
+    },
+    {
+      "path": "packages/cli/src/templates/reasonix/agents/trellis-check.md",
+      "mode": "100644",
+      "object": "3d1106b9fa6fd536c2ebded0d918922055706592",
+      "stage": "0"
+    },
+    {
+      "path": "packages/cli/src/templates/reasonix/agents/trellis-implement.md",
+      "mode": "100644",
+      "object": "31a435565d62657c24aa598f7325471043a86cb5",
+      "stage": "0"
+    },
+    {
+      "path": "packages/cli/src/templates/shared-hooks/inject-subagent-context.py",
+      "mode": "100644",
+      "object": "2d1126a61dc9b159182b699a61e4d3ddf232cb3f",
+      "stage": "0"
+    },
+    {
+      "path": "packages/cli/src/templates/shared-hooks/session-start.py",
+      "mode": "100644",
+      "object": "2eadec3684a273a80ce6288243c0259d64c12d01",
+      "stage": "0"
+    },
+    {
+      "path": "packages/cli/src/templates/snow/agents/trellis-check.md",
+      "mode": "100644",
+      "object": "a469b15494966faecd82bd0203f3f848e9862c61",
+      "stage": "0"
+    },
+    {
+      "path": "packages/cli/src/templates/snow/agents/trellis-implement.md",
+      "mode": "100644",
+      "object": "f9df66ad1ab717cd21da5256c87a5dae95f4f701",
+      "stage": "0"
+    },
+    {
+      "path": "packages/cli/src/templates/trae/agents/trellis-check.md",
+      "mode": "100644",
+      "object": "5e7a66b131c77aad19878d6382a5f013eddce7b1",
+      "stage": "0"
+    },
+    {
+      "path": "packages/cli/src/templates/trae/agents/trellis-implement.md",
+      "mode": "100644",
+      "object": "bc7ef6d046fc6dfa89be20de0c525c8910a6783a",
+      "stage": "0"
+    },
+    {
+      "path": "packages/cli/src/templates/trellis/agents/check.md",
+      "mode": "100644",
+      "object": "6a6d3e2a6d12893db06f87c7ee7f9b47e718e43a",
+      "stage": "0"
+    },
+    {
+      "path": "packages/cli/src/templates/trellis/agents/implement.md",
+      "mode": "100644",
+      "object": "43b89a32bba39604d8897f537b57fd2fde2e902b",
+      "stage": "0"
+    },
+    {
+      "path": "packages/cli/src/templates/trellis/index.ts",
+      "mode": "100644",
+      "object": "3afb889de21026fa573c391ec49f15860b3d9345",
+      "stage": "0"
+    },
+    {
+      "path": "packages/cli/src/templates/trellis/scripts/common/planning.py",
+      "mode": "100644",
+      "object": "78e9c3a27c05696e5372953e646500830927152c",
+      "stage": "0"
+    },
+    {
+      "path": "packages/cli/src/templates/trellis/scripts/common/task_context.py",
+      "mode": "100644",
+      "object": "7919710f16fb71c41bcf5974c9764513cf0769ee",
+      "stage": "0"
+    },
+    {
+      "path": "packages/cli/src/templates/trellis/scripts/common/task_store.py",
+      "mode": "100644",
+      "object": "c221dbbbf4c00edc6d1b9d647f17b4de5c86eb13",
+      "stage": "0"
+    },
+    {
+      "path": "packages/cli/src/templates/trellis/scripts/task.py",
+      "mode": "100755",
+      "object": "67a27dffb9ce67794b1ec41047967b5727cb4005",
+      "stage": "0"
+    },
+    {
+      "path": "packages/cli/src/templates/trellis/workflow.md",
+      "mode": "100644",
+      "object": "1cef87156450e70021e1155482619cc315fadb23",
+      "stage": "0"
+    },
+    {
+      "path": "packages/cli/src/templates/zcode/agents/trellis-check.md",
+      "mode": "100644",
+      "object": "d3dca84d601edc11110efcfe943383b75c564373",
+      "stage": "0"
+    },
+    {
+      "path": "packages/cli/src/templates/zcode/agents/trellis-implement.md",
+      "mode": "100644",
+      "object": "9fdd8a4daa790f632982e830624e722ea743d624",
+      "stage": "0"
+    },
+    {
+      "path": "packages/cli/test/regression.test.ts",
+      "mode": "100644",
+      "object": "4c5e8cf7896baf9293fc3d3c4b8725c4865a7cff",
+      "stage": "0"
+    },
+    {
+      "path": "packages/cli/test/scripts/planning-status.integration.test.ts",
+      "mode": "100644",
+      "object": "a90e86e87664b87527ea5bb6bec16e45b18e4425",
+      "stage": "0"
+    },
+    {
+      "path": "packages/cli/test/scripts/task-planning.integration.test.ts",
+      "mode": "100644",
+      "object": "9e667315d6a905018ceff5211583cb926f276fdf",
+      "stage": "0"
+    },
+    {
+      "path": "packages/cli/test/templates/codex.test.ts",
+      "mode": "100644",
+      "object": "06ca73e245ea258b135e09ba80c7b56218db1696",
+      "stage": "0"
+    },
+    {
+      "path": "packages/cli/test/templates/planning-contract.test.ts",
+      "mode": "100644",
+      "object": "97c7edd9a15bda25d511f89c75393b27e1f9f244",
+      "stage": "0"
+    },
+    {
+      "path": "packages/cli/test/templates/shared-hooks.test.ts",
+      "mode": "100644",
+      "object": "200942c9031f0c975787916a26e7a8d836407585",
+      "stage": "0"
+    }
+  ],
+  "nextAction": "Await the existing explicit commit-hook exception decision. Do not treat automatic goal continuation as approval.",
+  "caveat": "This report is written after the tree snapshot and is not itself contained in that tree. Later evidence additions change the tree and must be recorded separately."
+}

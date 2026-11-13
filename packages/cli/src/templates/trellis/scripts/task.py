@@ -74,6 +74,17 @@ from common.task_context import (
     cmd_list_context,
     curated_entry_count,
 )
+from common.planning import (
+    _append_change,
+    _new_approval,
+    basic_task_errors,
+    check_current_files,
+    check_planning,
+    cmd_attest,
+    cmd_replan,
+    planning_summary,
+    record_errors,
+)
 
 
 # =============================================================================
@@ -83,39 +94,32 @@ from common.task_context import (
 def _record_start_state(
     task_json_path: Path,
     repo_root: Path,
+    data: dict | None = None,
     label: str = "",
-) -> None:
-    """Move a freshly started task to in_progress and record its branch.
+) -> bool:
+    """Save the prepared start state once, then report what was written.
 
-    Both updates share one read/write: the status flip from planning, and the
-    checked-out branch when `branch` is still empty. Recording at start is what
-    keeps `branch` trustworthy at archive time — a task whose branch is only
-    ever set by hand tends to reach archive with `branch: null`.
-
-    Tolerant on purpose — a broken task.json does not fail `start`, because the
-    session pointer is the point of the command. But the read overwrites the
-    file it just read, so no failure may be silent: without a message the
-    absent status line looks like the task simply was not in planning.
+    The caller prepares status, approval and branch in memory and validates
+    both record layers before this call. A read error means the candidate could
+    not be refreshed, so nothing is written. A write failure is returned as
+    False so the caller can skip pointer writes and hooks.
     """
-    data, reason = read_json_checked(task_json_path)
     if data is None:
-        problem, hint = describe_json_read_failure(task_json_path, reason)
-        print(
-            colored(f"Warning: {problem}; task.json not updated.", Colors.YELLOW),
-            file=sys.stderr,
-        )
-        print(hint, file=sys.stderr)
-        return
+        data, reason = read_json_checked(task_json_path)
+        if data is None:
+            problem, hint = describe_json_read_failure(task_json_path, reason)
+            print(
+                colored(f"Warning: {problem}; task.json not updated.", Colors.YELLOW),
+                file=sys.stderr,
+            )
+            print(hint, file=sys.stderr)
+            return False
 
     applied: list[str] = []
-
-    if data.get("status") == "planning":
-        data["status"] = "in_progress"
-        applied.append(f"✓ Status: planning → in_progress{label}")
+    base_branch_conflict: str | None = None
 
     # Only fill an empty field: an explicit `set-branch` must survive a later
     # `start` (re-starting a task after a checkout is a normal thing to do).
-    base_branch_conflict: str | None = None
     if not data.get("branch"):
         branch = current_branch_name(repo_root)
         if branch:
@@ -133,19 +137,16 @@ def _record_start_state(
                 file=sys.stderr,
             )
 
-    if not applied:
-        return
-
     if not write_json(task_json_path, data):
         print(
             colored(
-                f"Warning: Failed to write {task_json_path}; "
-                "status and branch are unchanged.",
-                Colors.YELLOW,
+                f"Error: Failed to save {task_json_path}; "
+                "task status and approval are unchanged.",
+                Colors.RED,
             ),
             file=sys.stderr,
         )
-        return
+        return False
 
     for line in applied:
         print(colored(line, Colors.GREEN))
@@ -166,10 +167,233 @@ def _record_start_state(
             "set-branch <task> <feature-branch>",
             file=sys.stderr,
         )
+    return True
 
+
+def _check_start_prerequisites(
+    args: argparse.Namespace,
+    task_dir: Path,
+    data: dict,
+    task_input: str,
+) -> tuple[dict | None, int]:
+    """Validate the planning gate and prepare the exact start-state candidate.
+
+    Returns (candidate, 0) when start may proceed, or (None, exit_code) with
+    all diagnostics already printed. This function never writes.
+    """
+    status = data.get("status")
+    check = check_planning(task_dir, data)
+    raw_meta = data.get("meta")
+    meta: dict[str, object] = raw_meta if isinstance(raw_meta, dict) else {}
+    review_arg = getattr(args, "review", None)
+    approval_note = getattr(args, "approval_note", None)
+    approval_source = getattr(args, "approval_source", None)
+    editorial_note = getattr(args, "editorial_note", None)
+    confirmation_args = (review_arg, approval_note, approval_source)
+    has_any_confirmation = any(value is not None for value in confirmation_args)
+
+    if status == "completed":
+        print(colored("Error: completed tasks cannot be started", Colors.RED))
+        return None, 1
+
+    if has_any_confirmation:
+        missing = [
+            name
+            for name, value in (
+                ("--review", review_arg),
+                ("--approval-note", approval_note),
+                ("--approval-source", approval_source),
+            )
+            if not isinstance(value, str) or not value.strip()
+        ]
+        if missing:
+            print(
+                colored(
+                    "Error: first start needs " + ", ".join(missing) + " (non-empty)",
+                    Colors.RED,
+                )
+            )
+            return None, 1
+
+    if editorial_note is not None and not editorial_note.strip():
+        print(colored("Error: --editorial-note must be non-empty", Colors.RED))
+        return None, 1
+
+    if status in ("in_progress", "review"):
+        if has_any_confirmation or editorial_note is not None:
+            print(
+                colored(
+                    "Error: resume does not accept confirmation/editorial arguments",
+                    Colors.RED,
+                )
+            )
+            return None, 1
+        if check.mode == "ready":
+            return dict(data), 0
+        if check.mode == "legacy_resume":
+            return dict(data), 0
+        for error in check.errors:
+            print(colored(f"Error: {error}", Colors.RED))
+        if check.mode == "drift":
+            print(
+                "Hint: run replan if the reviewed meaning changed; record a "
+                "typo-only editorial only when it is truly non-substantive."
+            )
+        return None, 1
+
+    # planning
+    if check.mode == "legacy_resume":
+        # Only possible for non-planning statuses; defensive.
+        for error in check.errors:
+            print(colored(f"Error: {error}", Colors.RED))
+        return None, 1
+    if check.mode == "ready":
+        for error in check.errors:
+            print(colored(f"Error: {error}", Colors.RED))
+        return None, 1
+    if check.mode == "waiting_confirmation":
+        if not has_any_confirmation:
+            print(
+                colored(
+                    "Error: planning version is waiting for explicit user confirmation",
+                    Colors.RED,
+                )
+            )
+            print(
+                f"Re-run: python3 {DIR_WORKFLOW}/scripts/task.py start "
+                f"{task_input} --review <id> --approval-note \"<user reply>\" "
+                "--approval-source \"<where to find it>\""
+            )
+            return None, 1
+        assert isinstance(review_arg, str) and isinstance(approval_note, str)
+        assert isinstance(approval_source, str)
+        if review_arg != check.review_id:
+            print(
+                colored(
+                    f"Error: --review {review_arg} does not match the current "
+                    f"review {check.review_id}",
+                    Colors.RED,
+                )
+            )
+            return None, 1
+        if editorial_note is not None:
+            print(
+                colored(
+                    "Error: --editorial-note is only valid when the reviewed files drifted",
+                    Colors.RED,
+                )
+            )
+            return None, 1
+        candidate = dict(data)
+        candidate_meta = dict(meta)
+        candidate_meta["planningApproval"] = _new_approval(
+            check.review_id or "",
+            check.record_review_files,
+            approval_note,
+            approval_source,
+        )
+        candidate_meta.pop("planningReplan", None)
+        candidate["meta"] = candidate_meta
+        candidate["status"] = "in_progress"
+        return candidate, 0
+
+    if check.mode == "drift":
+        # A drift is only repairable here when the *only* problem is current
+        # file bytes and the explicit editorial note was supplied. Record
+        # structure was already validated by check_planning.
+        if editorial_note is None:
+            for error in check.errors:
+                print(colored(f"Error: {error}", Colors.RED))
+            print("Hint: use --editorial-note only for non-substantive corrections.")
+            return None, 1
+        if not has_any_confirmation:
+            print(
+                colored(
+                    "Error: --editorial-note also needs --review, --approval-note "
+                    "and --approval-source",
+                    Colors.RED,
+                )
+            )
+            return None, 1
+        assert isinstance(review_arg, str) and isinstance(approval_note, str)
+        assert isinstance(approval_source, str)
+        attest_value = meta.get("planningAttest")
+        if not isinstance(attest_value, dict) or review_arg != attest_value.get("reviewId"):
+            print(
+                colored(
+                    f"Error: --review {review_arg} does not match the current "
+                    f"review {check.review_id}",
+                    Colors.RED,
+                )
+            )
+            return None, 1
+        candidate = dict(data)
+        candidate_meta = dict(meta)
+        candidate_meta["planningAttest"] = _append_change(
+            attest_value, check.actual_files, editorial_note
+        )
+        candidate_meta["planningApproval"] = _new_approval(
+            str(attest_value["reviewId"]),
+            dict(attest_value["reviewFiles"]),
+            approval_note,
+            approval_source,
+        )
+        candidate_meta.pop("planningReplan", None)
+        candidate["meta"] = candidate_meta
+        candidate["status"] = "in_progress"
+        return candidate, 0
+
+    for error in check.errors:
+        print(colored(f"Error: {error}", Colors.RED))
+    return None, 1
+
+
+def cmd_planning_status(args: argparse.Namespace) -> int:
+    """Read-only planning diagnostics (not a write or approval command)."""
+    repo_root = get_repo_root()
+    full_path = resolve_task_dir(args.dir, repo_root)
+    if full_path is None:
+        return 1
+    if not full_path.is_dir():
+        print(colored(f"Error: Task not found: {args.dir}", Colors.RED))
+        return 1
+    task_json = full_path / "task.json"
+    data, reason = read_json_checked(task_json)
+    if data is None:
+        if args.json:
+            print(json.dumps({"error": reason, "file": str(task_json)}))
+        else:
+            problem, hint = describe_json_read_failure(task_json, reason)
+            print(colored(f"Error: {problem}", Colors.RED))
+            print(hint)
+        return 1
+    errors = basic_task_errors(data)
+    if errors:
+        if args.json:
+            print(json.dumps({"errors": errors}, ensure_ascii=False))
+        else:
+            for error in errors:
+                print(colored(f"Error: {error}", Colors.RED))
+        return 1
+    summary = planning_summary(full_path, data)
+    if args.json:
+        print(json.dumps(summary, ensure_ascii=False))
+        return 0
+    print(f"Mode: {summary['mode']}")
+    if summary["reviewId"]:
+        print(f"Review: {summary['reviewId']}")
+    if summary["note"]:
+        print(f"Note: {summary['note']}")
+    if summary["approvalSource"]:
+        print(f"Approval source: {summary['approvalSource']}")
+    if summary["changedFiles"]:
+        print("Changed files: " + ", ".join(summary["changedFiles"]))
+    for error in summary["errors"]:
+        print(f"Diagnostic: {error}")
+    return 0
 
 def cmd_start(args: argparse.Namespace) -> int:
-    """Set active task."""
+    """Set active task after the shared planning gate."""
     repo_root = get_repo_root()
     task_input = args.dir
 
@@ -177,13 +401,10 @@ def cmd_start(args: argparse.Namespace) -> int:
         print(colored("Error: task directory or name required", Colors.RED))
         return 1
 
-    # Resolve task directory (supports task name, relative path, or absolute path)
     full_path = resolve_task_dir(task_input, repo_root)
 
     if full_path is None:
-        # resolve_task_dir already named the exact reason on stderr. A second,
-        # generic line on stdout would split one diagnosis across two streams
-        # and bury the specific message.
+        # resolve_task_dir already named the exact reason on stderr.
         return 1
 
     if not full_path.is_dir():
@@ -191,11 +412,33 @@ def cmd_start(args: argparse.Namespace) -> int:
         print("Hint: Use task name (e.g., 'my-task') or full path (e.g., '.trellis/tasks/01-31-my-task')")
         return 1
 
-    # Context-manifest gate (#573): a seeded-but-uncurated implement/check
-    # manifest means every sub-agent dispatched for this task runs with zero
-    # spec context, and nothing downstream surfaces that to the main session.
-    # An absent manifest is not gated — create seeds the files only on
-    # sub-agent-capable platforms, so absence means no sub-agent reads them.
+    try:
+        task_dir = full_path.relative_to(repo_root.resolve()).as_posix()
+    except ValueError:
+        print(colored(f"Error: Task not found: {task_input}", Colors.RED))
+        print("Hint: Use task name (e.g., 'my-task') or full path (e.g., '.trellis/tasks/01-31-my-task')")
+        return 1
+
+    task_json_path = full_path / FILE_TASK_JSON
+    data, reason = read_json_checked(task_json_path)
+    if data is None:
+        problem, hint = describe_json_read_failure(task_json_path, reason)
+        print(colored(f"Error: {problem}", Colors.RED))
+        print(hint)
+        return 1
+    shape_errors = basic_task_errors(data)
+    if shape_errors:
+        for error in shape_errors:
+            print(colored(f"Error: {error}", Colors.RED))
+        return 1
+
+    candidate, code = _check_start_prerequisites(args, full_path, data, task_input)
+    if candidate is None:
+        return code
+
+    # Context-manifest gate (#573): an empty manifest means sub-agents get
+    # zero spec context. This stays after the planning gate so a missing
+    # review is reported before unrelated context suggestions.
     if not getattr(args, "allow_empty_context", False):
         empty_manifests = [
             name
@@ -214,32 +457,85 @@ def cmd_start(args: argparse.Namespace) -> int:
             print("  Intentionally empty? Re-run start with --allow-empty-context")
             return 1
 
-    # Convert to relative path for storage. repo_root is resolved because
-    # full_path already is (resolve_task_dir only returns paths inside the
-    # resolved root), so an unresolved repo_root would mismatch under a
-    # symlink (e.g. /tmp on macOS) and reject a perfectly normal task.
-    try:
-        task_dir = full_path.relative_to(repo_root.resolve()).as_posix()
-    except ValueError:
-        # resolve_task_dir already refused everything outside the repo, so
-        # this is unreachable in practice. Refuse rather than fall back to
-        # str(full_path) — that fallback (a lexical relative_to() paired with
-        # an absolute-path fallback) is exactly the pattern that let a `..`
-        # ref escape into storage before this fix.
-        print(colored(f"Error: Task not found: {task_input}", Colors.RED))
-        print("Hint: Use task name (e.g., 'my-task') or full path (e.g., '.trellis/tasks/01-31-my-task')")
+    # Re-read immediately before the single save. This catches a concurrent
+    # record change that happened while the context gate was running; it
+    # cannot eliminate a writer racing this final read.
+    latest, latest_reason = read_json_checked(task_json_path)
+    if latest is None:
+        problem, hint = describe_json_read_failure(task_json_path, latest_reason)
+        print(colored(f"Error: {problem}", Colors.RED))
+        print(hint)
+        return 1
+    latest_errors = record_errors(latest)
+    if latest_errors:
+        for error in latest_errors:
+            print(colored(f"Error: {error}", Colors.RED))
         return 1
 
-    task_json_path = full_path / FILE_TASK_JSON
+    # The candidate was prepared from the record read by the gate. If the
+    # record identity changed since then, stop rather than silently
+    # overwriting that newer record. A changed *artifact* is handled below by
+    # rechecking the candidate's own files; the editorial path intentionally
+    # differs from the old attestation.
+    status = data.get("status")
+    data_meta = data.get("meta")
+    latest_meta_value = latest.get("meta")
+    original_meta: dict[str, object] = data_meta if isinstance(data_meta, dict) else {}
+    latest_meta: dict[str, object] = latest_meta_value if isinstance(latest_meta_value, dict) else {}
+    original_attest = original_meta.get("planningAttest")
+    latest_attest = latest_meta.get("planningAttest")
+    original_review = original_attest.get("reviewId") if isinstance(original_attest, dict) else None
+    latest_review = latest_attest.get("reviewId") if isinstance(latest_attest, dict) else None
+    if status == "planning" and original_review != latest_review:
+        print(colored("Error: task.json changed while start was preparing; retry.", Colors.RED))
+        return 1
 
-    if not resolve_context_key():
-        # Degraded mode: no session identity available.
-        # Hook didn't inject TRELLIS_CONTEXT_ID (common on Windows + Claude Code,
-        # --continue resume path, fork distribution, hooks disabled, etc.). Skip
-        # per-session pointer write; AI continues based on conversation context.
+    candidate["status"] = "in_progress"
+    candidate_errors = record_errors(candidate)
+    if candidate_errors:
+        for error in candidate_errors:
+            print(colored(f"Error: {error}", Colors.RED))
+        return 1
+    candidate_meta_value = candidate.get("meta")
+    candidate_meta: dict[str, object] = candidate_meta_value if isinstance(candidate_meta_value, dict) else {}
+    candidate_attest = candidate_meta.get("planningAttest")
+    if isinstance(candidate_attest, dict):
+        _actual, current_errors = check_current_files(
+            full_path,
+            candidate_attest.get("files", {}),
+        )
+        if current_errors:
+            for error in current_errors:
+                print(colored(f"Error: {error}", Colors.RED))
+            return 1
+
+    if not _record_start_state(
+        task_json_path,
+        repo_root,
+        candidate,
+        label=" (planning gate)",
+    ):
+        return 1
+
+    active = None
+    if resolve_context_key():
+        active = set_active_task(task_dir, repo_root)
+        if not active:
+            print(
+                colored(
+                    "Error: Start was recorded, but the active-task pointer could "
+                    "not be saved. No hook ran. Retry start to restore the session "
+                    "pointer; do not treat this as an untracked failed start.",
+                    Colors.RED,
+                )
+            )
+            return 1
+        print(colored(f"✓ Current task set to: {task_dir}", Colors.GREEN))
+        print(f"Source: {active.source}")
+    else:
         print(colored(
             "ℹ Session identity not available; active-task pointer not persisted "
-            "this session (degraded mode). AI continues based on conversation context.",
+            "this session (degraded mode).",
             Colors.YELLOW,
         ))
         print(colored(
@@ -248,29 +544,8 @@ def cmd_start(args: argparse.Namespace) -> int:
             Colors.YELLOW,
         ))
 
-        # Still flip task.json status: planning → in_progress so downstream phases proceed.
-        if task_json_path.is_file():
-            _record_start_state(task_json_path, repo_root, " (degraded)")
-            run_task_hooks("after_start", task_json_path, repo_root)
-        return 0
-
-    active = set_active_task(task_dir, repo_root)
-    if active:
-        print(colored(f"✓ Current task set to: {task_dir}", Colors.GREEN))
-        print(f"Source: {active.source}")
-
-        if task_json_path.is_file():
-            _record_start_state(task_json_path, repo_root)
-
-        print()
-        print(colored("The hook will now inject context from this task's jsonl files.", Colors.BLUE))
-
-        run_task_hooks("after_start", task_json_path, repo_root)
-        return 0
-    else:
-        print(colored("Error: Failed to set current task", Colors.RED))
-        return 1
-
+    run_task_hooks("after_start", task_json_path, repo_root)
+    return 0
 
 def cmd_finish(args: argparse.Namespace) -> int:
     """Clear active task."""
@@ -689,6 +964,28 @@ def main() -> int:
         action="store_true",
         help="Start even when implement.jsonl / check.jsonl have no curated entries",
     )
+    p_start.add_argument("--review", help="Attested reviewId approved by the user")
+    p_start.add_argument("--approval-note", help="User's approval reply (verbatim or faithful excerpt)")
+    p_start.add_argument("--approval-source", help="Where the approval can be found")
+    p_start.add_argument("--editorial-note", help="Non-substantive correction made after approval")
+
+    # attest
+    p_attest = subparsers.add_parser("attest", help="Attest the current planning version")
+    p_attest.add_argument("dir", help="Task directory")
+    p_attest.add_argument("--note", required=True, help="Why this version is ready for review")
+    p_attest.add_argument("--editorial", action="store_true", help="Record a non-substantive correction")
+
+    # replan
+    p_replan = subparsers.add_parser("replan", help="Pause affected work and return to planning")
+    p_replan.add_argument("dir", help="Task directory")
+    p_replan.add_argument("--reason", help="What changed")
+    p_replan.add_argument("--affected", help="Affected work")
+    p_replan.add_argument("--independent", help="Work that can continue independently (default: none)")
+
+    # planning-status
+    p_pstatus = subparsers.add_parser("planning-status", help="Read-only planning diagnostics")
+    p_pstatus.add_argument("dir", help="Task directory")
+    p_pstatus.add_argument("--json", action="store_true", help="Output machine-readable JSON")
 
     # current
     p_current = subparsers.add_parser("current", help="Show active task")
@@ -788,6 +1085,9 @@ def main() -> int:
         "remove-subtask": cmd_remove_subtask,
         "list": cmd_list,
         "list-archive": cmd_list_archive,
+        "attest": cmd_attest,
+        "replan": cmd_replan,
+        "planning-status": cmd_planning_status,
     }
 
     if args.command in commands:

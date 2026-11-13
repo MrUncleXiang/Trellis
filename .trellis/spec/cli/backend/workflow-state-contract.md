@@ -305,7 +305,7 @@ Which breadcrumbs actually fire in normal flow:
 **Test invariant** (`test/regression.test.ts`): workflow-state blocks must
 preserve the runtime gates that cannot be recovered from model memory:
 `no_task` triages and asks for task-creation consent; planning distinguishes
-lightweight PRD-only tasks from complex tasks requiring `prd.md`, `design.md`,
+all new tasks requiring concise `prd.md`, `design.md`,
 and `implement.md`; in-progress keeps the commit step reachable before
 `/trellis:finish-work`. See:
 
@@ -351,8 +351,7 @@ Hookless: kilo, antigravity, devin.
 `inject-subagent-context` for hook-inject platforms, `buildPullBasedPrelude` for
 pull-prelude platforms, or the Pi extension's prompt builder for
 extension-backed platforms. All paths must use the same task artifact order:
-jsonl entries -> `prd.md` -> `design.md if present` -> `implement.md if
-present`. Breadcrumb text must additionally be safe if a sub-agent sees it:
+jsonl entries -> `prd.md` -> `design.md` -> `implement.md`. Breadcrumb text must additionally be safe if a sub-agent sees it:
 main-session dispatch guidance must self-exempt `trellis-implement` /
 `trellis-check` readers so they implement or check directly instead of spawning
 nested Trellis sub-agents.
@@ -407,3 +406,13 @@ nested Trellis sub-agents.
 Cross-reference: `cli/backend/quality-guidelines.md` "Routing Fixes: Audit
 ALL Entry Paths" — that audit pattern is what this contract enforces for
 the breadcrumb subsystem.
+
+## Reviewed planning version contract
+
+Every new task requires readable nonempty `prd.md`, `design.md`, and `implement.md`; content may be brief without fixed sections or word counts. The standard-library `common/planning.py` owns file fingerprints and record validation, is explicitly exported in `templates/trellis/index.ts`, and stays byte-identical in both script trees. Hash canonicalization only changes CRLF to LF.
+
+`attest` creates a fresh review version in planning. `start --review --approval-note --approval-source` checks the exact reviewed version and saves approval, status, branch and cleared replan in one atomic task.json write before pointer/hook effects. `waiting_confirmation` may validate successfully but is not permission to implement. `planning-status --json` is readonly with eight fixed fields; base-task read/shape errors exit 1, planning diagnostics on valid tasks exit 0. Restore is legacy only when all three planning metadata keys are absent on an already-started task; partial/null metadata is invalid. Completed start is refused.
+
+Material requirement/design/plan changes require pausing affected work, `replan`, updated artifacts, and renewed user confirmation. Ordinary implementation fixes continue; progress lives outside frozen reviewed planning. Wording-only editorial changes keep original review and approval with a continuous hash chain. The main session saves the old review summary and real response/source in `research/planning-review-log.md` before replan clears structured records. This log is workflow responsibility; hashes cannot restore overwritten text, and the tool cannot verify identity or classify semantic changes.
+
+Shared, Codex, Copilot and OpenCode startup hints use the canonical status command with a five-second timeout, encode JSON data then escape `&`, `<`, `>`, and do not fall back to file-presence permission if the query fails. String escaping tests verify rendering boundaries, not model obedience. Same-task mutation is serialized by the main session; no concurrency lock or exactly-once hook guarantee is added. Archive planning issues only warn; existing archive checks remain. See `test/scripts/task-planning.integration.test.ts`, `planning-status.integration.test.ts`, and `test/templates/planning-contract.test.ts` for executable coverage.

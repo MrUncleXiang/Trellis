@@ -1,0 +1,13 @@
+Traceback (most recent call last):
+  File "C:\Users\PXWD\.codex\worktrees\planning-artifact-gate\Trellis\.trellis\tasks\11-11-planning-artifact-gate\research\run-manual-exercises.py", line 64, in <module>
+    r = fixture(name)
+  File "C:\Users\PXWD\.codex\worktrees\planning-artifact-gate\Trellis\.trellis\tasks\11-11-planning-artifact-gate\research\run-manual-exercises.py", line 27, in fixture
+    repo, ref, env = h.make_fixture(WORK, TEMPLATES, case)
+                     ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\PXWD\.codex\worktrees\planning-artifact-gate\Trellis\.trellis\tasks\11-11-planning-artifact-gate\research\compare-planning-versions.py", line 437, in make_fixture
+    shutil.copytree(templates / "trellis/scripts", repo / ".trellis/scripts")
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python313\Lib\shutil.py", line 591, in copytree
+    with os.scandir(src) as itr:
+         ~~~~~~~~~~^^^^^
+FileNotFoundError: [WinError 3] ϵͳ�Ҳ���ָ����·����: 'C:\\Users\\PXWD\\.codex\\worktrees\\planning-artifact-gate\\Trellis\\.trellis\\packages\\cli\\src\\templates\\trellis\\scripts'

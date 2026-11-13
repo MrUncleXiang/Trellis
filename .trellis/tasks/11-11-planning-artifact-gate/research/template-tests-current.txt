@@ -1,0 +1,10 @@
+
+ RUN  v4.0.18 C:/Users/PXWD/.codex/worktrees/planning-artifact-gate/Trellis/packages/cli
+
+·············
+
+ Test Files  1 passed (1)
+      Tests  13 passed (13)
+   Start at  19:29:05
+   Duration  1.22s (transform 285ms, setup 22ms, import 780ms, tests 227ms, environment 0ms)
+

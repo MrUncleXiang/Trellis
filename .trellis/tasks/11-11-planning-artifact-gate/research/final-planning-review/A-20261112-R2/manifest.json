@@ -1,0 +1,52 @@
+{
+  "reviewId": "A-20261112-R2",
+  "preparedAt": "2026-11-12T09:57:50.575799+00:00",
+  "purpose": "manual bootstrap planning review for task A; not an implemented planningAttest record",
+  "status": "approved for implementation; fingerprints verified before isolated checkout",
+  "files": [
+    {
+      "file": "prd.md",
+      "role": "required planning artifact",
+      "sha256": "58ebc60276ba42e71d650ee3f2319c48b45535a7b4886e7632d83246f4d6b2db",
+      "canonicalSha256": "58ebc60276ba42e71d650ee3f2319c48b45535a7b4886e7632d83246f4d6b2db",
+      "bytes": 8492
+    },
+    {
+      "file": "design.md",
+      "role": "required planning artifact",
+      "sha256": "1e60b73e6709e2bdf3f75934a034c7aec934996dabbbadb56760799a897d3d44",
+      "canonicalSha256": "1e60b73e6709e2bdf3f75934a034c7aec934996dabbbadb56760799a897d3d44",
+      "bytes": 26325
+    },
+    {
+      "file": "implement.md",
+      "role": "required planning artifact",
+      "sha256": "910b30b1327be1b1ec2e0bc58e5abc514617a6e3c8fea830cdb8c701d7d9a8fe",
+      "canonicalSha256": "910b30b1327be1b1ec2e0bc58e5abc514617a6e3c8fea830cdb8c701d7d9a8fe",
+      "bytes": 30349
+    },
+    {
+      "file": "research/test-plan-2026-11-12.md",
+      "role": "supporting review material",
+      "sha256": "8a2d9d26d007771600e9babb784e2118e1c48f81105d76909ee07ad37ac0251b",
+      "canonicalSha256": "8a2d9d26d007771600e9babb784e2118e1c48f81105d76909ee07ad37ac0251b",
+      "bytes": 16417
+    },
+    {
+      "file": "research/context-read-map-2026-11-12.md",
+      "role": "supporting review material",
+      "sha256": "94117fd013c775f5ef55fde148fc0e11d8697d2543358126a7205dca14cfb0a7",
+      "canonicalSha256": "94117fd013c775f5ef55fde148fc0e11d8697d2543358126a7205dca14cfb0a7",
+      "bytes": 5854
+    }
+  ],
+  "snapshot": "planning-files.zip",
+  "userApproval": {
+    "receivedAt": "2026-11-12T10:55:05.323708+00:00",
+    "reply": "推进实施，完成后通知我。",
+    "source": "本会话用户设定的新目标，紧接A-20261112-R2最终审阅及当前状态说明之后",
+    "reviewId": "A-20261112-R2"
+  },
+  "scope": "A only; B retained, C separate",
+  "implementationStarted": false
+}

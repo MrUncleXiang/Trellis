@@ -1,0 +1,30 @@
+{
+  "case": {
+    "id": "prd-only-no-manifests",
+    "status": "planning",
+    "files": "prd",
+    "manifests": null,
+    "command": "start"
+  },
+  "command": [
+    "C:\\Python313\\python.exe",
+    ".trellis/scripts/task.py",
+    "start",
+    ".trellis/tasks/review-case"
+  ],
+  "exit": 0,
+  "statusAfter": "in_progress",
+  "activePointers": [
+    ".trellis/tasks/review-case"
+  ],
+  "stdout": "\u001b[0;32m✓ Current task set to: .trellis/tasks/review-case\u001b[0m\nSource: session:review-prd-only-no-manifests\n\u001b[0;32m✓ Status: planning → in_progress\u001b[0m\n\u001b[0;32m✓ Branch recorded: master\u001b[0m\n\n\u001b[0;34mThe hook will now inject context from this task's jsonl files.\u001b[0m\n",
+  "stderr": "",
+  "before": {
+    "prd.md": "# Requirement\nChange a local prompt only.\n",
+    "task.json": "{\n  \"id\": \"review-case\",\n  \"name\": \"review-case\",\n  \"title\": \"Fixture\",\n  \"description\": \"Review only\",\n  \"status\": \"planning\",\n  \"branch\": null,\n  \"base_branch\": null,\n  \"meta\": {}\n}"
+  },
+  "after": {
+    "prd.md": "# Requirement\nChange a local prompt only.\n",
+    "task.json": "{\n  \"id\": \"review-case\",\n  \"name\": \"review-case\",\n  \"title\": \"Fixture\",\n  \"description\": \"Review only\",\n  \"status\": \"in_progress\",\n  \"branch\": \"master\",\n  \"base_branch\": null,\n  \"meta\": {}\n}"
+  }
+}

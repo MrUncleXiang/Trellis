@@ -1,0 +1,328 @@
+{
+  "note": "Literal keyword counts are scope inventory only, not semantic acceptance.",
+  "files": [
+    {
+      "file": "packages/cli/src/templates/trellis/scripts/common/task_store.py",
+      "lines": [
+        {
+          "line": 320,
+          "text": "- Lightweight tasks can remain PRD-only."
+        },
+        {
+          "line": 687,
+          "text": "    print(\"  - Lightweight task: PRD-only is valid\", file=sys.stderr)"
+        }
+      ]
+    },
+    {
+      "file": "packages/cli/src/templates/trellis/workflow.md",
+      "lines": [
+        {
+          "line": 167,
+          "text": "- Lightweight tasks may be PRD-only. Complex tasks must have `prd.md`, `design.md`, and `implement.md` before `task.py start`."
+        },
+        {
+          "line": 205,
+          "text": "Lightweight: `prd.md` can be enough. Complex: finish `prd.md`, `design.md`, and `implement.md`; ask for review before `task.py start`."
+        },
+        {
+          "line": 219,
+          "text": "Lightweight: `prd.md` can be enough. Complex: finish `prd.md`, `design.md`, and `implement.md`; ask for review before `task.py start`."
+        },
+        {
+          "line": 284,
+          "text": "5. Artifact presence informs the next step; missing `design.md` / `implement.md` is valid for lightweight tasks and incomplete planning for complex tasks."
+        },
+        {
+          "line": 309,
+          "text": "- PRD-only is valid for lightweight tasks; complex tasks need `design.md` + `implement.md`."
+        },
+        {
+          "line": 470,
+          "text": "For lightweight tasks, `prd.md` can be enough. For complex tasks, `prd.md`, `design.md`, and `implement.md` must exist and be reviewed before start. On sub-agent-dispatch platforms, `implement.jsonl` and `check.jsonl` must both have real curated entries before start. Runtime consumers tolerate missing or seed-only manifests for compatibility, but that tolerance is not a planning-ready state."
+        },
+        {
+          "line": 687,
+          "text": "- Planning must distinguish lightweight PRD-only tasks from complex tasks that require `prd.md`, `design.md`, and `implement.md` before start."
+        }
+      ]
+    },
+    {
+      "file": "packages/cli/src/templates/common/skills/brainstorm.md",
+      "lines": [
+        {
+          "line": 145,
+          "text": "Lightweight tasks may omit `design.md` and `implement.md`; they may not skip evidence inspection, requirement convergence, final review, or fresh implementation approval."
+        },
+        {
+          "line": 176,
+          "text": "Lightweight tasks may have only `prd.md`. Complex tasks must have `prd.md`, `design.md`, and `implement.md` before `task.py start`."
+        }
+      ]
+    },
+    {
+      "file": "packages/cli/src/templates/common/commands/continue.md",
+      "lines": [
+        {
+          "line": 28,
+          "text": "- `status=planning` + `prd.md` only → decide whether the task is lightweight or complex. Lightweight can move to **1.4** review; complex returns to **1.1** to add `design.md` + `implement.md`."
+        },
+        {
+          "line": 41,
+          "text": "2. `[once]` steps are already done if the required output exists. `prd.md` alone can be enough only for lightweight tasks; complex tasks also need `design.md` and `implement.md`."
+        }
+      ]
+    },
+    {
+      "file": "packages/cli/src/templates/common/commands/start.md",
+      "lines": [
+        {
+          "line": 40,
+          "text": "- **Active task status `planning` + `prd.md` exists** → stay in Phase 1. Lightweight tasks can be PRD-only; complex tasks need `design.md` + `implement.md`. Load the relevant Phase 1 step detail before `task.py start`."
+        }
+      ]
+    },
+    {
+      "file": "packages/cli/src/templates/shared-hooks/session-start.py",
+      "lines": [
+        {
+          "line": 496,
+          "text": "                \"Lightweight task can request start review with PRD-only; \""
+        },
+        {
+          "line": 895,
+          "text": "        \"are skipped for lightweight tasks.\\n\\n\""
+        }
+      ]
+    },
+    {
+      "file": "packages/cli/src/templates/codex/hooks/session-start.py",
+      "lines": [
+        {
+          "line": 286,
+          "text": "                \"Lightweight task can ask for start review with PRD-only; \""
+        },
+        {
+          "line": 516,
+          "text": "        \"are skipped for lightweight tasks.\\n\\n\""
+        }
+      ]
+    },
+    {
+      "file": "packages/cli/src/templates/copilot/hooks/session-start.py",
+      "lines": [
+        {
+          "line": 285,
+          "text": "                \"Lightweight task can ask for start review with PRD-only; \""
+        },
+        {
+          "line": 513,
+          "text": "        \"are skipped for lightweight tasks.\\n\\n\""
+        }
+      ]
+    },
+    {
+      "file": "packages/cli/src/templates/copilot/prompts/brainstorm.prompt.md",
+      "lines": [
+        {
+          "line": 94,
+          "text": "Lightweight tasks may omit `design.md` and `implement.md`; they may not skip evidence inspection, requirement convergence, final review, or fresh implementation approval."
+        },
+        {
+          "line": 124,
+          "text": "Lightweight tasks may have only `prd.md`. Complex tasks must have `prd.md`, `design.md`, and `implement.md` before `task.py start`."
+        }
+      ]
+    },
+    {
+      "file": "packages/cli/src/templates/copilot/prompts/start.prompt.md",
+      "lines": [
+        {
+          "line": 44,
+          "text": "- **Active task status `planning` + `prd.md` exists** → stay in Phase 1. Lightweight tasks can be PRD-only; complex tasks need `design.md` + `implement.md`. Load the relevant Phase 1 step detail before `task.py start`."
+        }
+      ]
+    },
+    {
+      "file": "packages/cli/src/templates/opencode/lib/session-utils.js",
+      "lines": [
+        {
+          "line": 101,
+          "text": "        `Lightweight task can request start review with PRD-only; complex task must add ${missingComplex.join(\", \")} before start`,"
+        },
+        {
+          "line": 432,
+          "text": "    \"are skipped for lightweight tasks.\\n\""
+        }
+      ]
+    },
+    {
+      "file": "packages/cli/src/templates/common/bundled-skills/trellis-meta/references/local-architecture/task-system.md",
+      "lines": [
+        {
+          "line": 24,
+          "text": "| `prd.md` | Requirements, constraints, and acceptance criteria. Lightweight tasks may be PRD-only. |"
+        }
+      ]
+    },
+    {
+      "file": "packages/cli/src/templates/common/bundled-skills/trellis-meta/references/customize-local/change-workflow.md",
+      "lines": [
+        {
+          "line": 53,
+          "text": "| `planning` | lightweight task with `prd.md` complete | ask for start review, then run `task.py start` |"
+        }
+      ]
+    },
+    {
+      "file": "packages/cli/src/configurators/shared.ts",
+      "lines": [
+        {
+          "line": 642,
+          "text": "If \\`${jsonl}\\` has no curated entries (empty, only a placeholder row, or the file is missing), fall back to: read the task artifacts, list available specs with \\`python3 ./.trellis/scripts/get_context.py --mode packages\\`, and pick the specs that match the task domain yourself. Do NOT block on the missing jsonl — lightweight tasks may be PRD-only, while complex tasks may also include \\`design.md\\` and \\`implement.md\\`."
+        }
+      ]
+    },
+    {
+      "file": ".trellis/spec/cli/backend/platform-integration.md",
+      "lines": [
+        {
+          "line": 1375,
+          "text": "Lightweight tasks may be PRD-only. Complex tasks must have `prd.md`, `design.md`, and `implement.md` before `task.py start` moves the task into implementation."
+        },
+        {
+          "line": 1401,
+          "text": "| Lightweight planning gate | workflow-state / SessionStart / continue        | PRD-only is valid when the task is clearly small.                                  |"
+        },
+        {
+          "line": 1418,
+          "text": "| Lightweight task has only `prd.md`                     | Valid planning state; SessionStart / continue can ask for start review                                | No error                |"
+        },
+        {
+          "line": 1426,
+          "text": "- **Base**: lightweight task has only `prd.md`. SessionStart / continue treats this as a valid planning state and may ask for start review."
+        },
+        {
+          "line": 1439,
+          "text": "File existence alone cannot distinguish a lightweight PRD-only task from an incomplete complex task, and a seed-only jsonl manifest is not curated context."
+        },
+        {
+          "line": 1457,
+          "text": "The route depends on task intent, artifact presence, and execution mode. Missing optional artifacts are skipped for lightweight tasks, but complex tasks cannot enter implementation until their planning artifacts are complete."
+        },
+        {
+          "line": 1472,
+          "text": "- **Artifact gates**: workflow-state, SessionStart, and continue distinguish PRD-only lightweight tasks from complex tasks that still need `design.md` / `implement.md`."
+        },
+        {
+          "line": 1602,
+          "text": "- **Base**: a single lightweight task uses no parent/child structure."
+        },
+        {
+          "line": 1931,
+          "text": "approve implementation. Planning tasks stay behind the review gate: lightweight"
+        },
+        {
+          "line": 1932,
+          "text": "tasks may be PRD-only, while complex tasks need `prd.md`, `design.md`, and"
+        },
+        {
+          "line": 1973,
+          "text": "A lightweight hook (`shared-hooks/inject-workflow-state.py`) fires on **every user prompt**, emitting a short `<workflow-state>` block reminding the AI of the active task + expected flow. Keep the payload compact and directive; it is injected every turn."
+        }
+      ]
+    },
+    {
+      "file": ".trellis/spec/cli/backend/workflow-state-contract.md",
+      "lines": [
+        {
+          "line": 308,
+          "text": "lightweight PRD-only tasks from complex tasks requiring `prd.md`, `design.md`,"
+        }
+      ]
+    },
+    {
+      "file": "marketplace/workflows/native/workflow.md",
+      "lines": [
+        {
+          "line": 167,
+          "text": "- Lightweight tasks may be PRD-only. Complex tasks must have `prd.md`, `design.md`, and `implement.md` before `task.py start`."
+        },
+        {
+          "line": 205,
+          "text": "Lightweight: `prd.md` can be enough. Complex: finish `prd.md`, `design.md`, and `implement.md`; ask for review before `task.py start`."
+        },
+        {
+          "line": 219,
+          "text": "Lightweight: `prd.md` can be enough. Complex: finish `prd.md`, `design.md`, and `implement.md`; ask for review before `task.py start`."
+        },
+        {
+          "line": 284,
+          "text": "5. Artifact presence informs the next step; missing `design.md` / `implement.md` is valid for lightweight tasks and incomplete planning for complex tasks."
+        },
+        {
+          "line": 309,
+          "text": "- PRD-only is valid for lightweight tasks; complex tasks need `design.md` + `implement.md`."
+        },
+        {
+          "line": 470,
+          "text": "For lightweight tasks, `prd.md` can be enough. For complex tasks, `prd.md`, `design.md`, and `implement.md` must exist and be reviewed before start. On sub-agent-dispatch platforms, `implement.jsonl` and `check.jsonl` must both have real curated entries before start. Runtime consumers tolerate missing or seed-only manifests for compatibility, but that tolerance is not a planning-ready state."
+        },
+        {
+          "line": 687,
+          "text": "- Planning must distinguish lightweight PRD-only tasks from complex tasks that require `prd.md`, `design.md`, and `implement.md` before start."
+        }
+      ]
+    },
+    {
+      "file": "marketplace/workflows/tdd/workflow.md",
+      "lines": [
+        {
+          "line": 164,
+          "text": "- Lightweight tasks may be PRD-only. Complex tasks must have `prd.md`, `design.md`, and `implement.md` before `task.py start`."
+        },
+        {
+          "line": 194,
+          "text": "Lightweight: `prd.md` can be enough. Complex: finish `prd.md`, `design.md`, and `implement.md`; ask for review before `task.py start`."
+        },
+        {
+          "line": 209,
+          "text": "Lightweight: `prd.md` can be enough. Complex: finish `prd.md`, `design.md`, and `implement.md`; ask for review before `task.py start`."
+        },
+        {
+          "line": 274,
+          "text": "5. Artifact presence informs the next step; missing `design.md` / `implement.md` is valid for lightweight tasks and incomplete planning for complex tasks."
+        },
+        {
+          "line": 299,
+          "text": "- PRD-only is valid for lightweight tasks; complex tasks need `design.md` + `implement.md`."
+        },
+        {
+          "line": 462,
+          "text": "For lightweight tasks, `prd.md` can be enough. For complex tasks, `prd.md`, `design.md`, and `implement.md` must exist and be reviewed before start. On sub-agent-dispatch platforms, `implement.jsonl` and `check.jsonl` must both have real curated entries before start. Runtime consumers tolerate missing or seed-only manifests for compatibility, but that tolerance is not a planning-ready state."
+        },
+        {
+          "line": 702,
+          "text": "- Planning must distinguish lightweight PRD-only tasks from complex tasks that require `prd.md`, `design.md`, and `implement.md` before start."
+        }
+      ]
+    },
+    {
+      "file": "marketplace/workflows/channel-driven-subagent-dispatch/workflow.md",
+      "lines": [
+        {
+          "line": 90,
+          "text": "Lightweight tasks may be PRD-only. Complex tasks must have `prd.md`, `design.md`, and `implement.md` before `task.py start`."
+        },
+        {
+          "line": 113,
+          "text": "Lightweight: `prd.md` can be enough. Complex: finish `prd.md`, `design.md`, and `implement.md`; ask for review before `task.py start`."
+        },
+        {
+          "line": 121,
+          "text": "Lightweight: `prd.md` can be enough. Complex: finish `prd.md`, `design.md`, and `implement.md`; ask for review before `task.py start`."
+        }
+      ]
+    }
+  ]
+}

@@ -39,3 +39,12 @@ Do the review and fixes directly.
 
 Report findings fixed, files changed, and verification results.
 If no issues remain, say that clearly.
+
+
+## Planning version and change boundary
+
+Every new task requires readable, nonempty `prd.md`, `design.md`, and `implement.md`. Read them in that order after role-specific JSONL context. Their length may be short; do not require fixed headings or word counts. Missing new-task artifacts mean return the issue to the main session before affected implementation/check work; an injection marker alone does not approve the task.
+
+The main session owns the real user confirmation and version-specific `task.py start`. If requirements, design or implementation plan materially change, pause affected work and dependencies, report the actual change to the main session, and have it run `task.py replan` and obtain confirmation for the revised version. Do not approve a new direction yourself. Normal coding, tests and fixes within the approved scope may continue. Record progress separately from frozen reviewed planning files. Wording-only corrections need the documented editorial path, not a new substantive plan disguised as a typo.
+
+Legacy exception: only an already `in_progress`/`review` task with all three planning metadata keys absent may resume without backfilling missing planning files. Partial, null or malformed records are not legacy; new records must match the current files. Confirm the exception with `task.py planning-status <task-path> --json` before using the available historical artifacts. Query failure is not permission to proceed.

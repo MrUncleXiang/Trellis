@@ -538,8 +538,8 @@ def get_implement_context(repo_root: str, task_dir: str) -> str:
     Read order:
     1. All files in implement.jsonl (spec/research manifests)
     2. prd.md (requirements)
-    3. design.md if present (technical design)
-    4. implement.md if present (execution plan)
+    3. design.md (technical design; required for new tasks)
+    4. implement.md (execution plan; required for new tasks)
     """
     limits = _get_limits(repo_root)
     budget = _Budget(limits["max_total_bytes"])
@@ -670,12 +670,14 @@ All the information you need has been prepared for you:
 ## Workflow
 
 1. **Understand specs** - All dev specs are injected above, understand them
-    2. **Understand task artifacts** - Read requirements, technical design if present, and execution plan if present
+    2. **Understand task artifacts** - Read requirements, technical design, and execution plan; every new task requires all three concise files
     3. **Implement feature** - Implement following specs and task artifacts
 4. **Self-check** - Ensure code quality against check specs
 
 ## Important Constraints
 
+- Material requirement/design/plan changes: pause affected work and report to the main session for replan and renewed confirmation of the reviewed version; do not revise approved planning to fit code. Ordinary implementation/test fixes within the approved scope continue.
+- Every new task requires prd.md, design.md and implement.md. Only in_progress/review legacy tasks with no planning metadata may resume with missing files.
 - Do NOT execute git commit, only code modifications
 - Follow all dev specs injected above
 - Report list of modified/created files when done"""
@@ -711,7 +713,9 @@ All check specs and dev specs you need:
 
 ## Important Constraints
 
-- Fix issues yourself, don't just report
+- Material requirement/design/plan changes: pause affected work and report to the main session for replan and renewed confirmation of the reviewed version; do not revise approved planning to fit code. Ordinary implementation/test fixes within the approved scope continue.
+- Every new task requires prd.md, design.md and implement.md. Only in_progress/review legacy tasks with no planning metadata may resume with missing files.
+- Fix implementation issues yourself, don't just report
 - Must execute complete checklist in check specs
 - Pay special attention to impact radius analysis (L1-L5)"""
 
@@ -792,7 +796,7 @@ def get_research_context(repo_root: str, task_dir: str | None) -> str:
 {spec_tree}
 ```
 
-To get structured package info, run: `python3 ./{DIR_WORKFLOW}/scripts/get_context.py --mode packages`
+To get structured package info, run: `python ./{DIR_WORKFLOW}/scripts/get_context.py --mode packages`
 
 ## Search Tips
 

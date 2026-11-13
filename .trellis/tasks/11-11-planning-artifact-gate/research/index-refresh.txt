@@ -1,0 +1,18 @@
+
+  GitNexus Analyzer (1.6.12)
+
+  GitNexus Analyzer (1.6.12)
+{"level":40,"time":1794485730535,"name":"gitnexus","workerIndex":0,"attempt":1,"msg":"Worker 0 crashed during startup; respawning slot (self-heal attempt 1/2)."}
+{"level":40,"time":1794485730567,"name":"gitnexus","workerIndex":1,"attempt":1,"msg":"Worker 1 crashed during startup; respawning slot (self-heal attempt 1/2)."}
+{"level":40,"time":1794485750807,"name":"gitnexus","file":"packages/core/src/mem/dialogue.ts","nullByteCount":1,"msg":"replaced embedded NUL bytes before tree-sitter parsing"}
+{"level":40,"time":1794485775429,"name":"gitnexus","msg":"[scope-resolution] 188 property read/write site(s) name a field that IS defined in this workspace, but only in another language, so per-language inference declined to link them. Queries for these fields return an empty result that does NOT mean \"unused\" — it means the definition anchor is in a different language. Affected: max_total_bytes (javascript/typescript), stderr (typescript), stdin (typescript), stdout (typescript), context_key (python), directory (python), errors (python), hint (javascript), hits (python), jsonl (python), …"}
+{"level":40,"time":1794485775839,"name":"gitnexus","truncation":{"truncated":true,"entryPointCandidatesDropped":800,"entryPointsUnexplored":0,"walksCutByBudget":68,"tracesDepthCapped":0,"calleesDropped":1067,"processesDropped":0},"msg":"[processes] 721 flows reported, but whole flows are MISSING: 800 of 1000 candidate entry point(s) never ranked in, 0 ranked entry point(s) never traced, 0 deduplicated flow(s) dropped at maxProcesses, 0 trace(s) cut at maxTraceDepth, 1067 callee(s) skipped at maxBranching, 68 walk(s) cut by the per-entry trace budget. An absent flow does NOT mean the code path does not exist."}
+[2K
+FTS disabled for this index. To enable keyword search, run gitnexus analyze without --skip-fts and with GITNEXUS_SKIP_FTS unset.
+  Repository indexed successfully (63.5s)
+
+  13,275 nodes | 27,683 edges | 460 clusters | 721 flows
+  C:\Users\PXWD\.codex\worktrees\planning-artifact-gate\Trellis
+
+  FTS disabled for this index. To enable keyword search, run gitnexus analyze without --skip-fts and with GITNEXUS_SKIP_FTS unset.
+

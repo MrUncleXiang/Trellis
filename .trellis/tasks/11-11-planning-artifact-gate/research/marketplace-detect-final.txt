@@ -1,0 +1,26 @@
+
+  GitNexus Detect Changes (1.6.12)
+{"level":40,"time":1794504819609,"name":"gitnexus","msg":"GitNexus: FTS extension unavailable; continuing without FTS features. load-only policy (no install attempted); LOAD fts failed: Binder exception: Extension: fts is an official extension and has not been installed. You can install it by: install fts."}
+warning: in the working copy of 'workflows/channel-driven-subagent-dispatch/workflow.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'workflows/tdd/workflow.md', LF will be replaced by CRLF the next time Git touches it
+Changes: 3 files, 63 symbols
+Affected processes: 0
+Risk level: low
+
+Changed symbols:
+  Section Channel-Driven Sub-Agent Dispatch Workflow → workflows/channel-driven-subagent-dispatch/workflow.md
+  Section Trellis System → workflows/channel-driven-subagent-dispatch/workflow.md
+  Section Task System → workflows/channel-driven-subagent-dispatch/workflow.md
+  Section Phase Index → workflows/channel-driven-subagent-dispatch/workflow.md
+  Section Planning Artifacts → workflows/channel-driven-subagent-dispatch/workflow.md
+  Section Phase 1: Plan → workflows/channel-driven-subagent-dispatch/workflow.md
+  Section Phase 2: Execute → workflows/channel-driven-subagent-dispatch/workflow.md
+  Section Phase 1: Plan → workflows/channel-driven-subagent-dispatch/workflow.md
+  Section 1.5 Completion criteria → workflows/channel-driven-subagent-dispatch/workflow.md
+  Section Phase 2: Execute → workflows/channel-driven-subagent-dispatch/workflow.md
+  Section 2.1 Implement `[required · repeatable]` → workflows/channel-driven-subagent-dispatch/workflow.md
+  Section 2.2 Quality check `[required · repeatable]` → workflows/channel-driven-subagent-dispatch/workflow.md
+  Section Customizing Trellis → workflows/channel-driven-subagent-dispatch/workflow.md
+  Section Add a custom status → workflows/channel-driven-subagent-dispatch/workflow.md
+  Section Reviewed planning version and material changes → workflows/channel-driven-subagent-dispatch/workflow.md
+... and 48 more

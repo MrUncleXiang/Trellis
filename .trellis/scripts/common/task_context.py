@@ -23,12 +23,14 @@ from __future__ import annotations
 
 import argparse
 import json
+import sys
 from pathlib import Path
 
 from .config import get_context_injection_limits
 from .git import branch_exists_locally
-from .io import read_json
+from .io import describe_json_read_failure, read_json_checked
 from .log import Colors, colored
+from .planning import artifact_fingerprints, basic_task_errors, check_planning, record_errors
 from .paths import DIR_ARCHIVE, DIR_TASKS, DIR_WORKFLOW, FILE_TASK_JSON, get_repo_root
 from .task_utils import resolve_task_dir
 
@@ -155,7 +157,7 @@ def curated_entry_count(jsonl_file: Path) -> int | None:
 
 
 def cmd_validate(args: argparse.Namespace) -> int:
-    """Validate JSONL context files."""
+    """Validate planning records and the existing JSONL context files."""
     repo_root = get_repo_root()
     target_dir = resolve_task_dir(args.dir, repo_root)
 
@@ -167,23 +169,42 @@ def cmd_validate(args: argparse.Namespace) -> int:
     print(f"Target dir: {target_dir}")
     print()
 
-    # Warn (don't fail validation) when the recorded branch is stale — it
-    # was likely already merged and deleted (#399 item 2).
     task_json_path = target_dir / FILE_TASK_JSON
-    if task_json_path.is_file():
-        task_data = read_json(task_json_path)
-        stored_branch = task_data.get("branch") if task_data else None
-        if stored_branch and not branch_exists_locally(stored_branch, repo_root):
-            print(
-                colored(
-                    f"Warning: recorded branch '{stored_branch}' no longer exists locally "
-                    "(likely merged and deleted).",
-                    Colors.YELLOW,
-                )
-            )
-            print()
+    task_data, read_reason = read_json_checked(task_json_path)
+    if task_data is None:
+        problem, hint = describe_json_read_failure(task_json_path, read_reason)
+        print(colored(f"Error: {problem}", Colors.RED), file=sys.stderr)
+        print(hint, file=sys.stderr)
+        return 1
+    base_errors = basic_task_errors(task_data)
+    if base_errors:
+        for error in base_errors:
+            print(colored(f"Error: {error}", Colors.RED), file=sys.stderr)
+        return 1
 
+    stored_branch = task_data.get("branch")
+    if stored_branch and not branch_exists_locally(stored_branch, repo_root):
+        print(colored(
+            f"Warning: recorded branch '{stored_branch}' no longer exists locally "
+            "(likely merged and deleted).", Colors.YELLOW))
+        print()
+
+    check = check_planning(target_dir, task_data)
     total_errors = 0
+    if task_data["status"] == "completed" or check.mode == "legacy_resume":
+        _, file_errors = artifact_fingerprints(target_dir)
+        warnings = list(dict.fromkeys(check.errors + record_errors(task_data) + file_errors))
+        for error in warnings:
+            print(colored(f"Warning: planning: {error}", Colors.YELLOW), file=sys.stderr)
+    elif check.mode in ("ready", "waiting_confirmation") and not check.errors:
+        print(f"Planning: {check.mode}; review: {check.review_id}")
+        if check.mode == "waiting_confirmation":
+            print("Planning is not approved: awaiting user confirmation before start.")
+    else:
+        total_errors += len(check.errors) or 1
+        for error in check.errors:
+            print(colored(f"Error: planning: {error}", Colors.RED), file=sys.stderr)
+
     for jsonl_name in ["implement.jsonl", "check.jsonl"]:
         jsonl_file = target_dir / jsonl_name
         errors = _validate_jsonl(jsonl_file, repo_root, target_dir)

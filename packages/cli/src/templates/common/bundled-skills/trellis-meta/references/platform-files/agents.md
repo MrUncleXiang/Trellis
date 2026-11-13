@@ -13,7 +13,7 @@ File locations and formats differ by platform, but responsibility boundaries sho
 | Agent | Responsibility |
 | --- | --- |
 | `trellis-research` | Investigate the question and write findings into the current task's `research/`. |
-| `trellis-implement` | Implement against `prd.md`, optional `design.md` / `implement.md`, `implement.jsonl`, and related spec/research. |
+| `trellis-implement` | Implement against `prd.md`, `design.md` and `implement.md`, `implement.jsonl`, and related spec/research. |
 | `trellis-check` | Review changes, fix discovered issues, and run necessary checks. |
 
 Agent files should not become generic chat prompts. They should define input sources, write boundaries, whether code may be changed, and how results are reported.
@@ -56,8 +56,8 @@ The agent file instructs the agent to read after startup:
 - `implement.jsonl` or `check.jsonl`
 - spec/research files referenced by JSONL
 - current task `prd.md`
-- `design.md` if present
-- `implement.md` if present
+- `design.md`
+- `implement.md`
 
 This mode fits platforms whose hooks cannot reliably rewrite sub-agent prompts.
 
@@ -74,10 +74,12 @@ This mode fits platforms whose hooks cannot reliably rewrite sub-agent prompts.
 ## Modification Principles
 
 1. **Keep responsibilities single-purpose**. Do not mix research, implement, and check responsibilities into one agent.
-2. **Specify the read order**. Agents must know to start from the active task, read jsonl/spec context, then read `prd.md`, `design.md` if present, and `implement.md` if present.
+2. **Specify the read order**. Agents must know to start from the active task, read jsonl/spec context, then read `prd.md`, `design.md`, and `implement.md`.
 3. **Specify write boundaries**. Research usually only writes `research/`; implement can write code; check can fix issues.
 4. **Keep semantics synchronized in multi-platform projects**. If the user configured Claude, Codex, and Cursor together, decide whether changes to one platform's agent also need to be applied to others.
 
 ## Do Not Default To Editing Upstream Templates
 
 Local AI should default to modifying platform agent files inside the user project. Discuss upstream template source only when the user explicitly wants to contribute the change back to Trellis.
+
+Only already-started legacy tasks in `in_progress` or `review` with all planning-record keys absent may resume using available historical artifacts. Every new task needs all three concise planning files. Material changes return to the main session for `replan`, updated artifacts and renewed user confirmation; record ordinary progress separately.

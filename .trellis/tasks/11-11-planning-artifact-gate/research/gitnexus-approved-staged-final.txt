@@ -1,0 +1,37 @@
+
+  GitNexus Detect Changes (1.6.12)
+{"level":40,"time":1794537113154,"name":"gitnexus","msg":"GitNexus: FTS extension unavailable; continuing without FTS features. load-only policy (no install attempted); LOAD fts failed: Binder exception: Extension: fts is an official extension and has not been installed. You can install it by: install fts."}
+Changes: 317 files, 446 symbols
+Affected processes: 36
+Risk level: critical
+
+Changed symbols:
+  Function buildPullBasedPrelude → packages/cli/src/configurators/shared.ts
+  Section Check Agent → packages/cli/src/templates/claude/agents/trellis-check.md
+  Section Trellis Context Loading Protocol → packages/cli/src/templates/claude/agents/trellis-check.md
+  Section Context → packages/cli/src/templates/claude/agents/trellis-check.md
+  Section Core Responsibilities → packages/cli/src/templates/claude/agents/trellis-check.md
+  Section Workflow → packages/cli/src/templates/claude/agents/trellis-check.md
+  Section Step 2: Check Against Specs and Task Artifacts → packages/cli/src/templates/claude/agents/trellis-check.md
+  Section Self-Check Complete → packages/cli/src/templates/claude/agents/trellis-check.md
+  Section Summary → packages/cli/src/templates/claude/agents/trellis-check.md
+  Section Planning version and change boundary → packages/cli/src/templates/claude/agents/trellis-check.md
+  Section Implement Agent → packages/cli/src/templates/claude/agents/trellis-implement.md
+  Section Trellis Context Loading Protocol → packages/cli/src/templates/claude/agents/trellis-implement.md
+  Section Context → packages/cli/src/templates/claude/agents/trellis-implement.md
+  Section Core Responsibilities → packages/cli/src/templates/claude/agents/trellis-implement.md
+  Section Workflow → packages/cli/src/templates/claude/agents/trellis-implement.md
+... and 431 more
+
+Affected execution flows:
+  • Main → _configure_stream (4 steps) — changed: main
+  • Cmd_attest → Find_task_by_name (4 steps) — changed: cmd_attest, _resolve
+  • Cmd_attest → _valid_files (4 steps) — changed: cmd_attest, record_errors, _approval_errors, _valid_files
+  • Cmd_attest → _valid_time (4 steps) — changed: cmd_attest, record_errors, _approval_errors, _valid_time
+  • Cmd_attest → _nonempty (4 steps) — changed: cmd_attest, record_errors, _attest_errors, _nonempty
+  • BuildSessionContext → DebugLog (3 steps) — changed: buildSessionContext
+  • Main → _last_context_key_export (3 steps) — changed: main
+  • Main → _detect_platform (3 steps) — changed: main
+  • Cmd_attest → _meta (3 steps) — changed: cmd_attest, record_errors, _meta
+  • Cmd_attest → Basic_task_errors (3 steps) — changed: cmd_attest, record_errors, basic_task_errors
+... and 26 more

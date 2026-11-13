@@ -1,0 +1,15 @@
+# M1-M6 and S0 review
+
+Date: 2026-11-13. These are reviewer-led, synthetic role exercises using the real task command in isolated repositories. They are not a live user acceptance session. `run-manual-exercises.py` and `manual-exercise-data.json` preserve exact inputs, displayed version fingerprints, commands, outputs and resulting records. The embedded reply/source values explicitly say fixture-only. No human message identifiers were invented.
+
+| Case | Observed evidence | Review conclusion |
+| --- | --- | --- |
+| M1 | Three distinct one-sentence files; attest and validate succeed without approval. | Requirements, solution rationale and execution are separately readable. No word count or mandatory headings are necessary. |
+| M2 | After a synthetic reply for local storage, remote upload changes the design and attestation; old-version start is rejected. | Reviewer flags changed data flow/privacy/network risks. Required user-facing summary is saved; this exercise stops before another approval. A real multi-person conversation was not performed. |
+| M3 | Both pre-start and post-start paths replace only the Chinese archive typo; reviewId and reviewedFiles remain, the editorial chain appends, and existing approval remains on the post-start path. | Exact wording diff has no behavior/scope change. Reply strings are synthetic; the program cannot classify meaning. |
+| M4 | Separate progress leaves three fingerprints unchanged. Two real temporary jobs start; reviewer explicitly terminates the dependent job before replan, while independent help-spelling job remains alive. | Acceptance change pauses storage-dependent work. Help spelling neither reads storage results nor depends on the design. Product command does not stop workers. |
+| M5 | Local-only requirement plus remote-upload solution/plan can attest and validate structurally. | Reviewer rejects semantic contradiction and does not start. Fingerprints are not a semantic alignment check. |
+| M6 | Fake reply/source can start; false editorial claim can append a valid chain; instruction-like note remains status data. | Reviewer rejects fake authorization and semantic misclassification. No trusted identity, automatic semantic classification or guaranteed model instruction resistance is claimed. |
+| S0 | `bootstrap-sequence-audit-final.json` contains actual displayed R2 review, user objective event, pre-start five-file check, exit-0 start and in_progress readback, and separate progress record in that order. | Real A approval precedes product implementation; old start self-bootstrapped because new commands did not yet exist. The later manifest recording timestamp is not the original user-message time. |
+
+The exercises expose the intended responsibility split. Command tests enforce record shape, version binding and write order; the main-session review compares meaning and real dialogue. Remaining unexercised scope is live human reconfirmation for a fabricated changed requirement and model-wide adversarial robustness, neither represented as machine guarantees.

@@ -1,0 +1,32 @@
+{
+  "case": {
+    "id": "corrupt-task-json",
+    "status": "corrupt",
+    "files": null,
+    "manifests": "curated",
+    "command": "start"
+  },
+  "command": [
+    "C:\\Python313\\python.exe",
+    ".trellis/scripts/task.py",
+    "start",
+    ".trellis/tasks/review-case"
+  ],
+  "exit": 0,
+  "statusAfter": "corrupt",
+  "activePointers": [
+    ".trellis/tasks/review-case"
+  ],
+  "stdout": "\u001b[0;32m✓ Current task set to: .trellis/tasks/review-case\u001b[0m\nSource: session:review-corrupt-task-json\n\n\u001b[0;34mThe hook will now inject context from this task's jsonl files.\u001b[0m\n",
+  "stderr": "\u001b[1;33mWarning: C:\\Users\\PXWD\\AppData\\Local\\Temp\\trellis-a-review-_it1rnak\\corrupt-task-json\\.trellis\\tasks\\review-case\\task.json: not valid JSON; task.json not updated.\u001b[0m\nFix the syntax (e.g. `python3 -m json.tool C:\\Users\\PXWD\\AppData\\Local\\Temp\\trellis-a-review-_it1rnak\\corrupt-task-json\\.trellis\\tasks\\review-case\\task.json`), then retry.\n",
+  "before": {
+    "check.jsonl": "{\"file\": \".trellis/spec/review.md\", \"reason\": \"Fixture contract\"}\n",
+    "implement.jsonl": "{\"file\": \".trellis/spec/review.md\", \"reason\": \"Fixture contract\"}\n",
+    "task.json": "{ not valid json"
+  },
+  "after": {
+    "check.jsonl": "{\"file\": \".trellis/spec/review.md\", \"reason\": \"Fixture contract\"}\n",
+    "implement.jsonl": "{\"file\": \".trellis/spec/review.md\", \"reason\": \"Fixture contract\"}\n",
+    "task.json": "{ not valid json"
+  }
+}

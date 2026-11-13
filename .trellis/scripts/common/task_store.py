@@ -44,6 +44,7 @@ from .git import (
 )
 from .io import describe_json_read_failure, read_json_checked, write_json
 from .log import Colors, colored
+from .planning import artifact_fingerprints, check_planning, record_errors
 from .paths import (
     DEVELOPER_HINT,
     DIR_ARCHIVE,
@@ -317,8 +318,9 @@ def _default_prd_content(title: str, description: str | None = None) -> str:
 ## Notes
 
 - Keep `prd.md` focused on requirements, constraints, and acceptance criteria.
-- Lightweight tasks can remain PRD-only.
-- For complex tasks, add `design.md` for technical design and `implement.md` for execution planning before `task.py start`.
+- Every task needs `prd.md`, `design.md`, and `implement.md` before first start.
+- Keep each file as short as its purpose requires; no fixed sections or word counts.
+- Review all three, run `attest` and `validate`, show the reviewed version to the user, then record their confirmation with `task.py start`.
 """
 
 
@@ -684,8 +686,8 @@ def cmd_create(args: argparse.Namespace) -> int:
     print("", file=sys.stderr)
     print(colored("Next steps:", Colors.BLUE), file=sys.stderr)
     print("  - Fill prd.md with requirements and acceptance criteria", file=sys.stderr)
-    print("  - Lightweight task: PRD-only is valid", file=sys.stderr)
-    print("  - Complex task: add design.md and implement.md before task.py start", file=sys.stderr)
+    print("  - Every task: prepare prd.md, design.md, and implement.md before first start", file=sys.stderr)
+    print("  - Keep them concise; attest, validate, then obtain confirmation for the reviewed version", file=sys.stderr)
     if created_jsonl:
         print(
             "  - Curate implement.jsonl / check.jsonl (created empty) as spec/research "
@@ -1334,6 +1336,11 @@ def cmd_archive(args: argparse.Namespace) -> int:
                 file=sys.stderr,
             )
         else:
+            check = check_planning(task_dir, data)
+            _, file_errors = artifact_fingerprints(task_dir)
+            warnings = list(dict.fromkeys(check.errors + record_errors(data) + file_errors))
+            for error in warnings:
+                print(colored(f"Warning: planning: {error}", Colors.YELLOW), file=sys.stderr)
             # Before any mutation: branch metadata is unrecoverable once the
             # task leaves the active tree. Stale branches only warn.
             if not _validate_branch_metadata(

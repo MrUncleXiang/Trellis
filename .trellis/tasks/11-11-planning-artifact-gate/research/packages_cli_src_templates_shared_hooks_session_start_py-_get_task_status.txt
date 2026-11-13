@@ -1,0 +1,52 @@
+
+  GitNexus Impact (1.6.12)
+{"level":50,"time":1794482482578,"name":"gitnexus","msg":"GitNexus: ⚠️ Index for \"Trellis-B-push\" was built at D:\\zcx\\Trellis; your cwd (C:\\Users\\PXWD\\.codex\\worktrees\\planning-artifact-gate\\Trellis) is a sibling clone that is 4 commits ahead of the indexed commit. Results may be stale or incorrect — re-run `gitnexus analyze` to refresh the index."}
+{"level":40,"time":1794482482735,"name":"gitnexus","msg":"GitNexus: FTS extension unavailable; continuing without FTS features. load-only policy (no install attempted); LOAD fts failed: Binder exception: Extension: fts is an official extension and has not been installed. You can install it by: install fts."}
+{
+  "target": {
+    "id": "Function:packages/cli/src/templates/shared-hooks/session-start.py:_get_task_status",
+    "name": "_get_task_status",
+    "type": "Function",
+    "filePath": "packages/cli/src/templates/shared-hooks/session-start.py"
+  },
+  "direction": "upstream",
+  "impactedCount": 2,
+  "risk": "LOW",
+  "riskSharedAxes": "LOW",
+  "riskScale": {
+    "comparableAcrossKinds": true,
+    "unusedAxes": []
+  },
+  "epistemic": "exact",
+  "summary": {
+    "direct": 1,
+    "processes_affected": 1,
+    "modules_affected": 1
+  },
+  "byDepthCounts": {
+    "1": 1,
+    "2": 1
+  },
+  "affected_processes": [
+    {
+      "name": "main",
+      "type": "Function",
+      "filePath": "packages/cli/src/templates/shared-hooks/session-start.py",
+      "affected_process_count": 2,
+      "total_hits": 2,
+      "earliest_broken_step": 1
+    }
+  ],
+  "affected_modules": [
+    {
+      "name": "Shared-hooks",
+      "hits": 1,
+      "impact": "direct"
+    }
+  ],
+  "staleness": {
+    "status": "behind",
+    "commitsBehind": 4,
+    "hint": "⚠️ Index is 4 commits behind HEAD. Run analyze tool to update."
+  }
+}

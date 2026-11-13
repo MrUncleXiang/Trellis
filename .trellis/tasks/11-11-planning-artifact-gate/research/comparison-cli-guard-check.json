@@ -1,0 +1,98 @@
+{
+  "scope": "Real comparison-script argument refusal checks only; no fixed new implementation exists, so this is not formal P01-P16.",
+  "cases": [
+    {
+      "case": "short-before",
+      "argv": [
+        "C:\\Python313\\python.exe",
+        "C:\\Users\\PXWD\\.codex\\worktrees\\planning-artifact-gate\\Trellis\\.trellis\\tasks\\11-11-planning-artifact-gate\\research\\compare-planning-versions.py",
+        "--before",
+        "9b76fe49f19d",
+        "--after",
+        "9b76fe49f19de4d383dd4677fea803e2f2da7004",
+        "--out",
+        "C:\\Users\\PXWD\\AppData\\Local\\Temp\\trellis-a-compare-cli-guards-ccfp77fv\\short-before"
+      ],
+      "exit": 2,
+      "stdout": "",
+      "stderr": "usage: compare-planning-versions.py [-h] --before BEFORE --after AFTER\n                                    --out OUT\ncompare-planning-versions.py: error: commit must be the complete 40-character SHA: 9b76fe49f19d\n",
+      "outputCreated": false,
+      "expectedMatched": true
+    },
+    {
+      "case": "short-after",
+      "argv": [
+        "C:\\Python313\\python.exe",
+        "C:\\Users\\PXWD\\.codex\\worktrees\\planning-artifact-gate\\Trellis\\.trellis\\tasks\\11-11-planning-artifact-gate\\research\\compare-planning-versions.py",
+        "--before",
+        "9b76fe49f19de4d383dd4677fea803e2f2da7004",
+        "--after",
+        "9b76fe49f19d",
+        "--out",
+        "C:\\Users\\PXWD\\AppData\\Local\\Temp\\trellis-a-compare-cli-guards-ccfp77fv\\short-after"
+      ],
+      "exit": 2,
+      "stdout": "",
+      "stderr": "usage: compare-planning-versions.py [-h] --before BEFORE --after AFTER\n                                    --out OUT\ncompare-planning-versions.py: error: commit must be the complete 40-character SHA: 9b76fe49f19d\n",
+      "outputCreated": false,
+      "expectedMatched": true
+    },
+    {
+      "case": "missing-commit",
+      "argv": [
+        "C:\\Python313\\python.exe",
+        "C:\\Users\\PXWD\\.codex\\worktrees\\planning-artifact-gate\\Trellis\\.trellis\\tasks\\11-11-planning-artifact-gate\\research\\compare-planning-versions.py",
+        "--before",
+        "0000000000000000000000000000000000000000",
+        "--after",
+        "9b76fe49f19de4d383dd4677fea803e2f2da7004",
+        "--out",
+        "C:\\Users\\PXWD\\AppData\\Local\\Temp\\trellis-a-compare-cli-guards-ccfp77fv\\missing-commit"
+      ],
+      "exit": 2,
+      "stdout": "",
+      "stderr": "fatal: Needed a single revision\nusage: compare-planning-versions.py [-h] --before BEFORE --after AFTER\n                                    --out OUT\ncompare-planning-versions.py: error: not a complete commit: 0000000000000000000000000000000000000000\n",
+      "outputCreated": false,
+      "expectedMatched": true
+    },
+    {
+      "case": "identical-commits",
+      "argv": [
+        "C:\\Python313\\python.exe",
+        "C:\\Users\\PXWD\\.codex\\worktrees\\planning-artifact-gate\\Trellis\\.trellis\\tasks\\11-11-planning-artifact-gate\\research\\compare-planning-versions.py",
+        "--before",
+        "9b76fe49f19de4d383dd4677fea803e2f2da7004",
+        "--after",
+        "9b76fe49f19de4d383dd4677fea803e2f2da7004",
+        "--out",
+        "C:\\Users\\PXWD\\AppData\\Local\\Temp\\trellis-a-compare-cli-guards-ccfp77fv\\identical-commits"
+      ],
+      "exit": 2,
+      "stdout": "",
+      "stderr": "usage: compare-planning-versions.py [-h] --before BEFORE --after AFTER\n                                    --out OUT\ncompare-planning-versions.py: error: before and after must be distinct complete commits\n",
+      "outputCreated": false,
+      "expectedMatched": true
+    },
+    {
+      "case": "after-without-planning-module",
+      "argv": [
+        "C:\\Python313\\python.exe",
+        "C:\\Users\\PXWD\\.codex\\worktrees\\planning-artifact-gate\\Trellis\\.trellis\\tasks\\11-11-planning-artifact-gate\\research\\compare-planning-versions.py",
+        "--before",
+        "9b76fe49f19de4d383dd4677fea803e2f2da7004",
+        "--after",
+        "fe880e265be3a0915f13a7dfb732899266df90f2",
+        "--out",
+        "C:\\Users\\PXWD\\AppData\\Local\\Temp\\trellis-a-compare-cli-guards-ccfp77fv\\after-without-planning-module"
+      ],
+      "exit": 2,
+      "stdout": "",
+      "stderr": "usage: compare-planning-versions.py [-h] --before BEFORE --after AFTER\n                                    --out OUT\ncompare-planning-versions.py: error: after commit does not contain the new planning module\n",
+      "outputCreated": false,
+      "expectedMatched": true
+    }
+  ],
+  "completeOldCommitAccepted": "9b76fe49f19de4d383dd4677fea803e2f2da7004",
+  "allExpectedMatched": true,
+  "mainCommitCreated": false
+}

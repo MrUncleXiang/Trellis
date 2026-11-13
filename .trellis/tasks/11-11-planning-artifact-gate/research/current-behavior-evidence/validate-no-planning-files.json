@@ -1,0 +1,30 @@
+{
+  "case": {
+    "id": "validate-no-planning-files",
+    "status": "planning",
+    "files": null,
+    "manifests": "curated",
+    "command": "validate"
+  },
+  "command": [
+    "C:\\Python313\\python.exe",
+    ".trellis/scripts/task.py",
+    "validate",
+    ".trellis/tasks/review-case"
+  ],
+  "exit": 0,
+  "statusAfter": "planning",
+  "activePointers": [],
+  "stdout": "\u001b[0;34m=== Validating Context Files ===\u001b[0m\nTarget dir: C:\\Users\\PXWD\\AppData\\Local\\Temp\\trellis-a-review-_it1rnak\\validate-no-planning-files\\.trellis\\tasks\\review-case\n\n  \u001b[0;32mimplement.jsonl: ✓ (1 entries)\u001b[0m\n  \u001b[0;32mcheck.jsonl: ✓ (1 entries)\u001b[0m\n\n\u001b[0;32m✓ All validations passed\u001b[0m\n",
+  "stderr": "",
+  "before": {
+    "check.jsonl": "{\"file\": \".trellis/spec/review.md\", \"reason\": \"Fixture contract\"}\n",
+    "implement.jsonl": "{\"file\": \".trellis/spec/review.md\", \"reason\": \"Fixture contract\"}\n",
+    "task.json": "{\n  \"id\": \"review-case\",\n  \"name\": \"review-case\",\n  \"title\": \"Fixture\",\n  \"description\": \"Review only\",\n  \"status\": \"planning\",\n  \"branch\": null,\n  \"base_branch\": null,\n  \"meta\": {}\n}"
+  },
+  "after": {
+    "check.jsonl": "{\"file\": \".trellis/spec/review.md\", \"reason\": \"Fixture contract\"}\n",
+    "implement.jsonl": "{\"file\": \".trellis/spec/review.md\", \"reason\": \"Fixture contract\"}\n",
+    "task.json": "{\n  \"id\": \"review-case\",\n  \"name\": \"review-case\",\n  \"title\": \"Fixture\",\n  \"description\": \"Review only\",\n  \"status\": \"planning\",\n  \"branch\": null,\n  \"base_branch\": null,\n  \"meta\": {}\n}"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "count": 69,
+  "changed": [
+    ".claude/skills/trellis-meta/references/customize-local/change-context-loading.md",
+    ".claude/skills/trellis-meta/references/local-architecture/task-system.md",
+    ".claude/skills/trellis-meta/references/platform-files/agents.md",
+    ".cursor/skills/trellis-meta/references/customize-local/change-context-loading.md",
+    ".cursor/skills/trellis-meta/references/local-architecture/task-system.md",
+    ".cursor/skills/trellis-meta/references/platform-files/agents.md",
+    ".opencode/plugins/inject-subagent-context.js",
+    ".opencode/skills/trellis-meta/references/customize-local/change-context-loading.md",
+    ".opencode/skills/trellis-meta/references/local-architecture/task-system.md",
+    ".opencode/skills/trellis-meta/references/platform-files/agents.md",
+    ".agents/skills/trellis-meta/references/customize-local/change-context-loading.md",
+    ".agents/skills/trellis-meta/references/local-architecture/task-system.md",
+    ".agents/skills/trellis-meta/references/platform-files/agents.md",
+    ".omp/skills/trellis-meta/references/customize-local/change-context-loading.md",
+    ".omp/skills/trellis-meta/references/local-architecture/task-system.md",
+    ".omp/skills/trellis-meta/references/platform-files/agents.md"
+  ]
+}

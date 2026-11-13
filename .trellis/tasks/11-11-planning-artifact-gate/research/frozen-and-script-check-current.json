@@ -1,0 +1,54 @@
+{
+  "reviewId": "A-20261112-R2",
+  "frozenFiles": [
+    {
+      "file": "prd.md",
+      "actual": "58ebc60276ba42e71d650ee3f2319c48b45535a7b4886e7632d83246f4d6b2db",
+      "expected": "58ebc60276ba42e71d650ee3f2319c48b45535a7b4886e7632d83246f4d6b2db"
+    },
+    {
+      "file": "design.md",
+      "actual": "1e60b73e6709e2bdf3f75934a034c7aec934996dabbbadb56760799a897d3d44",
+      "expected": "1e60b73e6709e2bdf3f75934a034c7aec934996dabbbadb56760799a897d3d44"
+    },
+    {
+      "file": "implement.md",
+      "actual": "910b30b1327be1b1ec2e0bc58e5abc514617a6e3c8fea830cdb8c701d7d9a8fe",
+      "expected": "910b30b1327be1b1ec2e0bc58e5abc514617a6e3c8fea830cdb8c701d7d9a8fe"
+    },
+    {
+      "file": "research/test-plan-2026-11-12.md",
+      "actual": "8a2d9d26d007771600e9babb784e2118e1c48f81105d76909ee07ad37ac0251b",
+      "expected": "8a2d9d26d007771600e9babb784e2118e1c48f81105d76909ee07ad37ac0251b"
+    },
+    {
+      "file": "research/context-read-map-2026-11-12.md",
+      "actual": "94117fd013c775f5ef55fde148fc0e11d8697d2543358126a7205dca14cfb0a7",
+      "expected": "94117fd013c775f5ef55fde148fc0e11d8697d2543358126a7205dca14cfb0a7"
+    }
+  ],
+  "scriptPairs": [
+    {
+      "file": "task.py",
+      "same": true,
+      "sha256": "616a9fe7531a7a42e9c093fc6b8e446d8d37c55ff2d6728461433fff4cd44787"
+    },
+    {
+      "file": "common/planning.py",
+      "same": true,
+      "sha256": "ce0e60e7819b36696049d8fdb916ce12709ead8c040b0bbdfc0298d041e9467f"
+    },
+    {
+      "file": "common/task_context.py",
+      "same": true,
+      "sha256": "3e74da6b447266df38d3d73fac8fa4ff5733f2a1ea0094705d50c2e46df7c102"
+    },
+    {
+      "file": "common/task_store.py",
+      "same": true,
+      "sha256": "d84d0c6af7c51ab05271c704e2d8ce848e994536d6db15632d0efe1b822120c2"
+    }
+  ],
+  "frozenUnchanged": true,
+  "scriptsIdentical": true
+}

@@ -1,0 +1,18 @@
+{
+  "date": "2026-11-12",
+  "scope": "Current local task directories containing task.json, includes untracked planning tasks; only existence counts, not quality or authorization findings",
+  "counts": {
+    "archive": {
+      "total": 232,
+      "design": 31,
+      "implement": 31,
+      "both": 29
+    },
+    "active": {
+      "total": 16,
+      "planning": 5,
+      "inProgress": 11,
+      "inProgressNoDesignOrImplement": 6
+    }
+  }
+}

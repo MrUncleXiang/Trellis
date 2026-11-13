@@ -1,0 +1,12 @@
+{
+  "scope": "Working files checked against pre-hook scope manifest. Original raw-log and frozen snapshot exceptions are not rewritten.",
+  "changes": [
+    {
+      "path": "packages/cli/test/scripts/task-planning.integration.test.ts",
+      "expected": "2484070e7d68b8e4da02fdf47b600d6d63259bb4877c3c80766c8f28b5f6f306",
+      "actual": "33e3a2a5fb8331ba7636aa2b26714f4ddd449227e0bb38ca994bf6bdd70be9f2",
+      "normalized": "87d522f093458877b076ffa1a7e8fca2623be7181ac9adb2e6e903bd5b73cfaa",
+      "kind": "review-required"
+    }
+  ]
+}

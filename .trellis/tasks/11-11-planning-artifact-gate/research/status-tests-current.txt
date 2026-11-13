@@ -1,0 +1,37 @@
+
+ RUN  v4.0.18 C:/Users/PXWD/.codex/worktrees/planning-artifact-gate/Trellis/packages/cli
+
+········x··············
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  test/scripts/planning-status.integration.test.ts > planning status and existing lifecycle integration > T30 follows waiting, ready and drift using the real command
+AssertionError: expected { mode: 'ready', …(7) } to match object { mode: 'drift', …(1) }
+(6 matching properties omitted from actual)
+
+- Expected
++ Received
+
+  {
+-   "changedFiles": [
+-     "design.md",
+-   ],
+-   "mode": "drift",
++   "changedFiles": [],
++   "mode": "ready",
+  }
+
+ ❯ test/scripts/planning-status.integration.test.ts:98:23
+
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 22 passed (23)
+   Start at  19:52:54
+   Duration  11.92s (transform 47ms, setup 25ms, import 46ms, tests 11.60s, environment 0ms)
+
+undefined
+C:\Users\PXWD\.codex\worktrees\planning-artifact-gate\Trellis\packages\cli:
+ ERR_PNPM_RECURSIVE_EXEC_FIRST_FAIL  Command "vitest" not found

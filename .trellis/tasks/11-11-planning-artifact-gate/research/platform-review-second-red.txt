@@ -1,0 +1,1124 @@
+
+ RUN  v4.0.18 C:/Users/PXWD/.codex/worktrees/planning-artifact-gate/Trellis/packages/cli
+
+ ❯ test/templates/planning-contract.test.ts (19 tests | 5 failed) 210ms
+     ✓ T34 ships the shared implementation through the script map 1ms
+     ✓ T36 trellis/workflow.md requires three artifacts for new tasks without a lightweight exemption 1ms
+     ✓ T36 common/skills/brainstorm.md requires three artifacts for new tasks without a lightweight exemption 0ms
+     ✓ T36 common/skills/before-dev.md requires three artifacts for new tasks without a lightweight exemption 0ms
+     ✓ T36 common/skills/check.md requires three artifacts for new tasks without a lightweight exemption 0ms
+     ✓ T36 common/commands/continue.md requires three artifacts for new tasks without a lightweight exemption 0ms
+     ✓ T36 common/commands/start.md requires three artifacts for new tasks without a lightweight exemption 0ms
+     ✓ T36 copilot/prompts/brainstorm.prompt.md requires three artifacts for new tasks without a lightweight exemption 0ms
+     ✓ T36 copilot/prompts/start.prompt.md requires three artifacts for new tasks without a lightweight exemption 0ms
+     ✓ T36 copilot/prompts/before-dev.prompt.md requires three artifacts for new tasks without a lightweight exemption 1ms
+     × T36 copilot/prompts/check.prompt.md requires three artifacts for new tasks without a lightweight exemption 4ms
+     × T36 common/bundled-skills/trellis-meta/references/platform-files/agents.md requires three artifacts for new tasks without a lightweight exemption 1ms
+     × T36 common/bundled-skills/trellis-meta/references/customize-local/change-context-loading.md requires three artifacts for new tasks without a lightweight exemption 1ms
+     × T36 common/bundled-skills/trellis-meta/references/local-architecture/task-system.md requires three artifacts for new tasks without a lightweight exemption 1ms
+     ✓ T36 common/bundled-skills/trellis-meta/references/customize-local/change-workflow.md requires three artifacts for new tasks without a lightweight exemption 0ms
+     ✓ T35/T37 applies the workflow contract in actual platform template generation 113ms
+     × T35 runtime OpenCode prompts preserve the same planning boundary 1ms
+     ✓ T35 generated implement/check agents require all three new-task artifacts 81ms
+     ✓ T36 independent marketplace workflows preserve their own style while applying the gate 3ms
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 5 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  test/templates/planning-contract.test.ts > planning contract distribution > T36 copilot/prompts/check.prompt.md requires three artifacts for new tasks without a lightweight exemption
+AssertionError: expected '---\ndescription: "Trellis Copilot pr…' not to match /(?:design|implement)\.md`? (?:if pres…/
+
+- Expected: 
+/(?:design|implement)\.md`? (?:if present|if exists|\(if exists\))/
+
++ Received: 
+"---
+description: \"Trellis Copilot prompt: check.prompt\"
+---
+
+# Code Quality Check
+
+Comprehensive quality verification for recently written code. Combines spec compliance, cross-layer safety, and pre-commit checks.
+
+---
+
+## Step 1: Identify What Changed
+
+```bash
+git diff --name-only HEAD
+git status
+```
+
+## Step 2: Read Task Artifacts and Applicable Specs
+
+Read the current task artifacts in order:
+
+- `prd.md`
+- `design.md` if present
+- `implement.md` if present
+
+```bash
+python3 ./.trellis/scripts/get_context.py --mode packages
+```
+
+For each changed package/layer, read the spec index and follow its **Quality Check** section:
+
+```bash
+cat .trellis/spec/<package>/<layer>/index.md
+```
+
+Read the specific guideline files referenced — the index is a pointer, not the goal.
+
+## Step 3: Run Project Checks
+
+Run the project's lint, type-check, and test commands. Fix any failures before proceeding.
+
+## Step 4: Review Against Checklist
+
+### Code Quality
+
+- [ ] Linter passes?
+- [ ] Type checker passes (if applicable)?
+- [ ] Tests pass?
+- [ ] No debug logging left in?
+- [ ] No suppressed warnings or type-safety bypasses?
+
+### Test Coverage
+
+- [ ] New function → unit test added?
+- [ ] Bug fix → regression test added?
+- [ ] Changed behavior → existing tests updated?
+
+### Spec Sync
+
+- [ ] Does `.trellis/spec/` need updates? (new patterns, conventions, lessons learned)
+
+> \"If I fixed a bug or discovered something non-obvious, should I document it so future me won't hit the same issue?\" → If YES, update the relevant spec doc.
+
+### Scope Discipline
+
+- [ ] Any tidying of code the task did not require?
+- [ ] Any abstraction, config or extension point added for a case that does not exist yet?
+- [ ] Any speculative fallback for a state that cannot occur?
+- [ ] Any file changed that the acceptance criteria do not mention?
+- [ ] Any workaround added at the caller instead of a fix where the behavior actually lives?
+
+## Step 5: Cross-Layer Dimensions (if applicable)
+
+Skip this step if your change is confined to a single layer.
+
+### A. Data Flow (changes touch 3+ layers)
+
+- [ ] Read flow traces correctly: Storage → Service → API → UI
+- [ ] Write flow traces correctly: UI → API → Service → Storage
+- [ ] Types/schemas correctly passed between layers?
+- [ ] Errors properly propagated to caller?
+
+### B. Code Reuse (modifying constants, creating utilities)
+
+- [ ] Searched for existing similar code before creating new?
+  ```bash
+  grep -r \"pattern\" src/
+  ```
+- [ ] If the same value repeats, does it represent one stable concept whose callers must change together? Extract only then — two literals that merely happen to match today should stay separate.
+- [ ] After batch modification, all occurrences updated?
+
+### C. Import/Dependency (creating new files)
+
+- [ ] Correct import paths (relative vs absolute)?
+- [ ] No circular dependencies?
+
+### D. Same-Layer Consistency
+
+- [ ] Other places using the same concept are consistent?
+
+---
+
+## Step 6: Report and Fix
+
+Report every violation you find. Then:
+
+- Mechanical and local (lint nit, missing type, wrong import, dead branch, failing assertion) → fix in place, then re-run project checks.
+- Design or judgment (naming a shared concept, moving a module boundary, changing a public interface, reassigning where behavior lives) → record the evidence and your recommendation, and stop. Do not rewrite it silently.
+
+If a fix would touch files outside the current task's scope, say so and stop instead of widening the change.
+"
+
+ ❯ test/templates/planning-contract.test.ts:45:24
+     43|       );
+     44|       expect(text).not.toMatch(/(?:Lightweight|lightweight) tasks? may…
+     45|       expect(text).not.toMatch(/(?:design|implement)\.md`? (?:if prese…
+       |                        ^
+     46|       expect(text).not.toMatch(/optional `(?:design|implement)\.md`/);
+     47|       expect(text).toContain("design.md");
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/5]⎯
+
+ FAIL  test/templates/planning-contract.test.ts > planning contract distribution > T36 common/bundled-skills/trellis-meta/references/platform-files/agents.md requires three artifacts for new tasks without a lightweight exemption
+AssertionError: expected '# Agents\n\nTrellis agent files defin…' not to match /(?:design|implement)\.md`? (?:if pres…/
+
+- Expected: 
+/(?:design|implement)\.md`? (?:if present|if exists|\(if exists\))/
+
++ Received: 
+"# Agents
+
+Trellis agent files define specialized roles. Common Trellis agents in a user project are:
+
+- `trellis-research`
+- `trellis-implement`
+- `trellis-check`
+
+File locations and formats differ by platform, but responsibility boundaries should stay consistent.
+
+## Agent Responsibilities
+
+| Agent | Responsibility |
+| --- | --- |
+| `trellis-research` | Investigate the question and write findings into the current task's `research/`. |
+| `trellis-implement` | Implement against `prd.md`, optional `design.md` / `implement.md`, `implement.jsonl`, and related spec/research. |
+| `trellis-check` | Review changes, fix discovered issues, and run necessary checks. |
+
+Agent files should not become generic chat prompts. They should define input sources, write boundaries, whether code may be changed, and how results are reported.
+
+## Common Paths
+
+| Platform | Agent path |
+| --- | --- |
+| Claude Code | `.claude/agents/trellis-*.md` |
+| Cursor | `.cursor/agents/trellis-*.md` |
+| OpenCode | `.opencode/agents/trellis-*.md` |
+| Codex | `.codex/agents/trellis-*.toml` |
+| Kiro | `.kiro/agents/trellis-*.json` |
+| Gemini CLI | `.gemini/agents/trellis-*.md` |
+| Qoder | `.qoder/agents/trellis-*.md` |
+| CodeBuddy | `.codebuddy/agents/trellis-*.md` |
+| Factory Droid | `.factory/droids/trellis-*.md` |
+| Pi Agent | `.pi/agents/trellis-*.md` |
+| Reasonix | `.reasonix/skills/trellis-*/SKILL.md` (subagent frontmatter) |
+| ZCode | `.zcode/agents/trellis-*.md` |
+| Kimi Code | `.kimi-code/agents/trellis-*.md` (custom sub-agents; the same prompts also ship as `.kimi-code/skills/trellis-*/SKILL.md`) |
+
+GitHub Copilot agent/prompt support is provided by a combination of directories such as `.github/agents/`, `.github/prompts/`, and `.github/skills/`; inspect the files actually generated in the user project.
+
+Main-session workflow platforms such as Kilo, Antigravity, and Devin may not have Trellis sub-agent files. They usually rely on workflows/skills to guide the main session.
+
+## Two Context Loading Modes
+
+### hook push
+
+The platform hook injects task context before the agent starts. The agent file itself can focus more on responsibilities and boundaries.
+
+Common on platforms that support agent hooks.
+
+### agent pull
+
+The agent file instructs the agent to read after startup:
+
+- `python3 ./.trellis/scripts/task.py current --source`
+- `implement.jsonl` or `check.jsonl`
+- spec/research files referenced by JSONL
+- current task `prd.md`
+- `design.md` if present
+- `implement.md` if present
+
+This mode fits platforms whose hooks cannot reliably rewrite sub-agent prompts.
+
+## Local Change Scenarios
+
+| User need | Edit location |
+| --- | --- |
+| Implement agent must follow extra restrictions | The platform's `trellis-implement` agent file. |
+| Check agent must run project-specific commands | `trellis-check` agent file, and `.trellis/spec/` if needed. |
+| Research agent must output a fixed format | `trellis-research` agent file. |
+| Agent cannot read task context | Agent prelude or `inject-subagent-context` hook. |
+| Add a project-specific agent | Platform agent directory + related workflow/command/skill entry point. |
+
+## Modification Principles
+
+1. **Keep responsibilities single-purpose**. Do not mix research, implement, and check responsibilities into one agent.
+2. **Specify the read order**. Agents must know to start from the active task, read jsonl/spec context, then read `prd.md`, `design.md` if present, and `implement.md` if present.
+3. **Specify write boundaries**. Research usually only writes `research/`; implement can write code; check can fix issues.
+4. **Keep semantics synchronized in multi-platform projects**. If the user configured Claude, Codex, and Cursor together, decide whether changes to one platform's agent also need to be applied to others.
+
+## Do Not Default To Editing Upstream Templates
+
+Local AI should default to modifying platform agent files inside the user project. Discuss upstream template source only when the user explicitly wants to contribute the change back to Trellis.
+"
+
+ ❯ test/templates/planning-contract.test.ts:45:24
+     43|       );
+     44|       expect(text).not.toMatch(/(?:Lightweight|lightweight) tasks? may…
+     45|       expect(text).not.toMatch(/(?:design|implement)\.md`? (?:if prese…
+       |                        ^
+     46|       expect(text).not.toMatch(/optional `(?:design|implement)\.md`/);
+     47|       expect(text).toContain("design.md");
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[2/5]⎯
+
+ FAIL  test/templates/planning-contract.test.ts > planning contract distribution > T36 common/bundled-skills/trellis-meta/references/customize-local/change-context-loading.md requires three artifacts for new tasks without a lightweight exemption
+AssertionError: expected '# Change Local Context Loading\n\nCon…' not to match /(?:design|implement)\.md`? (?:if pres…/
+
+- Expected: 
+/(?:design|implement)\.md`? (?:if present|if exists|\(if exists\))/
+
++ Received: 
+"# Change Local Context Loading
+
+Context loading determines when AI reads workflow, task, spec, research, workspace, and git status. Read this page when the user says \"AI does not know the current task,\" \"the agent did not read specs,\" or \"there is too much/too little context.\"
+
+## Read These Files First
+
+1. `.trellis/workflow.md`
+2. `.trellis/scripts/get_context.py`
+3. `.trellis/scripts/common/session_context.py`
+4. `.trellis/scripts/common/task_context.py`
+5. `.trellis/scripts/common/active_task.py`
+6. Current platform hooks or agent files
+7. The current task's `implement.jsonl` / `check.jsonl`
+
+## Context Sources
+
+| Source | Purpose |
+| --- | --- |
+| `.trellis/workflow.md` | Workflow and next-action hints. |
+| `.trellis/tasks/<task>/prd.md` | Current task requirements. |
+| `.trellis/tasks/<task>/design.md` | Technical design for every new task. |
+| `.trellis/tasks/<task>/implement.md` | Execution plan for every new task. |
+| `.trellis/tasks/<task>/implement.jsonl` | Spec/research to read before implementation. |
+| `.trellis/tasks/<task>/check.jsonl` | Spec/research to read during checking. |
+| `.trellis/spec/` | Project specs. |
+| `.trellis/workspace/` | Session records. |
+| git status | Current working tree changes. |
+
+## Common Needs And Edit Points
+
+| Need | Edit point |
+| --- | --- |
+| Inject more/less information in new sessions | `session_context.py` or the platform `session-start` hook. |
+| Change hints on each user input | `[workflow-state:STATUS]` block in `.trellis/workflow.md`. The `inject-workflow-state` hook is parser-only and reads the block verbatim. |
+| Agent did not read specs | Task JSONL, agent prelude, `inject-subagent-context` hook. |
+| Active task is lost | `active_task.py` and platform session identity propagation. |
+| Change JSONL validation rules | `task_context.py`. |
+
+## JSONL Rules
+
+`implement.jsonl` / `check.jsonl` are the key context loading interface:
+
+```jsonl
+{\"file\": \".trellis/spec/backend/index.md\", \"reason\": \"Backend conventions\"}
+{\"file\": \".trellis/tasks/04-28-x/research/api.md\", \"reason\": \"API research\"}
+```
+
+Include only spec/research files. Do not put code files that will be modified into these manifests; agents read code files themselves during implementation.
+
+## Change Session Context
+
+If the user wants every new session to see more project state, edit:
+
+- `.trellis/scripts/common/session_context.py`
+- the corresponding platform `session-start` hook
+
+Context cannot grow without bound. Prefer injecting indexes and paths so the AI can read detailed files on demand.
+
+## Change Sub-Agent Context
+
+First determine which mode the platform uses:
+
+- hook push: edit the `inject-subagent-context` hook.
+- agent pull: edit the read steps in the corresponding `trellis-implement` / `trellis-check` agent file.
+
+In both modes, make sure the agent ultimately reads:
+
+1. active task
+2. the corresponding JSONL
+3. spec/research referenced by the JSONL
+4. `prd.md`
+5. `design.md` if present
+6. `implement.md` if present
+
+## Troubleshooting Order
+
+```bash
+python3 ./.trellis/scripts/task.py current --source
+python3 ./.trellis/scripts/task.py list-context <task>
+python3 ./.trellis/scripts/task.py validate <task>
+python3 ./.trellis/scripts/get_context.py --mode packages
+```
+
+Confirm the task and JSONL are correct before editing hooks/agents.
+"
+
+ ❯ test/templates/planning-contract.test.ts:45:24
+     43|       );
+     44|       expect(text).not.toMatch(/(?:Lightweight|lightweight) tasks? may…
+     45|       expect(text).not.toMatch(/(?:design|implement)\.md`? (?:if prese…
+       |                        ^
+     46|       expect(text).not.toMatch(/optional `(?:design|implement)\.md`/);
+     47|       expect(text).toContain("design.md");
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[3/5]⎯
+
+ FAIL  test/templates/planning-contract.test.ts > planning contract distribution > T36 common/bundled-skills/trellis-meta/references/local-architecture/task-system.md requires three artifacts for new tasks without a lightweight exemption
+AssertionError: expected '# Local Task System\r\n\r\nThe Trelli…' not to match /optional `(?:design|implement)\.md`/
+
+- Expected: 
+/optional `(?:design|implement)\.md`/
+
++ Received: 
+"# Local Task System
+
+The Trellis task system is stored entirely under `.trellis/tasks/` in the user project. Each task is a directory containing requirements, context, research, state, and relationship information.
+
+## Task Directory Structure
+
+```text
+.trellis/tasks/
+├── 04-28-example-task/
+│   ├── task.json
+│   ├── prd.md
+│   ├── design.md
+│   ├── implement.md
+│   ├── implement.jsonl
+│   ├── check.jsonl
+│   └── research/
+└── archive/
+    └── 2026-04/
+```
+
+| File | Purpose |
+| --- | --- |
+| `task.json` | Task metadata: status, assignee, priority, branch, parent/child tasks, and similar fields. |
+| `prd.md` | Requirements, constraints, and acceptance criteria. Every new task requires all three concise planning files. |
+| `design.md` | Technical design for every new task: boundaries, contracts, data flow, compatibility, tradeoffs. |
+| `implement.md` | Execution plan for every new task: ordered checklist, validation commands, review gates, rollback points. |
+| `implement.jsonl` | List of spec/research files the implement agent must read first. |
+| `check.jsonl` | List of spec/research files the check agent must read first. |
+| `research/` | Research artifacts. Complex findings should not live only in chat. |
+
+## `task.json`
+
+`task.json` records task status and metadata. Common fields:
+
+| Field | Meaning |
+| --- | --- |
+| `id` / `name` / `title` | Task identity and title. |
+| `status` | Status such as `planning`, `in_progress`, `review`, or `completed`. |
+| `priority` | `P0`, `P1`, `P2`, `P3`. |
+| `creator` / `assignee` | Creator and assignee. |
+| `package` | Target package in a monorepo; may be empty. |
+| `branch` / `base_branch` | Working branch and PR target branch. |
+| `children` / `parent` | Parent/child task relationships. |
+| `commit` / `pr_url` | Commit and PR information after completion. |
+| `meta` | Extension fields. |
+
+## Parent / Child Task Trees
+
+Parent/child task relationships are for work structure. A parent task groups related deliverables under one source requirement set; it is not a dependency scheduler and does not replace the child task's own planning artifacts.
+
+Use a parent task when a request has multiple independently verifiable deliverables. The parent owns:
+
+- Source requirements and user-facing scope.
+- The map of child tasks and their responsibility boundaries.
+- Cross-child acceptance criteria and final integration review.
+
+Use child tasks for deliverables that can move through planning, implementation, check, and archive independently. If one child depends on another, write that dependency in the child `prd.md` / `implement.md`; do not rely on tree position to imply ordering.
+
+Create new children with:
+
+```bash
+python3 ./.trellis/scripts/task.py create \"<child title>\" --description \"<one-line summary>\" --slug <child-slug> --parent <parent-dir>
+```
+
+Link or unlink existing tasks with:
+
+```bash
+python3 ./.trellis/scripts/task.py add-subtask <parent-dir> <child-dir>
+python3 ./.trellis/scripts/task.py remove-subtask <parent-dir> <child-dir>
+```
+
+`children` on the parent is a historical list. When a child is archived, Trellis keeps that child name in the parent so progress like `[2/3 done]` remains meaningful after completed children move to `archive/`.
+
+The AI should not treat phase numbers as task status. Task progress is mainly determined by `status`, artifact presence (`prd.md`, optional `design.md` / `implement.md`), whether JSONL context is configured for sub-agent mode, and the phase descriptions in `workflow.md`.
+
+## Active Task
+
+The user sees a \"current task,\" but Trellis stores active task state per session.
+
+```text
+.trellis/.runtime/sessions/<context-key>.json
+```
+
+`task.py start` writes the task path into the runtime session file for the current session. `task.py current --source` shows the current task and where it came from. Different AI windows can point to different tasks without overwriting each other.
+
+If the platform or shell environment has no stable session identity, `task.py start` may be unable to set the active task. The AI should read the error, inspect the platform hook/session environment, and not fall back to a shared global pointer.
+
+## JSONL Context
+
+`implement.jsonl` and `check.jsonl` are context manifests for sub-agents to read first. They do not replace `implement.md`; `implement.md` is the human-readable execution plan.
+
+Format:
+
+```jsonl
+{\"file\": \".trellis/spec/cli/backend/index.md\", \"reason\": \"Backend conventions\"}
+{\"file\": \".trellis/tasks/04-28-example/research/api.md\", \"reason\": \"API research\"}
+```
+
+Rules:
+
+- Include spec and research files.
+- Do not include code files that are about to be modified.
+- Do not treat temporary conclusions in chat as the only context.
+- Rows without a `file` field are skipped by readers. Legacy `{\"_example\": ...}` placeholder rows are rejected by `task.py validate` — delete them.
+
+## Common Commands
+
+```bash
+python3 ./.trellis/scripts/task.py create \"<title>\" --description \"<one-line summary>\" --slug <slug>
+python3 ./.trellis/scripts/task.py start <task>
+python3 ./.trellis/scripts/task.py current --source
+python3 ./.trellis/scripts/task.py add-context <task> implement <file> <reason>
+python3 ./.trellis/scripts/task.py validate <task>
+python3 ./.trellis/scripts/task.py finish
+python3 ./.trellis/scripts/task.py archive <task>
+```
+
+When modifying the task system, the AI should prefer script commands to maintain structure. Edit JSON/Markdown directly only when scripts do not cover the need.
+
+## Local Customization Points
+
+| Need | Edit location |
+| --- | --- |
+| Change the default task template | `.trellis/scripts/common/task_store.py` and task creation instructions. |
+| Change status semantics | `.trellis/workflow.md`, workflow-state hook logic, and task usage conventions. |
+| Add task lifecycle actions | `hooks.after_*` in `.trellis/config.yaml`. |
+| Change context rules | Planning artifact guidance in `.trellis/workflow.md` and related platform agent/hook instructions. |
+| Change archive policy | `.trellis/scripts/common/task_store.py` / `task_utils.py`. |
+
+These are local files in the user project. Do not default to editing Trellis CLI source code unless the user wants to contribute upstream.
+
+
+## Reviewed planning version and material changes
+
+For every new task, prepare readable, nonempty `prd.md` (requirements), `design.md` (solution), and `implement.md` (implementation and verification order). Keep each concise; the topics above are guidance, not required headings or word counts. Read all three together and resolve contradictions. File presence or a successful script cannot assess meaning or prove user identity.
+
+Before first start or start after replanning:
+
+1. Check the three files and decision-relevant research, then run `task.py attest <task-dir> --note \"what was reviewed\"`.
+2. Run `task.py validate <task-dir>`. A waiting version may validate successfully but is still not approved.
+3. Show the user the complete `reviewId`, explanation, and a plain-language summary of scope, solution, verification and limits. Append the summary, original three fingerprints, changes and real response/source to `<task-dir>/research/planning-review-log.md`; do not overwrite older rounds or invent message identifiers. Preserve the old review log before clearing records with replan; if saving fails, address that first. Full historical text requires version control; fingerprints cannot restore overwritten text.
+4. Only after the user's explicit response to that version, recheck and run `task.py start <task-dir> --review <reviewId> --approval-note \"actual response\" --approval-source \"locatable conversation source\"`. Ordinary attest always creates a new version and clears prior approval; recomputing hashes cannot grant permission.
+
+If requirements, design or the implementation plan materially change, including a change agreed in conversation, pause affected work and dispatched dependencies. Run `task.py replan <task-dir> --reason \"what changed\" --affected \"work to pause\" --independent \"work that does not depend on the change, or none\"`, update the three files and repeat review/confirmation. State why any continuing work is independent; that field does not grant new authorization. Keep normal coding, testing and fixes within the approved requirements moving. Record normal progress separately without checking off the frozen reviewed plan.
+
+For a verified wording-only correction after start, use `task.py attest <task-dir> --editorial --note \"specific correction; behavior and scope unchanged\"`; preserve the reviewed version and confirmation. If the user has already responded but first start is not recorded, add `--editorial-note \"specific correction\"` to that same version-specific start. Inspect the actual diff; neither command can determine whether a purported wording correction changes meaning.
+
+Only `in_progress`/`review` tasks with all three planning metadata keys absent may resume through the legacy path without backfilling the files. Partial, null or malformed records are not legacy. Completed tasks cannot start again. Same-task writes are serialized by the main session; concurrency and exactly-once hooks are not promised. Session hints query `task.py planning-status <task-dir> --json`; unavailable checks never imply permission to start. New records must match the current files on resume. Archive planning problems warn while existing archive checks remain in force.
+"
+
+ ❯ test/templates/planning-contract.test.ts:46:24
+     44|       expect(text).not.toMatch(/(?:Lightweight|lightweight) tasks? may…
+     45|       expect(text).not.toMatch(/(?:design|implement)\.md`? (?:if prese…
+     46|       expect(text).not.toMatch(/optional `(?:design|implement)\.md`/);
+       |                        ^
+     47|       expect(text).toContain("design.md");
+     48|       expect(text).toContain("implement.md");
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[4/5]⎯
+
+ FAIL  test/templates/planning-contract.test.ts > planning contract distribution > T35 runtime OpenCode prompts preserve the same planning boundary
+AssertionError: expected '/* global process */\n/**\n * Trellis…' not to match /(?:technical design|execution plan) i…/
+
+- Expected: 
+/(?:technical design|execution plan) if present/
+
++ Received: 
+"/* global process */
+/**
+ * Trellis Context Injection Plugin
+ *
+ * Injects context when Task tool is called with supported subagent types.
+ * Uses OpenCode's tool.execute.before hook.
+ */
+
+import { existsSync, readdirSync } from \"fs\"
+import { join } from \"path\"
+import {
+  TrellisContext,
+  debugLog,
+  readContextInjectionLimits,
+  ContextBudget,
+  materializeArtifact,
+} from \"../lib/trellis-context.js\"
+
+// Supported subagent types
+const AGENTS_ALL = [\"implement\", \"check\", \"research\"]
+const AGENTS_REQUIRE_TASK = [\"implement\", \"check\"]
+
+// Match `Active task: <path>` on the first non-empty line of the dispatch
+// prompt. Mirrors the contract in workflow.md's [workflow-state:in_progress]
+// breadcrumb so multi-window users can disambiguate which task is targeted.
+const ACTIVE_TASK_HINT_RE = /^\\s*Active task:\\s*(\\S+)\\s*$/m
+
+function extractActiveTaskHint(prompt) {
+  if (typeof prompt !== \"string\" || !prompt) return null
+  const match = prompt.match(ACTIVE_TASK_HINT_RE)
+  return match ? match[1].trim() : null
+}
+
+/**
+ * Get context for implement agent. `taskDir` may be relative
+ * (`.trellis/tasks/foo`) or absolute; both are resolved via
+ * `ctx.resolveTaskDir`.
+ *
+ * Read order (mirrors Python `get_implement_context`):
+ *   1. All files in implement.jsonl (spec/research manifests)
+ *   2. prd.md (requirements)
+ *   3. design.md (required for new tasks) (technical design)
+ *   4. implement.md (required for new tasks) (execution plan)
+ * All blocks share one total budget (issue #441).
+ */
+function getImplementContext(ctx, taskDir) {
+  const parts = []
+  const taskDirFull = ctx.resolveTaskDir(taskDir)
+  if (!taskDirFull) return \"\"
+
+  const limits = readContextInjectionLimits(ctx.directory)
+  const budget = new ContextBudget(limits.max_total_bytes)
+
+  // 1. Read implement.jsonl
+  const jsonlPath = join(taskDirFull, \"implement.jsonl\")
+  const blocks = ctx.readJsonlWithFiles(jsonlPath, limits, budget)
+  if (blocks.length > 0) {
+    parts.push(ctx.buildContextFromEntries(blocks))
+  }
+
+  // 2. Requirements document
+  const prdBlock = materializeArtifact(
+    ctx.directory,
+    `${taskDir}/prd.md`,
+    `${taskDir}/prd.md (Requirements)`,
+    \"Requirements document\",
+    limits,
+    budget,
+  )
+  if (prdBlock) parts.push(prdBlock)
+
+  // 3. Technical design for complex tasks
+  const designBlock = materializeArtifact(
+    ctx.directory,
+    `${taskDir}/design.md`,
+    `${taskDir}/design.md (Technical Design)`,
+    \"Technical design document\",
+    limits,
+    budget,
+  )
+  if (designBlock) parts.push(designBlock)
+
+  // 4. Execution plan for complex tasks
+  const implementPlanBlock = materializeArtifact(
+    ctx.directory,
+    `${taskDir}/implement.md`,
+    `${taskDir}/implement.md (Execution Plan)`,
+    \"Execution plan document\",
+    limits,
+    budget,
+  )
+  if (implementPlanBlock) parts.push(implementPlanBlock)
+
+  return parts.join(\"\\n\\n\")
+}
+
+/**
+ * Get context for check agent. `taskDir` may be relative or absolute.
+ * Same read order and shared budget as the implement context.
+ */
+function getCheckContext(ctx, taskDir) {
+  const parts = []
+  const taskDirFull = ctx.resolveTaskDir(taskDir)
+  if (!taskDirFull) return \"\"
+
+  const limits = readContextInjectionLimits(ctx.directory)
+  const budget = new ContextBudget(limits.max_total_bytes)
+
+  const jsonlPath = join(taskDirFull, \"check.jsonl\")
+  const blocks = ctx.readJsonlWithFiles(jsonlPath, limits, budget)
+  if (blocks.length > 0) {
+    parts.push(ctx.buildContextFromEntries(blocks))
+  }
+
+  const prdBlock = materializeArtifact(
+    ctx.directory,
+    `${taskDir}/prd.md`,
+    `${taskDir}/prd.md (Requirements)`,
+    \"Requirements document\",
+    limits,
+    budget,
+  )
+  if (prdBlock) parts.push(prdBlock)
+
+  const designBlock = materializeArtifact(
+    ctx.directory,
+    `${taskDir}/design.md`,
+    `${taskDir}/design.md (Technical Design)`,
+    \"Technical design document\",
+    limits,
+    budget,
+  )
+  if (designBlock) parts.push(designBlock)
+
+  const implementPlanBlock = materializeArtifact(
+    ctx.directory,
+    `${taskDir}/implement.md`,
+    `${taskDir}/implement.md (Execution Plan)`,
+    \"Execution plan document\",
+    limits,
+    budget,
+  )
+  if (implementPlanBlock) parts.push(implementPlanBlock)
+
+  return parts.join(\"\\n\\n\")
+}
+
+/**
+ * Get context for finish phase (final check before PR)
+ */
+function getFinishContext(ctx, taskDir) {
+  // Finish reuses check context (same JSONL source)
+  return getCheckContext(ctx, taskDir)
+}
+
+
+/**
+ * Get context for research agent
+ */
+function getResearchContext(ctx) {
+  const parts = []
+
+  // Dynamic project structure (scan actual spec directory)
+  const specPath = \".trellis/spec\"
+  const specFull = join(ctx.directory, specPath)
+
+  const structureLines = [`## Project Spec Directory Structure\\n\\n\\`\\`\\`\\n${specPath}/`]
+  if (existsSync(specFull)) {
+    try {
+      const entries = readdirSync(specFull, { withFileTypes: true })
+        .filter(d => d.isDirectory() && !d.name.startsWith(\".\"))
+        .sort((a, b) => a.name.localeCompare(b.name))
+
+      for (const entry of entries) {
+        const entryPath = join(specFull, entry.name)
+        if (existsSync(join(entryPath, \"index.md\"))) {
+          structureLines.push(`├── ${entry.name}/`)
+        } else {
+          try {
+            const nested = readdirSync(entryPath, { withFileTypes: true })
+              .filter(d => d.isDirectory() && existsSync(join(entryPath, d.name, \"index.md\")))
+              .sort((a, b) => a.name.localeCompare(b.name))
+            if (nested.length > 0) {
+              structureLines.push(`├── ${entry.name}/`)
+              for (const n of nested) {
+                structureLines.push(`│   ├── ${n.name}/`)
+              }
+            }
+          } catch {
+            // Ignore nested read errors
+          }
+        }
+      }
+    } catch {
+      // Ignore read errors
+    }
+  }
+  structureLines.push(\"```\")
+
+  parts.push(structureLines.join(\"\\n\") + `
+
+## Search Tips
+
+- Spec files: \\`.trellis/spec/**/*.md\\`
+- Known issues: \\`.trellis/big-question/\\`
+- Code search: Use Glob and Grep tools
+- Tech solutions: Use mcp__exa__web_search_exa or mcp__exa__get_code_context_exa`)
+
+  return parts.join(\"\\n\\n\")
+}
+
+/**
+ * Build enhanced prompt with context
+ */
+function buildPrompt(agentType, originalPrompt, context, isFinish = false) {
+  const templates = {
+    implement: `<!-- trellis-hook-injected -->
+# Implement Agent Task
+
+You are the Implement Agent in the Multi-Agent Pipeline.
+
+## Your Context
+
+${context}
+
+---
+
+## Your Task
+
+${originalPrompt}
+
+---
+
+## Workflow
+
+1. **Understand specs** - All dev specs are injected above
+2. **Understand task artifacts** - Read requirements, technical design if present, and execution plan if present
+3. **Implement feature** - Follow specs and task artifacts
+4. **Self-check** - Ensure code quality
+
+## Important Constraints
+
+- Do NOT execute git commit
+- Follow all dev specs injected above
+- Report list of modified/created files when done`,
+
+    check: isFinish ? `<!-- trellis-hook-injected -->
+# Finish Agent Task
+
+You are performing the final check before creating a PR.
+
+## Your Context
+
+${context}
+
+---
+
+## Your Task
+
+${originalPrompt}
+
+---
+
+## Workflow
+
+1. **Review changes** - Run \\`git diff --name-only\\` to see all changed files
+2. **Verify task artifacts** - Check prd.md and, when present, design.md / implement.md
+3. **Spec sync** - Analyze whether changes introduce new patterns, contracts, or conventions
+   - If new pattern/convention found: read target spec file → update it → update index.md if needed
+   - If infra/cross-layer change: follow the 7-section mandatory template from update-spec.md
+   - If pure code fix with no new patterns: skip this step
+4. **Run final checks** - Execute lint and typecheck
+5. **Confirm ready** - Ensure code is ready for PR
+
+## Important Constraints
+
+- You MAY update spec files when gaps are detected (use update-spec.md as guide)
+- MUST read the target spec file BEFORE editing (avoid duplicating existing content)
+- Do NOT update specs for trivial changes (typos, formatting, obvious fixes)
+- If critical CODE issues found, report them clearly (fix specs, not code)
+- Verify all acceptance criteria in prd.md are met
+- Verify design.md and implement.md constraints when those files are present` :
+      `<!-- trellis-hook-injected -->
+# Check Agent Task
+
+You are the Check Agent in the Multi-Agent Pipeline.
+
+## Your Context
+
+${context}
+
+---
+
+## Your Task
+
+${originalPrompt}
+
+---
+
+## Workflow
+
+1. **Get changes** - Run \\`git diff --name-only\\` and \\`git diff\\`
+2. **Check against specs** - Check item by item
+3. **Self-fix** - Fix issues directly, don't just report
+4. **Run verification** - Run lint and typecheck
+
+## Important Constraints
+
+- Fix issues yourself, don't just report
+- Must execute complete checklist`,
+
+    research: `<!-- trellis-hook-injected -->
+# Research Agent Task
+
+You are the Research Agent in the Multi-Agent Pipeline.
+
+## Core Principle
+
+**You do one thing: find and explain information.**
+
+## Project Info
+
+${context}
+
+---
+
+## Your Task
+
+${originalPrompt}
+
+---
+
+## Workflow
+
+1. **Understand query** - Determine search type and scope
+2. **Plan search** - List search steps
+3. **Execute search** - Run multiple searches in parallel
+4. **Organize results** - Output structured report
+
+## Strict Boundaries
+
+**Only allowed**: Describe what exists, where it is, how it works
+
+**Forbidden**: Suggest improvements, criticize implementation, modify files`
+  }
+
+  return templates[agentType] || originalPrompt
+}
+
+function shellQuote(value) {
+  return `'${String(value).replace(/'/g, \"'\\\\''\")}'`
+}
+
+function powershellQuote(value) {
+  return `'${String(value).replace(/'/g, \"''\")}'`
+}
+
+function envValue(env, key) {
+  const value = env?.[key]
+  return typeof value === \"string\" && value.trim() ? value.trim() : null
+}
+
+function shellBasename(value) {
+  return value.replace(/\\\\/g, \"/\").split(\"/\").pop()?.toLowerCase() || \"\"
+}
+
+function isWindowsPosixShell(env = process.env) {
+  if (envValue(env, \"MSYSTEM\")) return true
+  if (envValue(env, \"MINGW_PREFIX\")) return true
+  if (envValue(env, \"OPENCODE_GIT_BASH_PATH\")) return true
+
+  const ostype = envValue(env, \"OSTYPE\")?.toLowerCase() || \"\"
+  if (/(msys|mingw|cygwin)/.test(ostype)) return true
+
+  const shell = shellBasename(envValue(env, \"SHELL\") || \"\")
+  return /^(bash|sh|zsh)(\\.exe)?$/.test(shell)
+}
+
+function buildTrellisContextPrefix(contextKey, hostPlatform = process.platform, env = process.env) {
+  if (hostPlatform === \"win32\" && !isWindowsPosixShell(env)) {
+    return `$env:TRELLIS_CONTEXT_ID = ${powershellQuote(contextKey)}; `
+  }
+
+  return `export TRELLIS_CONTEXT_ID=${shellQuote(contextKey)}; `
+}
+
+function getBashCommandKey(args) {
+  if (!args || typeof args !== \"object\") return null
+  if (typeof args.command === \"string\") return \"command\"
+  if (typeof args.cmd === \"string\") return \"cmd\"
+  return null
+}
+
+function commandStartsWithTrellisContext(command) {
+  const firstCommand = command.trimStart().split(/[;&|]/, 1)[0].trimStart()
+  return (
+    /^TRELLIS_CONTEXT_ID\\s*=/.test(firstCommand) ||
+    /^export\\s+TRELLIS_CONTEXT_ID\\s*=/.test(firstCommand) ||
+    /^env\\s+(?:(?:-\\S+|[A-Za-z_][A-Za-z0-9_]*=\\S*)\\s+)*TRELLIS_CONTEXT_ID\\s*=/.test(firstCommand) ||
+    /^\\$env:TRELLIS_CONTEXT_ID\\s*=/i.test(firstCommand)
+  )
+}
+
+/**
+ * OpenCode exposes no session identity to Bash at all — it sets no session env
+ * var in any process. The plugin hook does receive it, so inject it into Bash
+ * commands before execution; that prefix is the only channel by which an
+ * AI-run `task.py` sees the OpenCode session.
+ */
+function injectTrellisContextIntoBash(ctx, input, output, hostPlatform, env) {
+  const args = output?.args
+  const commandKey = getBashCommandKey(args)
+  if (!commandKey) return false
+
+  const command = args[commandKey]
+  if (!command.trim()) return false
+  if (commandStartsWithTrellisContext(command)) return false
+
+  const contextKey = ctx.getContextKey(input)
+  if (!contextKey) return false
+
+  args[commandKey] = `${buildTrellisContextPrefix(contextKey, hostPlatform, env)}${command}`
+  return true
+}
+
+// OpenCode plugin factory: `export default async (input) => hooks`.
+// OpenCode 1.2.x iterates every module export and invokes it as a function
+// (packages/opencode/src/plugin/index.ts — `for ([_, fn] of Object.entries(mod)) await fn(input)`);
+// the previous `{ id, server }` object shape failed with
+// `TypeError: fn is not a function` in 1.2.x.
+export default async ({ directory, platform: hostPlatform = process.platform, env = process.env }) => {
+  const ctx = new TrellisContext(directory)
+  debugLog(\"inject\", \"Plugin loaded, directory:\", directory)
+
+  return {
+      \"tool.execute.before\": async (input, output) => {
+        try {
+          if (process.env.TRELLIS_HOOKS === \"0\" || process.env.TRELLIS_DISABLE_HOOKS === \"1\") {
+            return
+          }
+          debugLog(\"inject\", \"tool.execute.before called, tool:\", input?.tool)
+
+          const toolName = input?.tool?.toLowerCase()
+          if (toolName === \"bash\") {
+            if (injectTrellisContextIntoBash(ctx, input, output, hostPlatform, env)) {
+              debugLog(\"inject\", \"Injected TRELLIS_CONTEXT_ID into Bash command\")
+            }
+            return
+          }
+
+          if (toolName !== \"task\") {
+            return
+          }
+
+          const args = output?.args
+          if (!args) return
+
+          const rawSubagentType = args.subagent_type
+          // Strip \"trellis-\" prefix added by v0.5.0-beta.5 agent rename migration
+          const subagentType = (rawSubagentType || \"\").replace(/^trellis-/, \"\")
+          const originalPrompt = args.prompt || \"\"
+
+          debugLog(\"inject\", \"Task tool called, subagent_type:\", rawSubagentType)
+
+          if (!AGENTS_ALL.includes(subagentType)) {
+            debugLog(\"inject\", \"Skipping - unsupported subagent_type\")
+            return
+          }
+
+          // Resolve active task in this priority order (only later steps
+          // run when earlier ones miss):
+          //   1. Exact session runtime context lookup for input.sessionID
+          //   2. `Active task: <path>` hint in the dispatch prompt
+          //      (explicit per-dispatch override — beats single-session
+          //      inference so multi-window users can disambiguate)
+          //   3. Single-session fallback — only when exactly 1 session
+          //      runtime file exists locally
+          let taskDir = null
+          let taskSource = null
+
+          const contextKey = ctx.getContextKey(input)
+          if (contextKey) {
+            const context = ctx.readContext(contextKey)
+            const exactRef = ctx.normalizeTaskRef(context?.current_task || \"\")
+            if (exactRef) {
+              taskDir = exactRef
+              taskSource = `session:${contextKey}`
+            }
+          }
+
+          if (!taskDir) {
+            const hintRef = extractActiveTaskHint(originalPrompt)
+            if (hintRef) {
+              const hintNormalized = ctx.normalizeTaskRef(hintRef)
+              if (hintNormalized) {
+                const hintDir = ctx.resolveTaskDir(hintNormalized)
+                if (hintDir && existsSync(hintDir)) {
+                  taskDir = hintNormalized
+                  taskSource = \"prompt-hint\"
+                  debugLog(\"inject\", \"Resolved task from Active task: hint:\", hintNormalized)
+                }
+              }
+            }
+          }
+
+          if (!taskDir) {
+            const fallback = ctx._resolveSingleSessionFallback()
+            if (fallback?.taskPath) {
+              const fallbackDir = ctx.resolveTaskDir(fallback.taskPath)
+              if (fallbackDir && existsSync(fallbackDir)) {
+                taskDir = fallback.taskPath
+                taskSource = fallback.source
+                debugLog(\"inject\", \"Resolved task via single-session fallback:\", taskDir, \"source:\", taskSource)
+              }
+            }
+          }
+
+          // Agents requiring task directory
+          if (AGENTS_REQUIRE_TASK.includes(subagentType)) {
+            // subagentType is already stripped of \"trellis-\" prefix above
+            if (!taskDir) {
+              debugLog(\"inject\", \"Skipping - no current task\")
+              return
+            }
+            const taskDirFull = ctx.resolveTaskDir(taskDir)
+            if (!taskDirFull || !existsSync(taskDirFull)) {
+              debugLog(\"inject\", \"Skipping - task directory not found\")
+              return
+            }
+          }
+
+          // Check for [finish] marker
+          const isFinish = originalPrompt.toLowerCase().includes(\"[finish]\")
+
+          // Get context based on agent type
+          let context = \"\"
+          switch (subagentType) {
+            case \"implement\":
+              context = getImplementContext(ctx, taskDir)
+              break
+            case \"check\":
+              context = isFinish
+                ? getFinishContext(ctx, taskDir)
+                : getCheckContext(ctx, taskDir)
+              break
+            case \"research\":
+              context = getResearchContext(ctx, taskDir)
+              break
+          }
+
+          if (!context) {
+            debugLog(\"inject\", \"No context to inject\")
+            return
+          }
+
+          const newPrompt = buildPrompt(subagentType, originalPrompt, context, isFinish)
+
+          // Mutate args in-place — whole-object replacement does NOT work for the task tool
+          // because the runtime holds a local reference to the same args object.
+          args.prompt = newPrompt
+
+          debugLog(\"inject\", \"Injected context for\", subagentType, \"prompt length:\", newPrompt.length)
+
+        } catch (error) {
+          debugLog(\"inject\", \"Error in tool.execute.before:\", error.message, error.stack)
+        }
+      }
+    }
+}
+"
+
+ ❯ test/templates/planning-contract.test.ts:74:22
+     72|   it("T35 runtime OpenCode prompts preserve the same planning boundary…
+     73|     const text = fs.readFileSync(path.join(source, "opencode/plugins/i…
+     74|     expect(text).not.toMatch(/(?:technical design|execution plan) if p…
+       |                      ^
+     75|     expect(text).not.toContain("when present, design.md / implement.md…
+     76|     expect(text).not.toContain("when those files are present");
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[5/5]⎯
+
+
+ Test Files  1 failed (1)
+      Tests  5 failed | 14 passed (19)
+   Start at  21:30:35
+   Duration  1.15s (transform 242ms, setup 20ms, import 736ms, tests 210ms, environment 0ms)
+
+undefined
+C:\Users\PXWD\.codex\worktrees\planning-artifact-gate\Trellis\packages\cli:
+ ERR_PNPM_RECURSIVE_EXEC_FIRST_FAIL  Command "vitest" not found

@@ -1,0 +1,6 @@
+{
+  "scope": "Source, tests, docs and structured evidence; raw .txt command logs retain original whitespace and are excluded.",
+  "exit": 2,
+  "stdout": ".trellis/tasks/11-11-planning-artifact-gate/research/prd-history-before-consolidation-2026-11-12.md:193: new blank line at EOF.\npackages/cli/test/scripts/task-planning.integration.test.ts:854: new blank line at EOF.\n",
+  "stderr": ""
+}

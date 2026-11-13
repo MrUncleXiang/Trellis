@@ -1,0 +1,49 @@
+{
+  "reviewerId": "01a1cefc-bb83-73a2-8c29-ffbdd1c84d5d",
+  "reviewKind": "design rationale and boundary review",
+  "originalAssessment": "Architecture basically sound; 1 definite P1 and a Python3.9 P2, concurrency/scope boundaries and optional P3 audit strengthening",
+  "inputSnapshot": "independent-review-input-2026-11-12.zip",
+  "findings": [
+    {
+      "id": "D01",
+      "reportedSeverity": "P1",
+      "issue": "勘误路径与完整性条件互斥",
+      "disposition": "采纳：D2/D4拆record_errors与check_current_files；普通检查组合；勘误只允许原记录自洽、完整候选复验；首次勘误同时构造批准和in_progress再验证，一次保存"
+    },
+    {
+      "id": "D02",
+      "reportedSeverity": "P2",
+      "issue": "Python3.9联合注解导入风险",
+      "disposition": "采纳：新模块显式future annotations，旧模块保留；T04真实3.9导入及命令链，缺运行结果不声称验证"
+    },
+    {
+      "id": "D03",
+      "reportedSeverity": "P2",
+      "issue": "同任务并发start的确认覆盖与钩子重复",
+      "disposition": "明确边界：现有设计未承诺锁，保持轻量单状态写入者；D4明确主会话串行、不同任务可并行，不保证竞态全检测/钩子恰好一次；T38观测并发边界，不将其记作保护通过"
+    },
+    {
+      "id": "D04",
+      "reportedSeverity": "scope",
+      "issue": "状态查询/平台提示是否额外范围",
+      "disposition": "核实后不采纳删除或延后：整合前需求160行已有SessionStart的Next-Action显示同一声明说明，R10还含平台状态分支；只读统一查询是满足既有验收的实现方式，不增加审批服务。最终摘要照实展示成本与范围"
+    },
+    {
+      "id": "D05",
+      "reportedSeverity": "P3",
+      "issue": "replan清除旧确认后依赖日志/Git",
+      "disposition": "不新增可选历史字段：D8保留人类审阅日志与Git回查；明确日志没写/未提交全文覆盖时不能保证自动还原，不宣称命令具备完整审批历史"
+    }
+  ],
+  "scope": "Main-session verification and dispositions; no product implementation approval",
+  "historicalScopeEvidence": {
+    "file": "prd-history-before-consolidation-2026-11-12.md",
+    "line": 160,
+    "text": "task.py start after a fresh attest succeeds and prints the recorded note, and the Next-Action block that SessionStart emits names the same note so the user sees it without scrolling."
+  },
+  "narrowRereview": {
+    "status": "no remaining definite blocker in the reported correction scope",
+    "evidenceKind": "reviewer assessed supplied correction summary; not product code or full generated outputs",
+    "reply": "未见仍会阻断送审或开工的确定缺陷。记录与文件分层、完整候选两层复验后一次写消除P1；真实3.9导入和T04命令链要求消除兼容声明缺口；同任务单写入者、不支持并发与T38不冒充保护的边界明确。状态提示有历史验收依据。仅在此窄范围可进入最终用户确认。"
+  }
+}

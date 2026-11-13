@@ -1,0 +1,397 @@
+
+ RUN  v4.0.18 C:/Users/PXWD/.codex/worktrees/planning-artifact-gate/Trellis/packages/cli
+
+ ❯ test/scripts/planning-status.integration.test.ts (27 tests | 4 failed) 12055ms
+     ✓ T29 exposes exactly eight readonly fields and diagnostics without granting approval 234ms
+     ✓ T29 rejects invalid base task null 210ms
+     ✓ T29 rejects invalid base task undefined 209ms
+     ✓ T29 rejects invalid base task {} 230ms
+     ✓ T29 rejects invalid base task {"status":"unknown"} 215ms
+     ✓ T29 rejects invalid base task {"status":"planning","meta":null} 219ms
+     ✓ T29 rejects invalid base task {"status":"planning","meta":[]} 224ms
+     ✓ T29 rejects malformed and absent task records  335ms
+     ✓ T30 follows waiting, ready and drift using the real command  580ms
+     ✓ T29 diagnoses partial records as invalid instead of legacy  354ms
+     ✓ validate rejects missing planning files and remains readonly  334ms
+     ✓ validate accepts a selfconsistent waiting version but explicitly says approval is still needed  552ms
+     × T29 review regression: planning with an existing approval fails validation even when mode is ready 1019ms
+     × T23/T29 review regression: null replan beside valid approval is invalid, not a resume 1515ms
+     × T28/T29 review regression: completed replan residue null is reported as a warning 447ms
+     × T28/T29 review regression: completed replan residue {"requestedAt":"2026-11-12T10:00:00+08:00","reason":"changed","affectedWork":"all","independentWork":"none"} is reported as a warning 478ms
+     ✓ validate retains context errors even after a valid attest  577ms
+     ✓ T28 completed validation warns about missing artifacts without adding a failure  453ms
+     ✓ T28 archives a legacy task, preserving metadata and warning for every missing artifact  574ms
+     ✓ T34 create keeps planning and only creates the requirements draft  512ms
+     ✓ T31/T33 shared-hooks/session-start.py displays real escaped records  546ms
+     ✓ T31/T33 codex/hooks/session-start.py displays real escaped records  431ms
+     ✓ T31/T33 copilot/hooks/session-start.py displays real escaped records  448ms
+     ✓ T32 shared-hooks/session-start.py reports unavailable query without file-only approval 172ms
+     ✓ T32 codex/hooks/session-start.py reports unavailable query without file-only approval 170ms
+     ✓ T32 copilot/hooks/session-start.py reports unavailable query without file-only approval 138ms
+     ✓ T31/T33 displays canonical records through actual session context  871ms
+ ❯ test/scripts/task-planning.integration.test.ts (45 tests | 16 failed) 68525ms
+     ✓ T01 missing any artifact: attest/start reject, name the file, no side effects  1573ms
+     ✓ T02 empty, whitespace-only and directory artifacts are rejected  958ms
+     ✓ T03 unreadable artifact gives a diagnosis without traceback  888ms
+     ✓ T04 a small three-file chain works end-to-end  2408ms
+     ✓ T05 blank --note is a business error; missing --note is argparse usage  1832ms
+     ✓ T06 no attestation: start rejects even with --allow-empty-context  1507ms
+     ✓ T07 per-file edits drift and a fresh attest gets a new id  2163ms
+     ✓ T08 normalizes only CRLF to LF  1193ms
+     ✓ T09 malformed/unknown attestation records are rejected, never overwritten  2404ms
+     × T09 review regression: ordinary attest preserves invalid planningAttest=null 925ms
+     × T09 review regression: ordinary attest preserves invalid planningAttest="broken" 1023ms
+     × T09 review regression: ordinary attest preserves invalid planningAttest={"schemaVersion":2} 886ms
+     × T09 review regression: ordinary attest preserves invalid planningApproval=null 981ms
+     ✓ T09 review regression: ordinary attest preserves invalid planningApproval={"schemaVersion":2}  961ms
+     × T09 review regression: ordinary attest preserves invalid planningReplan=null 931ms
+     ✓ T09 review regression: ordinary attest preserves invalid planningReplan="broken"  1026ms
+     × T09 review regression: genuine JSON floating schemaVersion in planningAttest is rejected 1433ms
+     × T09 review regression: genuine JSON floating schemaVersion in planningApproval is rejected 1728ms
+     ✓ T10 valid unattested-approval planning state is waiting_confirmation  996ms
+     ✓ T11 start confirmation arguments are all required and non-blank  1401ms
+     ✓ T12 old approved version cannot authorize a newly attested version  1419ms
+     ✓ T13 successful start performs one task.json replace with approval+status  1065ms
+     ✓ T14 two attests on identical files still make distinct ids and clear approval  1364ms
+     ✓ T15 both editorial paths preserve review identity and append the chain  2307ms
+     ✓ T16 no-op editorial does not write; extra editorial arg on no-diff start fails  2680ms
+     ✓ T17 editorial cannot manufacture approval or ignore a pending replan  1964ms
+     ✓ T18 tampered chain/approval is rejected by validate and start  2016ms
+     ✓ T19 normal attest on an implemented task is refused with replan guidance  1340ms
+     ✓ T20 replan returns to planning, clears statements, preserves branch/code  1169ms
+     × T20 review regression: replan cannot erase invalid planningAttest=null 1202ms
+     × T20 review regression: replan cannot erase invalid planningAttest="broken" 1269ms
+     × T20 review regression: replan cannot erase invalid planningAttest={"schemaVersion":2} 1197ms
+     × T20 review regression: replan cannot erase invalid planningApproval=null 1177ms
+     × T20 review regression: replan cannot erase invalid planningApproval={"schemaVersion":2} 1262ms
+     × T20 review regression: replan cannot erase invalid planningReplan=null 1363ms
+     × T20 review regression: replan cannot erase invalid planningReplan={"requestedAt":"2026-11-12T10:00:00+08:00","reason":"changed","affectedWork":"all","independentWork":"none"} 1285ms
+     × T20 review regression: omitted independent defaults to none for legacy replan 860ms
+     ✓ T21 repeated replan/blank args/completed start attest replan are refused  2167ms
+     ✓ T22 replan -> edit -> attest -> validate -> approve -> start recovers  1568ms
+     ✓ T23 legacy in_progress resumes only when all three keys are absent  1714ms
+     ✓ T24 invalid task shapes fail clearly without creating a task  2939ms
+     ✓ T25 missing identity keeps the same gate, then saves state without a pointer  1467ms
+     × T26 normal progress leaves reviewed artifacts unchanged; substantive changes require replan and fresh approval 2717ms
+     ✓ T27 task.json save failure leaves no pointer/hook; pointer failure reports started-but-not-located  1669ms
+     ✓ T38 concurrent starts are observed and reported as unsupported  2123ms
+
+⎯⎯⎯⎯⎯⎯ Failed Tests 20 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  test/scripts/planning-status.integration.test.ts > planning status and existing lifecycle integration > T29 review regression: planning with an existing approval fails validation even when mode is ready
+AssertionError: === Validating Context Files ===
+Target dir: C:\Users\PXWD\AppData\Local\Temp\trellis-planning-status-GNdOGf\.trellis\tasks\sample
+
+Warning: recorded branch 'feature/sample' no longer exists locally (likely merged and deleted).
+
+Planning: ready; review: 69878f4c5322488ba4aa701a00e13313
+  implement.jsonl: ✓ (1 entries)
+  check.jsonl: ✓ (1 entries)
+
+✓ All validations passed
+: expected +0 to be 1 // Object.is equality
+
+- Expected
++ Received
+
+- 1
++ 0
+
+ ❯ test/scripts/planning-status.integration.test.ts:213:58
+    211|     expect(status.errors).toEqual(expect.arrayContaining([expect.strin…
+    212|     const result = run("validate", "sample");
+    213|     expect(result.status, result.stdout + result.stderr).toBe(1);
+       |                                                          ^
+    214|     expect(result.stdout + result.stderr).toContain("planningApproval"…
+    215|     expect(fs.readFileSync(path.join(task, "task.json"))).toEqual(befo…
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/20]⎯
+
+ FAIL  test/scripts/planning-status.integration.test.ts > planning status and existing lifecycle integration > T23/T29 review regression: null replan beside valid approval is invalid, not a resume
+AssertionError: expected 'ready' to be 'invalid' // Object.is equality
+
+Expected: "invalid"
+Received: "ready"
+
+ ❯ test/scripts/planning-status.integration.test.ts:225:25
+    223|     const before = fs.readFileSync(path.join(task, "task.json"));
+    224|     const status = summary();
+    225|     expect(status.mode).toBe("invalid");
+       |                         ^
+    226|     expect(status.errors).toEqual(expect.arrayContaining([expect.strin…
+    227|     expect(run("validate", "sample").status).toBe(1);
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[2/20]⎯
+
+ FAIL  test/scripts/planning-status.integration.test.ts > planning status and existing lifecycle integration > T28/T29 review regression: completed replan residue null is reported as a warning
+ FAIL  test/scripts/planning-status.integration.test.ts > planning status and existing lifecycle integration > T28/T29 review regression: completed replan residue {"requestedAt":"2026-11-12T10:00:00+08:00","reason":"changed","affectedWork":"all","independentWork":"none"} is reported as a warning
+AssertionError: expected [] to deeply equal ArrayContaining{…}
+
+- Expected
++ Received
+
+- ArrayContaining [
+-   StringContaining "planningReplan",
+- ]
++ []
+
+ ❯ test/scripts/planning-status.integration.test.ts:243:30
+    241|     writeTask(data);
+    242|     const before = fs.readFileSync(path.join(task, "task.json"));
+    243|     expect(summary().errors).toEqual(expect.arrayContaining([expect.st…
+       |                              ^
+    244|     const result = run("validate", "sample");
+    245|     expect(result.status, result.stdout + result.stderr).toBe(0);
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[3/20]⎯
+
+ FAIL  test/scripts/task-planning.integration.test.ts > task.py planning artifact gate T01-T28/T38 > T09 review regression: ordinary attest preserves invalid planningAttest=null
+AssertionError: ✓ Planning version attested: cca6f2aefa7244108ddcdbb8397c85a6
+Note: ready for review
+  prd.md: a745a38d0516e8506eca13878e2411de3eff6277aba749d9bd263947243191d0
+  design.md: c8c1f56188e09add64d419a0c1ec888151fa5550b90408ca7486cc811a9196e0
+  implement.md: 711de009d2c3ba558396750ed659c2dbdb4b3b532d0f4fda98d5e77aef824435
+Still needs explicit user review and approval before start.
+: expected +0 to be 1 // Object.is equality
+
+- Expected
++ Received
+
+- 1
++ 0
+
+ ❯ test/scripts/task-planning.integration.test.ts:390:58
+    388|     const before = snapshot(repo);
+    389|     const result = attest(repo);
+    390|     expect(result.status, result.stdout + result.stderr).toBe(1);
+       |                                                          ^
+    391|     expect(result.stdout + result.stderr).toContain(key);
+    392|     assertNoSideEffects(repo, before);
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[4/20]⎯
+
+ FAIL  test/scripts/task-planning.integration.test.ts > task.py planning artifact gate T01-T28/T38 > T09 review regression: ordinary attest preserves invalid planningAttest="broken"
+AssertionError: ✓ Planning version attested: 661fec3ef1a345af956961d00513f576
+Note: ready for review
+  prd.md: a745a38d0516e8506eca13878e2411de3eff6277aba749d9bd263947243191d0
+  design.md: c8c1f56188e09add64d419a0c1ec888151fa5550b90408ca7486cc811a9196e0
+  implement.md: 711de009d2c3ba558396750ed659c2dbdb4b3b532d0f4fda98d5e77aef824435
+Still needs explicit user review and approval before start.
+: expected +0 to be 1 // Object.is equality
+
+- Expected
++ Received
+
+- 1
++ 0
+
+ ❯ test/scripts/task-planning.integration.test.ts:390:58
+    388|     const before = snapshot(repo);
+    389|     const result = attest(repo);
+    390|     expect(result.status, result.stdout + result.stderr).toBe(1);
+       |                                                          ^
+    391|     expect(result.stdout + result.stderr).toContain(key);
+    392|     assertNoSideEffects(repo, before);
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[5/20]⎯
+
+ FAIL  test/scripts/task-planning.integration.test.ts > task.py planning artifact gate T01-T28/T38 > T09 review regression: ordinary attest preserves invalid planningAttest={"schemaVersion":2}
+AssertionError: ✓ Planning version attested: 25e1c736987b41658f9346287c485629
+Note: ready for review
+  prd.md: a745a38d0516e8506eca13878e2411de3eff6277aba749d9bd263947243191d0
+  design.md: c8c1f56188e09add64d419a0c1ec888151fa5550b90408ca7486cc811a9196e0
+  implement.md: 711de009d2c3ba558396750ed659c2dbdb4b3b532d0f4fda98d5e77aef824435
+Still needs explicit user review and approval before start.
+: expected +0 to be 1 // Object.is equality
+
+- Expected
++ Received
+
+- 1
++ 0
+
+ ❯ test/scripts/task-planning.integration.test.ts:390:58
+    388|     const before = snapshot(repo);
+    389|     const result = attest(repo);
+    390|     expect(result.status, result.stdout + result.stderr).toBe(1);
+       |                                                          ^
+    391|     expect(result.stdout + result.stderr).toContain(key);
+    392|     assertNoSideEffects(repo, before);
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[6/20]⎯
+
+ FAIL  test/scripts/task-planning.integration.test.ts > task.py planning artifact gate T01-T28/T38 > T09 review regression: ordinary attest preserves invalid planningApproval=null
+AssertionError: ✓ Planning version attested: 58ccf274e3db43808c831dbce7bc289a
+Note: ready for review
+  prd.md: a745a38d0516e8506eca13878e2411de3eff6277aba749d9bd263947243191d0
+  design.md: c8c1f56188e09add64d419a0c1ec888151fa5550b90408ca7486cc811a9196e0
+  implement.md: 711de009d2c3ba558396750ed659c2dbdb4b3b532d0f4fda98d5e77aef824435
+Still needs explicit user review and approval before start.
+: expected +0 to be 1 // Object.is equality
+
+- Expected
++ Received
+
+- 1
++ 0
+
+ ❯ test/scripts/task-planning.integration.test.ts:390:58
+    388|     const before = snapshot(repo);
+    389|     const result = attest(repo);
+    390|     expect(result.status, result.stdout + result.stderr).toBe(1);
+       |                                                          ^
+    391|     expect(result.stdout + result.stderr).toContain(key);
+    392|     assertNoSideEffects(repo, before);
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[7/20]⎯
+
+ FAIL  test/scripts/task-planning.integration.test.ts > task.py planning artifact gate T01-T28/T38 > T09 review regression: ordinary attest preserves invalid planningReplan=null
+AssertionError: ✓ Planning version attested: 065bb1161f4b4360844a951d3beef1f7
+Note: ready for review
+  prd.md: a745a38d0516e8506eca13878e2411de3eff6277aba749d9bd263947243191d0
+  design.md: c8c1f56188e09add64d419a0c1ec888151fa5550b90408ca7486cc811a9196e0
+  implement.md: 711de009d2c3ba558396750ed659c2dbdb4b3b532d0f4fda98d5e77aef824435
+Still needs explicit user review and approval before start.
+: expected +0 to be 1 // Object.is equality
+
+- Expected
++ Received
+
+- 1
++ 0
+
+ ❯ test/scripts/task-planning.integration.test.ts:390:58
+    388|     const before = snapshot(repo);
+    389|     const result = attest(repo);
+    390|     expect(result.status, result.stdout + result.stderr).toBe(1);
+       |                                                          ^
+    391|     expect(result.stdout + result.stderr).toContain(key);
+    392|     assertNoSideEffects(repo, before);
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[8/20]⎯
+
+ FAIL  test/scripts/task-planning.integration.test.ts > task.py planning artifact gate T01-T28/T38 > T09 review regression: genuine JSON floating schemaVersion in planningAttest is rejected
+AssertionError: ✓ Planning version attested: a69d5f2d8b1d45249e4f01041076a8cf
+Note: must not overwrite
+  prd.md: a745a38d0516e8506eca13878e2411de3eff6277aba749d9bd263947243191d0
+  design.md: c8c1f56188e09add64d419a0c1ec888151fa5550b90408ca7486cc811a9196e0
+  implement.md: 711de009d2c3ba558396750ed659c2dbdb4b3b532d0f4fda98d5e77aef824435
+Still needs explicit user review and approval before start.
+: expected +0 to be 1 // Object.is equality
+
+- Expected
++ Received
+
+- 1
++ 0
+
+ ❯ test/scripts/task-planning.integration.test.ts:413:62
+    411|       ]) {
+    412|         const result = runTask(repo, ...args);
+    413|         expect(result.status, result.stdout + result.stderr).toBe(1);
+       |                                                              ^
+    414|         assertNoSideEffects(repo, before);
+    415|       }
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[9/20]⎯
+
+ FAIL  test/scripts/task-planning.integration.test.ts > task.py planning artifact gate T01-T28/T38 > T09 review regression: genuine JSON floating schemaVersion in planningApproval is rejected
+AssertionError: ✓ Task returned to planning; affected work is paused.
+Reason: changed
+Affected: all
+Independent work: none
+: expected +0 to be 1 // Object.is equality
+
+- Expected
++ Received
+
+- 1
++ 0
+
+ ❯ test/scripts/task-planning.integration.test.ts:413:62
+    411|       ]) {
+    412|         const result = runTask(repo, ...args);
+    413|         expect(result.status, result.stdout + result.stderr).toBe(1);
+       |                                                              ^
+    414|         assertNoSideEffects(repo, before);
+    415|       }
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[10/20]⎯
+
+ FAIL  test/scripts/task-planning.integration.test.ts > task.py planning artifact gate T01-T28/T38 > T20 review regression: replan cannot erase invalid planningAttest=null
+ FAIL  test/scripts/task-planning.integration.test.ts > task.py planning artifact gate T01-T28/T38 > T20 review regression: replan cannot erase invalid planningAttest="broken"
+ FAIL  test/scripts/task-planning.integration.test.ts > task.py planning artifact gate T01-T28/T38 > T20 review regression: replan cannot erase invalid planningAttest={"schemaVersion":2}
+ FAIL  test/scripts/task-planning.integration.test.ts > task.py planning artifact gate T01-T28/T38 > T20 review regression: replan cannot erase invalid planningApproval=null
+ FAIL  test/scripts/task-planning.integration.test.ts > task.py planning artifact gate T01-T28/T38 > T20 review regression: replan cannot erase invalid planningApproval={"schemaVersion":2}
+ FAIL  test/scripts/task-planning.integration.test.ts > task.py planning artifact gate T01-T28/T38 > T20 review regression: replan cannot erase invalid planningReplan=null
+ FAIL  test/scripts/task-planning.integration.test.ts > task.py planning artifact gate T01-T28/T38 > T20 review regression: replan cannot erase invalid planningReplan={"requestedAt":"2026-11-12T10:00:00+08:00","reason":"changed","affectedWork":"all","independentWork":"none"}
+AssertionError: ✓ Task returned to planning; affected work is paused.
+Reason: change
+Affected: all
+Independent work: none
+: expected +0 to be 1 // Object.is equality
+
+- Expected
++ Received
+
+- 1
++ 0
+
+ ❯ test/scripts/task-planning.integration.test.ts:638:58
+    636|     const before = snapshot(repo);
+    637|     const result = runTask(repo, "replan", TASK_DIR, "--reason", "chan…
+    638|     expect(result.status, result.stdout + result.stderr).toBe(1);
+       |                                                          ^
+    639|     expect(result.stdout + result.stderr).toContain(key);
+    640|     assertNoSideEffects(repo, before);
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[11/20]⎯
+
+ FAIL  test/scripts/task-planning.integration.test.ts > task.py planning artifact gate T01-T28/T38 > T20 review regression: omitted independent defaults to none for legacy replan
+AssertionError: Error: --reason, --affected and --independent must be non-empty
+: expected 1 to be +0 // Object.is equality
+
+- Expected
++ Received
+
+- 0
++ 1
+
+ ❯ test/scripts/task-planning.integration.test.ts:647:58
+    645|     const before = snapshot(repo);
+    646|     const result = runTask(repo, "replan", TASK_DIR, "--reason", "new …
+    647|     expect(result.status, result.stdout + result.stderr).toBe(0);
+       |                                                          ^
+    648|     expect(readTask(repo).meta.planningReplan.independentWork).toBe("n…
+    649|     expect(readTask(repo).status).toBe("planning");
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[12/20]⎯
+
+ FAIL  test/scripts/task-planning.integration.test.ts > task.py planning artifact gate T01-T28/T38 > T26 normal progress leaves reviewed artifacts unchanged; substantive changes require replan and fresh approval
+AssertionError: expected 1 to be +0 // Object.is equality
+
+- Expected
++ Received
+
+- 0
++ 1
+
+ ❯ test/scripts/task-planning.integration.test.ts:774:147
+
+ Test Files  2 failed (2)
+      Tests  20 failed | 52 passed (72)
+   Start at  21:41:12
+   Duration  68.82s (transform 107ms, setup 34ms, import 127ms, tests 80.58s, environment 0ms)
+
+    772|     assertNoSideEffects(repo, drifted);
+    773| 
+    774|     expect(runTask(repo, "replan", TASK_DIR, "--reason", "implementati…
+       |                                                                                                                                                   ^
+    775|     expect(attest(repo).status).toBe(0);
+    776|     const newId = reviewedId(repo);
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[13/20]⎯
+
+undefined
+C:\Users\PXWD\.codex\worktrees\planning-artifact-gate\Trellis\packages\cli:
+ ERR_PNPM_RECURSIVE_EXEC_FIRST_FAIL  Command "vitest" not found

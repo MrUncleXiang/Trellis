@@ -637,11 +637,11 @@ Try in order — stop at the first one that yields a task path:
 1. Read \`<task-path>/${jsonl}\` — JSONL list of spec/research files relevant to this agent.
 2. For each entry in the JSONL, Read its \`file\` path — these are the specs and research notes you must follow.
    **Skip rows without a \`"file"\` field** (e.g. \`{"_example": "..."}\` placeholder rows left over from an older \`task.py create\`).
-3. Read the task's \`prd.md\` (requirements), then \`design.md\` if present (technical design), then \`implement.md\` if present (execution plan).
+3. Read all three concise files: \`prd.md\` (requirements), \`design.md\` (technical design), and \`implement.md\` (execution plan). Only already-started legacy tasks without any planning metadata may resume with missing files.
 
-If \`${jsonl}\` has no curated entries (empty, only a placeholder row, or the file is missing), fall back to: read the task artifacts, list available specs with \`python3 ./.trellis/scripts/get_context.py --mode packages\`, and pick the specs that match the task domain yourself. Do NOT block on the missing jsonl — lightweight tasks may be PRD-only, while complex tasks may also include \`design.md\` and \`implement.md\`.
+If \`${jsonl}\` has no curated entries (empty, only a placeholder row, or the file is missing), fall back to: read the task artifacts, list available specs with \`python3 ./.trellis/scripts/get_context.py --mode packages\`, and pick the specs that match the task domain yourself. Do NOT block on the missing jsonl — every new task requires all three concise planning files. Do not confuse a missing-context fallback with permission to start.
 
-If the resolved task path has no \`prd.md\`, ask the user what to work on; do NOT proceed without context.
+If a new task is missing any planning file, stop and report to the main session. For material changes, pause affected work and return requirements/design/plan changes to the main session for replan and renewed version-specific user confirmation. Continue ordinary coding/test fixes within the approved scope; do not change approved planning to fit implementation. Run \`task.py planning-status <task-path> --json\` to inspect the canonical record; file presence does not establish permission.
 
 ---
 

@@ -1,0 +1,20 @@
+{
+  "materials": {
+    "prd.md": "Requirement: keep data local and offline.\n",
+    "design.md": "Design: upload data to a remote API.\n",
+    "implement.md": "Plan: implement remote upload.\n"
+  },
+  "recordedHashes": {
+    "prd.md": "0322a57e3b46cc66ed31490201612d990e8cbc9dcdc76243d4c1156a4e780f34",
+    "design.md": "d2597704913f07c15313c38c6ae47fb4da57299c31e7ad81df0de6a67ed153c2",
+    "implement.md": "873c9c744005f326425d71a861db13e4258edb9997c0a3456b0242cf0e612358"
+  },
+  "recomputedHashes": {
+    "prd.md": "0322a57e3b46cc66ed31490201612d990e8cbc9dcdc76243d4c1156a4e780f34",
+    "design.md": "d2597704913f07c15313c38c6ae47fb4da57299c31e7ad81df0de6a67ed153c2",
+    "implement.md": "873c9c744005f326425d71a861db13e4258edb9997c0a3456b0242cf0e612358"
+  },
+  "allHashesMatch": true,
+  "semanticConflict": "Offline-only requirement conflicts with a remote-upload design and plan.",
+  "kind": "logical counterexample only; A is not implemented"
+}

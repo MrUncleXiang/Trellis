@@ -75,6 +75,48 @@ afterEach(() => {
   clearManifestCache();
 });
 
+/** Prepare a real reviewed version for tests exercising first-start behavior. */
+function planningConfirmationArgs(
+  cwd: string,
+  taskRef: string,
+  env: NodeJS.ProcessEnv = process.env,
+): string[] {
+  const taskDir = path.resolve(cwd, taskRef.replace(/\\/g, "/"));
+  for (const name of ["prd.md", "design.md", "implement.md"]) {
+    if (!fs.existsSync(path.join(taskDir, name))) {
+      fs.writeFileSync(
+        path.join(taskDir, name),
+        `# ${name}\nRegression fixture: preserve approved behavior.\n`,
+      );
+    }
+  }
+  const result = spawnSync(
+    process.platform === "win32" ? "python" : "python3",
+    [
+      path.join(cwd, ".trellis/scripts/task.py"),
+      "attest",
+      taskRef,
+      "--note",
+      "Regression fixture reviewed version",
+    ],
+    { cwd, env, encoding: "utf-8" },
+  );
+  expect(result.status, result.stderr + result.stdout).toBe(0);
+  const data = JSON.parse(
+    fs.readFileSync(path.join(taskDir, "task.json"), "utf-8"),
+  ) as {
+    meta: { planningAttest: { reviewId: string } };
+  };
+  return [
+    "--review",
+    data.meta.planningAttest.reviewId,
+    "--approval-note",
+    "Fixture user approves this reviewed version",
+    "--approval-source",
+    "Regression fixture after review",
+  ];
+}
+
 // =============================================================================
 // 1. Windows / Encoding Regressions
 // =============================================================================
@@ -1573,7 +1615,7 @@ describe("regression: JSON read/write failure reporting", () => {
     expect(r.stderr).toContain("not valid JSON");
   });
 
-  it("[audit] start still activates a task with a corrupt task.json but says why status and branch stayed", () => {
+  it("[audit] start refuses a corrupt task.json without activating or rewriting it", () => {
     const env = { TRELLIS_CONTEXT_ID: "json-io-start" };
     expect(
       runTask(
@@ -1593,12 +1635,10 @@ describe("regression: JSON read/write failure reporting", () => {
     fs.writeFileSync(taskJsonPath(name), "{ not json");
 
     const r = runTask(["start", name], env);
-    // Tolerant: the session pointer is the point of the command.
-    expect(r.status).toBe(0);
-    expect(r.stdout).toContain("Current task set to");
-    // Observable: without this the absent status line reads as "not in planning".
-    expect(r.stderr).toContain("not valid JSON");
-    expect(r.stderr).toContain("task.json not updated");
+    expect(r.status).toBe(1);
+    expect(r.stdout).not.toContain("Current task set to");
+    expect(r.stderr + r.stdout).toContain("not valid JSON");
+    expect(fs.readFileSync(taskJsonPath(name), "utf-8")).toBe("{ not json");
   });
 
   it("[audit] current --json carries a read-failure signal and stays silent when healthy", () => {
@@ -1618,7 +1658,20 @@ describe("regression: JSON read/write failure reporting", () => {
       ).status,
     ).toBe(0);
     const name = `${datePrefix}-live`;
-    expect(runTask(["start", name], env).status).toBe(0);
+    expect(
+      runTask(
+        [
+          "start",
+          name,
+          ...planningConfirmationArgs(
+            tmpDir,
+            path.posix.join(".trellis/tasks", name),
+            { ...process.env, ...env },
+          ),
+        ],
+        env,
+      ).status,
+    ).toBe(0);
 
     const healthy = runTask(["current", "--json"], env);
     expect(healthy.status).toBe(0);
@@ -1678,7 +1731,11 @@ describe("regression: JSON read/write failure reporting", () => {
           env,
         ).status,
       ).toBe(0);
-      expect(runTask(["start", `${datePrefix}-one`], env).status).toBe(0);
+      const one = `${datePrefix}-one`;
+      const two = `${datePrefix}-two`;
+      const oneApproval = planningConfirmationArgs(tmpDir, `.trellis/tasks/${one}`, { ...process.env, ...env });
+      const twoApproval = planningConfirmationArgs(tmpDir, `.trellis/tasks/${two}`, { ...process.env, ...env });
+      expect(runTask(["start", one, ...oneApproval], env).status).toBe(0);
 
       const sessionsDir = path.join(tmpDir, ".trellis", ".runtime", "sessions");
       const sessionFile = path.join(sessionsDir, "json-io-session.json");
@@ -1689,7 +1746,7 @@ describe("regression: JSON read/write failure reporting", () => {
       // needs no directory permission) and truncated it before writing.
       fs.chmodSync(sessionsDir, 0o555);
       try {
-        const r = runTask(["start", `${datePrefix}-two`], env);
+        const r = runTask(["start", two, ...twoApproval], env);
         expect(r.status).not.toBe(0);
         expect(r.stdout + r.stderr).toContain("Failed to set current task");
       } finally {
@@ -2962,7 +3019,7 @@ describe("regression: current-task path normalization", () => {
 
     expect(output).toContain("Session identity not available");
     expect(output).toContain("degraded");
-    expect(output).toContain("conversation context");
+    expect(output).toContain("active-task pointer not persisted");
     expect(output).toContain("TRELLIS_CONTEXT_ID");
 
     // No active-task pointer written
@@ -3003,12 +3060,20 @@ describe("regression: current-task path normalization", () => {
     fs.writeFileSync(taskJsonPath, JSON.stringify(taskJson, null, 2), "utf-8");
 
     const taskScriptPath = path.join(tmpDir, ".trellis", "scripts", "task.py");
-    const output = execSync(
-      `${pythonCmd} ${JSON.stringify(taskScriptPath)} start ${JSON.stringify(".trellis\\\\tasks\\\\issue-106")}`,
+    const approvalArgs = planningConfirmationArgs(
+      tmpDir,
+      ".trellis/tasks/issue-106",
+      sessionEnv(),
+    );
+    const result = spawnSync(
+      pythonCmd,
+      [taskScriptPath, "start", ".trellis\\tasks\\issue-106", ...approvalArgs],
       { cwd: tmpDir, encoding: "utf-8", env: sessionEnv() },
     );
+    expect(result.status, result.stderr + result.stdout).toBe(0);
+    const output = result.stdout;
 
-    expect(output).toContain("planning → in_progress");
+    expect(output).toContain("Session identity not available");
     const after = JSON.parse(fs.readFileSync(taskJsonPath, "utf-8"));
     expect(after.status).toBe("in_progress");
   });
@@ -3299,12 +3364,17 @@ describe("regression: current-task path normalization", () => {
     };
     expect(beforeStart.status).toBe("planning");
 
+    const approvalArgs = planningConfirmationArgs(
+      tmpDir,
+      relTaskDir,
+      sessionEnv({ TRELLIS_CONTEXT_ID: "r7-idem-session" }),
+    );
     // Now run start with the same session — must not error.
     let startStatus = 0;
     let startOutput = "";
     try {
       startOutput = execSync(
-        `${pythonCmd} ${JSON.stringify(taskScriptPath)} start ${JSON.stringify(relTaskDir)}`,
+        `${pythonCmd} ${JSON.stringify(taskScriptPath)} start ${JSON.stringify(relTaskDir)} ${approvalArgs.map((arg) => JSON.stringify(arg)).join(" ")}`,
         {
           cwd: tmpDir,
           encoding: "utf-8",
@@ -3317,7 +3387,7 @@ describe("regression: current-task path normalization", () => {
       startOutput = (e.stdout ?? "") + (e.stderr ?? "");
     }
     expect(startStatus).toBe(0);
-    expect(startOutput).toContain("planning → in_progress");
+    expect(startOutput).toContain("Current task set to:");
 
     // Status flipped to in_progress.
     const afterStart = JSON.parse(fs.readFileSync(taskJsonPath, "utf-8")) as {
@@ -6030,7 +6100,8 @@ print(json.dumps({
     expect(ctx.startsWith("<session-context>")).toBe(true);
     expect(ctx).toContain("Trellis compact SessionStart context");
     expect(ctx).toContain("Task context order for implementation/check");
-    expect(ctx).toContain("design.md if present");
+    expect(ctx).toContain("`design.md` -> `implement.md`");
+    expect(ctx).toContain("legacy in_progress/review");
     expect(ctx).not.toContain("<sub-agent-notice>");
   });
 
@@ -6106,10 +6177,10 @@ print(json.dumps({
       JSON.stringify({ cwd: tmpDir, session_id: "session-a" }),
     );
     expect(rawOutput).toContain("Status: IN_PROGRESS");
-    expect(rawOutput).toContain("Implementation/check context order");
+    expect(rawOutput).toContain("Task context order for implementation/check");
     expect(rawOutput).toContain("prd.md");
-    expect(rawOutput).toContain("design.md if present");
-    expect(rawOutput).toContain("implement.md if present");
+    expect(rawOutput).toContain("legacy in_progress/review");
+    expect(rawOutput).toContain("implement.md");
     expect(rawOutput).not.toContain("if you stay in the main session");
     expect(rawOutput).not.toContain("Next required action: dispatch");
     expect(rawOutput).not.toContain("If there is an active task, ask whether");
@@ -7144,10 +7215,10 @@ print(len(entries))
     it("rejects a placeholder-only implement.jsonl with file, line, and remediation", () => {
       const result = validateWith(placeholderRow, curatedRow);
       expect(result.status).toBe(1);
-      expect(result.stdout).toContain("implement.jsonl:1: Placeholder `_example` row");
       expect(result.stdout).toContain(
-        '{"file": "<path>", "reason": "<why>"}',
+        "implement.jsonl:1: Placeholder `_example` row",
       );
+      expect(result.stdout).toContain('{"file": "<path>", "reason": "<why>"}');
       expect(result.stdout).toContain("Validation failed (1 errors)");
     });
 
@@ -7158,12 +7229,11 @@ print(len(entries))
     });
 
     it("rejects a placeholder row that sits alongside curated entries", () => {
-      const result = validateWith(
-        `${placeholderRow}${curatedRow}`,
-        curatedRow,
-      );
+      const result = validateWith(`${placeholderRow}${curatedRow}`, curatedRow);
       expect(result.status).toBe(1);
-      expect(result.stdout).toContain("implement.jsonl:1: Placeholder `_example` row");
+      expect(result.stdout).toContain(
+        "implement.jsonl:1: Placeholder `_example` row",
+      );
       expect(result.stdout).toContain("Validation failed (1 errors)");
     });
 
@@ -7510,9 +7580,9 @@ print(len(entries))
     );
     expect(match).toBeTruthy();
     const body = match?.[1] ?? "";
-    expect(body).toMatch(/Lightweight: `prd\.md` can be enough/);
+    expect(body).toMatch(/all three concise planning files/);
     expect(body).toMatch(
-      /Complex: finish `prd\.md`, `design\.md`, and `implement\.md`/,
+      /attest and validate/,
     );
     expect(body).toContain(
       "curate `implement.jsonl` and `check.jsonl` as spec/research manifests before start",
@@ -7579,7 +7649,7 @@ print(len(entries))
       );
       expect(content, relativePath).toContain("## PRD Convergence Pass");
       expect(content, relativePath).toContain(
-        "Fold temporary brainstorm sections such as `What I already know`, `Assumptions`, and resolved `Open Questions`",
+        "Consolidate temporary notes into the relevant requirements or supporting research; the destination headings are optional.",
       );
       expect(content, relativePath).toContain(
         "Preserve every file:line anchor, decision, constraint, requirement ID, and acceptance-criteria mapping.",
@@ -8696,7 +8766,16 @@ print(len(entries))
     const taskScriptPath = path.join(tmpDir, ".trellis", "scripts", "task.py");
     const result = spawnSync(
       pythonCmd,
-      [taskScriptPath, "start", ".trellis/tasks/issue-106"],
+      [
+        taskScriptPath,
+        "start",
+        ".trellis/tasks/issue-106",
+        ...planningConfirmationArgs(
+          tmpDir,
+          ".trellis/tasks/issue-106",
+          sessionEnv(),
+        ),
+      ],
       {
         cwd: tmpDir,
         encoding: "utf-8",
@@ -8724,7 +8803,16 @@ print(len(entries))
     const taskScriptPath = path.join(tmpDir, ".trellis", "scripts", "task.py");
     const result = spawnSync(
       pythonCmd,
-      [taskScriptPath, "start", ".trellis/tasks/issue-106"],
+      [
+        taskScriptPath,
+        "start",
+        ".trellis/tasks/issue-106",
+        ...planningConfirmationArgs(
+          tmpDir,
+          ".trellis/tasks/issue-106",
+          sessionEnv(),
+        ),
+      ],
       {
         cwd: tmpDir,
         encoding: "utf-8",
@@ -8745,7 +8833,16 @@ print(len(entries))
     const taskScriptPath = path.join(tmpDir, ".trellis", "scripts", "task.py");
     const result = spawnSync(
       pythonCmd,
-      [taskScriptPath, "start", ".trellis/tasks/issue-106"],
+      [
+        taskScriptPath,
+        "start",
+        ".trellis/tasks/issue-106",
+        ...planningConfirmationArgs(
+          tmpDir,
+          ".trellis/tasks/issue-106",
+          sessionEnv(),
+        ),
+      ],
       {
         cwd: tmpDir,
         encoding: "utf-8",
@@ -10782,8 +10879,10 @@ describe("regression: sub-agent context injection fallback (0.5.3)", () => {
     expect(content).toContain("design.md");
     expect(content).toContain("implement.md");
     expect(content).not.toMatch(/prd\.md`?\s+(?:if present|if exists)/i);
-    expect(content).toMatch(/design\.md[^\n.]*(?:if present|if exists)/i);
-    expect(content).toMatch(/implement\.md[^\n.]*(?:if present|if exists)/i);
+    expect(content).not.toMatch(/design\.md[^\n.]*(?:if present|if exists)/i);
+    expect(content).not.toMatch(/implement\.md[^\n.]*(?:if present|if exists)/i);
+    expect(content).toContain("Every new task requires");
+    expect(content).toContain("replan");
   }
 
   for (const { platform, rel, agent } of CLASS1_MD_AGENT_FILES) {
@@ -12421,7 +12520,12 @@ describe("regression: a linked worktree inherits developer identity", () => {
       ["inherited", "main-dev"],
     ]);
 
-    const started = runTask(worktreeDir, ["start", `${datePrefix}-inherited`]);
+    const inheritedRef = `.trellis/tasks/${datePrefix}-inherited`;
+    const started = runTask(worktreeDir, [
+      "start",
+      `${datePrefix}-inherited`,
+      ...planningConfirmationArgs(worktreeDir, inheritedRef),
+    ]);
     expect(started.status, started.stderr).toBe(0);
 
     // Inheritance is read-only: copying the file in would go stale and shadow

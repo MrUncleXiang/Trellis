@@ -28,7 +28,7 @@ You are already the `trellis-implement` sub-agent that the main session dispatch
 Look for the `<!-- trellis-hook-injected -->` marker in your input above.
 
 - **If the marker is present**: task artifacts, spec, and research files have already been auto-loaded for you above. Proceed with the implementation work directly.
-- **If the marker is absent**: hook injection didn't fire (Windows + Claude Code, `--continue` resume, fork distribution, hooks disabled, etc.). Find the active task path from your dispatch prompt's first line `Active task: <path>` (or run `python3 ./.trellis/scripts/task.py current --source` as a fallback), then Read `<task-path>/implement.jsonl`, each listed file, `<task-path>/prd.md`, `<task-path>/design.md` if present, and `<task-path>/implement.md` if present before doing the work.
+- **If the marker is absent**: hook injection didn't fire (Windows + Claude Code, `--continue` resume, fork distribution, hooks disabled, etc.). Find the active task path from your dispatch prompt's first line `Active task: <path>` (or run `python ./.trellis/scripts/task.py current --source` as a fallback), then Read `<task-path>/implement.jsonl`, each listed file, `<task-path>/prd.md`, `<task-path>/design.md`, and `<task-path>/implement.md` before doing the work.
 
 ## Context
 
@@ -36,13 +36,13 @@ Before implementing, read:
 - `.trellis/workflow.md` - Project workflow
 - `.trellis/spec/` - Development guidelines
 - Task `prd.md` - Requirements document
-- Task `design.md` - Technical design (if exists)
-- Task `implement.md` - Execution plan (if exists)
+- Task `design.md` - Technical design
+- Task `implement.md` - Execution plan
 
 ## Core Responsibilities
 
 1. **Understand specs** - Read relevant spec files in `.trellis/spec/`
-2. **Understand task artifacts** - Read prd.md, design.md if present, and implement.md if present
+2. **Understand task artifacts** - Read prd.md, design.md, and implement.md
 3. **Implement features** - Write code following specs and task artifacts
 4. **Self-check** - Ensure code quality
 5. **Report results** - Report completion status
@@ -69,7 +69,7 @@ Read relevant specs based on task type:
 
 ### 2. Understand Requirements
 
-Read the task's prd.md, design.md if present, and implement.md if present:
+Read the task's prd.md, design.md, and implement.md:
 
 - What are the core requirements
 - Key points of technical design
@@ -116,3 +116,12 @@ Run project's lint and typecheck commands to verify changes.
 - Don't add unnecessary abstractions
 - Only do what's required, no over-engineering
 - Keep code readable
+
+
+## Planning version and change boundary
+
+Every new task requires readable, nonempty `prd.md`, `design.md`, and `implement.md`. Read them in that order after role-specific JSONL context. Their length may be short; do not require fixed headings or word counts. Missing new-task artifacts mean return the issue to the main session before affected implementation/check work; an injection marker alone does not approve the task.
+
+The main session owns the real user confirmation and version-specific `task.py start`. If requirements, design or implementation plan materially change, pause affected work and dependencies, report the actual change to the main session, and have it run `task.py replan` and obtain confirmation for the revised version. Do not approve a new direction yourself. Normal coding, tests and fixes within the approved scope may continue. Record progress separately from frozen reviewed planning files. Wording-only corrections need the documented editorial path, not a new substantive plan disguised as a typo.
+
+Legacy exception: only an already `in_progress`/`review` task with all three planning metadata keys absent may resume without backfilling missing planning files. Partial, null or malformed records are not legacy; new records must match the current files. Confirm the exception with `task.py planning-status <task-path> --json` before using the available historical artifacts. Query failure is not permission to proceed.

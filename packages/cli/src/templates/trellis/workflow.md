@@ -39,7 +39,7 @@ python3 ./.trellis/scripts/get_context.py --mode packages   # list packages / la
 
 ### Task System
 
-Every task has its own directory under `.trellis/tasks/{MM-DD-name}/` holding `task.json`, `prd.md`, optional `design.md`, optional `implement.md`, optional `research/`, and context manifests (`implement.jsonl`, `check.jsonl`) for sub-agent-capable platforms.
+Every task has its own directory under `.trellis/tasks/{MM-DD-name}/` holding `task.json`, `prd.md`, `design.md`, `implement.md`, optional `research/`, and context manifests (`implement.jsonl`, `check.jsonl`) for sub-agent-capable platforms.
 
 ```bash
 # Task lifecycle
@@ -161,10 +161,10 @@ Phase 3: Finish  → verify, update spec, commit, and wrap up
 ### Planning Artifacts
 
 - `prd.md` — requirements, constraints, and acceptance criteria. Do not put technical design or execution checklists here.
-- `design.md` — technical design for complex tasks: boundaries, contracts, data flow, tradeoffs, compatibility, rollout / rollback shape.
-- `implement.md` — execution plan for complex tasks: ordered checklist, validation commands, review gates, and rollback points.
+- `design.md` — technical design for every new task: boundaries, contracts, data flow, tradeoffs, compatibility, rollout / rollback shape.
+- `implement.md` — execution plan for every new task: ordered checklist, validation commands, review gates, and rollback points.
 - `implement.jsonl` / `check.jsonl` — spec and research manifests for sub-agent context. They do not replace `implement.md`.
-- Lightweight tasks may be PRD-only. Complex tasks must have `prd.md`, `design.md`, and `implement.md` before `task.py start`.
+- Every new task must have concise `prd.md`, `design.md`, and `implement.md` before first `task.py start`; no fixed sections or word counts are required.
 
 ### Parent / Child Task Trees
 
@@ -192,7 +192,7 @@ Preserve existing task fields and artifacts. If the correct status cannot be det
 
 ### Phase 1: Plan
 - 1.0 Create task `[required · once]` (only after task-creation consent)
-- 1.1 Requirement exploration `[required · repeatable]` (`prd.md`; complex tasks also need `design.md` + `implement.md`)
+- 1.1 Requirement exploration `[required · repeatable]` (`prd.md`; all new tasks need `design.md` + `implement.md`)
 - 1.2 Research `[optional · repeatable]`
 - 1.3 Configure context `[required · once]` — Claude Code, Cursor, OpenCode, Codex, Kiro, Gemini, Qoder, CodeBuddy, Copilot, Droid, Pi, Oh My Pi, ZCode, Snow, Reasonix, Grok, Kimi Code (sub-agent-dispatch platforms only; inline platforms skip)
 - 1.4 Activate task `[required · once]` (review gate, then `task.py start`; status → in_progress)
@@ -202,7 +202,7 @@ Preserve existing task fields and artifacts. If the correct status cannot be det
 
 [workflow-state:planning]
 Load `trellis-brainstorm`; stay in planning.
-Lightweight: `prd.md` can be enough. Complex: finish `prd.md`, `design.md`, and `implement.md`; ask for review before `task.py start`.
+Finish all three concise planning files, attest and validate, show the reviewed version, and obtain confirmation before version-specific `task.py start`.
 Multi-deliverable scope: consider a parent task plus independently verifiable child tasks; dependencies must be written in child artifacts, not implied by tree position.
 Sub-agent mode: curate `implement.jsonl` and `check.jsonl` as spec/research manifests before start.
 Main session: save decision-relevant external evidence promptly and link it in `prd.md` / `## Research`; explain no research or applicable reuse. Research workers stay in their assigned research scope.
@@ -216,7 +216,7 @@ Main session: save decision-relevant external evidence promptly and link it in `
 
 [workflow-state:planning-inline]
 Load `trellis-brainstorm`; stay in planning.
-Lightweight: `prd.md` can be enough. Complex: finish `prd.md`, `design.md`, and `implement.md`; ask for review before `task.py start`.
+Finish all three concise planning files, attest and validate, show the reviewed version, and obtain confirmation before version-specific `task.py start`.
 Multi-deliverable scope: consider a parent task plus independently verifiable child tasks; dependencies must be written in child artifacts, not implied by tree position.
 Inline mode: skip jsonl curation; Phase 2 reads artifacts/specs via `trellis-before-dev`.
 Main session: save decision-relevant external evidence promptly and link it in `prd.md` / `## Research`; explain no research or applicable reuse. Research workers stay in their assigned research scope.
@@ -239,7 +239,7 @@ Sub-agent dispatch protocol applies to all platforms and all sub-agents, includi
 Tools: `trellis-implement` / `trellis-research` are sub-agent types only (Task/Agent tool, NOT Skill; there is no skill by these names). `trellis-update-spec` is a skill. `trellis-check` exists as both; prefer the Agent form when verifying after code changes.
 Flow: `trellis-implement` -> `trellis-check` -> `trellis-update-spec` -> commit (Phase 3.4) -> `/trellis:finish-work`.
 Main-session default: dispatch implement/check sub-agents. Sub-agent self-exemption: if already running as `trellis-implement`, do NOT spawn another `trellis-implement` or `trellis-check`; if already running as `trellis-check`, do NOT spawn another `trellis-check` or `trellis-implement`. Dispatch is main session only.
-Dispatch prompt starts with `Active task: <task path from task.py current>`. Read context: jsonl entries -> `prd.md` -> `design.md if present` -> `implement.md if present`.
+Dispatch prompt starts with `Active task: <task path from task.py current>`. Read context: jsonl entries -> `prd.md` -> `design.md` -> `implement.md`.
 Main session: save and integrate decision-changing research before adopting it; return to planning for changed agreed results. Implement/check workers report source, finding and impact; this reminder does not authorize rewriting task planning. Research workers save only assigned research and return its path.
 [/workflow-state:in_progress]
 
@@ -251,7 +251,7 @@ Main session: save and integrate decision-changing research before adopting it; 
 [workflow-state:in_progress-inline]
 Flow: `trellis-before-dev` -> edit -> `trellis-check` -> validation -> `trellis-update-spec` -> commit (Phase 3.4) -> `/trellis:finish-work`.
 Do not dispatch implement/check sub-agents in inline mode.
-Read context: `prd.md` -> `design.md if present` -> `implement.md if present`, plus relevant spec/research loaded by skills.
+Read context: `prd.md` -> `design.md` -> `implement.md`, plus relevant spec/research loaded by skills.
 Main session: save and integrate decision-changing research before adopting it; return to planning for changed agreed results. Implement/check workers report source, finding and impact; this reminder does not authorize rewriting task planning. Research workers save only assigned research and return its path.
 [/workflow-state:in_progress-inline]
 
@@ -281,7 +281,7 @@ Code committed. Run `/trellis:finish-work`; if dirty, return to Phase 3.4 first.
 2. Run steps in order inside each Phase; `[required]` steps can't be skipped
 3. Phases can roll back (e.g., Execute reveals a prd defect → return to Plan to fix, then re-enter Execute)
 4. Steps tagged `[once]` are skipped if the output already exists; don't re-run
-5. Artifact presence informs the next step; missing `design.md` / `implement.md` is valid for lightweight tasks and incomplete planning for complex tasks.
+5. Artifact presence informs the next step; missing `design.md` / `implement.md` means incomplete planning for any new task; only already-started legacy tasks without planning records have a resume exception.
 
 ### Active Task Routing
 
@@ -306,7 +306,7 @@ When a user request matches one of these intents inside an active task, route fi
 ### Guardrails
 
 - Task creation approval is not implementation approval; implementation waits for `task.py start` after artifact review.
-- PRD-only is valid for lightweight tasks; complex tasks need `design.md` + `implement.md`.
+- Every new task needs concise `prd.md`, `design.md`, and `implement.md`; none may be omitted because a task is small.
 - Planning must be persisted to task artifacts; checks must run before reporting completion.
 
 ### Loading Step Detail
@@ -353,7 +353,7 @@ The brainstorm skill will guide you to:
 - Update `prd.md` immediately after each user answer
 - Split large scopes into a parent task plus child tasks when the deliverables can be verified independently
 - Keep `prd.md` focused on requirements and acceptance criteria
-- For complex tasks, produce `design.md` and `implement.md` before implementation starts
+- For every new task, produce `design.md` and `implement.md` before implementation starts
 
 When considering a parent/child split:
 - Use a parent task when one request contains several independently verifiable deliverables.
@@ -424,7 +424,7 @@ Curate `implement.jsonl` and `check.jsonl` so the Phase 2 sub-agents get the rig
 
 Select only the decision-relevant records each role must read; verify their paths and applicability. A file under `research/` alone does not prove it reached a worker.
 
-These manifests do not replace `implement.md`. `implement.md` is the human-readable execution plan for a complex task; jsonl files only list context files to inject or load.
+These manifests do not replace `implement.md`. `implement.md` is the human-readable execution plan for every task; jsonl files only list context files to inject or load.
 
 **How to discover relevant specs**:
 
@@ -461,13 +461,16 @@ Skip this step. Context is loaded directly by the `trellis-before-dev` skill in 
 
 Before the existing start review, check `prd.md` / `## Research`: required evidence is saved or reusable, citations are locatable, facts/inferences/unknowns are distinguishable, and result-affecting unknowns have been handled. Explain why research is unnecessary when applicable. This is a review requirement, not an additional script gate.
 
-After artifact review, flip the task status to `in_progress`:
+Check all three planning files, attest and validate, then show the reviewed version to the user and append the summary and real response/source to `research/planning-review-log.md`. After confirmation, record this specific version and flip to `in_progress`:
 
 ```bash
-python3 ./.trellis/scripts/task.py start <task-dir>
+python3 ./.trellis/scripts/task.py attest <task-dir> --note "reviewed scope, solution and tests"
+python3 ./.trellis/scripts/task.py validate <task-dir>
+# Show the full reviewId and obtain the user's explicit response before start.
+python3 ./.trellis/scripts/task.py start <task-dir> --review <reviewId> --approval-note "actual user response" --approval-source "locatable conversation source"
 ```
 
-For lightweight tasks, `prd.md` can be enough. For complex tasks, `prd.md`, `design.md`, and `implement.md` must exist and be reviewed before start. On sub-agent-dispatch platforms, `implement.jsonl` and `check.jsonl` must both have real curated entries before start. Runtime consumers tolerate missing or seed-only manifests for compatibility, but that tolerance is not a planning-ready state.
+For every new task, all three concise files must exist and be reviewed before first start. On sub-agent-dispatch platforms, `implement.jsonl` and `check.jsonl` must both have real curated entries before start. Runtime consumers tolerate missing or seed-only manifests for compatibility, but that tolerance is not a planning-ready state.
 
 After this command succeeds, the breadcrumb auto-switches to `[workflow-state:in_progress]`, and the rest of Phase 2 / 3 follows.
 
@@ -481,8 +484,8 @@ If `task.py start` errors with a session-identity message (no context key from h
 | User confirms task should enter implementation | ✅ |
 | `task.py start` has been run (status = in_progress) | ✅ |
 | Decision-relevant evidence is saved and linked, or no research / reuse is explained; critical unknowns are handled | ✅ |
-| `design.md` exists (complex tasks) | ✅ |
-| `implement.md` exists (complex tasks) | ✅ |
+| `design.md` exists (all new tasks) | ✅ |
+| `implement.md` exists (all new tasks) | ✅ |
 
 [Claude Code, Cursor, OpenCode, codex-sub-agent, Kiro, Gemini, Qoder, CodeBuddy, Copilot, Droid, Pi, Oh My Pi, ZCode, Snow, Reasonix, Trae, Grok, Kimi Code]
 
@@ -498,6 +501,8 @@ Goal: turn reviewed planning artifacts into code that passes quality checks.
 
 #### 2.1 Implement `[required · repeatable]`
 
+Before this step, if requirements/design/plan materially changed, pause affected work, run `task.py replan`, update the three planning files and repeat 1.4 confirmation. Normal coding, tests and fixes within the approved requirements continue. Record progress separately from the reviewed plan.
+
 Before implementation, actually read the decision-relevant research and its limits, through the role manifest or task links; merely finding a path is not enough. Before checking, compare key decisions and acceptance claims with their cited evidence and unresolved issues. Implementation/check workers report new decision-changing evidence (source, finding, impact) to the main session; a general reminder does not authorize rewriting task planning. The main session saves and integrates it, or assigns follow-up research, before adopting it. Preserve each worker's explicitly assigned code/test write scope.
 
 [Claude Code, Cursor, OpenCode, codex-sub-agent, CodeBuddy, Droid, Pi, ZCode, Snow, Oh My Pi]
@@ -510,7 +515,7 @@ Spawn the implement sub-agent:
 
 The platform hook/plugin auto-handles:
 - Reads `implement.jsonl` and injects referenced spec/research files into the agent prompt
-- Injects `prd.md`, `design.md` if present, and `implement.md` if present
+- Injects `prd.md`, `design.md`, and `implement.md`
 - For Codex, `SubagentStart` supplies native context injection; the agent profile keeps child-side loading as the fallback
 
 [/Claude Code, Cursor, OpenCode, codex-sub-agent, CodeBuddy, Droid, Pi, ZCode, Snow, Oh My Pi]
@@ -524,7 +529,7 @@ Spawn the implement sub-agent:
 - **Dispatch prompt guard**: The prompt MUST start with `Active task: <task path>`, then explicitly say the spawned agent is already `trellis-implement` and must implement directly without spawning another `trellis-implement` / `trellis-check`.
 
 The pull-based sub-agent definition auto-handles the context load requirement:
-- Resolves the active task with `task.py current --source`, then reads `prd.md`, `design.md` if present, and `implement.md` if present
+- Resolves the active task with `task.py current --source`, then reads `prd.md`, `design.md`, and `implement.md`
 - Reads `implement.jsonl` and requires the agent to load each referenced spec/research file before coding
 
 [/Gemini, Qoder, Copilot, Reasonix, Trae, Grok, Kimi Code]
@@ -539,14 +544,14 @@ Spawn the implement sub-agent:
 
 The platform prelude auto-handles the context load requirement:
 - Reads `implement.jsonl` and injects referenced spec/research files into the agent prompt
-- Injects `prd.md`, `design.md` if present, and `implement.md` if present
+- Injects `prd.md`, `design.md`, and `implement.md`
 
 [/Kiro]
 
 [codex-inline, Kilo, Antigravity, Devin, DeepSeek Harness]
 
 1. Load the `trellis-before-dev` skill to read project guidelines
-2. Read `{TASK_DIR}/prd.md`, then `design.md` if present, then `implement.md` if present
+2. Read `{TASK_DIR}/prd.md`, then `design.md`, then `implement.md`
 3. Consult materials under `{TASK_DIR}/research/`
 4. Implement the code per reviewed artifacts
 5. Run project lint and type-check
@@ -554,6 +559,8 @@ The platform prelude auto-handles the context load requirement:
 [/codex-inline, Kilo, Antigravity, Devin, DeepSeek Harness]
 
 #### 2.2 Quality check `[required · repeatable]`
+
+Before this step, if requirements/design/plan materially changed, pause affected work, run `task.py replan`, update the three planning files and repeat 1.4 confirmation. Normal coding, tests and fixes within the approved requirements continue. Record progress separately from the reviewed plan.
 
 Actually read the check-role research; review key decisions against locatable sources, versions/limits and unresolved issues. Missing or stale evidence that can change the agreed result returns to planning; do not pass merely because a file exists.
 
@@ -567,7 +574,7 @@ Spawn the check sub-agent:
 
 The check agent's job:
 - Review code changes against specs
-- Review code changes against `prd.md`, `design.md` if present, and `implement.md` if present
+- Review code changes against `prd.md`, `design.md`, and `implement.md`
 - Auto-fix issues it finds
 - Run lint and typecheck to verify
 
@@ -684,7 +691,7 @@ This section is for developers who want to modify the Trellis workflow itself. A
 
 Edit the corresponding step's walkthrough body in the Phase 1 / 2 / 3 sections above. Critical invariants:
 - No active task must triage first and ask for task-creation consent before creating a Trellis task.
-- Planning must distinguish lightweight PRD-only tasks from complex tasks that require `prd.md`, `design.md`, and `implement.md` before start.
+- Planning requires concise `prd.md`, `design.md`, and `implement.md` for every new task; complexity controls detail, not file count.
 - Every required execution path must keep the Phase 3.4 commit reminder reachable before `/trellis:finish-work`.
 
 All tag blocks live in the `## Phase Index` section above, immediately after each phase summary:
@@ -740,3 +747,21 @@ For the workflow state machine's runtime contract, the locations of all status w
 
 - `.trellis/spec/cli/backend/workflow-state-contract.md` — runtime contract + writer table + test invariants
 - `.trellis/scripts/inject-workflow-state.py` — actual parser (reads workflow.md only, no embedded text)
+
+
+## Reviewed planning version and material changes
+
+For every new task, prepare readable, nonempty `prd.md` (requirements), `design.md` (solution), and `implement.md` (implementation and verification order). Keep each concise; the topics above are guidance, not required headings or word counts. Read all three together and resolve contradictions. File presence or a successful script cannot assess meaning or prove user identity.
+
+Before first start or start after replanning:
+
+1. Check the three files and decision-relevant research, then run `task.py attest <task-dir> --note "what was reviewed"`.
+2. Run `task.py validate <task-dir>`. A waiting version may validate successfully but is still not approved.
+3. Show the user the complete `reviewId`, explanation, and a plain-language summary of scope, solution, verification and limits. Append the summary, original three fingerprints, changes and real response/source to `<task-dir>/research/planning-review-log.md`; do not overwrite older rounds or invent message identifiers. Preserve the old review log before clearing records with replan; if saving fails, address that first. Full historical text requires version control; fingerprints cannot restore overwritten text.
+4. Only after the user's explicit response to that version, recheck and run `task.py start <task-dir> --review <reviewId> --approval-note "actual response" --approval-source "locatable conversation source"`. Ordinary attest always creates a new version and clears prior approval; recomputing hashes cannot grant permission.
+
+If requirements, design or the implementation plan materially change, including a change agreed in conversation, pause affected work and dispatched dependencies. Run `task.py replan <task-dir> --reason "what changed" --affected "work to pause" --independent "work that does not depend on the change, or none"`, update the three files and repeat review/confirmation. State why any continuing work is independent; that field does not grant new authorization. Keep normal coding, testing and fixes within the approved requirements moving. Record normal progress separately without checking off the frozen reviewed plan.
+
+For a verified wording-only correction after start, use `task.py attest <task-dir> --editorial --note "specific correction; behavior and scope unchanged"`; preserve the reviewed version and confirmation. If the user has already responded but first start is not recorded, add `--editorial-note "specific correction"` to that same version-specific start. Inspect the actual diff; neither command can determine whether a purported wording correction changes meaning.
+
+Only `in_progress`/`review` tasks with all three planning metadata keys absent may resume through the legacy path without backfilling the files. Partial, null or malformed records are not legacy. Completed tasks cannot start again. Same-task writes are serialized by the main session; concurrency and exactly-once hooks are not promised. Session hints query `task.py planning-status <task-dir> --json`; unavailable checks never imply permission to start. New records must match the current files on resume. Archive planning problems warn while existing archive checks remain in force.

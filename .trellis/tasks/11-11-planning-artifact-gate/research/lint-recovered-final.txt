@@ -1,0 +1,12 @@
+
+> @ lint C:\Users\PXWD\.codex\worktrees\planning-artifact-gate\Trellis
+> pnpm --filter @mindfoldhq/trellis-core lint && pnpm --filter @mindfoldhq/trellis lint
+
+
+> @mindfoldhq/trellis-core@0.6.17 lint C:\Users\PXWD\.codex\worktrees\planning-artifact-gate\Trellis\packages\core
+> eslint src/ test/
+
+
+> @mindfoldhq/trellis@0.6.17 lint C:\Users\PXWD\.codex\worktrees\planning-artifact-gate\Trellis\packages\cli
+> eslint src/ test/
+

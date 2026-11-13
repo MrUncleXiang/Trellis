@@ -1,0 +1,27 @@
+
+> @ build C:\Users\PXWD\.codex\worktrees\planning-artifact-gate\Trellis
+> pnpm --filter @mindfoldhq/trellis-core build && pnpm --filter @mindfoldhq/trellis build
+
+
+> @mindfoldhq/trellis-core@0.6.17 build C:\Users\PXWD\.codex\worktrees\planning-artifact-gate\Trellis\packages\core
+> pnpm run clean && tsc
+
+
+> @mindfoldhq/trellis-core@0.6.17 clean C:\Users\PXWD\.codex\worktrees\planning-artifact-gate\Trellis\packages\core
+> node -e "require('node:fs').rmSync('dist', { recursive: true, force: true })"
+
+
+> @mindfoldhq/trellis@0.6.17 build C:\Users\PXWD\.codex\worktrees\planning-artifact-gate\Trellis\packages\cli
+> pnpm run clean && tsc && pnpm run copy-templates
+
+
+> @mindfoldhq/trellis@0.6.17 clean C:\Users\PXWD\.codex\worktrees\planning-artifact-gate\Trellis\packages\cli
+> node -e "require('node:fs').rmSync('dist', { recursive: true, force: true })"
+
+
+> @mindfoldhq/trellis@0.6.17 copy-templates C:\Users\PXWD\.codex\worktrees\planning-artifact-gate\Trellis\packages\cli
+> node scripts/copy-templates.js
+
+Copied src/templates/ to dist/templates/
+Copied src/migrations/manifests/ to dist/migrations/manifests/
+Template copy complete.

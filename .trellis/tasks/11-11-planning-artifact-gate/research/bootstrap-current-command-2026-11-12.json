@@ -1,0 +1,14 @@
+{
+  "date": "2026-11-12T09:06:13.403820+00:00",
+  "command": [
+    "python",
+    ".trellis/scripts/task.py",
+    "--help"
+  ],
+  "exit": 0,
+  "stdout": "usage: task.py [-h]\n               {create,add-context,validate,list-context,start,current,finish,set-branch,set-base-branch,set-scope,set-meta,rename,archive,list,add-subtask,remove-subtask,list-archive} ...\n\nTask Management Script\n\npositional arguments:\n  {create,add-context,validate,list-context,start,current,finish,set-branch,set-base-branch,set-scope,set-meta,rename,archive,list,add-subtask,remove-subtask,list-archive}\n                        Commands\n    create              Create new task\n    add-context         Add context entry\n    validate            Validate context files\n    list-context        List context entries\n    start               Set active task\n    current             Show active task\n    finish              Clear active task\n    set-branch          Set git branch\n    set-base-branch     Set PR target branch\n    set-scope           Set scope\n    set-meta            Set/overwrite a task metadata key\n    rename              Rename task and its references\n    archive             Archive task\n    list                List tasks\n    add-subtask         Link child task to parent\n    remove-subtask      Unlink child task from parent\n    list-archive        List archived tasks\n\noptions:\n  -h, --help            show this help message and exit\n",
+  "stderr": "",
+  "attestAvailable": false,
+  "planningModuleAvailable": false,
+  "finding": "A does not yet supply its new commands; its own first approval must bind a manual review manifest before using the existing start command. No command has been fabricated or executed to start implementation."
+}

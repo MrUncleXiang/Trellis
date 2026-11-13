@@ -39,8 +39,8 @@ function extractActiveTaskHint(prompt) {
  * Read order (mirrors Python `get_implement_context`):
  *   1. All files in implement.jsonl (spec/research manifests)
  *   2. prd.md (requirements)
- *   3. design.md if present (technical design)
- *   4. implement.md if present (execution plan)
+ *   3. design.md (required for new tasks) (technical design)
+ *   4. implement.md (required for new tasks) (execution plan)
  * All blocks share one total budget (issue #441).
  */
 function getImplementContext(ctx, taskDir) {
@@ -234,13 +234,14 @@ ${originalPrompt}
 ## Workflow
 
 1. **Understand specs** - All dev specs are injected above
-2. **Understand task artifacts** - Read requirements, technical design if present, and execution plan if present
+2. **Understand task artifacts** - Read prd.md, design.md and implement.md for every new task; only already-started legacy tasks with no planning records may use the available historical artifacts
 3. **Implement feature** - Follow specs and task artifacts
 4. **Self-check** - Ensure code quality
 
 ## Important Constraints
 
 - Do NOT execute git commit
+- Every new task requires readable prd.md, design.md and implement.md. Material requirements, design or plan changes must return to the main session for replan and renewed version-specific user confirmation. Ordinary implementation fixes continue; record progress separately from the reviewed plan.
 - Follow all dev specs injected above
 - Report list of modified/created files when done`,
 
@@ -264,7 +265,7 @@ ${originalPrompt}
 ## Workflow
 
 1. **Review changes** - Run \`git diff --name-only\` to see all changed files
-2. **Verify task artifacts** - Check prd.md and, when present, design.md / implement.md
+2. **Verify task artifacts** - Check prd.md, design.md and implement.md together for every new task; only already-started legacy tasks with no planning records may use the available historical artifacts
 3. **Spec sync** - Analyze whether changes introduce new patterns, contracts, or conventions
    - If new pattern/convention found: read target spec file → update it → update index.md if needed
    - If infra/cross-layer change: follow the 7-section mandatory template from update-spec.md
@@ -274,12 +275,13 @@ ${originalPrompt}
 
 ## Important Constraints
 
+- Every new task requires readable prd.md, design.md and implement.md. Material requirements, design or plan changes must return to the main session for replan and renewed version-specific user confirmation. Ordinary implementation fixes continue; record progress separately from the reviewed plan.
 - You MAY update spec files when gaps are detected (use update-spec.md as guide)
 - MUST read the target spec file BEFORE editing (avoid duplicating existing content)
 - Do NOT update specs for trivial changes (typos, formatting, obvious fixes)
 - If critical CODE issues found, report them clearly (fix specs, not code)
 - Verify all acceptance criteria in prd.md are met
-- Verify design.md and implement.md constraints when those files are present` :
+- Verify design.md and implement.md constraints for every new task; observe the narrowly defined legacy resume exception` :
       `<!-- trellis-hook-injected -->
 # Check Agent Task
 
@@ -306,6 +308,7 @@ ${originalPrompt}
 
 ## Important Constraints
 
+- Every new task requires readable prd.md, design.md and implement.md. Material requirements, design or plan changes must return to the main session for replan and renewed version-specific user confirmation. Ordinary implementation fixes continue; record progress separately from the reviewed plan.
 - Fix issues yourself, don't just report
 - Must execute complete checklist`,
 

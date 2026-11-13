@@ -1,0 +1,109 @@
+
+  GitNexus Impact (1.6.12)
+{"level":50,"time":1794482501770,"name":"gitnexus","msg":"GitNexus: ⚠️ Index for \"Trellis-B-push\" was built at D:\\zcx\\Trellis; your cwd (C:\\Users\\PXWD\\.codex\\worktrees\\planning-artifact-gate\\Trellis) is a sibling clone that is 4 commits ahead of the indexed commit. Results may be stale or incorrect — re-run `gitnexus analyze` to refresh the index."}
+{"level":40,"time":1794482501927,"name":"gitnexus","msg":"GitNexus: FTS extension unavailable; continuing without FTS features. load-only policy (no install attempted); LOAD fts failed: Binder exception: Extension: fts is an official extension and has not been installed. You can install it by: install fts."}
+{
+  "target": {
+    "id": "Function:packages/cli/src/configurators/shared.ts:buildPullBasedPrelude",
+    "name": "buildPullBasedPrelude",
+    "type": "Function",
+    "filePath": "packages/cli/src/configurators/shared.ts"
+  },
+  "direction": "upstream",
+  "impactedCount": 11,
+  "risk": "CRITICAL",
+  "riskSharedAxes": "LOW",
+  "riskScale": {
+    "comparableAcrossKinds": true,
+    "unusedAxes": []
+  },
+  "epistemic": "exact",
+  "summary": {
+    "direct": 2,
+    "processes_affected": 8,
+    "modules_affected": 1
+  },
+  "byDepthCounts": {
+    "1": 2,
+    "2": 2,
+    "3": 7
+  },
+  "affected_processes": [
+    {
+      "name": "collectKimiTemplates",
+      "type": "Function",
+      "filePath": "packages/cli/src/configurators/kimi.ts",
+      "affected_process_count": 3,
+      "total_hits": 8,
+      "earliest_broken_step": 2
+    },
+    {
+      "name": "collectCopilotTemplates",
+      "type": "Function",
+      "filePath": "packages/cli/src/configurators/copilot.ts",
+      "affected_process_count": 7,
+      "total_hits": 7,
+      "earliest_broken_step": 1
+    },
+    {
+      "name": "collectGeminiTemplates",
+      "type": "Function",
+      "filePath": "packages/cli/src/configurators/gemini.ts",
+      "affected_process_count": 7,
+      "total_hits": 7,
+      "earliest_broken_step": 1
+    },
+    {
+      "name": "collectGrokTemplates",
+      "type": "Function",
+      "filePath": "packages/cli/src/configurators/grok.ts",
+      "affected_process_count": 7,
+      "total_hits": 7,
+      "earliest_broken_step": 1
+    },
+    {
+      "name": "collectPiTemplates",
+      "type": "Function",
+      "filePath": "packages/cli/src/configurators/pi.ts",
+      "affected_process_count": 7,
+      "total_hits": 7,
+      "earliest_broken_step": 1
+    },
+    {
+      "name": "collectQoderTemplates",
+      "type": "Function",
+      "filePath": "packages/cli/src/configurators/qoder.ts",
+      "affected_process_count": 7,
+      "total_hits": 7,
+      "earliest_broken_step": 1
+    },
+    {
+      "name": "collectTraeTemplates",
+      "type": "Function",
+      "filePath": "packages/cli/src/configurators/trae.ts",
+      "affected_process_count": 7,
+      "total_hits": 7,
+      "earliest_broken_step": 1
+    },
+    {
+      "name": "applyPullBasedPreludeToml",
+      "type": "Function",
+      "filePath": "packages/cli/src/configurators/shared.ts",
+      "affected_process_count": 1,
+      "total_hits": 2,
+      "earliest_broken_step": 1
+    }
+  ],
+  "affected_modules": [
+    {
+      "name": "Configurators",
+      "hits": 11,
+      "impact": "direct"
+    }
+  ],
+  "staleness": {
+    "status": "behind",
+    "commitsBehind": 4,
+    "hint": "⚠️ Index is 4 commits behind HEAD. Run analyze tool to update."
+  }
+}

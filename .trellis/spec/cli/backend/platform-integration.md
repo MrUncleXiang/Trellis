@@ -563,8 +563,8 @@ The native hook path calls this resolver with `platform="codex"`,
   `hookSpecificOutput.hookEventName="SubagentStart"` and
   `hookSpecificOutput.additionalContext` beginning with
   `<!-- trellis-hook-injected -->`.
-- Implement/check context order is role JSONL, `prd.md`, optional `design.md`,
-  then optional `implement.md`. Research receives the resolved `Active task:`
+- Implement/check context order is role JSONL, `prd.md`, `design.md`,
+  then `implement.md` for every new task. Only verified legacy in-progress/review tasks with all planning metadata keys absent may use available historical artifacts. Research receives the resolved `Active task:`
   path and research-only context; it must not read implement/check manifests.
 - Codex may truncate model-visible `SubagentStart.additionalContext`, retain a
   head/tail preview, and add `Full hook output saved to: <path>`. Custom role
@@ -1223,7 +1223,7 @@ Platform can expose hook-equivalent events and custom tools through a project-lo
 
 | Platform | Extension surface                                                  | Context delivery                                                                                                                                                                                                                                                                                                                                                                                  |
 | -------- | ------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Pi Agent | `.pi/extensions/trellis/index.ts` events + `trellis_subagent` tool | extension builds full prompt/context from `.pi/agents/*.md`, `prd.md`, `design.md` if present, `implement.md` if present, and JSONL-referenced files via `buildContext()`; preserves startup/full task context through `before_agent_start.systemPrompt` and persists compact workflow/session context through a hidden `before_agent_start.message` custom message; agent definitions also receive the pull-based prelude as a fallback |
+| Pi Agent | `.pi/extensions/trellis/index.ts` events + `trellis_subagent` tool | extension builds full prompt/context from `.pi/agents/*.md`, `prd.md`, `design.md`, `implement.md`, and JSONL-referenced files via `buildContext()`; preserves startup/full task context through `before_agent_start.systemPrompt` and persists compact workflow/session context through a hidden `before_agent_start.message` custom message; agent definitions also receive the pull-based prelude as a fallback |
 | Oh My Pi | `.omp/extensions/trellis/index.ts` events                          | extension resolves a session-scoped context key from the OMP runtime, injects session/task context through extension events, and keeps JSONL-referenced files jailed inside the project root                                                                                                                                                                                                       |
 
 See **"Class-3 injection points (Pi extension)"** and **"Cross-platform consistency invariant"** below for the runtime contract details.
@@ -1368,18 +1368,18 @@ staff confirmations, Claude Code canary test) lives in the archived task:
 Task planning is artifact-driven:
 
 - `prd.md` is created by `task.py create` and stores requirements, constraints, and acceptance criteria.
-- `design.md` is required for complex tasks and stores technical design, boundaries, data flow, contracts, and tradeoffs.
-- `implement.md` is required for complex tasks and stores execution order, checklist, validation commands, and rollback points.
+- `design.md` is required for every new task and stores technical design, boundaries, data flow, contracts, and tradeoffs.
+- `implement.md` is required for every new task and stores execution order, checklist, validation commands, and rollback points.
 - `implement.jsonl` / `check.jsonl` are spec and research manifests for implement/check context. They do not replace `implement.md`.
 
-Lightweight tasks may be PRD-only. Complex tasks must have `prd.md`, `design.md`, and `implement.md` before `task.py start` moves the task into implementation.
+Every new task needs all three concise planning files. Every new task must have `prd.md`, `design.md`, and `implement.md` before `task.py start` moves the task into implementation.
 
 ### Lifecycle
 
 1. **Create** — `task.py create` writes `task.json` with `status = planning`, creates the default `prd.md`, and creates empty `implement.jsonl` / `check.jsonl` when a sub-agent-capable platform is detected. Curation instructions are printed to the console, never written into the files.
-2. **Plan** — AI updates `prd.md`. If the task is complex, AI also writes `design.md` and `implement.md`; if sub-agent/spec context is needed, AI curates jsonl entries.
+2. **Plan** — AI writes concise `prd.md`, `design.md`, and `implement.md`; if sub-agent/spec context is needed, AI curates jsonl entries.
 3. **Review / start** — the user reviews the planning artifacts. `task.py start` is valid when the task's artifact gate is satisfied.
-4. **Consume** — hook, prelude, Pi extension, and OpenCode plugin read context in the same order: jsonl entries, `prd.md`, `design.md` if present, `implement.md` if present.
+4. **Consume** — hook, prelude, Pi extension, and OpenCode plugin read context in the same order: jsonl entries, `prd.md`, `design.md`, `implement.md`.
 
 ### Signatures
 
@@ -1398,11 +1398,11 @@ Optional `type: "directory"` is supported for directory entries. Consumers ignor
 | Contract                  | Enforcer                                        | Behavior                                                                           |
 | ------------------------- | ----------------------------------------------- | ---------------------------------------------------------------------------------- |
 | Task creation             | `task_store.py`                                 | Always creates default `prd.md`; never auto-creates `design.md` or `implement.md`. |
-| Lightweight planning gate | workflow-state / SessionStart / continue        | PRD-only is valid when the task is clearly small.                                  |
-| Complex planning gate     | workflow-state / SessionStart / continue        | Requires `prd.md`, `design.md`, and `implement.md` before `task.py start`.         |
+| New-task planning gate | `common/planning.py` + start / workflow / hints | All three readable nonempty files, a selfconsistent reviewed version, and recorded confirmation are required. |
+| Legacy resume | `common/planning.py` + start | Already-started in_progress/review tasks may resume only when all three planning metadata keys are absent. |
 | Non-entry detection       | Every jsonl consumer                            | Row without a `file` key is treated as non-entry and skipped.                      |
 | Empty-file tolerance      | hook / prelude / plugin readers                 | Missing or empty jsonl is tolerated; task artifacts still load.                    |
-| Context order             | hook / prelude / Pi extension / OpenCode plugin | jsonl entries → `prd.md` → `design.md` if present → `implement.md` if present.     |
+| Context order             | hook / prelude / Pi extension / OpenCode plugin | jsonl entries → `prd.md` → `design.md` → `implement.md`.     |
 | Archived self-references  | `task_context.py` validation                    | Preserve JSONL bytes. For an archived task, remap only exact `.trellis/tasks/<same-task-name>/...` references into that archive copy. Other paths retain repo-root resolution. |
 
 ### Validation & Error Matrix
@@ -1415,16 +1415,16 @@ Optional `type: "directory"` is supported for directory entries. Consumers ignor
 | Archived self-reference exists in the archive copy     | Resolve inside `.trellis/tasks/archive/<year-month>/<same-task-name>/`; do not rewrite the manifest        | Exit 0                  |
 | Archived self-reference is absent from the archive copy | Report it missing even if an active task with the same name has recreated the path                         | Exit 1                  |
 | Archived self-reference traverses or follows a symlink outside the archive | Reject it as missing; never fall back to the historical active-task path                    | Exit 1                  |
-| Lightweight task has only `prd.md`                     | Valid planning state; SessionStart / continue can ask for start review                                | No error                |
-| Complex task is missing `design.md` or `implement.md`  | Stay in planning; ask user to complete missing planning artifacts                                     | Hook / command guidance |
+| Any new task has only `prd.md` | Incomplete planning; add readable, nonempty `design.md` and `implement.md` before review/start | Start refuses |
+| Any new task is missing `design.md` or `implement.md` | Stay in planning; ask user to complete missing planning artifacts                                     | Hook / command guidance |
 | Sub-agent platform detected, but jsonl is missing      | Context readers fall back to task artifacts and warn where applicable                                 | No create failure       |
 
 ### Good / Base / Bad Cases
 
-- **Good**: complex task has `prd.md`, `design.md`, `implement.md`, and curated jsonl manifests. Context consumers load jsonl entries first, then all three artifacts.
+- **Good**: a new task has `prd.md`, `design.md`, `implement.md`, and curated jsonl manifests. Context consumers load jsonl entries first, then all three artifacts.
 - **Good (archived)**: a moved task keeps its JSONL byte-for-byte; validation binds exact historical self-references to files or directories inside its archive copy while unrelated repository paths still resolve from the repository root.
-- **Base**: lightweight task has only `prd.md`. SessionStart / continue treats this as a valid planning state and may ask for start review.
-- **Bad**: complex task has only `prd.md` plus seed-only jsonl. SessionStart / continue must keep the task in planning; it must not treat jsonl file existence as implementation readiness.
+- **Base**: a small new task has three concise planning files; no minimum length or fixed headings are required. A waiting attested version may validate, but only the user can confirm that version before start.
+- **Bad**: a new task has only `prd.md` plus seed-only jsonl. SessionStart / continue must keep the task in planning; it must not treat jsonl file existence as implementation readiness.
 - **Bad (archived)**: validation resolves a historical self-reference through a recreated active task, or accepts `..` / a symlink that escapes the archived task directory.
 
 ### Wrong vs Correct
@@ -1436,25 +1436,25 @@ def is_ready(task_dir: Path) -> bool:
     return (task_dir / "prd.md").is_file() and (task_dir / "implement.jsonl").is_file()
 ```
 
-File existence alone cannot distinguish a lightweight PRD-only task from an incomplete complex task, and a seed-only jsonl manifest is not curated context.
+File existence alone cannot prove document meaning, a version match or real user confirmation. Every new task needs all three readable, nonempty artifacts; a seed-only jsonl manifest is not curated context.
 
 #### Correct
 
 ```python
-def planning_next_action(task_dir: Path, is_complex: bool, inline_mode: bool) -> str:
+def planning_next_action(task_dir: Path, inline_mode: bool) -> str:
     if not (task_dir / "prd.md").is_file():
         return "write-prd"
-    if is_complex and (
+    if (
         not (task_dir / "design.md").is_file()
         or not (task_dir / "implement.md").is_file()
     ):
-        return "complete-complex-artifacts"
+        return "complete-planning-artifacts"
     if not inline_mode and not has_curated_jsonl(task_dir):
         return "curate-jsonl"
     return "review-before-start"
 ```
 
-The route depends on task intent, artifact presence, and execution mode. Missing optional artifacts are skipped for lightweight tasks, but complex tasks cannot enter implementation until their planning artifacts are complete.
+All new tasks require the same three planning artifacts. Execution mode determines JSONL curation, not whether design or implementation planning can be omitted. Only verified legacy in-progress/review tasks with all planning metadata keys absent may resume using available historical artifacts. After attest and validate, display the reviewed version and obtain real user confirmation; do not treat this routing example as the implementation authorization gate.
 
 For archived validation, resolving every JSONL path as `repo_root / file_path`
 is wrong because a preserved self-reference points at the task's former active
@@ -1469,7 +1469,7 @@ leave every unrelated path on normal repository-root resolution.
 - **Validate placeholder**: `task.py validate` passes for empty jsonl and fails with a remediation message for a legacy `{"_example": …}` row, in both active and archived tasks.
 - **Validate archive binding**: cover archived self files and directories, unrelated paths, a missing archive copy with a recreated active task, traversal, symlink escape, and unchanged active-task behavior.
 - **List-context empty**: `task.py list-context` prints "(no curated entries yet)" for an uncurated jsonl.
-- **Artifact gates**: workflow-state, SessionStart, and continue distinguish PRD-only lightweight tasks from complex tasks that still need `design.md` / `implement.md`.
+- **Artifact gates**: workflow-state, SessionStart, continue and generated implement/check agents require all three artifacts for every new task. Test version-specific confirmation, material-change replanning, conservative query failure and the explicit legacy resume exception.
 
 ## Context Injection Limits Contract (`context_injection`)
 
@@ -1928,9 +1928,7 @@ index on demand after the task and phase are known.
 ### Task Status Guidance
 
 `SessionStart` reports task status and artifact presence, but it does not
-approve implementation. Planning tasks stay behind the review gate: lightweight
-tasks may be PRD-only, while complex tasks need `prd.md`, `design.md`, and
-`implement.md` before `task.py start`.
+approve implementation. Planning tasks stay behind the review gate: every new task needs readable, nonempty `prd.md`, `design.md`, and `implement.md`, an attested version and real user confirmation of that version before `task.py start`. Startup hints query the shared read-only planning status; failure cannot imply permission.
 
 For `in_progress` tasks, `SessionStart` points the AI to the per-turn
 `<workflow-state>` block and restates the implementation/check context order.
@@ -2326,3 +2324,13 @@ Note this is *only* about `{{…}}` placeholders. The separate `python3` → `py
 | #71                           | Qoder            | Skills (like Codex/Kiro)                       | Skills with YAML frontmatter; Trae was dropped (IDE-only, no deterministic invocation trigger) |
 | feat/v0.5.0-beta              | All platforms (13 at the time; 21 today) | Unified template architecture | Common templates + shared hooks + `createTemplateReader()` factory                    |
 | `04-21-bootstrap-onboard-gap` | n/a              | Three-branch init dispatch + joiner onboarding | `.developer` file as per-checkout signal; documents the `handleReinit` two-point wiring        |
+
+## Reviewed planning version contract
+
+Every new task requires readable nonempty `prd.md`, `design.md`, and `implement.md`; content may be brief without fixed sections or word counts. The standard-library `common/planning.py` owns file fingerprints and record validation, is explicitly exported in `templates/trellis/index.ts`, and stays byte-identical in both script trees. Hash canonicalization only changes CRLF to LF.
+
+`attest` creates a fresh review version in planning. `start --review --approval-note --approval-source` checks the exact reviewed version and saves approval, status, branch and cleared replan in one atomic task.json write before pointer/hook effects. `waiting_confirmation` may validate successfully but is not permission to implement. `planning-status --json` is readonly with eight fixed fields; base-task read/shape errors exit 1, planning diagnostics on valid tasks exit 0. Restore is legacy only when all three planning metadata keys are absent on an already-started task; partial/null metadata is invalid. Completed start is refused.
+
+Material requirement/design/plan changes require pausing affected work, `replan`, updated artifacts, and renewed user confirmation. Ordinary implementation fixes continue; progress lives outside frozen reviewed planning. Wording-only editorial changes keep original review and approval with a continuous hash chain. The main session saves the old review summary and real response/source in `research/planning-review-log.md` before replan clears structured records. This log is workflow responsibility; hashes cannot restore overwritten text, and the tool cannot verify identity or classify semantic changes.
+
+Shared, Codex, Copilot and OpenCode startup hints use the canonical status command with a five-second timeout, encode JSON data then escape `&`, `<`, `>`, and do not fall back to file-presence permission if the query fails. String escaping tests verify rendering boundaries, not model obedience. Same-task mutation is serialized by the main session; no concurrency lock or exactly-once hook guarantee is added. Archive planning issues only warn; existing archive checks remain. See `test/scripts/task-planning.integration.test.ts`, `planning-status.integration.test.ts`, and `test/templates/planning-contract.test.ts` for executable coverage.

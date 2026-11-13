@@ -1,0 +1,124 @@
+{
+  "date": "2026-11-12T08:52:43.901787+00:00",
+  "taskStatus": "planning",
+  "branchField": null,
+  "head": "9b76fe49f19de4d383dd4677fea803e2f2da7004",
+  "documents": [
+    {
+      "path": ".trellis/tasks/11-11-planning-artifact-gate/prd.md",
+      "bytes": 8104,
+      "sha256": "a3340af1341323007fe818511e65c324a82c9bee7acc1a6c0ae949b80036b91b"
+    },
+    {
+      "path": ".trellis/tasks/11-11-planning-artifact-gate/design.md",
+      "bytes": 20060,
+      "sha256": "51f492ded1374e15964b0148937a2e1f6f2fe161aa2759288eb7f60fc0d2e0b4"
+    },
+    {
+      "path": ".trellis/tasks/11-11-planning-artifact-gate/implement.md",
+      "bytes": 25749,
+      "sha256": "05d7a9a91890e7417fcb868b69460b04c39b0ff2c447f5a64775f66289541129"
+    },
+    {
+      "path": ".trellis/tasks/11-11-planning-artifact-gate/research/test-plan-2026-11-12.md",
+      "bytes": 14029,
+      "sha256": "0f79479ea531667b852143536d43d9a3c1b63eb1e19d1ff755e2793c09bf3d14"
+    },
+    {
+      "path": ".trellis/tasks/11-11-planning-artifact-gate/research/context-read-map-2026-11-12.md",
+      "bytes": 4963,
+      "sha256": "580ce899e0b97d3694edefd902e6bbba2a0fd529a0f7502cbc75802b72eb2d23"
+    }
+  ],
+  "brokenCurrentDocumentLinks": [],
+  "pythonSnippetSyntaxErrors": [],
+  "unresolvedMarkers": [],
+  "manifestChecks": [
+    {
+      "file": "implement.jsonl",
+      "entries": 4,
+      "missing": []
+    },
+    {
+      "file": "check.jsonl",
+      "entries": 5,
+      "missing": []
+    }
+  ],
+  "contextMaterialization": [
+    {
+      "action": "implement",
+      "bytes": 101355,
+      "requirementsPresent": true,
+      "designPresent": true,
+      "planPresent": true,
+      "planEndPresent": true,
+      "truncated": false,
+      "budgetOmitted": false,
+      "source": "current local injection hook; protected pre-existing modifications preserved, not A implementation"
+    },
+    {
+      "action": "check",
+      "bytes": 119915,
+      "requirementsPresent": true,
+      "designPresent": true,
+      "planPresent": true,
+      "planEndPresent": true,
+      "truncated": false,
+      "budgetOmitted": false,
+      "source": "current local injection hook; protected pre-existing modifications preserved, not A implementation"
+    }
+  ],
+  "currentValidate": {
+    "exit": 0,
+    "stdout": "\u001b[0;34m=== Validating Context Files ===\u001b[0m\nTarget dir: D:\\zcx\\Trellis\\.trellis\\tasks\\11-11-planning-artifact-gate\n\n  \u001b[0;32mimplement.jsonl: ✓ (4 entries)\u001b[0m\n  \u001b[0;32mcheck.jsonl: ✓ (5 entries)\u001b[0m\n\n\u001b[0;32m✓ All validations passed\u001b[0m\n",
+    "stderr": "",
+    "scope": "existing context manifest validator; not the planned A gate"
+  },
+  "diffCheck": {
+    "exit": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  "protectedOriginalModifications": 42,
+  "protectedAndWorkflowDrift": [],
+  "historicalPrdExact": true,
+  "coverage": {
+    "requirements": [
+      "R1",
+      "R10",
+      "R11",
+      "R2",
+      "R3",
+      "R4",
+      "R5",
+      "R6",
+      "R7",
+      "R8",
+      "R9"
+    ],
+    "mappedRequirements": [
+      "R1",
+      "R10",
+      "R11",
+      "R2",
+      "R3",
+      "R4",
+      "R5",
+      "R6",
+      "R7",
+      "R8",
+      "R9"
+    ],
+    "automaticCaseGroups": 37,
+    "manualExercises": 6,
+    "comparisonCases": 16,
+    "comparisonCasesStatus": "planned, not executed"
+  },
+  "implementationStarted": false,
+  "productTestsRun": false,
+  "newGateImplemented": false,
+  "independentReviewDispatchedThisPhase": false,
+  "stagedFiles": [],
+  "planningMechanicalChecksPassed": true
+}

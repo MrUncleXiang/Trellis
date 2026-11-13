@@ -1,0 +1,36 @@
+
+  GitNexus Impact (1.6.12)
+{"level":50,"time":1794481985520,"name":"gitnexus","msg":"GitNexus: ⚠️ Index for \"Trellis-B-push\" was built at D:\\zcx\\Trellis; your cwd (C:\\Users\\PXWD\\.codex\\worktrees\\planning-artifact-gate\\Trellis) is a sibling clone that is 4 commits ahead of the indexed commit. Results may be stale or incorrect — re-run `gitnexus analyze` to refresh the index."}
+{"level":40,"time":1794481985682,"name":"gitnexus","msg":"GitNexus: FTS extension unavailable; continuing without FTS features. load-only policy (no install attempted); LOAD fts failed: Binder exception: Extension: fts is an official extension and has not been installed. You can install it by: install fts."}
+{
+  "target": {
+    "id": "Function:packages/cli/src/templates/trellis/scripts/common/task_store.py:cmd_create",
+    "name": "cmd_create",
+    "type": "Function",
+    "filePath": "packages/cli/src/templates/trellis/scripts/common/task_store.py"
+  },
+  "direction": "upstream",
+  "impactedCount": 0,
+  "risk": "UNKNOWN",
+  "riskSharedAxes": "UNKNOWN",
+  "riskScale": {
+    "comparableAcrossKinds": true,
+    "unusedAxes": []
+  },
+  "riskNote": "No callers resolved. Absence of edges is not evidence the symbol is unused: a caller reaching it through a reference class this index does not record — plain-object property access, a bare-identifier read of a module-scope const — produces no edge to find. Confirm with a text search before treating the change as safe.",
+  "epistemic": "exact",
+  "summary": {
+    "direct": 0,
+    "processes_affected": 0,
+    "modules_affected": 0
+  },
+  "byDepthCounts": {},
+  "affected_processes": [],
+  "affected_modules": [],
+  "staleness": {
+    "status": "behind",
+    "commitsBehind": 4,
+    "hint": "⚠️ Index is 4 commits behind HEAD. Run analyze tool to update."
+  }
+}
+

@@ -1,0 +1,381 @@
+{
+  "scope": "Exact original command-log bytes before repository line-ending normalization. Existing files are not rewritten.",
+  "archive": "command-logs-original-bytes.zip",
+  "files": [
+    {
+      "path": "baseline-other-current.txt",
+      "bytes": 46336,
+      "sha256": "4d77128b2278d141747410c1bc2faf8fb193a74b8a7478513edb36e732e61947"
+    },
+    {
+      "path": "baseline-other-old.txt",
+      "bytes": 36922,
+      "sha256": "b2f1eb1122c35e20ded2574758316777f3ce1281efcea166b6bffaa6f26dbdfe"
+    },
+    {
+      "path": "baseline-priority-current.txt",
+      "bytes": 47342,
+      "sha256": "5479c1b042b342c5e2c48639ad8b9739f16f3d266d1b6f8609435519d67cc169"
+    },
+    {
+      "path": "baseline-priority-old.txt",
+      "bytes": 47307,
+      "sha256": "d880469933952b038a734d89fe201bf33e6b4764ab1e6f317616832be8fa018f"
+    },
+    {
+      "path": "build-current.txt",
+      "bytes": 1168,
+      "sha256": "dab3c4bcce015e3e4e7753bf2a2d33e3ee774f245ab7fd1f915ded2f40887fd1"
+    },
+    {
+      "path": "build-final-current.txt",
+      "bytes": 1168,
+      "sha256": "dab3c4bcce015e3e4e7753bf2a2d33e3ee774f245ab7fd1f915ded2f40887fd1"
+    },
+    {
+      "path": "build-platform-fixes-current.txt",
+      "bytes": 1168,
+      "sha256": "dab3c4bcce015e3e4e7753bf2a2d33e3ee774f245ab7fd1f915ded2f40887fd1"
+    },
+    {
+      "path": "build-recovered-current.txt",
+      "bytes": 1168,
+      "sha256": "dab3c4bcce015e3e4e7753bf2a2d33e3ee774f245ab7fd1f915ded2f40887fd1"
+    },
+    {
+      "path": "build-recovered-final.txt",
+      "bytes": 1168,
+      "sha256": "dab3c4bcce015e3e4e7753bf2a2d33e3ee774f245ab7fd1f915ded2f40887fd1"
+    },
+    {
+      "path": "build-review-current.txt",
+      "bytes": 1168,
+      "sha256": "dab3c4bcce015e3e4e7753bf2a2d33e3ee774f245ab7fd1f915ded2f40887fd1"
+    },
+    {
+      "path": "comparison-harness-development-final-run.txt",
+      "bytes": 152308,
+      "sha256": "3659108b0d739809c56ee1c1beb22bd12099e22f4554b8c0b21d4bf2d7dbb26c"
+    },
+    {
+      "path": "comparison-harness-selftest-current.txt",
+      "bytes": 53516,
+      "sha256": "3a987356f38e276d4d2ac0c9e08475bf192492fdf22a0b4012d54fc8ad6feedd"
+    },
+    {
+      "path": "comparison-harness-selftest-fixed.txt",
+      "bytes": 54909,
+      "sha256": "c469a2ed9950d8c87b81f88ba9a8d7b32220d73485918ef6b1e0bc284b2da98d"
+    },
+    {
+      "path": "comparison-harness-selftest-old-recovered.txt",
+      "bytes": 84767,
+      "sha256": "32c6d3eb6fbdfe8913a8c340e9f30a1b5fd97f049d5bdcbb810d79aeb7a91960"
+    },
+    {
+      "path": "comparison-harness-selftest-recovered.txt",
+      "bytes": 69812,
+      "sha256": "f4f4216ed34ce29c621091e5016f3ec757b2478f76397d8b46084513092530f5"
+    },
+    {
+      "path": "core-review-regression-green.txt",
+      "bytes": 6275,
+      "sha256": "e0c3a341b372a61b2fd01f8da07e91942141fe3ffe2b44332b135950b9efe214"
+    },
+    {
+      "path": "core-review-regression-red.txt",
+      "bytes": 22224,
+      "sha256": "be33f36c6f563e1600f38c845001add7a88ee7135ee6bf3164285b9523095374"
+    },
+    {
+      "path": "core-tests-final-current.txt",
+      "bytes": 1698,
+      "sha256": "b1819eefe55e20c02e49fd3e53d9ae37cfbe3a7c00399f7a817bbe4382ed7c00"
+    },
+    {
+      "path": "core-tests-inflight.txt",
+      "bytes": 13411,
+      "sha256": "8fc39f86f92cc1b9d043fe6173f868f7025eba5c0f072229192fe860ec5a7af0"
+    },
+    {
+      "path": "focused-final-current.txt",
+      "bytes": 2838,
+      "sha256": "446fa6267b2ac482fc48c95beadcd38b60ae3c8839fb89e131f322867c717456"
+    },
+    {
+      "path": "full-final-current.txt",
+      "bytes": 203384,
+      "sha256": "7d567c263d0bc0699d2733a2c55ebb920387157e06255362d7141809e73ed973"
+    },
+    {
+      "path": "full-recovered-current.txt",
+      "bytes": 197405,
+      "sha256": "3c2a2cfa977ad0ca44665ab20641128410f267410096dbc010f8a2a3730372e5"
+    },
+    {
+      "path": "full-tests-current.txt",
+      "bytes": 310376,
+      "sha256": "761b452342d120d670ee1dba158a8e5f1a56872f2dee2aa1cff4bc7e0f9fb8a2"
+    },
+    {
+      "path": "gitnexus-final-detect-changes.txt",
+      "bytes": 2943,
+      "sha256": "c0ee7108d82d403a69bdbedba1327660509a7db42f25250c66f7ca135bf35df3"
+    },
+    {
+      "path": "gitnexus-final-index.txt",
+      "bytes": 2021,
+      "sha256": "3c441cbfa927b5761d0ab438eaa112c50c045a0c959f2b001e40145d862c9268"
+    },
+    {
+      "path": "gitnexus-staged-before-commit.txt",
+      "bytes": 2806,
+      "sha256": "7d27e04e5ad3f03fd87cc088146703353c5333a8a61ff9eb16cc1f1822a67bdc"
+    },
+    {
+      "path": "impact-_default_prd_content.txt",
+      "bytes": 1885,
+      "sha256": "f844184d4b4d03ebfe03421ca2eb83ae2cf4bae10ceb72a7f47bae3207273754"
+    },
+    {
+      "path": "impact-cmd_archive.txt",
+      "bytes": 1860,
+      "sha256": "ca3958c4f0ae67013a099004bf2b81a440b9d6269d3d2783c195968b5e8ea9fd"
+    },
+    {
+      "path": "impact-cmd_create.txt",
+      "bytes": 1858,
+      "sha256": "ba3bd45ed02f92c79deccee7c6ad842d30dba80d5f3bfde0a11eac51f0d92dc5"
+    },
+    {
+      "path": "impact-getAllScripts.txt",
+      "bytes": 2058,
+      "sha256": "607965c4f47611f4e77e7c952a212df5ffdf815954ebf6287d582e5d5290323b"
+    },
+    {
+      "path": "index-refresh.txt",
+      "bytes": 2232,
+      "sha256": "c62afe54715f70f31d842b1a59eb88d9e28751628ac74ae4e4a9b82fb06c3bcf"
+    },
+    {
+      "path": "lint-current.txt",
+      "bytes": 441,
+      "sha256": "193f3c74db1f0a987bc4fae61e86f1325c0dacd215d4e092b2db0573033e36f4"
+    },
+    {
+      "path": "lint-final-current.txt",
+      "bytes": 441,
+      "sha256": "193f3c74db1f0a987bc4fae61e86f1325c0dacd215d4e092b2db0573033e36f4"
+    },
+    {
+      "path": "lint-recovered-final.txt",
+      "bytes": 441,
+      "sha256": "193f3c74db1f0a987bc4fae61e86f1325c0dacd215d4e092b2db0573033e36f4"
+    },
+    {
+      "path": "lint-review-current.txt",
+      "bytes": 441,
+      "sha256": "193f3c74db1f0a987bc4fae61e86f1325c0dacd215d4e092b2db0573033e36f4"
+    },
+    {
+      "path": "manual-exercises-recovered.txt",
+      "bytes": 34988,
+      "sha256": "6dae9dcee2c053de4fdf7649b8215f582e6d4133a1f0ac0325679e66bd60be57"
+    },
+    {
+      "path": "manual-exercises-run.txt",
+      "bytes": 1189,
+      "sha256": "06d709afe2ab13c1e57aff57e6facfb2750a42667813651be7ee74ea135e24d1"
+    },
+    {
+      "path": "marketplace-detect-final.txt",
+      "bytes": 2133,
+      "sha256": "94383d800fc9a2019b08aa25e123b7669d7034ed838689d157e75ab29f904df6"
+    },
+    {
+      "path": "marketplace-index-final.txt",
+      "bytes": 509,
+      "sha256": "b1a641f2266fdd1601332c66c2d1d258994b193ae312489d2ee7297bf3969c47"
+    },
+    {
+      "path": "normal-commit-attempt.txt",
+      "bytes": 201335,
+      "sha256": "697772045312e04d4770fb47e791699e01917d2d0643b01e4f2e2d09adae2a0f"
+    },
+    {
+      "path": "omp-regression-fixed-current.txt",
+      "bytes": 441,
+      "sha256": "0db54616a57d8ba80b2d5a63638eb9ed56102b6ab17235fdea2d650bd7e520aa"
+    },
+    {
+      "path": "packages_cli_src_configurators_shared_ts-buildPullBasedPrelude.txt",
+      "bytes": 3523,
+      "sha256": "4694eaf3339fcc5579ea8c73cff651219cf823dee6200f2b3e6d241f8f5857c7"
+    },
+    {
+      "path": "packages_cli_src_templates_codex_hooks_session_start_py-_get_task_status.txt",
+      "bytes": 1856,
+      "sha256": "1556bde4b693142341f8987407b64f75a753ff0a620fac8d79d972a0e295a66b"
+    },
+    {
+      "path": "packages_cli_src_templates_copilot_hooks_session_start_py-_get_task_status.txt",
+      "bytes": 1862,
+      "sha256": "67c0073546ff92d88d9fb8598d46014ce8f6df88849fef2283fc5227f9390c75"
+    },
+    {
+      "path": "packages_cli_src_templates_opencode_lib_session_utils_js-getTaskStatus.txt",
+      "bytes": 1874,
+      "sha256": "1212513fb724383fe19b9c275c5efc1ca2b1905599086f35b24cdef32f765ea2"
+    },
+    {
+      "path": "packages_cli_src_templates_shared_hooks_inject_subagent_context_py-build_check_prompt.txt",
+      "bytes": 1900,
+      "sha256": "c3b2493eb4d0acf942b0b21aa3dc11b1aaeac4a4915fc0c5d7fc71ee688b891d"
+    },
+    {
+      "path": "packages_cli_src_templates_shared_hooks_inject_subagent_context_py-build_implement_prompt.txt",
+      "bytes": 1908,
+      "sha256": "26daa556ef538bf3299ce466159357c557b0608c3e140560f5c59098eac6dac4"
+    },
+    {
+      "path": "packages_cli_src_templates_shared_hooks_session_start_py-_get_task_status.txt",
+      "bytes": 1866,
+      "sha256": "7f6c2e06238ef4becb19ef6a8e0361ba9897618902373df1d7aee30df82b255d"
+    },
+    {
+      "path": "planning-integration-review-current.txt",
+      "bytes": 46193,
+      "sha256": "a8a91adeeceff8589ce5aa68aa695231bcb7299e9b42dbbc8b390c04755e7022"
+    },
+    {
+      "path": "planning-tests-current.txt",
+      "bytes": 4528,
+      "sha256": "6632832ffaa512cb721ba6d9377122bd024a7db1b6306b764410dd2ccd557d20"
+    },
+    {
+      "path": "platform-review-regression-current.txt",
+      "bytes": 335,
+      "sha256": "b08b055720b3480ea2efcbfcb17b38e54ac25ea17c93bd11e4bccf601d607391"
+    },
+    {
+      "path": "platform-review-regression-red.txt",
+      "bytes": 57683,
+      "sha256": "daf26eed295bda37fbdf3223cc259fbffe11d5baf71b70c3334204011bb79dc8"
+    },
+    {
+      "path": "platform-review-second-current.txt",
+      "bytes": 335,
+      "sha256": "2f80dbecb00fa9725675b256cc8877c49992ff0d3533a087933c68358e6a7eb7"
+    },
+    {
+      "path": "platform-review-second-red.txt",
+      "bytes": 47004,
+      "sha256": "fc32cdbfb8ed9b86cd6fa1f74dd3327d5c92da14627134cd39f958c866204599"
+    },
+    {
+      "path": "pnpm-test-recovered-final.txt",
+      "bytes": 200165,
+      "sha256": "096f3f139b1079dd3688911212d4fcaa1fb512f6f42a17d3c134bc70981225b8"
+    },
+    {
+      "path": "python-types-current.txt",
+      "bytes": 14315,
+      "sha256": "ccc8ad66551df41c8b562797411db04500aa402099749eed9192caeb53b16b8a"
+    },
+    {
+      "path": "python-types-final-current.txt",
+      "bytes": 14315,
+      "sha256": "ccc8ad66551df41c8b562797411db04500aa402099749eed9192caeb53b16b8a"
+    },
+    {
+      "path": "python-types-recovered-final.txt",
+      "bytes": 13701,
+      "sha256": "00edf03337238ec5224a174d0a23df0df2cad0a351df04fce4f8624825b12716"
+    },
+    {
+      "path": "python39-recovered-final.txt",
+      "bytes": 77,
+      "sha256": "dfa97ae001f2c364a2c1936e861bc9ca9914725c6df28c57e3b2e9e724393161"
+    },
+    {
+      "path": "recovered-core-and-boundary-current.txt",
+      "bytes": 6506,
+      "sha256": "b38ca5432fa9ddef75a62685cc61192af7af7a88b15afc1a069219568ae6ba8a"
+    },
+    {
+      "path": "regression-current.txt",
+      "bytes": 141566,
+      "sha256": "32041e386d5009e914b7241a46b5e189842fa708e796602db2aacf24aec51317"
+    },
+    {
+      "path": "regression-final-current.txt",
+      "bytes": 132695,
+      "sha256": "3171fdc88a78b1d6ef447de1e072af75933ee216d3dd701a0edc817d82a69dea"
+    },
+    {
+      "path": "regression-functional-python.txt",
+      "bytes": 130296,
+      "sha256": "f9c63729bdd66242ab032335f804b9741b3b703f97b2ffd9ef686cabd00c3b6d"
+    },
+    {
+      "path": "regression-python-alias.txt",
+      "bytes": 137360,
+      "sha256": "80037d328441ae7155ba8cfe3ca2ad63c2c69151ba78d644c111204b55776bb0"
+    },
+    {
+      "path": "regression-review-current.txt",
+      "bytes": 224187,
+      "sha256": "ecdfcae5f61f07298a647f97d5ba6612531a3fbd5be3d5ad940359aa4faf1a14"
+    },
+    {
+      "path": "status-tests-current.txt",
+      "bytes": 1170,
+      "sha256": "4c3294443863e6ebaf7b07460a004cbf4455dc25c00a485cfb77d417123f24eb"
+    },
+    {
+      "path": "status-tests-red.txt",
+      "bytes": 13722,
+      "sha256": "b09fe324dfaf5fe506fe41c5675f41b52fd1ab46c1e7a19ba3ba87dd086547e8"
+    },
+    {
+      "path": "targeted-regression-current.txt",
+      "bytes": 23003,
+      "sha256": "76ac901d1a8b80491cae44b1532d085b83e1ee870a32d638002539b0df8154a6"
+    },
+    {
+      "path": "template-tests-current.txt",
+      "bytes": 299,
+      "sha256": "03c64e78fa2032f3f7fa04ff2732cb6a5273313737b3833df28656a213a1e03b"
+    },
+    {
+      "path": "template-tests-red.txt",
+      "bytes": 150337,
+      "sha256": "83aa67cde48cb605baf0d4be1836b1cbc6486305ddbfca63d6597e92805c8aae"
+    },
+    {
+      "path": "typecheck-current.txt",
+      "bytes": 659,
+      "sha256": "3883b5295f1bd81b7ad0cf70753bcb84fb4876564b9f06f09eda9ee78b48a79a"
+    },
+    {
+      "path": "typecheck-final-current.txt",
+      "bytes": 659,
+      "sha256": "3883b5295f1bd81b7ad0cf70753bcb84fb4876564b9f06f09eda9ee78b48a79a"
+    },
+    {
+      "path": "typecheck-recovered-final.txt",
+      "bytes": 659,
+      "sha256": "3883b5295f1bd81b7ad0cf70753bcb84fb4876564b9f06f09eda9ee78b48a79a"
+    },
+    {
+      "path": "updated-expectations-current.txt",
+      "bytes": 52619,
+      "sha256": "26520a61f7412798de42109f092ef35ce383a2d58b452f109599571275707292"
+    },
+    {
+      "path": "updated-expectations-final.txt",
+      "bytes": 1861,
+      "sha256": "3000118e64ffc4cf651e2fa97eb5bbe4093138174bc61b3dcbdc885e62839dae"
+    }
+  ]
+}

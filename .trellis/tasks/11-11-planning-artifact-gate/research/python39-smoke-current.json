@@ -1,0 +1,89 @@
+{
+  "python": "Python 3.9.13",
+  "interpreter": "C:\\Users\\PXWD\\AppData\\Local\\Temp\\trellis-planning-python39\\python.exe",
+  "fixture": "C:\\Users\\PXWD\\AppData\\Local\\Temp\\trellis-a-python39-1lr1811j",
+  "note": "Embeddable Python excludes script directory: runpy wrapper adds only fixture scripts path, no business logic mocked.",
+  "rows": [
+    {
+      "args": [
+        "attest",
+        ".trellis/tasks/smoke",
+        "--note",
+        "Actual Python3.9 reviewed fixture"
+      ],
+      "exit": 0,
+      "stdout": "\u001b[0;32m✓ Planning version attested: 1cf08c4c28494fcb9a8e8cdd356783cf\u001b[0m\nNote: Actual Python3.9 reviewed fixture\n  prd.md: 1f4e6e9f8c773fcf9555f35d6ecd5a2a76424b032ef65c1010058d9f2814c6e0\n  design.md: aa27bcbd0a760d0fed7f2ee25b134e1d8654a0f7148f734d465033fb83699c50\n  implement.md: ab958ce49cb4a1b6ec4238c4d15597f8673d8c477e9c37f964ce09d3ff284502\nStill needs explicit user review and approval before start.\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "validate",
+        ".trellis/tasks/smoke"
+      ],
+      "exit": 0,
+      "stdout": "\u001b[0;34m=== Validating Context Files ===\u001b[0m\nTarget dir: C:\\Users\\PXWD\\AppData\\Local\\Temp\\trellis-a-python39-1lr1811j\\.trellis\\tasks\\smoke\n\nPlanning: waiting_confirmation; review: 1cf08c4c28494fcb9a8e8cdd356783cf\nPlanning is not approved: awaiting user confirmation before start.\n  \u001b[1;33mimplement.jsonl: not found (skipped)\u001b[0m\n  \u001b[1;33mcheck.jsonl: not found (skipped)\u001b[0m\n\n\u001b[0;32m✓ All validations passed\u001b[0m\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "start",
+        ".trellis/tasks/smoke",
+        "--review",
+        "1cf08c4c28494fcb9a8e8cdd356783cf",
+        "--approval-note",
+        "Fixture reply approves reviewed version",
+        "--approval-source",
+        "Fixture after review"
+      ],
+      "exit": 0,
+      "stdout": "\u001b[0;32m✓ Current task set to: .trellis/tasks/smoke\u001b[0m\nSource: session:py39-smoke\n",
+      "stderr": "\u001b[1;33mNote: no checked-out branch (detached HEAD, or not a git repository); task branch not recorded.\u001b[0m\n"
+    },
+    {
+      "args": [
+        "planning-status",
+        ".trellis/tasks/smoke",
+        "--json"
+      ],
+      "exit": 0,
+      "stdout": "{\"mode\": \"ready\", \"reviewId\": \"1cf08c4c28494fcb9a8e8cdd356783cf\", \"note\": \"Actual Python3.9 reviewed fixture\", \"approvalNote\": \"Fixture reply approves reviewed version\", \"approvalSource\": \"Fixture after review\", \"changedFiles\": [], \"errors\": [], \"replan\": null}\n",
+      "stderr": ""
+    }
+  ],
+  "final": {
+    "status": "in_progress",
+    "meta": {
+      "other": "preserve",
+      "planningAttest": {
+        "schemaVersion": 1,
+        "reviewId": "1cf08c4c28494fcb9a8e8cdd356783cf",
+        "attestedAt": "2026-11-12T17:14:13.376226+00:00",
+        "note": "Actual Python3.9 reviewed fixture",
+        "reviewFiles": {
+          "prd.md": "1f4e6e9f8c773fcf9555f35d6ecd5a2a76424b032ef65c1010058d9f2814c6e0",
+          "design.md": "aa27bcbd0a760d0fed7f2ee25b134e1d8654a0f7148f734d465033fb83699c50",
+          "implement.md": "ab958ce49cb4a1b6ec4238c4d15597f8673d8c477e9c37f964ce09d3ff284502"
+        },
+        "files": {
+          "prd.md": "1f4e6e9f8c773fcf9555f35d6ecd5a2a76424b032ef65c1010058d9f2814c6e0",
+          "design.md": "aa27bcbd0a760d0fed7f2ee25b134e1d8654a0f7148f734d465033fb83699c50",
+          "implement.md": "ab958ce49cb4a1b6ec4238c4d15597f8673d8c477e9c37f964ce09d3ff284502"
+        },
+        "editorialChanges": []
+      },
+      "planningApproval": {
+        "schemaVersion": 1,
+        "reviewId": "1cf08c4c28494fcb9a8e8cdd356783cf",
+        "reviewedFiles": {
+          "prd.md": "1f4e6e9f8c773fcf9555f35d6ecd5a2a76424b032ef65c1010058d9f2814c6e0",
+          "design.md": "aa27bcbd0a760d0fed7f2ee25b134e1d8654a0f7148f734d465033fb83699c50",
+          "implement.md": "ab958ce49cb4a1b6ec4238c4d15597f8673d8c477e9c37f964ce09d3ff284502"
+        },
+        "recordedAt": "2026-11-12T17:14:13.576032+00:00",
+        "note": "Fixture reply approves reviewed version",
+        "source": "Fixture after review"
+      }
+    },
+    "unknownTop": "preserve"
+  }
+}

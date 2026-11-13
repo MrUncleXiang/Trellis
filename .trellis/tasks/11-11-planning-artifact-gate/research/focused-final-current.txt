@@ -1,0 +1,40 @@
+
+ RUN  v4.0.18 C:/Users/PXWD/.codex/worktrees/planning-artifact-gate/Trellis/packages/cli
+
+ ✓ test/templates/planning-contract.test.ts (15 tests) 202ms
+ ✓ test/templates/codex.test.ts (17 tests) 12ms
+ ✓ test/templates/shared-hooks.test.ts (14 tests) 96ms
+ ✓ test/scripts/task-planning.integration.test.ts (27 tests) 43099ms
+     ✓ T01 missing any artifact: attest/start reject, name the file, no side effects  1777ms
+     ✓ T02 empty, whitespace-only and directory artifacts are rejected  2288ms
+     ✓ T03 unreadable artifact gives a diagnosis without traceback  1578ms
+     ✓ T04 a small three-file chain works end-to-end  2088ms
+     ✓ T05 blank --note is a business error; missing --note is argparse usage  1160ms
+     ✓ T06 no attestation: start rejects even with --allow-empty-context  1008ms
+     ✓ T07 per-file edits drift and a fresh attest gets a new id  2269ms
+     ✓ T08 normalizes only CRLF to LF  1191ms
+     ✓ T09 malformed/unknown attestation records are rejected, never overwritten  2275ms
+     ✓ T10 valid unattested-approval planning state is waiting_confirmation  977ms
+     ✓ T11 start confirmation arguments are all required and non-blank  1427ms
+     ✓ T12 old approved version cannot authorize a newly attested version  1377ms
+     ✓ T13 successful start performs one task.json replace with approval+status  1104ms
+     ✓ T14 two attests on identical files still make distinct ids and clear approval  1300ms
+     ✓ T15 both editorial paths preserve review identity and append the chain  1640ms
+     ✓ T16 no-op editorial does not write; extra editorial arg on no-diff start fails  1973ms
+     ✓ T17 editorial cannot manufacture approval or ignore a pending replan  1435ms
+     ✓ T18 tampered chain/approval is rejected by validate and start  1442ms
+     ✓ T19 normal attest on an implemented task is refused with replan guidance  1315ms
+     ✓ T20 replan returns to planning, clears statements, preserves branch/code  1221ms
+     ✓ T21 repeated replan/blank args/completed start attest replan are refused  2168ms
+     ✓ T22 replan -> edit -> attest -> validate -> approve -> start recovers  1650ms
+     ✓ T23 legacy in_progress resumes only when all three keys are absent  1761ms
+     ✓ T24 invalid task shapes fail clearly without creating a task  2974ms
+     ✓ T25 missing identity keeps the same gate, then saves state without a pointer  1350ms
+     ✓ T27 task.json save failure leaves no pointer/hook; pointer failure reports started-but-not-located  1361ms
+     ✓ T38 concurrent starts are observed and reported as unsupported  987ms
+
+ Test Files  4 passed (4)
+      Tests  73 passed (73)
+   Start at  21:08:52
+   Duration  43.39s (transform 361ms, setup 50ms, import 1.95s, tests 43.41s, environment 0ms)
+

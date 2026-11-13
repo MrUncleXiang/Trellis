@@ -1,0 +1,4 @@
+{"file": ".trellis/tasks/11-11-planning-artifact-gate/research/context-read-map-2026-11-12.md", "reason": "规范和源码定向读取索引；大规范不能靠截断注入假装已读"}
+{"file": ".trellis/tasks/11-11-planning-artifact-gate/research/test-plan-2026-11-12.md", "reason": "逐场景输入输出、副作用断言与旧新对照口径"}
+{"file": ".trellis/spec/cli/backend/filesystem-safety.md", "reason": "原子保存、路径边界和两份脚本同步"}
+{"file": ".trellis/spec/cli/unit-test/conventions.md", "reason": "测试环境隔离与真实命令验证"}

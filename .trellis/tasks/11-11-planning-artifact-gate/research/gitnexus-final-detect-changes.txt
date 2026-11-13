@@ -1,0 +1,39 @@
+
+  GitNexus Detect Changes (1.6.12)
+{"level":40,"time":1794504317588,"name":"gitnexus","msg":"GitNexus: FTS extension unavailable; continuing without FTS features. load-only policy (no install attempted); LOAD fts failed: Binder exception: Extension: fts is an official extension and has not been installed. You can install it by: install fts."}
+warning: in the working copy of '.trellis/spec/cli/backend/workflow-state-contract.md', CRLF will be replaced by LF the next time Git touches it
+warning: in the working copy of '.trellis/tasks/11-11-planning-artifact-gate/task.json', CRLF will be replaced by LF the next time Git touches it
+Changes: 154 files, 321 symbols
+Affected processes: 16
+Risk level: critical
+
+Changed symbols:
+  Function buildPullBasedPrelude → packages/cli/src/configurators/shared.ts
+  Section Check Agent → packages/cli/src/templates/claude/agents/trellis-check.md
+  Section Trellis Context Loading Protocol → packages/cli/src/templates/claude/agents/trellis-check.md
+  Section Context → packages/cli/src/templates/claude/agents/trellis-check.md
+  Section Core Responsibilities → packages/cli/src/templates/claude/agents/trellis-check.md
+  Section Workflow → packages/cli/src/templates/claude/agents/trellis-check.md
+  Section Step 2: Check Against Specs and Task Artifacts → packages/cli/src/templates/claude/agents/trellis-check.md
+  Section Self-Check Complete → packages/cli/src/templates/claude/agents/trellis-check.md
+  Section Summary → packages/cli/src/templates/claude/agents/trellis-check.md
+  Section Planning version and change boundary → packages/cli/src/templates/claude/agents/trellis-check.md
+  Section Implement Agent → packages/cli/src/templates/claude/agents/trellis-implement.md
+  Section Trellis Context Loading Protocol → packages/cli/src/templates/claude/agents/trellis-implement.md
+  Section Context → packages/cli/src/templates/claude/agents/trellis-implement.md
+  Section Core Responsibilities → packages/cli/src/templates/claude/agents/trellis-implement.md
+  Section Workflow → packages/cli/src/templates/claude/agents/trellis-implement.md
+... and 306 more
+
+Affected execution flows:
+  • Main → _configure_stream (4 steps) — changed: main
+  • BuildSessionContext → DebugLog (3 steps) — changed: buildSessionContext
+  • Main → _last_context_key_export (3 steps) — changed: main
+  • Main → _detect_platform (3 steps) — changed: main
+  • Main → _configure_stream (4 steps) — changed: main
+  • Cmd_create → Colored (3 steps) — changed: cmd_create
+  • CollectKimiTemplates → GetPythonCommandForPlatform (7 steps) — changed: buildPullBasedPrelude
+  • Cmd_validate → Find_task_by_name (3 steps) — changed: cmd_validate
+  • Cmd_archive → Find_task_by_name (3 steps) — changed: cmd_archive
+  • Cmd_validate → Get_repo_root (4 steps) — changed: cmd_validate
+... and 6 more

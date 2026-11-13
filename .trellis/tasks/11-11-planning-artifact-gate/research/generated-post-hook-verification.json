@@ -1,0 +1,317 @@
+{
+  "allMatched": true,
+  "rows": [
+    {
+      "path": ".agents/skills/trellis-before-dev/SKILL.md",
+      "matched": true
+    },
+    {
+      "path": ".agents/skills/trellis-brainstorm/SKILL.md",
+      "matched": true
+    },
+    {
+      "path": ".agents/skills/trellis-check/SKILL.md",
+      "matched": true
+    },
+    {
+      "path": ".agents/skills/trellis-continue/SKILL.md",
+      "matched": true
+    },
+    {
+      "path": ".agents/skills/trellis-meta/references/customize-local/change-context-loading.md",
+      "matched": true
+    },
+    {
+      "path": ".agents/skills/trellis-meta/references/customize-local/change-workflow.md",
+      "matched": true
+    },
+    {
+      "path": ".agents/skills/trellis-meta/references/local-architecture/context-injection.md",
+      "matched": true
+    },
+    {
+      "path": ".agents/skills/trellis-meta/references/local-architecture/task-system.md",
+      "matched": true
+    },
+    {
+      "path": ".agents/skills/trellis-meta/references/platform-files/agents.md",
+      "matched": true
+    },
+    {
+      "path": ".agents/skills/trellis-start/SKILL.md",
+      "matched": true
+    },
+    {
+      "path": ".claude/agents/trellis-check.md",
+      "matched": true
+    },
+    {
+      "path": ".claude/agents/trellis-implement.md",
+      "matched": true
+    },
+    {
+      "path": ".claude/commands/trellis/continue.md",
+      "matched": true
+    },
+    {
+      "path": ".claude/hooks/inject-subagent-context.py",
+      "matched": true
+    },
+    {
+      "path": ".claude/hooks/session-start.py",
+      "matched": true
+    },
+    {
+      "path": ".claude/skills/trellis-before-dev/SKILL.md",
+      "matched": true
+    },
+    {
+      "path": ".claude/skills/trellis-brainstorm/SKILL.md",
+      "matched": true
+    },
+    {
+      "path": ".claude/skills/trellis-check/SKILL.md",
+      "matched": true
+    },
+    {
+      "path": ".claude/skills/trellis-meta/references/customize-local/change-context-loading.md",
+      "matched": true
+    },
+    {
+      "path": ".claude/skills/trellis-meta/references/customize-local/change-workflow.md",
+      "matched": true
+    },
+    {
+      "path": ".claude/skills/trellis-meta/references/local-architecture/context-injection.md",
+      "matched": true
+    },
+    {
+      "path": ".claude/skills/trellis-meta/references/local-architecture/task-system.md",
+      "matched": true
+    },
+    {
+      "path": ".claude/skills/trellis-meta/references/platform-files/agents.md",
+      "matched": true
+    },
+    {
+      "path": ".codex/agents/trellis-check.toml",
+      "matched": true
+    },
+    {
+      "path": ".codex/agents/trellis-implement.toml",
+      "matched": true
+    },
+    {
+      "path": ".codex/hooks/inject-subagent-context.py",
+      "matched": true
+    },
+    {
+      "path": ".codex/hooks/session-start.py",
+      "matched": true
+    },
+    {
+      "path": ".cursor/agents/trellis-check.md",
+      "matched": true
+    },
+    {
+      "path": ".cursor/agents/trellis-implement.md",
+      "matched": true
+    },
+    {
+      "path": ".cursor/commands/trellis-continue.md",
+      "matched": true
+    },
+    {
+      "path": ".cursor/hooks/inject-subagent-context.py",
+      "matched": true
+    },
+    {
+      "path": ".cursor/hooks/session-start.py",
+      "matched": true
+    },
+    {
+      "path": ".cursor/skills/trellis-before-dev/SKILL.md",
+      "matched": true
+    },
+    {
+      "path": ".cursor/skills/trellis-brainstorm/SKILL.md",
+      "matched": true
+    },
+    {
+      "path": ".cursor/skills/trellis-check/SKILL.md",
+      "matched": true
+    },
+    {
+      "path": ".cursor/skills/trellis-meta/references/customize-local/change-context-loading.md",
+      "matched": true
+    },
+    {
+      "path": ".cursor/skills/trellis-meta/references/customize-local/change-workflow.md",
+      "matched": true
+    },
+    {
+      "path": ".cursor/skills/trellis-meta/references/local-architecture/context-injection.md",
+      "matched": true
+    },
+    {
+      "path": ".cursor/skills/trellis-meta/references/local-architecture/task-system.md",
+      "matched": true
+    },
+    {
+      "path": ".cursor/skills/trellis-meta/references/platform-files/agents.md",
+      "matched": true
+    },
+    {
+      "path": ".omp/agents/trellis-check.md",
+      "matched": true
+    },
+    {
+      "path": ".omp/agents/trellis-implement.md",
+      "matched": true
+    },
+    {
+      "path": ".omp/commands/trellis-continue.md",
+      "matched": true
+    },
+    {
+      "path": ".omp/skills/trellis-before-dev/SKILL.md",
+      "matched": true
+    },
+    {
+      "path": ".omp/skills/trellis-brainstorm/SKILL.md",
+      "matched": true
+    },
+    {
+      "path": ".omp/skills/trellis-check/SKILL.md",
+      "matched": true
+    },
+    {
+      "path": ".omp/skills/trellis-meta/references/customize-local/change-context-loading.md",
+      "matched": true
+    },
+    {
+      "path": ".omp/skills/trellis-meta/references/customize-local/change-workflow.md",
+      "matched": true
+    },
+    {
+      "path": ".omp/skills/trellis-meta/references/local-architecture/context-injection.md",
+      "matched": true
+    },
+    {
+      "path": ".omp/skills/trellis-meta/references/local-architecture/task-system.md",
+      "matched": true
+    },
+    {
+      "path": ".omp/skills/trellis-meta/references/platform-files/agents.md",
+      "matched": true
+    },
+    {
+      "path": ".opencode/agents/trellis-check.md",
+      "matched": true
+    },
+    {
+      "path": ".opencode/agents/trellis-implement.md",
+      "matched": true
+    },
+    {
+      "path": ".opencode/commands/trellis/continue.md",
+      "matched": true
+    },
+    {
+      "path": ".opencode/commands/trellis/start.md",
+      "matched": true
+    },
+    {
+      "path": ".opencode/lib/session-utils.js",
+      "matched": true
+    },
+    {
+      "path": ".opencode/plugins/inject-subagent-context.js",
+      "matched": true
+    },
+    {
+      "path": ".opencode/skills/trellis-before-dev/SKILL.md",
+      "matched": true
+    },
+    {
+      "path": ".opencode/skills/trellis-brainstorm/SKILL.md",
+      "matched": true
+    },
+    {
+      "path": ".opencode/skills/trellis-check/SKILL.md",
+      "matched": true
+    },
+    {
+      "path": ".opencode/skills/trellis-meta/references/customize-local/change-context-loading.md",
+      "matched": true
+    },
+    {
+      "path": ".opencode/skills/trellis-meta/references/customize-local/change-workflow.md",
+      "matched": true
+    },
+    {
+      "path": ".opencode/skills/trellis-meta/references/local-architecture/context-injection.md",
+      "matched": true
+    },
+    {
+      "path": ".opencode/skills/trellis-meta/references/local-architecture/task-system.md",
+      "matched": true
+    },
+    {
+      "path": ".opencode/skills/trellis-meta/references/platform-files/agents.md",
+      "matched": true
+    },
+    {
+      "path": ".pi/agents/trellis-check.md",
+      "matched": true
+    },
+    {
+      "path": ".pi/agents/trellis-implement.md",
+      "matched": true
+    },
+    {
+      "path": ".pi/prompts/trellis-continue.md",
+      "matched": true
+    },
+    {
+      "path": ".pi/prompts/trellis-start.md",
+      "matched": true
+    },
+    {
+      "path": ".pi/skills/trellis-before-dev/SKILL.md",
+      "matched": true
+    },
+    {
+      "path": ".pi/skills/trellis-brainstorm/SKILL.md",
+      "matched": true
+    },
+    {
+      "path": ".pi/skills/trellis-check/SKILL.md",
+      "matched": true
+    },
+    {
+      "path": ".pi/skills/trellis-meta/references/customize-local/change-context-loading.md",
+      "matched": true
+    },
+    {
+      "path": ".pi/skills/trellis-meta/references/customize-local/change-workflow.md",
+      "matched": true
+    },
+    {
+      "path": ".pi/skills/trellis-meta/references/local-architecture/context-injection.md",
+      "matched": true
+    },
+    {
+      "path": ".pi/skills/trellis-meta/references/local-architecture/task-system.md",
+      "matched": true
+    },
+    {
+      "path": ".pi/skills/trellis-meta/references/platform-files/agents.md",
+      "matched": true
+    },
+    {
+      "path": ".trellis/workflow.md",
+      "matched": true
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+
+ RUN  v4.0.18 C:/Users/PXWD/.codex/worktrees/planning-artifact-gate/Trellis/packages/cli
+
+ ✓ test/templates/planning-contract.test.ts (19 tests) 350ms
+ ✓ test/templates/omp.test.ts (24 tests) 762ms
+ ✓ test/configurators/shared.test.ts (54 tests) 16ms
+
+ Test Files  3 passed (3)
+      Tests  97 passed (97)
+   Start at  21:42:15
+   Duration  2.45s (transform 536ms, setup 62ms, import 2.52s, tests 1.13s, environment 0ms)
+

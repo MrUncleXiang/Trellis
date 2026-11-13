@@ -1,0 +1,862 @@
+[
+  {
+    "platform": "claude-code",
+    "file": ".claude/agents/trellis-research.md",
+    "size": 3797
+  },
+  {
+    "platform": "claude-code",
+    "file": ".claude/settings.json",
+    "size": 1515
+  },
+  {
+    "platform": "claude-code",
+    "file": ".claude/commands/trellis/continue.md",
+    "size": 6366
+  },
+  {
+    "platform": "claude-code",
+    "file": ".claude/commands/trellis/finish-work.md",
+    "size": 3391
+  },
+  {
+    "platform": "claude-code",
+    "file": ".claude/skills/trellis-before-dev/SKILL.md",
+    "size": 6391
+  },
+  {
+    "platform": "claude-code",
+    "file": ".claude/skills/trellis-brainstorm/SKILL.md",
+    "size": 17533
+  },
+  {
+    "platform": "claude-code",
+    "file": ".claude/skills/trellis-check/SKILL.md",
+    "size": 7650
+  },
+  {
+    "platform": "claude-code",
+    "file": ".claude/skills/trellis-channel/references/progress-debugging.md",
+    "size": 8393
+  },
+  {
+    "platform": "claude-code",
+    "file": ".claude/skills/trellis-meta/references/customize-local/add-project-local-conventions.md",
+    "size": 2500
+  },
+  {
+    "platform": "claude-code",
+    "file": ".claude/skills/trellis-meta/references/customize-local/change-context-loading.md",
+    "size": 3302
+  },
+  {
+    "platform": "claude-code",
+    "file": ".claude/skills/trellis-meta/references/customize-local/change-hooks.md",
+    "size": 2332
+  },
+  {
+    "platform": "claude-code",
+    "file": ".claude/skills/trellis-meta/references/customize-local/change-spec-structure.md",
+    "size": 2360
+  },
+  {
+    "platform": "claude-code",
+    "file": ".claude/skills/trellis-meta/references/customize-local/change-task-lifecycle.md",
+    "size": 4590
+  },
+  {
+    "platform": "claude-code",
+    "file": ".claude/skills/trellis-meta/references/customize-local/change-workflow.md",
+    "size": 7492
+  },
+  {
+    "platform": "claude-code",
+    "file": ".claude/skills/trellis-meta/references/customize-local/overview.md",
+    "size": 2867
+  },
+  {
+    "platform": "claude-code",
+    "file": ".claude/skills/trellis-meta/references/local-architecture/spec-system.md",
+    "size": 3266
+  },
+  {
+    "platform": "claude-code",
+    "file": ".claude/skills/trellis-meta/references/local-architecture/task-system.md",
+    "size": 9558
+  },
+  {
+    "platform": "claude-code",
+    "file": ".claude/skills/trellis-meta/references/local-architecture/workspace-memory.md",
+    "size": 2734
+  },
+  {
+    "platform": "claude-code",
+    "file": ".claude/skills/trellis-meta/references/platform-files/agents.md",
+    "size": 4030
+  },
+  {
+    "platform": "claude-code",
+    "file": ".claude/hooks/inject-subagent-context.py",
+    "size": 41606
+  },
+  {
+    "platform": "claude-code",
+    "file": ".claude/hooks/session-start.py",
+    "size": 37886
+  },
+  {
+    "platform": "cursor",
+    "file": ".cursor/commands/trellis-continue.md",
+    "size": 6366
+  },
+  {
+    "platform": "cursor",
+    "file": ".cursor/commands/trellis-finish-work.md",
+    "size": 3391
+  },
+  {
+    "platform": "cursor",
+    "file": ".cursor/skills/trellis-before-dev/SKILL.md",
+    "size": 6391
+  },
+  {
+    "platform": "cursor",
+    "file": ".cursor/skills/trellis-brainstorm/SKILL.md",
+    "size": 17533
+  },
+  {
+    "platform": "cursor",
+    "file": ".cursor/skills/trellis-check/SKILL.md",
+    "size": 7650
+  },
+  {
+    "platform": "cursor",
+    "file": ".cursor/skills/trellis-channel/references/progress-debugging.md",
+    "size": 8393
+  },
+  {
+    "platform": "cursor",
+    "file": ".cursor/skills/trellis-meta/references/customize-local/add-project-local-conventions.md",
+    "size": 2500
+  },
+  {
+    "platform": "cursor",
+    "file": ".cursor/skills/trellis-meta/references/customize-local/change-context-loading.md",
+    "size": 3302
+  },
+  {
+    "platform": "cursor",
+    "file": ".cursor/skills/trellis-meta/references/customize-local/change-hooks.md",
+    "size": 2332
+  },
+  {
+    "platform": "cursor",
+    "file": ".cursor/skills/trellis-meta/references/customize-local/change-spec-structure.md",
+    "size": 2360
+  },
+  {
+    "platform": "cursor",
+    "file": ".cursor/skills/trellis-meta/references/customize-local/change-task-lifecycle.md",
+    "size": 4590
+  },
+  {
+    "platform": "cursor",
+    "file": ".cursor/skills/trellis-meta/references/customize-local/change-workflow.md",
+    "size": 7492
+  },
+  {
+    "platform": "cursor",
+    "file": ".cursor/skills/trellis-meta/references/customize-local/overview.md",
+    "size": 2867
+  },
+  {
+    "platform": "cursor",
+    "file": ".cursor/skills/trellis-meta/references/local-architecture/spec-system.md",
+    "size": 3266
+  },
+  {
+    "platform": "cursor",
+    "file": ".cursor/skills/trellis-meta/references/local-architecture/task-system.md",
+    "size": 9558
+  },
+  {
+    "platform": "cursor",
+    "file": ".cursor/skills/trellis-meta/references/local-architecture/workspace-memory.md",
+    "size": 2734
+  },
+  {
+    "platform": "cursor",
+    "file": ".cursor/skills/trellis-meta/references/platform-files/agents.md",
+    "size": 4030
+  },
+  {
+    "platform": "cursor",
+    "file": ".cursor/agents/trellis-research.md",
+    "size": 3774
+  },
+  {
+    "platform": "cursor",
+    "file": ".cursor/hooks/inject-subagent-context.py",
+    "size": 41606
+  },
+  {
+    "platform": "cursor",
+    "file": ".cursor/hooks/session-start.py",
+    "size": 37886
+  },
+  {
+    "platform": "cursor",
+    "file": ".cursor/hooks.json",
+    "size": 483
+  },
+  {
+    "platform": "opencode",
+    "file": ".opencode/agents/trellis-check.md",
+    "size": 3755
+  },
+  {
+    "platform": "opencode",
+    "file": ".opencode/agents/trellis-implement.md",
+    "size": 3597
+  },
+  {
+    "platform": "opencode",
+    "file": ".opencode/agents/trellis-research.md",
+    "size": 3902
+  },
+  {
+    "platform": "opencode",
+    "file": ".opencode/lib/session-utils.js",
+    "size": 19148
+  },
+  {
+    "platform": "opencode",
+    "file": ".opencode/lib/trellis-context.js",
+    "size": 19349
+  },
+  {
+    "platform": "opencode",
+    "file": ".opencode/commands/trellis/continue.md",
+    "size": 6368
+  },
+  {
+    "platform": "opencode",
+    "file": ".opencode/commands/trellis/finish-work.md",
+    "size": 3391
+  },
+  {
+    "platform": "opencode",
+    "file": ".opencode/commands/trellis/start.md",
+    "size": 6522
+  },
+  {
+    "platform": "opencode",
+    "file": ".opencode/skills/trellis-before-dev/SKILL.md",
+    "size": 6391
+  },
+  {
+    "platform": "opencode",
+    "file": ".opencode/skills/trellis-brainstorm/SKILL.md",
+    "size": 17533
+  },
+  {
+    "platform": "opencode",
+    "file": ".opencode/skills/trellis-check/SKILL.md",
+    "size": 7650
+  },
+  {
+    "platform": "opencode",
+    "file": ".opencode/skills/trellis-channel/references/progress-debugging.md",
+    "size": 8393
+  },
+  {
+    "platform": "opencode",
+    "file": ".opencode/skills/trellis-meta/references/customize-local/add-project-local-conventions.md",
+    "size": 2500
+  },
+  {
+    "platform": "opencode",
+    "file": ".opencode/skills/trellis-meta/references/customize-local/change-context-loading.md",
+    "size": 3302
+  },
+  {
+    "platform": "opencode",
+    "file": ".opencode/skills/trellis-meta/references/customize-local/change-hooks.md",
+    "size": 2332
+  },
+  {
+    "platform": "opencode",
+    "file": ".opencode/skills/trellis-meta/references/customize-local/change-spec-structure.md",
+    "size": 2360
+  },
+  {
+    "platform": "opencode",
+    "file": ".opencode/skills/trellis-meta/references/customize-local/change-task-lifecycle.md",
+    "size": 4590
+  },
+  {
+    "platform": "opencode",
+    "file": ".opencode/skills/trellis-meta/references/customize-local/change-workflow.md",
+    "size": 7492
+  },
+  {
+    "platform": "opencode",
+    "file": ".opencode/skills/trellis-meta/references/customize-local/overview.md",
+    "size": 2867
+  },
+  {
+    "platform": "opencode",
+    "file": ".opencode/skills/trellis-meta/references/local-architecture/spec-system.md",
+    "size": 3266
+  },
+  {
+    "platform": "opencode",
+    "file": ".opencode/skills/trellis-meta/references/local-architecture/task-system.md",
+    "size": 9558
+  },
+  {
+    "platform": "opencode",
+    "file": ".opencode/skills/trellis-meta/references/local-architecture/workspace-memory.md",
+    "size": 2734
+  },
+  {
+    "platform": "opencode",
+    "file": ".opencode/skills/trellis-meta/references/platform-files/agents.md",
+    "size": 4030
+  },
+  {
+    "platform": "codex",
+    "file": ".agents/skills/trellis-continue/SKILL.md",
+    "size": 6669
+  },
+  {
+    "platform": "codex",
+    "file": ".agents/skills/trellis-finish-work/SKILL.md",
+    "size": 3662
+  },
+  {
+    "platform": "codex",
+    "file": ".agents/skills/trellis-start/SKILL.md",
+    "size": 6910
+  },
+  {
+    "platform": "codex",
+    "file": ".agents/skills/trellis-before-dev/SKILL.md",
+    "size": 6391
+  },
+  {
+    "platform": "codex",
+    "file": ".agents/skills/trellis-brainstorm/SKILL.md",
+    "size": 17533
+  },
+  {
+    "platform": "codex",
+    "file": ".agents/skills/trellis-check/SKILL.md",
+    "size": 7650
+  },
+  {
+    "platform": "codex",
+    "file": ".agents/skills/trellis-channel/references/progress-debugging.md",
+    "size": 8393
+  },
+  {
+    "platform": "codex",
+    "file": ".agents/skills/trellis-meta/references/customize-local/add-project-local-conventions.md",
+    "size": 2500
+  },
+  {
+    "platform": "codex",
+    "file": ".agents/skills/trellis-meta/references/customize-local/change-context-loading.md",
+    "size": 3302
+  },
+  {
+    "platform": "codex",
+    "file": ".agents/skills/trellis-meta/references/customize-local/change-hooks.md",
+    "size": 2332
+  },
+  {
+    "platform": "codex",
+    "file": ".agents/skills/trellis-meta/references/customize-local/change-spec-structure.md",
+    "size": 2360
+  },
+  {
+    "platform": "codex",
+    "file": ".agents/skills/trellis-meta/references/customize-local/change-task-lifecycle.md",
+    "size": 4590
+  },
+  {
+    "platform": "codex",
+    "file": ".agents/skills/trellis-meta/references/customize-local/change-workflow.md",
+    "size": 7492
+  },
+  {
+    "platform": "codex",
+    "file": ".agents/skills/trellis-meta/references/customize-local/overview.md",
+    "size": 2867
+  },
+  {
+    "platform": "codex",
+    "file": ".agents/skills/trellis-meta/references/local-architecture/spec-system.md",
+    "size": 3266
+  },
+  {
+    "platform": "codex",
+    "file": ".agents/skills/trellis-meta/references/local-architecture/task-system.md",
+    "size": 9558
+  },
+  {
+    "platform": "codex",
+    "file": ".agents/skills/trellis-meta/references/local-architecture/workspace-memory.md",
+    "size": 2734
+  },
+  {
+    "platform": "codex",
+    "file": ".agents/skills/trellis-meta/references/platform-files/agents.md",
+    "size": 4030
+  },
+  {
+    "platform": "codex",
+    "file": ".codex/hooks/session-start.py",
+    "size": 22370
+  },
+  {
+    "platform": "codex",
+    "file": ".codex/hooks/inject-subagent-context.py",
+    "size": 41606
+  },
+  {
+    "platform": "codex",
+    "file": ".codex/hooks.json",
+    "size": 572
+  },
+  {
+    "platform": "gemini",
+    "file": ".agents/skills/trellis-before-dev/SKILL.md",
+    "size": 6391
+  },
+  {
+    "platform": "gemini",
+    "file": ".agents/skills/trellis-brainstorm/SKILL.md",
+    "size": 17533
+  },
+  {
+    "platform": "gemini",
+    "file": ".agents/skills/trellis-check/SKILL.md",
+    "size": 7650
+  },
+  {
+    "platform": "gemini",
+    "file": ".agents/skills/trellis-channel/references/progress-debugging.md",
+    "size": 8393
+  },
+  {
+    "platform": "gemini",
+    "file": ".agents/skills/trellis-meta/references/customize-local/add-project-local-conventions.md",
+    "size": 2500
+  },
+  {
+    "platform": "gemini",
+    "file": ".agents/skills/trellis-meta/references/customize-local/change-context-loading.md",
+    "size": 3302
+  },
+  {
+    "platform": "gemini",
+    "file": ".agents/skills/trellis-meta/references/customize-local/change-hooks.md",
+    "size": 2332
+  },
+  {
+    "platform": "gemini",
+    "file": ".agents/skills/trellis-meta/references/customize-local/change-spec-structure.md",
+    "size": 2360
+  },
+  {
+    "platform": "gemini",
+    "file": ".agents/skills/trellis-meta/references/customize-local/change-task-lifecycle.md",
+    "size": 4590
+  },
+  {
+    "platform": "gemini",
+    "file": ".agents/skills/trellis-meta/references/customize-local/change-workflow.md",
+    "size": 7492
+  },
+  {
+    "platform": "gemini",
+    "file": ".agents/skills/trellis-meta/references/customize-local/overview.md",
+    "size": 2867
+  },
+  {
+    "platform": "gemini",
+    "file": ".agents/skills/trellis-meta/references/local-architecture/spec-system.md",
+    "size": 3266
+  },
+  {
+    "platform": "gemini",
+    "file": ".agents/skills/trellis-meta/references/local-architecture/task-system.md",
+    "size": 9558
+  },
+  {
+    "platform": "gemini",
+    "file": ".agents/skills/trellis-meta/references/local-architecture/workspace-memory.md",
+    "size": 2734
+  },
+  {
+    "platform": "gemini",
+    "file": ".agents/skills/trellis-meta/references/platform-files/agents.md",
+    "size": 4030
+  },
+  {
+    "platform": "dsh",
+    "file": ".agents/skills/trellis-before-dev/SKILL.md",
+    "size": 6391
+  },
+  {
+    "platform": "dsh",
+    "file": ".agents/skills/trellis-brainstorm/SKILL.md",
+    "size": 17533
+  },
+  {
+    "platform": "dsh",
+    "file": ".agents/skills/trellis-check/SKILL.md",
+    "size": 7650
+  },
+  {
+    "platform": "dsh",
+    "file": ".agents/skills/trellis-channel/references/progress-debugging.md",
+    "size": 8393
+  },
+  {
+    "platform": "dsh",
+    "file": ".agents/skills/trellis-meta/references/customize-local/add-project-local-conventions.md",
+    "size": 2500
+  },
+  {
+    "platform": "dsh",
+    "file": ".agents/skills/trellis-meta/references/customize-local/change-context-loading.md",
+    "size": 3302
+  },
+  {
+    "platform": "dsh",
+    "file": ".agents/skills/trellis-meta/references/customize-local/change-hooks.md",
+    "size": 2332
+  },
+  {
+    "platform": "dsh",
+    "file": ".agents/skills/trellis-meta/references/customize-local/change-spec-structure.md",
+    "size": 2360
+  },
+  {
+    "platform": "dsh",
+    "file": ".agents/skills/trellis-meta/references/customize-local/change-task-lifecycle.md",
+    "size": 4590
+  },
+  {
+    "platform": "dsh",
+    "file": ".agents/skills/trellis-meta/references/customize-local/change-workflow.md",
+    "size": 7492
+  },
+  {
+    "platform": "dsh",
+    "file": ".agents/skills/trellis-meta/references/customize-local/overview.md",
+    "size": 2867
+  },
+  {
+    "platform": "dsh",
+    "file": ".agents/skills/trellis-meta/references/local-architecture/spec-system.md",
+    "size": 3266
+  },
+  {
+    "platform": "dsh",
+    "file": ".agents/skills/trellis-meta/references/local-architecture/task-system.md",
+    "size": 9558
+  },
+  {
+    "platform": "dsh",
+    "file": ".agents/skills/trellis-meta/references/local-architecture/workspace-memory.md",
+    "size": 2734
+  },
+  {
+    "platform": "dsh",
+    "file": ".agents/skills/trellis-meta/references/platform-files/agents.md",
+    "size": 4030
+  },
+  {
+    "platform": "pi",
+    "file": ".pi/prompts/trellis-start.md",
+    "size": 6516
+  },
+  {
+    "platform": "pi",
+    "file": ".pi/prompts/trellis-continue.md",
+    "size": 6362
+  },
+  {
+    "platform": "pi",
+    "file": ".pi/prompts/trellis-finish-work.md",
+    "size": 3391
+  },
+  {
+    "platform": "pi",
+    "file": ".agents/skills/trellis-before-dev/SKILL.md",
+    "size": 6391
+  },
+  {
+    "platform": "pi",
+    "file": ".agents/skills/trellis-brainstorm/SKILL.md",
+    "size": 17533
+  },
+  {
+    "platform": "pi",
+    "file": ".agents/skills/trellis-check/SKILL.md",
+    "size": 7650
+  },
+  {
+    "platform": "pi",
+    "file": ".agents/skills/trellis-channel/references/progress-debugging.md",
+    "size": 8393
+  },
+  {
+    "platform": "pi",
+    "file": ".agents/skills/trellis-meta/references/customize-local/add-project-local-conventions.md",
+    "size": 2500
+  },
+  {
+    "platform": "pi",
+    "file": ".agents/skills/trellis-meta/references/customize-local/change-context-loading.md",
+    "size": 3302
+  },
+  {
+    "platform": "pi",
+    "file": ".agents/skills/trellis-meta/references/customize-local/change-hooks.md",
+    "size": 2332
+  },
+  {
+    "platform": "pi",
+    "file": ".agents/skills/trellis-meta/references/customize-local/change-spec-structure.md",
+    "size": 2360
+  },
+  {
+    "platform": "pi",
+    "file": ".agents/skills/trellis-meta/references/customize-local/change-task-lifecycle.md",
+    "size": 4590
+  },
+  {
+    "platform": "pi",
+    "file": ".agents/skills/trellis-meta/references/customize-local/change-workflow.md",
+    "size": 7492
+  },
+  {
+    "platform": "pi",
+    "file": ".agents/skills/trellis-meta/references/customize-local/overview.md",
+    "size": 2867
+  },
+  {
+    "platform": "pi",
+    "file": ".agents/skills/trellis-meta/references/local-architecture/spec-system.md",
+    "size": 3266
+  },
+  {
+    "platform": "pi",
+    "file": ".agents/skills/trellis-meta/references/local-architecture/task-system.md",
+    "size": 9558
+  },
+  {
+    "platform": "pi",
+    "file": ".agents/skills/trellis-meta/references/local-architecture/workspace-memory.md",
+    "size": 2734
+  },
+  {
+    "platform": "pi",
+    "file": ".agents/skills/trellis-meta/references/platform-files/agents.md",
+    "size": 4030
+  },
+  {
+    "platform": "pi",
+    "file": ".pi/agents/trellis-check.md",
+    "size": 3911
+  },
+  {
+    "platform": "pi",
+    "file": ".pi/agents/trellis-implement.md",
+    "size": 3975
+  },
+  {
+    "platform": "pi",
+    "file": ".pi/agents/trellis-research.md",
+    "size": 971
+  },
+  {
+    "platform": "pi",
+    "file": ".pi/extensions/trellis/index.ts",
+    "size": 69070
+  },
+  {
+    "platform": "omp",
+    "file": ".omp/commands/trellis-continue.md",
+    "size": 6441
+  },
+  {
+    "platform": "omp",
+    "file": ".omp/commands/trellis-finish-work.md",
+    "size": 3507
+  },
+  {
+    "platform": "omp",
+    "file": ".omp/skills/trellis-before-dev/SKILL.md",
+    "size": 6391
+  },
+  {
+    "platform": "omp",
+    "file": ".omp/skills/trellis-brainstorm/SKILL.md",
+    "size": 17533
+  },
+  {
+    "platform": "omp",
+    "file": ".omp/skills/trellis-check/SKILL.md",
+    "size": 7650
+  },
+  {
+    "platform": "omp",
+    "file": ".omp/skills/trellis-channel/references/progress-debugging.md",
+    "size": 8393
+  },
+  {
+    "platform": "omp",
+    "file": ".omp/skills/trellis-meta/references/customize-local/add-project-local-conventions.md",
+    "size": 2500
+  },
+  {
+    "platform": "omp",
+    "file": ".omp/skills/trellis-meta/references/customize-local/change-context-loading.md",
+    "size": 3302
+  },
+  {
+    "platform": "omp",
+    "file": ".omp/skills/trellis-meta/references/customize-local/change-hooks.md",
+    "size": 2332
+  },
+  {
+    "platform": "omp",
+    "file": ".omp/skills/trellis-meta/references/customize-local/change-spec-structure.md",
+    "size": 2360
+  },
+  {
+    "platform": "omp",
+    "file": ".omp/skills/trellis-meta/references/customize-local/change-task-lifecycle.md",
+    "size": 4590
+  },
+  {
+    "platform": "omp",
+    "file": ".omp/skills/trellis-meta/references/customize-local/change-workflow.md",
+    "size": 7492
+  },
+  {
+    "platform": "omp",
+    "file": ".omp/skills/trellis-meta/references/customize-local/overview.md",
+    "size": 2867
+  },
+  {
+    "platform": "omp",
+    "file": ".omp/skills/trellis-meta/references/local-architecture/spec-system.md",
+    "size": 3266
+  },
+  {
+    "platform": "omp",
+    "file": ".omp/skills/trellis-meta/references/local-architecture/task-system.md",
+    "size": 9558
+  },
+  {
+    "platform": "omp",
+    "file": ".omp/skills/trellis-meta/references/local-architecture/workspace-memory.md",
+    "size": 2734
+  },
+  {
+    "platform": "omp",
+    "file": ".omp/skills/trellis-meta/references/platform-files/agents.md",
+    "size": 4030
+  },
+  {
+    "platform": "omp",
+    "file": ".omp/agents/trellis-research.md",
+    "size": 1003
+  },
+  {
+    "platform": "omp",
+    "file": ".omp/extensions/trellis/index.ts",
+    "size": 43259
+  },
+  {
+    "platform": "kimi",
+    "file": ".agents/skills/trellis-before-dev/SKILL.md",
+    "size": 6391
+  },
+  {
+    "platform": "kimi",
+    "file": ".agents/skills/trellis-brainstorm/SKILL.md",
+    "size": 17533
+  },
+  {
+    "platform": "kimi",
+    "file": ".agents/skills/trellis-check/SKILL.md",
+    "size": 7650
+  },
+  {
+    "platform": "kimi",
+    "file": ".agents/skills/trellis-channel/references/progress-debugging.md",
+    "size": 8393
+  },
+  {
+    "platform": "kimi",
+    "file": ".agents/skills/trellis-meta/references/customize-local/add-project-local-conventions.md",
+    "size": 2500
+  },
+  {
+    "platform": "kimi",
+    "file": ".agents/skills/trellis-meta/references/customize-local/change-context-loading.md",
+    "size": 3302
+  },
+  {
+    "platform": "kimi",
+    "file": ".agents/skills/trellis-meta/references/customize-local/change-hooks.md",
+    "size": 2332
+  },
+  {
+    "platform": "kimi",
+    "file": ".agents/skills/trellis-meta/references/customize-local/change-spec-structure.md",
+    "size": 2360
+  },
+  {
+    "platform": "kimi",
+    "file": ".agents/skills/trellis-meta/references/customize-local/change-task-lifecycle.md",
+    "size": 4590
+  },
+  {
+    "platform": "kimi",
+    "file": ".agents/skills/trellis-meta/references/customize-local/change-workflow.md",
+    "size": 7492
+  },
+  {
+    "platform": "kimi",
+    "file": ".agents/skills/trellis-meta/references/customize-local/overview.md",
+    "size": 2867
+  },
+  {
+    "platform": "kimi",
+    "file": ".agents/skills/trellis-meta/references/local-architecture/spec-system.md",
+    "size": 3266
+  },
+  {
+    "platform": "kimi",
+    "file": ".agents/skills/trellis-meta/references/local-architecture/task-system.md",
+    "size": 9558
+  },
+  {
+    "platform": "kimi",
+    "file": ".agents/skills/trellis-meta/references/local-architecture/workspace-memory.md",
+    "size": 2734
+  },
+  {
+    "platform": "kimi",
+    "file": ".agents/skills/trellis-meta/references/platform-files/agents.md",
+    "size": 4030
+  }
+]

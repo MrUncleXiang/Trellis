@@ -1,0 +1,38 @@
+{
+  "userReply": "接受。",
+  "source": "Current conversation: user reply immediately following the request to permit a local A-only commit-hook exception for the documented 17 old failures. No message ID invented.",
+  "scope": "Local A commits necessary for implementation and separate formal-comparison evidence; retain full-test failures. No push, archive, amend, or permanent hook/config change.",
+  "samePreviouslyReviewedFailureSet": true,
+  "stagedCount": 317,
+  "unrecognizedStaged": [],
+  "frozen": [
+    {
+      "file": "prd.md",
+      "workingMatch": true,
+      "stagedMatch": true
+    },
+    {
+      "file": "design.md",
+      "workingMatch": true,
+      "stagedMatch": true
+    },
+    {
+      "file": "implement.md",
+      "workingMatch": true,
+      "stagedMatch": true
+    },
+    {
+      "file": "research/test-plan-2026-11-12.md",
+      "workingMatch": true,
+      "stagedMatch": true
+    },
+    {
+      "file": "research/context-read-map-2026-11-12.md",
+      "workingMatch": true,
+      "stagedMatch": true
+    }
+  ],
+  "originalProtectedUnchanged": true,
+  "mainBefore": "9b76fe49f19de4d383dd4677fea803e2f2da7004",
+  "submoduleCommit": "60228d8474ec836294884730579d1248a3ffb2d2"
+}

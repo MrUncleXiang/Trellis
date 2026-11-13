@@ -1,0 +1,29 @@
+{
+  "case": {
+    "id": "no-session-identity",
+    "status": "planning",
+    "files": "prd",
+    "manifests": null,
+    "command": "start",
+    "no_session": true
+  },
+  "command": [
+    "C:\\Python313\\python.exe",
+    ".trellis/scripts/task.py",
+    "start",
+    ".trellis/tasks/review-case"
+  ],
+  "exit": 0,
+  "statusAfter": "in_progress",
+  "activePointers": [],
+  "stdout": "\u001b[1;33mℹ Session identity not available; active-task pointer not persisted this session (degraded mode). AI continues based on conversation context.\u001b[0m\n\u001b[1;33mHint: run inside an AI IDE/session that exposes session identity, or set TRELLIS_CONTEXT_ID before running task.py start.\u001b[0m\n\u001b[0;32m✓ Status: planning → in_progress (degraded)\u001b[0m\n\u001b[0;32m✓ Branch recorded: master (degraded)\u001b[0m\n",
+  "stderr": "",
+  "before": {
+    "prd.md": "# Requirement\nChange a local prompt only.\n",
+    "task.json": "{\n  \"id\": \"review-case\",\n  \"name\": \"review-case\",\n  \"title\": \"Fixture\",\n  \"description\": \"Review only\",\n  \"status\": \"planning\",\n  \"branch\": null,\n  \"base_branch\": null,\n  \"meta\": {}\n}"
+  },
+  "after": {
+    "prd.md": "# Requirement\nChange a local prompt only.\n",
+    "task.json": "{\n  \"id\": \"review-case\",\n  \"name\": \"review-case\",\n  \"title\": \"Fixture\",\n  \"description\": \"Review only\",\n  \"status\": \"in_progress\",\n  \"branch\": \"master\",\n  \"base_branch\": null,\n  \"meta\": {}\n}"
+  }
+}

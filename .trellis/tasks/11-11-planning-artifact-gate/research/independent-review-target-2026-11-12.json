@@ -1,0 +1,39 @@
+{
+  "date": "2026-11-12T09:03:17.919400+00:00",
+  "head": "9b76fe49f19de4d383dd4677fea803e2f2da7004",
+  "taskStatus": "planning",
+  "reviewTargets": [
+    {
+      "file": "prd.md",
+      "sha256": "a3340af1341323007fe818511e65c324a82c9bee7acc1a6c0ae949b80036b91b"
+    },
+    {
+      "file": "design.md",
+      "sha256": "51f492ded1374e15964b0148937a2e1f6f2fe161aa2759288eb7f60fc0d2e0b4"
+    },
+    {
+      "file": "implement.md",
+      "sha256": "05d7a9a91890e7417fcb868b69460b04c39b0ff2c447f5a64775f66289541129"
+    },
+    {
+      "file": "research/test-plan-2026-11-12.md",
+      "sha256": "0f79479ea531667b852143536d43d9a3c1b63eb1e19d1ff755e2793c09bf3d14"
+    },
+    {
+      "file": "research/context-read-map-2026-11-12.md",
+      "sha256": "580ce899e0b97d3694edefd902e6bbba2a0fd529a0f7502cbc75802b72eb2d23"
+    }
+  ],
+  "reviewers": [
+    {
+      "id": "01a1cefc-bb83-73a2-8c29-ffbdd1c84d5d",
+      "responsibility": "design rationale and boundary review"
+    },
+    {
+      "id": "01a1cefd-cfaf-7463-a7ba-df5d1b537921",
+      "responsibility": "cross-document consistency and integration review"
+    }
+  ],
+  "scope": "read-only independent review; implementation not authorized",
+  "codegraphExists": false
+}

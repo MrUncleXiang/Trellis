@@ -18,8 +18,8 @@ Context loading determines when AI reads workflow, task, spec, research, workspa
 | --- | --- |
 | `.trellis/workflow.md` | Workflow and next-action hints. |
 | `.trellis/tasks/<task>/prd.md` | Current task requirements. |
-| `.trellis/tasks/<task>/design.md` | Complex task technical design. |
-| `.trellis/tasks/<task>/implement.md` | Complex task execution plan. |
+| `.trellis/tasks/<task>/design.md` | Technical design for every new task. |
+| `.trellis/tasks/<task>/implement.md` | Execution plan for every new task. |
 | `.trellis/tasks/<task>/implement.jsonl` | Spec/research to read before implementation. |
 | `.trellis/tasks/<task>/check.jsonl` | Spec/research to read during checking. |
 | `.trellis/spec/` | Project specs. |
@@ -69,8 +69,8 @@ In both modes, make sure the agent ultimately reads:
 2. the corresponding JSONL
 3. spec/research referenced by the JSONL
 4. `prd.md`
-5. `design.md` if present
-6. `implement.md` if present
+5. `design.md`
+6. `implement.md`
 
 ## Troubleshooting Order
 
@@ -82,3 +82,5 @@ python3 ./.trellis/scripts/get_context.py --mode packages
 ```
 
 Confirm the task and JSONL are correct before editing hooks/agents.
+
+Only already-started legacy tasks in `in_progress` or `review` with all planning-record keys absent may resume using available historical artifacts. Every new task needs all three concise planning files. Material changes return to the main session for `replan`, updated artifacts and renewed user confirmation; record ordinary progress separately.

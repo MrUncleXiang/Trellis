@@ -1,0 +1,21 @@
+{
+  "reason": "restore original LF formatting in A-edited sources; no blanket document normalization",
+  "files": [
+    "packages/cli/src/templates/codex/hooks/session-start.py",
+    "packages/cli/src/templates/common/bundled-skills/trellis-meta/references/customize-local/change-workflow.md",
+    "packages/cli/src/templates/common/commands/continue.md",
+    "packages/cli/src/templates/common/commands/start.md",
+    "packages/cli/src/templates/common/skills/before-dev.md",
+    "packages/cli/src/templates/common/skills/brainstorm.md",
+    "packages/cli/src/templates/common/skills/check.md",
+    "packages/cli/src/templates/copilot/hooks/session-start.py",
+    "packages/cli/src/templates/copilot/prompts/brainstorm.prompt.md",
+    "packages/cli/src/templates/copilot/prompts/start.prompt.md",
+    "packages/cli/src/templates/opencode/lib/session-utils.js",
+    "packages/cli/src/templates/shared-hooks/inject-subagent-context.py",
+    "packages/cli/src/templates/shared-hooks/session-start.py",
+    "packages/cli/src/templates/trellis/scripts/common/task_context.py",
+    "packages/cli/src/templates/trellis/scripts/common/task_store.py",
+    "packages/cli/src/templates/trellis/scripts/task.py"
+  ]
+}
