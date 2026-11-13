@@ -1,0 +1,90 @@
+{
+  "implementation": "1b801471966e8fb898d0c33e1b025aad2a86f5db",
+  "python": "Python 3.9.13",
+  "interpreter": "C:\\Users\\PXWD\\AppData\\Local\\Temp\\trellis-planning-python39\\python.exe",
+  "fixture": "C:\\Users\\PXWD\\AppData\\Local\\Temp\\trellis-a-pinned-py39-j480z08c",
+  "scope": "Real 3.9 interpreter and unmodified pinned script bytes; runpy adds fixture scripts to import path because embeddable interpreter excludes script directory. Replies are synthetic.",
+  "rows": [
+    {
+      "args": [
+        "attest",
+        ".trellis/tasks/smoke",
+        "--note",
+        "Pinned Python 3.9 fixture; structurally checked only"
+      ],
+      "exit": 0,
+      "stdout": "\u001b[0;32m✓ Planning version attested: 4cdfd1af094943379e3b924c7e138e85\u001b[0m\nNote: Pinned Python 3.9 fixture; structurally checked only\n  prd.md: 7d1758583b94b74bf70dd3cd12eb9ce527e9c9d208b145143b6b0a6f01c0d421\n  design.md: 73c91c00cb1ca77e009fb91466f68e5bba5bacbed10ff87e74a9f7e7338ffc7b\n  implement.md: 21b92f8e240c0c2b5932ec256439767a5d16e30e93df0565804fcf3357145c8e\nStill needs explicit user review and approval before start.\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "validate",
+        ".trellis/tasks/smoke"
+      ],
+      "exit": 0,
+      "stdout": "\u001b[0;34m=== Validating Context Files ===\u001b[0m\nTarget dir: C:\\Users\\PXWD\\AppData\\Local\\Temp\\trellis-a-pinned-py39-j480z08c\\.trellis\\tasks\\smoke\n\nPlanning: waiting_confirmation; review: 4cdfd1af094943379e3b924c7e138e85\nPlanning is not approved: awaiting user confirmation before start.\n  \u001b[1;33mimplement.jsonl: not found (skipped)\u001b[0m\n  \u001b[1;33mcheck.jsonl: not found (skipped)\u001b[0m\n\n\u001b[0;32m✓ All validations passed\u001b[0m\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "start",
+        ".trellis/tasks/smoke",
+        "--review",
+        "4cdfd1af094943379e3b924c7e138e85",
+        "--approval-note",
+        "Fixture-only confirmation; not a human approval",
+        "--approval-source",
+        "Fixture after reviewed version"
+      ],
+      "exit": 0,
+      "stdout": "\u001b[0;32m✓ Current task set to: .trellis/tasks/smoke\u001b[0m\nSource: session:pinned-py39\n",
+      "stderr": "\u001b[1;33mNote: no checked-out branch (detached HEAD, or not a git repository); task branch not recorded.\u001b[0m\n"
+    },
+    {
+      "args": [
+        "planning-status",
+        ".trellis/tasks/smoke",
+        "--json"
+      ],
+      "exit": 0,
+      "stdout": "{\"mode\": \"ready\", \"reviewId\": \"4cdfd1af094943379e3b924c7e138e85\", \"note\": \"Pinned Python 3.9 fixture; structurally checked only\", \"approvalNote\": \"Fixture-only confirmation; not a human approval\", \"approvalSource\": \"Fixture after reviewed version\", \"changedFiles\": [], \"errors\": [], \"replan\": null}\n",
+      "stderr": ""
+    }
+  ],
+  "final": {
+    "status": "in_progress",
+    "meta": {
+      "other": "preserve",
+      "planningAttest": {
+        "schemaVersion": 1,
+        "reviewId": "4cdfd1af094943379e3b924c7e138e85",
+        "attestedAt": "2026-11-13T02:37:06.347630+00:00",
+        "note": "Pinned Python 3.9 fixture; structurally checked only",
+        "reviewFiles": {
+          "prd.md": "7d1758583b94b74bf70dd3cd12eb9ce527e9c9d208b145143b6b0a6f01c0d421",
+          "design.md": "73c91c00cb1ca77e009fb91466f68e5bba5bacbed10ff87e74a9f7e7338ffc7b",
+          "implement.md": "21b92f8e240c0c2b5932ec256439767a5d16e30e93df0565804fcf3357145c8e"
+        },
+        "files": {
+          "prd.md": "7d1758583b94b74bf70dd3cd12eb9ce527e9c9d208b145143b6b0a6f01c0d421",
+          "design.md": "73c91c00cb1ca77e009fb91466f68e5bba5bacbed10ff87e74a9f7e7338ffc7b",
+          "implement.md": "21b92f8e240c0c2b5932ec256439767a5d16e30e93df0565804fcf3357145c8e"
+        },
+        "editorialChanges": []
+      },
+      "planningApproval": {
+        "schemaVersion": 1,
+        "reviewId": "4cdfd1af094943379e3b924c7e138e85",
+        "reviewedFiles": {
+          "prd.md": "7d1758583b94b74bf70dd3cd12eb9ce527e9c9d208b145143b6b0a6f01c0d421",
+          "design.md": "73c91c00cb1ca77e009fb91466f68e5bba5bacbed10ff87e74a9f7e7338ffc7b",
+          "implement.md": "21b92f8e240c0c2b5932ec256439767a5d16e30e93df0565804fcf3357145c8e"
+        },
+        "recordedAt": "2026-11-13T02:37:06.546956+00:00",
+        "note": "Fixture-only confirmation; not a human approval",
+        "source": "Fixture after reviewed version"
+      }
+    },
+    "unknownTop": "preserve"
+  }
+}

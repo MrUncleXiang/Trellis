@@ -1,0 +1,660 @@
+{
+  "checkedAt": "2026-11-13T02:44:08.616951+00:00",
+  "reviewer": "Main session; not an independent subagent review",
+  "implementation": "1b801471966e8fb898d0c33e1b025aad2a86f5db",
+  "before": "9b76fe49f19de4d383dd4677fea803e2f2da7004",
+  "frozen": [
+    {
+      "file": "prd.md",
+      "workingMatches": true,
+      "committedMatches": true
+    },
+    {
+      "file": "design.md",
+      "workingMatches": true,
+      "committedMatches": true
+    },
+    {
+      "file": "implement.md",
+      "workingMatches": true,
+      "committedMatches": true
+    },
+    {
+      "file": "research/test-plan-2026-11-12.md",
+      "workingMatches": true,
+      "committedMatches": true
+    },
+    {
+      "file": "research/context-read-map-2026-11-12.md",
+      "workingMatches": true,
+      "committedMatches": true
+    }
+  ],
+  "protectedOriginal": [
+    {
+      "file": ".claude/hooks/inject-subagent-context.py",
+      "same": true
+    },
+    {
+      "file": ".claude/hooks/session-start.py",
+      "same": true
+    },
+    {
+      "file": ".codex/hooks/inject-subagent-context.py",
+      "same": true
+    },
+    {
+      "file": ".cursor/hooks/inject-subagent-context.py",
+      "same": true
+    },
+    {
+      "file": ".cursor/hooks/session-start.py",
+      "same": true
+    },
+    {
+      "file": ".github/workflows/ci.yml",
+      "same": true
+    },
+    {
+      "file": ".opencode/lib/trellis-context.js",
+      "same": true
+    },
+    {
+      "file": ".trellis/scripts/common/__init__.py",
+      "same": true
+    },
+    {
+      "file": ".trellis/scripts/common/developer.py",
+      "same": true
+    },
+    {
+      "file": ".trellis/scripts/common/io.py",
+      "same": true
+    },
+    {
+      "file": ".trellis/scripts/common/task_context.py",
+      "same": true
+    },
+    {
+      "file": ".trellis/scripts/common/task_store.py",
+      "same": true
+    },
+    {
+      "file": ".trellis/scripts/hooks/linear_sync.py",
+      "same": true
+    },
+    {
+      "file": "package.json",
+      "same": true
+    },
+    {
+      "file": "packages/cli/src/templates/opencode/lib/trellis-context.js",
+      "same": true
+    },
+    {
+      "file": "packages/cli/src/templates/shared-hooks/inject-subagent-context.py",
+      "same": true
+    },
+    {
+      "file": "packages/cli/src/templates/shared-hooks/session-start.py",
+      "same": true
+    },
+    {
+      "file": "packages/cli/src/templates/trellis/scripts/common/__init__.py",
+      "same": true
+    },
+    {
+      "file": "packages/cli/src/templates/trellis/scripts/common/developer.py",
+      "same": true
+    },
+    {
+      "file": "packages/cli/src/templates/trellis/scripts/common/io.py",
+      "same": true
+    },
+    {
+      "file": "packages/cli/src/templates/trellis/scripts/common/task_context.py",
+      "same": true
+    },
+    {
+      "file": "packages/cli/src/templates/trellis/scripts/common/task_store.py",
+      "same": true
+    },
+    {
+      "file": "packages/cli/src/templates/trellis/scripts/hooks/linear_sync.py",
+      "same": true
+    },
+    {
+      "file": "packages/cli/test/commands/ablate.integration.test.ts",
+      "same": true
+    },
+    {
+      "file": "packages/cli/test/commands/platforms.integration.test.ts",
+      "same": true
+    },
+    {
+      "file": "packages/cli/test/commands/upgrade.test.ts",
+      "same": true
+    },
+    {
+      "file": "packages/cli/test/configurators/python-rewrite-parity.test.ts",
+      "same": true
+    },
+    {
+      "file": "packages/cli/test/registry-invariants.test.ts",
+      "same": true
+    },
+    {
+      "file": "packages/cli/test/regression.test.ts",
+      "same": true
+    },
+    {
+      "file": "packages/cli/test/scripts/add-session-worktree-warning.integration.test.ts",
+      "same": true
+    },
+    {
+      "file": "packages/cli/test/scripts/add-session.integration.test.ts",
+      "same": true
+    },
+    {
+      "file": "packages/cli/test/scripts/context-injection-limits.integration.test.ts",
+      "same": true
+    },
+    {
+      "file": "packages/cli/test/scripts/inject-workflow-state-kiro.integration.test.ts",
+      "same": true
+    },
+    {
+      "file": "packages/cli/test/scripts/prompt-injection-skip-keyword.integration.test.ts",
+      "same": true
+    },
+    {
+      "file": "packages/cli/test/scripts/symlinked-workflow-dir.integration.test.ts",
+      "same": true
+    },
+    {
+      "file": "packages/cli/test/scripts/task-archive.integration.test.ts",
+      "same": true
+    },
+    {
+      "file": "packages/cli/test/scripts/task-children-normalization.integration.test.ts",
+      "same": true
+    },
+    {
+      "file": "packages/cli/test/scripts/task-list-tree.integration.test.ts",
+      "same": true
+    },
+    {
+      "file": "packages/cli/test/scripts/task-meta.integration.test.ts",
+      "same": true
+    },
+    {
+      "file": "packages/cli/test/setup.ts",
+      "same": true
+    },
+    {
+      "file": "packages/cli/test/templates/trellis.test.ts",
+      "same": true
+    },
+    {
+      "file": "packages/cli/test/utils/atomic-write.test.ts",
+      "same": true
+    },
+    {
+      "file": "packages/cli/src/templates/trellis/workflow.md",
+      "same": true
+    },
+    {
+      "file": "marketplace/workflows/native/workflow.md",
+      "same": true
+    },
+    {
+      "file": "marketplace/workflows/tdd/workflow.md",
+      "same": true
+    },
+    {
+      "file": "marketplace/workflows/channel-driven-subagent-dispatch/workflow.md",
+      "same": true
+    }
+  ],
+  "scriptPairs": [
+    {
+      "file": "__init__.py",
+      "same": true
+    },
+    {
+      "file": "add_session.py",
+      "same": true
+    },
+    {
+      "file": "common/__init__.py",
+      "same": true
+    },
+    {
+      "file": "common/active_task.py",
+      "same": true
+    },
+    {
+      "file": "common/cli_adapter.py",
+      "same": true
+    },
+    {
+      "file": "common/config.py",
+      "same": true
+    },
+    {
+      "file": "common/developer.py",
+      "same": true
+    },
+    {
+      "file": "common/git.py",
+      "same": true
+    },
+    {
+      "file": "common/git_context.py",
+      "same": true
+    },
+    {
+      "file": "common/io.py",
+      "same": true
+    },
+    {
+      "file": "common/log.py",
+      "same": true
+    },
+    {
+      "file": "common/packages_context.py",
+      "same": true
+    },
+    {
+      "file": "common/paths.py",
+      "same": true
+    },
+    {
+      "file": "common/planning.py",
+      "same": true
+    },
+    {
+      "file": "common/safe_commit.py",
+      "same": true
+    },
+    {
+      "file": "common/session_context.py",
+      "same": true
+    },
+    {
+      "file": "common/task_context.py",
+      "same": true
+    },
+    {
+      "file": "common/task_queue.py",
+      "same": true
+    },
+    {
+      "file": "common/task_store.py",
+      "same": true
+    },
+    {
+      "file": "common/task_utils.py",
+      "same": true
+    },
+    {
+      "file": "common/tasks.py",
+      "same": true
+    },
+    {
+      "file": "common/trellis_config.py",
+      "same": true
+    },
+    {
+      "file": "common/types.py",
+      "same": true
+    },
+    {
+      "file": "common/workflow_phase.py",
+      "same": true
+    },
+    {
+      "file": "get_context.py",
+      "same": true
+    },
+    {
+      "file": "get_developer.py",
+      "same": true
+    },
+    {
+      "file": "hooks/linear_sync.py",
+      "same": true
+    },
+    {
+      "file": "init_developer.py",
+      "same": true
+    },
+    {
+      "file": "task.py",
+      "same": true
+    }
+  ],
+  "comparisonRawPairs": [
+    {
+      "case": "P01",
+      "checks": {
+        "expectedBefore": true,
+        "expectedAfter": true,
+        "assertionsBefore": true,
+        "assertionsAfter": true,
+        "sameFixture": true,
+        "sameEnvironmentKeys": true,
+        "initial-record": true,
+        "initial-fileHashes": true,
+        "initial-gitBranch": true,
+        "initial-sessionPointers": true,
+        "initial-activePointers": true,
+        "initial-hookRuns": true
+      }
+    },
+    {
+      "case": "P02",
+      "checks": {
+        "expectedBefore": true,
+        "expectedAfter": true,
+        "assertionsBefore": true,
+        "assertionsAfter": true,
+        "sameFixture": true,
+        "sameEnvironmentKeys": true,
+        "initial-record": true,
+        "initial-fileHashes": true,
+        "initial-gitBranch": true,
+        "initial-sessionPointers": true,
+        "initial-activePointers": true,
+        "initial-hookRuns": true
+      }
+    },
+    {
+      "case": "P03",
+      "checks": {
+        "expectedBefore": true,
+        "expectedAfter": true,
+        "assertionsBefore": true,
+        "assertionsAfter": true,
+        "sameFixture": true,
+        "sameEnvironmentKeys": true,
+        "initial-record": true,
+        "initial-fileHashes": true,
+        "initial-gitBranch": true,
+        "initial-sessionPointers": true,
+        "initial-activePointers": true,
+        "initial-hookRuns": true
+      }
+    },
+    {
+      "case": "P04",
+      "checks": {
+        "expectedBefore": true,
+        "expectedAfter": true,
+        "assertionsBefore": true,
+        "assertionsAfter": true,
+        "sameFixture": true,
+        "sameEnvironmentKeys": true,
+        "initial-record": true,
+        "initial-fileHashes": true,
+        "initial-gitBranch": true,
+        "initial-sessionPointers": true,
+        "initial-activePointers": true,
+        "initial-hookRuns": true
+      }
+    },
+    {
+      "case": "P05",
+      "checks": {
+        "expectedBefore": true,
+        "expectedAfter": true,
+        "assertionsBefore": true,
+        "assertionsAfter": true,
+        "sameFixture": true,
+        "sameEnvironmentKeys": true,
+        "initial-record": true,
+        "initial-fileHashes": true,
+        "initial-gitBranch": true,
+        "initial-sessionPointers": true,
+        "initial-activePointers": true,
+        "initial-hookRuns": true
+      }
+    },
+    {
+      "case": "P06",
+      "checks": {
+        "expectedBefore": true,
+        "expectedAfter": true,
+        "assertionsBefore": true,
+        "assertionsAfter": true,
+        "sameFixture": true,
+        "sameEnvironmentKeys": true,
+        "initial-record": true,
+        "initial-fileHashes": true,
+        "initial-gitBranch": true,
+        "initial-sessionPointers": true,
+        "initial-activePointers": true,
+        "initial-hookRuns": true
+      }
+    },
+    {
+      "case": "P07",
+      "checks": {
+        "expectedBefore": true,
+        "expectedAfter": true,
+        "assertionsBefore": true,
+        "assertionsAfter": true,
+        "sameFixture": true,
+        "sameEnvironmentKeys": true,
+        "initial-record": true,
+        "initial-fileHashes": true,
+        "initial-gitBranch": true,
+        "initial-sessionPointers": true,
+        "initial-activePointers": true,
+        "initial-hookRuns": true
+      }
+    },
+    {
+      "case": "P08",
+      "checks": {
+        "expectedBefore": true,
+        "expectedAfter": true,
+        "assertionsBefore": true,
+        "assertionsAfter": true,
+        "sameFixture": true,
+        "sameEnvironmentKeys": true,
+        "initial-record": true,
+        "initial-fileHashes": true,
+        "initial-gitBranch": true,
+        "initial-sessionPointers": true,
+        "initial-activePointers": true,
+        "initial-hookRuns": true
+      }
+    },
+    {
+      "case": "P09",
+      "checks": {
+        "expectedBefore": true,
+        "expectedAfter": true,
+        "assertionsBefore": true,
+        "assertionsAfter": true,
+        "sameFixture": true,
+        "sameEnvironmentKeys": true,
+        "initial-record": true,
+        "initial-fileHashes": true,
+        "initial-gitBranch": true,
+        "initial-sessionPointers": true,
+        "initial-activePointers": true,
+        "initial-hookRuns": true
+      }
+    },
+    {
+      "case": "P10",
+      "checks": {
+        "expectedBefore": true,
+        "expectedAfter": true,
+        "assertionsBefore": true,
+        "assertionsAfter": true,
+        "sameFixture": true,
+        "sameEnvironmentKeys": true,
+        "initial-record": true,
+        "initial-fileHashes": true,
+        "initial-gitBranch": true,
+        "initial-sessionPointers": true,
+        "initial-activePointers": true,
+        "initial-hookRuns": true
+      }
+    },
+    {
+      "case": "P11",
+      "checks": {
+        "expectedBefore": true,
+        "expectedAfter": true,
+        "assertionsBefore": true,
+        "assertionsAfter": true,
+        "sameFixture": true,
+        "sameEnvironmentKeys": true,
+        "initial-record": true,
+        "initial-fileHashes": true,
+        "initial-gitBranch": true,
+        "initial-sessionPointers": true,
+        "initial-activePointers": true,
+        "initial-hookRuns": true
+      }
+    },
+    {
+      "case": "P12/variant-1",
+      "checks": {
+        "expectedBefore": true,
+        "expectedAfter": true,
+        "assertionsBefore": true,
+        "assertionsAfter": true,
+        "sameFixture": true,
+        "sameEnvironmentKeys": true,
+        "initial-record": true,
+        "initial-fileHashes": true,
+        "initial-gitBranch": true,
+        "initial-sessionPointers": true,
+        "initial-activePointers": true,
+        "initial-hookRuns": true
+      }
+    },
+    {
+      "case": "P12/variant-2",
+      "checks": {
+        "expectedBefore": true,
+        "expectedAfter": true,
+        "assertionsBefore": true,
+        "assertionsAfter": true,
+        "sameFixture": true,
+        "sameEnvironmentKeys": true,
+        "initial-record": true,
+        "initial-fileHashes": true,
+        "initial-gitBranch": true,
+        "initial-sessionPointers": true,
+        "initial-activePointers": true,
+        "initial-hookRuns": true
+      }
+    },
+    {
+      "case": "P13",
+      "checks": {
+        "expectedBefore": true,
+        "expectedAfter": true,
+        "assertionsBefore": true,
+        "assertionsAfter": true,
+        "sameFixture": true,
+        "sameEnvironmentKeys": true,
+        "initial-record": true,
+        "initial-fileHashes": true,
+        "initial-gitBranch": true,
+        "initial-sessionPointers": true,
+        "initial-activePointers": true,
+        "initial-hookRuns": true
+      }
+    },
+    {
+      "case": "P14/variant-1",
+      "checks": {
+        "expectedBefore": true,
+        "expectedAfter": true,
+        "assertionsBefore": true,
+        "assertionsAfter": true,
+        "sameFixture": true,
+        "sameEnvironmentKeys": true,
+        "initial-record": true,
+        "initial-fileHashes": true,
+        "initial-gitBranch": true,
+        "initial-sessionPointers": true,
+        "initial-activePointers": true,
+        "initial-hookRuns": true
+      }
+    },
+    {
+      "case": "P14/variant-2",
+      "checks": {
+        "expectedBefore": true,
+        "expectedAfter": true,
+        "assertionsBefore": true,
+        "assertionsAfter": true,
+        "sameFixture": true,
+        "sameEnvironmentKeys": true,
+        "initial-record": true,
+        "initial-fileHashes": true,
+        "initial-gitBranch": true,
+        "initial-sessionPointers": true,
+        "initial-activePointers": true,
+        "initial-hookRuns": true
+      }
+    },
+    {
+      "case": "P15",
+      "checks": {
+        "expectedBefore": true,
+        "expectedAfter": true,
+        "assertionsBefore": true,
+        "assertionsAfter": true,
+        "sameFixture": true,
+        "sameEnvironmentKeys": true,
+        "initial-record": true,
+        "initial-fileHashes": true,
+        "initial-gitBranch": true,
+        "initial-sessionPointers": true,
+        "initial-activePointers": true,
+        "initial-hookRuns": true
+      }
+    },
+    {
+      "case": "P16",
+      "checks": {
+        "expectedBefore": true,
+        "expectedAfter": true,
+        "assertionsBefore": true,
+        "assertionsAfter": true,
+        "sameFixture": true,
+        "sameEnvironmentKeys": true,
+        "initial-record": true,
+        "initial-fileHashes": true,
+        "initial-gitBranch": true,
+        "initial-sessionPointers": true,
+        "initial-activePointers": true,
+        "initial-hookRuns": true
+      }
+    }
+  ],
+  "issues": [],
+  "submoduleClean": true,
+  "trackedChangesBeforeEvidenceUpdate": [],
+  "m2": {
+    "reviewId": "c4eb6574fa664ef3a770c94db22aa5cd",
+    "stillPlanning": true,
+    "approvalAbsent": true,
+    "fingerprintsMatch": true,
+    "realReplyReceived": false
+  },
+  "independentReviewAttempt": {
+    "attempted": true,
+    "completed": false,
+    "error": "Unknown model deepseek-v4.1-flash-1017; configured inherited model unavailable. No new independent review claimed."
+  }
+}

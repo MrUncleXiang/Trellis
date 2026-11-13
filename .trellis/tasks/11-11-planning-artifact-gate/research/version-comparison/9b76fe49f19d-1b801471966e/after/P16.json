@@ -1,0 +1,301 @@
+{
+  "id": "P16",
+  "scenario": "P16",
+  "version": "after",
+  "fixture": {
+    "id": "P16",
+    "files": "prd",
+    "manifests": "curated",
+    "status": "in_progress",
+    "command": "archive"
+  },
+  "environmentKeys": [
+    "APPDATA",
+    "COMSPEC",
+    "HOMEDRIVE",
+    "HOMEPATH",
+    "LOCALAPPDATA",
+    "PATH",
+    "PATHEXT",
+    "PROGRAMDATA",
+    "PROGRAMFILES",
+    "PROGRAMFILES(X86)",
+    "PYTHONDONTWRITEBYTECODE",
+    "PYTHONIOENCODING",
+    "SYSTEMROOT",
+    "TEMP",
+    "TMP",
+    "TRELLIS_CONTEXT_ID",
+    "TRELLIS_DEVELOPER",
+    "USERPROFILE",
+    "WINDIR"
+  ],
+  "initial": {
+    "taskRef": ".trellis/tasks/review-case",
+    "taskPath": "C:\\Users\\PXWD\\AppData\\Local\\Temp\\trellis-a-pinned-comparison-pbpnmz7u\\after\\after\\P16\\.trellis\\tasks\\review-case",
+    "fileHashes": {
+      "check.jsonl": "34cfa347ccf72c9e636670bde19a97d01479ef48311e5530402fd0891f958981",
+      "implement.jsonl": "34cfa347ccf72c9e636670bde19a97d01479ef48311e5530402fd0891f958981",
+      "prd.md": "f2242d74b5e319c9dd156bfe3458a3d8accace025d95d4b2a46fbf742bee57d4",
+      "task.json": "44166224f76d3e4f44ca6f3ad8303541aacc85092953616cae8d3e34bcad95c9"
+    },
+    "record": {
+      "id": "review-case",
+      "name": "review-case",
+      "title": "Fixture",
+      "description": "Review only",
+      "status": "in_progress",
+      "branch": "compare-feature",
+      "base_branch": "main",
+      "unknownTop": "preserve",
+      "meta": {
+        "other": {
+          "keep": true
+        }
+      }
+    },
+    "recordError": null,
+    "taskStatus": "in_progress",
+    "sessionPointers": [],
+    "activePointers": [],
+    "gitBranch": "compare-feature",
+    "gitHead": "1c57df24b32aff03ed2a31b031cee183e8ad7e5d",
+    "gitStatusPorcelain": "",
+    "hookRuns": {
+      "file": "hook-runs.txt",
+      "sha256": null,
+      "text": "",
+      "counts": {
+        "after_start": 0,
+        "after_archive": 0
+      }
+    }
+  },
+  "steps": [
+    {
+      "kind": "command",
+      "label": "archive",
+      "argv": [
+        "python",
+        ".trellis/scripts/task.py",
+        "archive",
+        ".trellis/tasks/review-case"
+      ],
+      "environmentKeys": [
+        "APPDATA",
+        "COMSPEC",
+        "HOMEDRIVE",
+        "HOMEPATH",
+        "LOCALAPPDATA",
+        "PATH",
+        "PATHEXT",
+        "PROGRAMDATA",
+        "PROGRAMFILES",
+        "PROGRAMFILES(X86)",
+        "PYTHONDONTWRITEBYTECODE",
+        "PYTHONIOENCODING",
+        "SYSTEMROOT",
+        "TEMP",
+        "TMP",
+        "TRELLIS_CONTEXT_ID",
+        "TRELLIS_DEVELOPER",
+        "USERPROFILE",
+        "WINDIR"
+      ],
+      "exit": 0,
+      "expectedExit": 0,
+      "stdout": ".trellis/tasks/archive/2026-11/review-case\n",
+      "stderr": "\u001b[1;33mWarning: planning: design.md: unreadable UTF-8 text ([Errno 2] No such file or directory: 'C:\\\\Users\\\\PXWD\\\\AppData\\\\Local\\\\Temp\\\\trellis-a-pinned-comparison-pbpnmz7u\\\\after\\\\after\\\\P16\\\\.trellis\\\\tasks\\\\review-case\\\\design.md')\u001b[0m\n\u001b[1;33mWarning: planning: implement.md: unreadable UTF-8 text ([Errno 2] No such file or directory: 'C:\\\\Users\\\\PXWD\\\\AppData\\\\Local\\\\Temp\\\\trellis-a-pinned-comparison-pbpnmz7u\\\\after\\\\after\\\\P16\\\\.trellis\\\\tasks\\\\review-case\\\\implement.md')\u001b[0m\n\u001b[0;32mArchived: review-case -> archive/2026-11/\u001b[0m\n[OK] session_auto_commit: false — skipping git stage/commit.\n",
+      "launchError": null,
+      "seconds": 0.40039,
+      "before": {
+        "taskRef": ".trellis/tasks/review-case",
+        "taskPath": "C:\\Users\\PXWD\\AppData\\Local\\Temp\\trellis-a-pinned-comparison-pbpnmz7u\\after\\after\\P16\\.trellis\\tasks\\review-case",
+        "fileHashes": {
+          "check.jsonl": "34cfa347ccf72c9e636670bde19a97d01479ef48311e5530402fd0891f958981",
+          "implement.jsonl": "34cfa347ccf72c9e636670bde19a97d01479ef48311e5530402fd0891f958981",
+          "prd.md": "f2242d74b5e319c9dd156bfe3458a3d8accace025d95d4b2a46fbf742bee57d4",
+          "task.json": "44166224f76d3e4f44ca6f3ad8303541aacc85092953616cae8d3e34bcad95c9"
+        },
+        "record": {
+          "id": "review-case",
+          "name": "review-case",
+          "title": "Fixture",
+          "description": "Review only",
+          "status": "in_progress",
+          "branch": "compare-feature",
+          "base_branch": "main",
+          "unknownTop": "preserve",
+          "meta": {
+            "other": {
+              "keep": true
+            }
+          }
+        },
+        "recordError": null,
+        "taskStatus": "in_progress",
+        "sessionPointers": [],
+        "activePointers": [],
+        "gitBranch": "compare-feature",
+        "gitHead": "1c57df24b32aff03ed2a31b031cee183e8ad7e5d",
+        "gitStatusPorcelain": "",
+        "hookRuns": {
+          "file": "hook-runs.txt",
+          "sha256": null,
+          "text": "",
+          "counts": {
+            "after_start": 0,
+            "after_archive": 0
+          }
+        }
+      },
+      "after": {
+        "taskRef": ".trellis/tasks/archive/2026-11/review-case",
+        "taskPath": "C:\\Users\\PXWD\\AppData\\Local\\Temp\\trellis-a-pinned-comparison-pbpnmz7u\\after\\after\\P16\\.trellis\\tasks\\archive\\2026-11\\review-case",
+        "fileHashes": {
+          "check.jsonl": "34cfa347ccf72c9e636670bde19a97d01479ef48311e5530402fd0891f958981",
+          "implement.jsonl": "34cfa347ccf72c9e636670bde19a97d01479ef48311e5530402fd0891f958981",
+          "prd.md": "f2242d74b5e319c9dd156bfe3458a3d8accace025d95d4b2a46fbf742bee57d4",
+          "task.json": "cf402f360086f44f0bb25022ba6d9504223af72fad5807b15aa110fd1f5a9457"
+        },
+        "record": {
+          "id": "review-case",
+          "name": "review-case",
+          "title": "Fixture",
+          "description": "Review only",
+          "status": "completed",
+          "branch": "compare-feature",
+          "base_branch": "main",
+          "unknownTop": "preserve",
+          "meta": {
+            "other": {
+              "keep": true
+            }
+          },
+          "completedAt": "2026-11-13"
+        },
+        "recordError": null,
+        "taskStatus": "completed",
+        "sessionPointers": [],
+        "activePointers": [],
+        "gitBranch": "compare-feature",
+        "gitHead": "1c57df24b32aff03ed2a31b031cee183e8ad7e5d",
+        "gitStatusPorcelain": "D .trellis/tasks/review-case/check.jsonl\n D .trellis/tasks/review-case/implement.jsonl\n D .trellis/tasks/review-case/prd.md\n D .trellis/tasks/review-case/task.json\n?? .trellis/tasks/archive/\n?? hook-runs.txt",
+        "hookRuns": {
+          "file": "hook-runs.txt",
+          "sha256": "3d7fc3b65e43504944f2df59c6f1022b6a4219c04de29998bd5208fd9f5ada59",
+          "text": "after_archive\n",
+          "counts": {
+            "after_start": 0,
+            "after_archive": 1
+          }
+        }
+      }
+    }
+  ],
+  "final": {
+    "taskRef": ".trellis/tasks/archive/2026-11/review-case",
+    "taskPath": "C:\\Users\\PXWD\\AppData\\Local\\Temp\\trellis-a-pinned-comparison-pbpnmz7u\\after\\after\\P16\\.trellis\\tasks\\archive\\2026-11\\review-case",
+    "fileHashes": {
+      "check.jsonl": "34cfa347ccf72c9e636670bde19a97d01479ef48311e5530402fd0891f958981",
+      "implement.jsonl": "34cfa347ccf72c9e636670bde19a97d01479ef48311e5530402fd0891f958981",
+      "prd.md": "f2242d74b5e319c9dd156bfe3458a3d8accace025d95d4b2a46fbf742bee57d4",
+      "task.json": "cf402f360086f44f0bb25022ba6d9504223af72fad5807b15aa110fd1f5a9457"
+    },
+    "record": {
+      "id": "review-case",
+      "name": "review-case",
+      "title": "Fixture",
+      "description": "Review only",
+      "status": "completed",
+      "branch": "compare-feature",
+      "base_branch": "main",
+      "unknownTop": "preserve",
+      "meta": {
+        "other": {
+          "keep": true
+        }
+      },
+      "completedAt": "2026-11-13"
+    },
+    "recordError": null,
+    "taskStatus": "completed",
+    "sessionPointers": [],
+    "activePointers": [],
+    "gitBranch": "compare-feature",
+    "gitHead": "1c57df24b32aff03ed2a31b031cee183e8ad7e5d",
+    "gitStatusPorcelain": "D .trellis/tasks/review-case/check.jsonl\n D .trellis/tasks/review-case/implement.jsonl\n D .trellis/tasks/review-case/prd.md\n D .trellis/tasks/review-case/task.json\n?? .trellis/tasks/archive/\n?? hook-runs.txt",
+    "hookRuns": {
+      "file": "hook-runs.txt",
+      "sha256": "3d7fc3b65e43504944f2df59c6f1022b6a4219c04de29998bd5208fd9f5ada59",
+      "text": "after_archive\n",
+      "counts": {
+        "after_start": 0,
+        "after_archive": 1
+      }
+    }
+  },
+  "assertions": [
+    {
+      "name": "archive-exit",
+      "passed": true,
+      "expected": 0,
+      "actual": 0
+    },
+    {
+      "name": "archive-warning",
+      "passed": true,
+      "expected": "planning warning",
+      "actual": "\u001b[1;33mWarning: planning: design.md: unreadable UTF-8 text ([Errno 2] No such file or directory: 'C:\\\\Users\\\\PXWD\\\\AppData\\\\Local\\\\Temp\\\\trellis-a-pinned-comparison-pbpnmz7u\\\\after\\\\after\\\\P16\\\\.trellis\\\\tasks\\\\review-case\\\\design.md')\u001b[0m\n\u001b[1;33mWarning: planning: implement.md: unreadable UTF-8 text ([Errno 2] No such file or directory: 'C:\\\\Users\\\\PXWD\\\\AppData\\\\Local\\\\Temp\\\\trellis-a-pinned-comparison-pbpnmz7u\\\\after\\\\after\\\\P16\\\\.trellis\\\\tasks\\\\review-case\\\\implement.md')\u001b[0m\n\u001b[0;32mArchived: review-case -> archive/2026-11/\u001b[0m\n[OK] session_auto_commit: false — skipping git stage/commit.\n"
+    },
+    {
+      "name": "archive-destination",
+      "passed": true,
+      "expected": "archive path",
+      "actual": ".trellis/tasks/archive/2026-11/review-case"
+    },
+    {
+      "name": "archived-status",
+      "passed": true,
+      "expected": "completed",
+      "actual": "completed"
+    },
+    {
+      "name": "archived-unknown-top",
+      "passed": true,
+      "expected": "preserve",
+      "actual": "preserve"
+    },
+    {
+      "name": "archived-other-meta",
+      "passed": true,
+      "expected": {
+        "keep": true
+      },
+      "actual": {
+        "keep": true
+      }
+    },
+    {
+      "name": "archived-branch",
+      "passed": true,
+      "expected": "compare-feature",
+      "actual": "compare-feature"
+    },
+    {
+      "name": "archive-hook",
+      "passed": true,
+      "expected": 1,
+      "actual": 1
+    },
+    {
+      "name": "exit-archive",
+      "passed": true,
+      "expected": 0,
+      "actual": 0
+    }
+  ],
+  "expectationMatched": true,
+  "classification": "executed",
+  "capabilityAbsentAt": null
+}

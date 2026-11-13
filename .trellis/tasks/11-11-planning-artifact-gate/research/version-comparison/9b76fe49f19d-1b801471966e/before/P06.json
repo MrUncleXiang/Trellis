@@ -1,0 +1,221 @@
+{
+  "id": "P06",
+  "scenario": "corrupt-task-json",
+  "version": "before",
+  "fixture": {
+    "id": "corrupt-task-json",
+    "status": "corrupt",
+    "files": null,
+    "manifests": "curated",
+    "command": "start"
+  },
+  "environmentKeys": [
+    "APPDATA",
+    "COMSPEC",
+    "HOMEDRIVE",
+    "HOMEPATH",
+    "LOCALAPPDATA",
+    "PATH",
+    "PATHEXT",
+    "PROGRAMDATA",
+    "PROGRAMFILES",
+    "PROGRAMFILES(X86)",
+    "PYTHONDONTWRITEBYTECODE",
+    "PYTHONIOENCODING",
+    "SYSTEMROOT",
+    "TEMP",
+    "TMP",
+    "TRELLIS_CONTEXT_ID",
+    "TRELLIS_DEVELOPER",
+    "USERPROFILE",
+    "WINDIR"
+  ],
+  "initial": {
+    "taskRef": ".trellis/tasks/review-case",
+    "taskPath": "C:\\Users\\PXWD\\AppData\\Local\\Temp\\trellis-a-pinned-comparison-pbpnmz7u\\before\\before\\corrupt-task-json\\.trellis\\tasks\\review-case",
+    "fileHashes": {
+      "check.jsonl": "34cfa347ccf72c9e636670bde19a97d01479ef48311e5530402fd0891f958981",
+      "implement.jsonl": "34cfa347ccf72c9e636670bde19a97d01479ef48311e5530402fd0891f958981",
+      "task.json": "f06368fc6aac4a1a3b75e018d11a120325e604b9a99d6002dca6acdca46b216a"
+    },
+    "record": null,
+    "recordError": "Expecting property name enclosed in double quotes: line 1 column 3 (char 2)",
+    "taskStatus": "corrupt",
+    "sessionPointers": [],
+    "activePointers": [],
+    "gitBranch": "compare-feature",
+    "gitHead": "a78a0f91833ef7b44e282fafdf04e42333a1976a",
+    "gitStatusPorcelain": "",
+    "hookRuns": {
+      "file": "hook-runs.txt",
+      "sha256": null,
+      "text": "",
+      "counts": {
+        "after_start": 0,
+        "after_archive": 0
+      }
+    }
+  },
+  "steps": [
+    {
+      "kind": "command",
+      "label": "start",
+      "argv": [
+        "python",
+        ".trellis/scripts/task.py",
+        "start",
+        ".trellis/tasks/review-case"
+      ],
+      "environmentKeys": [
+        "APPDATA",
+        "COMSPEC",
+        "HOMEDRIVE",
+        "HOMEPATH",
+        "LOCALAPPDATA",
+        "PATH",
+        "PATHEXT",
+        "PROGRAMDATA",
+        "PROGRAMFILES",
+        "PROGRAMFILES(X86)",
+        "PYTHONDONTWRITEBYTECODE",
+        "PYTHONIOENCODING",
+        "SYSTEMROOT",
+        "TEMP",
+        "TMP",
+        "TRELLIS_CONTEXT_ID",
+        "TRELLIS_DEVELOPER",
+        "USERPROFILE",
+        "WINDIR"
+      ],
+      "exit": 0,
+      "expectedExit": null,
+      "stdout": "\u001b[0;32m✓ Current task set to: .trellis/tasks/review-case\u001b[0m\nSource: session:review-corrupt-task-json\n\n\u001b[0;34mThe hook will now inject context from this task's jsonl files.\u001b[0m\n",
+      "stderr": "\u001b[1;33mWarning: C:\\Users\\PXWD\\AppData\\Local\\Temp\\trellis-a-pinned-comparison-pbpnmz7u\\before\\before\\corrupt-task-json\\.trellis\\tasks\\review-case\\task.json: not valid JSON; task.json not updated.\u001b[0m\nFix the syntax (e.g. `python3 -m json.tool C:\\Users\\PXWD\\AppData\\Local\\Temp\\trellis-a-pinned-comparison-pbpnmz7u\\before\\before\\corrupt-task-json\\.trellis\\tasks\\review-case\\task.json`), then retry.\n",
+      "launchError": null,
+      "seconds": 0.376147,
+      "before": {
+        "taskRef": ".trellis/tasks/review-case",
+        "taskPath": "C:\\Users\\PXWD\\AppData\\Local\\Temp\\trellis-a-pinned-comparison-pbpnmz7u\\before\\before\\corrupt-task-json\\.trellis\\tasks\\review-case",
+        "fileHashes": {
+          "check.jsonl": "34cfa347ccf72c9e636670bde19a97d01479ef48311e5530402fd0891f958981",
+          "implement.jsonl": "34cfa347ccf72c9e636670bde19a97d01479ef48311e5530402fd0891f958981",
+          "task.json": "f06368fc6aac4a1a3b75e018d11a120325e604b9a99d6002dca6acdca46b216a"
+        },
+        "record": null,
+        "recordError": "Expecting property name enclosed in double quotes: line 1 column 3 (char 2)",
+        "taskStatus": "corrupt",
+        "sessionPointers": [],
+        "activePointers": [],
+        "gitBranch": "compare-feature",
+        "gitHead": "a78a0f91833ef7b44e282fafdf04e42333a1976a",
+        "gitStatusPorcelain": "",
+        "hookRuns": {
+          "file": "hook-runs.txt",
+          "sha256": null,
+          "text": "",
+          "counts": {
+            "after_start": 0,
+            "after_archive": 0
+          }
+        }
+      },
+      "after": {
+        "taskRef": ".trellis/tasks/review-case",
+        "taskPath": "C:\\Users\\PXWD\\AppData\\Local\\Temp\\trellis-a-pinned-comparison-pbpnmz7u\\before\\before\\corrupt-task-json\\.trellis\\tasks\\review-case",
+        "fileHashes": {
+          "check.jsonl": "34cfa347ccf72c9e636670bde19a97d01479ef48311e5530402fd0891f958981",
+          "implement.jsonl": "34cfa347ccf72c9e636670bde19a97d01479ef48311e5530402fd0891f958981",
+          "task.json": "f06368fc6aac4a1a3b75e018d11a120325e604b9a99d6002dca6acdca46b216a"
+        },
+        "record": null,
+        "recordError": "Expecting property name enclosed in double quotes: line 1 column 3 (char 2)",
+        "taskStatus": "corrupt",
+        "sessionPointers": [
+          {
+            "file": "review-corrupt-task-json.json",
+            "sha256": "0f17509c28dd8beed78cfa9e44c88993f877e1a0d83d492f9538b9da3fe31bb1",
+            "record": {
+              "platform": "session",
+              "last_seen_at": "2026-11-13T02:32:40Z",
+              "current_task": ".trellis/tasks/review-case",
+              "current_run": null
+            },
+            "parseError": null
+          }
+        ],
+        "activePointers": [
+          ".trellis/tasks/review-case"
+        ],
+        "gitBranch": "compare-feature",
+        "gitHead": "a78a0f91833ef7b44e282fafdf04e42333a1976a",
+        "gitStatusPorcelain": "?? .trellis/.runtime/\n?? hook-runs.txt",
+        "hookRuns": {
+          "file": "hook-runs.txt",
+          "sha256": "fe2a2e451e790abd31aeb7fa90189c00d850276a765d99e9d97190abe1c5f5b0",
+          "text": "after_start\n",
+          "counts": {
+            "after_start": 1,
+            "after_archive": 0
+          }
+        }
+      }
+    }
+  ],
+  "final": {
+    "taskRef": ".trellis/tasks/review-case",
+    "taskPath": "C:\\Users\\PXWD\\AppData\\Local\\Temp\\trellis-a-pinned-comparison-pbpnmz7u\\before\\before\\corrupt-task-json\\.trellis\\tasks\\review-case",
+    "fileHashes": {
+      "check.jsonl": "34cfa347ccf72c9e636670bde19a97d01479ef48311e5530402fd0891f958981",
+      "implement.jsonl": "34cfa347ccf72c9e636670bde19a97d01479ef48311e5530402fd0891f958981",
+      "task.json": "f06368fc6aac4a1a3b75e018d11a120325e604b9a99d6002dca6acdca46b216a"
+    },
+    "record": null,
+    "recordError": "Expecting property name enclosed in double quotes: line 1 column 3 (char 2)",
+    "taskStatus": "corrupt",
+    "sessionPointers": [
+      {
+        "file": "review-corrupt-task-json.json",
+        "sha256": "0f17509c28dd8beed78cfa9e44c88993f877e1a0d83d492f9538b9da3fe31bb1",
+        "record": {
+          "platform": "session",
+          "last_seen_at": "2026-11-13T02:32:40Z",
+          "current_task": ".trellis/tasks/review-case",
+          "current_run": null
+        },
+        "parseError": null
+      }
+    ],
+    "activePointers": [
+      ".trellis/tasks/review-case"
+    ],
+    "gitBranch": "compare-feature",
+    "gitHead": "a78a0f91833ef7b44e282fafdf04e42333a1976a",
+    "gitStatusPorcelain": "?? .trellis/.runtime/\n?? hook-runs.txt",
+    "hookRuns": {
+      "file": "hook-runs.txt",
+      "sha256": "fe2a2e451e790abd31aeb7fa90189c00d850276a765d99e9d97190abe1c5f5b0",
+      "text": "after_start\n",
+      "counts": {
+        "after_start": 1,
+        "after_archive": 0
+      }
+    }
+  },
+  "assertions": [
+    {
+      "name": "firstExit",
+      "passed": true,
+      "expected": 0,
+      "actual": 0
+    },
+    {
+      "name": "pointers",
+      "passed": true,
+      "expected": 1,
+      "actual": 1
+    }
+  ],
+  "expectationMatched": true,
+  "classification": "executed",
+  "capabilityAbsentAt": null
+}

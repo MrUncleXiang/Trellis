@@ -1,0 +1,250 @@
+{
+  "id": "P07",
+  "scenario": "no-session-identity",
+  "version": "after",
+  "fixture": {
+    "id": "no-session-identity",
+    "status": "planning",
+    "files": "prd",
+    "manifests": null,
+    "command": "start",
+    "no_session": true
+  },
+  "environmentKeys": [
+    "APPDATA",
+    "COMSPEC",
+    "HOMEDRIVE",
+    "HOMEPATH",
+    "LOCALAPPDATA",
+    "PATH",
+    "PATHEXT",
+    "PROGRAMDATA",
+    "PROGRAMFILES",
+    "PROGRAMFILES(X86)",
+    "PYTHONDONTWRITEBYTECODE",
+    "PYTHONIOENCODING",
+    "SYSTEMROOT",
+    "TEMP",
+    "TMP",
+    "TRELLIS_DEVELOPER",
+    "USERPROFILE",
+    "WINDIR"
+  ],
+  "initial": {
+    "taskRef": ".trellis/tasks/review-case",
+    "taskPath": "C:\\Users\\PXWD\\AppData\\Local\\Temp\\trellis-a-pinned-comparison-pbpnmz7u\\after\\after\\no-session-identity\\.trellis\\tasks\\review-case",
+    "fileHashes": {
+      "prd.md": "f2242d74b5e319c9dd156bfe3458a3d8accace025d95d4b2a46fbf742bee57d4",
+      "task.json": "a799087d67a4409478becea82b0001a652c3da7eb66b269a9a7e39923d79fa43"
+    },
+    "record": {
+      "id": "review-case",
+      "name": "review-case",
+      "title": "Fixture",
+      "description": "Review only",
+      "status": "planning",
+      "branch": null,
+      "base_branch": null,
+      "unknownTop": "preserve",
+      "meta": {
+        "other": {
+          "keep": true
+        }
+      }
+    },
+    "recordError": null,
+    "taskStatus": "planning",
+    "sessionPointers": [],
+    "activePointers": [],
+    "gitBranch": "compare-feature",
+    "gitHead": "a39db082d28e405bd0b6d9ab9be84440b04e23d5",
+    "gitStatusPorcelain": "",
+    "hookRuns": {
+      "file": "hook-runs.txt",
+      "sha256": null,
+      "text": "",
+      "counts": {
+        "after_start": 0,
+        "after_archive": 0
+      }
+    }
+  },
+  "steps": [
+    {
+      "kind": "command",
+      "label": "start",
+      "argv": [
+        "python",
+        ".trellis/scripts/task.py",
+        "start",
+        ".trellis/tasks/review-case"
+      ],
+      "environmentKeys": [
+        "APPDATA",
+        "COMSPEC",
+        "HOMEDRIVE",
+        "HOMEPATH",
+        "LOCALAPPDATA",
+        "PATH",
+        "PATHEXT",
+        "PROGRAMDATA",
+        "PROGRAMFILES",
+        "PROGRAMFILES(X86)",
+        "PYTHONDONTWRITEBYTECODE",
+        "PYTHONIOENCODING",
+        "SYSTEMROOT",
+        "TEMP",
+        "TMP",
+        "TRELLIS_DEVELOPER",
+        "USERPROFILE",
+        "WINDIR"
+      ],
+      "exit": 1,
+      "expectedExit": null,
+      "stdout": "\u001b[0;31mError: design.md: unreadable UTF-8 text ([Errno 2] No such file or directory: 'C:\\\\Users\\\\PXWD\\\\AppData\\\\Local\\\\Temp\\\\trellis-a-pinned-comparison-pbpnmz7u\\\\after\\\\after\\\\no-session-identity\\\\.trellis\\\\tasks\\\\review-case\\\\design.md')\u001b[0m\n\u001b[0;31mError: implement.md: unreadable UTF-8 text ([Errno 2] No such file or directory: 'C:\\\\Users\\\\PXWD\\\\AppData\\\\Local\\\\Temp\\\\trellis-a-pinned-comparison-pbpnmz7u\\\\after\\\\after\\\\no-session-identity\\\\.trellis\\\\tasks\\\\review-case\\\\implement.md')\u001b[0m\n\u001b[0;31mError: task.json.meta.planningAttest: missing; run attest first\u001b[0m\n",
+      "stderr": "",
+      "launchError": null,
+      "seconds": 0.305475,
+      "before": {
+        "taskRef": ".trellis/tasks/review-case",
+        "taskPath": "C:\\Users\\PXWD\\AppData\\Local\\Temp\\trellis-a-pinned-comparison-pbpnmz7u\\after\\after\\no-session-identity\\.trellis\\tasks\\review-case",
+        "fileHashes": {
+          "prd.md": "f2242d74b5e319c9dd156bfe3458a3d8accace025d95d4b2a46fbf742bee57d4",
+          "task.json": "a799087d67a4409478becea82b0001a652c3da7eb66b269a9a7e39923d79fa43"
+        },
+        "record": {
+          "id": "review-case",
+          "name": "review-case",
+          "title": "Fixture",
+          "description": "Review only",
+          "status": "planning",
+          "branch": null,
+          "base_branch": null,
+          "unknownTop": "preserve",
+          "meta": {
+            "other": {
+              "keep": true
+            }
+          }
+        },
+        "recordError": null,
+        "taskStatus": "planning",
+        "sessionPointers": [],
+        "activePointers": [],
+        "gitBranch": "compare-feature",
+        "gitHead": "a39db082d28e405bd0b6d9ab9be84440b04e23d5",
+        "gitStatusPorcelain": "",
+        "hookRuns": {
+          "file": "hook-runs.txt",
+          "sha256": null,
+          "text": "",
+          "counts": {
+            "after_start": 0,
+            "after_archive": 0
+          }
+        }
+      },
+      "after": {
+        "taskRef": ".trellis/tasks/review-case",
+        "taskPath": "C:\\Users\\PXWD\\AppData\\Local\\Temp\\trellis-a-pinned-comparison-pbpnmz7u\\after\\after\\no-session-identity\\.trellis\\tasks\\review-case",
+        "fileHashes": {
+          "prd.md": "f2242d74b5e319c9dd156bfe3458a3d8accace025d95d4b2a46fbf742bee57d4",
+          "task.json": "a799087d67a4409478becea82b0001a652c3da7eb66b269a9a7e39923d79fa43"
+        },
+        "record": {
+          "id": "review-case",
+          "name": "review-case",
+          "title": "Fixture",
+          "description": "Review only",
+          "status": "planning",
+          "branch": null,
+          "base_branch": null,
+          "unknownTop": "preserve",
+          "meta": {
+            "other": {
+              "keep": true
+            }
+          }
+        },
+        "recordError": null,
+        "taskStatus": "planning",
+        "sessionPointers": [],
+        "activePointers": [],
+        "gitBranch": "compare-feature",
+        "gitHead": "a39db082d28e405bd0b6d9ab9be84440b04e23d5",
+        "gitStatusPorcelain": "",
+        "hookRuns": {
+          "file": "hook-runs.txt",
+          "sha256": null,
+          "text": "",
+          "counts": {
+            "after_start": 0,
+            "after_archive": 0
+          }
+        }
+      }
+    }
+  ],
+  "final": {
+    "taskRef": ".trellis/tasks/review-case",
+    "taskPath": "C:\\Users\\PXWD\\AppData\\Local\\Temp\\trellis-a-pinned-comparison-pbpnmz7u\\after\\after\\no-session-identity\\.trellis\\tasks\\review-case",
+    "fileHashes": {
+      "prd.md": "f2242d74b5e319c9dd156bfe3458a3d8accace025d95d4b2a46fbf742bee57d4",
+      "task.json": "a799087d67a4409478becea82b0001a652c3da7eb66b269a9a7e39923d79fa43"
+    },
+    "record": {
+      "id": "review-case",
+      "name": "review-case",
+      "title": "Fixture",
+      "description": "Review only",
+      "status": "planning",
+      "branch": null,
+      "base_branch": null,
+      "unknownTop": "preserve",
+      "meta": {
+        "other": {
+          "keep": true
+        }
+      }
+    },
+    "recordError": null,
+    "taskStatus": "planning",
+    "sessionPointers": [],
+    "activePointers": [],
+    "gitBranch": "compare-feature",
+    "gitHead": "a39db082d28e405bd0b6d9ab9be84440b04e23d5",
+    "gitStatusPorcelain": "",
+    "hookRuns": {
+      "file": "hook-runs.txt",
+      "sha256": null,
+      "text": "",
+      "counts": {
+        "after_start": 0,
+        "after_archive": 0
+      }
+    }
+  },
+  "assertions": [
+    {
+      "name": "firstExit",
+      "passed": true,
+      "expected": 1,
+      "actual": 1
+    },
+    {
+      "name": "finalStatus",
+      "passed": true,
+      "expected": "planning",
+      "actual": "planning"
+    },
+    {
+      "name": "pointers",
+      "passed": true,
+      "expected": 0,
+      "actual": 0
+    }
+  ],
+  "expectationMatched": true,
+  "classification": "executed",
+  "capabilityAbsentAt": null
+}

@@ -66,3 +66,15 @@ The marketplace work commit is `60228d8474ec836294884730579d1248a3ffb2d2` (three
 Staged GitNexus scan includes newly staged files: critical risk, 446 symbols, 36 affected flows; the earlier 321/16 scan covered tracked changes only. The graph is truncated and does not prove exhaustive call coverage. Post-hook actual generator check: 78/78 (`generated-post-hook-verification.json`). Source/test/spec and nonhistorical evidence whitespace passes (`staged-whitespace-final.json`). Original command-log bytes are separately preserved in `command-logs-original-bytes.zip` and manifest; original historical evidence is not cleaned to hide whitespace warnings.
 
 Next action requires explicit acceptance of a commit-hook exception for the documented 17 old failures. This is a repository gate decision, not a change to the approved product requirements. Scope and pending evidence are reviewable in `implementation-commit-plan.md`; A remains in_progress until all required work, including fixed-version comparison, is complete.
+
+
+## 固定实现提交后的验收检查点（2026-11-13，仍待 M2 真实答复）
+
+- 用户已经接受有范围的本地提交钩子例外；实际 A 实现提交为 `1b801471966e8fb898d0c33e1b025aad2a86f5db`，子模块提交为 `60228d8474ec836294884730579d1248a3ffb2d2`。例外按命令临时设置，没有永久改钩子、修改已有提交、推送或归档。前文“等待例外”“未固定提交”均是保留的历史状态，不是本检查点的现状。
+- 固定旧提交 `9b76fe49f19de4d383dd4677fea803e2f2da7004` 与上述实现提交的 P01—P16 正式同条件对照已经实际执行，退出码 0。结果：4 项预期改善、4 项保留、3 项明确行为变更、5 项新增能力，无意外结果。旧版不支持的新命令按能力不存在记录，不计算改善百分比。入口为 `version-comparison/9b76fe49f19d-1b801471966e/report.md`，原始命令见 `formal-comparison-run.txt`。
+- 固定实现后专项测试 115/115；构建、代码风格、TypeScript（类型化脚本语言）类型检查均退出 0；Python（脚本语言）类型检查为 0 错误、68 警告。真实 Python 3.9.13 的声明、校验、版本绑定开工、状态查询四步均退出 0。样例中的答复明确是合成字符串。日志见 `pinned-implementation-*.txt`、`pinned-implementation-exit-codes.json`、`pinned-python39-final.json`。
+- 全量结果仍是核心包 398 通过、2 跳过；命令行包 1987 通过、17 失败、35 跳过。17 项失败与固定旧版完全相同，不能称全量通过，不能把跳过算通过。
+- `formal-comparison-consistency-audit.json` 是主会话递归核查；包含 16 主场景、4 子分支的 20 组初始状态。接手后再次按叶子场景核查的 18 对数据是另一种计数方式，不等于新增场景；见 `acceptance-checkpoint-2026-11-13.json`。均无发现问题。五份冻结文件和实现提交字节仍一致；29 对脚本一致；78 个生成文件与真实生成器一致；原仓库 46 个受保护路径未变；子模块干净。
+- 已有核心、平台独立复审有效。新增独立证据复核尝试因工具默认模型不可用未启动；没有新的独立审查结论，不能把主会话核查冒充独立复审。
+- M2 的“旧版批准”仅为明确标注的合成初始设置。隔离新版本 `c4eb6574fa664ef3a770c94db22aa5cd` 已声明并验证，旧版本开工已被拒绝；仍处于规划状态、没有批准。新版本真实答复尚未取得，不能使用提交例外的“接受。”代替后来才展示的新版本确认。该演练只登记工作流元数据，不上传数据，不改变 A 的产品范围。见 `m2-human-review-pending.json`、`m2-human-review-summary.md`。
+- 本检查点只补证据。A 仍在实施中；最终验收、M2 实际读回和最后证据提交尚未全部关闭。不推送、不归档、不进入 C。

@@ -1,0 +1,340 @@
+{
+  "implementation": "1b801471966e8fb898d0c33e1b025aad2a86f5db",
+  "frozen": [
+    {
+      "file": "prd.md",
+      "same": true,
+      "committedSame": true
+    },
+    {
+      "file": "design.md",
+      "same": true,
+      "committedSame": true
+    },
+    {
+      "file": "implement.md",
+      "same": true,
+      "committedSame": true
+    },
+    {
+      "file": "research/test-plan-2026-11-12.md",
+      "same": true,
+      "committedSame": true
+    },
+    {
+      "file": "research/context-read-map-2026-11-12.md",
+      "same": true,
+      "committedSame": true
+    }
+  ],
+  "allFrozenMatch": true,
+  "scriptPairs": [
+    {
+      "file": "__init__.py",
+      "same": true
+    },
+    {
+      "file": "add_session.py",
+      "same": true
+    },
+    {
+      "file": "common/__init__.py",
+      "same": true
+    },
+    {
+      "file": "common/active_task.py",
+      "same": true
+    },
+    {
+      "file": "common/cli_adapter.py",
+      "same": true
+    },
+    {
+      "file": "common/config.py",
+      "same": true
+    },
+    {
+      "file": "common/developer.py",
+      "same": true
+    },
+    {
+      "file": "common/git.py",
+      "same": true
+    },
+    {
+      "file": "common/git_context.py",
+      "same": true
+    },
+    {
+      "file": "common/io.py",
+      "same": true
+    },
+    {
+      "file": "common/log.py",
+      "same": true
+    },
+    {
+      "file": "common/packages_context.py",
+      "same": true
+    },
+    {
+      "file": "common/paths.py",
+      "same": true
+    },
+    {
+      "file": "common/planning.py",
+      "same": true
+    },
+    {
+      "file": "common/safe_commit.py",
+      "same": true
+    },
+    {
+      "file": "common/session_context.py",
+      "same": true
+    },
+    {
+      "file": "common/task_context.py",
+      "same": true
+    },
+    {
+      "file": "common/task_queue.py",
+      "same": true
+    },
+    {
+      "file": "common/task_store.py",
+      "same": true
+    },
+    {
+      "file": "common/task_utils.py",
+      "same": true
+    },
+    {
+      "file": "common/tasks.py",
+      "same": true
+    },
+    {
+      "file": "common/trellis_config.py",
+      "same": true
+    },
+    {
+      "file": "common/types.py",
+      "same": true
+    },
+    {
+      "file": "common/workflow_phase.py",
+      "same": true
+    },
+    {
+      "file": "get_context.py",
+      "same": true
+    },
+    {
+      "file": "get_developer.py",
+      "same": true
+    },
+    {
+      "file": "hooks/linear_sync.py",
+      "same": true
+    },
+    {
+      "file": "init_developer.py",
+      "same": true
+    },
+    {
+      "file": "task.py",
+      "same": true
+    }
+  ],
+  "allScriptPairsMatch": true,
+  "protectedOriginal": [
+    {
+      "path": ".claude/hooks/inject-subagent-context.py",
+      "same": true
+    },
+    {
+      "path": ".claude/hooks/session-start.py",
+      "same": true
+    },
+    {
+      "path": ".codex/hooks/inject-subagent-context.py",
+      "same": true
+    },
+    {
+      "path": ".cursor/hooks/inject-subagent-context.py",
+      "same": true
+    },
+    {
+      "path": ".cursor/hooks/session-start.py",
+      "same": true
+    },
+    {
+      "path": ".github/workflows/ci.yml",
+      "same": true
+    },
+    {
+      "path": ".opencode/lib/trellis-context.js",
+      "same": true
+    },
+    {
+      "path": ".trellis/scripts/common/__init__.py",
+      "same": true
+    },
+    {
+      "path": ".trellis/scripts/common/developer.py",
+      "same": true
+    },
+    {
+      "path": ".trellis/scripts/common/io.py",
+      "same": true
+    },
+    {
+      "path": ".trellis/scripts/common/task_context.py",
+      "same": true
+    },
+    {
+      "path": ".trellis/scripts/common/task_store.py",
+      "same": true
+    },
+    {
+      "path": ".trellis/scripts/hooks/linear_sync.py",
+      "same": true
+    },
+    {
+      "path": "package.json",
+      "same": true
+    },
+    {
+      "path": "packages/cli/src/templates/opencode/lib/trellis-context.js",
+      "same": true
+    },
+    {
+      "path": "packages/cli/src/templates/shared-hooks/inject-subagent-context.py",
+      "same": true
+    },
+    {
+      "path": "packages/cli/src/templates/shared-hooks/session-start.py",
+      "same": true
+    },
+    {
+      "path": "packages/cli/src/templates/trellis/scripts/common/__init__.py",
+      "same": true
+    },
+    {
+      "path": "packages/cli/src/templates/trellis/scripts/common/developer.py",
+      "same": true
+    },
+    {
+      "path": "packages/cli/src/templates/trellis/scripts/common/io.py",
+      "same": true
+    },
+    {
+      "path": "packages/cli/src/templates/trellis/scripts/common/task_context.py",
+      "same": true
+    },
+    {
+      "path": "packages/cli/src/templates/trellis/scripts/common/task_store.py",
+      "same": true
+    },
+    {
+      "path": "packages/cli/src/templates/trellis/scripts/hooks/linear_sync.py",
+      "same": true
+    },
+    {
+      "path": "packages/cli/test/commands/ablate.integration.test.ts",
+      "same": true
+    },
+    {
+      "path": "packages/cli/test/commands/platforms.integration.test.ts",
+      "same": true
+    },
+    {
+      "path": "packages/cli/test/commands/upgrade.test.ts",
+      "same": true
+    },
+    {
+      "path": "packages/cli/test/configurators/python-rewrite-parity.test.ts",
+      "same": true
+    },
+    {
+      "path": "packages/cli/test/registry-invariants.test.ts",
+      "same": true
+    },
+    {
+      "path": "packages/cli/test/regression.test.ts",
+      "same": true
+    },
+    {
+      "path": "packages/cli/test/scripts/add-session-worktree-warning.integration.test.ts",
+      "same": true
+    },
+    {
+      "path": "packages/cli/test/scripts/add-session.integration.test.ts",
+      "same": true
+    },
+    {
+      "path": "packages/cli/test/scripts/context-injection-limits.integration.test.ts",
+      "same": true
+    },
+    {
+      "path": "packages/cli/test/scripts/inject-workflow-state-kiro.integration.test.ts",
+      "same": true
+    },
+    {
+      "path": "packages/cli/test/scripts/prompt-injection-skip-keyword.integration.test.ts",
+      "same": true
+    },
+    {
+      "path": "packages/cli/test/scripts/symlinked-workflow-dir.integration.test.ts",
+      "same": true
+    },
+    {
+      "path": "packages/cli/test/scripts/task-archive.integration.test.ts",
+      "same": true
+    },
+    {
+      "path": "packages/cli/test/scripts/task-children-normalization.integration.test.ts",
+      "same": true
+    },
+    {
+      "path": "packages/cli/test/scripts/task-list-tree.integration.test.ts",
+      "same": true
+    },
+    {
+      "path": "packages/cli/test/scripts/task-meta.integration.test.ts",
+      "same": true
+    },
+    {
+      "path": "packages/cli/test/setup.ts",
+      "same": true
+    },
+    {
+      "path": "packages/cli/test/templates/trellis.test.ts",
+      "same": true
+    },
+    {
+      "path": "packages/cli/test/utils/atomic-write.test.ts",
+      "same": true
+    },
+    {
+      "path": "packages/cli/src/templates/trellis/workflow.md",
+      "same": true
+    },
+    {
+      "path": "marketplace/workflows/native/workflow.md",
+      "same": true
+    },
+    {
+      "path": "marketplace/workflows/tdd/workflow.md",
+      "same": true
+    },
+    {
+      "path": "marketplace/workflows/channel-driven-subagent-dispatch/workflow.md",
+      "same": true
+    }
+  ],
+  "allProtectedOriginalMatch": true,
+  "codeChangesAfterImplementation": [],
+  "submoduleClean": true,
+  "noPermanentHuskyChange": true
+}

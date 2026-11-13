@@ -1,0 +1,1025 @@
+{
+  "scope": "Actual human reconfirmation still pending; old version/approval are explicitly synthetic setup. Only metadata commands; no upload or network client.",
+  "implementation": "1b801471966e8fb898d0c33e1b025aad2a86f5db",
+  "fixtureRoot": "C:\\Users\\PXWD\\AppData\\Local\\Temp\\trellis-a-m2-live-review-18ub0npf\\fixtures\\M2-real-reconfirmation",
+  "taskRef": ".trellis/tasks/review-case",
+  "environment": {
+    "TRELLIS_DEVELOPER": "review-fixture",
+    "TRELLIS_CONTEXT_ID": "review-M2-real-reconfirmation",
+    "PYTHONIOENCODING": "utf-8"
+  },
+  "oldReviewId": "cccccccccccccccccccccccccccccccc",
+  "oldApprovalSynthetic": true,
+  "reviewId": "c4eb6574fa664ef3a770c94db22aa5cd",
+  "reviewFiles": {
+    "prd.md": "02fbae7c957cc80a1b28e95a46a7775f2cc819d5e828ad324a88e5fb64a9e7b9",
+    "design.md": "8e3a7d2b65c9597fe3be1d27c835b88f122eec923115edf750c010f776e8db07",
+    "implement.md": "bb87e18da5c8ff4b442c012c1ddce3483719cdb4ff4dda6d5f5ce80a5028d43e"
+  },
+  "note": "M2 version B: local-only to remote-upload design; review required; isolated metadata exercise, no network operation",
+  "requiredHumanReply": "Approve only metadata start for this isolated M2 version B; not real uploads or a change to A product scope.",
+  "humanReply": null,
+  "steps": [
+    {
+      "kind": "command",
+      "label": "replan-before-meaning-change",
+      "argv": [
+        "python",
+        ".trellis/scripts/task.py",
+        "replan",
+        ".trellis/tasks/review-case",
+        "--reason",
+        "Exercise changes storage from local-only to remote upload",
+        "--affected",
+        "storage implementation, privacy/network acceptance and dependent tests",
+        "--independent",
+        "none"
+      ],
+      "environmentKeys": [
+        "APPDATA",
+        "COMSPEC",
+        "HOMEDRIVE",
+        "HOMEPATH",
+        "LOCALAPPDATA",
+        "PATH",
+        "PATHEXT",
+        "PROGRAMDATA",
+        "PROGRAMFILES",
+        "PROGRAMFILES(X86)",
+        "PYTHONDONTWRITEBYTECODE",
+        "PYTHONIOENCODING",
+        "SYSTEMROOT",
+        "TEMP",
+        "TMP",
+        "TRELLIS_CONTEXT_ID",
+        "TRELLIS_DEVELOPER",
+        "USERPROFILE",
+        "WINDIR"
+      ],
+      "exit": 0,
+      "expectedExit": 0,
+      "stdout": "\u001b[0;32m✓ Task returned to planning; affected work is paused.\u001b[0m\nReason: Exercise changes storage from local-only to remote upload\nAffected: storage implementation, privacy/network acceptance and dependent tests\nIndependent work: none\n",
+      "stderr": "",
+      "launchError": null,
+      "seconds": 0.372544,
+      "before": {
+        "taskRef": ".trellis/tasks/review-case",
+        "taskPath": "C:\\Users\\PXWD\\AppData\\Local\\Temp\\trellis-a-m2-live-review-18ub0npf\\fixtures\\M2-real-reconfirmation\\.trellis\\tasks\\review-case",
+        "fileHashes": {
+          "check.jsonl": "34cfa347ccf72c9e636670bde19a97d01479ef48311e5530402fd0891f958981",
+          "design.md": "1dd8af165b6ec7d4cf1880ba941b6170e1fe34e2406c26f5a690d656f46ca023",
+          "implement.jsonl": "34cfa347ccf72c9e636670bde19a97d01479ef48311e5530402fd0891f958981",
+          "implement.md": "d819ba853516c2f5afbf42255727e1181df011650086ea00105a242e81bf6603",
+          "prd.md": "64ef2160ff8450b8945aba3cdc0a030ad6017d8f5bfc49c5381acc26d715297a",
+          "research/planning-review-log.md": "ac2a12ce39e074f99918d766dc63c074ac74aa68e4c9afda185253a63d12d30a",
+          "task.json": "cce24ad2dcd5a2d3a9afc75dff89c8584b8ab6eb33eca39410c1dfe929e3258e"
+        },
+        "record": {
+          "id": "review-case",
+          "name": "review-case",
+          "title": "Fixture",
+          "description": "Review only",
+          "status": "in_progress",
+          "branch": "compare-feature",
+          "base_branch": null,
+          "unknownTop": "preserve",
+          "meta": {
+            "other": {
+              "keep": true
+            },
+            "planningAttest": {
+              "schemaVersion": 1,
+              "reviewId": "cccccccccccccccccccccccccccccccc",
+              "attestedAt": "2026-11-12T12:00:00+00:00",
+              "note": "Fixture planning version under review",
+              "reviewFiles": {
+                "prd.md": "1f4e6e9f8c773fcf9555f35d6ecd5a2a76424b032ef65c1010058d9f2814c6e0",
+                "design.md": "aa27bcbd0a760d0fed7f2ee25b134e1d8654a0f7148f734d465033fb83699c50",
+                "implement.md": "ab958ce49cb4a1b6ec4238c4d15597f8673d8c477e9c37f964ce09d3ff284502"
+              },
+              "files": {
+                "prd.md": "1f4e6e9f8c773fcf9555f35d6ecd5a2a76424b032ef65c1010058d9f2814c6e0",
+                "design.md": "aa27bcbd0a760d0fed7f2ee25b134e1d8654a0f7148f734d465033fb83699c50",
+                "implement.md": "ab958ce49cb4a1b6ec4238c4d15597f8673d8c477e9c37f964ce09d3ff284502"
+              },
+              "editorialChanges": []
+            },
+            "planningApproval": {
+              "schemaVersion": 1,
+              "reviewId": "cccccccccccccccccccccccccccccccc",
+              "reviewedFiles": {
+                "prd.md": "1f4e6e9f8c773fcf9555f35d6ecd5a2a76424b032ef65c1010058d9f2814c6e0",
+                "design.md": "aa27bcbd0a760d0fed7f2ee25b134e1d8654a0f7148f734d465033fb83699c50",
+                "implement.md": "ab958ce49cb4a1b6ec4238c4d15597f8673d8c477e9c37f964ce09d3ff284502"
+              },
+              "recordedAt": "2026-11-12T12:00:00+00:00",
+              "note": "Fixture-only confirmation for this reviewed version; not a real approval",
+              "source": "Fixture-only transcript line after the displayed version"
+            }
+          }
+        },
+        "recordError": null,
+        "taskStatus": "in_progress",
+        "sessionPointers": [
+          {
+            "file": "review-M2-real-reconfirmation.json",
+            "sha256": "0e1c6d23b00f36913189db47595cde2946d49ec3bb870a9fd851ae269cc33475",
+            "record": {
+              "current_task": ".trellis/tasks/review-case",
+              "platform": "codex"
+            },
+            "parseError": null
+          }
+        ],
+        "activePointers": [
+          ".trellis/tasks/review-case"
+        ],
+        "gitBranch": "compare-feature",
+        "gitHead": "a6f03d8cad8923977a35b22082e771d0586e7dd0",
+        "gitStatusPorcelain": "?? .trellis/tasks/review-case/research/",
+        "hookRuns": {
+          "file": "hook-runs.txt",
+          "sha256": null,
+          "text": "",
+          "counts": {
+            "after_start": 0,
+            "after_archive": 0
+          }
+        }
+      },
+      "after": {
+        "taskRef": ".trellis/tasks/review-case",
+        "taskPath": "C:\\Users\\PXWD\\AppData\\Local\\Temp\\trellis-a-m2-live-review-18ub0npf\\fixtures\\M2-real-reconfirmation\\.trellis\\tasks\\review-case",
+        "fileHashes": {
+          "check.jsonl": "34cfa347ccf72c9e636670bde19a97d01479ef48311e5530402fd0891f958981",
+          "design.md": "1dd8af165b6ec7d4cf1880ba941b6170e1fe34e2406c26f5a690d656f46ca023",
+          "implement.jsonl": "34cfa347ccf72c9e636670bde19a97d01479ef48311e5530402fd0891f958981",
+          "implement.md": "d819ba853516c2f5afbf42255727e1181df011650086ea00105a242e81bf6603",
+          "prd.md": "64ef2160ff8450b8945aba3cdc0a030ad6017d8f5bfc49c5381acc26d715297a",
+          "research/planning-review-log.md": "ac2a12ce39e074f99918d766dc63c074ac74aa68e4c9afda185253a63d12d30a",
+          "task.json": "f29434160c35911cb632a9b5f11ea8814b79cf25f98001d74b570b79c4d64aa3"
+        },
+        "record": {
+          "id": "review-case",
+          "name": "review-case",
+          "title": "Fixture",
+          "description": "Review only",
+          "status": "planning",
+          "branch": "compare-feature",
+          "base_branch": null,
+          "unknownTop": "preserve",
+          "meta": {
+            "other": {
+              "keep": true
+            },
+            "planningReplan": {
+              "requestedAt": "2026-11-13T02:38:46.319420+00:00",
+              "reason": "Exercise changes storage from local-only to remote upload",
+              "affectedWork": "storage implementation, privacy/network acceptance and dependent tests",
+              "independentWork": "none"
+            }
+          }
+        },
+        "recordError": null,
+        "taskStatus": "planning",
+        "sessionPointers": [
+          {
+            "file": "review-M2-real-reconfirmation.json",
+            "sha256": "0e1c6d23b00f36913189db47595cde2946d49ec3bb870a9fd851ae269cc33475",
+            "record": {
+              "current_task": ".trellis/tasks/review-case",
+              "platform": "codex"
+            },
+            "parseError": null
+          }
+        ],
+        "activePointers": [
+          ".trellis/tasks/review-case"
+        ],
+        "gitBranch": "compare-feature",
+        "gitHead": "a6f03d8cad8923977a35b22082e771d0586e7dd0",
+        "gitStatusPorcelain": "M .trellis/tasks/review-case/task.json\n?? .trellis/tasks/review-case/research/",
+        "hookRuns": {
+          "file": "hook-runs.txt",
+          "sha256": null,
+          "text": "",
+          "counts": {
+            "after_start": 0,
+            "after_archive": 0
+          }
+        }
+      }
+    },
+    {
+      "kind": "fixture-edit",
+      "label": "material-change-to-remote-upload",
+      "argv": null,
+      "environmentKeys": [],
+      "exit": 0,
+      "expectedExit": 0,
+      "stdout": "",
+      "stderr": "",
+      "launchError": null,
+      "seconds": 0,
+      "before": {
+        "taskRef": ".trellis/tasks/review-case",
+        "taskPath": "C:\\Users\\PXWD\\AppData\\Local\\Temp\\trellis-a-m2-live-review-18ub0npf\\fixtures\\M2-real-reconfirmation\\.trellis\\tasks\\review-case",
+        "fileHashes": {
+          "check.jsonl": "34cfa347ccf72c9e636670bde19a97d01479ef48311e5530402fd0891f958981",
+          "design.md": "1dd8af165b6ec7d4cf1880ba941b6170e1fe34e2406c26f5a690d656f46ca023",
+          "implement.jsonl": "34cfa347ccf72c9e636670bde19a97d01479ef48311e5530402fd0891f958981",
+          "implement.md": "d819ba853516c2f5afbf42255727e1181df011650086ea00105a242e81bf6603",
+          "prd.md": "64ef2160ff8450b8945aba3cdc0a030ad6017d8f5bfc49c5381acc26d715297a",
+          "research/planning-review-log.md": "ac2a12ce39e074f99918d766dc63c074ac74aa68e4c9afda185253a63d12d30a",
+          "task.json": "f29434160c35911cb632a9b5f11ea8814b79cf25f98001d74b570b79c4d64aa3"
+        },
+        "record": {
+          "id": "review-case",
+          "name": "review-case",
+          "title": "Fixture",
+          "description": "Review only",
+          "status": "planning",
+          "branch": "compare-feature",
+          "base_branch": null,
+          "unknownTop": "preserve",
+          "meta": {
+            "other": {
+              "keep": true
+            },
+            "planningReplan": {
+              "requestedAt": "2026-11-13T02:38:46.319420+00:00",
+              "reason": "Exercise changes storage from local-only to remote upload",
+              "affectedWork": "storage implementation, privacy/network acceptance and dependent tests",
+              "independentWork": "none"
+            }
+          }
+        },
+        "recordError": null,
+        "taskStatus": "planning",
+        "sessionPointers": [
+          {
+            "file": "review-M2-real-reconfirmation.json",
+            "sha256": "0e1c6d23b00f36913189db47595cde2946d49ec3bb870a9fd851ae269cc33475",
+            "record": {
+              "current_task": ".trellis/tasks/review-case",
+              "platform": "codex"
+            },
+            "parseError": null
+          }
+        ],
+        "activePointers": [
+          ".trellis/tasks/review-case"
+        ],
+        "gitBranch": "compare-feature",
+        "gitHead": "a6f03d8cad8923977a35b22082e771d0586e7dd0",
+        "gitStatusPorcelain": "M .trellis/tasks/review-case/task.json\n?? .trellis/tasks/review-case/research/",
+        "hookRuns": {
+          "file": "hook-runs.txt",
+          "sha256": null,
+          "text": "",
+          "counts": {
+            "after_start": 0,
+            "after_archive": 0
+          }
+        }
+      },
+      "after": {
+        "taskRef": ".trellis/tasks/review-case",
+        "taskPath": "C:\\Users\\PXWD\\AppData\\Local\\Temp\\trellis-a-m2-live-review-18ub0npf\\fixtures\\M2-real-reconfirmation\\.trellis\\tasks\\review-case",
+        "fileHashes": {
+          "check.jsonl": "34cfa347ccf72c9e636670bde19a97d01479ef48311e5530402fd0891f958981",
+          "design.md": "b21ac1f50b6986a6399b1668e4809c11cdfb8a5f67a9b6e2897d2a28e3480bf5",
+          "implement.jsonl": "34cfa347ccf72c9e636670bde19a97d01479ef48311e5530402fd0891f958981",
+          "implement.md": "ee1d0c5f600d8942e735c86f591260383e3ea61b551d5be1d6a1cc40710dcb31",
+          "prd.md": "86f4ebe33e3e267c7f5f15bb49d1d9109fd99b500c59268fae4225ef6b0d5a38",
+          "research/planning-review-log.md": "ac2a12ce39e074f99918d766dc63c074ac74aa68e4c9afda185253a63d12d30a",
+          "task.json": "f29434160c35911cb632a9b5f11ea8814b79cf25f98001d74b570b79c4d64aa3"
+        },
+        "record": {
+          "id": "review-case",
+          "name": "review-case",
+          "title": "Fixture",
+          "description": "Review only",
+          "status": "planning",
+          "branch": "compare-feature",
+          "base_branch": null,
+          "unknownTop": "preserve",
+          "meta": {
+            "other": {
+              "keep": true
+            },
+            "planningReplan": {
+              "requestedAt": "2026-11-13T02:38:46.319420+00:00",
+              "reason": "Exercise changes storage from local-only to remote upload",
+              "affectedWork": "storage implementation, privacy/network acceptance and dependent tests",
+              "independentWork": "none"
+            }
+          }
+        },
+        "recordError": null,
+        "taskStatus": "planning",
+        "sessionPointers": [
+          {
+            "file": "review-M2-real-reconfirmation.json",
+            "sha256": "0e1c6d23b00f36913189db47595cde2946d49ec3bb870a9fd851ae269cc33475",
+            "record": {
+              "current_task": ".trellis/tasks/review-case",
+              "platform": "codex"
+            },
+            "parseError": null
+          }
+        ],
+        "activePointers": [
+          ".trellis/tasks/review-case"
+        ],
+        "gitBranch": "compare-feature",
+        "gitHead": "a6f03d8cad8923977a35b22082e771d0586e7dd0",
+        "gitStatusPorcelain": "M .trellis/tasks/review-case/design.md\n M .trellis/tasks/review-case/implement.md\n M .trellis/tasks/review-case/prd.md\n M .trellis/tasks/review-case/task.json\n?? .trellis/tasks/review-case/research/",
+        "hookRuns": {
+          "file": "hook-runs.txt",
+          "sha256": null,
+          "text": "",
+          "counts": {
+            "after_start": 0,
+            "after_archive": 0
+          }
+        }
+      },
+      "changes": {
+        "prd.md": {
+          "beforeText": "# prd.md\nKeep storage local.\n",
+          "afterText": "Exercise version B: send the fixture data to a remote service rather than keeping it local. This is a written test fixture only; this exercise performs no upload.\n",
+          "beforeHash": "1f4e6e9f8c773fcf9555f35d6ecd5a2a76424b032ef65c1010058d9f2814c6e0",
+          "afterHash": "02fbae7c957cc80a1b28e95a46a7775f2cc819d5e828ad324a88e5fb64a9e7b9"
+        },
+        "design.md": {
+          "beforeText": "# design.md\nKeep storage local.\n",
+          "afterText": "Exercise version B: a remote-upload boundary replaces local-only storage. In a real implementation this changes data location, network failure handling, credentials and privacy review. The current test runs only Trellis metadata commands and contains no network client.\n",
+          "beforeHash": "aa27bcbd0a760d0fed7f2ee25b134e1d8654a0f7148f734d465033fb83699c50",
+          "afterHash": "8e3a7d2b65c9597fe3be1d27c835b88f122eec923115edf750c010f776e8db07"
+        },
+        "implement.md": {
+          "beforeText": "# implement.md\nKeep storage local.\n",
+          "afterText": "Pause dependent storage work, review this new version and wait for a real reply. Only after that reply, run the version-bound start for this isolated fixture, inspect approval and side effects, and stop. Do not upload anything or change the real product design.\n",
+          "beforeHash": "ab958ce49cb4a1b6ec4238c4d15597f8673d8c477e9c37f964ce09d3ff284502",
+          "afterHash": "bb87e18da5c8ff4b442c012c1ddce3483719cdb4ff4dda6d5f5ce80a5028d43e"
+        }
+      }
+    },
+    {
+      "kind": "command",
+      "label": "attest-version-b",
+      "argv": [
+        "python",
+        ".trellis/scripts/task.py",
+        "attest",
+        ".trellis/tasks/review-case",
+        "--note",
+        "M2 version B: local-only to remote-upload design; review required; isolated metadata exercise, no network operation"
+      ],
+      "environmentKeys": [
+        "APPDATA",
+        "COMSPEC",
+        "HOMEDRIVE",
+        "HOMEPATH",
+        "LOCALAPPDATA",
+        "PATH",
+        "PATHEXT",
+        "PROGRAMDATA",
+        "PROGRAMFILES",
+        "PROGRAMFILES(X86)",
+        "PYTHONDONTWRITEBYTECODE",
+        "PYTHONIOENCODING",
+        "SYSTEMROOT",
+        "TEMP",
+        "TMP",
+        "TRELLIS_CONTEXT_ID",
+        "TRELLIS_DEVELOPER",
+        "USERPROFILE",
+        "WINDIR"
+      ],
+      "exit": 0,
+      "expectedExit": 0,
+      "stdout": "\u001b[0;32m✓ Planning version attested: c4eb6574fa664ef3a770c94db22aa5cd\u001b[0m\nNote: M2 version B: local-only to remote-upload design; review required; isolated metadata exercise, no network operation\n  prd.md: 02fbae7c957cc80a1b28e95a46a7775f2cc819d5e828ad324a88e5fb64a9e7b9\n  design.md: 8e3a7d2b65c9597fe3be1d27c835b88f122eec923115edf750c010f776e8db07\n  implement.md: bb87e18da5c8ff4b442c012c1ddce3483719cdb4ff4dda6d5f5ce80a5028d43e\nStill needs explicit user review and approval before start.\n",
+      "stderr": "",
+      "launchError": null,
+      "seconds": 0.26529,
+      "before": {
+        "taskRef": ".trellis/tasks/review-case",
+        "taskPath": "C:\\Users\\PXWD\\AppData\\Local\\Temp\\trellis-a-m2-live-review-18ub0npf\\fixtures\\M2-real-reconfirmation\\.trellis\\tasks\\review-case",
+        "fileHashes": {
+          "check.jsonl": "34cfa347ccf72c9e636670bde19a97d01479ef48311e5530402fd0891f958981",
+          "design.md": "b21ac1f50b6986a6399b1668e4809c11cdfb8a5f67a9b6e2897d2a28e3480bf5",
+          "implement.jsonl": "34cfa347ccf72c9e636670bde19a97d01479ef48311e5530402fd0891f958981",
+          "implement.md": "ee1d0c5f600d8942e735c86f591260383e3ea61b551d5be1d6a1cc40710dcb31",
+          "prd.md": "86f4ebe33e3e267c7f5f15bb49d1d9109fd99b500c59268fae4225ef6b0d5a38",
+          "research/planning-review-log.md": "ac2a12ce39e074f99918d766dc63c074ac74aa68e4c9afda185253a63d12d30a",
+          "task.json": "f29434160c35911cb632a9b5f11ea8814b79cf25f98001d74b570b79c4d64aa3"
+        },
+        "record": {
+          "id": "review-case",
+          "name": "review-case",
+          "title": "Fixture",
+          "description": "Review only",
+          "status": "planning",
+          "branch": "compare-feature",
+          "base_branch": null,
+          "unknownTop": "preserve",
+          "meta": {
+            "other": {
+              "keep": true
+            },
+            "planningReplan": {
+              "requestedAt": "2026-11-13T02:38:46.319420+00:00",
+              "reason": "Exercise changes storage from local-only to remote upload",
+              "affectedWork": "storage implementation, privacy/network acceptance and dependent tests",
+              "independentWork": "none"
+            }
+          }
+        },
+        "recordError": null,
+        "taskStatus": "planning",
+        "sessionPointers": [
+          {
+            "file": "review-M2-real-reconfirmation.json",
+            "sha256": "0e1c6d23b00f36913189db47595cde2946d49ec3bb870a9fd851ae269cc33475",
+            "record": {
+              "current_task": ".trellis/tasks/review-case",
+              "platform": "codex"
+            },
+            "parseError": null
+          }
+        ],
+        "activePointers": [
+          ".trellis/tasks/review-case"
+        ],
+        "gitBranch": "compare-feature",
+        "gitHead": "a6f03d8cad8923977a35b22082e771d0586e7dd0",
+        "gitStatusPorcelain": "M .trellis/tasks/review-case/design.md\n M .trellis/tasks/review-case/implement.md\n M .trellis/tasks/review-case/prd.md\n M .trellis/tasks/review-case/task.json\n?? .trellis/tasks/review-case/research/",
+        "hookRuns": {
+          "file": "hook-runs.txt",
+          "sha256": null,
+          "text": "",
+          "counts": {
+            "after_start": 0,
+            "after_archive": 0
+          }
+        }
+      },
+      "after": {
+        "taskRef": ".trellis/tasks/review-case",
+        "taskPath": "C:\\Users\\PXWD\\AppData\\Local\\Temp\\trellis-a-m2-live-review-18ub0npf\\fixtures\\M2-real-reconfirmation\\.trellis\\tasks\\review-case",
+        "fileHashes": {
+          "check.jsonl": "34cfa347ccf72c9e636670bde19a97d01479ef48311e5530402fd0891f958981",
+          "design.md": "b21ac1f50b6986a6399b1668e4809c11cdfb8a5f67a9b6e2897d2a28e3480bf5",
+          "implement.jsonl": "34cfa347ccf72c9e636670bde19a97d01479ef48311e5530402fd0891f958981",
+          "implement.md": "ee1d0c5f600d8942e735c86f591260383e3ea61b551d5be1d6a1cc40710dcb31",
+          "prd.md": "86f4ebe33e3e267c7f5f15bb49d1d9109fd99b500c59268fae4225ef6b0d5a38",
+          "research/planning-review-log.md": "ac2a12ce39e074f99918d766dc63c074ac74aa68e4c9afda185253a63d12d30a",
+          "task.json": "85670ababc46cf7fbe7b2183e83ee5d0d12b611802963984f5959c71db348a57"
+        },
+        "record": {
+          "id": "review-case",
+          "name": "review-case",
+          "title": "Fixture",
+          "description": "Review only",
+          "status": "planning",
+          "branch": "compare-feature",
+          "base_branch": null,
+          "unknownTop": "preserve",
+          "meta": {
+            "other": {
+              "keep": true
+            },
+            "planningReplan": {
+              "requestedAt": "2026-11-13T02:38:46.319420+00:00",
+              "reason": "Exercise changes storage from local-only to remote upload",
+              "affectedWork": "storage implementation, privacy/network acceptance and dependent tests",
+              "independentWork": "none"
+            },
+            "planningAttest": {
+              "schemaVersion": 1,
+              "reviewId": "c4eb6574fa664ef3a770c94db22aa5cd",
+              "attestedAt": "2026-11-13T02:38:46.893110+00:00",
+              "note": "M2 version B: local-only to remote-upload design; review required; isolated metadata exercise, no network operation",
+              "reviewFiles": {
+                "prd.md": "02fbae7c957cc80a1b28e95a46a7775f2cc819d5e828ad324a88e5fb64a9e7b9",
+                "design.md": "8e3a7d2b65c9597fe3be1d27c835b88f122eec923115edf750c010f776e8db07",
+                "implement.md": "bb87e18da5c8ff4b442c012c1ddce3483719cdb4ff4dda6d5f5ce80a5028d43e"
+              },
+              "files": {
+                "prd.md": "02fbae7c957cc80a1b28e95a46a7775f2cc819d5e828ad324a88e5fb64a9e7b9",
+                "design.md": "8e3a7d2b65c9597fe3be1d27c835b88f122eec923115edf750c010f776e8db07",
+                "implement.md": "bb87e18da5c8ff4b442c012c1ddce3483719cdb4ff4dda6d5f5ce80a5028d43e"
+              },
+              "editorialChanges": []
+            }
+          }
+        },
+        "recordError": null,
+        "taskStatus": "planning",
+        "sessionPointers": [
+          {
+            "file": "review-M2-real-reconfirmation.json",
+            "sha256": "0e1c6d23b00f36913189db47595cde2946d49ec3bb870a9fd851ae269cc33475",
+            "record": {
+              "current_task": ".trellis/tasks/review-case",
+              "platform": "codex"
+            },
+            "parseError": null
+          }
+        ],
+        "activePointers": [
+          ".trellis/tasks/review-case"
+        ],
+        "gitBranch": "compare-feature",
+        "gitHead": "a6f03d8cad8923977a35b22082e771d0586e7dd0",
+        "gitStatusPorcelain": "M .trellis/tasks/review-case/design.md\n M .trellis/tasks/review-case/implement.md\n M .trellis/tasks/review-case/prd.md\n M .trellis/tasks/review-case/task.json\n?? .trellis/tasks/review-case/research/",
+        "hookRuns": {
+          "file": "hook-runs.txt",
+          "sha256": null,
+          "text": "",
+          "counts": {
+            "after_start": 0,
+            "after_archive": 0
+          }
+        }
+      }
+    },
+    {
+      "kind": "command",
+      "label": "validate-waiting-version-b",
+      "argv": [
+        "python",
+        ".trellis/scripts/task.py",
+        "validate",
+        ".trellis/tasks/review-case"
+      ],
+      "environmentKeys": [
+        "APPDATA",
+        "COMSPEC",
+        "HOMEDRIVE",
+        "HOMEPATH",
+        "LOCALAPPDATA",
+        "PATH",
+        "PATHEXT",
+        "PROGRAMDATA",
+        "PROGRAMFILES",
+        "PROGRAMFILES(X86)",
+        "PYTHONDONTWRITEBYTECODE",
+        "PYTHONIOENCODING",
+        "SYSTEMROOT",
+        "TEMP",
+        "TMP",
+        "TRELLIS_CONTEXT_ID",
+        "TRELLIS_DEVELOPER",
+        "USERPROFILE",
+        "WINDIR"
+      ],
+      "exit": 0,
+      "expectedExit": 0,
+      "stdout": "\u001b[0;34m=== Validating Context Files ===\u001b[0m\nTarget dir: C:\\Users\\PXWD\\AppData\\Local\\Temp\\trellis-a-m2-live-review-18ub0npf\\fixtures\\M2-real-reconfirmation\\.trellis\\tasks\\review-case\n\nPlanning: waiting_confirmation; review: c4eb6574fa664ef3a770c94db22aa5cd\nPlanning is not approved: awaiting user confirmation before start.\n  \u001b[0;32mimplement.jsonl: ✓ (1 entries)\u001b[0m\n  \u001b[0;32mcheck.jsonl: ✓ (1 entries)\u001b[0m\n\n\u001b[0;32m✓ All validations passed\u001b[0m\n",
+      "stderr": "",
+      "launchError": null,
+      "seconds": 0.285432,
+      "before": {
+        "taskRef": ".trellis/tasks/review-case",
+        "taskPath": "C:\\Users\\PXWD\\AppData\\Local\\Temp\\trellis-a-m2-live-review-18ub0npf\\fixtures\\M2-real-reconfirmation\\.trellis\\tasks\\review-case",
+        "fileHashes": {
+          "check.jsonl": "34cfa347ccf72c9e636670bde19a97d01479ef48311e5530402fd0891f958981",
+          "design.md": "b21ac1f50b6986a6399b1668e4809c11cdfb8a5f67a9b6e2897d2a28e3480bf5",
+          "implement.jsonl": "34cfa347ccf72c9e636670bde19a97d01479ef48311e5530402fd0891f958981",
+          "implement.md": "ee1d0c5f600d8942e735c86f591260383e3ea61b551d5be1d6a1cc40710dcb31",
+          "prd.md": "86f4ebe33e3e267c7f5f15bb49d1d9109fd99b500c59268fae4225ef6b0d5a38",
+          "research/planning-review-log.md": "ac2a12ce39e074f99918d766dc63c074ac74aa68e4c9afda185253a63d12d30a",
+          "task.json": "85670ababc46cf7fbe7b2183e83ee5d0d12b611802963984f5959c71db348a57"
+        },
+        "record": {
+          "id": "review-case",
+          "name": "review-case",
+          "title": "Fixture",
+          "description": "Review only",
+          "status": "planning",
+          "branch": "compare-feature",
+          "base_branch": null,
+          "unknownTop": "preserve",
+          "meta": {
+            "other": {
+              "keep": true
+            },
+            "planningReplan": {
+              "requestedAt": "2026-11-13T02:38:46.319420+00:00",
+              "reason": "Exercise changes storage from local-only to remote upload",
+              "affectedWork": "storage implementation, privacy/network acceptance and dependent tests",
+              "independentWork": "none"
+            },
+            "planningAttest": {
+              "schemaVersion": 1,
+              "reviewId": "c4eb6574fa664ef3a770c94db22aa5cd",
+              "attestedAt": "2026-11-13T02:38:46.893110+00:00",
+              "note": "M2 version B: local-only to remote-upload design; review required; isolated metadata exercise, no network operation",
+              "reviewFiles": {
+                "prd.md": "02fbae7c957cc80a1b28e95a46a7775f2cc819d5e828ad324a88e5fb64a9e7b9",
+                "design.md": "8e3a7d2b65c9597fe3be1d27c835b88f122eec923115edf750c010f776e8db07",
+                "implement.md": "bb87e18da5c8ff4b442c012c1ddce3483719cdb4ff4dda6d5f5ce80a5028d43e"
+              },
+              "files": {
+                "prd.md": "02fbae7c957cc80a1b28e95a46a7775f2cc819d5e828ad324a88e5fb64a9e7b9",
+                "design.md": "8e3a7d2b65c9597fe3be1d27c835b88f122eec923115edf750c010f776e8db07",
+                "implement.md": "bb87e18da5c8ff4b442c012c1ddce3483719cdb4ff4dda6d5f5ce80a5028d43e"
+              },
+              "editorialChanges": []
+            }
+          }
+        },
+        "recordError": null,
+        "taskStatus": "planning",
+        "sessionPointers": [
+          {
+            "file": "review-M2-real-reconfirmation.json",
+            "sha256": "0e1c6d23b00f36913189db47595cde2946d49ec3bb870a9fd851ae269cc33475",
+            "record": {
+              "current_task": ".trellis/tasks/review-case",
+              "platform": "codex"
+            },
+            "parseError": null
+          }
+        ],
+        "activePointers": [
+          ".trellis/tasks/review-case"
+        ],
+        "gitBranch": "compare-feature",
+        "gitHead": "a6f03d8cad8923977a35b22082e771d0586e7dd0",
+        "gitStatusPorcelain": "M .trellis/tasks/review-case/design.md\n M .trellis/tasks/review-case/implement.md\n M .trellis/tasks/review-case/prd.md\n M .trellis/tasks/review-case/task.json\n?? .trellis/tasks/review-case/research/",
+        "hookRuns": {
+          "file": "hook-runs.txt",
+          "sha256": null,
+          "text": "",
+          "counts": {
+            "after_start": 0,
+            "after_archive": 0
+          }
+        }
+      },
+      "after": {
+        "taskRef": ".trellis/tasks/review-case",
+        "taskPath": "C:\\Users\\PXWD\\AppData\\Local\\Temp\\trellis-a-m2-live-review-18ub0npf\\fixtures\\M2-real-reconfirmation\\.trellis\\tasks\\review-case",
+        "fileHashes": {
+          "check.jsonl": "34cfa347ccf72c9e636670bde19a97d01479ef48311e5530402fd0891f958981",
+          "design.md": "b21ac1f50b6986a6399b1668e4809c11cdfb8a5f67a9b6e2897d2a28e3480bf5",
+          "implement.jsonl": "34cfa347ccf72c9e636670bde19a97d01479ef48311e5530402fd0891f958981",
+          "implement.md": "ee1d0c5f600d8942e735c86f591260383e3ea61b551d5be1d6a1cc40710dcb31",
+          "prd.md": "86f4ebe33e3e267c7f5f15bb49d1d9109fd99b500c59268fae4225ef6b0d5a38",
+          "research/planning-review-log.md": "ac2a12ce39e074f99918d766dc63c074ac74aa68e4c9afda185253a63d12d30a",
+          "task.json": "85670ababc46cf7fbe7b2183e83ee5d0d12b611802963984f5959c71db348a57"
+        },
+        "record": {
+          "id": "review-case",
+          "name": "review-case",
+          "title": "Fixture",
+          "description": "Review only",
+          "status": "planning",
+          "branch": "compare-feature",
+          "base_branch": null,
+          "unknownTop": "preserve",
+          "meta": {
+            "other": {
+              "keep": true
+            },
+            "planningReplan": {
+              "requestedAt": "2026-11-13T02:38:46.319420+00:00",
+              "reason": "Exercise changes storage from local-only to remote upload",
+              "affectedWork": "storage implementation, privacy/network acceptance and dependent tests",
+              "independentWork": "none"
+            },
+            "planningAttest": {
+              "schemaVersion": 1,
+              "reviewId": "c4eb6574fa664ef3a770c94db22aa5cd",
+              "attestedAt": "2026-11-13T02:38:46.893110+00:00",
+              "note": "M2 version B: local-only to remote-upload design; review required; isolated metadata exercise, no network operation",
+              "reviewFiles": {
+                "prd.md": "02fbae7c957cc80a1b28e95a46a7775f2cc819d5e828ad324a88e5fb64a9e7b9",
+                "design.md": "8e3a7d2b65c9597fe3be1d27c835b88f122eec923115edf750c010f776e8db07",
+                "implement.md": "bb87e18da5c8ff4b442c012c1ddce3483719cdb4ff4dda6d5f5ce80a5028d43e"
+              },
+              "files": {
+                "prd.md": "02fbae7c957cc80a1b28e95a46a7775f2cc819d5e828ad324a88e5fb64a9e7b9",
+                "design.md": "8e3a7d2b65c9597fe3be1d27c835b88f122eec923115edf750c010f776e8db07",
+                "implement.md": "bb87e18da5c8ff4b442c012c1ddce3483719cdb4ff4dda6d5f5ce80a5028d43e"
+              },
+              "editorialChanges": []
+            }
+          }
+        },
+        "recordError": null,
+        "taskStatus": "planning",
+        "sessionPointers": [
+          {
+            "file": "review-M2-real-reconfirmation.json",
+            "sha256": "0e1c6d23b00f36913189db47595cde2946d49ec3bb870a9fd851ae269cc33475",
+            "record": {
+              "current_task": ".trellis/tasks/review-case",
+              "platform": "codex"
+            },
+            "parseError": null
+          }
+        ],
+        "activePointers": [
+          ".trellis/tasks/review-case"
+        ],
+        "gitBranch": "compare-feature",
+        "gitHead": "a6f03d8cad8923977a35b22082e771d0586e7dd0",
+        "gitStatusPorcelain": "M .trellis/tasks/review-case/design.md\n M .trellis/tasks/review-case/implement.md\n M .trellis/tasks/review-case/prd.md\n M .trellis/tasks/review-case/task.json\n?? .trellis/tasks/review-case/research/",
+        "hookRuns": {
+          "file": "hook-runs.txt",
+          "sha256": null,
+          "text": "",
+          "counts": {
+            "after_start": 0,
+            "after_archive": 0
+          }
+        }
+      }
+    },
+    {
+      "kind": "command",
+      "label": "old-id-cannot-approve-b",
+      "argv": [
+        "python",
+        ".trellis/scripts/task.py",
+        "start",
+        ".trellis/tasks/review-case",
+        "--review",
+        "cccccccccccccccccccccccccccccccc",
+        "--approval-note",
+        "Synthetic old reply must not authorize B",
+        "--approval-source",
+        "Synthetic fixture before the material change"
+      ],
+      "environmentKeys": [
+        "APPDATA",
+        "COMSPEC",
+        "HOMEDRIVE",
+        "HOMEPATH",
+        "LOCALAPPDATA",
+        "PATH",
+        "PATHEXT",
+        "PROGRAMDATA",
+        "PROGRAMFILES",
+        "PROGRAMFILES(X86)",
+        "PYTHONDONTWRITEBYTECODE",
+        "PYTHONIOENCODING",
+        "SYSTEMROOT",
+        "TEMP",
+        "TMP",
+        "TRELLIS_CONTEXT_ID",
+        "TRELLIS_DEVELOPER",
+        "USERPROFILE",
+        "WINDIR"
+      ],
+      "exit": 1,
+      "expectedExit": 1,
+      "stdout": "\u001b[0;31mError: --review cccccccccccccccccccccccccccccccc does not match the current review c4eb6574fa664ef3a770c94db22aa5cd\u001b[0m\n",
+      "stderr": "",
+      "launchError": null,
+      "seconds": 0.254903,
+      "before": {
+        "taskRef": ".trellis/tasks/review-case",
+        "taskPath": "C:\\Users\\PXWD\\AppData\\Local\\Temp\\trellis-a-m2-live-review-18ub0npf\\fixtures\\M2-real-reconfirmation\\.trellis\\tasks\\review-case",
+        "fileHashes": {
+          "check.jsonl": "34cfa347ccf72c9e636670bde19a97d01479ef48311e5530402fd0891f958981",
+          "design.md": "b21ac1f50b6986a6399b1668e4809c11cdfb8a5f67a9b6e2897d2a28e3480bf5",
+          "implement.jsonl": "34cfa347ccf72c9e636670bde19a97d01479ef48311e5530402fd0891f958981",
+          "implement.md": "ee1d0c5f600d8942e735c86f591260383e3ea61b551d5be1d6a1cc40710dcb31",
+          "prd.md": "86f4ebe33e3e267c7f5f15bb49d1d9109fd99b500c59268fae4225ef6b0d5a38",
+          "research/planning-review-log.md": "ac2a12ce39e074f99918d766dc63c074ac74aa68e4c9afda185253a63d12d30a",
+          "task.json": "85670ababc46cf7fbe7b2183e83ee5d0d12b611802963984f5959c71db348a57"
+        },
+        "record": {
+          "id": "review-case",
+          "name": "review-case",
+          "title": "Fixture",
+          "description": "Review only",
+          "status": "planning",
+          "branch": "compare-feature",
+          "base_branch": null,
+          "unknownTop": "preserve",
+          "meta": {
+            "other": {
+              "keep": true
+            },
+            "planningReplan": {
+              "requestedAt": "2026-11-13T02:38:46.319420+00:00",
+              "reason": "Exercise changes storage from local-only to remote upload",
+              "affectedWork": "storage implementation, privacy/network acceptance and dependent tests",
+              "independentWork": "none"
+            },
+            "planningAttest": {
+              "schemaVersion": 1,
+              "reviewId": "c4eb6574fa664ef3a770c94db22aa5cd",
+              "attestedAt": "2026-11-13T02:38:46.893110+00:00",
+              "note": "M2 version B: local-only to remote-upload design; review required; isolated metadata exercise, no network operation",
+              "reviewFiles": {
+                "prd.md": "02fbae7c957cc80a1b28e95a46a7775f2cc819d5e828ad324a88e5fb64a9e7b9",
+                "design.md": "8e3a7d2b65c9597fe3be1d27c835b88f122eec923115edf750c010f776e8db07",
+                "implement.md": "bb87e18da5c8ff4b442c012c1ddce3483719cdb4ff4dda6d5f5ce80a5028d43e"
+              },
+              "files": {
+                "prd.md": "02fbae7c957cc80a1b28e95a46a7775f2cc819d5e828ad324a88e5fb64a9e7b9",
+                "design.md": "8e3a7d2b65c9597fe3be1d27c835b88f122eec923115edf750c010f776e8db07",
+                "implement.md": "bb87e18da5c8ff4b442c012c1ddce3483719cdb4ff4dda6d5f5ce80a5028d43e"
+              },
+              "editorialChanges": []
+            }
+          }
+        },
+        "recordError": null,
+        "taskStatus": "planning",
+        "sessionPointers": [
+          {
+            "file": "review-M2-real-reconfirmation.json",
+            "sha256": "0e1c6d23b00f36913189db47595cde2946d49ec3bb870a9fd851ae269cc33475",
+            "record": {
+              "current_task": ".trellis/tasks/review-case",
+              "platform": "codex"
+            },
+            "parseError": null
+          }
+        ],
+        "activePointers": [
+          ".trellis/tasks/review-case"
+        ],
+        "gitBranch": "compare-feature",
+        "gitHead": "a6f03d8cad8923977a35b22082e771d0586e7dd0",
+        "gitStatusPorcelain": "M .trellis/tasks/review-case/design.md\n M .trellis/tasks/review-case/implement.md\n M .trellis/tasks/review-case/prd.md\n M .trellis/tasks/review-case/task.json\n?? .trellis/tasks/review-case/research/",
+        "hookRuns": {
+          "file": "hook-runs.txt",
+          "sha256": null,
+          "text": "",
+          "counts": {
+            "after_start": 0,
+            "after_archive": 0
+          }
+        }
+      },
+      "after": {
+        "taskRef": ".trellis/tasks/review-case",
+        "taskPath": "C:\\Users\\PXWD\\AppData\\Local\\Temp\\trellis-a-m2-live-review-18ub0npf\\fixtures\\M2-real-reconfirmation\\.trellis\\tasks\\review-case",
+        "fileHashes": {
+          "check.jsonl": "34cfa347ccf72c9e636670bde19a97d01479ef48311e5530402fd0891f958981",
+          "design.md": "b21ac1f50b6986a6399b1668e4809c11cdfb8a5f67a9b6e2897d2a28e3480bf5",
+          "implement.jsonl": "34cfa347ccf72c9e636670bde19a97d01479ef48311e5530402fd0891f958981",
+          "implement.md": "ee1d0c5f600d8942e735c86f591260383e3ea61b551d5be1d6a1cc40710dcb31",
+          "prd.md": "86f4ebe33e3e267c7f5f15bb49d1d9109fd99b500c59268fae4225ef6b0d5a38",
+          "research/planning-review-log.md": "ac2a12ce39e074f99918d766dc63c074ac74aa68e4c9afda185253a63d12d30a",
+          "task.json": "85670ababc46cf7fbe7b2183e83ee5d0d12b611802963984f5959c71db348a57"
+        },
+        "record": {
+          "id": "review-case",
+          "name": "review-case",
+          "title": "Fixture",
+          "description": "Review only",
+          "status": "planning",
+          "branch": "compare-feature",
+          "base_branch": null,
+          "unknownTop": "preserve",
+          "meta": {
+            "other": {
+              "keep": true
+            },
+            "planningReplan": {
+              "requestedAt": "2026-11-13T02:38:46.319420+00:00",
+              "reason": "Exercise changes storage from local-only to remote upload",
+              "affectedWork": "storage implementation, privacy/network acceptance and dependent tests",
+              "independentWork": "none"
+            },
+            "planningAttest": {
+              "schemaVersion": 1,
+              "reviewId": "c4eb6574fa664ef3a770c94db22aa5cd",
+              "attestedAt": "2026-11-13T02:38:46.893110+00:00",
+              "note": "M2 version B: local-only to remote-upload design; review required; isolated metadata exercise, no network operation",
+              "reviewFiles": {
+                "prd.md": "02fbae7c957cc80a1b28e95a46a7775f2cc819d5e828ad324a88e5fb64a9e7b9",
+                "design.md": "8e3a7d2b65c9597fe3be1d27c835b88f122eec923115edf750c010f776e8db07",
+                "implement.md": "bb87e18da5c8ff4b442c012c1ddce3483719cdb4ff4dda6d5f5ce80a5028d43e"
+              },
+              "files": {
+                "prd.md": "02fbae7c957cc80a1b28e95a46a7775f2cc819d5e828ad324a88e5fb64a9e7b9",
+                "design.md": "8e3a7d2b65c9597fe3be1d27c835b88f122eec923115edf750c010f776e8db07",
+                "implement.md": "bb87e18da5c8ff4b442c012c1ddce3483719cdb4ff4dda6d5f5ce80a5028d43e"
+              },
+              "editorialChanges": []
+            }
+          }
+        },
+        "recordError": null,
+        "taskStatus": "planning",
+        "sessionPointers": [
+          {
+            "file": "review-M2-real-reconfirmation.json",
+            "sha256": "0e1c6d23b00f36913189db47595cde2946d49ec3bb870a9fd851ae269cc33475",
+            "record": {
+              "current_task": ".trellis/tasks/review-case",
+              "platform": "codex"
+            },
+            "parseError": null
+          }
+        ],
+        "activePointers": [
+          ".trellis/tasks/review-case"
+        ],
+        "gitBranch": "compare-feature",
+        "gitHead": "a6f03d8cad8923977a35b22082e771d0586e7dd0",
+        "gitStatusPorcelain": "M .trellis/tasks/review-case/design.md\n M .trellis/tasks/review-case/implement.md\n M .trellis/tasks/review-case/prd.md\n M .trellis/tasks/review-case/task.json\n?? .trellis/tasks/review-case/research/",
+        "hookRuns": {
+          "file": "hook-runs.txt",
+          "sha256": null,
+          "text": "",
+          "counts": {
+            "after_start": 0,
+            "after_archive": 0
+          }
+        }
+      }
+    }
+  ],
+  "finalBeforeHumanReply": {
+    "taskRef": ".trellis/tasks/review-case",
+    "taskPath": "C:\\Users\\PXWD\\AppData\\Local\\Temp\\trellis-a-m2-live-review-18ub0npf\\fixtures\\M2-real-reconfirmation\\.trellis\\tasks\\review-case",
+    "fileHashes": {
+      "check.jsonl": "34cfa347ccf72c9e636670bde19a97d01479ef48311e5530402fd0891f958981",
+      "design.md": "b21ac1f50b6986a6399b1668e4809c11cdfb8a5f67a9b6e2897d2a28e3480bf5",
+      "implement.jsonl": "34cfa347ccf72c9e636670bde19a97d01479ef48311e5530402fd0891f958981",
+      "implement.md": "ee1d0c5f600d8942e735c86f591260383e3ea61b551d5be1d6a1cc40710dcb31",
+      "prd.md": "86f4ebe33e3e267c7f5f15bb49d1d9109fd99b500c59268fae4225ef6b0d5a38",
+      "research/planning-review-log.md": "ac2a12ce39e074f99918d766dc63c074ac74aa68e4c9afda185253a63d12d30a",
+      "task.json": "85670ababc46cf7fbe7b2183e83ee5d0d12b611802963984f5959c71db348a57"
+    },
+    "record": {
+      "id": "review-case",
+      "name": "review-case",
+      "title": "Fixture",
+      "description": "Review only",
+      "status": "planning",
+      "branch": "compare-feature",
+      "base_branch": null,
+      "unknownTop": "preserve",
+      "meta": {
+        "other": {
+          "keep": true
+        },
+        "planningReplan": {
+          "requestedAt": "2026-11-13T02:38:46.319420+00:00",
+          "reason": "Exercise changes storage from local-only to remote upload",
+          "affectedWork": "storage implementation, privacy/network acceptance and dependent tests",
+          "independentWork": "none"
+        },
+        "planningAttest": {
+          "schemaVersion": 1,
+          "reviewId": "c4eb6574fa664ef3a770c94db22aa5cd",
+          "attestedAt": "2026-11-13T02:38:46.893110+00:00",
+          "note": "M2 version B: local-only to remote-upload design; review required; isolated metadata exercise, no network operation",
+          "reviewFiles": {
+            "prd.md": "02fbae7c957cc80a1b28e95a46a7775f2cc819d5e828ad324a88e5fb64a9e7b9",
+            "design.md": "8e3a7d2b65c9597fe3be1d27c835b88f122eec923115edf750c010f776e8db07",
+            "implement.md": "bb87e18da5c8ff4b442c012c1ddce3483719cdb4ff4dda6d5f5ce80a5028d43e"
+          },
+          "files": {
+            "prd.md": "02fbae7c957cc80a1b28e95a46a7775f2cc819d5e828ad324a88e5fb64a9e7b9",
+            "design.md": "8e3a7d2b65c9597fe3be1d27c835b88f122eec923115edf750c010f776e8db07",
+            "implement.md": "bb87e18da5c8ff4b442c012c1ddce3483719cdb4ff4dda6d5f5ce80a5028d43e"
+          },
+          "editorialChanges": []
+        }
+      }
+    },
+    "recordError": null,
+    "taskStatus": "planning",
+    "sessionPointers": [
+      {
+        "file": "review-M2-real-reconfirmation.json",
+        "sha256": "0e1c6d23b00f36913189db47595cde2946d49ec3bb870a9fd851ae269cc33475",
+        "record": {
+          "current_task": ".trellis/tasks/review-case",
+          "platform": "codex"
+        },
+        "parseError": null
+      }
+    ],
+    "activePointers": [
+      ".trellis/tasks/review-case"
+    ],
+    "gitBranch": "compare-feature",
+    "gitHead": "a6f03d8cad8923977a35b22082e771d0586e7dd0",
+    "gitStatusPorcelain": "M .trellis/tasks/review-case/design.md\n M .trellis/tasks/review-case/implement.md\n M .trellis/tasks/review-case/prd.md\n M .trellis/tasks/review-case/task.json\n?? .trellis/tasks/review-case/research/",
+    "hookRuns": {
+      "file": "hook-runs.txt",
+      "sha256": null,
+      "text": "",
+      "counts": {
+        "after_start": 0,
+        "after_archive": 0
+      }
+    }
+  }
+}

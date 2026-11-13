@@ -1,0 +1,708 @@
+{
+  "id": "P13",
+  "scenario": "P13",
+  "version": "before",
+  "fixture": {
+    "id": "P13",
+    "files": "all",
+    "manifests": "curated",
+    "status": "in_progress",
+    "seed_record": true,
+    "seed_pointer": true
+  },
+  "environmentKeys": [
+    "APPDATA",
+    "COMSPEC",
+    "HOMEDRIVE",
+    "HOMEPATH",
+    "LOCALAPPDATA",
+    "PATH",
+    "PATHEXT",
+    "PROGRAMDATA",
+    "PROGRAMFILES",
+    "PROGRAMFILES(X86)",
+    "PYTHONDONTWRITEBYTECODE",
+    "PYTHONIOENCODING",
+    "SYSTEMROOT",
+    "TEMP",
+    "TMP",
+    "TRELLIS_CONTEXT_ID",
+    "TRELLIS_DEVELOPER",
+    "USERPROFILE",
+    "WINDIR"
+  ],
+  "initial": {
+    "taskRef": ".trellis/tasks/review-case",
+    "taskPath": "C:\\Users\\PXWD\\AppData\\Local\\Temp\\trellis-a-pinned-comparison-pbpnmz7u\\before\\before\\P13\\.trellis\\tasks\\review-case",
+    "fileHashes": {
+      "check.jsonl": "34cfa347ccf72c9e636670bde19a97d01479ef48311e5530402fd0891f958981",
+      "design.md": "1dd8af165b6ec7d4cf1880ba941b6170e1fe34e2406c26f5a690d656f46ca023",
+      "implement.jsonl": "34cfa347ccf72c9e636670bde19a97d01479ef48311e5530402fd0891f958981",
+      "implement.md": "d819ba853516c2f5afbf42255727e1181df011650086ea00105a242e81bf6603",
+      "prd.md": "64ef2160ff8450b8945aba3cdc0a030ad6017d8f5bfc49c5381acc26d715297a",
+      "task.json": "cce24ad2dcd5a2d3a9afc75dff89c8584b8ab6eb33eca39410c1dfe929e3258e"
+    },
+    "record": {
+      "id": "review-case",
+      "name": "review-case",
+      "title": "Fixture",
+      "description": "Review only",
+      "status": "in_progress",
+      "branch": "compare-feature",
+      "base_branch": null,
+      "unknownTop": "preserve",
+      "meta": {
+        "other": {
+          "keep": true
+        },
+        "planningAttest": {
+          "schemaVersion": 1,
+          "reviewId": "cccccccccccccccccccccccccccccccc",
+          "attestedAt": "2026-11-12T12:00:00+00:00",
+          "note": "Fixture planning version under review",
+          "reviewFiles": {
+            "prd.md": "1f4e6e9f8c773fcf9555f35d6ecd5a2a76424b032ef65c1010058d9f2814c6e0",
+            "design.md": "aa27bcbd0a760d0fed7f2ee25b134e1d8654a0f7148f734d465033fb83699c50",
+            "implement.md": "ab958ce49cb4a1b6ec4238c4d15597f8673d8c477e9c37f964ce09d3ff284502"
+          },
+          "files": {
+            "prd.md": "1f4e6e9f8c773fcf9555f35d6ecd5a2a76424b032ef65c1010058d9f2814c6e0",
+            "design.md": "aa27bcbd0a760d0fed7f2ee25b134e1d8654a0f7148f734d465033fb83699c50",
+            "implement.md": "ab958ce49cb4a1b6ec4238c4d15597f8673d8c477e9c37f964ce09d3ff284502"
+          },
+          "editorialChanges": []
+        },
+        "planningApproval": {
+          "schemaVersion": 1,
+          "reviewId": "cccccccccccccccccccccccccccccccc",
+          "reviewedFiles": {
+            "prd.md": "1f4e6e9f8c773fcf9555f35d6ecd5a2a76424b032ef65c1010058d9f2814c6e0",
+            "design.md": "aa27bcbd0a760d0fed7f2ee25b134e1d8654a0f7148f734d465033fb83699c50",
+            "implement.md": "ab958ce49cb4a1b6ec4238c4d15597f8673d8c477e9c37f964ce09d3ff284502"
+          },
+          "recordedAt": "2026-11-12T12:00:00+00:00",
+          "note": "Fixture-only confirmation for this reviewed version; not a real approval",
+          "source": "Fixture-only transcript line after the displayed version"
+        }
+      }
+    },
+    "recordError": null,
+    "taskStatus": "in_progress",
+    "sessionPointers": [
+      {
+        "file": "review-P13.json",
+        "sha256": "0e1c6d23b00f36913189db47595cde2946d49ec3bb870a9fd851ae269cc33475",
+        "record": {
+          "current_task": ".trellis/tasks/review-case",
+          "platform": "codex"
+        },
+        "parseError": null
+      }
+    ],
+    "activePointers": [
+      ".trellis/tasks/review-case"
+    ],
+    "gitBranch": "compare-feature",
+    "gitHead": "c8b5b40330f1994cf0477b056cca74f0ae4f4c98",
+    "gitStatusPorcelain": "",
+    "hookRuns": {
+      "file": "hook-runs.txt",
+      "sha256": null,
+      "text": "",
+      "counts": {
+        "after_start": 0,
+        "after_archive": 0
+      }
+    }
+  },
+  "steps": [
+    {
+      "kind": "command",
+      "label": "replan",
+      "argv": [
+        "python",
+        ".trellis/scripts/task.py",
+        "replan",
+        ".trellis/tasks/review-case",
+        "--reason",
+        "Fixture changed the storage design",
+        "--affected",
+        "storage and dependent tests",
+        "--independent",
+        "documentation wording"
+      ],
+      "environmentKeys": [
+        "APPDATA",
+        "COMSPEC",
+        "HOMEDRIVE",
+        "HOMEPATH",
+        "LOCALAPPDATA",
+        "PATH",
+        "PATHEXT",
+        "PROGRAMDATA",
+        "PROGRAMFILES",
+        "PROGRAMFILES(X86)",
+        "PYTHONDONTWRITEBYTECODE",
+        "PYTHONIOENCODING",
+        "SYSTEMROOT",
+        "TEMP",
+        "TMP",
+        "TRELLIS_CONTEXT_ID",
+        "TRELLIS_DEVELOPER",
+        "USERPROFILE",
+        "WINDIR"
+      ],
+      "exit": 2,
+      "expectedExit": 0,
+      "stdout": "",
+      "stderr": "usage: task.py [-h]\n               {create,add-context,validate,list-context,start,current,finish,set-branch,set-base-branch,set-scope,set-meta,rename,archive,list,add-subtask,remove-subtask,list-archive} ...\ntask.py: error: argument command: invalid choice: 'replan' (choose from create, add-context, validate, list-context, start, current, finish, set-branch, set-base-branch, set-scope, set-meta, rename, archive, list, add-subtask, remove-subtask, list-archive)\n",
+      "launchError": null,
+      "seconds": 0.298238,
+      "before": {
+        "taskRef": ".trellis/tasks/review-case",
+        "taskPath": "C:\\Users\\PXWD\\AppData\\Local\\Temp\\trellis-a-pinned-comparison-pbpnmz7u\\before\\before\\P13\\.trellis\\tasks\\review-case",
+        "fileHashes": {
+          "check.jsonl": "34cfa347ccf72c9e636670bde19a97d01479ef48311e5530402fd0891f958981",
+          "design.md": "1dd8af165b6ec7d4cf1880ba941b6170e1fe34e2406c26f5a690d656f46ca023",
+          "implement.jsonl": "34cfa347ccf72c9e636670bde19a97d01479ef48311e5530402fd0891f958981",
+          "implement.md": "d819ba853516c2f5afbf42255727e1181df011650086ea00105a242e81bf6603",
+          "prd.md": "64ef2160ff8450b8945aba3cdc0a030ad6017d8f5bfc49c5381acc26d715297a",
+          "task.json": "cce24ad2dcd5a2d3a9afc75dff89c8584b8ab6eb33eca39410c1dfe929e3258e"
+        },
+        "record": {
+          "id": "review-case",
+          "name": "review-case",
+          "title": "Fixture",
+          "description": "Review only",
+          "status": "in_progress",
+          "branch": "compare-feature",
+          "base_branch": null,
+          "unknownTop": "preserve",
+          "meta": {
+            "other": {
+              "keep": true
+            },
+            "planningAttest": {
+              "schemaVersion": 1,
+              "reviewId": "cccccccccccccccccccccccccccccccc",
+              "attestedAt": "2026-11-12T12:00:00+00:00",
+              "note": "Fixture planning version under review",
+              "reviewFiles": {
+                "prd.md": "1f4e6e9f8c773fcf9555f35d6ecd5a2a76424b032ef65c1010058d9f2814c6e0",
+                "design.md": "aa27bcbd0a760d0fed7f2ee25b134e1d8654a0f7148f734d465033fb83699c50",
+                "implement.md": "ab958ce49cb4a1b6ec4238c4d15597f8673d8c477e9c37f964ce09d3ff284502"
+              },
+              "files": {
+                "prd.md": "1f4e6e9f8c773fcf9555f35d6ecd5a2a76424b032ef65c1010058d9f2814c6e0",
+                "design.md": "aa27bcbd0a760d0fed7f2ee25b134e1d8654a0f7148f734d465033fb83699c50",
+                "implement.md": "ab958ce49cb4a1b6ec4238c4d15597f8673d8c477e9c37f964ce09d3ff284502"
+              },
+              "editorialChanges": []
+            },
+            "planningApproval": {
+              "schemaVersion": 1,
+              "reviewId": "cccccccccccccccccccccccccccccccc",
+              "reviewedFiles": {
+                "prd.md": "1f4e6e9f8c773fcf9555f35d6ecd5a2a76424b032ef65c1010058d9f2814c6e0",
+                "design.md": "aa27bcbd0a760d0fed7f2ee25b134e1d8654a0f7148f734d465033fb83699c50",
+                "implement.md": "ab958ce49cb4a1b6ec4238c4d15597f8673d8c477e9c37f964ce09d3ff284502"
+              },
+              "recordedAt": "2026-11-12T12:00:00+00:00",
+              "note": "Fixture-only confirmation for this reviewed version; not a real approval",
+              "source": "Fixture-only transcript line after the displayed version"
+            }
+          }
+        },
+        "recordError": null,
+        "taskStatus": "in_progress",
+        "sessionPointers": [
+          {
+            "file": "review-P13.json",
+            "sha256": "0e1c6d23b00f36913189db47595cde2946d49ec3bb870a9fd851ae269cc33475",
+            "record": {
+              "current_task": ".trellis/tasks/review-case",
+              "platform": "codex"
+            },
+            "parseError": null
+          }
+        ],
+        "activePointers": [
+          ".trellis/tasks/review-case"
+        ],
+        "gitBranch": "compare-feature",
+        "gitHead": "c8b5b40330f1994cf0477b056cca74f0ae4f4c98",
+        "gitStatusPorcelain": "",
+        "hookRuns": {
+          "file": "hook-runs.txt",
+          "sha256": null,
+          "text": "",
+          "counts": {
+            "after_start": 0,
+            "after_archive": 0
+          }
+        }
+      },
+      "after": {
+        "taskRef": ".trellis/tasks/review-case",
+        "taskPath": "C:\\Users\\PXWD\\AppData\\Local\\Temp\\trellis-a-pinned-comparison-pbpnmz7u\\before\\before\\P13\\.trellis\\tasks\\review-case",
+        "fileHashes": {
+          "check.jsonl": "34cfa347ccf72c9e636670bde19a97d01479ef48311e5530402fd0891f958981",
+          "design.md": "1dd8af165b6ec7d4cf1880ba941b6170e1fe34e2406c26f5a690d656f46ca023",
+          "implement.jsonl": "34cfa347ccf72c9e636670bde19a97d01479ef48311e5530402fd0891f958981",
+          "implement.md": "d819ba853516c2f5afbf42255727e1181df011650086ea00105a242e81bf6603",
+          "prd.md": "64ef2160ff8450b8945aba3cdc0a030ad6017d8f5bfc49c5381acc26d715297a",
+          "task.json": "cce24ad2dcd5a2d3a9afc75dff89c8584b8ab6eb33eca39410c1dfe929e3258e"
+        },
+        "record": {
+          "id": "review-case",
+          "name": "review-case",
+          "title": "Fixture",
+          "description": "Review only",
+          "status": "in_progress",
+          "branch": "compare-feature",
+          "base_branch": null,
+          "unknownTop": "preserve",
+          "meta": {
+            "other": {
+              "keep": true
+            },
+            "planningAttest": {
+              "schemaVersion": 1,
+              "reviewId": "cccccccccccccccccccccccccccccccc",
+              "attestedAt": "2026-11-12T12:00:00+00:00",
+              "note": "Fixture planning version under review",
+              "reviewFiles": {
+                "prd.md": "1f4e6e9f8c773fcf9555f35d6ecd5a2a76424b032ef65c1010058d9f2814c6e0",
+                "design.md": "aa27bcbd0a760d0fed7f2ee25b134e1d8654a0f7148f734d465033fb83699c50",
+                "implement.md": "ab958ce49cb4a1b6ec4238c4d15597f8673d8c477e9c37f964ce09d3ff284502"
+              },
+              "files": {
+                "prd.md": "1f4e6e9f8c773fcf9555f35d6ecd5a2a76424b032ef65c1010058d9f2814c6e0",
+                "design.md": "aa27bcbd0a760d0fed7f2ee25b134e1d8654a0f7148f734d465033fb83699c50",
+                "implement.md": "ab958ce49cb4a1b6ec4238c4d15597f8673d8c477e9c37f964ce09d3ff284502"
+              },
+              "editorialChanges": []
+            },
+            "planningApproval": {
+              "schemaVersion": 1,
+              "reviewId": "cccccccccccccccccccccccccccccccc",
+              "reviewedFiles": {
+                "prd.md": "1f4e6e9f8c773fcf9555f35d6ecd5a2a76424b032ef65c1010058d9f2814c6e0",
+                "design.md": "aa27bcbd0a760d0fed7f2ee25b134e1d8654a0f7148f734d465033fb83699c50",
+                "implement.md": "ab958ce49cb4a1b6ec4238c4d15597f8673d8c477e9c37f964ce09d3ff284502"
+              },
+              "recordedAt": "2026-11-12T12:00:00+00:00",
+              "note": "Fixture-only confirmation for this reviewed version; not a real approval",
+              "source": "Fixture-only transcript line after the displayed version"
+            }
+          }
+        },
+        "recordError": null,
+        "taskStatus": "in_progress",
+        "sessionPointers": [
+          {
+            "file": "review-P13.json",
+            "sha256": "0e1c6d23b00f36913189db47595cde2946d49ec3bb870a9fd851ae269cc33475",
+            "record": {
+              "current_task": ".trellis/tasks/review-case",
+              "platform": "codex"
+            },
+            "parseError": null
+          }
+        ],
+        "activePointers": [
+          ".trellis/tasks/review-case"
+        ],
+        "gitBranch": "compare-feature",
+        "gitHead": "c8b5b40330f1994cf0477b056cca74f0ae4f4c98",
+        "gitStatusPorcelain": "",
+        "hookRuns": {
+          "file": "hook-runs.txt",
+          "sha256": null,
+          "text": "",
+          "counts": {
+            "after_start": 0,
+            "after_archive": 0
+          }
+        }
+      }
+    }
+  ],
+  "final": {
+    "taskRef": ".trellis/tasks/review-case",
+    "taskPath": "C:\\Users\\PXWD\\AppData\\Local\\Temp\\trellis-a-pinned-comparison-pbpnmz7u\\before\\before\\P13\\.trellis\\tasks\\review-case",
+    "fileHashes": {
+      "check.jsonl": "34cfa347ccf72c9e636670bde19a97d01479ef48311e5530402fd0891f958981",
+      "design.md": "1dd8af165b6ec7d4cf1880ba941b6170e1fe34e2406c26f5a690d656f46ca023",
+      "implement.jsonl": "34cfa347ccf72c9e636670bde19a97d01479ef48311e5530402fd0891f958981",
+      "implement.md": "d819ba853516c2f5afbf42255727e1181df011650086ea00105a242e81bf6603",
+      "prd.md": "64ef2160ff8450b8945aba3cdc0a030ad6017d8f5bfc49c5381acc26d715297a",
+      "task.json": "cce24ad2dcd5a2d3a9afc75dff89c8584b8ab6eb33eca39410c1dfe929e3258e"
+    },
+    "record": {
+      "id": "review-case",
+      "name": "review-case",
+      "title": "Fixture",
+      "description": "Review only",
+      "status": "in_progress",
+      "branch": "compare-feature",
+      "base_branch": null,
+      "unknownTop": "preserve",
+      "meta": {
+        "other": {
+          "keep": true
+        },
+        "planningAttest": {
+          "schemaVersion": 1,
+          "reviewId": "cccccccccccccccccccccccccccccccc",
+          "attestedAt": "2026-11-12T12:00:00+00:00",
+          "note": "Fixture planning version under review",
+          "reviewFiles": {
+            "prd.md": "1f4e6e9f8c773fcf9555f35d6ecd5a2a76424b032ef65c1010058d9f2814c6e0",
+            "design.md": "aa27bcbd0a760d0fed7f2ee25b134e1d8654a0f7148f734d465033fb83699c50",
+            "implement.md": "ab958ce49cb4a1b6ec4238c4d15597f8673d8c477e9c37f964ce09d3ff284502"
+          },
+          "files": {
+            "prd.md": "1f4e6e9f8c773fcf9555f35d6ecd5a2a76424b032ef65c1010058d9f2814c6e0",
+            "design.md": "aa27bcbd0a760d0fed7f2ee25b134e1d8654a0f7148f734d465033fb83699c50",
+            "implement.md": "ab958ce49cb4a1b6ec4238c4d15597f8673d8c477e9c37f964ce09d3ff284502"
+          },
+          "editorialChanges": []
+        },
+        "planningApproval": {
+          "schemaVersion": 1,
+          "reviewId": "cccccccccccccccccccccccccccccccc",
+          "reviewedFiles": {
+            "prd.md": "1f4e6e9f8c773fcf9555f35d6ecd5a2a76424b032ef65c1010058d9f2814c6e0",
+            "design.md": "aa27bcbd0a760d0fed7f2ee25b134e1d8654a0f7148f734d465033fb83699c50",
+            "implement.md": "ab958ce49cb4a1b6ec4238c4d15597f8673d8c477e9c37f964ce09d3ff284502"
+          },
+          "recordedAt": "2026-11-12T12:00:00+00:00",
+          "note": "Fixture-only confirmation for this reviewed version; not a real approval",
+          "source": "Fixture-only transcript line after the displayed version"
+        }
+      }
+    },
+    "recordError": null,
+    "taskStatus": "in_progress",
+    "sessionPointers": [
+      {
+        "file": "review-P13.json",
+        "sha256": "0e1c6d23b00f36913189db47595cde2946d49ec3bb870a9fd851ae269cc33475",
+        "record": {
+          "current_task": ".trellis/tasks/review-case",
+          "platform": "codex"
+        },
+        "parseError": null
+      }
+    ],
+    "activePointers": [
+      ".trellis/tasks/review-case"
+    ],
+    "gitBranch": "compare-feature",
+    "gitHead": "c8b5b40330f1994cf0477b056cca74f0ae4f4c98",
+    "gitStatusPorcelain": "",
+    "hookRuns": {
+      "file": "hook-runs.txt",
+      "sha256": null,
+      "text": "",
+      "counts": {
+        "after_start": 0,
+        "after_archive": 0
+      }
+    }
+  },
+  "assertions": [
+    {
+      "name": "exit-replan",
+      "passed": true,
+      "expected": 2,
+      "actual": 2
+    }
+  ],
+  "expectationMatched": true,
+  "classification": "capability_absent",
+  "capabilityAbsentAt": {
+    "label": "replan",
+    "exit": 2,
+    "stderr": "usage: task.py [-h]\n               {create,add-context,validate,list-context,start,current,finish,set-branch,set-base-branch,set-scope,set-meta,rename,archive,list,add-subtask,remove-subtask,list-archive} ...\ntask.py: error: argument command: invalid choice: 'replan' (choose from create, add-context, validate, list-context, start, current, finish, set-branch, set-base-branch, set-scope, set-meta, rename, archive, list, add-subtask, remove-subtask, list-archive)\n",
+    "reason": "only the old baseline may classify an argparse exit 2 as capability absent"
+  },
+  "legacyAlternative": {
+    "id": null,
+    "scenario": "P13-legacy-alternative",
+    "version": "before",
+    "fixture": {
+      "id": "P13-legacy-alternative",
+      "files": "all",
+      "manifests": "curated",
+      "status": "in_progress",
+      "modern_record": true
+    },
+    "environmentKeys": [
+      "APPDATA",
+      "COMSPEC",
+      "HOMEDRIVE",
+      "HOMEPATH",
+      "LOCALAPPDATA",
+      "PATH",
+      "PATHEXT",
+      "PROGRAMDATA",
+      "PROGRAMFILES",
+      "PROGRAMFILES(X86)",
+      "PYTHONDONTWRITEBYTECODE",
+      "PYTHONIOENCODING",
+      "SYSTEMROOT",
+      "TEMP",
+      "TMP",
+      "TRELLIS_CONTEXT_ID",
+      "TRELLIS_DEVELOPER",
+      "USERPROFILE",
+      "WINDIR"
+    ],
+    "initial": {
+      "taskRef": ".trellis/tasks/review-case",
+      "taskPath": "C:\\Users\\PXWD\\AppData\\Local\\Temp\\trellis-a-pinned-comparison-pbpnmz7u\\before\\legacy\\P13-legacy-alternative\\.trellis\\tasks\\review-case",
+      "fileHashes": {
+        "check.jsonl": "34cfa347ccf72c9e636670bde19a97d01479ef48311e5530402fd0891f958981",
+        "design.md": "1dd8af165b6ec7d4cf1880ba941b6170e1fe34e2406c26f5a690d656f46ca023",
+        "implement.jsonl": "34cfa347ccf72c9e636670bde19a97d01479ef48311e5530402fd0891f958981",
+        "implement.md": "d819ba853516c2f5afbf42255727e1181df011650086ea00105a242e81bf6603",
+        "prd.md": "64ef2160ff8450b8945aba3cdc0a030ad6017d8f5bfc49c5381acc26d715297a",
+        "task.json": "6c59c829f2fde7d7dd494feced6725459d689b44f25b0dad4cbf54e02e8a965b"
+      },
+      "record": {
+        "id": "review-case",
+        "name": "review-case",
+        "title": "Fixture",
+        "description": "Review only",
+        "status": "in_progress",
+        "branch": "compare-feature",
+        "base_branch": null,
+        "unknownTop": "preserve",
+        "meta": {
+          "other": {
+            "keep": true
+          }
+        }
+      },
+      "recordError": null,
+      "taskStatus": "in_progress",
+      "sessionPointers": [],
+      "activePointers": [],
+      "gitBranch": "compare-feature",
+      "gitHead": "8ef6dd73f30c81171bb2dfdcce28084f5f81d306",
+      "gitStatusPorcelain": "",
+      "hookRuns": {
+        "file": "hook-runs.txt",
+        "sha256": null,
+        "text": "",
+        "counts": {
+          "after_start": 0,
+          "after_archive": 0
+        }
+      }
+    },
+    "steps": [
+      {
+        "kind": "command",
+        "label": "old-start-without-planning-flags",
+        "argv": [
+          "python",
+          ".trellis/scripts/task.py",
+          "start",
+          ".trellis/tasks/review-case"
+        ],
+        "environmentKeys": [
+          "APPDATA",
+          "COMSPEC",
+          "HOMEDRIVE",
+          "HOMEPATH",
+          "LOCALAPPDATA",
+          "PATH",
+          "PATHEXT",
+          "PROGRAMDATA",
+          "PROGRAMFILES",
+          "PROGRAMFILES(X86)",
+          "PYTHONDONTWRITEBYTECODE",
+          "PYTHONIOENCODING",
+          "SYSTEMROOT",
+          "TEMP",
+          "TMP",
+          "TRELLIS_CONTEXT_ID",
+          "TRELLIS_DEVELOPER",
+          "USERPROFILE",
+          "WINDIR"
+        ],
+        "exit": 0,
+        "expectedExit": null,
+        "stdout": "\u001b[0;32m✓ Current task set to: .trellis/tasks/review-case\u001b[0m\nSource: session:review-P13-legacy-alternative\n\n\u001b[0;34mThe hook will now inject context from this task's jsonl files.\u001b[0m\n",
+        "stderr": "",
+        "launchError": null,
+        "seconds": 0.42472,
+        "before": {
+          "taskRef": ".trellis/tasks/review-case",
+          "taskPath": "C:\\Users\\PXWD\\AppData\\Local\\Temp\\trellis-a-pinned-comparison-pbpnmz7u\\before\\legacy\\P13-legacy-alternative\\.trellis\\tasks\\review-case",
+          "fileHashes": {
+            "check.jsonl": "34cfa347ccf72c9e636670bde19a97d01479ef48311e5530402fd0891f958981",
+            "design.md": "1dd8af165b6ec7d4cf1880ba941b6170e1fe34e2406c26f5a690d656f46ca023",
+            "implement.jsonl": "34cfa347ccf72c9e636670bde19a97d01479ef48311e5530402fd0891f958981",
+            "implement.md": "d819ba853516c2f5afbf42255727e1181df011650086ea00105a242e81bf6603",
+            "prd.md": "64ef2160ff8450b8945aba3cdc0a030ad6017d8f5bfc49c5381acc26d715297a",
+            "task.json": "6c59c829f2fde7d7dd494feced6725459d689b44f25b0dad4cbf54e02e8a965b"
+          },
+          "record": {
+            "id": "review-case",
+            "name": "review-case",
+            "title": "Fixture",
+            "description": "Review only",
+            "status": "in_progress",
+            "branch": "compare-feature",
+            "base_branch": null,
+            "unknownTop": "preserve",
+            "meta": {
+              "other": {
+                "keep": true
+              }
+            }
+          },
+          "recordError": null,
+          "taskStatus": "in_progress",
+          "sessionPointers": [],
+          "activePointers": [],
+          "gitBranch": "compare-feature",
+          "gitHead": "8ef6dd73f30c81171bb2dfdcce28084f5f81d306",
+          "gitStatusPorcelain": "",
+          "hookRuns": {
+            "file": "hook-runs.txt",
+            "sha256": null,
+            "text": "",
+            "counts": {
+              "after_start": 0,
+              "after_archive": 0
+            }
+          }
+        },
+        "after": {
+          "taskRef": ".trellis/tasks/review-case",
+          "taskPath": "C:\\Users\\PXWD\\AppData\\Local\\Temp\\trellis-a-pinned-comparison-pbpnmz7u\\before\\legacy\\P13-legacy-alternative\\.trellis\\tasks\\review-case",
+          "fileHashes": {
+            "check.jsonl": "34cfa347ccf72c9e636670bde19a97d01479ef48311e5530402fd0891f958981",
+            "design.md": "1dd8af165b6ec7d4cf1880ba941b6170e1fe34e2406c26f5a690d656f46ca023",
+            "implement.jsonl": "34cfa347ccf72c9e636670bde19a97d01479ef48311e5530402fd0891f958981",
+            "implement.md": "d819ba853516c2f5afbf42255727e1181df011650086ea00105a242e81bf6603",
+            "prd.md": "64ef2160ff8450b8945aba3cdc0a030ad6017d8f5bfc49c5381acc26d715297a",
+            "task.json": "6c59c829f2fde7d7dd494feced6725459d689b44f25b0dad4cbf54e02e8a965b"
+          },
+          "record": {
+            "id": "review-case",
+            "name": "review-case",
+            "title": "Fixture",
+            "description": "Review only",
+            "status": "in_progress",
+            "branch": "compare-feature",
+            "base_branch": null,
+            "unknownTop": "preserve",
+            "meta": {
+              "other": {
+                "keep": true
+              }
+            }
+          },
+          "recordError": null,
+          "taskStatus": "in_progress",
+          "sessionPointers": [
+            {
+              "file": "review-P13-legacy-alternative.json",
+              "sha256": "e5b1759d339d0733408ebad19d95c0dd1f7b7770a3c6be2989bbe14561992373",
+              "record": {
+                "platform": "session",
+                "last_seen_at": "2026-11-13T02:32:49Z",
+                "current_task": ".trellis/tasks/review-case",
+                "current_run": null
+              },
+              "parseError": null
+            }
+          ],
+          "activePointers": [
+            ".trellis/tasks/review-case"
+          ],
+          "gitBranch": "compare-feature",
+          "gitHead": "8ef6dd73f30c81171bb2dfdcce28084f5f81d306",
+          "gitStatusPorcelain": "?? .trellis/.runtime/\n?? hook-runs.txt",
+          "hookRuns": {
+            "file": "hook-runs.txt",
+            "sha256": "fe2a2e451e790abd31aeb7fa90189c00d850276a765d99e9d97190abe1c5f5b0",
+            "text": "after_start\n",
+            "counts": {
+              "after_start": 1,
+              "after_archive": 0
+            }
+          }
+        }
+      }
+    ],
+    "final": {
+      "taskRef": ".trellis/tasks/review-case",
+      "taskPath": "C:\\Users\\PXWD\\AppData\\Local\\Temp\\trellis-a-pinned-comparison-pbpnmz7u\\before\\legacy\\P13-legacy-alternative\\.trellis\\tasks\\review-case",
+      "fileHashes": {
+        "check.jsonl": "34cfa347ccf72c9e636670bde19a97d01479ef48311e5530402fd0891f958981",
+        "design.md": "1dd8af165b6ec7d4cf1880ba941b6170e1fe34e2406c26f5a690d656f46ca023",
+        "implement.jsonl": "34cfa347ccf72c9e636670bde19a97d01479ef48311e5530402fd0891f958981",
+        "implement.md": "d819ba853516c2f5afbf42255727e1181df011650086ea00105a242e81bf6603",
+        "prd.md": "64ef2160ff8450b8945aba3cdc0a030ad6017d8f5bfc49c5381acc26d715297a",
+        "task.json": "6c59c829f2fde7d7dd494feced6725459d689b44f25b0dad4cbf54e02e8a965b"
+      },
+      "record": {
+        "id": "review-case",
+        "name": "review-case",
+        "title": "Fixture",
+        "description": "Review only",
+        "status": "in_progress",
+        "branch": "compare-feature",
+        "base_branch": null,
+        "unknownTop": "preserve",
+        "meta": {
+          "other": {
+            "keep": true
+          }
+        }
+      },
+      "recordError": null,
+      "taskStatus": "in_progress",
+      "sessionPointers": [
+        {
+          "file": "review-P13-legacy-alternative.json",
+          "sha256": "e5b1759d339d0733408ebad19d95c0dd1f7b7770a3c6be2989bbe14561992373",
+          "record": {
+            "platform": "session",
+            "last_seen_at": "2026-11-13T02:32:49Z",
+            "current_task": ".trellis/tasks/review-case",
+            "current_run": null
+          },
+          "parseError": null
+        }
+      ],
+      "activePointers": [
+        ".trellis/tasks/review-case"
+      ],
+      "gitBranch": "compare-feature",
+      "gitHead": "8ef6dd73f30c81171bb2dfdcce28084f5f81d306",
+      "gitStatusPorcelain": "?? .trellis/.runtime/\n?? hook-runs.txt",
+      "hookRuns": {
+        "file": "hook-runs.txt",
+        "sha256": "fe2a2e451e790abd31aeb7fa90189c00d850276a765d99e9d97190abe1c5f5b0",
+        "text": "after_start\n",
+        "counts": {
+          "after_start": 1,
+          "after_archive": 0
+        }
+      }
+    },
+    "assertions": [],
+    "expectationMatched": false,
+    "classification": "observation",
+    "capabilityAbsentAt": null,
+    "purpose": "Old baseline's original start path, kept separate from the main P scenario."
+  }
+}

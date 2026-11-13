@@ -1,0 +1,259 @@
+{
+  "id": "P04",
+  "scenario": "empty-manifests",
+  "version": "before",
+  "fixture": {
+    "id": "empty-manifests",
+    "status": "planning",
+    "files": "prd",
+    "manifests": "empty",
+    "command": "start"
+  },
+  "environmentKeys": [
+    "APPDATA",
+    "COMSPEC",
+    "HOMEDRIVE",
+    "HOMEPATH",
+    "LOCALAPPDATA",
+    "PATH",
+    "PATHEXT",
+    "PROGRAMDATA",
+    "PROGRAMFILES",
+    "PROGRAMFILES(X86)",
+    "PYTHONDONTWRITEBYTECODE",
+    "PYTHONIOENCODING",
+    "SYSTEMROOT",
+    "TEMP",
+    "TMP",
+    "TRELLIS_CONTEXT_ID",
+    "TRELLIS_DEVELOPER",
+    "USERPROFILE",
+    "WINDIR"
+  ],
+  "initial": {
+    "taskRef": ".trellis/tasks/review-case",
+    "taskPath": "C:\\Users\\PXWD\\AppData\\Local\\Temp\\trellis-a-pinned-comparison-pbpnmz7u\\before\\before\\empty-manifests\\.trellis\\tasks\\review-case",
+    "fileHashes": {
+      "check.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "implement.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "prd.md": "f2242d74b5e319c9dd156bfe3458a3d8accace025d95d4b2a46fbf742bee57d4",
+      "task.json": "a799087d67a4409478becea82b0001a652c3da7eb66b269a9a7e39923d79fa43"
+    },
+    "record": {
+      "id": "review-case",
+      "name": "review-case",
+      "title": "Fixture",
+      "description": "Review only",
+      "status": "planning",
+      "branch": null,
+      "base_branch": null,
+      "unknownTop": "preserve",
+      "meta": {
+        "other": {
+          "keep": true
+        }
+      }
+    },
+    "recordError": null,
+    "taskStatus": "planning",
+    "sessionPointers": [],
+    "activePointers": [],
+    "gitBranch": "compare-feature",
+    "gitHead": "6e872636de1224134740b90074cbba46a8a19d40",
+    "gitStatusPorcelain": "",
+    "hookRuns": {
+      "file": "hook-runs.txt",
+      "sha256": null,
+      "text": "",
+      "counts": {
+        "after_start": 0,
+        "after_archive": 0
+      }
+    }
+  },
+  "steps": [
+    {
+      "kind": "command",
+      "label": "start",
+      "argv": [
+        "python",
+        ".trellis/scripts/task.py",
+        "start",
+        ".trellis/tasks/review-case"
+      ],
+      "environmentKeys": [
+        "APPDATA",
+        "COMSPEC",
+        "HOMEDRIVE",
+        "HOMEPATH",
+        "LOCALAPPDATA",
+        "PATH",
+        "PATHEXT",
+        "PROGRAMDATA",
+        "PROGRAMFILES",
+        "PROGRAMFILES(X86)",
+        "PYTHONDONTWRITEBYTECODE",
+        "PYTHONIOENCODING",
+        "SYSTEMROOT",
+        "TEMP",
+        "TMP",
+        "TRELLIS_CONTEXT_ID",
+        "TRELLIS_DEVELOPER",
+        "USERPROFILE",
+        "WINDIR"
+      ],
+      "exit": 1,
+      "expectedExit": null,
+      "stdout": "\u001b[0;31mError: implement.jsonl and check.jsonl have no curated entries\u001b[0m\nSub-agents (implement/check) would run with zero spec context.\n  Curate:  python3 .trellis/scripts/task.py add-context .trellis/tasks/review-case implement <path> \"<why>\"\n  Verify:  python3 .trellis/scripts/task.py validate .trellis/tasks/review-case\n  Intentionally empty? Re-run start with --allow-empty-context\n",
+      "stderr": "",
+      "launchError": null,
+      "seconds": 0.328257,
+      "before": {
+        "taskRef": ".trellis/tasks/review-case",
+        "taskPath": "C:\\Users\\PXWD\\AppData\\Local\\Temp\\trellis-a-pinned-comparison-pbpnmz7u\\before\\before\\empty-manifests\\.trellis\\tasks\\review-case",
+        "fileHashes": {
+          "check.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "implement.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "prd.md": "f2242d74b5e319c9dd156bfe3458a3d8accace025d95d4b2a46fbf742bee57d4",
+          "task.json": "a799087d67a4409478becea82b0001a652c3da7eb66b269a9a7e39923d79fa43"
+        },
+        "record": {
+          "id": "review-case",
+          "name": "review-case",
+          "title": "Fixture",
+          "description": "Review only",
+          "status": "planning",
+          "branch": null,
+          "base_branch": null,
+          "unknownTop": "preserve",
+          "meta": {
+            "other": {
+              "keep": true
+            }
+          }
+        },
+        "recordError": null,
+        "taskStatus": "planning",
+        "sessionPointers": [],
+        "activePointers": [],
+        "gitBranch": "compare-feature",
+        "gitHead": "6e872636de1224134740b90074cbba46a8a19d40",
+        "gitStatusPorcelain": "",
+        "hookRuns": {
+          "file": "hook-runs.txt",
+          "sha256": null,
+          "text": "",
+          "counts": {
+            "after_start": 0,
+            "after_archive": 0
+          }
+        }
+      },
+      "after": {
+        "taskRef": ".trellis/tasks/review-case",
+        "taskPath": "C:\\Users\\PXWD\\AppData\\Local\\Temp\\trellis-a-pinned-comparison-pbpnmz7u\\before\\before\\empty-manifests\\.trellis\\tasks\\review-case",
+        "fileHashes": {
+          "check.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "implement.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "prd.md": "f2242d74b5e319c9dd156bfe3458a3d8accace025d95d4b2a46fbf742bee57d4",
+          "task.json": "a799087d67a4409478becea82b0001a652c3da7eb66b269a9a7e39923d79fa43"
+        },
+        "record": {
+          "id": "review-case",
+          "name": "review-case",
+          "title": "Fixture",
+          "description": "Review only",
+          "status": "planning",
+          "branch": null,
+          "base_branch": null,
+          "unknownTop": "preserve",
+          "meta": {
+            "other": {
+              "keep": true
+            }
+          }
+        },
+        "recordError": null,
+        "taskStatus": "planning",
+        "sessionPointers": [],
+        "activePointers": [],
+        "gitBranch": "compare-feature",
+        "gitHead": "6e872636de1224134740b90074cbba46a8a19d40",
+        "gitStatusPorcelain": "",
+        "hookRuns": {
+          "file": "hook-runs.txt",
+          "sha256": null,
+          "text": "",
+          "counts": {
+            "after_start": 0,
+            "after_archive": 0
+          }
+        }
+      }
+    }
+  ],
+  "final": {
+    "taskRef": ".trellis/tasks/review-case",
+    "taskPath": "C:\\Users\\PXWD\\AppData\\Local\\Temp\\trellis-a-pinned-comparison-pbpnmz7u\\before\\before\\empty-manifests\\.trellis\\tasks\\review-case",
+    "fileHashes": {
+      "check.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "implement.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "prd.md": "f2242d74b5e319c9dd156bfe3458a3d8accace025d95d4b2a46fbf742bee57d4",
+      "task.json": "a799087d67a4409478becea82b0001a652c3da7eb66b269a9a7e39923d79fa43"
+    },
+    "record": {
+      "id": "review-case",
+      "name": "review-case",
+      "title": "Fixture",
+      "description": "Review only",
+      "status": "planning",
+      "branch": null,
+      "base_branch": null,
+      "unknownTop": "preserve",
+      "meta": {
+        "other": {
+          "keep": true
+        }
+      }
+    },
+    "recordError": null,
+    "taskStatus": "planning",
+    "sessionPointers": [],
+    "activePointers": [],
+    "gitBranch": "compare-feature",
+    "gitHead": "6e872636de1224134740b90074cbba46a8a19d40",
+    "gitStatusPorcelain": "",
+    "hookRuns": {
+      "file": "hook-runs.txt",
+      "sha256": null,
+      "text": "",
+      "counts": {
+        "after_start": 0,
+        "after_archive": 0
+      }
+    }
+  },
+  "assertions": [
+    {
+      "name": "firstExit",
+      "passed": true,
+      "expected": 1,
+      "actual": 1
+    },
+    {
+      "name": "finalStatus",
+      "passed": true,
+      "expected": "planning",
+      "actual": "planning"
+    },
+    {
+      "name": "pointers",
+      "passed": true,
+      "expected": 0,
+      "actual": 0
+    }
+  ],
+  "expectationMatched": true,
+  "classification": "executed",
+  "capabilityAbsentAt": null
+}

@@ -1,0 +1,17 @@
+{
+  "checkedAt": "2026-11-13T02:46:18.505414+00:00",
+  "scope": "Only A research evidence; no code, frozen plan, task status, C, push, archive, or permanent hook settings",
+  "implementation": "1b801471966e8fb898d0c33e1b025aad2a86f5db",
+  "gitnexus": {
+    "command": "npx --yes gitnexus@1.6.12 detect-changes --repo Trellis-A-implementation --scope staged",
+    "exit": 0,
+    "stagedFilesAtScan": 56,
+    "indexedSymbolOverlap": false,
+    "limitation": "No indexed overlap is not a clean-tree or exhaustive no-impact proof. The scan log and this note are evidence added after the scanned snapshot."
+  },
+  "commitExceptionSource": "commit-exception-approval.json",
+  "remaining": [
+    "M2 real reply to displayed isolated version, version-bound start and readback",
+    "final acceptance addendum and evidence commit after that real reply"
+  ]
+}

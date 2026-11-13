@@ -1,0 +1,94 @@
+{
+  "executionStatus": "complete",
+  "commits": {
+    "before": "9b76fe49f19de4d383dd4677fea803e2f2da7004",
+    "after": "1b801471966e8fb898d0c33e1b025aad2a86f5db"
+  },
+  "marketplace": {
+    "before": {
+      "path": "marketplace",
+      "present": true,
+      "mode": "160000",
+      "type": "commit",
+      "commit": "f503b7869953ebe81ee98bff3258d9dbc19b42a2",
+      "raw": "160000 commit f503b7869953ebe81ee98bff3258d9dbc19b42a2\tmarketplace"
+    },
+    "after": {
+      "path": "marketplace",
+      "present": true,
+      "mode": "160000",
+      "type": "commit",
+      "commit": "60228d8474ec836294884730579d1248a3ffb2d2",
+      "raw": "160000 commit 60228d8474ec836294884730579d1248a3ffb2d2\tmarketplace"
+    }
+  },
+  "platform": "Windows-11-10.0.26200-SP0",
+  "pythonRuntime": {
+    "version": "3.13.2 (tags/v3.13.2:4f8bb39, Feb  4 2025, 15:23:48) [MSC v.1942 64 bit (AMD64)]",
+    "executable": "C:\\Python313\\python.exe",
+    "implementation": "CPython"
+  },
+  "tools": {
+    "python": {
+      "argv": [
+        "python",
+        "--version"
+      ],
+      "exit": 0,
+      "stdout": "Python 3.13.2\n",
+      "stderr": ""
+    },
+    "node": {
+      "argv": [
+        "node",
+        "--version"
+      ],
+      "exit": 0,
+      "stdout": "v22.23.2\n",
+      "stderr": ""
+    },
+    "pnpm": {
+      "argv": [
+        "C:\\WINDOWS\\system32\\cmd.exe",
+        "/d",
+        "/c",
+        "pnpm --version"
+      ],
+      "exit": 0,
+      "stdout": "10.32.1\n",
+      "stderr": ""
+    },
+    "git": {
+      "argv": [
+        "git",
+        "--version"
+      ],
+      "exit": 0,
+      "stdout": "git version 2.38.1.windows.1\n",
+      "stderr": ""
+    }
+  },
+  "environmentKeys": [
+    "APPDATA",
+    "COMSPEC",
+    "HOMEDRIVE",
+    "HOMEPATH",
+    "LOCALAPPDATA",
+    "PATH",
+    "PATHEXT",
+    "PROGRAMDATA",
+    "PROGRAMFILES",
+    "PROGRAMFILES(X86)",
+    "PYTHONDONTWRITEBYTECODE",
+    "PYTHONIOENCODING",
+    "SYSTEMROOT",
+    "TEMP",
+    "TMP",
+    "TRELLIS_DEVELOPER",
+    "USERPROFILE",
+    "WINDIR"
+  ],
+  "fixtureRoot": "C:\\Users\\PXWD\\AppData\\Local\\Temp\\trellis-a-pinned-comparison-pbpnmz7u",
+  "scope": "Pinned committed template trees only. Every version gets a separate temporary Git repository. Timings are observational only.",
+  "sensitiveValuesStored": false
+}

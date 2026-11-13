@@ -1,0 +1,199 @@
+{
+  "id": "P06",
+  "scenario": "corrupt-task-json",
+  "version": "after",
+  "fixture": {
+    "id": "corrupt-task-json",
+    "status": "corrupt",
+    "files": null,
+    "manifests": "curated",
+    "command": "start"
+  },
+  "environmentKeys": [
+    "APPDATA",
+    "COMSPEC",
+    "HOMEDRIVE",
+    "HOMEPATH",
+    "LOCALAPPDATA",
+    "PATH",
+    "PATHEXT",
+    "PROGRAMDATA",
+    "PROGRAMFILES",
+    "PROGRAMFILES(X86)",
+    "PYTHONDONTWRITEBYTECODE",
+    "PYTHONIOENCODING",
+    "SYSTEMROOT",
+    "TEMP",
+    "TMP",
+    "TRELLIS_CONTEXT_ID",
+    "TRELLIS_DEVELOPER",
+    "USERPROFILE",
+    "WINDIR"
+  ],
+  "initial": {
+    "taskRef": ".trellis/tasks/review-case",
+    "taskPath": "C:\\Users\\PXWD\\AppData\\Local\\Temp\\trellis-a-pinned-comparison-pbpnmz7u\\after\\after\\corrupt-task-json\\.trellis\\tasks\\review-case",
+    "fileHashes": {
+      "check.jsonl": "34cfa347ccf72c9e636670bde19a97d01479ef48311e5530402fd0891f958981",
+      "implement.jsonl": "34cfa347ccf72c9e636670bde19a97d01479ef48311e5530402fd0891f958981",
+      "task.json": "f06368fc6aac4a1a3b75e018d11a120325e604b9a99d6002dca6acdca46b216a"
+    },
+    "record": null,
+    "recordError": "Expecting property name enclosed in double quotes: line 1 column 3 (char 2)",
+    "taskStatus": "corrupt",
+    "sessionPointers": [],
+    "activePointers": [],
+    "gitBranch": "compare-feature",
+    "gitHead": "64e199f2889764b716a4854d31d1475b34f1f7c9",
+    "gitStatusPorcelain": "",
+    "hookRuns": {
+      "file": "hook-runs.txt",
+      "sha256": null,
+      "text": "",
+      "counts": {
+        "after_start": 0,
+        "after_archive": 0
+      }
+    }
+  },
+  "steps": [
+    {
+      "kind": "command",
+      "label": "start",
+      "argv": [
+        "python",
+        ".trellis/scripts/task.py",
+        "start",
+        ".trellis/tasks/review-case"
+      ],
+      "environmentKeys": [
+        "APPDATA",
+        "COMSPEC",
+        "HOMEDRIVE",
+        "HOMEPATH",
+        "LOCALAPPDATA",
+        "PATH",
+        "PATHEXT",
+        "PROGRAMDATA",
+        "PROGRAMFILES",
+        "PROGRAMFILES(X86)",
+        "PYTHONDONTWRITEBYTECODE",
+        "PYTHONIOENCODING",
+        "SYSTEMROOT",
+        "TEMP",
+        "TMP",
+        "TRELLIS_CONTEXT_ID",
+        "TRELLIS_DEVELOPER",
+        "USERPROFILE",
+        "WINDIR"
+      ],
+      "exit": 1,
+      "expectedExit": null,
+      "stdout": "\u001b[0;31mError: C:\\Users\\PXWD\\AppData\\Local\\Temp\\trellis-a-pinned-comparison-pbpnmz7u\\after\\after\\corrupt-task-json\\.trellis\\tasks\\review-case\\task.json: not valid JSON\u001b[0m\nFix the syntax (e.g. `python3 -m json.tool C:\\Users\\PXWD\\AppData\\Local\\Temp\\trellis-a-pinned-comparison-pbpnmz7u\\after\\after\\corrupt-task-json\\.trellis\\tasks\\review-case\\task.json`), then retry.\n",
+      "stderr": "",
+      "launchError": null,
+      "seconds": 0.335486,
+      "before": {
+        "taskRef": ".trellis/tasks/review-case",
+        "taskPath": "C:\\Users\\PXWD\\AppData\\Local\\Temp\\trellis-a-pinned-comparison-pbpnmz7u\\after\\after\\corrupt-task-json\\.trellis\\tasks\\review-case",
+        "fileHashes": {
+          "check.jsonl": "34cfa347ccf72c9e636670bde19a97d01479ef48311e5530402fd0891f958981",
+          "implement.jsonl": "34cfa347ccf72c9e636670bde19a97d01479ef48311e5530402fd0891f958981",
+          "task.json": "f06368fc6aac4a1a3b75e018d11a120325e604b9a99d6002dca6acdca46b216a"
+        },
+        "record": null,
+        "recordError": "Expecting property name enclosed in double quotes: line 1 column 3 (char 2)",
+        "taskStatus": "corrupt",
+        "sessionPointers": [],
+        "activePointers": [],
+        "gitBranch": "compare-feature",
+        "gitHead": "64e199f2889764b716a4854d31d1475b34f1f7c9",
+        "gitStatusPorcelain": "",
+        "hookRuns": {
+          "file": "hook-runs.txt",
+          "sha256": null,
+          "text": "",
+          "counts": {
+            "after_start": 0,
+            "after_archive": 0
+          }
+        }
+      },
+      "after": {
+        "taskRef": ".trellis/tasks/review-case",
+        "taskPath": "C:\\Users\\PXWD\\AppData\\Local\\Temp\\trellis-a-pinned-comparison-pbpnmz7u\\after\\after\\corrupt-task-json\\.trellis\\tasks\\review-case",
+        "fileHashes": {
+          "check.jsonl": "34cfa347ccf72c9e636670bde19a97d01479ef48311e5530402fd0891f958981",
+          "implement.jsonl": "34cfa347ccf72c9e636670bde19a97d01479ef48311e5530402fd0891f958981",
+          "task.json": "f06368fc6aac4a1a3b75e018d11a120325e604b9a99d6002dca6acdca46b216a"
+        },
+        "record": null,
+        "recordError": "Expecting property name enclosed in double quotes: line 1 column 3 (char 2)",
+        "taskStatus": "corrupt",
+        "sessionPointers": [],
+        "activePointers": [],
+        "gitBranch": "compare-feature",
+        "gitHead": "64e199f2889764b716a4854d31d1475b34f1f7c9",
+        "gitStatusPorcelain": "",
+        "hookRuns": {
+          "file": "hook-runs.txt",
+          "sha256": null,
+          "text": "",
+          "counts": {
+            "after_start": 0,
+            "after_archive": 0
+          }
+        }
+      }
+    }
+  ],
+  "final": {
+    "taskRef": ".trellis/tasks/review-case",
+    "taskPath": "C:\\Users\\PXWD\\AppData\\Local\\Temp\\trellis-a-pinned-comparison-pbpnmz7u\\after\\after\\corrupt-task-json\\.trellis\\tasks\\review-case",
+    "fileHashes": {
+      "check.jsonl": "34cfa347ccf72c9e636670bde19a97d01479ef48311e5530402fd0891f958981",
+      "implement.jsonl": "34cfa347ccf72c9e636670bde19a97d01479ef48311e5530402fd0891f958981",
+      "task.json": "f06368fc6aac4a1a3b75e018d11a120325e604b9a99d6002dca6acdca46b216a"
+    },
+    "record": null,
+    "recordError": "Expecting property name enclosed in double quotes: line 1 column 3 (char 2)",
+    "taskStatus": "corrupt",
+    "sessionPointers": [],
+    "activePointers": [],
+    "gitBranch": "compare-feature",
+    "gitHead": "64e199f2889764b716a4854d31d1475b34f1f7c9",
+    "gitStatusPorcelain": "",
+    "hookRuns": {
+      "file": "hook-runs.txt",
+      "sha256": null,
+      "text": "",
+      "counts": {
+        "after_start": 0,
+        "after_archive": 0
+      }
+    }
+  },
+  "assertions": [
+    {
+      "name": "firstExit",
+      "passed": true,
+      "expected": 1,
+      "actual": 1
+    },
+    {
+      "name": "pointers",
+      "passed": true,
+      "expected": 0,
+      "actual": 0
+    },
+    {
+      "name": "afterStartHooks",
+      "passed": true,
+      "expected": 0,
+      "actual": 0
+    }
+  ],
+  "expectationMatched": true,
+  "classification": "executed",
+  "capabilityAbsentAt": null
+}

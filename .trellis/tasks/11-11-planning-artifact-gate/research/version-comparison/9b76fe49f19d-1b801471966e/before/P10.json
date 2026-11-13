@@ -1,0 +1,289 @@
+{
+  "id": "P10",
+  "scenario": "create-targets-planning",
+  "version": "before",
+  "fixture": {
+    "id": "create-targets-planning",
+    "status": "new",
+    "files": null,
+    "manifests": null,
+    "command": "create"
+  },
+  "environmentKeys": [
+    "APPDATA",
+    "COMSPEC",
+    "HOMEDRIVE",
+    "HOMEPATH",
+    "LOCALAPPDATA",
+    "PATH",
+    "PATHEXT",
+    "PROGRAMDATA",
+    "PROGRAMFILES",
+    "PROGRAMFILES(X86)",
+    "PYTHONDONTWRITEBYTECODE",
+    "PYTHONIOENCODING",
+    "SYSTEMROOT",
+    "TEMP",
+    "TMP",
+    "TRELLIS_CONTEXT_ID",
+    "TRELLIS_DEVELOPER",
+    "USERPROFILE",
+    "WINDIR"
+  ],
+  "initial": {
+    "taskRef": null,
+    "taskPath": null,
+    "fileHashes": {},
+    "record": null,
+    "recordError": null,
+    "taskStatus": null,
+    "sessionPointers": [],
+    "activePointers": [],
+    "gitBranch": "compare-feature",
+    "gitHead": "c492536e57b72c4a3433934e19a7c34ce9c085fb",
+    "gitStatusPorcelain": "",
+    "hookRuns": {
+      "file": "hook-runs.txt",
+      "sha256": null,
+      "text": "",
+      "counts": {
+        "after_start": 0,
+        "after_archive": 0
+      }
+    }
+  },
+  "steps": [
+    {
+      "kind": "command",
+      "label": "create",
+      "argv": [
+        "python",
+        ".trellis/scripts/task.py",
+        "create",
+        "Review planning",
+        "--description",
+        "Review only",
+        "--slug",
+        "review-planning"
+      ],
+      "environmentKeys": [
+        "APPDATA",
+        "COMSPEC",
+        "HOMEDRIVE",
+        "HOMEPATH",
+        "LOCALAPPDATA",
+        "PATH",
+        "PATHEXT",
+        "PROGRAMDATA",
+        "PROGRAMFILES",
+        "PROGRAMFILES(X86)",
+        "PYTHONDONTWRITEBYTECODE",
+        "PYTHONIOENCODING",
+        "SYSTEMROOT",
+        "TEMP",
+        "TMP",
+        "TRELLIS_CONTEXT_ID",
+        "TRELLIS_DEVELOPER",
+        "USERPROFILE",
+        "WINDIR"
+      ],
+      "exit": 0,
+      "expectedExit": 0,
+      "stdout": ".trellis/tasks/11-13-review-planning\n",
+      "stderr": "\u001b[1;33mwarning: could not resolve the repository's default branch (no remote configured, offline, etc.); stamping base_branch as the checked-out branch 'compare-feature'. Pass --base-branch to override.\u001b[0m\n\u001b[0;32mActivated task for this session: .trellis/tasks/11-13-review-planning\u001b[0m\nSource: session:review-create-targets-planning\n\u001b[0;32mCreated task: 11-13-review-planning\u001b[0m\n\n\u001b[0;34mNext steps:\u001b[0m\n  - Fill prd.md with requirements and acceptance criteria\n  - Lightweight task: PRD-only is valid\n  - Complex task: add design.md and implement.md before task.py start\n  - Use /trellis:continue or phase context to decide the next step\n\n",
+      "launchError": null,
+      "seconds": 0.449292,
+      "before": {
+        "taskRef": null,
+        "taskPath": null,
+        "fileHashes": {},
+        "record": null,
+        "recordError": null,
+        "taskStatus": null,
+        "sessionPointers": [],
+        "activePointers": [],
+        "gitBranch": "compare-feature",
+        "gitHead": "c492536e57b72c4a3433934e19a7c34ce9c085fb",
+        "gitStatusPorcelain": "",
+        "hookRuns": {
+          "file": "hook-runs.txt",
+          "sha256": null,
+          "text": "",
+          "counts": {
+            "after_start": 0,
+            "after_archive": 0
+          }
+        }
+      },
+      "after": {
+        "taskRef": ".trellis/tasks/11-13-review-planning",
+        "taskPath": "C:\\Users\\PXWD\\AppData\\Local\\Temp\\trellis-a-pinned-comparison-pbpnmz7u\\before\\before\\create-targets-planning\\.trellis\\tasks\\11-13-review-planning",
+        "fileHashes": {
+          "prd.md": "9bd1a07fe42146f07ff92b36e420e3cfe04a1d612a35b90ca2aaac23a7c010a3",
+          "task.json": "aa7212b3dcec934238c5486fe05287cdd8c4b4665ebaab3f40152d2f0481c7e6"
+        },
+        "record": {
+          "id": "review-planning",
+          "name": "review-planning",
+          "title": "Review planning",
+          "description": "Review only",
+          "status": "planning",
+          "dev_type": null,
+          "scope": null,
+          "package": null,
+          "priority": "P2",
+          "creator": "review-fixture",
+          "assignee": "review-fixture",
+          "createdAt": "2026-11-13",
+          "completedAt": null,
+          "branch": null,
+          "base_branch": "compare-feature",
+          "worktree_path": null,
+          "commit": null,
+          "pr_url": null,
+          "subtasks": [],
+          "children": [],
+          "parent": null,
+          "relatedFiles": [],
+          "notes": "",
+          "meta": {}
+        },
+        "recordError": null,
+        "taskStatus": "planning",
+        "sessionPointers": [
+          {
+            "file": "review-create-targets-planning.json",
+            "sha256": "f30eee33bcb2d46094bc09f28eb31fc2925080d1fa72ec2c429cb91b2f17b671",
+            "record": {
+              "platform": "session",
+              "last_seen_at": "2026-11-13T02:32:43Z",
+              "current_task": ".trellis/tasks/11-13-review-planning",
+              "current_run": null
+            },
+            "parseError": null
+          }
+        ],
+        "activePointers": [
+          ".trellis/tasks/11-13-review-planning"
+        ],
+        "gitBranch": "compare-feature",
+        "gitHead": "c492536e57b72c4a3433934e19a7c34ce9c085fb",
+        "gitStatusPorcelain": "?? .trellis/.runtime/\n?? .trellis/tasks/",
+        "hookRuns": {
+          "file": "hook-runs.txt",
+          "sha256": null,
+          "text": "",
+          "counts": {
+            "after_start": 0,
+            "after_archive": 0
+          }
+        }
+      }
+    }
+  ],
+  "final": {
+    "taskRef": ".trellis/tasks/11-13-review-planning",
+    "taskPath": "C:\\Users\\PXWD\\AppData\\Local\\Temp\\trellis-a-pinned-comparison-pbpnmz7u\\before\\before\\create-targets-planning\\.trellis\\tasks\\11-13-review-planning",
+    "fileHashes": {
+      "prd.md": "9bd1a07fe42146f07ff92b36e420e3cfe04a1d612a35b90ca2aaac23a7c010a3",
+      "task.json": "aa7212b3dcec934238c5486fe05287cdd8c4b4665ebaab3f40152d2f0481c7e6"
+    },
+    "record": {
+      "id": "review-planning",
+      "name": "review-planning",
+      "title": "Review planning",
+      "description": "Review only",
+      "status": "planning",
+      "dev_type": null,
+      "scope": null,
+      "package": null,
+      "priority": "P2",
+      "creator": "review-fixture",
+      "assignee": "review-fixture",
+      "createdAt": "2026-11-13",
+      "completedAt": null,
+      "branch": null,
+      "base_branch": "compare-feature",
+      "worktree_path": null,
+      "commit": null,
+      "pr_url": null,
+      "subtasks": [],
+      "children": [],
+      "parent": null,
+      "relatedFiles": [],
+      "notes": "",
+      "meta": {}
+    },
+    "recordError": null,
+    "taskStatus": "planning",
+    "sessionPointers": [
+      {
+        "file": "review-create-targets-planning.json",
+        "sha256": "f30eee33bcb2d46094bc09f28eb31fc2925080d1fa72ec2c429cb91b2f17b671",
+        "record": {
+          "platform": "session",
+          "last_seen_at": "2026-11-13T02:32:43Z",
+          "current_task": ".trellis/tasks/11-13-review-planning",
+          "current_run": null
+        },
+        "parseError": null
+      }
+    ],
+    "activePointers": [
+      ".trellis/tasks/11-13-review-planning"
+    ],
+    "gitBranch": "compare-feature",
+    "gitHead": "c492536e57b72c4a3433934e19a7c34ce9c085fb",
+    "gitStatusPorcelain": "?? .trellis/.runtime/\n?? .trellis/tasks/",
+    "hookRuns": {
+      "file": "hook-runs.txt",
+      "sha256": null,
+      "text": "",
+      "counts": {
+        "after_start": 0,
+        "after_archive": 0
+      }
+    }
+  },
+  "assertions": [
+    {
+      "name": "firstExit",
+      "passed": true,
+      "expected": 0,
+      "actual": 0
+    },
+    {
+      "name": "finalStatus",
+      "passed": true,
+      "expected": "planning",
+      "actual": "planning"
+    },
+    {
+      "name": "pointers",
+      "passed": true,
+      "expected": 1,
+      "actual": 1
+    },
+    {
+      "name": "no-empty-design-generated",
+      "passed": true,
+      "expected": false,
+      "actual": false
+    },
+    {
+      "name": "no-empty-plan-generated",
+      "passed": true,
+      "expected": false,
+      "actual": false
+    },
+    {
+      "name": "exit-create",
+      "passed": true,
+      "expected": 0,
+      "actual": 0
+    }
+  ],
+  "expectationMatched": true,
+  "classification": "executed",
+  "capabilityAbsentAt": null
+}

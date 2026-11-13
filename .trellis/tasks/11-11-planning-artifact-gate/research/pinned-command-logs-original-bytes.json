@@ -1,0 +1,40 @@
+{
+  "scope": "Exact raw bytes before evidence staging; no replacement of earlier archives",
+  "files": [
+    {
+      "file": "approved-implementation-commit.txt",
+      "bytes": 18075,
+      "sha256": "e7e237d6a776111bcdc278b9206cc5508b0f9d1b59a6fdc21aac3a2a70e179bc"
+    },
+    {
+      "file": "formal-comparison-run.txt",
+      "bytes": 151706,
+      "sha256": "1b1e13677451db30500a93d050e402a0d5171fa7787afdd23d8ee5fc3a23c137"
+    },
+    {
+      "file": "pinned-implementation-build.txt",
+      "bytes": 1168,
+      "sha256": "dab3c4bcce015e3e4e7753bf2a2d33e3ee774f245ab7fd1f915ded2f40887fd1"
+    },
+    {
+      "file": "pinned-implementation-focused.txt",
+      "bytes": 6842,
+      "sha256": "8f9cfad76a0f1b45de666907c2484ef53cc6ceb28de5ac7fa69dd25a76fad993"
+    },
+    {
+      "file": "pinned-implementation-lint.txt",
+      "bytes": 441,
+      "sha256": "193f3c74db1f0a987bc4fae61e86f1325c0dacd215d4e092b2db0573033e36f4"
+    },
+    {
+      "file": "pinned-implementation-python-types.txt",
+      "bytes": 13701,
+      "sha256": "00edf03337238ec5224a174d0a23df0df2cad0a351df04fce4f8624825b12716"
+    },
+    {
+      "file": "pinned-implementation-typecheck.txt",
+      "bytes": 659,
+      "sha256": "3883b5295f1bd81b7ad0cf70753bcb84fb4876564b9f06f09eda9ee78b48a79a"
+    }
+  ]
+}

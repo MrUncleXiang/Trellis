@@ -1,0 +1,80 @@
+
+ RUN  v4.0.18 C:/Users/PXWD/.codex/worktrees/planning-artifact-gate/Trellis/packages/cli
+
+ ✓ test/scripts/planning-status.integration.test.ts (51 tests) 35324ms
+     ✓ T29 exposes exactly eight readonly fields and diagnostics without granting approval  305ms
+     ✓ T29 rejects invalid base task {"status":"unknown"}  318ms
+     ✓ T29 rejects malformed and absent task records  405ms
+     ✓ T30 follows waiting, ready and drift using the real command  819ms
+     ✓ T29 diagnoses partial records as invalid instead of legacy  403ms
+     ✓ validate accepts a selfconsistent waiting version but explicitly says approval is still needed  581ms
+     ✓ T29 review regression: planning with an existing approval fails validation even when mode is ready  691ms
+     ✓ T23/T29 review regression: null replan beside valid approval is invalid, not a resume  881ms
+     ✓ T28/T29 review regression: completed replan residue null is reported as a warning  614ms
+     ✓ T28/T29 review regression: completed replan residue {"requestedAt":"2026-11-12T10:00:00+08:00","reason":"changed","affectedWork":"all","independentWork":"none"} is reported as a warning  606ms
+     ✓ validate retains context errors even after a valid attest  430ms
+     ✓ T34 create keeps planning and only creates the requirements draft  366ms
+     ✓ T31/T33 shared-hooks/session-start.py displays real escaped records  456ms
+     ✓ T31/T33 codex/hooks/session-start.py displays real escaped records  438ms
+     ✓ T31/T33 copilot/hooks/session-start.py displays real escaped records  459ms
+     ✓ T31/T33 displays canonical records through actual session context  891ms
+     ✓ shared-hooks/session-start.py refuses 'query timeout' without inferring permission  5113ms
+     ✓ codex/hooks/session-start.py refuses 'query timeout' without inferring permission  5125ms
+     ✓ copilot/hooks/session-start.py refuses 'query timeout' without inferring permission  5110ms
+     ✓ opencode refuses 'missing field' without inferring permission  314ms
+     ✓ opencode refuses 'extra field' without inferring permission  314ms
+     ✓ opencode refuses 'wrong field type' without inferring permission  320ms
+     ✓ opencode refuses 'query timeout' without inferring permission  5299ms
+ ✓ test/templates/planning-contract.test.ts (19 tests) 419ms
+ ✓ test/scripts/task-planning.integration.test.ts (45 tests) 58434ms
+     ✓ T01 missing any artifact: attest/start reject, name the file, no side effects  2052ms
+     ✓ T02 empty, whitespace-only and directory artifacts are rejected  1168ms
+     ✓ T03 unreadable artifact gives a diagnosis without traceback  787ms
+     ✓ T04 a small three-file chain works end-to-end  1102ms
+     ✓ T05 blank --note is a business error; missing --note is argparse usage  1161ms
+     ✓ T06 no attestation: start rejects even with --allow-empty-context  922ms
+     ✓ T07 per-file edits drift and a fresh attest gets a new id  2081ms
+     ✓ T08 normalizes only CRLF to LF  1235ms
+     ✓ T09 malformed/unknown attestation records are rejected, never overwritten  2214ms
+     ✓ T09 review regression: ordinary attest preserves invalid planningAttest=null  815ms
+     ✓ T09 review regression: ordinary attest preserves invalid planningAttest="broken"  853ms
+     ✓ T09 review regression: ordinary attest preserves invalid planningAttest={"schemaVersion":2}  841ms
+     ✓ T09 review regression: ordinary attest preserves invalid planningApproval=null  802ms
+     ✓ T09 review regression: ordinary attest preserves invalid planningApproval={"schemaVersion":2}  853ms
+     ✓ T09 review regression: ordinary attest preserves invalid planningReplan=null  941ms
+     ✓ T09 review regression: ordinary attest preserves invalid planningReplan="broken"  856ms
+     ✓ T09 review regression: genuine JSON floating schemaVersion in planningAttest is rejected  1360ms
+     ✓ T09 review regression: genuine JSON floating schemaVersion in planningApproval is rejected  1548ms
+     ✓ T10 valid unattested-approval planning state is waiting_confirmation  882ms
+     ✓ T11 start confirmation arguments are all required and non-blank  1384ms
+     ✓ T12 old approved version cannot authorize a newly attested version  1341ms
+     ✓ T13 successful start performs one task.json replace with approval+status  926ms
+     ✓ T14 two attests on identical files still make distinct ids and clear approval  1241ms
+     ✓ T15 both editorial paths preserve review identity and append the chain  1512ms
+     ✓ T16 no-op editorial does not write; extra editorial arg on no-diff start fails  1734ms
+     ✓ T17 editorial cannot manufacture approval or ignore a pending replan  1255ms
+     ✓ T18 tampered chain/approval is rejected by validate and start  1298ms
+     ✓ T19 normal attest on an implemented task is refused with replan guidance  1151ms
+     ✓ T20 replan returns to planning, clears statements, preserves branch/code  1039ms
+     ✓ T20 review regression: replan cannot erase invalid planningAttest=null  1342ms
+     ✓ T20 review regression: replan cannot erase invalid planningAttest="broken"  1240ms
+     ✓ T20 review regression: replan cannot erase invalid planningAttest={"schemaVersion":2}  1196ms
+     ✓ T20 review regression: replan cannot erase invalid planningApproval=null  1161ms
+     ✓ T20 review regression: replan cannot erase invalid planningApproval={"schemaVersion":2}  1130ms
+     ✓ T20 review regression: replan cannot erase invalid planningReplan=null  1135ms
+     ✓ T20 review regression: replan cannot erase invalid planningReplan={"requestedAt":"2026-11-12T10:00:00+08:00","reason":"changed","affectedWork":"all","independentWork":"none"}  1166ms
+     ✓ T20 review regression: omitted independent defaults to none for legacy replan  830ms
+     ✓ T21 repeated replan/blank args/completed start attest replan are refused  2009ms
+     ✓ T22 replan -> edit -> attest -> validate -> approve -> start recovers  1579ms
+     ✓ T23 legacy in_progress resumes only when all three keys are absent  1473ms
+     ✓ T24 invalid task shapes fail clearly without creating a task  2838ms
+     ✓ T25 missing identity keeps the same gate, then saves state without a pointer  1249ms
+     ✓ T26 normal progress leaves reviewed artifacts unchanged; substantive changes require replan and fresh approval  2627ms
+     ✓ T27 task.json save failure leaves no pointer/hook; pointer failure reports started-but-not-located  1198ms
+     ✓ T38 concurrent starts are observed and reported as unsupported  904ms
+
+ Test Files  3 passed (3)
+      Tests  115 passed (115)
+   Start at  10:33:26
+   Duration  58.96s (transform 542ms, setup 58ms, import 1.97s, tests 94.18s, environment 0ms)
+

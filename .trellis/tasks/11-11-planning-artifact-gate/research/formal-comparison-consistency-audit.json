@@ -1,0 +1,560 @@
+{
+  "commits": {
+    "before": "9b76fe49f19de4d383dd4677fea803e2f2da7004",
+    "after": "1b801471966e8fb898d0c33e1b025aad2a86f5db"
+  },
+  "executionStatus": "complete",
+  "status": "complete",
+  "categoryCounts": {
+    "预期改善": 4,
+    "保留": 4,
+    "明确行为变更": 3,
+    "新增能力": 5
+  },
+  "issues": [],
+  "rows": [
+    {
+      "id": "P01",
+      "category": "预期改善",
+      "checks": {
+        "beforeMatchesExpected": true,
+        "afterMatchesExpected": true,
+        "beforeAssertions": true,
+        "afterAssertions": true,
+        "sameFixture": true,
+        "sameEnvironmentKeys": true
+      },
+      "variants": [],
+      "beforeSteps": 1,
+      "afterSteps": 1
+    },
+    {
+      "id": "P02",
+      "category": "预期改善",
+      "checks": {
+        "beforeMatchesExpected": true,
+        "afterMatchesExpected": true,
+        "beforeAssertions": true,
+        "afterAssertions": true,
+        "sameFixture": true,
+        "sameEnvironmentKeys": true
+      },
+      "variants": [],
+      "beforeSteps": 1,
+      "afterSteps": 1
+    },
+    {
+      "id": "P03",
+      "category": "预期改善",
+      "checks": {
+        "beforeMatchesExpected": true,
+        "afterMatchesExpected": true,
+        "beforeAssertions": true,
+        "afterAssertions": true,
+        "sameFixture": true,
+        "sameEnvironmentKeys": true
+      },
+      "variants": [],
+      "beforeSteps": 1,
+      "afterSteps": 1
+    },
+    {
+      "id": "P04",
+      "category": "保留",
+      "checks": {
+        "beforeMatchesExpected": true,
+        "afterMatchesExpected": true,
+        "beforeAssertions": true,
+        "afterAssertions": true,
+        "sameFixture": true,
+        "sameEnvironmentKeys": true
+      },
+      "variants": [],
+      "beforeSteps": 1,
+      "afterSteps": 1
+    },
+    {
+      "id": "P05",
+      "category": "明确行为变更",
+      "checks": {
+        "beforeMatchesExpected": true,
+        "afterMatchesExpected": true,
+        "beforeAssertions": true,
+        "afterAssertions": true,
+        "sameFixture": true,
+        "sameEnvironmentKeys": true
+      },
+      "variants": [],
+      "beforeSteps": 1,
+      "afterSteps": 1
+    },
+    {
+      "id": "P06",
+      "category": "明确行为变更",
+      "checks": {
+        "beforeMatchesExpected": true,
+        "afterMatchesExpected": true,
+        "beforeAssertions": true,
+        "afterAssertions": true,
+        "sameFixture": true,
+        "sameEnvironmentKeys": true
+      },
+      "variants": [],
+      "beforeSteps": 1,
+      "afterSteps": 1
+    },
+    {
+      "id": "P07",
+      "category": "预期改善",
+      "checks": {
+        "beforeMatchesExpected": true,
+        "afterMatchesExpected": true,
+        "beforeAssertions": true,
+        "afterAssertions": true,
+        "sameFixture": true,
+        "sameEnvironmentKeys": true
+      },
+      "variants": [],
+      "beforeSteps": 1,
+      "afterSteps": 1
+    },
+    {
+      "id": "P08",
+      "category": "保留",
+      "checks": {
+        "beforeMatchesExpected": true,
+        "afterMatchesExpected": true,
+        "beforeAssertions": true,
+        "afterAssertions": true,
+        "sameFixture": true,
+        "sameEnvironmentKeys": true
+      },
+      "variants": [],
+      "beforeSteps": 1,
+      "afterSteps": 1
+    },
+    {
+      "id": "P09",
+      "category": "明确行为变更",
+      "checks": {
+        "beforeMatchesExpected": true,
+        "afterMatchesExpected": true,
+        "beforeAssertions": true,
+        "afterAssertions": true,
+        "sameFixture": true,
+        "sameEnvironmentKeys": true
+      },
+      "variants": [],
+      "beforeSteps": 1,
+      "afterSteps": 1
+    },
+    {
+      "id": "P10",
+      "category": "保留",
+      "checks": {
+        "beforeMatchesExpected": true,
+        "afterMatchesExpected": true,
+        "beforeAssertions": true,
+        "afterAssertions": true,
+        "sameFixture": true,
+        "sameEnvironmentKeys": true
+      },
+      "variants": [],
+      "beforeSteps": 1,
+      "afterSteps": 1
+    },
+    {
+      "id": "P11",
+      "category": "新增能力",
+      "checks": {
+        "beforeMatchesExpected": true,
+        "afterMatchesExpected": true,
+        "beforeAssertions": true,
+        "afterAssertions": true,
+        "sameFixture": true,
+        "sameEnvironmentKeys": true
+      },
+      "variants": [],
+      "beforeSteps": 1,
+      "afterSteps": 3
+    },
+    {
+      "id": "P12",
+      "category": "新增能力",
+      "checks": {
+        "beforeMatchesExpected": true,
+        "afterMatchesExpected": true,
+        "beforeAssertions": true,
+        "afterAssertions": true
+      },
+      "variants": [
+        {
+          "checks": {
+            "beforeMatchesExpected": true,
+            "afterMatchesExpected": true,
+            "beforeAssertions": true,
+            "afterAssertions": true,
+            "sameFixture": true,
+            "sameEnvironmentKeys": true
+          },
+          "variants": [],
+          "beforeSteps": 1,
+          "afterSteps": 6
+        },
+        {
+          "checks": {
+            "beforeMatchesExpected": true,
+            "afterMatchesExpected": true,
+            "beforeAssertions": true,
+            "afterAssertions": true,
+            "sameFixture": true,
+            "sameEnvironmentKeys": true
+          },
+          "variants": [],
+          "beforeSteps": 1,
+          "afterSteps": 4
+        }
+      ],
+      "beforeSteps": 2,
+      "afterSteps": 10
+    },
+    {
+      "id": "P13",
+      "category": "新增能力",
+      "checks": {
+        "beforeMatchesExpected": true,
+        "afterMatchesExpected": true,
+        "beforeAssertions": true,
+        "afterAssertions": true,
+        "sameFixture": true,
+        "sameEnvironmentKeys": true
+      },
+      "variants": [],
+      "beforeSteps": 1,
+      "afterSteps": 5
+    },
+    {
+      "id": "P14",
+      "category": "新增能力",
+      "checks": {
+        "beforeMatchesExpected": true,
+        "afterMatchesExpected": true,
+        "beforeAssertions": true,
+        "afterAssertions": true
+      },
+      "variants": [
+        {
+          "checks": {
+            "beforeMatchesExpected": true,
+            "afterMatchesExpected": true,
+            "beforeAssertions": true,
+            "afterAssertions": true,
+            "sameFixture": true,
+            "sameEnvironmentKeys": true
+          },
+          "variants": [],
+          "beforeSteps": 1,
+          "afterSteps": 3
+        },
+        {
+          "checks": {
+            "beforeMatchesExpected": true,
+            "afterMatchesExpected": true,
+            "beforeAssertions": true,
+            "afterAssertions": true,
+            "sameFixture": true,
+            "sameEnvironmentKeys": true
+          },
+          "variants": [],
+          "beforeSteps": 1,
+          "afterSteps": 3
+        }
+      ],
+      "beforeSteps": 2,
+      "afterSteps": 6
+    },
+    {
+      "id": "P15",
+      "category": "新增能力",
+      "checks": {
+        "beforeMatchesExpected": true,
+        "afterMatchesExpected": true,
+        "beforeAssertions": true,
+        "afterAssertions": true,
+        "sameFixture": true,
+        "sameEnvironmentKeys": true
+      },
+      "variants": [],
+      "beforeSteps": 1,
+      "afterSteps": 5
+    },
+    {
+      "id": "P16",
+      "category": "保留",
+      "checks": {
+        "beforeMatchesExpected": true,
+        "afterMatchesExpected": true,
+        "beforeAssertions": true,
+        "afterAssertions": true,
+        "sameFixture": true,
+        "sameEnvironmentKeys": true
+      },
+      "variants": [],
+      "beforeSteps": 1,
+      "afterSteps": 1
+    }
+  ],
+  "comparisonScriptAndHistoricalFixturesMatchImplementationCommit": true,
+  "scope": "Local recursive data consistency audit, including both editorial and identity variants; not a second independent agent review.",
+  "initialStateAndRejectionAudit": [
+    {
+      "id": "P01",
+      "sameRecord": true,
+      "sameFileBytes": true,
+      "sameBranch": true,
+      "samePointers": true,
+      "sameInitialHooks": true,
+      "rejectedSteps": [
+        {
+          "label": "start",
+          "noSideEffects": true
+        }
+      ]
+    },
+    {
+      "id": "P02",
+      "sameRecord": true,
+      "sameFileBytes": true,
+      "sameBranch": true,
+      "samePointers": true,
+      "sameInitialHooks": true,
+      "rejectedSteps": [
+        {
+          "label": "start",
+          "noSideEffects": true
+        }
+      ]
+    },
+    {
+      "id": "P03",
+      "sameRecord": true,
+      "sameFileBytes": true,
+      "sameBranch": true,
+      "samePointers": true,
+      "sameInitialHooks": true,
+      "rejectedSteps": [
+        {
+          "label": "start",
+          "noSideEffects": true
+        }
+      ]
+    },
+    {
+      "id": "P04",
+      "sameRecord": true,
+      "sameFileBytes": true,
+      "sameBranch": true,
+      "samePointers": true,
+      "sameInitialHooks": true,
+      "rejectedSteps": [
+        {
+          "label": "start",
+          "noSideEffects": true
+        }
+      ]
+    },
+    {
+      "id": "P05",
+      "sameRecord": true,
+      "sameFileBytes": true,
+      "sameBranch": true,
+      "samePointers": true,
+      "sameInitialHooks": true,
+      "rejectedSteps": [
+        {
+          "label": "start",
+          "noSideEffects": true
+        }
+      ]
+    },
+    {
+      "id": "P06",
+      "sameRecord": true,
+      "sameFileBytes": true,
+      "sameBranch": true,
+      "samePointers": true,
+      "sameInitialHooks": true,
+      "rejectedSteps": [
+        {
+          "label": "start",
+          "noSideEffects": true
+        }
+      ]
+    },
+    {
+      "id": "P07",
+      "sameRecord": true,
+      "sameFileBytes": true,
+      "sameBranch": true,
+      "samePointers": true,
+      "sameInitialHooks": true,
+      "rejectedSteps": [
+        {
+          "label": "start",
+          "noSideEffects": true
+        }
+      ]
+    },
+    {
+      "id": "P08",
+      "sameRecord": true,
+      "sameFileBytes": true,
+      "sameBranch": true,
+      "samePointers": true,
+      "sameInitialHooks": true,
+      "rejectedSteps": [
+        {
+          "label": "start",
+          "noSideEffects": true
+        }
+      ]
+    },
+    {
+      "id": "P09",
+      "sameRecord": true,
+      "sameFileBytes": true,
+      "sameBranch": true,
+      "samePointers": true,
+      "sameInitialHooks": true,
+      "rejectedSteps": [
+        {
+          "label": "validate",
+          "noSideEffects": true
+        }
+      ]
+    },
+    {
+      "id": "P10",
+      "sameRecord": true,
+      "sameFileBytes": true,
+      "sameBranch": true,
+      "samePointers": true,
+      "sameInitialHooks": true,
+      "rejectedSteps": []
+    },
+    {
+      "id": "P11",
+      "sameRecord": true,
+      "sameFileBytes": true,
+      "sameBranch": true,
+      "samePointers": true,
+      "sameInitialHooks": true,
+      "rejectedSteps": []
+    },
+    {
+      "id": "P12",
+      "sameRecord": true,
+      "sameFileBytes": true,
+      "sameBranch": true,
+      "samePointers": true,
+      "sameInitialHooks": true,
+      "rejectedSteps": []
+    },
+    {
+      "id": "P12/0",
+      "sameRecord": true,
+      "sameFileBytes": true,
+      "sameBranch": true,
+      "samePointers": true,
+      "sameInitialHooks": true,
+      "rejectedSteps": []
+    },
+    {
+      "id": "P12/1",
+      "sameRecord": true,
+      "sameFileBytes": true,
+      "sameBranch": true,
+      "samePointers": true,
+      "sameInitialHooks": true,
+      "rejectedSteps": []
+    },
+    {
+      "id": "P13",
+      "sameRecord": true,
+      "sameFileBytes": true,
+      "sameBranch": true,
+      "samePointers": true,
+      "sameInitialHooks": true,
+      "rejectedSteps": []
+    },
+    {
+      "id": "P14",
+      "sameRecord": true,
+      "sameFileBytes": true,
+      "sameBranch": true,
+      "samePointers": true,
+      "sameInitialHooks": true,
+      "rejectedSteps": [
+        {
+          "label": "start-without-confirmation",
+          "noSideEffects": true
+        }
+      ]
+    },
+    {
+      "id": "P14/0",
+      "sameRecord": true,
+      "sameFileBytes": true,
+      "sameBranch": true,
+      "samePointers": true,
+      "sameInitialHooks": true,
+      "rejectedSteps": [
+        {
+          "label": "start-without-confirmation",
+          "noSideEffects": true
+        }
+      ]
+    },
+    {
+      "id": "P14/1",
+      "sameRecord": true,
+      "sameFileBytes": true,
+      "sameBranch": true,
+      "samePointers": true,
+      "sameInitialHooks": true,
+      "rejectedSteps": []
+    },
+    {
+      "id": "P15",
+      "sameRecord": true,
+      "sameFileBytes": true,
+      "sameBranch": true,
+      "samePointers": true,
+      "sameInitialHooks": true,
+      "rejectedSteps": []
+    },
+    {
+      "id": "P16",
+      "sameRecord": true,
+      "sameFileBytes": true,
+      "sameBranch": true,
+      "samePointers": true,
+      "sameInitialHooks": true,
+      "rejectedSteps": []
+    }
+  ],
+  "allInitialStateAndRejectedSideEffectsMatch": true,
+  "archiveSourceTreeDigests": {
+    "before": {
+      "commit": "9b76fe49f19de4d383dd4677fea803e2f2da7004",
+      "gitArchiveSha256": "70958fc4fdc94a50cc5abdb7db287b4ad70ede82cab380dfb5be54364687e110",
+      "bytes": 1658880
+    },
+    "after": {
+      "commit": "1b801471966e8fb898d0c33e1b025aad2a86f5db",
+      "gitArchiveSha256": "3c14f09680093f2d79a45f115177cbad8ff31752827fc960ab00dab03982b987",
+      "bytes": 1802240
+    }
+  },
+  "caveat": "Initial Git commit IDs and absolute fixture paths differ by isolated repository; identical task input bytes/records/pointers/branch/hooks are checked, not those repository identities. Old unsupported commands stop before later states, and synthetic approval values do not establish human identity."
+}

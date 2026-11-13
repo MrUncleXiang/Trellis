@@ -1,0 +1,1305 @@
+{
+  "id": "P13",
+  "scenario": "P13",
+  "version": "after",
+  "fixture": {
+    "id": "P13",
+    "files": "all",
+    "manifests": "curated",
+    "status": "in_progress",
+    "seed_record": true,
+    "seed_pointer": true
+  },
+  "environmentKeys": [
+    "APPDATA",
+    "COMSPEC",
+    "HOMEDRIVE",
+    "HOMEPATH",
+    "LOCALAPPDATA",
+    "PATH",
+    "PATHEXT",
+    "PROGRAMDATA",
+    "PROGRAMFILES",
+    "PROGRAMFILES(X86)",
+    "PYTHONDONTWRITEBYTECODE",
+    "PYTHONIOENCODING",
+    "SYSTEMROOT",
+    "TEMP",
+    "TMP",
+    "TRELLIS_CONTEXT_ID",
+    "TRELLIS_DEVELOPER",
+    "USERPROFILE",
+    "WINDIR"
+  ],
+  "initial": {
+    "taskRef": ".trellis/tasks/review-case",
+    "taskPath": "C:\\Users\\PXWD\\AppData\\Local\\Temp\\trellis-a-pinned-comparison-pbpnmz7u\\after\\after\\P13\\.trellis\\tasks\\review-case",
+    "fileHashes": {
+      "check.jsonl": "34cfa347ccf72c9e636670bde19a97d01479ef48311e5530402fd0891f958981",
+      "design.md": "1dd8af165b6ec7d4cf1880ba941b6170e1fe34e2406c26f5a690d656f46ca023",
+      "implement.jsonl": "34cfa347ccf72c9e636670bde19a97d01479ef48311e5530402fd0891f958981",
+      "implement.md": "d819ba853516c2f5afbf42255727e1181df011650086ea00105a242e81bf6603",
+      "prd.md": "64ef2160ff8450b8945aba3cdc0a030ad6017d8f5bfc49c5381acc26d715297a",
+      "task.json": "cce24ad2dcd5a2d3a9afc75dff89c8584b8ab6eb33eca39410c1dfe929e3258e"
+    },
+    "record": {
+      "id": "review-case",
+      "name": "review-case",
+      "title": "Fixture",
+      "description": "Review only",
+      "status": "in_progress",
+      "branch": "compare-feature",
+      "base_branch": null,
+      "unknownTop": "preserve",
+      "meta": {
+        "other": {
+          "keep": true
+        },
+        "planningAttest": {
+          "schemaVersion": 1,
+          "reviewId": "cccccccccccccccccccccccccccccccc",
+          "attestedAt": "2026-11-12T12:00:00+00:00",
+          "note": "Fixture planning version under review",
+          "reviewFiles": {
+            "prd.md": "1f4e6e9f8c773fcf9555f35d6ecd5a2a76424b032ef65c1010058d9f2814c6e0",
+            "design.md": "aa27bcbd0a760d0fed7f2ee25b134e1d8654a0f7148f734d465033fb83699c50",
+            "implement.md": "ab958ce49cb4a1b6ec4238c4d15597f8673d8c477e9c37f964ce09d3ff284502"
+          },
+          "files": {
+            "prd.md": "1f4e6e9f8c773fcf9555f35d6ecd5a2a76424b032ef65c1010058d9f2814c6e0",
+            "design.md": "aa27bcbd0a760d0fed7f2ee25b134e1d8654a0f7148f734d465033fb83699c50",
+            "implement.md": "ab958ce49cb4a1b6ec4238c4d15597f8673d8c477e9c37f964ce09d3ff284502"
+          },
+          "editorialChanges": []
+        },
+        "planningApproval": {
+          "schemaVersion": 1,
+          "reviewId": "cccccccccccccccccccccccccccccccc",
+          "reviewedFiles": {
+            "prd.md": "1f4e6e9f8c773fcf9555f35d6ecd5a2a76424b032ef65c1010058d9f2814c6e0",
+            "design.md": "aa27bcbd0a760d0fed7f2ee25b134e1d8654a0f7148f734d465033fb83699c50",
+            "implement.md": "ab958ce49cb4a1b6ec4238c4d15597f8673d8c477e9c37f964ce09d3ff284502"
+          },
+          "recordedAt": "2026-11-12T12:00:00+00:00",
+          "note": "Fixture-only confirmation for this reviewed version; not a real approval",
+          "source": "Fixture-only transcript line after the displayed version"
+        }
+      }
+    },
+    "recordError": null,
+    "taskStatus": "in_progress",
+    "sessionPointers": [
+      {
+        "file": "review-P13.json",
+        "sha256": "0e1c6d23b00f36913189db47595cde2946d49ec3bb870a9fd851ae269cc33475",
+        "record": {
+          "current_task": ".trellis/tasks/review-case",
+          "platform": "codex"
+        },
+        "parseError": null
+      }
+    ],
+    "activePointers": [
+      ".trellis/tasks/review-case"
+    ],
+    "gitBranch": "compare-feature",
+    "gitHead": "d6339710506801ee62cef6a21c85b5e7d8c5fccf",
+    "gitStatusPorcelain": "",
+    "hookRuns": {
+      "file": "hook-runs.txt",
+      "sha256": null,
+      "text": "",
+      "counts": {
+        "after_start": 0,
+        "after_archive": 0
+      }
+    }
+  },
+  "steps": [
+    {
+      "kind": "command",
+      "label": "replan",
+      "argv": [
+        "python",
+        ".trellis/scripts/task.py",
+        "replan",
+        ".trellis/tasks/review-case",
+        "--reason",
+        "Fixture changed the storage design",
+        "--affected",
+        "storage and dependent tests",
+        "--independent",
+        "documentation wording"
+      ],
+      "environmentKeys": [
+        "APPDATA",
+        "COMSPEC",
+        "HOMEDRIVE",
+        "HOMEPATH",
+        "LOCALAPPDATA",
+        "PATH",
+        "PATHEXT",
+        "PROGRAMDATA",
+        "PROGRAMFILES",
+        "PROGRAMFILES(X86)",
+        "PYTHONDONTWRITEBYTECODE",
+        "PYTHONIOENCODING",
+        "SYSTEMROOT",
+        "TEMP",
+        "TMP",
+        "TRELLIS_CONTEXT_ID",
+        "TRELLIS_DEVELOPER",
+        "USERPROFILE",
+        "WINDIR"
+      ],
+      "exit": 0,
+      "expectedExit": 0,
+      "stdout": "\u001b[0;32m✓ Task returned to planning; affected work is paused.\u001b[0m\nReason: Fixture changed the storage design\nAffected: storage and dependent tests\nIndependent work: documentation wording\n",
+      "stderr": "",
+      "launchError": null,
+      "seconds": 0.315671,
+      "before": {
+        "taskRef": ".trellis/tasks/review-case",
+        "taskPath": "C:\\Users\\PXWD\\AppData\\Local\\Temp\\trellis-a-pinned-comparison-pbpnmz7u\\after\\after\\P13\\.trellis\\tasks\\review-case",
+        "fileHashes": {
+          "check.jsonl": "34cfa347ccf72c9e636670bde19a97d01479ef48311e5530402fd0891f958981",
+          "design.md": "1dd8af165b6ec7d4cf1880ba941b6170e1fe34e2406c26f5a690d656f46ca023",
+          "implement.jsonl": "34cfa347ccf72c9e636670bde19a97d01479ef48311e5530402fd0891f958981",
+          "implement.md": "d819ba853516c2f5afbf42255727e1181df011650086ea00105a242e81bf6603",
+          "prd.md": "64ef2160ff8450b8945aba3cdc0a030ad6017d8f5bfc49c5381acc26d715297a",
+          "task.json": "cce24ad2dcd5a2d3a9afc75dff89c8584b8ab6eb33eca39410c1dfe929e3258e"
+        },
+        "record": {
+          "id": "review-case",
+          "name": "review-case",
+          "title": "Fixture",
+          "description": "Review only",
+          "status": "in_progress",
+          "branch": "compare-feature",
+          "base_branch": null,
+          "unknownTop": "preserve",
+          "meta": {
+            "other": {
+              "keep": true
+            },
+            "planningAttest": {
+              "schemaVersion": 1,
+              "reviewId": "cccccccccccccccccccccccccccccccc",
+              "attestedAt": "2026-11-12T12:00:00+00:00",
+              "note": "Fixture planning version under review",
+              "reviewFiles": {
+                "prd.md": "1f4e6e9f8c773fcf9555f35d6ecd5a2a76424b032ef65c1010058d9f2814c6e0",
+                "design.md": "aa27bcbd0a760d0fed7f2ee25b134e1d8654a0f7148f734d465033fb83699c50",
+                "implement.md": "ab958ce49cb4a1b6ec4238c4d15597f8673d8c477e9c37f964ce09d3ff284502"
+              },
+              "files": {
+                "prd.md": "1f4e6e9f8c773fcf9555f35d6ecd5a2a76424b032ef65c1010058d9f2814c6e0",
+                "design.md": "aa27bcbd0a760d0fed7f2ee25b134e1d8654a0f7148f734d465033fb83699c50",
+                "implement.md": "ab958ce49cb4a1b6ec4238c4d15597f8673d8c477e9c37f964ce09d3ff284502"
+              },
+              "editorialChanges": []
+            },
+            "planningApproval": {
+              "schemaVersion": 1,
+              "reviewId": "cccccccccccccccccccccccccccccccc",
+              "reviewedFiles": {
+                "prd.md": "1f4e6e9f8c773fcf9555f35d6ecd5a2a76424b032ef65c1010058d9f2814c6e0",
+                "design.md": "aa27bcbd0a760d0fed7f2ee25b134e1d8654a0f7148f734d465033fb83699c50",
+                "implement.md": "ab958ce49cb4a1b6ec4238c4d15597f8673d8c477e9c37f964ce09d3ff284502"
+              },
+              "recordedAt": "2026-11-12T12:00:00+00:00",
+              "note": "Fixture-only confirmation for this reviewed version; not a real approval",
+              "source": "Fixture-only transcript line after the displayed version"
+            }
+          }
+        },
+        "recordError": null,
+        "taskStatus": "in_progress",
+        "sessionPointers": [
+          {
+            "file": "review-P13.json",
+            "sha256": "0e1c6d23b00f36913189db47595cde2946d49ec3bb870a9fd851ae269cc33475",
+            "record": {
+              "current_task": ".trellis/tasks/review-case",
+              "platform": "codex"
+            },
+            "parseError": null
+          }
+        ],
+        "activePointers": [
+          ".trellis/tasks/review-case"
+        ],
+        "gitBranch": "compare-feature",
+        "gitHead": "d6339710506801ee62cef6a21c85b5e7d8c5fccf",
+        "gitStatusPorcelain": "",
+        "hookRuns": {
+          "file": "hook-runs.txt",
+          "sha256": null,
+          "text": "",
+          "counts": {
+            "after_start": 0,
+            "after_archive": 0
+          }
+        }
+      },
+      "after": {
+        "taskRef": ".trellis/tasks/review-case",
+        "taskPath": "C:\\Users\\PXWD\\AppData\\Local\\Temp\\trellis-a-pinned-comparison-pbpnmz7u\\after\\after\\P13\\.trellis\\tasks\\review-case",
+        "fileHashes": {
+          "check.jsonl": "34cfa347ccf72c9e636670bde19a97d01479ef48311e5530402fd0891f958981",
+          "design.md": "1dd8af165b6ec7d4cf1880ba941b6170e1fe34e2406c26f5a690d656f46ca023",
+          "implement.jsonl": "34cfa347ccf72c9e636670bde19a97d01479ef48311e5530402fd0891f958981",
+          "implement.md": "d819ba853516c2f5afbf42255727e1181df011650086ea00105a242e81bf6603",
+          "prd.md": "64ef2160ff8450b8945aba3cdc0a030ad6017d8f5bfc49c5381acc26d715297a",
+          "task.json": "da3577aa08a3f81fc13bc16ab262700806ae4a5ccafa7311c5b86dafc0d0f3b4"
+        },
+        "record": {
+          "id": "review-case",
+          "name": "review-case",
+          "title": "Fixture",
+          "description": "Review only",
+          "status": "planning",
+          "branch": "compare-feature",
+          "base_branch": null,
+          "unknownTop": "preserve",
+          "meta": {
+            "other": {
+              "keep": true
+            },
+            "planningReplan": {
+              "requestedAt": "2026-11-13T02:33:12.015608+00:00",
+              "reason": "Fixture changed the storage design",
+              "affectedWork": "storage and dependent tests",
+              "independentWork": "documentation wording"
+            }
+          }
+        },
+        "recordError": null,
+        "taskStatus": "planning",
+        "sessionPointers": [
+          {
+            "file": "review-P13.json",
+            "sha256": "0e1c6d23b00f36913189db47595cde2946d49ec3bb870a9fd851ae269cc33475",
+            "record": {
+              "current_task": ".trellis/tasks/review-case",
+              "platform": "codex"
+            },
+            "parseError": null
+          }
+        ],
+        "activePointers": [
+          ".trellis/tasks/review-case"
+        ],
+        "gitBranch": "compare-feature",
+        "gitHead": "d6339710506801ee62cef6a21c85b5e7d8c5fccf",
+        "gitStatusPorcelain": "M .trellis/tasks/review-case/task.json",
+        "hookRuns": {
+          "file": "hook-runs.txt",
+          "sha256": null,
+          "text": "",
+          "counts": {
+            "after_start": 0,
+            "after_archive": 0
+          }
+        }
+      }
+    },
+    {
+      "kind": "fixture-edit",
+      "label": "material-change",
+      "argv": null,
+      "environmentKeys": [],
+      "exit": 0,
+      "expectedExit": 0,
+      "stdout": "",
+      "stderr": "",
+      "launchError": null,
+      "seconds": 0,
+      "before": {
+        "taskRef": ".trellis/tasks/review-case",
+        "taskPath": "C:\\Users\\PXWD\\AppData\\Local\\Temp\\trellis-a-pinned-comparison-pbpnmz7u\\after\\after\\P13\\.trellis\\tasks\\review-case",
+        "fileHashes": {
+          "check.jsonl": "34cfa347ccf72c9e636670bde19a97d01479ef48311e5530402fd0891f958981",
+          "design.md": "1dd8af165b6ec7d4cf1880ba941b6170e1fe34e2406c26f5a690d656f46ca023",
+          "implement.jsonl": "34cfa347ccf72c9e636670bde19a97d01479ef48311e5530402fd0891f958981",
+          "implement.md": "d819ba853516c2f5afbf42255727e1181df011650086ea00105a242e81bf6603",
+          "prd.md": "64ef2160ff8450b8945aba3cdc0a030ad6017d8f5bfc49c5381acc26d715297a",
+          "task.json": "da3577aa08a3f81fc13bc16ab262700806ae4a5ccafa7311c5b86dafc0d0f3b4"
+        },
+        "record": {
+          "id": "review-case",
+          "name": "review-case",
+          "title": "Fixture",
+          "description": "Review only",
+          "status": "planning",
+          "branch": "compare-feature",
+          "base_branch": null,
+          "unknownTop": "preserve",
+          "meta": {
+            "other": {
+              "keep": true
+            },
+            "planningReplan": {
+              "requestedAt": "2026-11-13T02:33:12.015608+00:00",
+              "reason": "Fixture changed the storage design",
+              "affectedWork": "storage and dependent tests",
+              "independentWork": "documentation wording"
+            }
+          }
+        },
+        "recordError": null,
+        "taskStatus": "planning",
+        "sessionPointers": [
+          {
+            "file": "review-P13.json",
+            "sha256": "0e1c6d23b00f36913189db47595cde2946d49ec3bb870a9fd851ae269cc33475",
+            "record": {
+              "current_task": ".trellis/tasks/review-case",
+              "platform": "codex"
+            },
+            "parseError": null
+          }
+        ],
+        "activePointers": [
+          ".trellis/tasks/review-case"
+        ],
+        "gitBranch": "compare-feature",
+        "gitHead": "d6339710506801ee62cef6a21c85b5e7d8c5fccf",
+        "gitStatusPorcelain": "M .trellis/tasks/review-case/task.json",
+        "hookRuns": {
+          "file": "hook-runs.txt",
+          "sha256": null,
+          "text": "",
+          "counts": {
+            "after_start": 0,
+            "after_archive": 0
+          }
+        }
+      },
+      "after": {
+        "taskRef": ".trellis/tasks/review-case",
+        "taskPath": "C:\\Users\\PXWD\\AppData\\Local\\Temp\\trellis-a-pinned-comparison-pbpnmz7u\\after\\after\\P13\\.trellis\\tasks\\review-case",
+        "fileHashes": {
+          "check.jsonl": "34cfa347ccf72c9e636670bde19a97d01479ef48311e5530402fd0891f958981",
+          "design.md": "ee0f308cbc1ba8018a3f5c3296637c217134caf4e77a7d66932cd715be998033",
+          "implement.jsonl": "34cfa347ccf72c9e636670bde19a97d01479ef48311e5530402fd0891f958981",
+          "implement.md": "c79abdad525ad093801532cf644a21d473c8b72c2b7049b5f9036a32f215102b",
+          "prd.md": "64ef2160ff8450b8945aba3cdc0a030ad6017d8f5bfc49c5381acc26d715297a",
+          "task.json": "da3577aa08a3f81fc13bc16ab262700806ae4a5ccafa7311c5b86dafc0d0f3b4"
+        },
+        "record": {
+          "id": "review-case",
+          "name": "review-case",
+          "title": "Fixture",
+          "description": "Review only",
+          "status": "planning",
+          "branch": "compare-feature",
+          "base_branch": null,
+          "unknownTop": "preserve",
+          "meta": {
+            "other": {
+              "keep": true
+            },
+            "planningReplan": {
+              "requestedAt": "2026-11-13T02:33:12.015608+00:00",
+              "reason": "Fixture changed the storage design",
+              "affectedWork": "storage and dependent tests",
+              "independentWork": "documentation wording"
+            }
+          }
+        },
+        "recordError": null,
+        "taskStatus": "planning",
+        "sessionPointers": [
+          {
+            "file": "review-P13.json",
+            "sha256": "0e1c6d23b00f36913189db47595cde2946d49ec3bb870a9fd851ae269cc33475",
+            "record": {
+              "current_task": ".trellis/tasks/review-case",
+              "platform": "codex"
+            },
+            "parseError": null
+          }
+        ],
+        "activePointers": [
+          ".trellis/tasks/review-case"
+        ],
+        "gitBranch": "compare-feature",
+        "gitHead": "d6339710506801ee62cef6a21c85b5e7d8c5fccf",
+        "gitStatusPorcelain": "M .trellis/tasks/review-case/design.md\n M .trellis/tasks/review-case/implement.md\n M .trellis/tasks/review-case/task.json",
+        "hookRuns": {
+          "file": "hook-runs.txt",
+          "sha256": null,
+          "text": "",
+          "counts": {
+            "after_start": 0,
+            "after_archive": 0
+          }
+        }
+      },
+      "changes": {
+        "design.md": {
+          "beforeText": "# design.md\nKeep storage local.\n",
+          "afterText": "# design.md\nKeep storage local. Add a new queue boundary.\n",
+          "beforeHash": "aa27bcbd0a760d0fed7f2ee25b134e1d8654a0f7148f734d465033fb83699c50",
+          "afterHash": "96bfa8d592ea90beb0a3568dbca29497863440a4ad7a03bd1adf7c89282aba0c"
+        },
+        "implement.md": {
+          "beforeText": "# implement.md\nKeep storage local.\n",
+          "afterText": "# implement.md\nKeep storage local. Add queue integration tests.\n",
+          "beforeHash": "ab958ce49cb4a1b6ec4238c4d15597f8673d8c477e9c37f964ce09d3ff284502",
+          "afterHash": "a15eda28f8e8e9d0b97ecc072b58997e06dfcc099a18098db6b468e3c81218d2"
+        }
+      }
+    },
+    {
+      "kind": "command",
+      "label": "attest",
+      "argv": [
+        "python",
+        ".trellis/scripts/task.py",
+        "attest",
+        ".trellis/tasks/review-case",
+        "--note",
+        "Fixture changed plan ready for review"
+      ],
+      "environmentKeys": [
+        "APPDATA",
+        "COMSPEC",
+        "HOMEDRIVE",
+        "HOMEPATH",
+        "LOCALAPPDATA",
+        "PATH",
+        "PATHEXT",
+        "PROGRAMDATA",
+        "PROGRAMFILES",
+        "PROGRAMFILES(X86)",
+        "PYTHONDONTWRITEBYTECODE",
+        "PYTHONIOENCODING",
+        "SYSTEMROOT",
+        "TEMP",
+        "TMP",
+        "TRELLIS_CONTEXT_ID",
+        "TRELLIS_DEVELOPER",
+        "USERPROFILE",
+        "WINDIR"
+      ],
+      "exit": 0,
+      "expectedExit": 0,
+      "stdout": "\u001b[0;32m✓ Planning version attested: 29f495bcf29048429c0576f6e8086bb1\u001b[0m\nNote: Fixture changed plan ready for review\n  prd.md: 1f4e6e9f8c773fcf9555f35d6ecd5a2a76424b032ef65c1010058d9f2814c6e0\n  design.md: 96bfa8d592ea90beb0a3568dbca29497863440a4ad7a03bd1adf7c89282aba0c\n  implement.md: a15eda28f8e8e9d0b97ecc072b58997e06dfcc099a18098db6b468e3c81218d2\nStill needs explicit user review and approval before start.\n",
+      "stderr": "",
+      "launchError": null,
+      "seconds": 0.239624,
+      "before": {
+        "taskRef": ".trellis/tasks/review-case",
+        "taskPath": "C:\\Users\\PXWD\\AppData\\Local\\Temp\\trellis-a-pinned-comparison-pbpnmz7u\\after\\after\\P13\\.trellis\\tasks\\review-case",
+        "fileHashes": {
+          "check.jsonl": "34cfa347ccf72c9e636670bde19a97d01479ef48311e5530402fd0891f958981",
+          "design.md": "ee0f308cbc1ba8018a3f5c3296637c217134caf4e77a7d66932cd715be998033",
+          "implement.jsonl": "34cfa347ccf72c9e636670bde19a97d01479ef48311e5530402fd0891f958981",
+          "implement.md": "c79abdad525ad093801532cf644a21d473c8b72c2b7049b5f9036a32f215102b",
+          "prd.md": "64ef2160ff8450b8945aba3cdc0a030ad6017d8f5bfc49c5381acc26d715297a",
+          "task.json": "da3577aa08a3f81fc13bc16ab262700806ae4a5ccafa7311c5b86dafc0d0f3b4"
+        },
+        "record": {
+          "id": "review-case",
+          "name": "review-case",
+          "title": "Fixture",
+          "description": "Review only",
+          "status": "planning",
+          "branch": "compare-feature",
+          "base_branch": null,
+          "unknownTop": "preserve",
+          "meta": {
+            "other": {
+              "keep": true
+            },
+            "planningReplan": {
+              "requestedAt": "2026-11-13T02:33:12.015608+00:00",
+              "reason": "Fixture changed the storage design",
+              "affectedWork": "storage and dependent tests",
+              "independentWork": "documentation wording"
+            }
+          }
+        },
+        "recordError": null,
+        "taskStatus": "planning",
+        "sessionPointers": [
+          {
+            "file": "review-P13.json",
+            "sha256": "0e1c6d23b00f36913189db47595cde2946d49ec3bb870a9fd851ae269cc33475",
+            "record": {
+              "current_task": ".trellis/tasks/review-case",
+              "platform": "codex"
+            },
+            "parseError": null
+          }
+        ],
+        "activePointers": [
+          ".trellis/tasks/review-case"
+        ],
+        "gitBranch": "compare-feature",
+        "gitHead": "d6339710506801ee62cef6a21c85b5e7d8c5fccf",
+        "gitStatusPorcelain": "M .trellis/tasks/review-case/design.md\n M .trellis/tasks/review-case/implement.md\n M .trellis/tasks/review-case/task.json",
+        "hookRuns": {
+          "file": "hook-runs.txt",
+          "sha256": null,
+          "text": "",
+          "counts": {
+            "after_start": 0,
+            "after_archive": 0
+          }
+        }
+      },
+      "after": {
+        "taskRef": ".trellis/tasks/review-case",
+        "taskPath": "C:\\Users\\PXWD\\AppData\\Local\\Temp\\trellis-a-pinned-comparison-pbpnmz7u\\after\\after\\P13\\.trellis\\tasks\\review-case",
+        "fileHashes": {
+          "check.jsonl": "34cfa347ccf72c9e636670bde19a97d01479ef48311e5530402fd0891f958981",
+          "design.md": "ee0f308cbc1ba8018a3f5c3296637c217134caf4e77a7d66932cd715be998033",
+          "implement.jsonl": "34cfa347ccf72c9e636670bde19a97d01479ef48311e5530402fd0891f958981",
+          "implement.md": "c79abdad525ad093801532cf644a21d473c8b72c2b7049b5f9036a32f215102b",
+          "prd.md": "64ef2160ff8450b8945aba3cdc0a030ad6017d8f5bfc49c5381acc26d715297a",
+          "task.json": "af87f64f2591a3507f8758adf1ebd31bd5fcd8270e0267f75d5fc03caf90d922"
+        },
+        "record": {
+          "id": "review-case",
+          "name": "review-case",
+          "title": "Fixture",
+          "description": "Review only",
+          "status": "planning",
+          "branch": "compare-feature",
+          "base_branch": null,
+          "unknownTop": "preserve",
+          "meta": {
+            "other": {
+              "keep": true
+            },
+            "planningReplan": {
+              "requestedAt": "2026-11-13T02:33:12.015608+00:00",
+              "reason": "Fixture changed the storage design",
+              "affectedWork": "storage and dependent tests",
+              "independentWork": "documentation wording"
+            },
+            "planningAttest": {
+              "schemaVersion": 1,
+              "reviewId": "29f495bcf29048429c0576f6e8086bb1",
+              "attestedAt": "2026-11-13T02:33:12.628353+00:00",
+              "note": "Fixture changed plan ready for review",
+              "reviewFiles": {
+                "prd.md": "1f4e6e9f8c773fcf9555f35d6ecd5a2a76424b032ef65c1010058d9f2814c6e0",
+                "design.md": "96bfa8d592ea90beb0a3568dbca29497863440a4ad7a03bd1adf7c89282aba0c",
+                "implement.md": "a15eda28f8e8e9d0b97ecc072b58997e06dfcc099a18098db6b468e3c81218d2"
+              },
+              "files": {
+                "prd.md": "1f4e6e9f8c773fcf9555f35d6ecd5a2a76424b032ef65c1010058d9f2814c6e0",
+                "design.md": "96bfa8d592ea90beb0a3568dbca29497863440a4ad7a03bd1adf7c89282aba0c",
+                "implement.md": "a15eda28f8e8e9d0b97ecc072b58997e06dfcc099a18098db6b468e3c81218d2"
+              },
+              "editorialChanges": []
+            }
+          }
+        },
+        "recordError": null,
+        "taskStatus": "planning",
+        "sessionPointers": [
+          {
+            "file": "review-P13.json",
+            "sha256": "0e1c6d23b00f36913189db47595cde2946d49ec3bb870a9fd851ae269cc33475",
+            "record": {
+              "current_task": ".trellis/tasks/review-case",
+              "platform": "codex"
+            },
+            "parseError": null
+          }
+        ],
+        "activePointers": [
+          ".trellis/tasks/review-case"
+        ],
+        "gitBranch": "compare-feature",
+        "gitHead": "d6339710506801ee62cef6a21c85b5e7d8c5fccf",
+        "gitStatusPorcelain": "M .trellis/tasks/review-case/design.md\n M .trellis/tasks/review-case/implement.md\n M .trellis/tasks/review-case/task.json",
+        "hookRuns": {
+          "file": "hook-runs.txt",
+          "sha256": null,
+          "text": "",
+          "counts": {
+            "after_start": 0,
+            "after_archive": 0
+          }
+        }
+      }
+    },
+    {
+      "kind": "command",
+      "label": "validate",
+      "argv": [
+        "python",
+        ".trellis/scripts/task.py",
+        "validate",
+        ".trellis/tasks/review-case"
+      ],
+      "environmentKeys": [
+        "APPDATA",
+        "COMSPEC",
+        "HOMEDRIVE",
+        "HOMEPATH",
+        "LOCALAPPDATA",
+        "PATH",
+        "PATHEXT",
+        "PROGRAMDATA",
+        "PROGRAMFILES",
+        "PROGRAMFILES(X86)",
+        "PYTHONDONTWRITEBYTECODE",
+        "PYTHONIOENCODING",
+        "SYSTEMROOT",
+        "TEMP",
+        "TMP",
+        "TRELLIS_CONTEXT_ID",
+        "TRELLIS_DEVELOPER",
+        "USERPROFILE",
+        "WINDIR"
+      ],
+      "exit": 0,
+      "expectedExit": 0,
+      "stdout": "\u001b[0;34m=== Validating Context Files ===\u001b[0m\nTarget dir: C:\\Users\\PXWD\\AppData\\Local\\Temp\\trellis-a-pinned-comparison-pbpnmz7u\\after\\after\\P13\\.trellis\\tasks\\review-case\n\nPlanning: waiting_confirmation; review: 29f495bcf29048429c0576f6e8086bb1\nPlanning is not approved: awaiting user confirmation before start.\n  \u001b[0;32mimplement.jsonl: ✓ (1 entries)\u001b[0m\n  \u001b[0;32mcheck.jsonl: ✓ (1 entries)\u001b[0m\n\n\u001b[0;32m✓ All validations passed\u001b[0m\n",
+      "stderr": "",
+      "launchError": null,
+      "seconds": 0.263207,
+      "before": {
+        "taskRef": ".trellis/tasks/review-case",
+        "taskPath": "C:\\Users\\PXWD\\AppData\\Local\\Temp\\trellis-a-pinned-comparison-pbpnmz7u\\after\\after\\P13\\.trellis\\tasks\\review-case",
+        "fileHashes": {
+          "check.jsonl": "34cfa347ccf72c9e636670bde19a97d01479ef48311e5530402fd0891f958981",
+          "design.md": "ee0f308cbc1ba8018a3f5c3296637c217134caf4e77a7d66932cd715be998033",
+          "implement.jsonl": "34cfa347ccf72c9e636670bde19a97d01479ef48311e5530402fd0891f958981",
+          "implement.md": "c79abdad525ad093801532cf644a21d473c8b72c2b7049b5f9036a32f215102b",
+          "prd.md": "64ef2160ff8450b8945aba3cdc0a030ad6017d8f5bfc49c5381acc26d715297a",
+          "task.json": "af87f64f2591a3507f8758adf1ebd31bd5fcd8270e0267f75d5fc03caf90d922"
+        },
+        "record": {
+          "id": "review-case",
+          "name": "review-case",
+          "title": "Fixture",
+          "description": "Review only",
+          "status": "planning",
+          "branch": "compare-feature",
+          "base_branch": null,
+          "unknownTop": "preserve",
+          "meta": {
+            "other": {
+              "keep": true
+            },
+            "planningReplan": {
+              "requestedAt": "2026-11-13T02:33:12.015608+00:00",
+              "reason": "Fixture changed the storage design",
+              "affectedWork": "storage and dependent tests",
+              "independentWork": "documentation wording"
+            },
+            "planningAttest": {
+              "schemaVersion": 1,
+              "reviewId": "29f495bcf29048429c0576f6e8086bb1",
+              "attestedAt": "2026-11-13T02:33:12.628353+00:00",
+              "note": "Fixture changed plan ready for review",
+              "reviewFiles": {
+                "prd.md": "1f4e6e9f8c773fcf9555f35d6ecd5a2a76424b032ef65c1010058d9f2814c6e0",
+                "design.md": "96bfa8d592ea90beb0a3568dbca29497863440a4ad7a03bd1adf7c89282aba0c",
+                "implement.md": "a15eda28f8e8e9d0b97ecc072b58997e06dfcc099a18098db6b468e3c81218d2"
+              },
+              "files": {
+                "prd.md": "1f4e6e9f8c773fcf9555f35d6ecd5a2a76424b032ef65c1010058d9f2814c6e0",
+                "design.md": "96bfa8d592ea90beb0a3568dbca29497863440a4ad7a03bd1adf7c89282aba0c",
+                "implement.md": "a15eda28f8e8e9d0b97ecc072b58997e06dfcc099a18098db6b468e3c81218d2"
+              },
+              "editorialChanges": []
+            }
+          }
+        },
+        "recordError": null,
+        "taskStatus": "planning",
+        "sessionPointers": [
+          {
+            "file": "review-P13.json",
+            "sha256": "0e1c6d23b00f36913189db47595cde2946d49ec3bb870a9fd851ae269cc33475",
+            "record": {
+              "current_task": ".trellis/tasks/review-case",
+              "platform": "codex"
+            },
+            "parseError": null
+          }
+        ],
+        "activePointers": [
+          ".trellis/tasks/review-case"
+        ],
+        "gitBranch": "compare-feature",
+        "gitHead": "d6339710506801ee62cef6a21c85b5e7d8c5fccf",
+        "gitStatusPorcelain": "M .trellis/tasks/review-case/design.md\n M .trellis/tasks/review-case/implement.md\n M .trellis/tasks/review-case/task.json",
+        "hookRuns": {
+          "file": "hook-runs.txt",
+          "sha256": null,
+          "text": "",
+          "counts": {
+            "after_start": 0,
+            "after_archive": 0
+          }
+        }
+      },
+      "after": {
+        "taskRef": ".trellis/tasks/review-case",
+        "taskPath": "C:\\Users\\PXWD\\AppData\\Local\\Temp\\trellis-a-pinned-comparison-pbpnmz7u\\after\\after\\P13\\.trellis\\tasks\\review-case",
+        "fileHashes": {
+          "check.jsonl": "34cfa347ccf72c9e636670bde19a97d01479ef48311e5530402fd0891f958981",
+          "design.md": "ee0f308cbc1ba8018a3f5c3296637c217134caf4e77a7d66932cd715be998033",
+          "implement.jsonl": "34cfa347ccf72c9e636670bde19a97d01479ef48311e5530402fd0891f958981",
+          "implement.md": "c79abdad525ad093801532cf644a21d473c8b72c2b7049b5f9036a32f215102b",
+          "prd.md": "64ef2160ff8450b8945aba3cdc0a030ad6017d8f5bfc49c5381acc26d715297a",
+          "task.json": "af87f64f2591a3507f8758adf1ebd31bd5fcd8270e0267f75d5fc03caf90d922"
+        },
+        "record": {
+          "id": "review-case",
+          "name": "review-case",
+          "title": "Fixture",
+          "description": "Review only",
+          "status": "planning",
+          "branch": "compare-feature",
+          "base_branch": null,
+          "unknownTop": "preserve",
+          "meta": {
+            "other": {
+              "keep": true
+            },
+            "planningReplan": {
+              "requestedAt": "2026-11-13T02:33:12.015608+00:00",
+              "reason": "Fixture changed the storage design",
+              "affectedWork": "storage and dependent tests",
+              "independentWork": "documentation wording"
+            },
+            "planningAttest": {
+              "schemaVersion": 1,
+              "reviewId": "29f495bcf29048429c0576f6e8086bb1",
+              "attestedAt": "2026-11-13T02:33:12.628353+00:00",
+              "note": "Fixture changed plan ready for review",
+              "reviewFiles": {
+                "prd.md": "1f4e6e9f8c773fcf9555f35d6ecd5a2a76424b032ef65c1010058d9f2814c6e0",
+                "design.md": "96bfa8d592ea90beb0a3568dbca29497863440a4ad7a03bd1adf7c89282aba0c",
+                "implement.md": "a15eda28f8e8e9d0b97ecc072b58997e06dfcc099a18098db6b468e3c81218d2"
+              },
+              "files": {
+                "prd.md": "1f4e6e9f8c773fcf9555f35d6ecd5a2a76424b032ef65c1010058d9f2814c6e0",
+                "design.md": "96bfa8d592ea90beb0a3568dbca29497863440a4ad7a03bd1adf7c89282aba0c",
+                "implement.md": "a15eda28f8e8e9d0b97ecc072b58997e06dfcc099a18098db6b468e3c81218d2"
+              },
+              "editorialChanges": []
+            }
+          }
+        },
+        "recordError": null,
+        "taskStatus": "planning",
+        "sessionPointers": [
+          {
+            "file": "review-P13.json",
+            "sha256": "0e1c6d23b00f36913189db47595cde2946d49ec3bb870a9fd851ae269cc33475",
+            "record": {
+              "current_task": ".trellis/tasks/review-case",
+              "platform": "codex"
+            },
+            "parseError": null
+          }
+        ],
+        "activePointers": [
+          ".trellis/tasks/review-case"
+        ],
+        "gitBranch": "compare-feature",
+        "gitHead": "d6339710506801ee62cef6a21c85b5e7d8c5fccf",
+        "gitStatusPorcelain": "M .trellis/tasks/review-case/design.md\n M .trellis/tasks/review-case/implement.md\n M .trellis/tasks/review-case/task.json",
+        "hookRuns": {
+          "file": "hook-runs.txt",
+          "sha256": null,
+          "text": "",
+          "counts": {
+            "after_start": 0,
+            "after_archive": 0
+          }
+        }
+      }
+    },
+    {
+      "kind": "command",
+      "label": "approved-start",
+      "argv": [
+        "python",
+        ".trellis/scripts/task.py",
+        "start",
+        ".trellis/tasks/review-case",
+        "--review",
+        "29f495bcf29048429c0576f6e8086bb1",
+        "--approval-note",
+        "Fixture-only confirmation for this reviewed version; not a real approval",
+        "--approval-source",
+        "Fixture-only transcript line after the displayed version"
+      ],
+      "environmentKeys": [
+        "APPDATA",
+        "COMSPEC",
+        "HOMEDRIVE",
+        "HOMEPATH",
+        "LOCALAPPDATA",
+        "PATH",
+        "PATHEXT",
+        "PROGRAMDATA",
+        "PROGRAMFILES",
+        "PROGRAMFILES(X86)",
+        "PYTHONDONTWRITEBYTECODE",
+        "PYTHONIOENCODING",
+        "SYSTEMROOT",
+        "TEMP",
+        "TMP",
+        "TRELLIS_CONTEXT_ID",
+        "TRELLIS_DEVELOPER",
+        "USERPROFILE",
+        "WINDIR"
+      ],
+      "exit": 0,
+      "expectedExit": 0,
+      "stdout": "\u001b[0;32m✓ Current task set to: .trellis/tasks/review-case\u001b[0m\nSource: session:review-P13\n",
+      "stderr": "",
+      "launchError": null,
+      "seconds": 0.314089,
+      "before": {
+        "taskRef": ".trellis/tasks/review-case",
+        "taskPath": "C:\\Users\\PXWD\\AppData\\Local\\Temp\\trellis-a-pinned-comparison-pbpnmz7u\\after\\after\\P13\\.trellis\\tasks\\review-case",
+        "fileHashes": {
+          "check.jsonl": "34cfa347ccf72c9e636670bde19a97d01479ef48311e5530402fd0891f958981",
+          "design.md": "ee0f308cbc1ba8018a3f5c3296637c217134caf4e77a7d66932cd715be998033",
+          "implement.jsonl": "34cfa347ccf72c9e636670bde19a97d01479ef48311e5530402fd0891f958981",
+          "implement.md": "c79abdad525ad093801532cf644a21d473c8b72c2b7049b5f9036a32f215102b",
+          "prd.md": "64ef2160ff8450b8945aba3cdc0a030ad6017d8f5bfc49c5381acc26d715297a",
+          "task.json": "af87f64f2591a3507f8758adf1ebd31bd5fcd8270e0267f75d5fc03caf90d922"
+        },
+        "record": {
+          "id": "review-case",
+          "name": "review-case",
+          "title": "Fixture",
+          "description": "Review only",
+          "status": "planning",
+          "branch": "compare-feature",
+          "base_branch": null,
+          "unknownTop": "preserve",
+          "meta": {
+            "other": {
+              "keep": true
+            },
+            "planningReplan": {
+              "requestedAt": "2026-11-13T02:33:12.015608+00:00",
+              "reason": "Fixture changed the storage design",
+              "affectedWork": "storage and dependent tests",
+              "independentWork": "documentation wording"
+            },
+            "planningAttest": {
+              "schemaVersion": 1,
+              "reviewId": "29f495bcf29048429c0576f6e8086bb1",
+              "attestedAt": "2026-11-13T02:33:12.628353+00:00",
+              "note": "Fixture changed plan ready for review",
+              "reviewFiles": {
+                "prd.md": "1f4e6e9f8c773fcf9555f35d6ecd5a2a76424b032ef65c1010058d9f2814c6e0",
+                "design.md": "96bfa8d592ea90beb0a3568dbca29497863440a4ad7a03bd1adf7c89282aba0c",
+                "implement.md": "a15eda28f8e8e9d0b97ecc072b58997e06dfcc099a18098db6b468e3c81218d2"
+              },
+              "files": {
+                "prd.md": "1f4e6e9f8c773fcf9555f35d6ecd5a2a76424b032ef65c1010058d9f2814c6e0",
+                "design.md": "96bfa8d592ea90beb0a3568dbca29497863440a4ad7a03bd1adf7c89282aba0c",
+                "implement.md": "a15eda28f8e8e9d0b97ecc072b58997e06dfcc099a18098db6b468e3c81218d2"
+              },
+              "editorialChanges": []
+            }
+          }
+        },
+        "recordError": null,
+        "taskStatus": "planning",
+        "sessionPointers": [
+          {
+            "file": "review-P13.json",
+            "sha256": "0e1c6d23b00f36913189db47595cde2946d49ec3bb870a9fd851ae269cc33475",
+            "record": {
+              "current_task": ".trellis/tasks/review-case",
+              "platform": "codex"
+            },
+            "parseError": null
+          }
+        ],
+        "activePointers": [
+          ".trellis/tasks/review-case"
+        ],
+        "gitBranch": "compare-feature",
+        "gitHead": "d6339710506801ee62cef6a21c85b5e7d8c5fccf",
+        "gitStatusPorcelain": "M .trellis/tasks/review-case/design.md\n M .trellis/tasks/review-case/implement.md\n M .trellis/tasks/review-case/task.json",
+        "hookRuns": {
+          "file": "hook-runs.txt",
+          "sha256": null,
+          "text": "",
+          "counts": {
+            "after_start": 0,
+            "after_archive": 0
+          }
+        }
+      },
+      "after": {
+        "taskRef": ".trellis/tasks/review-case",
+        "taskPath": "C:\\Users\\PXWD\\AppData\\Local\\Temp\\trellis-a-pinned-comparison-pbpnmz7u\\after\\after\\P13\\.trellis\\tasks\\review-case",
+        "fileHashes": {
+          "check.jsonl": "34cfa347ccf72c9e636670bde19a97d01479ef48311e5530402fd0891f958981",
+          "design.md": "ee0f308cbc1ba8018a3f5c3296637c217134caf4e77a7d66932cd715be998033",
+          "implement.jsonl": "34cfa347ccf72c9e636670bde19a97d01479ef48311e5530402fd0891f958981",
+          "implement.md": "c79abdad525ad093801532cf644a21d473c8b72c2b7049b5f9036a32f215102b",
+          "prd.md": "64ef2160ff8450b8945aba3cdc0a030ad6017d8f5bfc49c5381acc26d715297a",
+          "task.json": "810fdc7987d170dc3cb96402b785d24131867c8475bad48ffdcdbaaaecc3a6af"
+        },
+        "record": {
+          "id": "review-case",
+          "name": "review-case",
+          "title": "Fixture",
+          "description": "Review only",
+          "status": "in_progress",
+          "branch": "compare-feature",
+          "base_branch": null,
+          "unknownTop": "preserve",
+          "meta": {
+            "other": {
+              "keep": true
+            },
+            "planningAttest": {
+              "schemaVersion": 1,
+              "reviewId": "29f495bcf29048429c0576f6e8086bb1",
+              "attestedAt": "2026-11-13T02:33:12.628353+00:00",
+              "note": "Fixture changed plan ready for review",
+              "reviewFiles": {
+                "prd.md": "1f4e6e9f8c773fcf9555f35d6ecd5a2a76424b032ef65c1010058d9f2814c6e0",
+                "design.md": "96bfa8d592ea90beb0a3568dbca29497863440a4ad7a03bd1adf7c89282aba0c",
+                "implement.md": "a15eda28f8e8e9d0b97ecc072b58997e06dfcc099a18098db6b468e3c81218d2"
+              },
+              "files": {
+                "prd.md": "1f4e6e9f8c773fcf9555f35d6ecd5a2a76424b032ef65c1010058d9f2814c6e0",
+                "design.md": "96bfa8d592ea90beb0a3568dbca29497863440a4ad7a03bd1adf7c89282aba0c",
+                "implement.md": "a15eda28f8e8e9d0b97ecc072b58997e06dfcc099a18098db6b468e3c81218d2"
+              },
+              "editorialChanges": []
+            },
+            "planningApproval": {
+              "schemaVersion": 1,
+              "reviewId": "29f495bcf29048429c0576f6e8086bb1",
+              "reviewedFiles": {
+                "prd.md": "1f4e6e9f8c773fcf9555f35d6ecd5a2a76424b032ef65c1010058d9f2814c6e0",
+                "design.md": "96bfa8d592ea90beb0a3568dbca29497863440a4ad7a03bd1adf7c89282aba0c",
+                "implement.md": "a15eda28f8e8e9d0b97ecc072b58997e06dfcc099a18098db6b468e3c81218d2"
+              },
+              "recordedAt": "2026-11-13T02:33:13.403247+00:00",
+              "note": "Fixture-only confirmation for this reviewed version; not a real approval",
+              "source": "Fixture-only transcript line after the displayed version"
+            }
+          }
+        },
+        "recordError": null,
+        "taskStatus": "in_progress",
+        "sessionPointers": [
+          {
+            "file": "review-P13.json",
+            "sha256": "154c9bce8c6b53c861a5c8b79be0106e7ebd89ec02605d22257e4f6fe15f91b6",
+            "record": {
+              "current_task": ".trellis/tasks/review-case",
+              "platform": "session",
+              "last_seen_at": "2026-11-13T02:33:13Z",
+              "current_run": null
+            },
+            "parseError": null
+          }
+        ],
+        "activePointers": [
+          ".trellis/tasks/review-case"
+        ],
+        "gitBranch": "compare-feature",
+        "gitHead": "d6339710506801ee62cef6a21c85b5e7d8c5fccf",
+        "gitStatusPorcelain": "M .trellis/.runtime/sessions/review-P13.json\n M .trellis/tasks/review-case/design.md\n M .trellis/tasks/review-case/implement.md\n M .trellis/tasks/review-case/task.json\n?? hook-runs.txt",
+        "hookRuns": {
+          "file": "hook-runs.txt",
+          "sha256": "fe2a2e451e790abd31aeb7fa90189c00d850276a765d99e9d97190abe1c5f5b0",
+          "text": "after_start\n",
+          "counts": {
+            "after_start": 1,
+            "after_archive": 0
+          }
+        }
+      }
+    }
+  ],
+  "final": {
+    "taskRef": ".trellis/tasks/review-case",
+    "taskPath": "C:\\Users\\PXWD\\AppData\\Local\\Temp\\trellis-a-pinned-comparison-pbpnmz7u\\after\\after\\P13\\.trellis\\tasks\\review-case",
+    "fileHashes": {
+      "check.jsonl": "34cfa347ccf72c9e636670bde19a97d01479ef48311e5530402fd0891f958981",
+      "design.md": "ee0f308cbc1ba8018a3f5c3296637c217134caf4e77a7d66932cd715be998033",
+      "implement.jsonl": "34cfa347ccf72c9e636670bde19a97d01479ef48311e5530402fd0891f958981",
+      "implement.md": "c79abdad525ad093801532cf644a21d473c8b72c2b7049b5f9036a32f215102b",
+      "prd.md": "64ef2160ff8450b8945aba3cdc0a030ad6017d8f5bfc49c5381acc26d715297a",
+      "task.json": "810fdc7987d170dc3cb96402b785d24131867c8475bad48ffdcdbaaaecc3a6af"
+    },
+    "record": {
+      "id": "review-case",
+      "name": "review-case",
+      "title": "Fixture",
+      "description": "Review only",
+      "status": "in_progress",
+      "branch": "compare-feature",
+      "base_branch": null,
+      "unknownTop": "preserve",
+      "meta": {
+        "other": {
+          "keep": true
+        },
+        "planningAttest": {
+          "schemaVersion": 1,
+          "reviewId": "29f495bcf29048429c0576f6e8086bb1",
+          "attestedAt": "2026-11-13T02:33:12.628353+00:00",
+          "note": "Fixture changed plan ready for review",
+          "reviewFiles": {
+            "prd.md": "1f4e6e9f8c773fcf9555f35d6ecd5a2a76424b032ef65c1010058d9f2814c6e0",
+            "design.md": "96bfa8d592ea90beb0a3568dbca29497863440a4ad7a03bd1adf7c89282aba0c",
+            "implement.md": "a15eda28f8e8e9d0b97ecc072b58997e06dfcc099a18098db6b468e3c81218d2"
+          },
+          "files": {
+            "prd.md": "1f4e6e9f8c773fcf9555f35d6ecd5a2a76424b032ef65c1010058d9f2814c6e0",
+            "design.md": "96bfa8d592ea90beb0a3568dbca29497863440a4ad7a03bd1adf7c89282aba0c",
+            "implement.md": "a15eda28f8e8e9d0b97ecc072b58997e06dfcc099a18098db6b468e3c81218d2"
+          },
+          "editorialChanges": []
+        },
+        "planningApproval": {
+          "schemaVersion": 1,
+          "reviewId": "29f495bcf29048429c0576f6e8086bb1",
+          "reviewedFiles": {
+            "prd.md": "1f4e6e9f8c773fcf9555f35d6ecd5a2a76424b032ef65c1010058d9f2814c6e0",
+            "design.md": "96bfa8d592ea90beb0a3568dbca29497863440a4ad7a03bd1adf7c89282aba0c",
+            "implement.md": "a15eda28f8e8e9d0b97ecc072b58997e06dfcc099a18098db6b468e3c81218d2"
+          },
+          "recordedAt": "2026-11-13T02:33:13.403247+00:00",
+          "note": "Fixture-only confirmation for this reviewed version; not a real approval",
+          "source": "Fixture-only transcript line after the displayed version"
+        }
+      }
+    },
+    "recordError": null,
+    "taskStatus": "in_progress",
+    "sessionPointers": [
+      {
+        "file": "review-P13.json",
+        "sha256": "154c9bce8c6b53c861a5c8b79be0106e7ebd89ec02605d22257e4f6fe15f91b6",
+        "record": {
+          "current_task": ".trellis/tasks/review-case",
+          "platform": "session",
+          "last_seen_at": "2026-11-13T02:33:13Z",
+          "current_run": null
+        },
+        "parseError": null
+      }
+    ],
+    "activePointers": [
+      ".trellis/tasks/review-case"
+    ],
+    "gitBranch": "compare-feature",
+    "gitHead": "d6339710506801ee62cef6a21c85b5e7d8c5fccf",
+    "gitStatusPorcelain": "M .trellis/.runtime/sessions/review-P13.json\n M .trellis/tasks/review-case/design.md\n M .trellis/tasks/review-case/implement.md\n M .trellis/tasks/review-case/task.json\n?? hook-runs.txt",
+    "hookRuns": {
+      "file": "hook-runs.txt",
+      "sha256": "fe2a2e451e790abd31aeb7fa90189c00d850276a765d99e9d97190abe1c5f5b0",
+      "text": "after_start\n",
+      "counts": {
+        "after_start": 1,
+        "after_archive": 0
+      }
+    }
+  },
+  "assertions": [
+    {
+      "name": "replan-exit",
+      "passed": true,
+      "expected": 0,
+      "actual": 0
+    },
+    {
+      "name": "replan-status-planning",
+      "passed": true,
+      "expected": "planning",
+      "actual": "planning"
+    },
+    {
+      "name": "replan-record",
+      "passed": true,
+      "expected": "planningReplan object",
+      "actual": {
+        "requestedAt": "2026-11-13T02:33:12.015608+00:00",
+        "reason": "Fixture changed the storage design",
+        "affectedWork": "storage and dependent tests",
+        "independentWork": "documentation wording"
+      }
+    },
+    {
+      "name": "replan-clears-old-attest",
+      "passed": true,
+      "expected": false,
+      "actual": false
+    },
+    {
+      "name": "replan-clears-old-approval",
+      "passed": true,
+      "expected": false,
+      "actual": false
+    },
+    {
+      "name": "replan-preserves-branch",
+      "passed": true,
+      "expected": "compare-feature",
+      "actual": "compare-feature"
+    },
+    {
+      "name": "replan-preserves-pointer",
+      "passed": true,
+      "expected": 1,
+      "actual": 1
+    },
+    {
+      "name": "replan-no-start-hook",
+      "passed": true,
+      "expected": 0,
+      "actual": 0
+    },
+    {
+      "name": "materials-really-changed",
+      "passed": true,
+      "expected": "different from old reviewFiles",
+      "actual": {
+        "prd.md": "1f4e6e9f8c773fcf9555f35d6ecd5a2a76424b032ef65c1010058d9f2814c6e0",
+        "design.md": "96bfa8d592ea90beb0a3568dbca29497863440a4ad7a03bd1adf7c89282aba0c",
+        "implement.md": "a15eda28f8e8e9d0b97ecc072b58997e06dfcc099a18098db6b468e3c81218d2"
+      }
+    },
+    {
+      "name": "attest-exit",
+      "passed": true,
+      "expected": 0,
+      "actual": 0
+    },
+    {
+      "name": "new-review-id",
+      "passed": true,
+      "expected": "different reviewId",
+      "actual": "29f495bcf29048429c0576f6e8086bb1"
+    },
+    {
+      "name": "new-files-attested",
+      "passed": true,
+      "expected": {
+        "prd.md": "1f4e6e9f8c773fcf9555f35d6ecd5a2a76424b032ef65c1010058d9f2814c6e0",
+        "design.md": "96bfa8d592ea90beb0a3568dbca29497863440a4ad7a03bd1adf7c89282aba0c",
+        "implement.md": "a15eda28f8e8e9d0b97ecc072b58997e06dfcc099a18098db6b468e3c81218d2"
+      },
+      "actual": {
+        "prd.md": "1f4e6e9f8c773fcf9555f35d6ecd5a2a76424b032ef65c1010058d9f2814c6e0",
+        "design.md": "96bfa8d592ea90beb0a3568dbca29497863440a4ad7a03bd1adf7c89282aba0c",
+        "implement.md": "a15eda28f8e8e9d0b97ecc072b58997e06dfcc099a18098db6b468e3c81218d2"
+      }
+    },
+    {
+      "name": "replan-pending-after-attest",
+      "passed": true,
+      "expected": "still pending",
+      "actual": {
+        "requestedAt": "2026-11-13T02:33:12.015608+00:00",
+        "reason": "Fixture changed the storage design",
+        "affectedWork": "storage and dependent tests",
+        "independentWork": "documentation wording"
+      }
+    },
+    {
+      "name": "validate-exit",
+      "passed": true,
+      "expected": 0,
+      "actual": 0
+    },
+    {
+      "name": "start-exit",
+      "passed": true,
+      "expected": 0,
+      "actual": 0
+    },
+    {
+      "name": "final-status",
+      "passed": true,
+      "expected": "in_progress",
+      "actual": "in_progress"
+    },
+    {
+      "name": "replan-cleared-on-start",
+      "passed": true,
+      "expected": null,
+      "actual": null
+    },
+    {
+      "name": "new-approval",
+      "passed": true,
+      "expected": "29f495bcf29048429c0576f6e8086bb1",
+      "actual": "29f495bcf29048429c0576f6e8086bb1"
+    },
+    {
+      "name": "final-files-match",
+      "passed": true,
+      "expected": {
+        "prd.md": "1f4e6e9f8c773fcf9555f35d6ecd5a2a76424b032ef65c1010058d9f2814c6e0",
+        "design.md": "96bfa8d592ea90beb0a3568dbca29497863440a4ad7a03bd1adf7c89282aba0c",
+        "implement.md": "a15eda28f8e8e9d0b97ecc072b58997e06dfcc099a18098db6b468e3c81218d2"
+      },
+      "actual": {
+        "prd.md": "1f4e6e9f8c773fcf9555f35d6ecd5a2a76424b032ef65c1010058d9f2814c6e0",
+        "design.md": "96bfa8d592ea90beb0a3568dbca29497863440a4ad7a03bd1adf7c89282aba0c",
+        "implement.md": "a15eda28f8e8e9d0b97ecc072b58997e06dfcc099a18098db6b468e3c81218d2"
+      }
+    },
+    {
+      "name": "one-start-hook",
+      "passed": true,
+      "expected": 1,
+      "actual": 1
+    },
+    {
+      "name": "exit-replan",
+      "passed": true,
+      "expected": 0,
+      "actual": 0
+    },
+    {
+      "name": "exit-material-change",
+      "passed": true,
+      "expected": 0,
+      "actual": 0
+    },
+    {
+      "name": "exit-attest",
+      "passed": true,
+      "expected": 0,
+      "actual": 0
+    },
+    {
+      "name": "exit-validate",
+      "passed": true,
+      "expected": 0,
+      "actual": 0
+    },
+    {
+      "name": "exit-approved-start",
+      "passed": true,
+      "expected": 0,
+      "actual": 0
+    }
+  ],
+  "expectationMatched": true,
+  "classification": "executed",
+  "capabilityAbsentAt": null
+}
