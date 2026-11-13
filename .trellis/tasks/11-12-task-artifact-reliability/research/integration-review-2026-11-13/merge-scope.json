@@ -1,0 +1,23 @@
+{
+  "mainBase": "f089cb3286071199e84118dee86b6d76aab032f1",
+  "candidate": "058cf5716d935c9f43f5d518d3ca732863cb7615",
+  "commitCount": "0\t9",
+  "counts": {
+    "project_copies_other": 121,
+    "task_evidence": 1607,
+    "submodule": 1,
+    "product_source_templates_tests": 71
+  },
+  "total": 1800,
+  "commits": [
+    "058cf571 docs: 约定提交说明以中文为主",
+    "967cb1cf test(workflow): close real approval exercise and A acceptance",
+    "97be0521 test(workflow): record pinned planning gate comparison evidence",
+    "1b801471 feat(workflow): bind task starts to reviewed planning versions",
+    "9b76fe49 chore: record research evidence handoff closure",
+    "fe880e26 chore(task): archive accepted research evidence handoff",
+    "6dc88f53 test(workflow): record final delivery verification",
+    "0d14a854 docs(workflow): preserve decision evidence across task handoffs",
+    "cadd557c fix(dogfood): align platform templates and register .omp in the manifest"
+  ]
+}

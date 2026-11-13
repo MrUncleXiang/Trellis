@@ -1,0 +1,35 @@
+{
+  "createdAt": "2026-11-13T04:02:56.621174+00:00",
+  "files": [
+    {
+      "path": "comparison.json",
+      "bytes": 90538,
+      "sha256": "40f3ed07402a88e421c16e0366658c6725b5f568ed07e589346a64f9c286b098"
+    },
+    {
+      "path": "integration-integrity.json",
+      "bytes": 25127,
+      "sha256": "d01c5973b3817e222dcc68605b032ac9564e2c1a8fe526c904e8434a5481262d"
+    },
+    {
+      "path": "merge-scope.json",
+      "bytes": 1007,
+      "sha256": "68d3dd40bae9b27cb80c936064314b874efaad4c55ae216ee8af12d0315428af"
+    },
+    {
+      "path": "raw-evidence.zip",
+      "bytes": 401411,
+      "sha256": "982ccc3a0a1b4fb50a406bff9478519a4d7d5317db1e109528125e54e1a414f6"
+    },
+    {
+      "path": "report.md",
+      "bytes": 11131,
+      "sha256": "e5cba6b24fa857f5a38dc11831aa0a8e5e555bd9702e11b3ebcb303a2c898016"
+    },
+    {
+      "path": "same-condition-runs.json",
+      "bytes": 3991,
+      "sha256": "e23002636df967e0f7b3b4ef47d8671753e140125090cdbd3566e475d258af2b"
+    }
+  ]
+}

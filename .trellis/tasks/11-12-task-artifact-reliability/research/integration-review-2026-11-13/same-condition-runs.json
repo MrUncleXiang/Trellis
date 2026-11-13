@@ -1,0 +1,114 @@
+{
+  "pythonHome": "C:/Python313",
+  "pathPrefix": "C:\\Users\\PXWD\\AppData\\Local\\Temp\\trellis-merge-review-fmm2blpb\\python-shim",
+  "runs": [
+    {
+      "version": "baseline-fixed",
+      "package": "core",
+      "command": [
+        "pnpm.cmd",
+        "exec",
+        "vitest",
+        "run",
+        "--maxWorkers=2",
+        "--testTimeout=60000",
+        "--reporter=json",
+        "--outputFile",
+        "C:\\Users\\PXWD\\AppData\\Local\\Temp\\trellis-merge-review-fmm2blpb\\baseline-fixed-core.json"
+      ],
+      "cwd": "C:\\Users\\PXWD\\AppData\\Local\\Temp\\trellis-merge-review-fmm2blpb\\baseline\\packages\\core",
+      "exit": 0,
+      "seconds": 10.42,
+      "report": "C:\\Users\\PXWD\\AppData\\Local\\Temp\\trellis-merge-review-fmm2blpb\\baseline-fixed-core.json",
+      "log": "C:\\Users\\PXWD\\AppData\\Local\\Temp\\trellis-merge-review-fmm2blpb\\logs\\baseline-fixed-core.txt",
+      "counts": {
+        "numTotalTests": 400,
+        "numPassedTests": 398,
+        "numFailedTests": 0,
+        "numPendingTests": 2,
+        "success": true
+      }
+    },
+    {
+      "version": "baseline-fixed",
+      "package": "cli",
+      "command": [
+        "pnpm.cmd",
+        "exec",
+        "vitest",
+        "run",
+        "--maxWorkers=2",
+        "--testTimeout=60000",
+        "--reporter=json",
+        "--outputFile",
+        "C:\\Users\\PXWD\\AppData\\Local\\Temp\\trellis-merge-review-fmm2blpb\\baseline-fixed-cli.json"
+      ],
+      "cwd": "C:\\Users\\PXWD\\AppData\\Local\\Temp\\trellis-merge-review-fmm2blpb\\baseline\\packages\\cli",
+      "exit": 1,
+      "seconds": 208.23,
+      "report": "C:\\Users\\PXWD\\AppData\\Local\\Temp\\trellis-merge-review-fmm2blpb\\baseline-fixed-cli.json",
+      "log": "C:\\Users\\PXWD\\AppData\\Local\\Temp\\trellis-merge-review-fmm2blpb\\logs\\baseline-fixed-cli.txt",
+      "counts": {
+        "numTotalTests": 1904,
+        "numPassedTests": 1851,
+        "numFailedTests": 18,
+        "numPendingTests": 35,
+        "success": false
+      }
+    },
+    {
+      "version": "candidate-fixed",
+      "package": "core",
+      "command": [
+        "pnpm.cmd",
+        "exec",
+        "vitest",
+        "run",
+        "--maxWorkers=2",
+        "--testTimeout=60000",
+        "--reporter=json",
+        "--outputFile",
+        "C:\\Users\\PXWD\\AppData\\Local\\Temp\\trellis-merge-review-fmm2blpb\\candidate-fixed-core.json"
+      ],
+      "cwd": "C:\\Users\\PXWD\\.codex\\worktrees\\planning-artifact-gate\\Trellis\\packages\\core",
+      "exit": 0,
+      "seconds": 9.93,
+      "report": "C:\\Users\\PXWD\\AppData\\Local\\Temp\\trellis-merge-review-fmm2blpb\\candidate-fixed-core.json",
+      "log": "C:\\Users\\PXWD\\AppData\\Local\\Temp\\trellis-merge-review-fmm2blpb\\logs\\candidate-fixed-core.txt",
+      "counts": {
+        "numTotalTests": 400,
+        "numPassedTests": 398,
+        "numFailedTests": 0,
+        "numPendingTests": 2,
+        "success": true
+      }
+    },
+    {
+      "version": "candidate-fixed",
+      "package": "cli",
+      "command": [
+        "pnpm.cmd",
+        "exec",
+        "vitest",
+        "run",
+        "--maxWorkers=2",
+        "--testTimeout=60000",
+        "--reporter=json",
+        "--outputFile",
+        "C:\\Users\\PXWD\\AppData\\Local\\Temp\\trellis-merge-review-fmm2blpb\\candidate-fixed-cli.json"
+      ],
+      "cwd": "C:\\Users\\PXWD\\.codex\\worktrees\\planning-artifact-gate\\Trellis\\packages\\cli",
+      "exit": 1,
+      "seconds": 239.99,
+      "report": "C:\\Users\\PXWD\\AppData\\Local\\Temp\\trellis-merge-review-fmm2blpb\\candidate-fixed-cli.json",
+      "log": "C:\\Users\\PXWD\\AppData\\Local\\Temp\\trellis-merge-review-fmm2blpb\\logs\\candidate-fixed-cli.txt",
+      "counts": {
+        "numTotalTests": 2039,
+        "numPassedTests": 1987,
+        "numFailedTests": 17,
+        "numPendingTests": 35,
+        "success": false
+      }
+    }
+  ]
+}

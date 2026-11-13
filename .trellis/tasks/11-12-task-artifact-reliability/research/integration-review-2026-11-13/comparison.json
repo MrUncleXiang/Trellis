@@ -1,0 +1,880 @@
+{
+  "baseline": {
+    "numTotalTests": 1904,
+    "numPassedTests": 1852,
+    "numFailedTests": 17,
+    "numPendingTests": 35
+  },
+  "candidate": {
+    "numTotalTests": 2039,
+    "numPassedTests": 1987,
+    "numFailedTests": 17,
+    "numPendingTests": 35
+  },
+  "identicalFailureSets": true,
+  "newFailures": [],
+  "resolvedFailures": [],
+  "commonStatusChanges": [],
+  "oldOnlyTests": [
+    {
+      "file": "test/regression.test.ts",
+      "test": "regression: JSON read/write failure reporting [audit] start still activates a task with a corrupt task.json but says why status and branch stayed",
+      "status": "passed"
+    }
+  ],
+  "newOnlyTests": [
+    {
+      "file": "test/regression.test.ts",
+      "test": "regression: .trellis/scripts stays byte-identical to templates/trellis/scripts common/planning.py is byte-identical in both trees",
+      "status": "passed"
+    },
+    {
+      "file": "test/regression.test.ts",
+      "test": "regression: JSON read/write failure reporting [audit] start refuses a corrupt task.json without activating or rewriting it",
+      "status": "passed"
+    },
+    {
+      "file": "test/regression.test.ts",
+      "test": "regression: dogfood platform files match what ships to users claude-code: committed files are byte-identical to the templates",
+      "status": "passed"
+    },
+    {
+      "file": "test/regression.test.ts",
+      "test": "regression: dogfood platform files match what ships to users codex: committed files are byte-identical to the templates",
+      "status": "passed"
+    },
+    {
+      "file": "test/regression.test.ts",
+      "test": "regression: dogfood platform files match what ships to users cursor: committed files are byte-identical to the templates",
+      "status": "passed"
+    },
+    {
+      "file": "test/regression.test.ts",
+      "test": "regression: dogfood platform files match what ships to users detects at least one dogfooded platform",
+      "status": "passed"
+    },
+    {
+      "file": "test/regression.test.ts",
+      "test": "regression: dogfood platform files match what ships to users every platform tree present on disk is tracked in the manifest",
+      "status": "passed"
+    },
+    {
+      "file": "test/regression.test.ts",
+      "test": "regression: dogfood platform files match what ships to users omp: committed files are byte-identical to the templates",
+      "status": "passed"
+    },
+    {
+      "file": "test/regression.test.ts",
+      "test": "regression: dogfood platform files match what ships to users opencode: committed files are byte-identical to the templates",
+      "status": "passed"
+    },
+    {
+      "file": "test/regression.test.ts",
+      "test": "regression: dogfood platform files match what ships to users pi: committed files are byte-identical to the templates",
+      "status": "passed"
+    },
+    {
+      "file": "test/scripts/planning-status.integration.test.ts",
+      "test": "OpenCode planning status hint T31/T33 displays canonical records through actual session context",
+      "status": "passed"
+    },
+    {
+      "file": "test/scripts/planning-status.integration.test.ts",
+      "test": "T31 consumer failure boundary codex/hooks/session-start.py refuses 'extra field' without inferring permission",
+      "status": "passed"
+    },
+    {
+      "file": "test/scripts/planning-status.integration.test.ts",
+      "test": "T31 consumer failure boundary codex/hooks/session-start.py refuses 'missing field' without inferring permission",
+      "status": "passed"
+    },
+    {
+      "file": "test/scripts/planning-status.integration.test.ts",
+      "test": "T31 consumer failure boundary codex/hooks/session-start.py refuses 'non-JSON' without inferring permission",
+      "status": "passed"
+    },
+    {
+      "file": "test/scripts/planning-status.integration.test.ts",
+      "test": "T31 consumer failure boundary codex/hooks/session-start.py refuses 'nonzero command' without inferring permission",
+      "status": "passed"
+    },
+    {
+      "file": "test/scripts/planning-status.integration.test.ts",
+      "test": "T31 consumer failure boundary codex/hooks/session-start.py refuses 'query timeout' without inferring permission",
+      "status": "passed"
+    },
+    {
+      "file": "test/scripts/planning-status.integration.test.ts",
+      "test": "T31 consumer failure boundary codex/hooks/session-start.py refuses 'wrong field type' without inferring permission",
+      "status": "passed"
+    },
+    {
+      "file": "test/scripts/planning-status.integration.test.ts",
+      "test": "T31 consumer failure boundary copilot/hooks/session-start.py refuses 'extra field' without inferring permission",
+      "status": "passed"
+    },
+    {
+      "file": "test/scripts/planning-status.integration.test.ts",
+      "test": "T31 consumer failure boundary copilot/hooks/session-start.py refuses 'missing field' without inferring permission",
+      "status": "passed"
+    },
+    {
+      "file": "test/scripts/planning-status.integration.test.ts",
+      "test": "T31 consumer failure boundary copilot/hooks/session-start.py refuses 'non-JSON' without inferring permission",
+      "status": "passed"
+    },
+    {
+      "file": "test/scripts/planning-status.integration.test.ts",
+      "test": "T31 consumer failure boundary copilot/hooks/session-start.py refuses 'nonzero command' without inferring permission",
+      "status": "passed"
+    },
+    {
+      "file": "test/scripts/planning-status.integration.test.ts",
+      "test": "T31 consumer failure boundary copilot/hooks/session-start.py refuses 'query timeout' without inferring permission",
+      "status": "passed"
+    },
+    {
+      "file": "test/scripts/planning-status.integration.test.ts",
+      "test": "T31 consumer failure boundary copilot/hooks/session-start.py refuses 'wrong field type' without inferring permission",
+      "status": "passed"
+    },
+    {
+      "file": "test/scripts/planning-status.integration.test.ts",
+      "test": "T31 consumer failure boundary opencode refuses 'extra field' without inferring permission",
+      "status": "passed"
+    },
+    {
+      "file": "test/scripts/planning-status.integration.test.ts",
+      "test": "T31 consumer failure boundary opencode refuses 'missing field' without inferring permission",
+      "status": "passed"
+    },
+    {
+      "file": "test/scripts/planning-status.integration.test.ts",
+      "test": "T31 consumer failure boundary opencode refuses 'non-JSON' without inferring permission",
+      "status": "passed"
+    },
+    {
+      "file": "test/scripts/planning-status.integration.test.ts",
+      "test": "T31 consumer failure boundary opencode refuses 'nonzero command' without inferring permission",
+      "status": "passed"
+    },
+    {
+      "file": "test/scripts/planning-status.integration.test.ts",
+      "test": "T31 consumer failure boundary opencode refuses 'query timeout' without inferring permission",
+      "status": "passed"
+    },
+    {
+      "file": "test/scripts/planning-status.integration.test.ts",
+      "test": "T31 consumer failure boundary opencode refuses 'wrong field type' without inferring permission",
+      "status": "passed"
+    },
+    {
+      "file": "test/scripts/planning-status.integration.test.ts",
+      "test": "T31 consumer failure boundary shared-hooks/session-start.py refuses 'extra field' without inferring permission",
+      "status": "passed"
+    },
+    {
+      "file": "test/scripts/planning-status.integration.test.ts",
+      "test": "T31 consumer failure boundary shared-hooks/session-start.py refuses 'missing field' without inferring permission",
+      "status": "passed"
+    },
+    {
+      "file": "test/scripts/planning-status.integration.test.ts",
+      "test": "T31 consumer failure boundary shared-hooks/session-start.py refuses 'non-JSON' without inferring permission",
+      "status": "passed"
+    },
+    {
+      "file": "test/scripts/planning-status.integration.test.ts",
+      "test": "T31 consumer failure boundary shared-hooks/session-start.py refuses 'nonzero command' without inferring permission",
+      "status": "passed"
+    },
+    {
+      "file": "test/scripts/planning-status.integration.test.ts",
+      "test": "T31 consumer failure boundary shared-hooks/session-start.py refuses 'query timeout' without inferring permission",
+      "status": "passed"
+    },
+    {
+      "file": "test/scripts/planning-status.integration.test.ts",
+      "test": "T31 consumer failure boundary shared-hooks/session-start.py refuses 'wrong field type' without inferring permission",
+      "status": "passed"
+    },
+    {
+      "file": "test/scripts/planning-status.integration.test.ts",
+      "test": "planning status and existing lifecycle integration T23/T29 review regression: null replan beside valid approval is invalid, not a resume",
+      "status": "passed"
+    },
+    {
+      "file": "test/scripts/planning-status.integration.test.ts",
+      "test": "planning status and existing lifecycle integration T28 archives a legacy task, preserving metadata and warning for every missing artifact",
+      "status": "passed"
+    },
+    {
+      "file": "test/scripts/planning-status.integration.test.ts",
+      "test": "planning status and existing lifecycle integration T28 completed validation warns about missing artifacts without adding a failure",
+      "status": "passed"
+    },
+    {
+      "file": "test/scripts/planning-status.integration.test.ts",
+      "test": "planning status and existing lifecycle integration T28/T29 review regression: completed replan residue null is reported as a warning",
+      "status": "passed"
+    },
+    {
+      "file": "test/scripts/planning-status.integration.test.ts",
+      "test": "planning status and existing lifecycle integration T28/T29 review regression: completed replan residue {\"requestedAt\":\"2026-11-12T10:00:00+08:00\",\"reason\":\"changed\",\"affectedWork\":\"all\",\"independentWork\":\"none\"} is reported as a warning",
+      "status": "passed"
+    },
+    {
+      "file": "test/scripts/planning-status.integration.test.ts",
+      "test": "planning status and existing lifecycle integration T29 diagnoses partial records as invalid instead of legacy",
+      "status": "passed"
+    },
+    {
+      "file": "test/scripts/planning-status.integration.test.ts",
+      "test": "planning status and existing lifecycle integration T29 exposes exactly eight readonly fields and diagnostics without granting approval",
+      "status": "passed"
+    },
+    {
+      "file": "test/scripts/planning-status.integration.test.ts",
+      "test": "planning status and existing lifecycle integration T29 rejects invalid base task null",
+      "status": "passed"
+    },
+    {
+      "file": "test/scripts/planning-status.integration.test.ts",
+      "test": "planning status and existing lifecycle integration T29 rejects invalid base task undefined",
+      "status": "passed"
+    },
+    {
+      "file": "test/scripts/planning-status.integration.test.ts",
+      "test": "planning status and existing lifecycle integration T29 rejects invalid base task {\"status\":\"planning\",\"meta\":[]}",
+      "status": "passed"
+    },
+    {
+      "file": "test/scripts/planning-status.integration.test.ts",
+      "test": "planning status and existing lifecycle integration T29 rejects invalid base task {\"status\":\"planning\",\"meta\":null}",
+      "status": "passed"
+    },
+    {
+      "file": "test/scripts/planning-status.integration.test.ts",
+      "test": "planning status and existing lifecycle integration T29 rejects invalid base task {\"status\":\"unknown\"}",
+      "status": "passed"
+    },
+    {
+      "file": "test/scripts/planning-status.integration.test.ts",
+      "test": "planning status and existing lifecycle integration T29 rejects invalid base task {}",
+      "status": "passed"
+    },
+    {
+      "file": "test/scripts/planning-status.integration.test.ts",
+      "test": "planning status and existing lifecycle integration T29 rejects malformed and absent task records",
+      "status": "passed"
+    },
+    {
+      "file": "test/scripts/planning-status.integration.test.ts",
+      "test": "planning status and existing lifecycle integration T29 review regression: planning with an existing approval fails validation even when mode is ready",
+      "status": "passed"
+    },
+    {
+      "file": "test/scripts/planning-status.integration.test.ts",
+      "test": "planning status and existing lifecycle integration T30 follows waiting, ready and drift using the real command",
+      "status": "passed"
+    },
+    {
+      "file": "test/scripts/planning-status.integration.test.ts",
+      "test": "planning status and existing lifecycle integration T34 create keeps planning and only creates the requirements draft",
+      "status": "passed"
+    },
+    {
+      "file": "test/scripts/planning-status.integration.test.ts",
+      "test": "planning status and existing lifecycle integration validate accepts a selfconsistent waiting version but explicitly says approval is still needed",
+      "status": "passed"
+    },
+    {
+      "file": "test/scripts/planning-status.integration.test.ts",
+      "test": "planning status and existing lifecycle integration validate rejects missing planning files and remains readonly",
+      "status": "passed"
+    },
+    {
+      "file": "test/scripts/planning-status.integration.test.ts",
+      "test": "planning status and existing lifecycle integration validate retains context errors even after a valid attest",
+      "status": "passed"
+    },
+    {
+      "file": "test/scripts/planning-status.integration.test.ts",
+      "test": "planning status in platform startup hints T31/T33 codex/hooks/session-start.py displays real escaped records",
+      "status": "passed"
+    },
+    {
+      "file": "test/scripts/planning-status.integration.test.ts",
+      "test": "planning status in platform startup hints T31/T33 copilot/hooks/session-start.py displays real escaped records",
+      "status": "passed"
+    },
+    {
+      "file": "test/scripts/planning-status.integration.test.ts",
+      "test": "planning status in platform startup hints T31/T33 shared-hooks/session-start.py displays real escaped records",
+      "status": "passed"
+    },
+    {
+      "file": "test/scripts/planning-status.integration.test.ts",
+      "test": "planning status in platform startup hints T32 codex/hooks/session-start.py reports unavailable query without file-only approval",
+      "status": "passed"
+    },
+    {
+      "file": "test/scripts/planning-status.integration.test.ts",
+      "test": "planning status in platform startup hints T32 copilot/hooks/session-start.py reports unavailable query without file-only approval",
+      "status": "passed"
+    },
+    {
+      "file": "test/scripts/planning-status.integration.test.ts",
+      "test": "planning status in platform startup hints T32 shared-hooks/session-start.py reports unavailable query without file-only approval",
+      "status": "passed"
+    },
+    {
+      "file": "test/scripts/task-planning.integration.test.ts",
+      "test": "task.py planning artifact gate T01-T28/T38 T01 missing any artifact: attest/start reject, name the file, no side effects",
+      "status": "passed"
+    },
+    {
+      "file": "test/scripts/task-planning.integration.test.ts",
+      "test": "task.py planning artifact gate T01-T28/T38 T02 empty, whitespace-only and directory artifacts are rejected",
+      "status": "passed"
+    },
+    {
+      "file": "test/scripts/task-planning.integration.test.ts",
+      "test": "task.py planning artifact gate T01-T28/T38 T03 unreadable artifact gives a diagnosis without traceback",
+      "status": "passed"
+    },
+    {
+      "file": "test/scripts/task-planning.integration.test.ts",
+      "test": "task.py planning artifact gate T01-T28/T38 T04 a small three-file chain works end-to-end",
+      "status": "passed"
+    },
+    {
+      "file": "test/scripts/task-planning.integration.test.ts",
+      "test": "task.py planning artifact gate T01-T28/T38 T05 blank --note is a business error; missing --note is argparse usage",
+      "status": "passed"
+    },
+    {
+      "file": "test/scripts/task-planning.integration.test.ts",
+      "test": "task.py planning artifact gate T01-T28/T38 T06 no attestation: start rejects even with --allow-empty-context",
+      "status": "passed"
+    },
+    {
+      "file": "test/scripts/task-planning.integration.test.ts",
+      "test": "task.py planning artifact gate T01-T28/T38 T07 per-file edits drift and a fresh attest gets a new id",
+      "status": "passed"
+    },
+    {
+      "file": "test/scripts/task-planning.integration.test.ts",
+      "test": "task.py planning artifact gate T01-T28/T38 T08 normalizes only CRLF to LF",
+      "status": "passed"
+    },
+    {
+      "file": "test/scripts/task-planning.integration.test.ts",
+      "test": "task.py planning artifact gate T01-T28/T38 T09 malformed/unknown attestation records are rejected, never overwritten",
+      "status": "passed"
+    },
+    {
+      "file": "test/scripts/task-planning.integration.test.ts",
+      "test": "task.py planning artifact gate T01-T28/T38 T09 review regression: genuine JSON floating schemaVersion in planningApproval is rejected",
+      "status": "passed"
+    },
+    {
+      "file": "test/scripts/task-planning.integration.test.ts",
+      "test": "task.py planning artifact gate T01-T28/T38 T09 review regression: genuine JSON floating schemaVersion in planningAttest is rejected",
+      "status": "passed"
+    },
+    {
+      "file": "test/scripts/task-planning.integration.test.ts",
+      "test": "task.py planning artifact gate T01-T28/T38 T09 review regression: ordinary attest preserves invalid planningApproval=null",
+      "status": "passed"
+    },
+    {
+      "file": "test/scripts/task-planning.integration.test.ts",
+      "test": "task.py planning artifact gate T01-T28/T38 T09 review regression: ordinary attest preserves invalid planningApproval={\"schemaVersion\":2}",
+      "status": "passed"
+    },
+    {
+      "file": "test/scripts/task-planning.integration.test.ts",
+      "test": "task.py planning artifact gate T01-T28/T38 T09 review regression: ordinary attest preserves invalid planningAttest=\"broken\"",
+      "status": "passed"
+    },
+    {
+      "file": "test/scripts/task-planning.integration.test.ts",
+      "test": "task.py planning artifact gate T01-T28/T38 T09 review regression: ordinary attest preserves invalid planningAttest=null",
+      "status": "passed"
+    },
+    {
+      "file": "test/scripts/task-planning.integration.test.ts",
+      "test": "task.py planning artifact gate T01-T28/T38 T09 review regression: ordinary attest preserves invalid planningAttest={\"schemaVersion\":2}",
+      "status": "passed"
+    },
+    {
+      "file": "test/scripts/task-planning.integration.test.ts",
+      "test": "task.py planning artifact gate T01-T28/T38 T09 review regression: ordinary attest preserves invalid planningReplan=\"broken\"",
+      "status": "passed"
+    },
+    {
+      "file": "test/scripts/task-planning.integration.test.ts",
+      "test": "task.py planning artifact gate T01-T28/T38 T09 review regression: ordinary attest preserves invalid planningReplan=null",
+      "status": "passed"
+    },
+    {
+      "file": "test/scripts/task-planning.integration.test.ts",
+      "test": "task.py planning artifact gate T01-T28/T38 T10 valid unattested-approval planning state is waiting_confirmation",
+      "status": "passed"
+    },
+    {
+      "file": "test/scripts/task-planning.integration.test.ts",
+      "test": "task.py planning artifact gate T01-T28/T38 T11 start confirmation arguments are all required and non-blank",
+      "status": "passed"
+    },
+    {
+      "file": "test/scripts/task-planning.integration.test.ts",
+      "test": "task.py planning artifact gate T01-T28/T38 T12 old approved version cannot authorize a newly attested version",
+      "status": "passed"
+    },
+    {
+      "file": "test/scripts/task-planning.integration.test.ts",
+      "test": "task.py planning artifact gate T01-T28/T38 T13 successful start performs one task.json replace with approval+status",
+      "status": "passed"
+    },
+    {
+      "file": "test/scripts/task-planning.integration.test.ts",
+      "test": "task.py planning artifact gate T01-T28/T38 T14 two attests on identical files still make distinct ids and clear approval",
+      "status": "passed"
+    },
+    {
+      "file": "test/scripts/task-planning.integration.test.ts",
+      "test": "task.py planning artifact gate T01-T28/T38 T15 both editorial paths preserve review identity and append the chain",
+      "status": "passed"
+    },
+    {
+      "file": "test/scripts/task-planning.integration.test.ts",
+      "test": "task.py planning artifact gate T01-T28/T38 T16 no-op editorial does not write; extra editorial arg on no-diff start fails",
+      "status": "passed"
+    },
+    {
+      "file": "test/scripts/task-planning.integration.test.ts",
+      "test": "task.py planning artifact gate T01-T28/T38 T17 editorial cannot manufacture approval or ignore a pending replan",
+      "status": "passed"
+    },
+    {
+      "file": "test/scripts/task-planning.integration.test.ts",
+      "test": "task.py planning artifact gate T01-T28/T38 T18 tampered chain/approval is rejected by validate and start",
+      "status": "passed"
+    },
+    {
+      "file": "test/scripts/task-planning.integration.test.ts",
+      "test": "task.py planning artifact gate T01-T28/T38 T19 normal attest on an implemented task is refused with replan guidance",
+      "status": "passed"
+    },
+    {
+      "file": "test/scripts/task-planning.integration.test.ts",
+      "test": "task.py planning artifact gate T01-T28/T38 T20 replan returns to planning, clears statements, preserves branch/code",
+      "status": "passed"
+    },
+    {
+      "file": "test/scripts/task-planning.integration.test.ts",
+      "test": "task.py planning artifact gate T01-T28/T38 T20 review regression: omitted independent defaults to none for legacy replan",
+      "status": "passed"
+    },
+    {
+      "file": "test/scripts/task-planning.integration.test.ts",
+      "test": "task.py planning artifact gate T01-T28/T38 T20 review regression: replan cannot erase invalid planningApproval=null",
+      "status": "passed"
+    },
+    {
+      "file": "test/scripts/task-planning.integration.test.ts",
+      "test": "task.py planning artifact gate T01-T28/T38 T20 review regression: replan cannot erase invalid planningApproval={\"schemaVersion\":2}",
+      "status": "passed"
+    },
+    {
+      "file": "test/scripts/task-planning.integration.test.ts",
+      "test": "task.py planning artifact gate T01-T28/T38 T20 review regression: replan cannot erase invalid planningAttest=\"broken\"",
+      "status": "passed"
+    },
+    {
+      "file": "test/scripts/task-planning.integration.test.ts",
+      "test": "task.py planning artifact gate T01-T28/T38 T20 review regression: replan cannot erase invalid planningAttest=null",
+      "status": "passed"
+    },
+    {
+      "file": "test/scripts/task-planning.integration.test.ts",
+      "test": "task.py planning artifact gate T01-T28/T38 T20 review regression: replan cannot erase invalid planningAttest={\"schemaVersion\":2}",
+      "status": "passed"
+    },
+    {
+      "file": "test/scripts/task-planning.integration.test.ts",
+      "test": "task.py planning artifact gate T01-T28/T38 T20 review regression: replan cannot erase invalid planningReplan=null",
+      "status": "passed"
+    },
+    {
+      "file": "test/scripts/task-planning.integration.test.ts",
+      "test": "task.py planning artifact gate T01-T28/T38 T20 review regression: replan cannot erase invalid planningReplan={\"requestedAt\":\"2026-11-12T10:00:00+08:00\",\"reason\":\"changed\",\"affectedWork\":\"all\",\"independentWork\":\"none\"}",
+      "status": "passed"
+    },
+    {
+      "file": "test/scripts/task-planning.integration.test.ts",
+      "test": "task.py planning artifact gate T01-T28/T38 T21 repeated replan/blank args/completed start attest replan are refused",
+      "status": "passed"
+    },
+    {
+      "file": "test/scripts/task-planning.integration.test.ts",
+      "test": "task.py planning artifact gate T01-T28/T38 T22 replan -> edit -> attest -> validate -> approve -> start recovers",
+      "status": "passed"
+    },
+    {
+      "file": "test/scripts/task-planning.integration.test.ts",
+      "test": "task.py planning artifact gate T01-T28/T38 T23 legacy in_progress resumes only when all three keys are absent",
+      "status": "passed"
+    },
+    {
+      "file": "test/scripts/task-planning.integration.test.ts",
+      "test": "task.py planning artifact gate T01-T28/T38 T24 invalid task shapes fail clearly without creating a task",
+      "status": "passed"
+    },
+    {
+      "file": "test/scripts/task-planning.integration.test.ts",
+      "test": "task.py planning artifact gate T01-T28/T38 T25 missing identity keeps the same gate, then saves state without a pointer",
+      "status": "passed"
+    },
+    {
+      "file": "test/scripts/task-planning.integration.test.ts",
+      "test": "task.py planning artifact gate T01-T28/T38 T26 normal progress leaves reviewed artifacts unchanged; substantive changes require replan and fresh approval",
+      "status": "passed"
+    },
+    {
+      "file": "test/scripts/task-planning.integration.test.ts",
+      "test": "task.py planning artifact gate T01-T28/T38 T27 task.json save failure leaves no pointer/hook; pointer failure reports started-but-not-located",
+      "status": "passed"
+    },
+    {
+      "file": "test/scripts/task-planning.integration.test.ts",
+      "test": "task.py planning artifact gate T01-T28/T38 T38 concurrent starts are observed and reported as unsupported",
+      "status": "passed"
+    },
+    {
+      "file": "test/templates/planning-contract.test.ts",
+      "test": "planning contract distribution T34 ships the shared implementation through the script map",
+      "status": "passed"
+    },
+    {
+      "file": "test/templates/planning-contract.test.ts",
+      "test": "planning contract distribution T35 generated implement/check agents require all three new-task artifacts",
+      "status": "passed"
+    },
+    {
+      "file": "test/templates/planning-contract.test.ts",
+      "test": "planning contract distribution T35 runtime OpenCode prompts preserve the same planning boundary",
+      "status": "passed"
+    },
+    {
+      "file": "test/templates/planning-contract.test.ts",
+      "test": "planning contract distribution T35/T37 applies the workflow contract in actual platform template generation",
+      "status": "passed"
+    },
+    {
+      "file": "test/templates/planning-contract.test.ts",
+      "test": "planning contract distribution T36 common/bundled-skills/trellis-meta/references/customize-local/change-context-loading.md requires three artifacts for new tasks without a lightweight exemption",
+      "status": "passed"
+    },
+    {
+      "file": "test/templates/planning-contract.test.ts",
+      "test": "planning contract distribution T36 common/bundled-skills/trellis-meta/references/customize-local/change-workflow.md requires three artifacts for new tasks without a lightweight exemption",
+      "status": "passed"
+    },
+    {
+      "file": "test/templates/planning-contract.test.ts",
+      "test": "planning contract distribution T36 common/bundled-skills/trellis-meta/references/local-architecture/task-system.md requires three artifacts for new tasks without a lightweight exemption",
+      "status": "passed"
+    },
+    {
+      "file": "test/templates/planning-contract.test.ts",
+      "test": "planning contract distribution T36 common/bundled-skills/trellis-meta/references/platform-files/agents.md requires three artifacts for new tasks without a lightweight exemption",
+      "status": "passed"
+    },
+    {
+      "file": "test/templates/planning-contract.test.ts",
+      "test": "planning contract distribution T36 common/commands/continue.md requires three artifacts for new tasks without a lightweight exemption",
+      "status": "passed"
+    },
+    {
+      "file": "test/templates/planning-contract.test.ts",
+      "test": "planning contract distribution T36 common/commands/start.md requires three artifacts for new tasks without a lightweight exemption",
+      "status": "passed"
+    },
+    {
+      "file": "test/templates/planning-contract.test.ts",
+      "test": "planning contract distribution T36 common/skills/before-dev.md requires three artifacts for new tasks without a lightweight exemption",
+      "status": "passed"
+    },
+    {
+      "file": "test/templates/planning-contract.test.ts",
+      "test": "planning contract distribution T36 common/skills/brainstorm.md requires three artifacts for new tasks without a lightweight exemption",
+      "status": "passed"
+    },
+    {
+      "file": "test/templates/planning-contract.test.ts",
+      "test": "planning contract distribution T36 common/skills/check.md requires three artifacts for new tasks without a lightweight exemption",
+      "status": "passed"
+    },
+    {
+      "file": "test/templates/planning-contract.test.ts",
+      "test": "planning contract distribution T36 copilot/prompts/before-dev.prompt.md requires three artifacts for new tasks without a lightweight exemption",
+      "status": "passed"
+    },
+    {
+      "file": "test/templates/planning-contract.test.ts",
+      "test": "planning contract distribution T36 copilot/prompts/brainstorm.prompt.md requires three artifacts for new tasks without a lightweight exemption",
+      "status": "passed"
+    },
+    {
+      "file": "test/templates/planning-contract.test.ts",
+      "test": "planning contract distribution T36 copilot/prompts/check.prompt.md requires three artifacts for new tasks without a lightweight exemption",
+      "status": "passed"
+    },
+    {
+      "file": "test/templates/planning-contract.test.ts",
+      "test": "planning contract distribution T36 copilot/prompts/start.prompt.md requires three artifacts for new tasks without a lightweight exemption",
+      "status": "passed"
+    },
+    {
+      "file": "test/templates/planning-contract.test.ts",
+      "test": "planning contract distribution T36 independent marketplace workflows preserve their own style while applying the gate",
+      "status": "passed"
+    },
+    {
+      "file": "test/templates/planning-contract.test.ts",
+      "test": "planning contract distribution T36 trellis/workflow.md requires three artifacts for new tasks without a lightweight exemption",
+      "status": "passed"
+    },
+    {
+      "file": "test/templates/research-evidence-contract.test.ts",
+      "test": "existing workflow-state hook output emits real planning and in_progress blocks from the Python hook",
+      "status": "passed"
+    },
+    {
+      "file": "test/templates/research-evidence-contract.test.ts",
+      "test": "existing workflow-state hook output selects inline blocks through Codex dispatch_mode without fake task statuses",
+      "status": "passed"
+    },
+    {
+      "file": "test/templates/research-evidence-contract.test.ts",
+      "test": "research evidence workflow contract discovers planning, recovery, before-dev, and check entries from every real platform collector",
+      "status": "passed"
+    },
+    {
+      "file": "test/templates/research-evidence-contract.test.ts",
+      "test": "research evidence workflow contract keeps before-dev and check on actual reads, stale-premise return, and bounded Decision Evidence",
+      "status": "passed"
+    },
+    {
+      "file": "test/templates/research-evidence-contract.test.ts",
+      "test": "research evidence workflow contract keeps both source recovery entries on the research recheck path",
+      "status": "passed"
+    },
+    {
+      "file": "test/templates/research-evidence-contract.test.ts",
+      "test": "research evidence workflow contract keeps evidence retention limited in brainstorming and every workflow",
+      "status": "passed"
+    },
+    {
+      "file": "test/templates/research-evidence-contract.test.ts",
+      "test": "research evidence workflow contract keeps shared .agents/skills content identical across platforms",
+      "status": "passed"
+    },
+    {
+      "file": "test/templates/research-evidence-contract.test.ts",
+      "test": "research evidence workflow contract keeps the four planning/execution state blocks with research semantics",
+      "status": "passed"
+    },
+    {
+      "file": "test/templates/research-evidence-contract.test.ts",
+      "test": "research evidence workflow contract keeps the native marketplace mirror byte-identical",
+      "status": "passed"
+    },
+    {
+      "file": "test/templates/research-evidence-contract.test.ts",
+      "test": "research evidence workflow contract keeps the planning skill's B1-B7 semantic groups, not just its heading",
+      "status": "passed"
+    },
+    {
+      "file": "test/templates/research-evidence-contract.test.ts",
+      "test": "research evidence workflow contract keeps the research dispatch task path, target file, minimum content, and main-session read acceptance",
+      "status": "passed"
+    }
+  ],
+  "skippedIdentical": true,
+  "failures": [
+    {
+      "file": "test/commands/upgrade.test.ts",
+      "test": "upgrade command executes npm install for real upgrades",
+      "baselineMessages": [
+        "AssertionError: expected \"vi.fn()\" to be called with arguments: [ 'npm', …(2) ]\n\nReceived: \n\n  1st vi.fn() call:\n\n@@ -1,11 +1,12 @@\n  [\n-   \"npm\",\n+   \"cmd.exe\",\n    [\n-     \"install\",\n-     \"-g\",\n-     \"@mindfoldhq/trellis@latest\",\n+     \"/d\",\n+     \"/s\",\n+     \"/c\",\n+     \"npm install -g @mindfoldhq/trellis@latest\",\n    ],\n    {\n      \"shell\": false,\n      \"stdio\": \"inherit\",\n    },\n\n\nNumber of calls: 1\n\n    at Proxy.<anonymous> (file:///C:/Users/PXWD/.codex/worktrees/planning-artifact-gate/Trellis/node_modules/.pnpm/@vitest+expect@4.0.18/node_modules/@vitest/expect/dist/index.js:1420:10)\n    at Proxy.<anonymous> (file:///C:/Users/PXWD/.codex/worktrees/planning-artifact-gate/Trellis/node_modules/.pnpm/@vitest+expect@4.0.18/node_modules/@vitest/expect/dist/index.js:1090:14)\n    at Proxy.methodWrapper (file:///C:/Users/PXWD/.codex/worktrees/planning-artifact-gate/Trellis/node_modules/.pnpm/chai@6.2.2/node_modules/chai/index.js:1700:25)\n    at C:/Users/PXWD/AppData/Local/Temp/trellis-merge-review-fmm2blpb/baseline/packages/cli/test/commands/upgrade.test.ts:82:20\n    at processTicksAndRejections (node:internal/process/task_queues:103:5)\n    at file:///C:/Users/PXWD/.codex/worktrees/planning-artifact-gate/Trellis/node_modules/.pnpm/@vitest+runner@4.0.18/node_modules/@vitest/runner/dist/index.js:915:20"
+      ],
+      "candidateMessages": [
+        "AssertionError: expected \"vi.fn()\" to be called with arguments: [ 'npm', …(2) ]\n\nReceived: \n\n  1st vi.fn() call:\n\n@@ -1,11 +1,12 @@\n  [\n-   \"npm\",\n+   \"cmd.exe\",\n    [\n-     \"install\",\n-     \"-g\",\n-     \"@mindfoldhq/trellis@latest\",\n+     \"/d\",\n+     \"/s\",\n+     \"/c\",\n+     \"npm install -g @mindfoldhq/trellis@latest\",\n    ],\n    {\n      \"shell\": false,\n      \"stdio\": \"inherit\",\n    },\n\n\nNumber of calls: 1\n\n    at Proxy.<anonymous> (file:///C:/Users/PXWD/.codex/worktrees/planning-artifact-gate/Trellis/node_modules/.pnpm/@vitest+expect@4.0.18/node_modules/@vitest/expect/dist/index.js:1420:10)\n    at Proxy.<anonymous> (file:///C:/Users/PXWD/.codex/worktrees/planning-artifact-gate/Trellis/node_modules/.pnpm/@vitest+expect@4.0.18/node_modules/@vitest/expect/dist/index.js:1090:14)\n    at Proxy.methodWrapper (file:///C:/Users/PXWD/.codex/worktrees/planning-artifact-gate/Trellis/node_modules/.pnpm/chai@6.2.2/node_modules/chai/index.js:1700:25)\n    at C:/Users/PXWD/.codex/worktrees/planning-artifact-gate/Trellis/packages/cli/test/commands/upgrade.test.ts:82:20\n    at processTicksAndRejections (node:internal/process/task_queues:103:5)\n    at file:///C:/Users/PXWD/.codex/worktrees/planning-artifact-gate/Trellis/node_modules/.pnpm/@vitest+runner@4.0.18/node_modules/@vitest/runner/dist/index.js:915:20"
+      ]
+    },
+    {
+      "file": "test/commands/upgrade.test.ts",
+      "test": "upgrade command fails when npm exits non-zero",
+      "baselineMessages": [
+        "AssertionError: expected [Function] to throw error matching /…/trellis@latest[\\s\\S]*npm config get prefix[\\s\\S]*which trellis but got 'npm install failed with exit code 1.\\…'\n    at _Assertion.<anonymous> (file:///C:/Users/PXWD/.codex/worktrees/planning-artifact-gate/Trellis/node_modules/.pnpm/@vitest+expect@4.0.18/node_modules/@vitest/expect/dist/index.js:1485:16)\n    at _Assertion.<anonymous> (file:///C:/Users/PXWD/.codex/worktrees/planning-artifact-gate/Trellis/node_modules/.pnpm/@vitest+expect@4.0.18/node_modules/@vitest/expect/dist/index.js:1090:14)\n    at _Assertion.methodWrapper (file:///C:/Users/PXWD/.codex/worktrees/planning-artifact-gate/Trellis/node_modules/.pnpm/chai@6.2.2/node_modules/chai/index.js:1700:25)\n    at file:///C:/Users/PXWD/.codex/worktrees/planning-artifact-gate/Trellis/node_modules/.pnpm/@vitest+expect@4.0.18/node_modules/@vitest/expect/dist/index.js:1704:20\n    at processTicksAndRejections (node:internal/process/task_queues:103:5)"
+      ],
+      "candidateMessages": [
+        "AssertionError: expected [Function] to throw error matching /…/trellis@latest[\\s\\S]*npm config get prefix[\\s\\S]*which trellis but got 'npm install failed with exit code 1.\\…'\n    at _Assertion.<anonymous> (file:///C:/Users/PXWD/.codex/worktrees/planning-artifact-gate/Trellis/node_modules/.pnpm/@vitest+expect@4.0.18/node_modules/@vitest/expect/dist/index.js:1485:16)\n    at _Assertion.<anonymous> (file:///C:/Users/PXWD/.codex/worktrees/planning-artifact-gate/Trellis/node_modules/.pnpm/@vitest+expect@4.0.18/node_modules/@vitest/expect/dist/index.js:1090:14)\n    at _Assertion.methodWrapper (file:///C:/Users/PXWD/.codex/worktrees/planning-artifact-gate/Trellis/node_modules/.pnpm/chai@6.2.2/node_modules/chai/index.js:1700:25)\n    at file:///C:/Users/PXWD/.codex/worktrees/planning-artifact-gate/Trellis/node_modules/.pnpm/@vitest+expect@4.0.18/node_modules/@vitest/expect/dist/index.js:1704:20\n    at processTicksAndRejections (node:internal/process/task_queues:103:5)"
+      ]
+    },
+    {
+      "file": "test/configurators/python-rewrite-parity.test.ts",
+      "test": "python3 rewrite reaches the previously-raw write sites leaves the literal alone under the default (POSIX) rendering",
+      "baselineMessages": [
+        "AssertionError: snow: .snow/SNOW.md: expected '# Trellis on Snow CLI\\n\\nSnow is a **…' to contain 'python3 ./.trellis/scripts/task.py'\n    at C:/Users/PXWD/AppData/Local/Temp/trellis-merge-review-fmm2blpb/baseline/packages/cli/test/configurators/python-rewrite-parity.test.ts:103:44\n    at processTicksAndRejections (node:internal/process/task_queues:103:5)\n    at file:///C:/Users/PXWD/.codex/worktrees/planning-artifact-gate/Trellis/node_modules/.pnpm/@vitest+runner@4.0.18/node_modules/@vitest/runner/dist/index.js:915:20"
+      ],
+      "candidateMessages": [
+        "AssertionError: snow: .snow/SNOW.md: expected '# Trellis on Snow CLI\\n\\nSnow is a **…' to contain 'python3 ./.trellis/scripts/task.py'\n    at C:/Users/PXWD/.codex/worktrees/planning-artifact-gate/Trellis/packages/cli/test/configurators/python-rewrite-parity.test.ts:103:44\n    at processTicksAndRejections (node:internal/process/task_queues:103:5)\n    at file:///C:/Users/PXWD/.codex/worktrees/planning-artifact-gate/Trellis/node_modules/.pnpm/@vitest+runner@4.0.18/node_modules/@vitest/runner/dist/index.js:915:20"
+      ]
+    },
+    {
+      "file": "test/regression.test.ts",
+      "test": "regression: current-task path normalization [env-file-dedup] a changed key appends again",
+      "baselineMessages": [
+        "AssertionError: expected [ …(2) ] to deeply equal [ …(2) ]\n    at C:/Users/PXWD/AppData/Local/Temp/trellis-merge-review-fmm2blpb/baseline/packages/cli/test/regression.test.ts:4621:39\n    at file:///C:/Users/PXWD/.codex/worktrees/planning-artifact-gate/Trellis/node_modules/.pnpm/@vitest+runner@4.0.18/node_modules/@vitest/runner/dist/index.js:145:11\n    at file:///C:/Users/PXWD/.codex/worktrees/planning-artifact-gate/Trellis/node_modules/.pnpm/@vitest+runner@4.0.18/node_modules/@vitest/runner/dist/index.js:915:26\n    at file:///C:/Users/PXWD/.codex/worktrees/planning-artifact-gate/Trellis/node_modules/.pnpm/@vitest+runner@4.0.18/node_modules/@vitest/runner/dist/index.js:1243:20\n    at new Promise (<anonymous>)\n    at runWithTimeout (file:///C:/Users/PXWD/.codex/worktrees/planning-artifact-gate/Trellis/node_modules/.pnpm/@vitest+runner@4.0.18/node_modules/@vitest/runner/dist/index.js:1209:10)\n    at file:///C:/Users/PXWD/.codex/worktrees/planning-artifact-gate/Trellis/node_modules/.pnpm/@vitest+runner@4.0.18/node_modules/@vitest/runner/dist/index.js:1653:37\n    at Traces.$ (file:///C:/Users/PXWD/.codex/worktrees/planning-artifact-gate/Trellis/node_modules/.pnpm/vitest@4.0.18_@types+node@20.19.28_yaml@2.8.2/node_modules/vitest/dist/chunks/traces.CCmnQaNT.js:142:27)\n    at trace (file:///C:/Users/PXWD/.codex/worktrees/planning-artifact-gate/Trellis/node_modules/.pnpm/vitest@4.0.18_@types+node@20.19.28_yaml@2.8.2/node_modules/vitest/dist/chunks/test.B8ej_ZHS.js:239:21)\n    at runTest (file:///C:/Users/PXWD/.codex/worktrees/planning-artifact-gate/Trellis/node_modules/.pnpm/@vitest+runner@4.0.18/node_modules/@vitest/runner/dist/index.js:1653:12)"
+      ],
+      "candidateMessages": [
+        "AssertionError: expected [ …(2) ] to deeply equal [ …(2) ]\n    at C:/Users/PXWD/.codex/worktrees/planning-artifact-gate/Trellis/packages/cli/test/regression.test.ts:4692:39\n    at file:///C:/Users/PXWD/.codex/worktrees/planning-artifact-gate/Trellis/node_modules/.pnpm/@vitest+runner@4.0.18/node_modules/@vitest/runner/dist/index.js:145:11\n    at file:///C:/Users/PXWD/.codex/worktrees/planning-artifact-gate/Trellis/node_modules/.pnpm/@vitest+runner@4.0.18/node_modules/@vitest/runner/dist/index.js:915:26\n    at file:///C:/Users/PXWD/.codex/worktrees/planning-artifact-gate/Trellis/node_modules/.pnpm/@vitest+runner@4.0.18/node_modules/@vitest/runner/dist/index.js:1243:20\n    at new Promise (<anonymous>)\n    at runWithTimeout (file:///C:/Users/PXWD/.codex/worktrees/planning-artifact-gate/Trellis/node_modules/.pnpm/@vitest+runner@4.0.18/node_modules/@vitest/runner/dist/index.js:1209:10)\n    at file:///C:/Users/PXWD/.codex/worktrees/planning-artifact-gate/Trellis/node_modules/.pnpm/@vitest+runner@4.0.18/node_modules/@vitest/runner/dist/index.js:1653:37\n    at Traces.$ (file:///C:/Users/PXWD/.codex/worktrees/planning-artifact-gate/Trellis/node_modules/.pnpm/vitest@4.0.18_@types+node@20.19.28_yaml@2.8.2/node_modules/vitest/dist/chunks/traces.CCmnQaNT.js:142:27)\n    at trace (file:///C:/Users/PXWD/.codex/worktrees/planning-artifact-gate/Trellis/node_modules/.pnpm/vitest@4.0.18_@types+node@20.19.28_yaml@2.8.2/node_modules/vitest/dist/chunks/test.B8ej_ZHS.js:239:21)\n    at runTest (file:///C:/Users/PXWD/.codex/worktrees/planning-artifact-gate/Trellis/node_modules/.pnpm/@vitest+runner@4.0.18/node_modules/@vitest/runner/dist/index.js:1653:12)"
+      ]
+    },
+    {
+      "file": "test/regression.test.ts",
+      "test": "regression: current-task path normalization [env-file-dedup] a non-UTF-8 user env file does not break SessionStart",
+      "baselineMessages": [
+        "AssertionError: expected [ Array(1) ] to deeply equal [ Array(1) ]\n    at C:/Users/PXWD/AppData/Local/Temp/trellis-merge-review-fmm2blpb/baseline/packages/cli/test/regression.test.ts:4674:39\n    at file:///C:/Users/PXWD/.codex/worktrees/planning-artifact-gate/Trellis/node_modules/.pnpm/@vitest+runner@4.0.18/node_modules/@vitest/runner/dist/index.js:145:11\n    at file:///C:/Users/PXWD/.codex/worktrees/planning-artifact-gate/Trellis/node_modules/.pnpm/@vitest+runner@4.0.18/node_modules/@vitest/runner/dist/index.js:915:26\n    at file:///C:/Users/PXWD/.codex/worktrees/planning-artifact-gate/Trellis/node_modules/.pnpm/@vitest+runner@4.0.18/node_modules/@vitest/runner/dist/index.js:1243:20\n    at new Promise (<anonymous>)\n    at runWithTimeout (file:///C:/Users/PXWD/.codex/worktrees/planning-artifact-gate/Trellis/node_modules/.pnpm/@vitest+runner@4.0.18/node_modules/@vitest/runner/dist/index.js:1209:10)\n    at file:///C:/Users/PXWD/.codex/worktrees/planning-artifact-gate/Trellis/node_modules/.pnpm/@vitest+runner@4.0.18/node_modules/@vitest/runner/dist/index.js:1653:37\n    at Traces.$ (file:///C:/Users/PXWD/.codex/worktrees/planning-artifact-gate/Trellis/node_modules/.pnpm/vitest@4.0.18_@types+node@20.19.28_yaml@2.8.2/node_modules/vitest/dist/chunks/traces.CCmnQaNT.js:142:27)\n    at trace (file:///C:/Users/PXWD/.codex/worktrees/planning-artifact-gate/Trellis/node_modules/.pnpm/vitest@4.0.18_@types+node@20.19.28_yaml@2.8.2/node_modules/vitest/dist/chunks/test.B8ej_ZHS.js:239:21)\n    at runTest (file:///C:/Users/PXWD/.codex/worktrees/planning-artifact-gate/Trellis/node_modules/.pnpm/@vitest+runner@4.0.18/node_modules/@vitest/runner/dist/index.js:1653:12)"
+      ],
+      "candidateMessages": [
+        "AssertionError: expected [ Array(1) ] to deeply equal [ Array(1) ]\n    at C:/Users/PXWD/.codex/worktrees/planning-artifact-gate/Trellis/packages/cli/test/regression.test.ts:4745:39\n    at file:///C:/Users/PXWD/.codex/worktrees/planning-artifact-gate/Trellis/node_modules/.pnpm/@vitest+runner@4.0.18/node_modules/@vitest/runner/dist/index.js:145:11\n    at file:///C:/Users/PXWD/.codex/worktrees/planning-artifact-gate/Trellis/node_modules/.pnpm/@vitest+runner@4.0.18/node_modules/@vitest/runner/dist/index.js:915:26\n    at file:///C:/Users/PXWD/.codex/worktrees/planning-artifact-gate/Trellis/node_modules/.pnpm/@vitest+runner@4.0.18/node_modules/@vitest/runner/dist/index.js:1243:20\n    at new Promise (<anonymous>)\n    at runWithTimeout (file:///C:/Users/PXWD/.codex/worktrees/planning-artifact-gate/Trellis/node_modules/.pnpm/@vitest+runner@4.0.18/node_modules/@vitest/runner/dist/index.js:1209:10)\n    at file:///C:/Users/PXWD/.codex/worktrees/planning-artifact-gate/Trellis/node_modules/.pnpm/@vitest+runner@4.0.18/node_modules/@vitest/runner/dist/index.js:1653:37\n    at Traces.$ (file:///C:/Users/PXWD/.codex/worktrees/planning-artifact-gate/Trellis/node_modules/.pnpm/vitest@4.0.18_@types+node@20.19.28_yaml@2.8.2/node_modules/vitest/dist/chunks/traces.CCmnQaNT.js:142:27)\n    at trace (file:///C:/Users/PXWD/.codex/worktrees/planning-artifact-gate/Trellis/node_modules/.pnpm/vitest@4.0.18_@types+node@20.19.28_yaml@2.8.2/node_modules/vitest/dist/chunks/test.B8ej_ZHS.js:239:21)\n    at runTest (file:///C:/Users/PXWD/.codex/worktrees/planning-artifact-gate/Trellis/node_modules/.pnpm/@vitest+runner@4.0.18/node_modules/@vitest/runner/dist/index.js:1653:12)"
+      ]
+    },
+    {
+      "file": "test/regression.test.ts",
+      "test": "regression: current-task path normalization [env-file-dedup] repeated SessionStarts with the same key append exactly once",
+      "baselineMessages": [
+        "AssertionError: expected [ Array(1) ] to deeply equal [ Array(1) ]\n    at C:/Users/PXWD/AppData/Local/Temp/trellis-merge-review-fmm2blpb/baseline/packages/cli/test/regression.test.ts:4603:39\n    at file:///C:/Users/PXWD/.codex/worktrees/planning-artifact-gate/Trellis/node_modules/.pnpm/@vitest+runner@4.0.18/node_modules/@vitest/runner/dist/index.js:145:11\n    at file:///C:/Users/PXWD/.codex/worktrees/planning-artifact-gate/Trellis/node_modules/.pnpm/@vitest+runner@4.0.18/node_modules/@vitest/runner/dist/index.js:915:26\n    at file:///C:/Users/PXWD/.codex/worktrees/planning-artifact-gate/Trellis/node_modules/.pnpm/@vitest+runner@4.0.18/node_modules/@vitest/runner/dist/index.js:1243:20\n    at new Promise (<anonymous>)\n    at runWithTimeout (file:///C:/Users/PXWD/.codex/worktrees/planning-artifact-gate/Trellis/node_modules/.pnpm/@vitest+runner@4.0.18/node_modules/@vitest/runner/dist/index.js:1209:10)\n    at file:///C:/Users/PXWD/.codex/worktrees/planning-artifact-gate/Trellis/node_modules/.pnpm/@vitest+runner@4.0.18/node_modules/@vitest/runner/dist/index.js:1653:37\n    at Traces.$ (file:///C:/Users/PXWD/.codex/worktrees/planning-artifact-gate/Trellis/node_modules/.pnpm/vitest@4.0.18_@types+node@20.19.28_yaml@2.8.2/node_modules/vitest/dist/chunks/traces.CCmnQaNT.js:142:27)\n    at trace (file:///C:/Users/PXWD/.codex/worktrees/planning-artifact-gate/Trellis/node_modules/.pnpm/vitest@4.0.18_@types+node@20.19.28_yaml@2.8.2/node_modules/vitest/dist/chunks/test.B8ej_ZHS.js:239:21)\n    at runTest (file:///C:/Users/PXWD/.codex/worktrees/planning-artifact-gate/Trellis/node_modules/.pnpm/@vitest+runner@4.0.18/node_modules/@vitest/runner/dist/index.js:1653:12)"
+      ],
+      "candidateMessages": [
+        "AssertionError: expected [ Array(1) ] to deeply equal [ Array(1) ]\n    at C:/Users/PXWD/.codex/worktrees/planning-artifact-gate/Trellis/packages/cli/test/regression.test.ts:4674:39\n    at file:///C:/Users/PXWD/.codex/worktrees/planning-artifact-gate/Trellis/node_modules/.pnpm/@vitest+runner@4.0.18/node_modules/@vitest/runner/dist/index.js:145:11\n    at file:///C:/Users/PXWD/.codex/worktrees/planning-artifact-gate/Trellis/node_modules/.pnpm/@vitest+runner@4.0.18/node_modules/@vitest/runner/dist/index.js:915:26\n    at file:///C:/Users/PXWD/.codex/worktrees/planning-artifact-gate/Trellis/node_modules/.pnpm/@vitest+runner@4.0.18/node_modules/@vitest/runner/dist/index.js:1243:20\n    at new Promise (<anonymous>)\n    at runWithTimeout (file:///C:/Users/PXWD/.codex/worktrees/planning-artifact-gate/Trellis/node_modules/.pnpm/@vitest+runner@4.0.18/node_modules/@vitest/runner/dist/index.js:1209:10)\n    at file:///C:/Users/PXWD/.codex/worktrees/planning-artifact-gate/Trellis/node_modules/.pnpm/@vitest+runner@4.0.18/node_modules/@vitest/runner/dist/index.js:1653:37\n    at Traces.$ (file:///C:/Users/PXWD/.codex/worktrees/planning-artifact-gate/Trellis/node_modules/.pnpm/vitest@4.0.18_@types+node@20.19.28_yaml@2.8.2/node_modules/vitest/dist/chunks/traces.CCmnQaNT.js:142:27)\n    at trace (file:///C:/Users/PXWD/.codex/worktrees/planning-artifact-gate/Trellis/node_modules/.pnpm/vitest@4.0.18_@types+node@20.19.28_yaml@2.8.2/node_modules/vitest/dist/chunks/test.B8ej_ZHS.js:239:21)\n    at runTest (file:///C:/Users/PXWD/.codex/worktrees/planning-artifact-gate/Trellis/node_modules/.pnpm/@vitest+runner@4.0.18/node_modules/@vitest/runner/dist/index.js:1653:12)"
+      ]
+    },
+    {
+      "file": "test/regression.test.ts",
+      "test": "regression: current-task path normalization [env-file-dedup] switching back to an earlier key re-appends (last line wins, not 'appears anywhere')",
+      "baselineMessages": [
+        "AssertionError: expected [ …(3) ] to deeply equal [ …(3) ]\n    at C:/Users/PXWD/AppData/Local/Temp/trellis-merge-review-fmm2blpb/baseline/packages/cli/test/regression.test.ts:4640:39\n    at file:///C:/Users/PXWD/.codex/worktrees/planning-artifact-gate/Trellis/node_modules/.pnpm/@vitest+runner@4.0.18/node_modules/@vitest/runner/dist/index.js:145:11\n    at file:///C:/Users/PXWD/.codex/worktrees/planning-artifact-gate/Trellis/node_modules/.pnpm/@vitest+runner@4.0.18/node_modules/@vitest/runner/dist/index.js:915:26\n    at file:///C:/Users/PXWD/.codex/worktrees/planning-artifact-gate/Trellis/node_modules/.pnpm/@vitest+runner@4.0.18/node_modules/@vitest/runner/dist/index.js:1243:20\n    at new Promise (<anonymous>)\n    at runWithTimeout (file:///C:/Users/PXWD/.codex/worktrees/planning-artifact-gate/Trellis/node_modules/.pnpm/@vitest+runner@4.0.18/node_modules/@vitest/runner/dist/index.js:1209:10)\n    at file:///C:/Users/PXWD/.codex/worktrees/planning-artifact-gate/Trellis/node_modules/.pnpm/@vitest+runner@4.0.18/node_modules/@vitest/runner/dist/index.js:1653:37\n    at Traces.$ (file:///C:/Users/PXWD/.codex/worktrees/planning-artifact-gate/Trellis/node_modules/.pnpm/vitest@4.0.18_@types+node@20.19.28_yaml@2.8.2/node_modules/vitest/dist/chunks/traces.CCmnQaNT.js:142:27)\n    at trace (file:///C:/Users/PXWD/.codex/worktrees/planning-artifact-gate/Trellis/node_modules/.pnpm/vitest@4.0.18_@types+node@20.19.28_yaml@2.8.2/node_modules/vitest/dist/chunks/test.B8ej_ZHS.js:239:21)\n    at runTest (file:///C:/Users/PXWD/.codex/worktrees/planning-artifact-gate/Trellis/node_modules/.pnpm/@vitest+runner@4.0.18/node_modules/@vitest/runner/dist/index.js:1653:12)"
+      ],
+      "candidateMessages": [
+        "AssertionError: expected [ …(3) ] to deeply equal [ …(3) ]\n    at C:/Users/PXWD/.codex/worktrees/planning-artifact-gate/Trellis/packages/cli/test/regression.test.ts:4711:39\n    at file:///C:/Users/PXWD/.codex/worktrees/planning-artifact-gate/Trellis/node_modules/.pnpm/@vitest+runner@4.0.18/node_modules/@vitest/runner/dist/index.js:145:11\n    at file:///C:/Users/PXWD/.codex/worktrees/planning-artifact-gate/Trellis/node_modules/.pnpm/@vitest+runner@4.0.18/node_modules/@vitest/runner/dist/index.js:915:26\n    at file:///C:/Users/PXWD/.codex/worktrees/planning-artifact-gate/Trellis/node_modules/.pnpm/@vitest+runner@4.0.18/node_modules/@vitest/runner/dist/index.js:1243:20\n    at new Promise (<anonymous>)\n    at runWithTimeout (file:///C:/Users/PXWD/.codex/worktrees/planning-artifact-gate/Trellis/node_modules/.pnpm/@vitest+runner@4.0.18/node_modules/@vitest/runner/dist/index.js:1209:10)\n    at file:///C:/Users/PXWD/.codex/worktrees/planning-artifact-gate/Trellis/node_modules/.pnpm/@vitest+runner@4.0.18/node_modules/@vitest/runner/dist/index.js:1653:37\n    at Traces.$ (file:///C:/Users/PXWD/.codex/worktrees/planning-artifact-gate/Trellis/node_modules/.pnpm/vitest@4.0.18_@types+node@20.19.28_yaml@2.8.2/node_modules/vitest/dist/chunks/traces.CCmnQaNT.js:142:27)\n    at trace (file:///C:/Users/PXWD/.codex/worktrees/planning-artifact-gate/Trellis/node_modules/.pnpm/vitest@4.0.18_@types+node@20.19.28_yaml@2.8.2/node_modules/vitest/dist/chunks/test.B8ej_ZHS.js:239:21)\n    at runTest (file:///C:/Users/PXWD/.codex/worktrees/planning-artifact-gate/Trellis/node_modules/.pnpm/@vitest+runner@4.0.18/node_modules/@vitest/runner/dist/index.js:1653:12)"
+      ]
+    },
+    {
+      "file": "test/regression.test.ts",
+      "test": "regression: current-task path normalization [strip-breadcrumb] _strip_breadcrumb_tag_blocks only strips matched STATUS pairs (backreference parity with parser)",
+      "baselineMessages": [
+        "AssertionError: expected '[workflow-state:planning]\\nbody\\n[/wo…' to be '' // Object.is equality\n    at C:/Users/PXWD/AppData/Local/Temp/trellis-merge-review-fmm2blpb/baseline/packages/cli/test/regression.test.ts:7643:22\n    at file:///C:/Users/PXWD/.codex/worktrees/planning-artifact-gate/Trellis/node_modules/.pnpm/@vitest+runner@4.0.18/node_modules/@vitest/runner/dist/index.js:145:11\n    at file:///C:/Users/PXWD/.codex/worktrees/planning-artifact-gate/Trellis/node_modules/.pnpm/@vitest+runner@4.0.18/node_modules/@vitest/runner/dist/index.js:915:26\n    at file:///C:/Users/PXWD/.codex/worktrees/planning-artifact-gate/Trellis/node_modules/.pnpm/@vitest+runner@4.0.18/node_modules/@vitest/runner/dist/index.js:1243:20\n    at new Promise (<anonymous>)\n    at runWithTimeout (file:///C:/Users/PXWD/.codex/worktrees/planning-artifact-gate/Trellis/node_modules/.pnpm/@vitest+runner@4.0.18/node_modules/@vitest/runner/dist/index.js:1209:10)\n    at file:///C:/Users/PXWD/.codex/worktrees/planning-artifact-gate/Trellis/node_modules/.pnpm/@vitest+runner@4.0.18/node_modules/@vitest/runner/dist/index.js:1653:37\n    at Traces.$ (file:///C:/Users/PXWD/.codex/worktrees/planning-artifact-gate/Trellis/node_modules/.pnpm/vitest@4.0.18_@types+node@20.19.28_yaml@2.8.2/node_modules/vitest/dist/chunks/traces.CCmnQaNT.js:142:27)\n    at trace (file:///C:/Users/PXWD/.codex/worktrees/planning-artifact-gate/Trellis/node_modules/.pnpm/vitest@4.0.18_@types+node@20.19.28_yaml@2.8.2/node_modules/vitest/dist/chunks/test.B8ej_ZHS.js:239:21)\n    at runTest (file:///C:/Users/PXWD/.codex/worktrees/planning-artifact-gate/Trellis/node_modules/.pnpm/@vitest+runner@4.0.18/node_modules/@vitest/runner/dist/index.js:1653:12)"
+      ],
+      "candidateMessages": [
+        "AssertionError: expected '[workflow-state:planning]\\nbody\\n[/wo…' to be '' // Object.is equality\n    at C:/Users/PXWD/.codex/worktrees/planning-artifact-gate/Trellis/packages/cli/test/regression.test.ts:7714:22\n    at file:///C:/Users/PXWD/.codex/worktrees/planning-artifact-gate/Trellis/node_modules/.pnpm/@vitest+runner@4.0.18/node_modules/@vitest/runner/dist/index.js:145:11\n    at file:///C:/Users/PXWD/.codex/worktrees/planning-artifact-gate/Trellis/node_modules/.pnpm/@vitest+runner@4.0.18/node_modules/@vitest/runner/dist/index.js:915:26\n    at file:///C:/Users/PXWD/.codex/worktrees/planning-artifact-gate/Trellis/node_modules/.pnpm/@vitest+runner@4.0.18/node_modules/@vitest/runner/dist/index.js:1243:20\n    at new Promise (<anonymous>)\n    at runWithTimeout (file:///C:/Users/PXWD/.codex/worktrees/planning-artifact-gate/Trellis/node_modules/.pnpm/@vitest+runner@4.0.18/node_modules/@vitest/runner/dist/index.js:1209:10)\n    at file:///C:/Users/PXWD/.codex/worktrees/planning-artifact-gate/Trellis/node_modules/.pnpm/@vitest+runner@4.0.18/node_modules/@vitest/runner/dist/index.js:1653:37\n    at Traces.$ (file:///C:/Users/PXWD/.codex/worktrees/planning-artifact-gate/Trellis/node_modules/.pnpm/vitest@4.0.18_@types+node@20.19.28_yaml@2.8.2/node_modules/vitest/dist/chunks/traces.CCmnQaNT.js:142:27)\n    at trace (file:///C:/Users/PXWD/.codex/worktrees/planning-artifact-gate/Trellis/node_modules/.pnpm/vitest@4.0.18_@types+node@20.19.28_yaml@2.8.2/node_modules/vitest/dist/chunks/test.B8ej_ZHS.js:239:21)\n    at runTest (file:///C:/Users/PXWD/.codex/worktrees/planning-artifact-gate/Trellis/node_modules/.pnpm/@vitest+runner@4.0.18/node_modules/@vitest/runner/dist/index.js:1653:12)"
+      ]
+    },
+    {
+      "file": "test/scripts/context-injection-limits.integration.test.ts",
+      "test": "context injection limits (issue #441) inject-subagent-context.py: jsonl file reference containment (#580) still reads a legitimate jsonl reference inside base_path (control)",
+      "baselineMessages": [
+        "AssertionError: expected '=== inside.md ===\\r\\nnot secret\\r\\n' to contain '=== inside.md ===\\nnot secret'\n    at C:/Users/PXWD/AppData/Local/Temp/trellis-merge-review-fmm2blpb/baseline/packages/cli/test/scripts/context-injection-limits.integration.test.ts:692:21\n    at file:///C:/Users/PXWD/.codex/worktrees/planning-artifact-gate/Trellis/node_modules/.pnpm/@vitest+runner@4.0.18/node_modules/@vitest/runner/dist/index.js:145:11\n    at file:///C:/Users/PXWD/.codex/worktrees/planning-artifact-gate/Trellis/node_modules/.pnpm/@vitest+runner@4.0.18/node_modules/@vitest/runner/dist/index.js:915:26\n    at file:///C:/Users/PXWD/.codex/worktrees/planning-artifact-gate/Trellis/node_modules/.pnpm/@vitest+runner@4.0.18/node_modules/@vitest/runner/dist/index.js:1243:20\n    at new Promise (<anonymous>)\n    at runWithTimeout (file:///C:/Users/PXWD/.codex/worktrees/planning-artifact-gate/Trellis/node_modules/.pnpm/@vitest+runner@4.0.18/node_modules/@vitest/runner/dist/index.js:1209:10)\n    at file:///C:/Users/PXWD/.codex/worktrees/planning-artifact-gate/Trellis/node_modules/.pnpm/@vitest+runner@4.0.18/node_modules/@vitest/runner/dist/index.js:1653:37\n    at Traces.$ (file:///C:/Users/PXWD/.codex/worktrees/planning-artifact-gate/Trellis/node_modules/.pnpm/vitest@4.0.18_@types+node@20.19.28_yaml@2.8.2/node_modules/vitest/dist/chunks/traces.CCmnQaNT.js:142:27)\n    at trace (file:///C:/Users/PXWD/.codex/worktrees/planning-artifact-gate/Trellis/node_modules/.pnpm/vitest@4.0.18_@types+node@20.19.28_yaml@2.8.2/node_modules/vitest/dist/chunks/test.B8ej_ZHS.js:239:21)\n    at runTest (file:///C:/Users/PXWD/.codex/worktrees/planning-artifact-gate/Trellis/node_modules/.pnpm/@vitest+runner@4.0.18/node_modules/@vitest/runner/dist/index.js:1653:12)"
+      ],
+      "candidateMessages": [
+        "AssertionError: expected '=== inside.md ===\\r\\nnot secret\\r\\n' to contain '=== inside.md ===\\nnot secret'\n    at C:/Users/PXWD/.codex/worktrees/planning-artifact-gate/Trellis/packages/cli/test/scripts/context-injection-limits.integration.test.ts:692:21\n    at file:///C:/Users/PXWD/.codex/worktrees/planning-artifact-gate/Trellis/node_modules/.pnpm/@vitest+runner@4.0.18/node_modules/@vitest/runner/dist/index.js:145:11\n    at file:///C:/Users/PXWD/.codex/worktrees/planning-artifact-gate/Trellis/node_modules/.pnpm/@vitest+runner@4.0.18/node_modules/@vitest/runner/dist/index.js:915:26\n    at file:///C:/Users/PXWD/.codex/worktrees/planning-artifact-gate/Trellis/node_modules/.pnpm/@vitest+runner@4.0.18/node_modules/@vitest/runner/dist/index.js:1243:20\n    at new Promise (<anonymous>)\n    at runWithTimeout (file:///C:/Users/PXWD/.codex/worktrees/planning-artifact-gate/Trellis/node_modules/.pnpm/@vitest+runner@4.0.18/node_modules/@vitest/runner/dist/index.js:1209:10)\n    at file:///C:/Users/PXWD/.codex/worktrees/planning-artifact-gate/Trellis/node_modules/.pnpm/@vitest+runner@4.0.18/node_modules/@vitest/runner/dist/index.js:1653:37\n    at Traces.$ (file:///C:/Users/PXWD/.codex/worktrees/planning-artifact-gate/Trellis/node_modules/.pnpm/vitest@4.0.18_@types+node@20.19.28_yaml@2.8.2/node_modules/vitest/dist/chunks/traces.CCmnQaNT.js:142:27)\n    at trace (file:///C:/Users/PXWD/.codex/worktrees/planning-artifact-gate/Trellis/node_modules/.pnpm/vitest@4.0.18_@types+node@20.19.28_yaml@2.8.2/node_modules/vitest/dist/chunks/test.B8ej_ZHS.js:239:21)\n    at runTest (file:///C:/Users/PXWD/.codex/worktrees/planning-artifact-gate/Trellis/node_modules/.pnpm/@vitest+runner@4.0.18/node_modules/@vitest/runner/dist/index.js:1653:12)"
+      ]
+    },
+    {
+      "file": "test/scripts/context-injection-limits.integration.test.ts",
+      "test": "context injection limits (issue #441) inject-subagent-context.py: per-file and per-artifact caps degrades to an index line once the total budget is exhausted (3 files)",
+      "baselineMessages": [
+        "AssertionError: expected '=== f1.txt ===\\r\\n1111111111111111111…' to contain '=== f1.txt ===\\n111111111111111111111…'\n    at C:/Users/PXWD/AppData/Local/Temp/trellis-merge-review-fmm2blpb/baseline/packages/cli/test/scripts/context-injection-limits.integration.test.ts:524:21\n    at file:///C:/Users/PXWD/.codex/worktrees/planning-artifact-gate/Trellis/node_modules/.pnpm/@vitest+runner@4.0.18/node_modules/@vitest/runner/dist/index.js:145:11\n    at file:///C:/Users/PXWD/.codex/worktrees/planning-artifact-gate/Trellis/node_modules/.pnpm/@vitest+runner@4.0.18/node_modules/@vitest/runner/dist/index.js:915:26\n    at file:///C:/Users/PXWD/.codex/worktrees/planning-artifact-gate/Trellis/node_modules/.pnpm/@vitest+runner@4.0.18/node_modules/@vitest/runner/dist/index.js:1243:20\n    at new Promise (<anonymous>)\n    at runWithTimeout (file:///C:/Users/PXWD/.codex/worktrees/planning-artifact-gate/Trellis/node_modules/.pnpm/@vitest+runner@4.0.18/node_modules/@vitest/runner/dist/index.js:1209:10)\n    at file:///C:/Users/PXWD/.codex/worktrees/planning-artifact-gate/Trellis/node_modules/.pnpm/@vitest+runner@4.0.18/node_modules/@vitest/runner/dist/index.js:1653:37\n    at Traces.$ (file:///C:/Users/PXWD/.codex/worktrees/planning-artifact-gate/Trellis/node_modules/.pnpm/vitest@4.0.18_@types+node@20.19.28_yaml@2.8.2/node_modules/vitest/dist/chunks/traces.CCmnQaNT.js:142:27)\n    at trace (file:///C:/Users/PXWD/.codex/worktrees/planning-artifact-gate/Trellis/node_modules/.pnpm/vitest@4.0.18_@types+node@20.19.28_yaml@2.8.2/node_modules/vitest/dist/chunks/test.B8ej_ZHS.js:239:21)\n    at runTest (file:///C:/Users/PXWD/.codex/worktrees/planning-artifact-gate/Trellis/node_modules/.pnpm/@vitest+runner@4.0.18/node_modules/@vitest/runner/dist/index.js:1653:12)"
+      ],
+      "candidateMessages": [
+        "AssertionError: expected '=== f1.txt ===\\r\\n1111111111111111111…' to contain '=== f1.txt ===\\n111111111111111111111…'\n    at C:/Users/PXWD/.codex/worktrees/planning-artifact-gate/Trellis/packages/cli/test/scripts/context-injection-limits.integration.test.ts:524:21\n    at file:///C:/Users/PXWD/.codex/worktrees/planning-artifact-gate/Trellis/node_modules/.pnpm/@vitest+runner@4.0.18/node_modules/@vitest/runner/dist/index.js:145:11\n    at file:///C:/Users/PXWD/.codex/worktrees/planning-artifact-gate/Trellis/node_modules/.pnpm/@vitest+runner@4.0.18/node_modules/@vitest/runner/dist/index.js:915:26\n    at file:///C:/Users/PXWD/.codex/worktrees/planning-artifact-gate/Trellis/node_modules/.pnpm/@vitest+runner@4.0.18/node_modules/@vitest/runner/dist/index.js:1243:20\n    at new Promise (<anonymous>)\n    at runWithTimeout (file:///C:/Users/PXWD/.codex/worktrees/planning-artifact-gate/Trellis/node_modules/.pnpm/@vitest+runner@4.0.18/node_modules/@vitest/runner/dist/index.js:1209:10)\n    at file:///C:/Users/PXWD/.codex/worktrees/planning-artifact-gate/Trellis/node_modules/.pnpm/@vitest+runner@4.0.18/node_modules/@vitest/runner/dist/index.js:1653:37\n    at Traces.$ (file:///C:/Users/PXWD/.codex/worktrees/planning-artifact-gate/Trellis/node_modules/.pnpm/vitest@4.0.18_@types+node@20.19.28_yaml@2.8.2/node_modules/vitest/dist/chunks/traces.CCmnQaNT.js:142:27)\n    at trace (file:///C:/Users/PXWD/.codex/worktrees/planning-artifact-gate/Trellis/node_modules/.pnpm/vitest@4.0.18_@types+node@20.19.28_yaml@2.8.2/node_modules/vitest/dist/chunks/test.B8ej_ZHS.js:239:21)\n    at runTest (file:///C:/Users/PXWD/.codex/worktrees/planning-artifact-gate/Trellis/node_modules/.pnpm/@vitest+runner@4.0.18/node_modules/@vitest/runner/dist/index.js:1653:12)"
+      ]
+    },
+    {
+      "file": "test/scripts/context-injection-limits.integration.test.ts",
+      "test": "context injection limits (issue #441) inject-subagent-context.py: per-file and per-artifact caps does not misclassify legitimate multi-byte UTF-8 content as binary",
+      "baselineMessages": [
+        "AssertionError: expected '=== multibyte.md ===\\r\\nemoji: 🎉🚀 c…' to contain '=== multibyte.md ===\\nemoji: 🎉🚀 cjk…'\n    at C:/Users/PXWD/AppData/Local/Temp/trellis-merge-review-fmm2blpb/baseline/packages/cli/test/scripts/context-injection-limits.integration.test.ts:439:21\n    at file:///C:/Users/PXWD/.codex/worktrees/planning-artifact-gate/Trellis/node_modules/.pnpm/@vitest+runner@4.0.18/node_modules/@vitest/runner/dist/index.js:145:11\n    at file:///C:/Users/PXWD/.codex/worktrees/planning-artifact-gate/Trellis/node_modules/.pnpm/@vitest+runner@4.0.18/node_modules/@vitest/runner/dist/index.js:915:26\n    at file:///C:/Users/PXWD/.codex/worktrees/planning-artifact-gate/Trellis/node_modules/.pnpm/@vitest+runner@4.0.18/node_modules/@vitest/runner/dist/index.js:1243:20\n    at new Promise (<anonymous>)\n    at runWithTimeout (file:///C:/Users/PXWD/.codex/worktrees/planning-artifact-gate/Trellis/node_modules/.pnpm/@vitest+runner@4.0.18/node_modules/@vitest/runner/dist/index.js:1209:10)\n    at file:///C:/Users/PXWD/.codex/worktrees/planning-artifact-gate/Trellis/node_modules/.pnpm/@vitest+runner@4.0.18/node_modules/@vitest/runner/dist/index.js:1653:37\n    at Traces.$ (file:///C:/Users/PXWD/.codex/worktrees/planning-artifact-gate/Trellis/node_modules/.pnpm/vitest@4.0.18_@types+node@20.19.28_yaml@2.8.2/node_modules/vitest/dist/chunks/traces.CCmnQaNT.js:142:27)\n    at trace (file:///C:/Users/PXWD/.codex/worktrees/planning-artifact-gate/Trellis/node_modules/.pnpm/vitest@4.0.18_@types+node@20.19.28_yaml@2.8.2/node_modules/vitest/dist/chunks/test.B8ej_ZHS.js:239:21)\n    at runTest (file:///C:/Users/PXWD/.codex/worktrees/planning-artifact-gate/Trellis/node_modules/.pnpm/@vitest+runner@4.0.18/node_modules/@vitest/runner/dist/index.js:1653:12)"
+      ],
+      "candidateMessages": [
+        "AssertionError: expected '=== multibyte.md ===\\r\\nemoji: 🎉🚀 c…' to contain '=== multibyte.md ===\\nemoji: 🎉🚀 cjk…'\n    at C:/Users/PXWD/.codex/worktrees/planning-artifact-gate/Trellis/packages/cli/test/scripts/context-injection-limits.integration.test.ts:439:21\n    at file:///C:/Users/PXWD/.codex/worktrees/planning-artifact-gate/Trellis/node_modules/.pnpm/@vitest+runner@4.0.18/node_modules/@vitest/runner/dist/index.js:145:11\n    at file:///C:/Users/PXWD/.codex/worktrees/planning-artifact-gate/Trellis/node_modules/.pnpm/@vitest+runner@4.0.18/node_modules/@vitest/runner/dist/index.js:915:26\n    at file:///C:/Users/PXWD/.codex/worktrees/planning-artifact-gate/Trellis/node_modules/.pnpm/@vitest+runner@4.0.18/node_modules/@vitest/runner/dist/index.js:1243:20\n    at new Promise (<anonymous>)\n    at runWithTimeout (file:///C:/Users/PXWD/.codex/worktrees/planning-artifact-gate/Trellis/node_modules/.pnpm/@vitest+runner@4.0.18/node_modules/@vitest/runner/dist/index.js:1209:10)\n    at file:///C:/Users/PXWD/.codex/worktrees/planning-artifact-gate/Trellis/node_modules/.pnpm/@vitest+runner@4.0.18/node_modules/@vitest/runner/dist/index.js:1653:37\n    at Traces.$ (file:///C:/Users/PXWD/.codex/worktrees/planning-artifact-gate/Trellis/node_modules/.pnpm/vitest@4.0.18_@types+node@20.19.28_yaml@2.8.2/node_modules/vitest/dist/chunks/traces.CCmnQaNT.js:142:27)\n    at trace (file:///C:/Users/PXWD/.codex/worktrees/planning-artifact-gate/Trellis/node_modules/.pnpm/vitest@4.0.18_@types+node@20.19.28_yaml@2.8.2/node_modules/vitest/dist/chunks/test.B8ej_ZHS.js:239:21)\n    at runTest (file:///C:/Users/PXWD/.codex/worktrees/planning-artifact-gate/Trellis/node_modules/.pnpm/@vitest+runner@4.0.18/node_modules/@vitest/runner/dist/index.js:1653:12)"
+      ]
+    },
+    {
+      "file": "test/scripts/context-injection-limits.integration.test.ts",
+      "test": "context injection limits (issue #441) inject-subagent-context.py: per-file and per-artifact caps max_total_bytes: 0 restores fully unlimited inlining",
+      "baselineMessages": [
+        "AssertionError: expected '=== big.txt ===\\r\\nZZZZZZZZZZZZZZZZZZ…' to contain '=== big.txt ===\\nZZZZZZZZZZZZZZZZZZZZ…'\n    at C:/Users/PXWD/AppData/Local/Temp/trellis-merge-review-fmm2blpb/baseline/packages/cli/test/scripts/context-injection-limits.integration.test.ts:557:21\n    at file:///C:/Users/PXWD/.codex/worktrees/planning-artifact-gate/Trellis/node_modules/.pnpm/@vitest+runner@4.0.18/node_modules/@vitest/runner/dist/index.js:145:11\n    at file:///C:/Users/PXWD/.codex/worktrees/planning-artifact-gate/Trellis/node_modules/.pnpm/@vitest+runner@4.0.18/node_modules/@vitest/runner/dist/index.js:915:26\n    at file:///C:/Users/PXWD/.codex/worktrees/planning-artifact-gate/Trellis/node_modules/.pnpm/@vitest+runner@4.0.18/node_modules/@vitest/runner/dist/index.js:1243:20\n    at new Promise (<anonymous>)\n    at runWithTimeout (file:///C:/Users/PXWD/.codex/worktrees/planning-artifact-gate/Trellis/node_modules/.pnpm/@vitest+runner@4.0.18/node_modules/@vitest/runner/dist/index.js:1209:10)\n    at file:///C:/Users/PXWD/.codex/worktrees/planning-artifact-gate/Trellis/node_modules/.pnpm/@vitest+runner@4.0.18/node_modules/@vitest/runner/dist/index.js:1653:37\n    at Traces.$ (file:///C:/Users/PXWD/.codex/worktrees/planning-artifact-gate/Trellis/node_modules/.pnpm/vitest@4.0.18_@types+node@20.19.28_yaml@2.8.2/node_modules/vitest/dist/chunks/traces.CCmnQaNT.js:142:27)\n    at trace (file:///C:/Users/PXWD/.codex/worktrees/planning-artifact-gate/Trellis/node_modules/.pnpm/vitest@4.0.18_@types+node@20.19.28_yaml@2.8.2/node_modules/vitest/dist/chunks/test.B8ej_ZHS.js:239:21)\n    at runTest (file:///C:/Users/PXWD/.codex/worktrees/planning-artifact-gate/Trellis/node_modules/.pnpm/@vitest+runner@4.0.18/node_modules/@vitest/runner/dist/index.js:1653:12)"
+      ],
+      "candidateMessages": [
+        "AssertionError: expected '=== big.txt ===\\r\\nZZZZZZZZZZZZZZZZZZ…' to contain '=== big.txt ===\\nZZZZZZZZZZZZZZZZZZZZ…'\n    at C:/Users/PXWD/.codex/worktrees/planning-artifact-gate/Trellis/packages/cli/test/scripts/context-injection-limits.integration.test.ts:557:21\n    at file:///C:/Users/PXWD/.codex/worktrees/planning-artifact-gate/Trellis/node_modules/.pnpm/@vitest+runner@4.0.18/node_modules/@vitest/runner/dist/index.js:145:11\n    at file:///C:/Users/PXWD/.codex/worktrees/planning-artifact-gate/Trellis/node_modules/.pnpm/@vitest+runner@4.0.18/node_modules/@vitest/runner/dist/index.js:915:26\n    at file:///C:/Users/PXWD/.codex/worktrees/planning-artifact-gate/Trellis/node_modules/.pnpm/@vitest+runner@4.0.18/node_modules/@vitest/runner/dist/index.js:1243:20\n    at new Promise (<anonymous>)\n    at runWithTimeout (file:///C:/Users/PXWD/.codex/worktrees/planning-artifact-gate/Trellis/node_modules/.pnpm/@vitest+runner@4.0.18/node_modules/@vitest/runner/dist/index.js:1209:10)\n    at file:///C:/Users/PXWD/.codex/worktrees/planning-artifact-gate/Trellis/node_modules/.pnpm/@vitest+runner@4.0.18/node_modules/@vitest/runner/dist/index.js:1653:37\n    at Traces.$ (file:///C:/Users/PXWD/.codex/worktrees/planning-artifact-gate/Trellis/node_modules/.pnpm/vitest@4.0.18_@types+node@20.19.28_yaml@2.8.2/node_modules/vitest/dist/chunks/traces.CCmnQaNT.js:142:27)\n    at trace (file:///C:/Users/PXWD/.codex/worktrees/planning-artifact-gate/Trellis/node_modules/.pnpm/vitest@4.0.18_@types+node@20.19.28_yaml@2.8.2/node_modules/vitest/dist/chunks/test.B8ej_ZHS.js:239:21)\n    at runTest (file:///C:/Users/PXWD/.codex/worktrees/planning-artifact-gate/Trellis/node_modules/.pnpm/@vitest+runner@4.0.18/node_modules/@vitest/runner/dist/index.js:1653:12)"
+      ]
+    },
+    {
+      "file": "test/scripts/context-injection-limits.integration.test.ts",
+      "test": "context injection limits (issue #441) inject-subagent-context.py: per-file and per-artifact caps under-cap content is byte-identical to unlimited output (golden)",
+      "baselineMessages": [
+        "AssertionError: expected '=== small.md ===\\r\\nsmall spec conten…' to contain '=== small.md ===\\nsmall spec content'\n    at C:/Users/PXWD/AppData/Local/Temp/trellis-merge-review-fmm2blpb/baseline/packages/cli/test/scripts/context-injection-limits.integration.test.ts:363:21\n    at file:///C:/Users/PXWD/.codex/worktrees/planning-artifact-gate/Trellis/node_modules/.pnpm/@vitest+runner@4.0.18/node_modules/@vitest/runner/dist/index.js:145:11\n    at file:///C:/Users/PXWD/.codex/worktrees/planning-artifact-gate/Trellis/node_modules/.pnpm/@vitest+runner@4.0.18/node_modules/@vitest/runner/dist/index.js:915:26\n    at file:///C:/Users/PXWD/.codex/worktrees/planning-artifact-gate/Trellis/node_modules/.pnpm/@vitest+runner@4.0.18/node_modules/@vitest/runner/dist/index.js:1243:20\n    at new Promise (<anonymous>)\n    at runWithTimeout (file:///C:/Users/PXWD/.codex/worktrees/planning-artifact-gate/Trellis/node_modules/.pnpm/@vitest+runner@4.0.18/node_modules/@vitest/runner/dist/index.js:1209:10)\n    at file:///C:/Users/PXWD/.codex/worktrees/planning-artifact-gate/Trellis/node_modules/.pnpm/@vitest+runner@4.0.18/node_modules/@vitest/runner/dist/index.js:1653:37\n    at Traces.$ (file:///C:/Users/PXWD/.codex/worktrees/planning-artifact-gate/Trellis/node_modules/.pnpm/vitest@4.0.18_@types+node@20.19.28_yaml@2.8.2/node_modules/vitest/dist/chunks/traces.CCmnQaNT.js:142:27)\n    at trace (file:///C:/Users/PXWD/.codex/worktrees/planning-artifact-gate/Trellis/node_modules/.pnpm/vitest@4.0.18_@types+node@20.19.28_yaml@2.8.2/node_modules/vitest/dist/chunks/test.B8ej_ZHS.js:239:21)\n    at runTest (file:///C:/Users/PXWD/.codex/worktrees/planning-artifact-gate/Trellis/node_modules/.pnpm/@vitest+runner@4.0.18/node_modules/@vitest/runner/dist/index.js:1653:12)"
+      ],
+      "candidateMessages": [
+        "AssertionError: expected '=== small.md ===\\r\\nsmall spec conten…' to contain '=== small.md ===\\nsmall spec content'\n    at C:/Users/PXWD/.codex/worktrees/planning-artifact-gate/Trellis/packages/cli/test/scripts/context-injection-limits.integration.test.ts:363:21\n    at file:///C:/Users/PXWD/.codex/worktrees/planning-artifact-gate/Trellis/node_modules/.pnpm/@vitest+runner@4.0.18/node_modules/@vitest/runner/dist/index.js:145:11\n    at file:///C:/Users/PXWD/.codex/worktrees/planning-artifact-gate/Trellis/node_modules/.pnpm/@vitest+runner@4.0.18/node_modules/@vitest/runner/dist/index.js:915:26\n    at file:///C:/Users/PXWD/.codex/worktrees/planning-artifact-gate/Trellis/node_modules/.pnpm/@vitest+runner@4.0.18/node_modules/@vitest/runner/dist/index.js:1243:20\n    at new Promise (<anonymous>)\n    at runWithTimeout (file:///C:/Users/PXWD/.codex/worktrees/planning-artifact-gate/Trellis/node_modules/.pnpm/@vitest+runner@4.0.18/node_modules/@vitest/runner/dist/index.js:1209:10)\n    at file:///C:/Users/PXWD/.codex/worktrees/planning-artifact-gate/Trellis/node_modules/.pnpm/@vitest+runner@4.0.18/node_modules/@vitest/runner/dist/index.js:1653:37\n    at Traces.$ (file:///C:/Users/PXWD/.codex/worktrees/planning-artifact-gate/Trellis/node_modules/.pnpm/vitest@4.0.18_@types+node@20.19.28_yaml@2.8.2/node_modules/vitest/dist/chunks/traces.CCmnQaNT.js:142:27)\n    at trace (file:///C:/Users/PXWD/.codex/worktrees/planning-artifact-gate/Trellis/node_modules/.pnpm/vitest@4.0.18_@types+node@20.19.28_yaml@2.8.2/node_modules/vitest/dist/chunks/test.B8ej_ZHS.js:239:21)\n    at runTest (file:///C:/Users/PXWD/.codex/worktrees/planning-artifact-gate/Trellis/node_modules/.pnpm/@vitest+runner@4.0.18/node_modules/@vitest/runner/dist/index.js:1653:12)"
+      ]
+    },
+    {
+      "file": "test/scripts/context-injection-limits.integration.test.ts",
+      "test": "context injection limits (issue #441) inject-subagent-context.py: truncate_utf8 leaves data untouched when data is at or under the cap",
+      "baselineMessages": [
+        "AssertionError: expected [ 'True\\r', 'True' ] to deeply equal [ 'True', 'True' ]\n    at C:/Users/PXWD/AppData/Local/Temp/trellis-merge-review-fmm2blpb/baseline/packages/cli/test/scripts/context-injection-limits.integration.test.ts:295:40\n    at file:///C:/Users/PXWD/.codex/worktrees/planning-artifact-gate/Trellis/node_modules/.pnpm/@vitest+runner@4.0.18/node_modules/@vitest/runner/dist/index.js:145:11\n    at file:///C:/Users/PXWD/.codex/worktrees/planning-artifact-gate/Trellis/node_modules/.pnpm/@vitest+runner@4.0.18/node_modules/@vitest/runner/dist/index.js:915:26\n    at file:///C:/Users/PXWD/.codex/worktrees/planning-artifact-gate/Trellis/node_modules/.pnpm/@vitest+runner@4.0.18/node_modules/@vitest/runner/dist/index.js:1243:20\n    at new Promise (<anonymous>)\n    at runWithTimeout (file:///C:/Users/PXWD/.codex/worktrees/planning-artifact-gate/Trellis/node_modules/.pnpm/@vitest+runner@4.0.18/node_modules/@vitest/runner/dist/index.js:1209:10)\n    at file:///C:/Users/PXWD/.codex/worktrees/planning-artifact-gate/Trellis/node_modules/.pnpm/@vitest+runner@4.0.18/node_modules/@vitest/runner/dist/index.js:1653:37\n    at Traces.$ (file:///C:/Users/PXWD/.codex/worktrees/planning-artifact-gate/Trellis/node_modules/.pnpm/vitest@4.0.18_@types+node@20.19.28_yaml@2.8.2/node_modules/vitest/dist/chunks/traces.CCmnQaNT.js:142:27)\n    at trace (file:///C:/Users/PXWD/.codex/worktrees/planning-artifact-gate/Trellis/node_modules/.pnpm/vitest@4.0.18_@types+node@20.19.28_yaml@2.8.2/node_modules/vitest/dist/chunks/test.B8ej_ZHS.js:239:21)\n    at runTest (file:///C:/Users/PXWD/.codex/worktrees/planning-artifact-gate/Trellis/node_modules/.pnpm/@vitest+runner@4.0.18/node_modules/@vitest/runner/dist/index.js:1653:12)"
+      ],
+      "candidateMessages": [
+        "AssertionError: expected [ 'True\\r', 'True' ] to deeply equal [ 'True', 'True' ]\n    at C:/Users/PXWD/.codex/worktrees/planning-artifact-gate/Trellis/packages/cli/test/scripts/context-injection-limits.integration.test.ts:295:40\n    at file:///C:/Users/PXWD/.codex/worktrees/planning-artifact-gate/Trellis/node_modules/.pnpm/@vitest+runner@4.0.18/node_modules/@vitest/runner/dist/index.js:145:11\n    at file:///C:/Users/PXWD/.codex/worktrees/planning-artifact-gate/Trellis/node_modules/.pnpm/@vitest+runner@4.0.18/node_modules/@vitest/runner/dist/index.js:915:26\n    at file:///C:/Users/PXWD/.codex/worktrees/planning-artifact-gate/Trellis/node_modules/.pnpm/@vitest+runner@4.0.18/node_modules/@vitest/runner/dist/index.js:1243:20\n    at new Promise (<anonymous>)\n    at runWithTimeout (file:///C:/Users/PXWD/.codex/worktrees/planning-artifact-gate/Trellis/node_modules/.pnpm/@vitest+runner@4.0.18/node_modules/@vitest/runner/dist/index.js:1209:10)\n    at file:///C:/Users/PXWD/.codex/worktrees/planning-artifact-gate/Trellis/node_modules/.pnpm/@vitest+runner@4.0.18/node_modules/@vitest/runner/dist/index.js:1653:37\n    at Traces.$ (file:///C:/Users/PXWD/.codex/worktrees/planning-artifact-gate/Trellis/node_modules/.pnpm/vitest@4.0.18_@types+node@20.19.28_yaml@2.8.2/node_modules/vitest/dist/chunks/traces.CCmnQaNT.js:142:27)\n    at trace (file:///C:/Users/PXWD/.codex/worktrees/planning-artifact-gate/Trellis/node_modules/.pnpm/vitest@4.0.18_@types+node@20.19.28_yaml@2.8.2/node_modules/vitest/dist/chunks/test.B8ej_ZHS.js:239:21)\n    at runTest (file:///C:/Users/PXWD/.codex/worktrees/planning-artifact-gate/Trellis/node_modules/.pnpm/@vitest+runner@4.0.18/node_modules/@vitest/runner/dist/index.js:1653:12)"
+      ]
+    },
+    {
+      "file": "test/scripts/context-injection-limits.integration.test.ts",
+      "test": "context injection limits (issue #441) inject-subagent-context.py: truncate_utf8 never splits a multi-byte UTF-8 sequence at the boundary",
+      "baselineMessages": [
+        "AssertionError: expected 'all-valid\\r' to be 'all-valid' // Object.is equality\n    at C:/Users/PXWD/AppData/Local/Temp/trellis-merge-review-fmm2blpb/baseline/packages/cli/test/scripts/context-injection-limits.integration.test.ts:324:26\n    at file:///C:/Users/PXWD/.codex/worktrees/planning-artifact-gate/Trellis/node_modules/.pnpm/@vitest+runner@4.0.18/node_modules/@vitest/runner/dist/index.js:145:11\n    at file:///C:/Users/PXWD/.codex/worktrees/planning-artifact-gate/Trellis/node_modules/.pnpm/@vitest+runner@4.0.18/node_modules/@vitest/runner/dist/index.js:915:26\n    at file:///C:/Users/PXWD/.codex/worktrees/planning-artifact-gate/Trellis/node_modules/.pnpm/@vitest+runner@4.0.18/node_modules/@vitest/runner/dist/index.js:1243:20\n    at new Promise (<anonymous>)\n    at runWithTimeout (file:///C:/Users/PXWD/.codex/worktrees/planning-artifact-gate/Trellis/node_modules/.pnpm/@vitest+runner@4.0.18/node_modules/@vitest/runner/dist/index.js:1209:10)\n    at file:///C:/Users/PXWD/.codex/worktrees/planning-artifact-gate/Trellis/node_modules/.pnpm/@vitest+runner@4.0.18/node_modules/@vitest/runner/dist/index.js:1653:37\n    at Traces.$ (file:///C:/Users/PXWD/.codex/worktrees/planning-artifact-gate/Trellis/node_modules/.pnpm/vitest@4.0.18_@types+node@20.19.28_yaml@2.8.2/node_modules/vitest/dist/chunks/traces.CCmnQaNT.js:142:27)\n    at trace (file:///C:/Users/PXWD/.codex/worktrees/planning-artifact-gate/Trellis/node_modules/.pnpm/vitest@4.0.18_@types+node@20.19.28_yaml@2.8.2/node_modules/vitest/dist/chunks/test.B8ej_ZHS.js:239:21)\n    at runTest (file:///C:/Users/PXWD/.codex/worktrees/planning-artifact-gate/Trellis/node_modules/.pnpm/@vitest+runner@4.0.18/node_modules/@vitest/runner/dist/index.js:1653:12)"
+      ],
+      "candidateMessages": [
+        "AssertionError: expected 'all-valid\\r' to be 'all-valid' // Object.is equality\n    at C:/Users/PXWD/.codex/worktrees/planning-artifact-gate/Trellis/packages/cli/test/scripts/context-injection-limits.integration.test.ts:324:26\n    at file:///C:/Users/PXWD/.codex/worktrees/planning-artifact-gate/Trellis/node_modules/.pnpm/@vitest+runner@4.0.18/node_modules/@vitest/runner/dist/index.js:145:11\n    at file:///C:/Users/PXWD/.codex/worktrees/planning-artifact-gate/Trellis/node_modules/.pnpm/@vitest+runner@4.0.18/node_modules/@vitest/runner/dist/index.js:915:26\n    at file:///C:/Users/PXWD/.codex/worktrees/planning-artifact-gate/Trellis/node_modules/.pnpm/@vitest+runner@4.0.18/node_modules/@vitest/runner/dist/index.js:1243:20\n    at new Promise (<anonymous>)\n    at runWithTimeout (file:///C:/Users/PXWD/.codex/worktrees/planning-artifact-gate/Trellis/node_modules/.pnpm/@vitest+runner@4.0.18/node_modules/@vitest/runner/dist/index.js:1209:10)\n    at file:///C:/Users/PXWD/.codex/worktrees/planning-artifact-gate/Trellis/node_modules/.pnpm/@vitest+runner@4.0.18/node_modules/@vitest/runner/dist/index.js:1653:37\n    at Traces.$ (file:///C:/Users/PXWD/.codex/worktrees/planning-artifact-gate/Trellis/node_modules/.pnpm/vitest@4.0.18_@types+node@20.19.28_yaml@2.8.2/node_modules/vitest/dist/chunks/traces.CCmnQaNT.js:142:27)\n    at trace (file:///C:/Users/PXWD/.codex/worktrees/planning-artifact-gate/Trellis/node_modules/.pnpm/vitest@4.0.18_@types+node@20.19.28_yaml@2.8.2/node_modules/vitest/dist/chunks/test.B8ej_ZHS.js:239:21)\n    at runTest (file:///C:/Users/PXWD/.codex/worktrees/planning-artifact-gate/Trellis/node_modules/.pnpm/@vitest+runner@4.0.18/node_modules/@vitest/runner/dist/index.js:1653:12)"
+      ]
+    },
+    {
+      "file": "test/templates/opencode.test.ts",
+      "test": "opencode context injection limits (issue #441) inject-subagent-context plugin directory entries respect the per-file cap and only inline .md files",
+      "baselineMessages": [
+        "AssertionError: expected '<!-- trellis-hook-injected -->\\n# Imp…' to contain '[Trellis: truncated at 10 bytes — rea…'\n    at C:/Users/PXWD/AppData/Local/Temp/trellis-merge-review-fmm2blpb/baseline/packages/cli/test/templates/opencode.test.ts:1613:22\n    at processTicksAndRejections (node:internal/process/task_queues:103:5)\n    at file:///C:/Users/PXWD/.codex/worktrees/planning-artifact-gate/Trellis/node_modules/.pnpm/@vitest+runner@4.0.18/node_modules/@vitest/runner/dist/index.js:915:20"
+      ],
+      "candidateMessages": [
+        "AssertionError: expected '<!-- trellis-hook-injected -->\\n# Imp…' to contain '[Trellis: truncated at 10 bytes — rea…'\n    at C:/Users/PXWD/.codex/worktrees/planning-artifact-gate/Trellis/packages/cli/test/templates/opencode.test.ts:1613:22\n    at processTicksAndRejections (node:internal/process/task_queues:103:5)\n    at file:///C:/Users/PXWD/.codex/worktrees/planning-artifact-gate/Trellis/node_modules/.pnpm/@vitest+runner@4.0.18/node_modules/@vitest/runner/dist/index.js:915:20"
+      ]
+    },
+    {
+      "file": "test/utils/atomic-write.test.ts",
+      "test": "writeFileAtomic preserves the original file when the write fails",
+      "baselineMessages": [
+        "AssertionError: expected [Function] to throw an error\n    at Proxy.<anonymous> (file:///C:/Users/PXWD/.codex/worktrees/planning-artifact-gate/Trellis/node_modules/.pnpm/@vitest+expect@4.0.18/node_modules/@vitest/expect/dist/index.js:1485:16)\n    at Proxy.<anonymous> (file:///C:/Users/PXWD/.codex/worktrees/planning-artifact-gate/Trellis/node_modules/.pnpm/@vitest+expect@4.0.18/node_modules/@vitest/expect/dist/index.js:1090:14)\n    at Proxy.methodWrapper (file:///C:/Users/PXWD/.codex/worktrees/planning-artifact-gate/Trellis/node_modules/.pnpm/chai@6.2.2/node_modules/chai/index.js:1700:25)\n    at C:/Users/PXWD/AppData/Local/Temp/trellis-merge-review-fmm2blpb/baseline/packages/cli/test/utils/atomic-write.test.ts:43:55\n    at file:///C:/Users/PXWD/.codex/worktrees/planning-artifact-gate/Trellis/node_modules/.pnpm/@vitest+runner@4.0.18/node_modules/@vitest/runner/dist/index.js:145:11\n    at file:///C:/Users/PXWD/.codex/worktrees/planning-artifact-gate/Trellis/node_modules/.pnpm/@vitest+runner@4.0.18/node_modules/@vitest/runner/dist/index.js:915:26\n    at file:///C:/Users/PXWD/.codex/worktrees/planning-artifact-gate/Trellis/node_modules/.pnpm/@vitest+runner@4.0.18/node_modules/@vitest/runner/dist/index.js:1243:20\n    at new Promise (<anonymous>)\n    at runWithTimeout (file:///C:/Users/PXWD/.codex/worktrees/planning-artifact-gate/Trellis/node_modules/.pnpm/@vitest+runner@4.0.18/node_modules/@vitest/runner/dist/index.js:1209:10)\n    at file:///C:/Users/PXWD/.codex/worktrees/planning-artifact-gate/Trellis/node_modules/.pnpm/@vitest+runner@4.0.18/node_modules/@vitest/runner/dist/index.js:1653:37"
+      ],
+      "candidateMessages": [
+        "AssertionError: expected [Function] to throw an error\n    at Proxy.<anonymous> (file:///C:/Users/PXWD/.codex/worktrees/planning-artifact-gate/Trellis/node_modules/.pnpm/@vitest+expect@4.0.18/node_modules/@vitest/expect/dist/index.js:1485:16)\n    at Proxy.<anonymous> (file:///C:/Users/PXWD/.codex/worktrees/planning-artifact-gate/Trellis/node_modules/.pnpm/@vitest+expect@4.0.18/node_modules/@vitest/expect/dist/index.js:1090:14)\n    at Proxy.methodWrapper (file:///C:/Users/PXWD/.codex/worktrees/planning-artifact-gate/Trellis/node_modules/.pnpm/chai@6.2.2/node_modules/chai/index.js:1700:25)\n    at C:/Users/PXWD/.codex/worktrees/planning-artifact-gate/Trellis/packages/cli/test/utils/atomic-write.test.ts:43:55\n    at file:///C:/Users/PXWD/.codex/worktrees/planning-artifact-gate/Trellis/node_modules/.pnpm/@vitest+runner@4.0.18/node_modules/@vitest/runner/dist/index.js:145:11\n    at file:///C:/Users/PXWD/.codex/worktrees/planning-artifact-gate/Trellis/node_modules/.pnpm/@vitest+runner@4.0.18/node_modules/@vitest/runner/dist/index.js:915:26\n    at file:///C:/Users/PXWD/.codex/worktrees/planning-artifact-gate/Trellis/node_modules/.pnpm/@vitest+runner@4.0.18/node_modules/@vitest/runner/dist/index.js:1243:20\n    at new Promise (<anonymous>)\n    at runWithTimeout (file:///C:/Users/PXWD/.codex/worktrees/planning-artifact-gate/Trellis/node_modules/.pnpm/@vitest+runner@4.0.18/node_modules/@vitest/runner/dist/index.js:1209:10)\n    at file:///C:/Users/PXWD/.codex/worktrees/planning-artifact-gate/Trellis/node_modules/.pnpm/@vitest+runner@4.0.18/node_modules/@vitest/runner/dist/index.js:1653:37"
+      ]
+    }
+  ]
+}
