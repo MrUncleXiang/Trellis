@@ -1,0 +1,44 @@
+{
+  "name": "@mindfoldhq/trellis-dashboard",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Read-only local dashboard for Trellis project tasks",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "bin": {
+    "trellis-dashboard": "./bin/trellis-dashboard.js"
+  },
+  "scripts": {
+    "build": "pnpm run clean && tsc && pnpm run build:client",
+    "build:client": "node scripts/bundle-client.js",
+    "clean": "node -e \"require('node:fs').rmSync('dist', { recursive: true, force: true })\"",
+    "start": "node ./bin/trellis-dashboard.js",
+    "demo": "node scripts/demo.js",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "lint": "eslint src/ test/",
+    "lint:fix": "eslint src/ test/ --fix",
+    "typecheck": "tsc --noEmit && tsc -p tsconfig.client.json"
+  },
+  "dependencies": {
+    "@xyflow/react": "^13.0.2",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.18.0",
+    "@types/node": "^20.17.10",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "esbuild": "^0.25.0",
+    "eslint": "^9.18.0",
+    "typescript": "^5.7.2",
+    "typescript-eslint": "^8.21.0",
+    "vitest": "^4.0.18"
+  },
+  "engines": {
+    "node": ">=18.17.0"
+  },
+  "license": "AGPL-3.0-only"
+}

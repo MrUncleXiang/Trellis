@@ -82,4 +82,7 @@ jobs:
           test -f packages/core/dist/task/index.js
           test -d packages/cli/dist
           test -f packages/cli/dist/index.js
+          test -f packages/cli/dashboard/dist/cli.js
+          test -f packages/cli/dashboard/dist/public/app.js
+          test -f packages/cli/dashboard/dist/public/app.css
           echo "Build verification passed"

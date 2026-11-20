@@ -23,10 +23,8 @@
  *                                    version already exists on npm it is
  *                                    skipped (but version mismatches still
  *                                    fail loudly).
- *   verify-packed-cli                Pack the CLI and assert its dependency
- *                                    on @mindfoldhq/trellis-core resolves
- *                                    to the exact shared version (not
- *                                    "workspace:*" or a loose range).
+ *   verify-packed-cli                Pack the CLI and check exact core/runtime
+ *                                    dependencies and bundled dashboard assets.
  *   verify-npm [--package all|core|cli]
  *                                    Verify the published package version and
  *                                    dist-tag are visible on the public npm
@@ -243,9 +241,27 @@ function verifyPackedCli() {
     }
     const extractDir = path.join(tmp, "extract");
     fs.mkdirSync(extractDir);
-    execSync(`tar -xzf ${packed} -C ${extractDir} package/package.json`, {
-      stdio: ["pipe", "pipe", "pipe"],
-    });
+    const requiredDashboardFiles = [
+      "package/dashboard/dist/cli.js",
+      "package/dashboard/dist/server/app.js",
+      "package/dashboard/dist/server/page.html",
+      "package/dashboard/dist/public/app.js",
+      "package/dashboard/dist/public/app.css",
+    ];
+    execSync(
+      `tar -xzf ${packed} -C ${extractDir} package/package.json ${requiredDashboardFiles.join(" ")}`,
+      {
+        stdio: ["pipe", "pipe", "pipe"],
+      },
+    );
+    const missingDashboardFiles = requiredDashboardFiles
+      .map((file) => file.slice("package/".length))
+      .filter((file) => !fs.existsSync(path.join(extractDir, "package", file)));
+    if (missingDashboardFiles.length > 0) {
+      fail(
+        `packed CLI is missing dashboard runtime files: ${missingDashboardFiles.join(", ")}`,
+      );
+    }
     const packedPkg = readJSON(path.join(extractDir, "package/package.json"));
     const dep = packedPkg.dependencies?.["@mindfoldhq/trellis-core"];
     if (!dep) {
@@ -258,7 +274,7 @@ function verifyPackedCli() {
       );
     }
     console.log(
-      `${GREEN}ok${RESET} packed CLI pins @mindfoldhq/trellis-core to exact ${v.cliVersion}.`,
+      `${GREEN}ok${RESET} packed CLI contains the dashboard and pins its runtime dependencies.`,
     );
   } finally {
     fs.rmSync(tmp, { recursive: true, force: true });

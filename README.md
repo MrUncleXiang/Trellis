@@ -66,6 +66,18 @@ trellis init --cursor --opencode --codex -u your-name
 
 See the [Quick Start](https://docs.trytrellis.app/start/install-and-first-task) and [Supported Platforms](https://docs.trytrellis.app/advanced/multi-platform) guides for setup details.
 
+### View local tasks
+
+From an initialized Trellis project's root directory, run:
+
+```bash
+trellis dashboard
+```
+
+Open the local address printed in the terminal. The read-only task canvas stops
+when you press Ctrl+C. It is included with Trellis CLI and starts only when you
+run the command.
+
 ## How to Use
 
 The workflow is simple:

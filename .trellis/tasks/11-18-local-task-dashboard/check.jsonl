@@ -1,0 +1,5 @@
+{"file": ".trellis/tasks/11-18-local-task-dashboard/prd.md", "reason": "Verify the delivered UI, archived tasks, counts and relationships meet the approved acceptance criteria."}
+{"file": ".trellis/tasks/11-18-local-task-dashboard/design.md", "reason": "Verify read boundaries, archive toggle behaviour, hierarchy layout and status presentation."}
+{"file": ".trellis/spec/cli/backend/filesystem-safety.md", "reason": "Check archived task paths cannot escape the selected project and remain read-only."}
+{"file": ".trellis/spec/cli/unit-test/conventions.md", "reason": "Check synthetic fixtures, parser tests and isolated test inputs."}
+{"file": ".trellis/spec/cli/unit-test/integration-patterns.md", "reason": "Check dashboard startup, archive API behavior and session-free local integration tests."}

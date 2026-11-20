@@ -1,0 +1,5 @@
+{"file": ".trellis/tasks/11-18-local-task-dashboard/prd.md", "reason": "Implement the approved active/archive display, hierarchy layout, status styles and privacy requirements."}
+{"file": ".trellis/tasks/11-18-local-task-dashboard/design.md", "reason": "Follow the approved task-reader, relationship-layout, status-colour and local-only browser design."}
+{"file": ".trellis/spec/cli/backend/filesystem-safety.md", "reason": "Resolve task and archive files safely inside the selected project."}
+{"file": ".trellis/spec/cli/unit-test/conventions.md", "reason": "Use synthetic task data and isolated, reproducible test inputs."}
+{"file": ".trellis/spec/cli/unit-test/integration-patterns.md", "reason": "Extend the CLI dashboard integration tests for opt-in archive loading and read-only behavior."}

@@ -1,5 +1,6 @@
 import fs from "node:fs";
 import path from "node:path";
+import { fileURLToPath, pathToFileURL } from "node:url";
 import chalk from "chalk";
 import { Command } from "commander";
 import { init } from "../commands/init.js";
@@ -297,6 +298,31 @@ program
   .action((args: string[] = []) => {
     try {
       runMem(args);
+    } catch (error) {
+      console.error(
+        chalk.red("Error:"),
+        error instanceof Error ? error.message : error,
+      );
+      if (process.env.DEBUG || process.env.TRELLIS_DEBUG) {
+        console.error(error instanceof Error ? error.stack : error);
+      }
+      process.exit(1);
+    }
+  });
+
+program
+  .command("dashboard")
+  .description("Open a read-only canvas of this project's Trellis tasks")
+  .action(async () => {
+    try {
+      const dashboardPath = path.resolve(
+        path.dirname(fileURLToPath(import.meta.url)),
+        "../../dashboard/dist/cli.js",
+      );
+      const dashboard: { main: (argv: readonly string[]) => Promise<number> } =
+        await import(pathToFileURL(dashboardPath).href);
+      const exitCode = await dashboard.main(["--project", process.cwd()]);
+      if (exitCode !== 0) process.exit(exitCode);
     } catch (error) {
       console.error(
         chalk.red("Error:"),
