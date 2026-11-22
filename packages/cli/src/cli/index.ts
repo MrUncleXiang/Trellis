@@ -10,6 +10,7 @@ import { uninstall } from "../commands/uninstall.js";
 import { ablate, restore } from "../commands/ablate.js";
 import { runMem } from "../commands/mem.js";
 import {
+  runCreateWorkflowCommand,
   runWorkflowCommand,
   WorkflowCommandError,
 } from "../commands/workflow.js";
@@ -86,7 +87,6 @@ program
   .option("--codebuddy", "Include CodeBuddy commands")
   .option("--copilot", "Include GitHub Copilot hooks")
   .option("--droid", "Include Factory Droid commands")
-  .option("--dsh", "Include DeepSeek Harness (dsh) skills")
   .option("--pi", "Include Pi Agent extension assets")
   .option("--reasonix", "Include Reasonix skills")
   .option("--zcode", "Include ZCode commands")
@@ -95,6 +95,7 @@ program
   .option("--grok", "Include Grok Build skills and agents")
   .option("--kimi", "Include Kimi Code skills")
   .option("--snow", "Include Snow CLI skills and commands")
+  .option("--dsh", "Include DeepSeek Harness skills")
   .option(
     "--with-statusline",
     "Install the Trellis statusLine for Claude Code (off by default)",
@@ -335,7 +336,7 @@ program
     }
   });
 
-program
+const workflowCommand = program
   .command("workflow")
   .description(
     "List or switch the project's .trellis/workflow.md template (native, tdd, channel-driven-subagent-dispatch, or marketplace)",
@@ -354,6 +355,10 @@ program
     "-n, --create-new",
     "Write .trellis/workflow.md.new instead of replacing the active workflow",
   )
+  .option(
+    "-s, --save <id>",
+    "Save a template to the per-task library (.trellis/workflows/<id>.md) without touching workflow.md",
+  )
   .action(async (options: Record<string, unknown>) => {
     try {
       await runWorkflowCommand({
@@ -362,6 +367,7 @@ program
         list: options.list as boolean | undefined,
         force: options.force as boolean | undefined,
         createNew: options.createNew as boolean | undefined,
+        save: options.save as string | undefined,
       });
     } catch (error) {
       if (error instanceof WorkflowCommandError) {
@@ -378,6 +384,35 @@ program
       process.exit(1);
     }
   });
+
+workflowCommand
+  .command("create <workflow-id>")
+  .description(
+    "Create .trellis/workflows/<workflow-id>.md from the native workflow",
+  )
+  .option(
+    "--skip-defaults",
+    "Create the workflow without project or personal default prompts",
+  )
+  .action(
+    async (
+      workflowId: string,
+      options: { skipDefaults?: boolean },
+    ): Promise<void> => {
+      try {
+        await runCreateWorkflowCommand(workflowId, options);
+      } catch (error) {
+        console.error(
+          chalk.red("Error:"),
+          error instanceof Error ? error.message : error,
+        );
+        if (process.env.DEBUG || process.env.TRELLIS_DEBUG) {
+          console.error(error instanceof Error ? error.stack : error);
+        }
+        process.exit(1);
+      }
+    },
+  );
 
 program
   .command("platforms")
