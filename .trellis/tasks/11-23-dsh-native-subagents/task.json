@@ -3,7 +3,7 @@
   "name": "dsh-native-subagents",
   "title": "Decide whether DSH should run Trellis role work as native sub-agents",
   "description": "After the 0.7.0-beta.4 upgrade lands, decide whether this repository should configure dsh as a dogfood platform so implement/check/research run as trellis-agent-* sub-agents instead of inline. Beta ships the three role prompts and the trellis_wait dispatch protocol, but the fork keeps dsh in the inline group and the repo has no .dsh/ tree, so the imported instructions currently point at skills that do not exist. Requires measuring the impact on the dogfood byte-parity regression and on .template-hashes.json before choosing.",
-  "status": "planning",
+  "status": "in_progress",
   "dev_type": null,
   "scope": null,
   "package": "cli",
@@ -12,7 +12,7 @@
   "assignee": "codex",
   "createdAt": "2026-11-23",
   "completedAt": null,
-  "branch": null,
+  "branch": "codex/dsh-native-subagents",
   "base_branch": "codex/personal",
   "worktree_path": null,
   "commit": null,
@@ -22,5 +22,35 @@
   "parent": null,
   "relatedFiles": [],
   "notes": "",
-  "meta": {}
+  "meta": {
+    "planningAttest": {
+      "schemaVersion": 1,
+      "reviewId": "a51c1763ad5b499f950b482231fd47d1",
+      "attestedAt": "2026-11-23T09:39:47.077099+00:00",
+      "note": "PRD rewritten with measured costs: adopt = 7 new .dsh files (43 shared files already byte-identical, 0 mismatched) + 7 manifest entries; keep-inline = 5 assertions across 4 test files, one of which is unsatisfiable in either direction. design.md records why adopt, why the manifest entries are mandatory (getConfiguredPlatforms reads the ledger; regression.test.ts:12249 fails on the half state), why direct write beats trellis init --dsh (init also hashes 23 .pyc and 5 .runtime files the ledger has never owned), and resolves R5 with the vendor docs: rank 100 vs 200, lower rank wins. implement.md gives 9 verifiable steps from repo root plus rollback.",
+      "reviewFiles": {
+        "prd.md": "b69fbd83390b452eb7c655664a5d5d29c21656502a76e8a80f9122bc02a8c75e",
+        "design.md": "565e388e8010259db0e20723b12a17390c0f9d08f97969a05b5a236349b89a51",
+        "implement.md": "678d9301094492cb654fd2128648c63d81baced203a64e939f4ed3c4cd1cd759"
+      },
+      "files": {
+        "prd.md": "b69fbd83390b452eb7c655664a5d5d29c21656502a76e8a80f9122bc02a8c75e",
+        "design.md": "565e388e8010259db0e20723b12a17390c0f9d08f97969a05b5a236349b89a51",
+        "implement.md": "678d9301094492cb654fd2128648c63d81baced203a64e939f4ed3c4cd1cd759"
+      },
+      "editorialChanges": []
+    },
+    "planningApproval": {
+      "schemaVersion": 1,
+      "reviewId": "a51c1763ad5b499f950b482231fd47d1",
+      "reviewedFiles": {
+        "prd.md": "b69fbd83390b452eb7c655664a5d5d29c21656502a76e8a80f9122bc02a8c75e",
+        "design.md": "565e388e8010259db0e20723b12a17390c0f9d08f97969a05b5a236349b89a51",
+        "implement.md": "678d9301094492cb654fd2128648c63d81baced203a64e939f4ed3c4cd1cd759"
+      },
+      "recordedAt": "2026-11-23T10:27:23.057983+00:00",
+      "note": "OK",
+      "source": "DSH session session-49c72234-9854-4cd9-aae8-b3f31b9eda0d, user message 2026-11-23 18:27:06"
+    }
+  }
 }
