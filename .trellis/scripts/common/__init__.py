@@ -17,26 +17,44 @@ import sys
 # =============================================================================
 
 
-def _configure_stream(stream: object) -> object:
-    """Configure a stream for UTF-8 encoding on Windows."""
+def _configure_stream(stream: object, force_lf: bool = True) -> object:
+    """Configure a stream for UTF-8 encoding on Windows.
+
+    ``force_lf`` applies to output streams only: on Windows a *piped* stdout
+    also translates ``"\\n"`` to ``"\\r\\n"``, which makes every captured JSON
+    or markdown payload differ between OSes. A terminal keeps the platform
+    default so interactive output still renders normally. stdin is never given
+    a newline policy — it only needs the encoding.
+    """
     # Try reconfigure() first (Python 3.7+, more reliable)
     if hasattr(stream, "reconfigure"):
-        stream.reconfigure(encoding="utf-8", errors="replace")  # type: ignore[union-attr]
+        reconfigure = stream.reconfigure  # type: ignore[union-attr]
+        if force_lf and not _is_interactive(stream):
+            reconfigure(encoding="utf-8", errors="replace", newline="\n")
+        else:
+            reconfigure(encoding="utf-8", errors="replace")
         return stream
     # Fallback: detach and rewrap with TextIOWrapper
     elif hasattr(stream, "detach"):
-        return io.TextIOWrapper(
-            stream.detach(),  # type: ignore[union-attr]
-            encoding="utf-8",
-            errors="replace",
-        )
+        kwargs: dict[str, object] = {"encoding": "utf-8", "errors": "replace"}
+        if force_lf and not _is_interactive(stream):
+            kwargs["newline"] = "\n"
+        return io.TextIOWrapper(stream.detach(), **kwargs)  # type: ignore[union-attr,arg-type]
     return stream
+
+
+def _is_interactive(stream: object) -> bool:
+    """Best-effort isatty(); True keeps the platform newline default."""
+    try:
+        return bool(stream.isatty())  # type: ignore[union-attr]
+    except (AttributeError, ValueError, OSError):
+        return True
 
 
 if sys.platform == "win32":
     sys.stdout = _configure_stream(sys.stdout)  # type: ignore[assignment]
     sys.stderr = _configure_stream(sys.stderr)  # type: ignore[assignment]
-    sys.stdin = _configure_stream(sys.stdin)  # type: ignore[assignment]
+    sys.stdin = _configure_stream(sys.stdin, force_lf=False)  # type: ignore[assignment]
 
 
 def configure_encoding() -> None:
@@ -52,7 +70,7 @@ def configure_encoding() -> None:
     if sys.platform == "win32":
         sys.stdout = _configure_stream(sys.stdout)  # type: ignore[assignment]
         sys.stderr = _configure_stream(sys.stderr)  # type: ignore[assignment]
-        sys.stdin = _configure_stream(sys.stdin)  # type: ignore[assignment]
+        sys.stdin = _configure_stream(sys.stdin, force_lf=False)  # type: ignore[assignment]
 
 
 from .paths import (

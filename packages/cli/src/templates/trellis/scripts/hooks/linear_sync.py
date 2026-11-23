@@ -82,7 +82,9 @@ def _read_task() -> tuple[dict, str]:
 
 
 def _write_task(data: dict, path: str) -> None:
-    with open(path, "w", encoding="utf-8") as f:
+    # `newline="\n"` keeps task.json LF-only on Windows; the default text mode
+    # would rewrite the whole file as CRLF on the first hook run.
+    with open(path, "w", encoding="utf-8", newline="\n") as f:
         json.dump(data, f, indent=2, ensure_ascii=False)
         f.write("\n")
 

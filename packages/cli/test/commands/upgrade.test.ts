@@ -5,6 +5,16 @@ import {
   upgrade,
 } from "../../src/commands/upgrade.js";
 
+// `upgrade()` builds its plan from the real `process.platform`, so the runner
+// expectations below have to describe what this OS would actually spawn.
+const IS_WINDOWS = process.platform === "win32";
+const EXPECTED_COMMAND = IS_WINDOWS ? "cmd.exe" : "npm";
+const EXPECTED_ARGS = (target: string): string[] =>
+  IS_WINDOWS
+    ? ["/d", "/s", "/c", `npm install -g ${target}`]
+    : ["install", "-g", target];
+const EXPECTED_BINARY_CHECK = IS_WINDOWS ? "where trellis" : "which trellis";
+
 describe("upgrade command", () => {
   it("defaults stable versions to latest", () => {
     expect(resolveUpgradeTag("0.5.12")).toBe("latest");
@@ -80,14 +90,16 @@ describe("upgrade command", () => {
     await upgrade({ tag: "latest" }, runner);
 
     expect(runner).toHaveBeenCalledWith(
-      "npm",
-      ["install", "-g", "@mindfoldhq/trellis@latest"],
+      EXPECTED_COMMAND,
+      EXPECTED_ARGS("@mindfoldhq/trellis@latest"),
       { stdio: "inherit", shell: false },
     );
     expect(log).toHaveBeenCalledWith(
       expect.stringContaining("trellis --version"),
     );
-    expect(log).toHaveBeenCalledWith(expect.stringContaining("which trellis"));
+    expect(log).toHaveBeenCalledWith(
+      expect.stringContaining(EXPECTED_BINARY_CHECK),
+    );
 
     log.mockRestore();
   });
@@ -97,7 +109,15 @@ describe("upgrade command", () => {
     const runner = vi.fn(() => ({ status: 1, signal: null }));
 
     await expect(upgrade({ tag: "latest" }, runner)).rejects.toThrow(
-      /npm install failed with exit code 1\.[\s\S]*Troubleshooting:[\s\S]*Manual command: npm install -g @mindfoldhq\/trellis@latest[\s\S]*npm config get prefix[\s\S]*which trellis/,
+      new RegExp(
+        [
+          "npm install failed with exit code 1\\.",
+          "[\\s\\S]*Troubleshooting:",
+          "[\\s\\S]*Manual command: npm install -g @mindfoldhq/trellis@latest",
+          "[\\s\\S]*npm config get prefix",
+          `[\\s\\S]*${EXPECTED_BINARY_CHECK}`,
+        ].join(""),
+      ),
     );
 
     log.mockRestore();

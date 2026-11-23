@@ -14,10 +14,11 @@
  */
 
 import { afterEach, beforeEach, describe, expect, it } from "vitest";
-import { execFileSync, spawnSync } from "node:child_process";
+import { spawnSync } from "node:child_process";
 import fs from "node:fs";
 import os from "node:os";
 import path from "node:path";
+import { PYTHON, hasPython } from "../helpers/python.js";
 
 const TEMPLATE_SCRIPTS = path.resolve(
   __dirname,
@@ -42,14 +43,11 @@ describe("task_context.py Python compatibility", () => {
   });
 });
 
-function hasPython(): boolean {
-  try {
-    execFileSync("python3", ["--version"], { stdio: "ignore" });
-    return true;
-  } catch {
-    return false;
-  }
-}
+/**
+ * Windows installs the interpreter as `python.exe`, not `python3`; using the
+ * literal here made every test in this file skip (or fail with a Store shim)
+ * on a stock Windows box. PYTHON / hasPython live in ../helpers/python.js.
+ */
 
 function setupRepo(tmp: string): void {
   fs.mkdirSync(path.join(tmp, ".trellis", "scripts"), { recursive: true });
@@ -77,7 +75,7 @@ spec.loader.exec_module(mod)
 ${code}
 `;
   fs.writeFileSync(probePath, script, "utf-8");
-  const r = spawnSync("python3", [probePath], {
+  const r = spawnSync(PYTHON, [probePath], {
     cwd: tmp,
     encoding: "utf-8",
   });
@@ -98,7 +96,7 @@ REPO_ROOT = Path(${JSON.stringify(tmp)})
 ${code}
 `;
   fs.writeFileSync(probePath, script, "utf-8");
-  const r = spawnSync("python3", [probePath], {
+  const r = spawnSync(PYTHON, [probePath], {
     cwd: tmp,
     encoding: "utf-8",
   });
@@ -140,7 +138,7 @@ function runTaskValidate(
   taskDir: string,
 ): { status: number | null; stdout: string; stderr: string } {
   const r = spawnSync(
-    "python3",
+    PYTHON,
     [path.join(tmp, ".trellis", "scripts", "task.py"), "validate", taskDir],
     { cwd: tmp, encoding: "utf-8" },
   );
@@ -234,7 +232,7 @@ print(get_context_injection_limits(Path(${JSON.stringify(tmp)}))["max_file_bytes
 `,
           "utf-8",
         );
-        const r = spawnSync("python3", [probePath], {
+        const r = spawnSync(PYTHON, [probePath], {
           cwd: tmp,
           encoding: "utf-8",
         });
@@ -262,7 +260,7 @@ print(get_context_injection_limits(Path(${JSON.stringify(tmp)}))["max_artifact_b
 `,
           "utf-8",
         );
-        const r = spawnSync("python3", [probePath], {
+        const r = spawnSync(PYTHON, [probePath], {
           cwd: tmp,
           encoding: "utf-8",
         });
@@ -840,7 +838,7 @@ print("all-valid")
           "print('ERRORS=%d' % errors)",
         ].join("\n");
 
-        const r = spawnSync("python3", ["-c", harness], {
+        const r = spawnSync(PYTHON, ["-c", harness], {
           cwd: tmp,
           encoding: "utf-8",
         });

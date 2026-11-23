@@ -572,10 +572,10 @@ def cmd_create(args: argparse.Namespace) -> int:
 
     prd_path = task_dir / "prd.md"
     if not prd_path.exists():
-        prd_path.write_text(
-            _default_prd_content(args.title, description),
-            encoding="utf-8",
-        )
+        # `newline="\n"`: keep a freshly scaffolded prd.md LF-only on Windows,
+        # so creating a task never shows the file as modified in git.
+        with prd_path.open("w", encoding="utf-8", newline="\n") as handle:
+            handle.write(_default_prd_content(args.title, description))
 
     # Create empty implement.jsonl / check.jsonl for sub-agent-capable
     # platforms. They stay empty until the agent curates real entries during
@@ -999,7 +999,10 @@ def _apply_rename(plan: _RenamePlan, repo_root: Path) -> int:
 
     for jsonl_path, _linenos, text in plan.jsonl:
         try:
-            jsonl_path.write_text(text, encoding="utf-8")
+            # `newline="\n"` keeps the rewritten manifest LF-only on Windows;
+            # a rename must not silently convert committed line endings.
+            with jsonl_path.open("w", encoding="utf-8", newline="\n") as handle:
+                handle.write(text)
         except OSError as exc:
             print(
                 colored(f"Error: Failed to write {jsonl_path}: {exc}", Colors.RED),

@@ -83,3 +83,39 @@ jobs:
           test -d packages/cli/dist
           test -f packages/cli/dist/index.js
           echo "Build verification passed"
+
+  # Windows-only regressions are invisible to the ubuntu job above: CRLF
+  # rewrites, `python3` not existing as a command name, POSIX permission bits,
+  # and path separators leaking into model-visible strings. This job intentionally
+  # runs only the test suite — lint/typecheck/py_compile stay on Linux, where they
+  # are already covered and cheap.
+  test-windows:
+    runs-on: windows-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          submodules: recursive
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Setup Python
+        uses: actions/setup-python@v7
+        with:
+          python-version: "3.12"
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 10.32.1
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      # `pnpm test` builds first through the root pretest hook, because some
+      # integration tests spawn the real CLI via bin/trellis.js -> dist/.
+      - name: Test (core + cli)
+        run: pnpm test

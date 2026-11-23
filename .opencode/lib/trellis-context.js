@@ -289,7 +289,9 @@ function materializeDirectory(basePath, dirPath, reason, limits, budget, maxFile
   }
 
   for (const filename of files.slice(0, maxFiles)) {
-    const relativePath = join(dirPath, filename)
+    // Keep the model-visible path POSIX-shaped on every OS: `join` would emit
+    // `refdir\a.md` on Windows, which the model then has to guess at.
+    const relativePath = join(dirPath, filename).split("\\").join("/")
     const block = materializeFile(basePath, relativePath, reason, limits, budget)
     if (block) blocks.push(block)
   }

@@ -116,7 +116,10 @@ def cmd_add_context(args: argparse.Namespace) -> int:
     else:
         entry = {"file": path, "reason": reason}
 
-    with jsonl_file.open("a", encoding="utf-8") as f:
+    # `newline="\n"`: jsonl is a line-oriented format read back with a strict
+    # per-line parse, and CRLF would also make the same manifest show up as
+    # modified after any append on Windows.
+    with jsonl_file.open("a", encoding="utf-8", newline="\n") as f:
         f.write(json.dumps(entry, ensure_ascii=False) + "\n")
 
     print(colored(f"Added {entry_type}: {path}", Colors.GREEN))

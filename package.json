@@ -7,6 +7,7 @@
     "build:core": "pnpm --filter @mindfoldhq/trellis-core build",
     "build:cli": "pnpm --filter @mindfoldhq/trellis build",
     "test": "pnpm --filter @mindfoldhq/trellis-core test && pnpm --filter @mindfoldhq/trellis test",
+    "pretest": "pnpm build",
     "test:core": "pnpm --filter @mindfoldhq/trellis-core test",
     "test:cli": "pnpm --filter @mindfoldhq/trellis test",
     "lint": "pnpm --filter @mindfoldhq/trellis-core lint && pnpm --filter @mindfoldhq/trellis lint",

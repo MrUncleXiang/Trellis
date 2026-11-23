@@ -136,7 +136,10 @@ def write_text_atomic(path: Path, text: str) -> bool:
 
     try:
         try:
-            f = os.fdopen(fd, "w", encoding="utf-8")
+            # `newline="\n"`: stay LF-only on Windows. Default text mode would
+            # translate to CRLF, so the same repo would show up as modified
+            # after any write on a Windows machine.
+            f = os.fdopen(fd, "w", encoding="utf-8", newline="\n")
         except OSError:
             # fdopen never took ownership of fd; close it ourselves.
             os.close(fd)

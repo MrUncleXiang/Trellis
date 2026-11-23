@@ -9,10 +9,11 @@
  */
 
 import { describe, expect, it, beforeEach, afterEach } from "vitest";
-import { execFileSync, spawnSync } from "node:child_process";
+import { spawnSync } from "node:child_process";
 import fs from "node:fs";
 import os from "node:os";
 import path from "node:path";
+import { PYTHON, hasPython } from "../helpers/python.js";
 
 const TEMPLATE_SCRIPTS = path.resolve(
   __dirname,
@@ -21,15 +22,6 @@ const TEMPLATE_SCRIPTS = path.resolve(
 
 const DEVELOPER = "tester";
 
-function hasPython(): boolean {
-  try {
-    execFileSync("python3", ["--version"], { stdio: "ignore" });
-    return true;
-  } catch {
-    return false;
-  }
-}
-
 function setupRepo(tmp: string): void {
   fs.mkdirSync(tmp, { recursive: true });
   const scriptsDest = path.join(tmp, ".trellis", "scripts");
@@ -37,7 +29,7 @@ function setupRepo(tmp: string): void {
   fs.cpSync(TEMPLATE_SCRIPTS, scriptsDest, { recursive: true });
 
   const r = spawnSync(
-    "python3",
+    PYTHON,
     [".trellis/scripts/init_developer.py", DEVELOPER],
     { cwd: tmp, encoding: "utf-8" },
   );
@@ -47,7 +39,7 @@ function setupRepo(tmp: string): void {
 }
 
 function runTask(repo: string, ...args: string[]) {
-  return spawnSync("python3", [".trellis/scripts/task.py", ...args], {
+  return spawnSync(PYTHON, [".trellis/scripts/task.py", ...args], {
     cwd: repo,
     encoding: "utf-8",
   });

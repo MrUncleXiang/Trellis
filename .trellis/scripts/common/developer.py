@@ -59,10 +59,11 @@ def init_developer(name: str, repo_root: Path | None = None) -> bool:
     # Create .developer file
     initialized_at = datetime.now().isoformat()
     try:
-        dev_file.write_text(
-            f"name={name}\ninitialized_at={initialized_at}\n",
-            encoding="utf-8"
-        )
+        # `newline="\n"` (via open, not Path.write_text: the `newline` kwarg on
+        # write_text only exists on 3.10+) keeps generated state LF-only on
+        # Windows so the same repo does not flip to CRLF after init.
+        with dev_file.open("w", encoding="utf-8", newline="\n") as handle:
+            handle.write(f"name={name}\ninitialized_at={initialized_at}\n")
     except (OSError, IOError) as e:
         print(f"Error: Failed to create .developer file: {e}", file=sys.stderr)
         return False
@@ -87,7 +88,8 @@ def init_developer(name: str, repo_root: Path | None = None) -> bool:
 
 """
         try:
-            journal_file.write_text(journal_content, encoding="utf-8")
+            with journal_file.open("w", encoding="utf-8", newline="\n") as handle:
+                handle.write(journal_content)
         except (OSError, IOError) as e:
             print(f"Error: Failed to create journal file: {e}", file=sys.stderr)
             return False
@@ -137,7 +139,8 @@ def init_developer(name: str, repo_root: Path | None = None) -> bool:
 - Use `add_session.py` to record sessions
 """
         try:
-            index_file.write_text(index_content, encoding="utf-8")
+            with index_file.open("w", encoding="utf-8", newline="\n") as handle:
+                handle.write(index_content)
         except (OSError, IOError) as e:
             print(f"Error: Failed to create index.md: {e}", file=sys.stderr)
             return False
