@@ -69,7 +69,7 @@ from the shell's own session id.
 
 ## Notes
 
-- Generated Python commands use `python3` in source templates and are rendered
+- Generated Python commands use `python` in source templates and are rendered
   to the detected Windows launcher during `trellis init` / `trellis update`.
 - Role dispatch prompts start with `Active task: <task path>`. This exact task
   path is the child's primary context source; children must not guess globally.
