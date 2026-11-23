@@ -1,0 +1,2 @@
+{"file": ".trellis/spec/cli/backend/platform-integration.md", "reason": "核对 dsh 是否被正确识别为已配置平台，以及六平台其余文件未受影响"}
+{"file": ".trellis/spec/cli/unit-test/conventions.md", "reason": "核对 parity 与 manifest 两条测试真跑而非 skip，且失败不会被误判为合并引入"}

@@ -1,0 +1,4 @@
+{"file": ".trellis/spec/cli/backend/platform-integration.md", "reason": "平台归属由账本推导、configDir 判定、dogfood 与模板字节一致这三条规则的来源"}
+{"file": ".trellis/spec/cli/backend/filesystem-safety.md", "reason": "写盘路径边界与原子保存；本任务要新增 7 个文件并只改账本"}
+{"file": ".trellis/spec/cli/backend/commands-update.md", "reason": "账本与 update 的关系；理解为何只登记 .dsh/ 条目而不重算全树"}
+{"file": ".trellis/spec/cli/unit-test/conventions.md", "reason": "验收证据要求：skip 不等于通过、真实命令验证、并行负载下的假失败"}

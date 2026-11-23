@@ -301,6 +301,13 @@
     ".opencode/lib/context-visibility.js": "ec8abf0acd0e0a6dff0e1f78b78c9b6a378ea4417d1248eb1eb33a54af3355df",
     ".opencode/hooks/inject-spec-context.py": "4df3945be18163afe066ec3061d8b95a687f676e3a80dbf0aada4dec8c339f90",
     ".opencode/skills/trellis-update-spec/SKILL.md": "d975db7af166578488958751ae2c56edb827a68bddb569aa27acc3453f64e610",
-    ".codex/hooks/inject-spec-context.py": "4df3945be18163afe066ec3061d8b95a687f676e3a80dbf0aada4dec8c339f90"
+    ".codex/hooks/inject-spec-context.py": "4df3945be18163afe066ec3061d8b95a687f676e3a80dbf0aada4dec8c339f90",
+    ".dsh/skills/trellis-continue/SKILL.md": "0484428933e1abbda8641dad15e0c46f07c2f900b9fbf7dfe411aae9aaf9d34b",
+    ".dsh/skills/trellis-finish-work/SKILL.md": "3ef6a459b85cb1b010eb98b32eb0af5b704dd934b747e358fddf91e62409ae05",
+    ".dsh/skills/trellis-start/SKILL.md": "21599cb64ccafbc7af5c6ebaedcdc3e3e5986a583e75836f095958afdf16201e",
+    ".dsh/skills/trellis-agent-check/SKILL.md": "79d6b1ed5703da09c29dabae51767110178ee0ac0ae7fe72ebc0de7a0389caa3",
+    ".dsh/skills/trellis-agent-implement/SKILL.md": "2b414ee7d86b54d0a258d57bc6830426f88e05b1e346af29d886274638911301",
+    ".dsh/skills/trellis-agent-research/SKILL.md": "b41e81af9774dbf1219cdfea7ca7f1b7480be87a1612778568b700362dda436f",
+    ".dsh/DSH.md": "79b01cb22765f3a9b50ff7f3b168ba7e3200a38ccaea788a2b82868ea8959675"
   }
 }
