@@ -1,0 +1,56 @@
+{
+  "id": "upgrade-v0.7-beta",
+  "name": "upgrade-v0.7-beta",
+  "title": "Upgrade the fork to upstream 0.7.0-beta.4",
+  "description": "Merge upstream/feat/v0.7-beta (tag v0.7.0-beta.4) into the personal fork's task branch, resolve the 8 measured conflicts (2 workflow.md copies, template hashes, platform-integration.md, 2 test files, 2 submodules), then transplant the fork-only guarantees (planning gate, Windows LF/test fixes) onto the beta-side additions and re-verify with full test runs.",
+  "status": "in_progress",
+  "dev_type": null,
+  "scope": null,
+  "package": "cli",
+  "priority": "P1",
+  "creator": "codex",
+  "assignee": "codex",
+  "createdAt": "2026-11-23",
+  "completedAt": null,
+  "branch": "codex/upgrade-v0.7-beta",
+  "base_branch": "codex/personal",
+  "worktree_path": null,
+  "commit": null,
+  "pr_url": null,
+  "subtasks": [],
+  "children": [],
+  "parent": null,
+  "relatedFiles": [],
+  "notes": "",
+  "meta": {
+    "planningAttest": {
+      "schemaVersion": 1,
+      "reviewId": "24ef074f8a754474a089a6dc534dad8c",
+      "attestedAt": "2026-11-23T07:10:55.881998+00:00",
+      "note": "Step 1 inventory corrected again: the working tree also holds .tmp-review/ (the other session's scratch scripts for deferred-marker), so it is six dirty entries owned two ways, listed as a table instead of a count. Step 7's exclusion now names both foreign paths and the multi-pathspec form was verified with git add --dry-run (11 entries staged, none foreign).",
+      "reviewFiles": {
+        "prd.md": "84eea1fe5cb85ab2546d763e15b7322f5956d5cfac64689cf86b57ba336e200c",
+        "design.md": "ea0dc024fd139a0e99e490094f6a56cc0fc2f443ed9c31fa877a732abf42c9d3",
+        "implement.md": "92cd1ee253c7782af1f2064a156cc645f86500843fb63cbe098693b31d04e5ed"
+      },
+      "files": {
+        "prd.md": "84eea1fe5cb85ab2546d763e15b7322f5956d5cfac64689cf86b57ba336e200c",
+        "design.md": "ea0dc024fd139a0e99e490094f6a56cc0fc2f443ed9c31fa877a732abf42c9d3",
+        "implement.md": "92cd1ee253c7782af1f2064a156cc645f86500843fb63cbe098693b31d04e5ed"
+      },
+      "editorialChanges": []
+    },
+    "planningApproval": {
+      "schemaVersion": 1,
+      "reviewId": "24ef074f8a754474a089a6dc534dad8c",
+      "reviewedFiles": {
+        "prd.md": "84eea1fe5cb85ab2546d763e15b7322f5956d5cfac64689cf86b57ba336e200c",
+        "design.md": "ea0dc024fd139a0e99e490094f6a56cc0fc2f443ed9c31fa877a732abf42c9d3",
+        "implement.md": "92cd1ee253c7782af1f2064a156cc645f86500843fb63cbe098693b31d04e5ed"
+      },
+      "recordedAt": "2026-11-23T07:14:11.685545+00:00",
+      "note": "可以，开工。",
+      "source": "DSH session session-49c72234-9854-4cd9-aae8-b3f31b9eda0d, user message 2026-11-23 15:14:00"
+    }
+  }
+}

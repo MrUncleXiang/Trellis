@@ -1,0 +1,7 @@
+{"file": ".trellis/spec/cli/backend/platform-integration.md", "reason": "平台矩阵与逐平台文件归属；合并要裁决 dsh 分组、platform-integration.md 冲突，并保持各平台 dogfood 与模板一致"}
+{"file": ".trellis/spec/cli/backend/script-conventions.md", "reason": "两棵脚本树（.trellis/scripts 与 templates/trellis/scripts）必须字节一致的写盘与目录约定"}
+{"file": ".trellis/spec/cli/backend/filesystem-safety.md", "reason": "原子写、路径边界；newline=\\n 的 LF 规则与 config.yaml 备份恢复都在这份里"}
+{"file": ".trellis/spec/cli/backend/commands-update.md", "reason": "update 的判定与写入流程；用它重建 .template-hashes.json 并修正 .version"}
+{"file": ".trellis/spec/cli/backend/workflow-state-contract.md", "reason": "workflow.md 里 [workflow-state:*] 块的契约；两份 workflow.md 合成时不能破坏状态标签"}
+{"file": ".trellis/spec/cli/unit-test/integration-patterns.md", "reason": "集成测试如何起真实 python；移植 test/helpers/python.ts 到 beta 新增的三个测试要照它"}
+{"file": ".trellis/spec/cli/unit-test/conventions.md", "reason": "测试环境隔离与真实命令验证；判断 skip 是否等于没跑"}
