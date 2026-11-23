@@ -51,6 +51,7 @@
       "recordedAt": "2026-11-23T10:27:23.057983+00:00",
       "note": "OK",
       "source": "DSH session session-49c72234-9854-4cd9-aae8-b3f31b9eda0d, user message 2026-11-23 18:27:06"
-    }
+    },
+    "commit": "6b05e8d0624f81bdf213071d58c6b7e7fea6a5c6"
   }
 }
