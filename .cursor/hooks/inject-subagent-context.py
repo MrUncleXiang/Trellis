@@ -44,10 +44,24 @@ if callable(_stdin_reconfigure):
 # This fixes UnicodeEncodeError when outputting non-ASCII characters
 if sys.platform.startswith("win"):
     import io as _io
+
+    # A piped stdout also translates "\n" to "\r\n" on Windows. The host reads
+    # this hook's stdout as JSON, and the integration tests compare the emitted
+    # markdown byte-for-byte, so force LF when the stream is not a terminal.
+    try:
+        _stdout_is_tty = sys.stdout.isatty()
+    except (AttributeError, ValueError, OSError):
+        _stdout_is_tty = True
     if hasattr(sys.stdout, "reconfigure"):
-        sys.stdout.reconfigure(encoding="utf-8", errors="replace")  # type: ignore[union-attr]
+        if _stdout_is_tty:
+            sys.stdout.reconfigure(encoding="utf-8", errors="replace")  # type: ignore[union-attr]
+        else:
+            sys.stdout.reconfigure(encoding="utf-8", errors="replace", newline="\n")  # type: ignore[union-attr]
     elif hasattr(sys.stdout, "detach"):
-        sys.stdout = _io.TextIOWrapper(sys.stdout.detach(), encoding="utf-8", errors="replace")  # type: ignore[union-attr]
+        if _stdout_is_tty:
+            sys.stdout = _io.TextIOWrapper(sys.stdout.detach(), encoding="utf-8", errors="replace")  # type: ignore[union-attr]
+        else:
+            sys.stdout = _io.TextIOWrapper(sys.stdout.detach(), encoding="utf-8", errors="replace", newline="\n")  # type: ignore[union-attr]
 
 
 # =============================================================================
@@ -382,7 +396,10 @@ def _materialize_directory(
             if f.endswith(".md") and os.path.isfile(os.path.join(full_path, f))
         )
         for filename in md_files[:max_files]:
-            relative_path = os.path.join(dir_path, filename)
+            # Keep the model-visible path POSIX-shaped on every OS: os.path.join
+            # would emit ``refdir\a.md`` on Windows, which the model then has to
+            # guess at (and which no test or spec quotes that way).
+            relative_path = os.path.join(dir_path, filename).replace(os.sep, "/")
             block = _materialize_file(base_path, relative_path, reason, limits, budget)
             if block:
                 blocks.append(block)

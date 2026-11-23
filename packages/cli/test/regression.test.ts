@@ -12,7 +12,7 @@
  * 5. Platform Registry (beta.9, beta.13, beta.16)
  */
 
-import { execSync, spawn, spawnSync } from "node:child_process";
+import { execFileSync, execSync, spawn, spawnSync } from "node:child_process";
 import fs from "node:fs";
 import os from "node:os";
 import path from "node:path";
@@ -351,7 +351,7 @@ ${separator}
 
   function runAddSession(title: string, options?: { branch?: string }): void {
     const command = [
-      "python3",
+      process.platform === "win32" ? "python" : "python3",
       JSON.stringify(
         path.join(tmpDir, ".trellis", "scripts", "add_session.py"),
       ),
@@ -1949,6 +1949,7 @@ describe("regression: task auto-activation failure diagnostics (issue #430)", ()
   // scenario — scrub every platform session/transcript key before overlay.
   const AMBIENT_SESSION_ENV_KEYS = [
     "TRELLIS_CONTEXT_ID",
+    "DSH_SESSION_ID",
     "CLAUDE_SESSION_ID",
     "CLAUDE_CODE_SESSION_ID",
     "CODEX_SESSION_ID",
@@ -1956,17 +1957,24 @@ describe("regression: task auto-activation failure diagnostics (issue #430)", ()
     "CURSOR_SESSION_ID",
     "CURSOR_CONVERSATION_ID",
     "CURSOR_CONVERSATIONID",
+    "CURSOR_TRANSCRIPT_PATH",
     "OPENCODE_SESSION_ID",
     "OPENCODE_SESSIONID",
     "OPENCODE_RUN_ID",
     "GEMINI_SESSION_ID",
+    "GEMINI_TRANSCRIPT_PATH",
     "FACTORY_SESSION_ID",
+    "FACTORY_TRANSCRIPT_PATH",
     "DROID_SESSION_ID",
+    "DROID_TRANSCRIPT_PATH",
     "QODER_SESSION_ID",
+    "QODER_TRANSCRIPT_PATH",
     "CODEBUDDY_SESSION_ID",
+    "CODEBUDDY_TRANSCRIPT_PATH",
     "KIRO_SESSION_ID",
     "COPILOT_SESSION_ID",
     "COPILOT_SESSIONID",
+    "SNOW_SESSION_ID",
     "PI_SESSION_ID",
   ] as const;
 
@@ -7630,10 +7638,14 @@ print(len(entries))
       "result = {'M': mod._strip_breadcrumb_tag_blocks(matched), 'X': mod._strip_breadcrumb_tag_blocks(mismatched), 'N': mod._strip_breadcrumb_tag_blocks(nested_orphan)}",
       "print(json.dumps(result))",
     ].join("; ");
-    const output = execSync(`${pythonCmd} -c ${JSON.stringify(probe)}`, {
-      cwd: tmpDir,
-      encoding: "utf-8",
-    });
+    // execFileSync, not execSync: the probe is multi-line code passed as one
+    // argv element. Through a shell (the Windows default) the embedded
+    // newlines are mangled and Python receives a broken program.
+    const output = execFileSync(
+      process.platform === "win32" ? "python" : "python3",
+      ["-c", probe],
+      { cwd: tmpDir, encoding: "utf-8" },
+    );
     const lastLine = output
       .split("\n")
       .filter((l) => l.startsWith("{"))
@@ -10655,7 +10667,7 @@ describe("regression: session-start.py f-string Python <=3.11 compat (0.5.2)", (
       // regex test above is the primary gate. On macOS system Python 3.9 or
       // any CI runner with python3 < 3.12 this is a hard catch.
       const r = spawnSync(
-        "python3",
+        process.platform === "win32" ? "python" : "python3",
         [
           "-c",
           `import ast,sys; ast.parse(open(sys.argv[1], encoding='utf-8').read()); print('OK')`,
@@ -10663,10 +10675,13 @@ describe("regression: session-start.py f-string Python <=3.11 compat (0.5.2)", (
         ],
         { encoding: "utf-8" },
       );
-      // If python3 is unavailable on the runner, skip silently — the regex
-      // assertion above already covers the regression deterministically.
+      // If the interpreter is unavailable on the runner, skip silently — the
+      // regex assertion above already covers the regression deterministically.
+      // A missing command surfaces as ENOENT (spawn) or 9009 (the Windows
+      // Store `python3.exe` shim), so treat both as "no interpreter".
       if (r.error && (r.error as NodeJS.ErrnoException).code === "ENOENT")
         return;
+      if (process.platform === "win32" && r.status === 9009) return;
       expect(
         r.status,
         `python3 ast.parse failed for ${rel}:\n${r.stderr ?? ""}`,

@@ -14,10 +14,11 @@
  */
 
 import { afterEach, beforeEach, describe, expect, it } from "vitest";
-import { execFileSync, spawnSync } from "node:child_process";
+import { spawnSync } from "node:child_process";
 import fs from "node:fs";
 import os from "node:os";
 import path from "node:path";
+import { PYTHON, hasPython } from "../helpers/python.js";
 
 const TEMPLATE_SCRIPTS = path.resolve(
   __dirname,
@@ -27,15 +28,6 @@ const SHARED_HOOKS = path.resolve(
   __dirname,
   "../../src/templates/shared-hooks",
 );
-
-function hasPython(): boolean {
-  try {
-    execFileSync("python3", ["--version"], { stdio: "ignore" });
-    return true;
-  } catch {
-    return false;
-  }
-}
 
 function setupRepo(tmp: string): void {
   fs.mkdirSync(path.join(tmp, ".trellis", "scripts"), { recursive: true });
@@ -68,7 +60,7 @@ function runHook(
   script: string,
   prompt: string,
 ): { stdout: string; stderr: string; status: number | null } {
-  const r = spawnSync("python3", [path.join(SHARED_HOOKS, script)], {
+  const r = spawnSync(PYTHON, [path.join(SHARED_HOOKS, script)], {
     cwd: tmp,
     encoding: "utf-8",
     input: JSON.stringify({
@@ -93,7 +85,7 @@ REPO_ROOT = Path(${JSON.stringify(tmp)})
 ${code}
 `;
   fs.writeFileSync(probePath, script, "utf-8");
-  const r = spawnSync("python3", [probePath], { cwd: tmp, encoding: "utf-8" });
+  const r = spawnSync(PYTHON, [probePath], { cwd: tmp, encoding: "utf-8" });
   if (r.status !== 0) {
     throw new Error(`probe failed (rc=${r.status}): ${r.stderr}`);
   }
@@ -280,7 +272,7 @@ describeFn("no-trellis skip keyword (issue #427)", () => {
   describe("SessionStart / sub-agent injection paths ignore the keyword", () => {
     it("session-start.py still emits context when the prompt contains the skip keyword", () => {
       const r = spawnSync(
-        "python3",
+        PYTHON,
         [path.join(SHARED_HOOKS, "session-start.py")],
         {
           cwd: tmp,

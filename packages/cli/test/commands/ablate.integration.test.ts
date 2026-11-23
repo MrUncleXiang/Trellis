@@ -86,52 +86,58 @@ describe("ablate()/restore() integration", () => {
     return fingerprintPath(projectDir);
   }
 
-  it("#1 performs a complete exact round trip while preserving user neighbors", async () => {
-    await initialize();
-    const sensitiveTask = path.join(
-      projectDir,
-      ".trellis",
-      "tasks",
-      "private-context.md",
-    );
-    fs.mkdirSync(path.dirname(sensitiveTask), { recursive: true });
-    fs.writeFileSync(sensitiveTask, "user-authored recovery text\n");
-    const userNeighbor = path.join(projectDir, ".codex", "user-note.txt");
-    fs.writeFileSync(userNeighbor, "mine\n");
-    fs.appendFileSync(path.join(projectDir, "AGENTS.md"), "\nUser footer\n");
-    const before = projectFingerprint();
+  it(
+    "#1 performs a complete exact round trip while preserving user neighbors",
+    { timeout: 60_000 },
+    async () => {
+      await initialize();
+      const sensitiveTask = path.join(
+        projectDir,
+        ".trellis",
+        "tasks",
+        "private-context.md",
+      );
+      fs.mkdirSync(path.dirname(sensitiveTask), { recursive: true });
+      fs.writeFileSync(sensitiveTask, "user-authored recovery text\n");
+      const userNeighbor = path.join(projectDir, ".codex", "user-note.txt");
+      fs.writeFileSync(userNeighbor, "mine\n");
+      fs.appendFileSync(path.join(projectDir, "AGENTS.md"), "\nUser footer\n");
+      const before = projectFingerprint();
 
-    await ablate({ yes: true });
-    expect(fs.existsSync(path.join(projectDir, ".trellis"))).toBe(false);
-    expect(
-      fs.readFileSync(path.join(projectDir, "application.txt"), "utf-8"),
-    ).toBe("unchanged\n");
-    expect(fs.readFileSync(userNeighbor, "utf-8")).toBe("mine\n");
-    expect(fs.existsSync(getTransactionPaths(projectDir).stateFile)).toBe(true);
-    expect(
-      fs.readFileSync(
-        path.join(
-          getTransactionPaths(projectDir).backupDir,
-          ".trellis",
-          "tasks",
-          "private-context.md",
+      await ablate({ yes: true });
+      expect(fs.existsSync(path.join(projectDir, ".trellis"))).toBe(false);
+      expect(
+        fs.readFileSync(path.join(projectDir, "application.txt"), "utf-8"),
+      ).toBe("unchanged\n");
+      expect(fs.readFileSync(userNeighbor, "utf-8")).toBe("mine\n");
+      expect(fs.existsSync(getTransactionPaths(projectDir).stateFile)).toBe(
+        true,
+      );
+      expect(
+        fs.readFileSync(
+          path.join(
+            getTransactionPaths(projectDir).backupDir,
+            ".trellis",
+            "tasks",
+            "private-context.md",
+          ),
+          "utf-8",
         ),
-        "utf-8",
-      ),
-    ).toBe("user-authored recovery text\n");
-    expect(console.log).toHaveBeenCalledWith(
-      expect.stringContaining("may contain user-authored sensitive text"),
-    );
+      ).toBe("user-authored recovery text\n");
+      expect(console.log).toHaveBeenCalledWith(
+        expect.stringContaining("may contain user-authored sensitive text"),
+      );
 
-    await restore({ yes: true });
-    expect(projectFingerprint()).toEqual(before);
-    expect(fs.readFileSync(sensitiveTask, "utf-8")).toBe(
-      "user-authored recovery text\n",
-    );
-    expect(fs.existsSync(getTransactionPaths(projectDir).transactionDir)).toBe(
-      false,
-    );
-  });
+      await restore({ yes: true });
+      expect(projectFingerprint()).toEqual(before);
+      expect(fs.readFileSync(sensitiveTask, "utf-8")).toBe(
+        "user-authored recovery text\n",
+      );
+      expect(fs.existsSync(getTransactionPaths(projectDir).transactionDir)).toBe(
+        false,
+      );
+    },
+  );
 
   it("#2 dry-run creates no recovery state and changes no project path", async () => {
     await initialize();

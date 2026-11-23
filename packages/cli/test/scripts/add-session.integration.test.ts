@@ -15,10 +15,11 @@
  */
 
 import { afterEach, beforeEach, describe, expect, it } from "vitest";
-import { execFileSync, spawnSync } from "node:child_process";
+import { spawnSync } from "node:child_process";
 import fs from "node:fs";
 import os from "node:os";
 import path from "node:path";
+import { PYTHON, hasPython } from "../helpers/python.js";
 
 const TEMPLATE_SCRIPTS = path.resolve(
   __dirname,
@@ -26,15 +27,6 @@ const TEMPLATE_SCRIPTS = path.resolve(
 );
 
 const DEVELOPER = "tester";
-
-function hasPython(): boolean {
-  try {
-    execFileSync("python3", ["--version"], { stdio: "ignore" });
-    return true;
-  } catch {
-    return false;
-  }
-}
 
 function git(cwd: string, ...args: string[]): string {
   const r = spawnSync("git", args, { cwd, encoding: "utf-8" });
@@ -72,7 +64,7 @@ function stampTrellis(tmp: string): void {
   // Initialize the developer (creates .developer, journal-1.md, index.md with
   // the auto-update markers) via the real init script.
   const r = spawnSync(
-    "python3",
+    PYTHON,
     [".trellis/scripts/init_developer.py", DEVELOPER],
     { cwd: tmp, encoding: "utf-8" },
   );
@@ -143,7 +135,7 @@ function tryAddSession(
   extraArgs: string[] = [],
 ): RunResult {
   const r = spawnSync(
-    "python3",
+    PYTHON,
     [".trellis/scripts/add_session.py", "--title", title, ...extraArgs],
     { cwd: repo, encoding: "utf-8" },
   );
@@ -592,7 +584,7 @@ function markersFor(
     `  'v1': a.render_legacy_marker(a.compute_legacy_fingerprint(payload, ${JSON.stringify(legacyDate)})),`,
     "}))",
   ].join("\n");
-  const r = spawnSync("python3", ["-c", harness], {
+  const r = spawnSync(PYTHON, ["-c", harness], {
     cwd: repo,
     encoding: "utf-8",
   });

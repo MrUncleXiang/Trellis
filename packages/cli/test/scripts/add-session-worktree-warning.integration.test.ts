@@ -10,10 +10,11 @@
  */
 
 import { afterEach, beforeEach, describe, expect, it } from "vitest";
-import { execFileSync, spawnSync } from "node:child_process";
+import { spawnSync } from "node:child_process";
 import fs from "node:fs";
 import os from "node:os";
 import path from "node:path";
+import { PYTHON, hasPython } from "../helpers/python.js";
 
 const TEMPLATE_SCRIPTS = path.resolve(
   __dirname,
@@ -21,15 +22,6 @@ const TEMPLATE_SCRIPTS = path.resolve(
 );
 
 const DEVELOPER = "tester";
-
-function hasPython(): boolean {
-  try {
-    execFileSync("python3", ["--version"], { stdio: "ignore" });
-    return true;
-  } catch {
-    return false;
-  }
-}
 
 function git(cwd: string, ...args: string[]): string {
   const r = spawnSync("git", args, { cwd, encoding: "utf-8" });
@@ -57,7 +49,7 @@ function setupRepo(tmp: string, autoCommit: boolean): void {
   );
 
   const r = spawnSync(
-    "python3",
+    PYTHON,
     [".trellis/scripts/init_developer.py", DEVELOPER],
     { cwd: tmp, encoding: "utf-8" },
   );
@@ -76,7 +68,7 @@ function runAddSession(
   repo: string,
 ): { status: number; stdout: string; stderr: string } {
   const r = spawnSync(
-    "python3",
+    PYTHON,
     [".trellis/scripts/add_session.py", "--title", "parallel session", "--no-commit"],
     { cwd: repo, encoding: "utf-8" },
   );
@@ -127,7 +119,7 @@ describe.skipIf(!hasPython())("add_session.py worktree warning", () => {
     );
 
     const r = spawnSync(
-      "python3",
+      PYTHON,
       [
         ".trellis/scripts/add_session.py",
         "--title",
@@ -156,7 +148,7 @@ describe.skipIf(!hasPython())("add_session.py worktree warning", () => {
     );
 
     const r = spawnSync(
-      "python3",
+      PYTHON,
       [
         ".trellis/scripts/add_session.py",
         "--title",

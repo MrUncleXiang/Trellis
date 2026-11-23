@@ -6,6 +6,10 @@ import {
   PLATFORM_IDS,
 } from "../../src/configurators/index.js";
 import type { AITool } from "../../src/types/ai-tools.js";
+
+/** Compare content, not the EOL style a checkout happened to use. */
+const normalizeEol = (content: string): string => content.replace(/\r\n/g, "\n");
+
 import {
   scriptsInit,
   commonInit,
@@ -139,7 +143,12 @@ describe("trellis template constants", () => {
       path.join(repoRoot, "marketplace/workflows/native/workflow.md"),
       "utf-8",
     );
-    expect(marketplaceNative).toBe(workflowMdTemplate);
+    // Normalize line endings before comparing: `marketplace` is a git submodule
+    // with no .gitattributes of its own, so a Windows checkout with
+    // core.autocrlf=true lands it as CRLF while the bundled template stays LF.
+    // The contract is "the same markdown", not "the same byte-level EOLs" —
+    // see .trellis/spec/guides/cross-platform-thinking-guide.md Rule 2.
+    expect(normalizeEol(marketplaceNative)).toBe(normalizeEol(workflowMdTemplate));
   });
 
   it("marketplace TDD workflow planning breadcrumbs include behavior gates", () => {

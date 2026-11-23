@@ -46,6 +46,15 @@ describe("trellis platforms (#396)", () => {
   let tmpDir: string;
 
   beforeEach(() => {
+    // bin/trellis.js just imports ../dist/cli/index.js, so a missing build
+    // surfaces as an opaque ERR_MODULE_NOT_FOUND for every test here. Say what
+    // to do instead. Root `pnpm test` builds first via its pretest hook.
+    if (!fs.existsSync(path.join(path.dirname(CLI_BIN), "../dist/cli/index.js"))) {
+      throw new Error(
+        "packages/cli/dist is missing — run `pnpm build` from the repo root " +
+          "(or `pnpm test` at the root, which builds first) and re-run.",
+      );
+    }
     tmpDir = fs.mkdtempSync(path.join(os.tmpdir(), "trellis-platforms-"));
   });
 

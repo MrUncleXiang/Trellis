@@ -16,10 +16,11 @@
  */
 
 import { afterEach, beforeEach, describe, expect, it } from "vitest";
-import { execFileSync, spawnSync } from "node:child_process";
+import { spawnSync } from "node:child_process";
 import fs from "node:fs";
 import os from "node:os";
 import path from "node:path";
+import { PYTHON, hasPython } from "../helpers/python.js";
 
 const TEMPLATE_SCRIPTS = path.resolve(
   __dirname,
@@ -32,21 +33,12 @@ const HOOK_PATH = path.resolve(
 
 const TASK = "08-21-demo";
 
-function hasPython(): boolean {
-  try {
-    execFileSync("python3", ["--version"], { stdio: "ignore" });
-    return true;
-  } catch {
-    return false;
-  }
-}
-
 function runTask(
   repo: string,
   ...args: string[]
 ): { status: number | null; stdout: string; stderr: string } {
   const r = spawnSync(
-    "python3",
+    PYTHON,
     [path.join(".trellis", "scripts", "task.py"), ...args],
     {
       cwd: repo,
@@ -70,7 +62,7 @@ spec.loader.exec_module(mod)
 ${code}
 `;
   fs.writeFileSync(probePath, script, "utf-8");
-  const r = spawnSync("python3", [probePath], { cwd: repo, encoding: "utf-8" });
+  const r = spawnSync(PYTHON, [probePath], { cwd: repo, encoding: "utf-8" });
   if (r.status !== 0) {
     throw new Error(`probe failed (rc=${r.status}): ${r.stderr}`);
   }
