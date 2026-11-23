@@ -32,6 +32,19 @@ delete process.env.COPILOT_PROJECT_DIR;
 // see one, and a test run can even write a pointer into the developer's real
 // runtime state. Keep this list in sync when a new platform key is verified.
 delete process.env.DSH_SESSION_ID;
+// beta's DSH branch reads two more names that the *_SESSION_ID pattern does not
+// cover: the managed override and the sentinel that pairs with the session id.
+delete process.env.DSH_TRELLIS_CONTEXT_ID;
+delete process.env.DSH_SHELL;
+// The Pi extension template reads PI_SESSION_ID / PI_SESSIONID directly (its
+// `currentSessionId()` ladder), so a dev shell inside a Pi session hands the
+// sandboxed extension a live id. `evaluateExtension` merges `{ ...process.env }`
+// into the sandbox, which means the leak survives even when a test passes an
+// explicit env object — the process value wins whenever the test does not
+// override that exact key. Tests that *want* a Pi session id pass it through
+// their own env argument, so removing the ambient value is safe.
+delete process.env.PI_SESSION_ID;
+delete process.env.PI_SESSIONID;
 delete process.env.CLAUDE_CODE_SESSION_ID;
 delete process.env.CLAUDE_SESSION_ID;
 delete process.env.CODEX_THREAD_ID;
